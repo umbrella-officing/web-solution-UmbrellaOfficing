@@ -1,0 +1,17 @@
+{
+  "name": "umbrela_officing",
+  "version": "1.0.0",
+  "description": "Solução web capaz de dar oportunidade para qualquer pessoa ter um espaço de coworking e anunciá-lo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server":"nodemon app.js"
+  },
+  "author": "Felipe Mendes Martins, Felipe Xavier Gomes, Julia Rodrigues Gomes, Eduardo Felinto Gonçalves, Natan Gonçalves Diniz",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}

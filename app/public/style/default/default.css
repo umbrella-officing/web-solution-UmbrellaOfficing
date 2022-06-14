@@ -1,0 +1,240 @@
+:root{
+    --font-primary:'Montserrat', sans-serif;
+    --text-black:#222;
+    --text-gray:#666;
+    --scale-1-gray:#F2F2F2;
+    --scale-gray:#F5F5F5;
+    --scale-2-gray:#EFEFEF;
+    --scale-1-purple:#9B69D5;
+    --scale-2-purple:#650C85;
+    --scale-1-blue:#7FA3F6;
+    --scale-2-blue:#7397E3;
+    --scale-3-blue:#538DFF;
+    --scale-4-blue:#6482D5;
+    --scale-5-blue:#132142;
+    --scale-6-blue:#748FE0;
+    --scale-7-blue:#264082;
+    --scale-8-blue:#010290;
+    --gradient:linear-gradient(180deg, #81A4F3, #D16CC1)
+}
+
+body, ul, li, nav, h1, h2, h3, h4, h5, h6, p{
+    margin:0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: white;
+}
+
+header > div {
+    width: 1160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px;
+    padding-top:20px;
+}
+
+.container_search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--scale-1-gray);
+    width: 400px;
+    border-radius: 40px;
+    transition: .48s ease;
+}
+
+.container_search.expanded{
+    width: 531px;
+ } 
+
+#search_txt{
+    width: inherit;
+    background: inherit;
+    border: none;
+    border-radius: inherit;
+    font-family: var(--font-primary);
+    font-size: 17px;
+    font-weight: 500;
+    color: #666;
+    outline: none;
+    padding-left: 19px;
+}
+
+#container_informations_find_coworking{
+    display: none;
+    border-radius: inherit;
+}
+
+ #localization{
+    height: 58px;
+    border: none;
+    box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
+    border-radius: inherit;
+    font-size: 17px;
+    padding-left: 14px;
+    outline-color: #5b61c4;
+    margin-right: 40px;
+}
+
+#check_in{
+    border: none;
+    border-radius: inherit;
+    outline-color: #5b61c4;
+    height: 58px;
+    padding: 0 19px;
+    box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
+}
+
+.container_search > a > div {
+    display: flex;
+    width: 40.19px;
+    height:40.19px;
+    z-index: 99;
+    background: var(--scale-1-purple);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container_search > a > div::after{
+    content: "";
+    margin: auto;
+    width: 25%;
+    height: 25%;
+    display: block;
+    border-radius: 50%;
+    background: var(--gradient);
+}
+
+header > div > div:nth-child(3){
+    display: flex;
+    align-items: center;
+}
+
+#user{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--scale-2-gray);
+    margin: 0 25px;
+}
+
+#menu_hamburguer{
+    padding: 12px 30px;
+    border-radius: 40px;
+    background: var(--scale-2-gray);
+}
+
+#box_black{
+    display: none;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 899;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+section > div {
+    width: 1160px;
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.default_margin{
+    padding-bottom: 105px;
+}
+
+footer{
+    display: flex;
+    padding: 41px 0;
+    justify-content: center;
+    font-family: var(--font-primary);
+    background: var(--scale-1-gray);
+}
+
+#margin {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1160px;
+    margin: 0 16px;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 365px;
+}
+
+#margin2{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+footer > div > div > img{
+    margin-right: 6px;
+}
+
+footer > div > div span{
+    font-weight: normal;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li{
+    margin: 7px 0;
+}
+
+footer ul h5{
+    font-size: 16px;
+    margin: 16px 0;
+}
+
+footer a {
+    color: var(--text-black-2);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#network{
+    padding-top: 35px;
+    width: 100%;
+}
+
+#network > div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#network_div img{
+    margin-right: 10px;
+    padding: 7px 7px;
+    border-radius: 10px;
+    background: var(--scale-8-blue);
+}
+
+#scrow_up img{
+    padding: 8px;
+    width: 30px;
+    height: 30px;
+    background: var(--scale-8-blue);
+    border-radius: 10px;
+}

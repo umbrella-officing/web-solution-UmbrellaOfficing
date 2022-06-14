@@ -1,0 +1,253 @@
+h1, h2, h3, h4, h5, h6, p, li {
+    font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+}
+
+main #home_section1 > div{
+    padding-top: 181px;
+    justify-content: space-between;
+}
+
+#home_section1 > div{
+    position: relative;
+}
+
+#home_section1 > div > div:first-child{
+    max-width: 465px;
+}
+
+#home_section1 > div > div h1{
+    font-size: 52px;
+    margin: 24px 0;
+}
+
+#home_section1 > div > div:first-child p {
+    font-size: 18px;
+}
+
+#home_section1 > div > div:nth-child(2){
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home_section1 > div > div:nth-child(2) img{
+    width: 611px;
+    position: relative;
+}
+
+#home_section1 > div > div:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    left: 27px;
+    height: 510px;
+    width: 510px;
+    border-radius: 50%;
+    background:var( --scale-8-blue);
+}
+
+#home_section2 > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#home_section2 ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+#home_section2 ul li{
+    margin: 10px 10px 10px 0;
+    width: 300px;
+}
+
+#home_section2 > div ul li img{
+    padding: 2px 13px;
+    border-radius: 14px;
+    background: var(--scale-2-purple);
+    margin: 12px 0 7px 0;
+}
+
+#home_section2 > div ul li p{
+    margin: 12px 0;
+    max-width: 179px;
+}
+
+#home_section3{
+    background:var(--scale-6-blue);
+    padding-bottom: 34px;
+}
+
+#home_section3 > div{
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home_section3 > div img{
+    width: 100%;
+    position: relative;
+    top: -14px;
+}
+
+#home_section3 > div > div{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#home_section3 > div > div p{
+    margin: 20px 0;
+    font-size: 17px;
+    max-width: 607px;
+}
+
+#home_section3 > div > div a{
+    color: inherit;
+    font-weight: 500;
+    font-family: var(--font-primary);
+}
+
+#home_section4{
+    position: relative;
+}
+
+#home_section4{
+    margin: 105px 0;
+}
+
+#home_section4 > div{
+    justify-content: space-around;
+    padding: 120px 0;
+}
+
+#home_section4 > div h2{
+    display: flex;
+    align-items: flex-end;
+    max-width: 181px;
+}
+
+#home_section4 > div h2 img{
+    margin-left: 6px;
+}
+
+#home_section4_background{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    padding: 0 111px;
+    background: var(--scale-8-blue);
+    border-radius: 44px 0 0 44px;
+}
+
+#home_section4_reports{
+    position: relative;
+    left: 15px;
+    max-width: 697px;
+    color: white;
+}
+
+#home_section4_reports p{
+    margin-top: 17px;
+}
+
+#home_section5 > div{
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#home_section5 > div h2{
+    margin-bottom: 40px;
+}
+
+#home_section5 div ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#home_section5 div ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+}
+
+#home_section5 div ul li div{
+    position: absolute;
+    font-size: 14px;
+    margin-top: 288px;
+}
+
+#home_section5 div ul li:nth-child(2){
+    margin: 0 24px;
+}
+
+#home_section5 div ul li div h4{
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+#home_section5 div ul li img {
+    width: 352px;
+    border-radius: 20px 20px 0 0;
+}
+
+#home_section6 > div{
+    justify-content: space-between;
+}
+
+#home_section6 > div{
+    justify-content: space-around;
+}
+
+#home_section6 > div img{
+    width: 408px;
+}
+
+#home_section6 > div > div{
+    max-width: 528px;
+}
+
+#home_section6 > div > div h3{
+    font-size: 30px;
+}
+
+#home_section6 > div > div p{
+    margin: 20px 0;
+}
+
+#home_section6 > div > div a button{
+    border-radius: 20px;
+    border: none;
+    width: 234px;
+    background: #650C85;
+    padding: 10px 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+}
+
+#box1{
+    position: absolute;
+    margin: 10px 0;
+    transform: translateX(500px);
+    width: 100px;
+    height: 100px;
+}
+
+#box2{
+    position: absolute;
+}
