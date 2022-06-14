@@ -240,14 +240,3 @@ main #home_section1 > div{
     color: white;
 }
 
-#box1{
-    position: absolute;
-    margin: 10px 0;
-    transform: translateX(500px);
-    width: 100px;
-    height: 100px;
-}
-
-#box2{
-    position: absolute;
-}
