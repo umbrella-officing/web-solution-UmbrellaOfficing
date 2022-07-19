@@ -5,5 +5,5 @@ const home = require('./app/routes/index')(app)
 
 
 app.listen(port,()=>{
-    console.log('Servidor no ar rodando na porta 3000')
+    console.log(`Servidor no ar rodando na porta ${port}`)
 })
