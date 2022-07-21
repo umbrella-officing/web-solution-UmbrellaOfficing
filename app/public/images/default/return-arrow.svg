@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+	<title>Novo Projeto</title>
+	<defs>
+		<image  width="500" height="500" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0AQMAAADxGE3JAAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAADVJREFUeJztwTEBAAAAwqD1T+1hDaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbn0AAAGFEtj2AAAAAElFTkSuQmCC"/>
+		<image  width="40" height="40" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAAAXNSR0IB2cksfwAAAKVQTFRF////4+Pjl5eXYGBgREREKCgoDAwMk5OT39/f5+fnfHx8MDAwAAAALCws9/f3f39/EBAQr6+vGBgYODg4g4ODn5+fv7+/09PTPDw8s7Ozj4+P6+vrICAg+/v7XFxcFBQUTExM8/Pzx8fHUFBQNDQ0w8PDJCQkm5ubBAQE29vbi4uLVFRUQEBAy8vLSEhI19fXt7e3CAgIq6ureHh4dHR07+/vaGho4/6/CgAAAcJJREFUeJyNlO16gjAMhTsEBBZA+RBFwOGUzaFO3PT+L21pAaWl4vqHJ+lrT1OTQwi3XpSRqum6po7GBnm4TOsVOsu2TCnmuBMQlu46fW7qsT0/CGdRNAuDOQu9hcgFLB13xJZKQnMBh6UZpiaBIOTEK0xnaSdFOVtSpulTktd9y6UVZl31KeVkWCvWVORgvbb0PLaL6l59eRfrEO+3ft+0D2N6jbg5Ed+AkK0OULSBggct8WvdjuY4mLdRWgBY+MX/N5Zw+voWfwBo2C+YNCXc9p7IPwF29Ab+MEeISqsYCaVIOPIFUFI6fMKRBcCeaACzJxw5ACQEd6JbZk25lcgRA3/Mg0falN8iV4OcNJ0ZrT8pTJorJgQpeaLF8M8TS8kxfZ64868+Io/0sB1uLIfJvGIFYzUKGSTPdc/9YEnOEJnadZuZldhnAolPobMAR8Ez++RvE1zQB9z6rjgUvtMjy0ZYvU/AlJ9yJmdvmg6/3se1NoBMYlx43pW3HzrlvsQNL6ogxkzKU1IeS8NENKnG9oqwYxj52e7bHmmNtFLjxcEwDqfxsZIb6f+tmVCz17pY8cDs2doF5T7R9WRfBhG/8wcTnCkEEiRMcAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="-230" y="-230"/>
+	<use id="Camada 1" href="#img2" x="0" y="0"/>
+</svg>

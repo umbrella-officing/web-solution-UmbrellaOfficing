@@ -93,6 +93,7 @@
 
 #home_section2 ul{
     display: flex;
+    justify-content: space-between; /*Alteração do Xavier, 20/07 às 23:51*/
     flex-wrap: wrap;
     list-style: none;
 }
@@ -111,7 +112,7 @@
 
 #home_section2 > div ul li p{
     margin: 12px 0;
-    max-width: 179px;
+    max-width: 284px;
 }
 
 #home_section3{
@@ -139,16 +140,35 @@
     color: #ffffff;
 }
 
-#home_section3 > div > div p{
-    margin: 20px 0;
-    font-size: 17px;
-    max-width: 607px;
+#home_section3 > div > div  h3{
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 5px;
 }
 
-#home_section3 > div > div a{
+#home_section3 > div > div p{
+    margin: 20px 0;
+    font-size: 18px;
+    max-width: 607px;
+    text-align: center;
+}
+
+/* #home_section3 > div > div a{
     color: inherit;
     font-weight: 500;
     font-family: var(--font-primary);
+} */
+
+#home_section3 > div > div > a > button{
+    width: 180px;
+    height: 36px;
+    background-color: var(--scale-2-purple);
+    border: none;
+    border-radius: 20px;
+    color: var(--white);
+    font-weight: 700;
+    font-family: var(--font-primary);
+    font-size: 16px;
 }
 
 #home_section4{

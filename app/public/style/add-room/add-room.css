@@ -1,0 +1,26 @@
+#add-room_section{
+    padding-top: 105px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#add-room_section h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#add-room_section  div{
+    border: 1px solid var(--gray-border);
+    border-radius: 20px;
+    text-align: center;
+}
+
+#add-room_section button{
+    width: 186px;
+    height: 36px;
+    background-color: var(--scale-2-purple);
+    border-style: none;
+    border-radius: 20px;
+    color: var(--white);
+}
