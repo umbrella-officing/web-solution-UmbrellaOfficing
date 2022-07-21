@@ -1,0 +1,16 @@
+#officing_features_section{
+    padding-top: 105px;
+
+}
+
+#officing_features_section > div > :first-child{
+    background-color: var(--scale-1-blue);
+    color: var(--white);
+    width: 100px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+ul{
+    list-style: none;
+}

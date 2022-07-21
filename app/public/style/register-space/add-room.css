@@ -1,0 +1,58 @@
+#add_room_section{
+    padding-top: 143px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;/*Quando eu tirei daqui, o site quebrou. Por quê? */
+}
+
+#add_room_section > div{
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#add_room_section > div > :first-child{
+    display: flex;
+    align-items: center;
+}
+
+#add_room_section > div > :first-child p{
+    font-size: 14px;
+}
+
+#add_room_section > div > h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#add_room_section > div img{
+    margin-right: 10px;
+}
+
+#add{
+    border: 1px solid var(--gray-border);
+    border-radius: 20px;
+    text-align: center;
+    padding: 62px 78px;
+    margin-top: 72px;
+}
+
+#add_room_section > div > div p{
+    max-width: 130px;
+    font-size: 25px;
+}
+
+/* #button_div{
+    max-width: 1160px;
+    display: flex;
+    justify-content: end;
+} */
+
+#add_room_section > div button{
+    width: 186px;
+    height: 36px;
+    background-color: var(--scale-2-purple);
+    border-style: none;
+    border-radius: 20px;
+    color: var(--white);
+}

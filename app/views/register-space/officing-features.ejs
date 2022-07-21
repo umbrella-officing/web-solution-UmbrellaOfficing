@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/register-space/add-room.css">
+    <link rel="stylesheet" href="style/register-space/officing-features.css">
 </head>
 <body>
     <header id="header" class="container_margin_default">
@@ -77,17 +77,31 @@
 
     <main>
         
-        <section id="add_room_section"> 
+        <section id="officing_features_section"> 
             <div class="default_margin">
-                <div><img src="images/default/return-arrow.svg" alt="Seta para voltar à tela anterior"><p>Voltar</p></div>
-                
-                <h1>Adicione as salas que você quer anunciar</h1>
-            <div id="add">
-                <p>Adicionar sala +</p>
-            </div>
-            <div id="button_div">
-                <button>Avançar</button>
-            </div>
+                <article>
+                    <h1>Adicione as características do seu Officing</h1>
+                </article>
+
+                <article>
+                    <form action="">
+                        <ul>
+                        <li><label>Pessoas</label><input type="number" id="points" name="points" step="3"></li>
+                        <li>
+                            <ul>
+                            <label>Acesso a banheiros</label>
+
+                        
+                        <li><label>Algum dos banheiros indicados é privado?</label>
+                            <label>Sim</label><input type="radio" name="yes" id="yes"></li>
+                            <label>Não</label><input type="radio" name="no" id="no"></li>
+                    </ul>
+                    </li>
+
+                    <li><label>Tamanho da sala</label><input type="text" name="roomSize" id="roomSize" placeholder="Ex: 10"></li>
+                    </ul>
+                    </form>
+                </article>
             </div>
     </section>
     </main>
