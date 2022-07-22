@@ -1,0 +1,35 @@
+body{
+    background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
+    background-repeat: no-repeat;
+}
+
+#apresentation_section{
+    padding-top: 105px;
+    display: flex;
+    justify-content: center;
+    height: 590px;
+}
+
+#apresentation_section h1{
+    font-size: 40px;
+    color: var(--white);
+    max-width: 360px;
+}
+
+#apresentation_section > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#apresentation_section > div > article form{
+    display: flex;
+    flex-direction: column;
+}
+#apresentation_section > div > article > form input{
+    border: 1px solid var(--gray-border);
+}
+
+/* #form-article{
+    max-width: 389px;
+    min-width: 389px;
+} */

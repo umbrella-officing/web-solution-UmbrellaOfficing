@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/register-space/add-room.css">
+    <link rel="stylesheet" href="style/register-space/apresentation.css">
 </head>
 <body>
     <header id="header" class="container_margin_default">
@@ -77,17 +77,22 @@
 
     <main>
         
-        <section id="add_room_section"> 
+        <section id="apresentation_section"> 
             <div class="default_margin">
-                <div><img src="images/default/return-arrow.svg" alt="Seta para voltar à tela anterior"><p>Voltar</p></div>
-                
-                <div><h1>Adicione as salas que você quer anunciar</h1></div>
-            <div id="add">
-                <p>Adicionar sala +</p>
-            </div>
-            <div id="button_div">
-                <button>Avançar</button>
-            </div>
+                <article>
+                    <h1>Aproveite para apresentar o seu espaço</h1>
+                </article>
+
+                <article id="form-article">
+                    <form action="">
+                        <label for="titulo">Título</label>
+                        <input type="text" name="titulo" id="titulo" size="65">
+                        <label for="descricao">Descrição</label>
+                        <textarea name="descricao" id="descricao" rows="15"></textarea>
+
+                        <input type="submit">
+                    </form>
+                </article>
             </div>
     </section>
     </main>
