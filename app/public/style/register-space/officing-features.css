@@ -1,6 +1,6 @@
 body{    
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
 }
 
 ul{
@@ -15,7 +15,6 @@ ul{
 }
 
 #officing_features_section > div{
-    display: flex;
     justify-content: space-between;
 }
 
@@ -26,56 +25,46 @@ ul{
     max-width: 435px;
 }
 
-#officing_features_section > div > article > form > ul > li label{
+#officing_features_section h2{
     font-size: 22px;
     font-weight: 500;
 }
 
 #roomSize{
     border: 1px solid var(--gray-border);
-    padding: 2px 2px 2px 15px;
+    padding: 7px 7px 7px 12px;
     border-radius: 10px;
     font-size: 14px;
-    width: 80px;
-    height: 30px
+    font-family: var(--font-primary);
+    max-width: 80px;
 }
-
 
 .hintText{
     font-size: 12px;
     color: var(--text-3-black);
+    margin-top: 5px;
 }
 
 .liAlign{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .label-yn{
     font-size: 12px;
 }
 
-input[type="number"]{
+input[type="submit"]{
+    background-color: var(--scale-2-purple);
+    width: 186px;
+    height: 36px;
     border: none;
-    text-align: center;
-    font-size: 16px;
+    border-radius: 20px;
+    color: var(--white);
     font-family: var(--font-primary);
-}
-
-#decrement, #increment{
-    border-radius: 50px;
-    border: 1px solid var(--text-2-black);
-}
-
-#decrement{
-    padding: 8px 13px;
-}
-
-#increment{    
-    padding: 8px 12px;
-}
-
-#room-size-align{
-    display: flex;
-    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 50px 0 0 157px;
 }

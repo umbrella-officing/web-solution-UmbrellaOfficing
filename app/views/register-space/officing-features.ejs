@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -80,6 +80,7 @@
         <section id="officing_features_section"> 
             <div class="default_margin">
                 <article>
+                    <img src="images/default/white-return-arrow-svg" alt=""> <!--Por que não aparece?-->
                     <h1>Adicione as características do seu Officing</h1>
                 </article>
 
@@ -89,22 +90,17 @@
                         <li>
                             <div class="liAlign">
                                 
-                                    <label>Pessoas<p class="hintText">Indicamos 1 pessoa/7m²</p></label>
-                                    <button id="decrement"> - </button>
-                                    
+                                    <label><h2>Pessoas</h2><p class="hintText">Indicamos 1 pessoa/7m²</p></label>
+                                
                                 <input type="number" id="points" name="points" min="1" max="100" step="1" value="1">
-                                <button id="increment"> + </button>
                             </div>
                 </li>
                         <li>
                             <ul>
                                 <div class="liAlign">
-                            <label>Acesso a banheiros</label>
-                            <button id="decrement"> - </button>
+                            <label><h2> Acesso a banheiros</h2></label>
                             <input type="number" id="points" name="points" min="1" max="100" step="1" value="1">
-                            <button id="increment"> + </button>
                         </div>
-                        
                         
                         <li><p>Algum dos banheiros indicados é privado?</p></li>
                             
@@ -119,8 +115,9 @@
                     </ul>
                         </li>
 
-                    <li class="liAlign" id="room-size-align"><label>Tamanho da sala<p class="hintText">Em m²</p></label>
+                    <li class="liAlign"><label><h2>Tamanho da sala</h2><p class="hintText">Em m²</p></label>
                         <input type="text" name="roomSize" id="roomSize" placeholder="Ex: 10"></li>
+                        <input type="submit" value="Avançar">
                     </ul>
                     </form>
                 </article>
@@ -132,3 +129,4 @@
 
 </body>
 </html>
+
