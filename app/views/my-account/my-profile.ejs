@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/default/default.css">
+    <link rel="stylesheet" href="style/my-account/my-profile.css">
+</head>
+<body>
+    <header id="header" class="container_margin_default">
+        <div class="default_margin">
+            <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
+        </div>
+    </header>
+
+    <body>
+        <section id="my-profile_section1" class="container_margin_default">
+            <div class="default_margin">
+                <div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <img src="images/my-account/my-profile.svg" alt="meu perfil">
+                                Meu perfil
+                            </li>
+                            <li>
+                                <img src="images/my-account/personal-data.svg" alt="favoritos">
+                                Dados pessoais
+                            </li>
+                            <li>
+                                <img src="images/my-account/reservations.svg" alt="suporte">
+                                Minhas reservas
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div>
+                    <h1>Meu perfil</h1>
+                    <p>As pessoas que acessarem o seu perfil verão essas informações</p>
+
+                    <form action="/my-profile" method="post">
+                        <span>
+                            <label for="about-me">Sobre mim</label>
+                            <textarea name="about-me" id="about-me" rows="6" placeholder="Oi, meu nome é Aline e trabalho como publicitária desde 2021, quando  
+                            terminei o curso de Publicidade na PUC-SP...">
+                            </textarea>
+                        </span>
+                        <span>
+                            <label for="profissional-perfil">Perfil profissional</label>
+                            <textarea id="about-me" id="profissional-perfil" rows="3" placeholder="Ex.: Sou nômade digital e possuo uma rotina de trabalho intensa com viagens... ">
+                            </textarea>
+                        </span>
+                        <span>
+                                <p>Insira suas preferências</p>
+                                <h4>Home Oficce</h4>
+                                <div></div>
+                                <h4>Coworking</h4>
+                                <div></div>
+                        </span>
+                
+                            <span>
+                                <h3>Redes sociais</h3>
+                                <div>
+                                    <input type="url" id="url-insta" placeholder="Adicionar Instagram" />
+                                    <p>Cole a URL do seu perfil aqui</p>
+                                </div>
+
+                                <div>
+                                    <input type="url" id="url-face" placeholder="Adicionar Facebook" />
+                                    <p>Cole a URL do seu perfil aqui</p>
+                                </div>
+
+                                <div>
+                                    <input type="url" id="url-whats" placeholder="Adicionar WhatsApp" />
+                                    <p>Cole a URL do seu perfil aqui</p>
+                                </div>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+    
+</body>
+</html>

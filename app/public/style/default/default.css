@@ -1,6 +1,6 @@
 :root{
     --font-primary:'Montserrat', sans-serif;
-    --text-1-black:#222;
+    --text-1-black:#222222;
     --text-2-black:#3E3C3C;
     --text-3-black:#7D7D7D;
     /* --text-gray:#666; */
@@ -20,6 +20,7 @@
     --scale-6-blue:#748FE0;
     --scale-7-blue:#264082;
     --scale-8-blue:#010290;
+    --scale-9-blue:#F6F5FA;
     --gradient:linear-gradient(180deg, #81A4F3, #D16CC1)
 }
 

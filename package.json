@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server":"nodemon app.js"
+    "server": "nodemon app.js"
   },
   "author": "Felipe Mendes Martins, Felipe Xavier Gomes, Julia Rodrigues Gomes, Eduardo Felinto Gonçalves, Natan Gonçalves Diniz",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.7",
     "express": "^4.17.3",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.19"
   }
 }
