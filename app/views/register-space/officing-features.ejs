@@ -90,16 +90,21 @@
                             <div class="liAlign">
                                 
                                     <label>Pessoas<p class="hintText">Indicamos 1 pessoa/7m²</p></label>
-                                
+                                    <button id="decrement"> - </button>
+                                    
                                 <input type="number" id="points" name="points" min="1" max="100" step="1" value="1">
+                                <button id="increment"> + </button>
                             </div>
                 </li>
                         <li>
                             <ul>
                                 <div class="liAlign">
                             <label>Acesso a banheiros</label>
+                            <button id="decrement"> - </button>
                             <input type="number" id="points" name="points" min="1" max="100" step="1" value="1">
+                            <button id="increment"> + </button>
                         </div>
+                        
                         
                         <li><p>Algum dos banheiros indicados é privado?</p></li>
                             
@@ -114,7 +119,7 @@
                     </ul>
                         </li>
 
-                    <li class="liAlign"><label>Tamanho da sala<p class="hintText">Em m²</p></label>
+                    <li class="liAlign" id="room-size-align"><label>Tamanho da sala<p class="hintText">Em m²</p></label>
                         <input type="text" name="roomSize" id="roomSize" placeholder="Ex: 10"></li>
                     </ul>
                     </form>
