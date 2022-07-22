@@ -1,16 +1,81 @@
-#officing_features_section{
-    padding-top: 105px;
-
-}
-
-#officing_features_section > div > :first-child{
-    background-color: var(--scale-1-blue);
-    color: var(--white);
-    width: 100px;
-    font-size: 40px;
-    font-weight: 700;
+body{    
+    background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
+    background-repeat: no-repeat;
 }
 
 ul{
     list-style: none;
+}
+
+#officing_features_section{
+    display: flex;
+    justify-content: center;
+    padding-top: 105px;
+    height: 590px;
+}
+
+#officing_features_section > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#officing_features_section > div > article > h1{
+    color: var(--white);
+    font-size: 40px;
+    font-weight: 700;
+    max-width: 435px;
+}
+
+#officing_features_section > div > article > form > ul > li label{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+#roomSize{
+    border: 1px solid var(--gray-border);
+    padding: 2px 2px 2px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 80px;
+    height: 30px
+}
+
+
+.hintText{
+    font-size: 12px;
+    color: var(--text-3-black);
+}
+
+.liAlign{
+    display: flex;
+    align-items: center;
+}
+
+.label-yn{
+    font-size: 12px;
+}
+
+input[type="number"]{
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    font-family: var(--font-primary);
+}
+
+#decrement, #increment{
+    border-radius: 50px;
+    border: 1px solid var(--text-2-black);
+}
+
+#decrement{
+    padding: 8px 13px;
+}
+
+#increment{    
+    padding: 8px 12px;
+}
+
+#room-size-align{
+    display: flex;
+    justify-content: space-between;
 }

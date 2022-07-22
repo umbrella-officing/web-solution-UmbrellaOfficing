@@ -33,7 +33,7 @@ body{
     margin: 18px 0 12px 0;
 }
 
-#apresentation_section > div > article > form #titulo, textarea{ /*Como afetar só o input text?*/
+#apresentation_section > div > article > form input[type="text"], textarea{ /*Como afetar só o input text?*/
     border: 1px solid var(--gray-border);
     border-radius: 10px;
     padding: 15px;
