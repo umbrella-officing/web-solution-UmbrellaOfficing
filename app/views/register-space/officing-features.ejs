@@ -86,19 +86,36 @@
                 <article>
                     <form action="">
                         <ul>
-                        <li><label>Pessoas</label><input type="number" id="points" name="points" step="3"></li>
+                        <li>
+                            <div class="liAlign">
+                                
+                                    <label>Pessoas<p class="hintText">Indicamos 1 pessoa/7m²</p></label>
+                                
+                                <input type="number" id="points" name="points" min="1" max="100" step="1" value="1">
+                            </div>
+                </li>
                         <li>
                             <ul>
+                                <div class="liAlign">
                             <label>Acesso a banheiros</label>
-
+                            <input type="number" id="points" name="points" min="1" max="100" step="1" value="1">
+                        </div>
                         
-                        <li><label>Algum dos banheiros indicados é privado?</label>
-                            <label>Sim</label><input type="radio" name="yes" id="yes"></li>
-                            <label>Não</label><input type="radio" name="no" id="no"></li>
-                    </ul>
-                    </li>
+                        <li><p>Algum dos banheiros indicados é privado?</p></li>
+                            
+                            <li class="liAlign"><label for="yes" class="label-yn">Sim</label>
+                               <input type="radio" name="yes" id="yes"> <!-- Por que, quando eu coloco uma div aqui, o site todo quebra? -->
+                               <label for="no" class="label-yn">Não</label>
+                               <input type="radio" name="no" id="no"></li>
 
-                    <li><label>Tamanho da sala</label><input type="text" name="roomSize" id="roomSize" placeholder="Ex: 10"></li>
+                            </li>
+                            
+
+                    </ul>
+                        </li>
+
+                    <li class="liAlign"><label>Tamanho da sala<p class="hintText">Em m²</p></label>
+                        <input type="text" name="roomSize" id="roomSize" placeholder="Ex: 10"></li>
                     </ul>
                     </form>
                 </article>
