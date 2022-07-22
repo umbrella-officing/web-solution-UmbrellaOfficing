@@ -1,6 +1,10 @@
+.container_search{
+    display: none;
+}
+
 body{    
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
 }
 
 ul{
@@ -23,6 +27,10 @@ ul{
     font-size: 40px;
     font-weight: 700;
     max-width: 435px;
+}
+
+#officing_features_section > div > form{
+    width: 450px;
 }
 
 #officing_features_section h2{
@@ -52,8 +60,18 @@ ul{
     margin-bottom: 10px;
 }
 
+#liAlign{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .label-yn{
     font-size: 12px;
+}
+
+input[type="radio"]{
+    margin-right: 5px;
 }
 
 input[type="submit"]{

@@ -1,3 +1,7 @@
+.container_search{
+    display: none;
+}
+
 #add_room_section{
     padding-top: 143px;
     display: flex;
@@ -6,9 +10,9 @@
 }
 
 #add_room_section > div{
-    justify-content: space-between;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    position: relative;
 }
 
 #add_room_section > div > :first-child{
@@ -26,7 +30,11 @@
 }
 
 #add_room_section > div img{
-    margin-right: 10px;
+    margin-right: 30px;
+}
+
+#alignH1{
+    padding-top: 20px;
 }
 
 #add{
@@ -42,18 +50,18 @@
     font-size: 25px;
 }
 
-/* #button_div{
-    max-width: 1160px;
-    display: flex;
-    justify-content: end;
-} */
-
-#add_room_section > div button{
+#add_room_section > div > div > button{
     width: 186px;
     height: 36px;
     background-color: var(--scale-2-purple);
     border-style: none;
     border-radius: 20px;
     color: var(--white);
-    margin-top: 40px;
+    margin-top: 60px;
+}
+
+#add_room_section > div > :last-child{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }

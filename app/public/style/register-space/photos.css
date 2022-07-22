@@ -1,6 +1,6 @@
 body{    
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
 }
 
 #photos_section{

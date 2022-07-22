@@ -1,3 +1,7 @@
+.container_search{
+    display: none;
+}
+
 body{
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
     background-repeat: no-repeat;
@@ -41,6 +45,10 @@ body{
     font-size: 16px;
 }
 
+textarea{
+    resize: none;
+}
+
 #advance{
     background-color: var(--scale-2-purple);
     border: none;
@@ -53,3 +61,4 @@ body{
     border-radius: 20px;
     margin: 45px 0 0 320px;
 }
+
