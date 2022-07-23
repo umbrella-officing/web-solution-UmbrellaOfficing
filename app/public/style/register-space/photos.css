@@ -17,7 +17,6 @@ body{
 
 #photos_section > div > article{
     display: flex;
-    flex-direction: row;
 }
 
 #photos_section > div > article > h1{
@@ -26,9 +25,37 @@ body{
     color: var(--white)
 }
 
+#photos_section > div > article > form{
+    width: 506px;
+}
+
 #photos_section > div > article > form ul{
     list-style: none;
-    width: 506px;
+    width: 100%;
+}
+
+#grid_imgUp{
+    max-width: 510px;
+    margin: 0 auto;
+    grid-template: "photo1 photo2" 478px "photo3 photo3" 478px;
+}
+
+.item{
+    border: 1px solid var(--gray-border);
+    border-radius: 10px;
+    height: 158px;
+}
+
+#item1{
+    grid-area: photo1;
+}
+
+#item2{
+    grid-area: photo2;
+}
+
+#item3{
+    grid-area: photo3;
 }
 
 .uploadImage {
@@ -37,12 +64,6 @@ body{
     height: 159px;
     margin: 15px 15px 0 0;
     border-radius: 10px;
-}
-
-#alignInput-img{
-    display: flex;
-    align-items: center;
-    width: 506px;
 }
 
 input[type="submit"]{
