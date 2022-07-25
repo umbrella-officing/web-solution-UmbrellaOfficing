@@ -38,12 +38,26 @@
 .my-profile-public_section1-left > div:nth-of-type(2) p {
     font-size: 18px;
     font-weight: 400;
+    color: #4B4B4B;
 }
 
 .my-profile-public_section1-left h4 {
     font-size: 16px;
     font-weight: 500;
     margin: 20px 0;
+}
+
+.my-profile-public_section1-left > div ul {
+    display: flex;
+    list-style: none;
+}
+
+.my-profile-public_section1-left > div ul li {
+    width: 34px;
+    height: 8px;
+    margin-right: 6px;
+    background-color: var(--scale-11-blue);
+    border-radius: 16px;
 }
 
 
@@ -91,8 +105,6 @@
 }
 
 .my-profile-public_section1-right > div:nth-child(2) img{
-    width: 35px;
-    height: 35px;
     margin-bottom: 44px;
 }
 
