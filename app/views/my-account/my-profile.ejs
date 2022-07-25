@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,13 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/my-profile.css">
+    <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header id="header" class="container_margin_default">
         <div class="default_margin">
@@ -19,9 +23,10 @@
     </header>
 
     <body>
-        <section id="my-profile_section1" class="container_margin_default">
-            <div class="default_margin">
-                <div>
+        <main>
+            <section id="my-profile_section1" class="container_margin_default">
+                <div class="default_margin">
+                    <div id="my-profile_section1-background"></div>
                     <nav>
                         <ul>
                             <li>
@@ -38,55 +43,63 @@
                             </li>
                         </ul>
                     </nav>
+
+                    <div>
+                        <h1>Meu perfil</h1>
+                        <p>As pessoas que acessarem o seu perfil verão essas informações</p>
+
+                        <form action="/my-profile" method="post">
+                            <div class="my-profile_section1-form1">
+                                <div>
+                                    <label for="about-me">Sobre mim</label>
+                                    <textarea name="about-me" id="about-me"></textarea>
+                                </div>
+                                <div>
+                                    <label for="profissional-perfil">Perfil profissional</label>
+                                    <textarea id="about-me" id="profissional-perfil"></textarea>
+                                </div>
+                            </div>
+                            <div class="my-profile_section1-form2">
+                                <div>
+                                    <p>Insira suas preferências</p>
+                                    <h4>Home Oficce</h4>
+                                    <div></div>
+                                    <h4>Coworking</h4>
+                                    <div></div>
+                                </div>
+
+                                <div>
+                                    <h3>Redes sociais</h3>
+                                    <div>
+                                        <div id="my-profile_section1-form2-url">
+                                            <img src="images/my-account/my-profile/insta.svg" alt="Ícone do Instagram">
+                                            <input type="url" id="url-insta" placeholder="Adicionar Instagram" />
+                                        </div>
+                                        <p>Cole a URL do seu perfil aqui</p>
+                                    </div>
+
+                                    <div>
+                                        <div id="my-profile_section1-form2-url">
+                                            <i class="fa-brands fa-whatsapp whats"></i>
+                                            <input type="url" id="url-whats" placeholder="Adicionar WhatsApp" />
+                                        </div>
+                                        <p>Cole a URL do seu perfil aqui</p>
+                                    </div>
+
+                                    <div>
+                                        <div id="my-profile_section1-form2-url">
+                                            <i class="fa-brands fa-facebook face"></i>
+                                            <input type="url" id="url-face" placeholder="Adicionar Facebook" />
+                                        </div>
+                                        <p>Cole a URL do seu perfil aqui</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-
-                <div>
-                    <h1>Meu perfil</h1>
-                    <p>As pessoas que acessarem o seu perfil verão essas informações</p>
-
-                    <form action="/my-profile" method="post">
-                        <span>
-                            <label for="about-me">Sobre mim</label>
-                            <textarea name="about-me" id="about-me" rows="6" placeholder="Oi, meu nome é Aline e trabalho como publicitária desde 2021, quando  
-                            terminei o curso de Publicidade na PUC-SP...">
-                            </textarea>
-                        </span>
-                        <span>
-                            <label for="profissional-perfil">Perfil profissional</label>
-                            <textarea id="about-me" id="profissional-perfil" rows="3" placeholder="Ex.: Sou nômade digital e possuo uma rotina de trabalho intensa com viagens... ">
-                            </textarea>
-                        </span>
-                        <span>
-                                <p>Insira suas preferências</p>
-                                <h4>Home Oficce</h4>
-                                <div></div>
-                                <h4>Coworking</h4>
-                                <div></div>
-                        </span>
-                
-                            <span>
-                                <h3>Redes sociais</h3>
-                                <div>
-                                    <input type="url" id="url-insta" placeholder="Adicionar Instagram" />
-                                    <p>Cole a URL do seu perfil aqui</p>
-                                </div>
-
-                                <div>
-                                    <input type="url" id="url-face" placeholder="Adicionar Facebook" />
-                                    <p>Cole a URL do seu perfil aqui</p>
-                                </div>
-
-                                <div>
-                                    <input type="url" id="url-whats" placeholder="Adicionar WhatsApp" />
-                                    <p>Cole a URL do seu perfil aqui</p>
-                                </div>
-                            </span>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
     </body>
-    
-</body>
+
 </html>

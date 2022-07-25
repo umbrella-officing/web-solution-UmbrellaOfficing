@@ -1,0 +1,88 @@
+#reservations_section1 > div{
+    padding-top: 181px;
+    justify-content: space-between;
+    color: var(--text-1-black);
+}
+
+/*Menu lateral - fixo*/
+#reservations_section1-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: calc(50% - 290px);
+    background-color: var(--scale-9-blue);
+}
+
+#reservations_section1 > div nav {
+    position: relative;
+}
+
+#reservations_section1 > div nav ul{
+    list-style: none;
+}
+
+#reservations_section1 > div nav ul li{
+    display: flex;
+    margin: 40px 0;
+    align-items: center;
+}
+
+#reservations_section1 > div nav li {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#reservations_section1 > div nav li img {
+    margin-right: 10px;
+}
+
+
+/*Conteúdo*/
+#reservations_section1 > div > div h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#reservations_section1-space {
+    display: flex;
+}
+
+#reservations_section1-space > div h2{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 7px;
+}
+
+#reservations_section1-space > div p{
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0 0 24px;
+}
+
+#reservations_section1-space > div button {
+    border: none;
+    width: 118px;
+    height: 26px;
+    color: var(--white);
+    border-radius: 40px;
+}
+
+
+#reservations_section1-space > div button {
+    font-size: 12px;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    margin: 0 20px 0 0;
+}
+
+#renew, #visits {
+    background-color: var(--scale-2-purple);
+}
+
+#cancel {
+    background-color: var(--scale-10-wine);
+}
+
+
+

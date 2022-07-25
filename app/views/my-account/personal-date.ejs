@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/default/default.css">
+    <link rel="stylesheet" href="style/my-account/personal-date.css">
+</head>
+
+<body>
+    <header id="header" class="container_margin_default">
+        <div class="default_margin">
+            <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
+        </div>
+    </header>
+
+    <body>
+        <main>
+            <section id="personal-date_section1" class="container_margin_default">
+                <div class="default_margin">
+                    <div id="personal-date_section1-background"></div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <img src="images/my-account/my-profile.svg" alt="meu perfil">
+                                Meu perfil
+                            </li>
+                            <li>
+                                <img src="images/my-account/personal-data.svg" alt="favoritos">
+                                Dados pessoais
+                            </li>
+                            <li>
+                                <img src="images/my-account/reservations.svg" alt="suporte">
+                                Minhas reservas
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div>
+                        <h1>Meus dados pessoais</h1>
+
+                        <form action="/personal-date" method="post">
+                            <div>
+                                <h2>Informações pessoais</h2>
+                                <div>
+                                    <label for="name">Nome</label>
+                                    <input type="text" name="name" id="name" placeholder="Aline Ribeiro" />
+                                </div>
+                                <div class="personal-date_section1_form-colum2">
+                                    <div>
+                                        <label for="birth-date">Data de nascimento</label>
+                                        <input type="date" name="birth-date" id="birth-date" />
+                                    </div>
+                                    <div>
+                                        <label for="gender">Sexo</label>
+                                        <select id="gender" name="gender">
+                                            <option value="feminino">Feminino</option>
+                                            <option value="masculino">Masculino</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h2>Identificação</h2>
+                                <div>
+                                    <label for="cpf">CPF</label>
+                                    <input type="text" name="cpf" id="cpf" placeholder="345.567.123-03" />
+                                </div>
+                                <div class="personal-date_section1_form-colum2">
+                                    <div>
+                                        <label for="rg">RG</label>
+                                        <input type="text" name="rg" id="rg" placeholder="12.345.678-90" />
+                                    </div>
+                                    <div>
+                                        <label for="orgao-exp">Orgão Exp.</label>
+                                        <input type="text" name="orgao-exp" id="orgao-exp" />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h2>Informações para contato</h2>
+                                    <div class="personal-date_section1_form-colum2">
+                                        <div>
+                                            <label for="phone">Telefone</label>
+                                            <input type="text" name="phone" id="phone" placeholder="12.345.678-90" />
+                                        </div>
+                                        <div>
+                                            <label for="cell">Celular</label>
+                                            <input type="text" name="cell" id="cell" placeholder="12.345.678-90" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>Endereço</h2>
+                                    <div>
+                                        <label for="cep">CEP</label>
+                                        <input type="text" name="cep" id="cep" placeholder="345.567.123-03" />
+                                    </div>
+                                    <div class="personal-date_section1_form-colum2">
+                                        <div>
+                                            <label for="rua">Rua</label>
+                                            <input type="text" name="rua" id="rua" placeholder="Rua Tomé de Souza" />
+                                        </div>
+                                        <div>
+                                            <label for="number">Nº</label>
+                                            <input type="text" name="number" id="number" placeholder="09" />
+                                        </div>
+                                    </div>
+                                    <div class="personal-date_section1_form-colum2">
+                                        <div>
+                                            <label for="bairro">Bairro</label>
+                                            <input type="text" name="bairro" id="bairro"
+                                                placeholder="Aldeia da Serra" />
+                                        </div>
+                                        <div>
+                                            <label for="cidade">Cidade/Estado</label>
+                                            <input type="text" name="cidade_estado" id="cidade_estado"
+                                                placeholder="Barueri, SP" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>Informações para login</h2>
+                                    <div>
+                                        <label for="email">Email</label>
+                                        <input type="email" name="email" id="email"
+                                            placeholder="alineribeiro@gmail.com" />
+                                    </div>
+                                    <div>
+                                        <label for="password">Senha</label>
+                                        <input type="password" name="password" id="password" />
+                                    </div>
+                                </div>
+                                <button type="submit" id="edit_ad">Editar informações</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+
+    <footer class="container_margin_default">
+
+        <div class="default_margin">
+            <div id="margin2">
+                <div id="logo">
+                    <img src="images/default/logo_footer.svg" alt="logo">
+                    <h4>Escritorizando <span><br>espaços </span></h4>
+                    <span>Umbrella Officing&copy 2022</span>
+                </div>
+
+                <ul>
+                    <h5>Junte-se a nós</h5>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Cadastre-se</a></li>
+                    <li><a href="#">Sua conta</a></li>
+                    <li><a href="#">Faça sua reserva</a></li>
+                    <li><a href="#">Anuncie seu espaço</a></li>
+                </ul>
+
+                <ul>
+                    <h5>Atendimento</h5>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Fórum</a></li>
+                    <li><a href="#">Central de ajuda</a></li>
+                </ul>
+
+                <ul>
+                    <h5>Sobre nós</h5>
+                    <li><a href="#">Quem somos?</a></li>
+                    <li><a href="#">Missão, valores e visão</a></li>
+                    <li><a href="#">Por que Umbrella Officing</a></li>
+                    <li><a href="#">Desenvolvedores</a></li>
+                </ul>
+
+            </div>
+
+            <div id="bottom_footer">
+                <div>
+                    <div id="network_div">
+                        <img src="images/default/icon_intagram.svg" alt="ícone do instagram">
+                        <img src="images/default/icon_facebook.svg" alt="ícone do facebook">
+                    </div>
+
+                    <div id="scroll_up">
+                        <img src="images/default/arrow_up.svg" alt="ícone de flecha">
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+
+    <script src="script/default/default.js"></script>
+
+
+</html>

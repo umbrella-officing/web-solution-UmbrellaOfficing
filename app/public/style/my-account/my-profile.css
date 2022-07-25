@@ -1,81 +1,130 @@
 #my-profile_section1 > div{
-    position: relative;
     padding-top: 181px;
     justify-content: space-between;
     color: var(--text-1-black);
 }
 
-#my-profile_section1 nav {
+/*Menu lateral - fixo*/
+#my-profile_section1-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: calc(50% - 290px);
     background-color: var(--scale-9-blue);
-
 }
 
-#my-profile_section1 ul{
+#my-profile_section1 > div nav {
+    position: relative;
+}
+
+#my-profile_section1 > div nav ul{
     list-style: none;
 }
 
-#my-profile_section1 nav ul>li{
-    width: 182px;
-    height: 60px;
-}
-
-#my-profile_section1 nav li {
+#my-profile_section1 > div nav ul li{
     display: flex;
+    margin: 40px 0;
     align-items: center;
-    margin: 17px 0;
 }
 
-
-#my-profile_section1 nav li {
-    font-size: 16px;
+#my-profile_section1 > div nav li {
+    font-size: 18px;
     font-weight: 400;
 }
 
-#my-profile_section1 ul li img {
-    width: 30px;
+#my-profile_section1 > div nav li img {
     margin-right: 10px;
 }
 
+/*Conteúdo*/
 #my-profile_section1 > div > div h1{
     font-size: 25px;
-    margin: 20px 0;
+    font-weight: bold;
 }
 
-#my-profile_section1 > div > div p {
+
+#my-profile_section1 h1 ~ p {
     font-size: 18px;
     font-weight: 400;
-    margin: 0 0 40px;
+    margin: 20px 0 40px;
 }
 
-#my-profile_section1 > div > div form span{
-    display: block;
-    margin: 40px 0 0 0;
 
-}
-
-#my-profile_section1 > div > div form label{
+.my-profile_section1-form1 div > label{
     display: block;
     margin: 0 0 10px;
 }
 
-#my-profile_section1 > div > div form label, h3{
+.my-profile_section1-form1 div > label {
     font-size: 20px;
     font-weight: 600;
 }
+
+.my-profile_section1-form1 div > textarea {
+    margin: 0 0 40px;
+}
+
 
 #my-profile_section1 > div > div form textarea, input{
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 15px;
+    resize: none;
 }
 
 #my-profile_section1 > div > div form textarea, input{
-    font-family: var(--font-primary);
     font-size: 16px;
 }
 
+.my-profile_section1-form2{
+    display: flex;
+    justify-content: space-between;
+}
 
+.my-profile_section1-form2 > div:nth-child(1){
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    padding: 25px;
+}
 
+.my-profile_section1-form2 > div p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 22px;
+}
 
+.my-profile_section1-form2 > div h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.my-profile_section1-form2 > div:nth-child(2) p{
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+#my-profile_section1-form2-url {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.whats, .face {
+    font-size: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.whats {
+    color: #1BD741;
+}
+
+.face {
+    color: #0000FF;
+}
 
 

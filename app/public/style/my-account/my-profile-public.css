@@ -1,0 +1,113 @@
+#my-profile-public_section1 > div{
+    padding-top: 181px;
+    justify-content: space-between;
+    color: var(--text-1-black);
+}
+
+#my-profile-public_section1-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: calc(50% - 290px);
+    background-color: var(--scale-9-blue);
+}
+
+.my-profile-public_section1-left {
+    position: relative;
+}
+
+
+.my-profile-public_section1-left > div:nth-of-type(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-profile-public_section1-left > div h3{
+    margin-left: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.my-profile-public_section1-left > div:nth-of-type(2) {
+   margin: 50px 0;
+}
+
+.my-profile-public_section1-left > div:nth-of-type(2) p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.my-profile-public_section1-left h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+
+.my-profile-public_section1-left-verification > div { 
+   display: flex;
+}
+
+.my-profile-public_section1-left-verification > div p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 8px 10px;
+}
+
+.check {
+    font-size: 14px;
+    color: var(--scale-11-blue);
+    margin: 8px 0;
+}
+
+
+.my-profile-public_section1-right h1 {
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 0 0 35px;
+}
+
+.my-profile-public_section1-right h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.my-profile-public_section1-right p {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px 0 50px;
+}
+
+.my-profile-public_section1-right {
+    display: flex;
+}
+
+.my-profile-public_section1-right > div:nth-child(2) {
+    width: 35px;
+    margin-left: 150px;
+}
+
+.my-profile-public_section1-right > div:nth-child(2) img{
+    width: 35px;
+    height: 35px;
+    margin-bottom: 44px;
+}
+
+.whats, .face {
+    font-size: 2.6rem;
+    margin-bottom: 44px
+}
+
+.whats {
+    color: #1BD741;
+}
+
+.face {
+    color: #0000FF;
+}
+
+ 
+

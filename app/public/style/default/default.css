@@ -21,10 +21,12 @@
     --scale-7-blue:#264082;
     --scale-8-blue:#010290;
     --scale-9-blue:#F6F5FA;
+    --scale-10-wine: #A60014;
+    --scale-11-blue: #7397E3;
     --gradient:linear-gradient(180deg, #81A4F3, #D16CC1)
 }
 
-html, button{
+html, button, input, textarea{
     font-family: var(--font-primary);
 }
 
