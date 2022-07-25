@@ -14,6 +14,7 @@ const myNotifications = require('./app/routes/my-account/notifications')(app);
 const addRoom = require('./app/routes/add-room')(app);
 const officingFeatures = require('./app/routes/officing-features')(app);
 const apresentation = require('./app/routes/apresentation')(app);
+const photos = require('./app/routes/photos')(app);
 
 app.listen(port,()=>{
     console.log(`Servidor no ar rodando na porta ${port}`)

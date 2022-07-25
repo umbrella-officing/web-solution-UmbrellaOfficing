@@ -1,3 +1,7 @@
+.container_search{
+    display: none;
+}
+
 body{
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
     background-repeat: no-repeat;
@@ -33,12 +37,16 @@ body{
     margin: 18px 0 12px 0;
 }
 
-#apresentation_section > div > article > form input[type="text"], textarea{ /*Como afetar só o input text?*/
+#apresentation_section > div > article > form input[type="text"], textarea{ 
     border: 1px solid var(--gray-border);
     border-radius: 10px;
     padding: 15px;
     font-family: var(--font-primary);
     font-size: 16px;
+}
+
+textarea{
+    resize: none;
 }
 
 #advance{
@@ -51,5 +59,6 @@ body{
     font-family: var(--font-primary);
     font-weight: 500;
     border-radius: 20px;
-    margin-top: 45px;
+    margin: 45px 0 0 320px;
 }
+
