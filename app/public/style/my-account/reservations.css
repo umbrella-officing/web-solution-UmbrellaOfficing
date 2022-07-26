@@ -42,25 +42,49 @@
 #reservations_section1 > div > div h1{
     font-size: 25px;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 #reservations_section1-space {
     display: flex;
 }
 
+#reservations_section1-space > div {
+    padding: 20px;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 5px 5px 5px 5px rgb(128 128 128 / 35%);
+    width: 100%;
+    max-width: 482px; 
+    max-height: 197px;
+    box-sizing: border-box;
+}
+
+#reservations_section1-space > div p:nth-child(1)  {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--scale-12-red);
+    margin-bottom: 0px;
+}
+
 #reservations_section1-space > div h2{
     font-size: 18px;
     font-weight: bold;
-    margin: 0 0 7px;
+    margin: 0 0 5px;
 }
 
 #reservations_section1-space > div p{
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
-    margin: 0 0 24px;
+    margin-top: 5px;
 }
 
-#reservations_section1-space > div button {
+.reservations_section1-space-div-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 44px;
+}
+
+.reservations_section1-space-div-flex > button {
     border: none;
     width: 118px;
     height: 26px;
@@ -68,12 +92,10 @@
     border-radius: 40px;
 }
 
-
-#reservations_section1-space > div button {
+.reservations_section1-space-div-flex > button {
     font-size: 12px;
     font-family: var(--font-primary);
     font-weight: 500;
-    margin: 0 20px 0 0;
 }
 
 #renew, #visits {

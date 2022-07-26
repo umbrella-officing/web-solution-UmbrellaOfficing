@@ -18,134 +18,183 @@
     <header id="header" class="container_margin_default">
         <div class="default_margin">
             <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
+            <div>
+                <ul id="type_office">
+                    <li class="option_office checked">Espaço adaptado</li>
+                    <li class="option_office">Espaço corporativo</li>
+                </ul>
+                <div class="container_search">
+                    <span id="search_txt">Busque locais para trabalho</span>
+                    <div id='container_informations_find_coworking'>
+                        <input id="localization" type="text" placeholder="Localização:">
+                        <input type="date" id="check_in">
+                    </div>
+                    <a href="#">
+                        <div>
+                            <img src="images/default/search.svg" alt="pesquisa">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="menu">
+                <div id='menu_sign-in-up'>
+                    <img src="images/default/user.svg" alt="usuário">
+                    <img src="images/default/menu_hamburguer.svg" alt="menu">
+                </div>
+                <div class="menu_open">
+                    <div>
+                        <img src="images/default/perfil.svg" alt="foto de perfil">
+                        <h3>Luana Almeida <span>Coworker</span></h3>
+                    </div>
+                    <div>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <img src="images/default/my-perfil.png" alt="meu perfil">
+                                    My profile
+                                </li>
+                                <li>
+                                    <img src="images/default/favorite.png" alt="favoritos">
+                                    Favoritos
+                                </li>
+                                <li>
+                                    <img src="images/default/question.png" alt="suporte">
+                                    Help & Support
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        <img src="images/default/log-out.png" alt="sair da conta">
+                        Logout
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <body>
-        <main>
-            <section id="personal-date_section1" class="container_margin_default">
-                <div class="default_margin">
-                    <div id="personal-date_section1-background"></div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <img src="images/my-account/my-profile.svg" alt="meu perfil">
-                                Meu perfil
-                            </li>
-                            <li>
-                                <img src="images/my-account/personal-data.svg" alt="favoritos">
-                                Dados pessoais
-                            </li>
-                            <li>
-                                <img src="images/my-account/reservations.svg" alt="suporte">
-                                Minhas reservas
-                            </li>
-                        </ul>
-                    </nav>
+    <div id='box_black'></div>
 
-                    <div>
-                        <h1>Meus dados pessoais</h1>
+    <main>
+        <section id="personal-date_section1" class="container_margin_default">
+            <div class="default_margin">
+                <div id="personal-date_section1-background"></div>
+                <nav>
+                    <ul>
+                        <li>
+                            <img src="images/my-account/my-profile.svg" alt="meu perfil">
+                            Meu perfil
+                        </li>
+                        <li>
+                            <img src="images/my-account/personal-data.svg" alt="favoritos">
+                            Dados pessoais
+                        </li>
+                        <li>
+                            <img src="images/my-account/reservations.svg" alt="suporte">
+                            Minhas reservas
+                        </li>
+                    </ul>
+                </nav>
 
-                        <form action="/personal-date" method="post">
+                <div>
+                    <h1>Meus dados pessoais</h1>
+
+                    <form action="/personal-date" method="post">
+                        <div>
+                            <h2>Informações pessoais</h2>
                             <div>
-                                <h2>Informações pessoais</h2>
+                                <label for="name">Nome</label>
+                                <input type="text" name="name" id="name" placeholder="Aline Ribeiro" />
+                            </div>
+                            <div class="personal-date_section1_form-colum2">
                                 <div>
-                                    <label for="name">Nome</label>
-                                    <input type="text" name="name" id="name" placeholder="Aline Ribeiro" />
+                                    <label for="birth-date">Data de nascimento</label>
+                                    <input type="date" name="birth-date" id="birth-date" />
                                 </div>
-                                <div class="personal-date_section1_form-colum2">
-                                    <div>
-                                        <label for="birth-date">Data de nascimento</label>
-                                        <input type="date" name="birth-date" id="birth-date" />
-                                    </div>
-                                    <div>
-                                        <label for="gender">Sexo</label>
-                                        <select id="gender" name="gender">
-                                            <option value="feminino">Feminino</option>
-                                            <option value="masculino">Masculino</option>
-                                        </select>
-                                    </div>
+                                <div>
+                                    <label for="gender">Sexo</label>
+                                    <select id="gender" name="gender">
+                                        <option value="feminino">Feminino</option>
+                                        <option value="masculino">Masculino</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="profession">Profissão</label>
+                                <input type="text" name="profession" id="profession" placeholder="Empreendedora" />
+                            </div>
+
+                            <h2>Identificação</h2>
+                            <div>
+                                <label for="cpf">CPF</label>
+                                <input type="text" name="cpf" id="cpf" placeholder="345.567.123-03" />
+                            </div>
+                            <div class="personal-date_section1_form-colum2-dif1">
+                                <div>
+                                    <label for="rg">RG</label>
+                                    <input type="text" name="rg" id="rg" placeholder="12.345.678-90" />
+                                </div>
+                                <div>
+                                    <label for="orgao-exp">Orgão Expedidor</label>
+                                    <input type="text" name="orgao-exp" id="orgao-exp" />
                                 </div>
                             </div>
 
-                            <div>
-                                <h2>Identificação</h2>
+                            <h2>Contato</h2>
+                            <div class="personal-date_section1_form-colum2">
                                 <div>
-                                    <label for="cpf">CPF</label>
-                                    <input type="text" name="cpf" id="cpf" placeholder="345.567.123-03" />
+                                    <label for="phone">Telefone</label>
+                                    <input type="number" name="phone" id="phone" placeholder="12.345.678-90" />
                                 </div>
-                                <div class="personal-date_section1_form-colum2">
-                                    <div>
-                                        <label for="rg">RG</label>
-                                        <input type="text" name="rg" id="rg" placeholder="12.345.678-90" />
-                                    </div>
-                                    <div>
-                                        <label for="orgao-exp">Orgão Exp.</label>
-                                        <input type="text" name="orgao-exp" id="orgao-exp" />
-                                    </div>
+                                <div>
+                                    <label for="cell">Celular</label>
+                                    <input type="number" name="cell" id="cell" placeholder="12.345.678-90" />
                                 </div>
+                            </div>
 
+                            <h2>Endereço</h2>
+                            <div>
+                                <label for="cep">CEP</label>
+                                <input type="text" name="cep" id="cep" placeholder="345.567.123-03" />
+                            </div>
+                            <div class="personal-date_section1_form-colum2-dif2">
                                 <div>
-                                    <h2>Informações para contato</h2>
-                                    <div class="personal-date_section1_form-colum2">
-                                        <div>
-                                            <label for="phone">Telefone</label>
-                                            <input type="text" name="phone" id="phone" placeholder="12.345.678-90" />
-                                        </div>
-                                        <div>
-                                            <label for="cell">Celular</label>
-                                            <input type="text" name="cell" id="cell" placeholder="12.345.678-90" />
-                                        </div>
-                                    </div>
+                                    <label for="rua">Rua</label>
+                                    <input type="text" name="rua" id="rua" placeholder="Rua Tomé de Souza" />
                                 </div>
                                 <div>
-                                    <h2>Endereço</h2>
-                                    <div>
-                                        <label for="cep">CEP</label>
-                                        <input type="text" name="cep" id="cep" placeholder="345.567.123-03" />
-                                    </div>
-                                    <div class="personal-date_section1_form-colum2">
-                                        <div>
-                                            <label for="rua">Rua</label>
-                                            <input type="text" name="rua" id="rua" placeholder="Rua Tomé de Souza" />
-                                        </div>
-                                        <div>
-                                            <label for="number">Nº</label>
-                                            <input type="text" name="number" id="number" placeholder="09" />
-                                        </div>
-                                    </div>
-                                    <div class="personal-date_section1_form-colum2">
-                                        <div>
-                                            <label for="bairro">Bairro</label>
-                                            <input type="text" name="bairro" id="bairro"
-                                                placeholder="Aldeia da Serra" />
-                                        </div>
-                                        <div>
-                                            <label for="cidade">Cidade/Estado</label>
-                                            <input type="text" name="cidade_estado" id="cidade_estado"
-                                                placeholder="Barueri, SP" />
-                                        </div>
-                                    </div>
+                                    <label for="number">Nº</label>
+                                    <input type="text" name="number" id="number" placeholder="569" />
+                                </div>
+                            </div>
+                            <div class="personal-date_section1_form-colum2">
+                                <div>
+                                    <label for="bairro">Bairro</label>
+                                    <input type="text" name="bairro" id="bairro" placeholder="Aldeia da Serra" />
                                 </div>
                                 <div>
-                                    <h2>Informações para login</h2>
-                                    <div>
-                                        <label for="email">Email</label>
-                                        <input type="email" name="email" id="email"
-                                            placeholder="alineribeiro@gmail.com" />
-                                    </div>
-                                    <div>
-                                        <label for="password">Senha</label>
-                                        <input type="password" name="password" id="password" />
-                                    </div>
+                                    <label for="cidade">Cidade | Estado</label>
+                                    <input type="text" name="cidade_estado" id="cidade_estado"
+                                        placeholder="Barueri, SP" />
                                 </div>
-                                <button type="submit" id="edit_ad">Editar informações</button>
-                        </form>
-                    </div>
+                            </div>
+
+                            <h2>Informações para login</h2>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="alineribeiro@gmail.com" />
+                            </div>
+                            <div>
+                                <label for="password">Senha</label>
+                                <input type="password" name="password" id="password" />
+                            </div>
+                            <button type="submit" id="edit_ad">Editar informações</button>
+                    </form>
                 </div>
-            </section>
-        </main>
-    </body>
+            </div>
+        </section>
+    </main>
 
     <footer class="container_margin_default">
 
@@ -200,5 +249,6 @@
 
     <script src="script/default/default.js"></script>
 
+</body>
 
 </html>

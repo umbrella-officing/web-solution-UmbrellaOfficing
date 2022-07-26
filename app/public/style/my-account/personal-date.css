@@ -3,8 +3,8 @@
     justify-content: space-between;
     color: var(--text-1-black);
 }
-
-/*Menu lateral - fixo*/
+/* 
+Menu lateral - fixo
 #personal-date_section1-background {
     position: absolute;
     top: 0;
@@ -35,50 +35,67 @@
 
 #personal-date_section1 > div nav li img {
     margin-right: 10px;
-}
+} */
 
 
 /*Conteúdo*/
+#personal-date_section1 > div > nav ~ div {
+    width: 784px;
+    margin-bottom: 80px;
+}
+
 #personal-date_section1 > div > div h1{
     font-size: 25px;
     font-weight: bold;
-}
-
-#personal-date_section1 > div > div form{
-    width: 800px;
+    margin-bottom: -10px;
 }
 
 #personal-date_section1 > div > div form h2{
     font-size: 18px;
     font-weight: 600;
-    margin: 30px 0 0 0;
+    margin-top: 40px;
 }
 
-#personal-date_section1 form > div label{
-    display: block;
-    margin: 20px 0 10px;
+#personal-date_section1 form > div > div label {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 10px 0;
 }
 
-#personal-date_section1 form > div label{
+#personal-date_section1 form > div > div label{
     font-size: 16px;
     font-weight: 500;
 }
 
-#personal-date_section1 form > div input, select{
+#personal-date_section1 form > div > div input, select{
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 10px;
     resize: none;
+    width: -webkit-fill-available;
 }
 
 #personal-date_section1 form > div input, select{
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .personal-date_section1_form-colum2 {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 352px 352px;
+    grid-column-gap: 80px;
+}
+
+.personal-date_section1_form-colum2-dif1 {
+    display: grid;
+    grid-template-columns: 452px 252px;
+    grid-column-gap: 80px;
+}
+
+.personal-date_section1_form-colum2-dif2 {
+    display: grid;
+    grid-template-columns: 652px 90px;
+    grid-column-gap: 40px;
 }
 
 #edit_ad {
@@ -94,5 +111,5 @@
     font-size: 16px;
     font-family: var(--font-primary);
     font-weight: 500;
-    margin: 40px 0;
+    margin: 40px 0 0 558px;
 }

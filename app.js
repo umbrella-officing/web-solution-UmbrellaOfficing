@@ -10,6 +10,9 @@ const myPersonalDate = require('./app/routes/my-account/personal-date')(app);
 const myReservations = require('./app/routes/my-account/reservations')(app);
 const myNotifications = require('./app/routes/my-account/notifications')(app);
 
+/* Requisições tela: Torne-se um anunciante! */
+const myAdvertiser = require('./app/routes/become-advertiser')(app);
+
 
 const addRoom = require('./app/routes/add-room')(app);
 const officingFeatures = require('./app/routes/officing-features')(app);

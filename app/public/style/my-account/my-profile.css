@@ -5,7 +5,7 @@
 }
 
 /*Menu lateral - fixo*/
-#my-profile_section1-background {
+/* #my-profile_section1-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -38,70 +38,90 @@
 }
 
 /*Conteúdo*/
+#my-profile_section1 > div > nav ~ div{
+    width: 784px;
+}
+
 #my-profile_section1 > div > div h1{
     font-size: 25px;
     font-weight: bold;
 }
 
-
-#my-profile_section1 h1 ~ p {
+#my-profile_section1 > div h1 ~ p {
     font-size: 18px;
     font-weight: 400;
     margin: 20px 0 40px;
 }
 
 
-.my-profile_section1-form1 div > label{
-    display: block;
-    margin: 0 0 10px;
+#my-profile_section1 form > div label{
+    display: flex;
+    flex-direction: column;
 }
 
-.my-profile_section1-form1 div > label {
+#my-profile_section1 form > div label {
     font-size: 20px;
     font-weight: 600;
 }
 
-.my-profile_section1-form1 div > textarea {
-    margin: 0 0 40px;
+#my-profile_section1 form > div textarea {
+    margin: 10px 0 40px 0;
 }
 
 
-#my-profile_section1 > div > div form textarea, input{
+#my-profile_section1 form > div textarea, input{
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 15px;
     resize: none;
+    font-size: 14px;
+    width: -webkit-fill-available;
 }
 
-#my-profile_section1 > div > div form textarea, input{
-    font-size: 16px;
-}
-
-.my-profile_section1-form2{
+.my-profile_section1-form-flex {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 80px;
 }
 
-.my-profile_section1-form2 > div:nth-child(1){
+
+.my-profile_section1-form-flex > div:nth-child(1){
+    width: 234px; 
     border: 1px solid var(--gray-border);
     border-radius: 5px;
-    padding: 25px;
+    padding: 35px 35px 0 35px
 }
 
-.my-profile_section1-form2 > div p {
+.my-profile_section1-form-flex > div:nth-child(1) p{
     font-size: 16px;
     font-weight: 400;
-    margin: 0 0 22px;
 }
 
-.my-profile_section1-form2 > div h4 {
+.my-profile_section1-form-flex > div:nth-child(1) h4{
     font-size: 16px;
     font-weight: 600;
-    margin: 0 0 20px;
+    margin: 22px 0 10px 0;
 }
 
-.my-profile_section1-form2 > div:nth-child(2) p{
-    font-size: 10px;
+.my-profile_section1-form-flex > div:nth-child(1) ul{
+    display: flex;
+    list-style: none;
+}
+
+.my-profile_section1-form-flex > div:nth-child(1) ul li {
+    width: 41px;
+    height: 8px;
+    margin-right: 6px;
+    background-color: var(--scale-2-purple);
+    border-radius: 16px;
+}
+
+.my-profile_section1-form-flex > div:nth-child(2){
+    width: 344px; 
+}
+
+.my-profile_section1-form-flex > div:nth-child(2) p{
+    font-size: 12px;
     margin-top: 5px;
 }
 
@@ -110,7 +130,6 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-
 }
 
 .whats, .face {
@@ -119,12 +138,20 @@
     align-items: center;
 }
 
-.whats {
+#my-profile_section1-form2-url img, .whats {
     color: #1BD741;
+    margin-right: 10px;
 }
 
 .face {
     color: #0000FF;
+    margin-right: 5px;
 }
+
+
+
+
+
+
 
 
