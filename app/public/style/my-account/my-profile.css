@@ -1,75 +1,104 @@
-#my-profile_section1 > div{
+#my-profile_section1>div {
     padding-top: 181px;
     justify-content: space-between;
     color: var(--text-1-black);
 }
 
-/*Menu lateral - fixo*/
-/* #my-profile_section1-background {
+#my-profile_section1::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: calc(50% - 290px);
     background-color: var(--scale-9-blue);
 }
 
-#my-profile_section1 > div nav {
+/*Menu lateral - lateral*/
+#my-profile_section1>div nav {
     position: relative;
 }
 
-#my-profile_section1 > div nav ul{
+#my-profile_section1>div nav ul {
     list-style: none;
 }
 
-#my-profile_section1 > div nav ul li{
+#my-profile_section1>div nav ul li {
     display: flex;
-    margin: 40px 0;
+    height: 50px;
+    margin: 30px 0;
     align-items: center;
 }
 
-#my-profile_section1 > div nav li {
-    font-size: 18px;
-    font-weight: 400;
+#my-profile_section1>div nav ul li a {
+    text-decoration: none
 }
 
-#my-profile_section1 > div nav li img {
-    margin-right: 10px;
+.profile,
+.wallet,
+.reserve {
+    font-size: 30px;
+}
+
+
+.option_active a {
+    border-left: 3px solid #5B61C4;
+    font-size: 18px;
+    font-weight: 400;
+    font-weight: 600;
+    color: var(--scale-13-blue);
+}
+
+.option a {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-1-black);
+}
+
+.profile {
+    margin: 0 10px 0 18px;
+}
+
+.wallet,
+.reserve {
+    color: var(--gray-border);
+    margin: 0 10px 0 21px;
 }
 
 /*Conteúdo*/
-#my-profile_section1 > div > nav ~ div{
+#my-profile_section1>div>nav~div {
     width: 784px;
 }
 
-#my-profile_section1 > div > div h1{
+#my-profile_section1>div>div h1 {
     font-size: 25px;
     font-weight: bold;
 }
 
-#my-profile_section1 > div h1 ~ p {
+#my-profile_section1>div h1~p {
     font-size: 18px;
     font-weight: 400;
     margin: 20px 0 40px;
 }
 
 
-#my-profile_section1 form > div label{
+#my-profile_section1 form>div label {
     display: flex;
     flex-direction: column;
 }
 
-#my-profile_section1 form > div label {
+#my-profile_section1 form>div label {
     font-size: 20px;
     font-weight: 600;
 }
 
-#my-profile_section1 form > div textarea {
+#my-profile_section1 form>div textarea {
     margin: 10px 0 40px 0;
 }
 
 
-#my-profile_section1 form > div textarea, input{
+#my-profile_section1 form>div textarea,
+input {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 15px;
@@ -85,30 +114,30 @@
 }
 
 
-.my-profile_section1-form-flex > div:nth-child(1){
-    width: 234px; 
+.my-profile_section1-form-flex>div:nth-child(1) {
+    width: 234px;
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 35px 35px 0 35px
 }
 
-.my-profile_section1-form-flex > div:nth-child(1) p{
+.my-profile_section1-form-flex>div:nth-child(1) p {
     font-size: 16px;
     font-weight: 400;
 }
 
-.my-profile_section1-form-flex > div:nth-child(1) h4{
+.my-profile_section1-form-flex>div:nth-child(1) h4 {
     font-size: 16px;
     font-weight: 600;
     margin: 22px 0 10px 0;
 }
 
-.my-profile_section1-form-flex > div:nth-child(1) ul{
+.my-profile_section1-form-flex>div:nth-child(1) ul {
     display: flex;
     list-style: none;
 }
 
-.my-profile_section1-form-flex > div:nth-child(1) ul li {
+.my-profile_section1-form-flex>div:nth-child(1) ul li {
     width: 41px;
     height: 8px;
     margin-right: 6px;
@@ -116,11 +145,11 @@
     border-radius: 16px;
 }
 
-.my-profile_section1-form-flex > div:nth-child(2){
-    width: 344px; 
+.my-profile_section1-form-flex>div:nth-child(2) {
+    width: 344px;
 }
 
-.my-profile_section1-form-flex > div:nth-child(2) p{
+.my-profile_section1-form-flex>div:nth-child(2) p {
     font-size: 12px;
     margin-top: 5px;
 }
@@ -132,13 +161,15 @@
     margin-top: 20px;
 }
 
-.whats, .face {
+.whats,
+.face {
     font-size: 2.5rem;
     justify-content: space-between;
     align-items: center;
 }
 
-#my-profile_section1-form2-url img, .whats {
+#my-profile_section1-form2-url img,
+.whats {
     color: #1BD741;
     margin-right: 10px;
 }
@@ -147,11 +178,3 @@
     color: #0000FF;
     margin-right: 5px;
 }
-
-
-
-
-
-
-
-

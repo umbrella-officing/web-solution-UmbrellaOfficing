@@ -1,45 +1,76 @@
-#reservations_section1 > div{
+#reservations_section1>div {
     padding-top: 181px;
     justify-content: space-between;
     color: var(--text-1-black);
 }
 
-/*Menu lateral - fixo*/
-#reservations_section1-background {
+#reservations_section1::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: calc(50% - 290px);
     background-color: var(--scale-9-blue);
 }
 
-#reservations_section1 > div nav {
+/*Menu lateral - lateral*/
+#reservations_section1>div nav {
     position: relative;
 }
 
-#reservations_section1 > div nav ul{
+#reservations_section1>div nav ul {
     list-style: none;
 }
 
-#reservations_section1 > div nav ul li{
+#reservations_section1>div nav ul li {
     display: flex;
-    margin: 40px 0;
+    height: 50px;
+    margin: 30px 0;
     align-items: center;
 }
 
-#reservations_section1 > div nav li {
+#reservations_section1>div nav ul li a {
+    text-decoration: none
+}
+
+.profile,
+.wallet,
+.reserve {
+    font-size: 30px;
+}
+
+
+.option_active a {
+    border-left: 3px solid #5B61C4;
     font-size: 18px;
     font-weight: 400;
+    font-weight: 600;
+    color: var(--scale-13-blue);
 }
 
-#reservations_section1 > div nav li img {
-    margin-right: 10px;
+.option a {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-1-black);
 }
 
+.reserve {
+    margin: 0 10px 0 18px;
+}
+
+.profile,
+.wallet {
+    color: var(--gray-border);
+    margin: 0 10px 0 21px;
+}
 
 /*Conteúdo*/
-#reservations_section1 > div > div h1{
+#reservations_section1>div>nav~div {
+    width: 784px;
+}
+
+#reservations_section1>div>div h1 {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 30px;
@@ -47,32 +78,31 @@
 
 #reservations_section1-space {
     display: flex;
+    margin-bottom: 40px;
 }
 
-#reservations_section1-space > div {
+#reservations_section1-space>div {
     padding: 20px;
     border-radius: 0px 10px 10px 0px;
     box-shadow: 5px 5px 5px 5px rgb(128 128 128 / 35%);
     width: 100%;
-    max-width: 482px; 
-    max-height: 197px;
     box-sizing: border-box;
 }
 
-#reservations_section1-space > div p:nth-child(1)  {
+#reservations_section1-space>div p:nth-child(1) {
     font-size: 12px;
     font-weight: 600;
     color: var(--scale-12-red);
-    margin-bottom: 0px;
+    margin-left: 80%;
 }
 
-#reservations_section1-space > div h2{
+#reservations_section1-space>div h2 {
     font-size: 18px;
     font-weight: bold;
     margin: 0 0 5px;
 }
 
-#reservations_section1-space > div p{
+#reservations_section1-space>div p {
     font-size: 14px;
     font-weight: 400;
     margin-top: 5px;
@@ -84,27 +114,25 @@
     margin-top: 44px;
 }
 
-.reservations_section1-space-div-flex > button {
+.reservations_section1-space-div-flex>div button {
     border: none;
-    width: 118px;
+    width: 130px;
     height: 26px;
     color: var(--white);
     border-radius: 40px;
 }
 
-.reservations_section1-space-div-flex > button {
+.reservations_section1-space-div-flex>div button {
     font-size: 12px;
     font-family: var(--font-primary);
     font-weight: 500;
 }
 
-#renew, #visits {
+#visits {
     background-color: var(--scale-2-purple);
+    margin-right: 10px;
 }
 
 #cancel {
-    background-color: var(--scale-10-wine);
+    background-color: var(--scale-12-red);
 }
-
-
-

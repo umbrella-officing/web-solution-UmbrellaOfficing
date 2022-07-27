@@ -1,4 +1,4 @@
-#my-profile-public_section1 > div{
+#my-profile-public_section1>div {
     padding-top: 181px;
     justify-content: space-between;
     color: var(--text-1-black);
@@ -18,24 +18,24 @@
 }
 
 
-.my-profile-public_section1-left > div:nth-of-type(1) {
+.my-profile-public_section1-left>div:nth-of-type(1) {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.my-profile-public_section1-left > div h3{
+.my-profile-public_section1-left>div h3 {
     margin-left: 12px;
     font-size: 18px;
     font-weight: 600;
 }
 
 
-.my-profile-public_section1-left > div:nth-of-type(2) {
-   margin: 40px 0;
+.my-profile-public_section1-left>div:nth-of-type(2) {
+    margin: 40px 0;
 }
 
-.my-profile-public_section1-left > div:nth-of-type(2) p {
+.my-profile-public_section1-left>div:nth-of-type(2) p {
     font-size: 18px;
     font-weight: 400;
     color: #4B4B4B;
@@ -47,12 +47,12 @@
     margin: 20px 0;
 }
 
-.my-profile-public_section1-left > div ul {
+.my-profile-public_section1-left>div ul {
     display: flex;
     list-style: none;
 }
 
-.my-profile-public_section1-left > div ul li {
+.my-profile-public_section1-left>div ul li {
     width: 34px;
     height: 8px;
     margin-right: 6px;
@@ -61,11 +61,11 @@
 }
 
 
-.my-profile-public_section1-left-verification > div { 
-   display: flex;
+.my-profile-public_section1-left-verification>div {
+    display: flex;
 }
 
-.my-profile-public_section1-left-verification > div p {
+.my-profile-public_section1-left-verification>div p {
     font-size: 14px;
     font-weight: 400;
     margin: 8px 10px;
@@ -99,16 +99,17 @@
     display: flex;
 }
 
-.my-profile-public_section1-right > div:nth-child(2) {
+.my-profile-public_section1-right>div:nth-child(2) {
     width: 35px;
     margin-left: 150px;
 }
 
-.my-profile-public_section1-right > div:nth-child(2) img{
+.my-profile-public_section1-right>div:nth-child(2) img {
     margin-bottom: 44px;
 }
 
-.whats, .face {
+.whats,
+.face {
     font-size: 2.6rem;
     margin-bottom: 44px
 }
@@ -120,6 +121,3 @@
 .face {
     color: #0000FF;
 }
-
- 
-
