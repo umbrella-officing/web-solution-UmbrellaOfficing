@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/my-account/my-profile.css">
+    <link rel="stylesheet" href="style/my-account/notifications.css">
 </head>
 <body>
     <header id="header" class="container_margin_default">
@@ -19,73 +19,55 @@
     </header>
 
     <body>
-        <section id="my-profile_section1" class="container_margin_default">
+
+        <section id="notifications_section1" class="container_margin_default">
             <div class="default_margin">
-                <div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <img src="images/my-account/my-profile.svg" alt="meu perfil">
-                                Meu perfil
-                            </li>
-                            <li>
-                                <img src="images/my-account/personal-data.svg" alt="favoritos">
-                                Dados pessoais
-                            </li>
-                            <li>
-                                <img src="images/my-account/reservations.svg" alt="suporte">
-                                Minhas reservas
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+            
+                <h1>Notificações</h1>
 
-                <div>
-                    <h1>Meu dados pessoais</h1>
-                    <p>As pessoas que acessarem o seu perfil verão essas informações</p>
+                <nav>
+                    <ul>
+                        <a href="javascript:notifications(1);"><li id="li-lastN">Últimas notificações</li></a>
+                        <a href="javascript:notifications(2);"><li id="li-unreadN">Não lidas</li></a>
+                        <a href="javascript:notifications(3);"><li id="li-readN">Lidas</li></a>
+                    </ul>
+                </nav>
+                <hr>
 
-                    <form action="/my-profile" method="post">
-                        <span>
-                            <label for="about-me">Sobre mim</label>
-                            <textarea name="about-me" id="about-me" rows="6" placeholder="Oi, meu nome é Aline e trabalho como publicitária desde 2021, quando  
-                            terminei o curso de Publicidade na PUC-SP...">
-                            </textarea>
-                        </span>
-                        <span>
-                            <label for="profissional-perfil">Perfil profissional</label>
-                            <textarea id="about-me" id="profissional-perfil" rows="3" placeholder="Ex.: Sou nômade digital e possuo uma rotina de trabalho intensa com viagens... ">
-                            </textarea>
-                        </span>
-                        <span>
-                                <p>Insira suas preferências</p>
-                                <h4>Home Oficce</h4>
-                                <div></div>
-                                <h4>Coworking</h4>
-                                <div></div>
-                        </span>
-                
-                            <span>
-                                <h3>Redes sociais</h3>
-                                <div>
-                                    <input type="url" id="url-insta" placeholder="Adicionar Instagram" size="25" />
-                                    <p>Cole a URL do seu perfil aqui</p>
-                                </div>
+                    <article id="last-notifications">
+                <select name="orderBy" id="orderBy_select">
+                    <option value="">Ordenar por</option>
+                    <option value="Mais recentes">Mais recentes</option>
+                    <option value="Mais antigas">Mais antigas</option>
+                </select>
+         
 
-                                <div>
-                                    <input type="url" id="url-face" placeholder="Adicionar Facebook" size="25"/>
-                                    <p>Cole a URL do seu perfil aqui</p>
-                                </div>
+                    </article>
 
-                                <div>
-                                    <input type="url" id="url-whats" placeholder="Adicionar WhatsApp" size="25"/>
-                                    <p>Cole a URL do seu perfil aqui</p>
-                                </div>
-                            </span>
-                        </div>
-                    </form>
+                    <article id="unread-notifications">
+                        <select name="orderBy" id="orderBy_select">
+                            <option value="">Ordenar por</option>
+                            <option value="Mais recentes">Mais recentes</option>
+                            <option value="Mais antigas">Mais antigas</option>
+                        </select>
+                 
+        
+                    </article>
+
+                    <article id="read-notifications">
+                        <select name="orderBy" id="orderBy_select">
+                            <option value="">Ordenar por</option>
+                            <option value="Mais recentes">Mais recentes</option>
+                            <option value="Mais antigas">Mais antigas</option>
+                        </select>
+                 
+        
+                    </article>
                 </div>
             </div>
         </section>
+        <script src="script/my-account/notifications.js"></script>
+        <script src="script/default/default.js"></script>
     </body>
     
 </body>
