@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/become-advertiser.css">
+    <link rel="stylesheet" href="style/owners-center/calendar.css">
+    <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -77,91 +78,57 @@
     <div id='box_black'></div>
 
     <main>
-        <section id="become-advertiser_section1" class="container_margin_default">
-            <div class="default_margin">
-                <div>
-                    <h1>Experimente anunciar um espaço para trabalho. É simples!</h1>
-
+        <div id="modal-cancel" class="modal-cancel">
+            <form action="/my-profile" method="post">
                     <div>
-                        <h2>Anuncie seu Officing</h2>
-                        <a href="#"><button>Começar agora</button></a>
+                        <label for="about-me">Diga o motivo pelo qual você deseja cancelar</label>
+                        <textarea name="about-me" id="about-me" rows="6"></textarea>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="become-advertiser_section2" class="container_margin_default">
-            <div class="default_margin">
-                <div>
-                    <h2>Conheça a liberdade de anunciar</h2>
-                    <p>Abra as portas para uma renda extra e amplie seu networking.
-                        Você pode anunciar um espaço mesmo que você trabalhe nele.</p>
-                </div>
-
-                <img src="images/become-advertiser/owner.svg" alt="Proprietária abrindo seu espaço">
-            </div>
-        </section>
-
-        <section id="become-advertiser_section3" class="container_margin_default">
-            <div class="default_margin">
-                
-            </div>
-        </section>
-
-        <section id="become-advertiser_section4" class="container_margin_default">
-            <div class="default_margin">
-                <div>
-                    <!-- <img src="images/become-advertiser/community.svg" alt="Espaço de trabalho"> -->
-
-                    <div>
-                        <h2>Faça parte de uma comunidade que pensa como você!</h2>
-                        <a href="#"><button>Eu quero fazer parte!</button></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+            <button>Avançar</button>
+            </form>
+        </div>
     </main>
 
     <footer class="container_margin_default">
 
         <div class="default_margin">
             <div id="margin2">
-                <div id="logo">
-                    <img src="images/default/logo_footer.svg" alt="logo">
-                    <h4>Escritorizando <span><br>espaços </span></h4>
-                    <span>Umbrella Officing&copy 2022</span>
-                </div>
-
-                <ul>
-                    <h5>Junte-se a nós</h5>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#">Cadastre-se</a></li>
-                    <li><a href="#">Sua conta</a></li>
-                    <li><a href="#">Faça sua reserva</a></li>
-                    <li><a href="#">Anuncie seu espaço</a></li>
-                </ul>
-
-                <ul>
-                    <h5>Atendimento</h5>
-                    <li><a href="#">Chat</a></li>
-                    <li><a href="#">Fórum</a></li>
-                    <li><a href="#">Central de ajuda</a></li>
-                </ul>
-
-                <ul>
-                    <h5>Sobre nós</h5>
-                    <li><a href="#">Quem somos?</a></li>
-                    <li><a href="#">Missão, valores e visão</a></li>
-                    <li><a href="#">Por que Umbrella Officing</a></li>
-                    <li><a href="#">Desenvolvedores</a></li>
-                </ul>
-
+            <div id="logo">
+                <img src="images/default/logo_footer.svg" alt="logo">
+                <h4>Escritorizando <span><br>espaços </span></h4>
+                <span>Umbrella Officing&copy 2022</span>
             </div>
 
+            <ul>
+                <h5>Junte-se a nós</h5>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Cadastre-se</a></li>
+                <li><a href="#">Sua conta</a></li>
+                <li><a href="#">Faça sua reserva</a></li>
+                <li><a href="#">Anuncie seu espaço</a></li>
+            </ul>
+
+            <ul>
+                <h5>Atendimento</h5>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">Fórum</a></li>
+                <li><a href="#">Central de ajuda</a></li>
+            </ul>
+
+            <ul>
+                <h5>Sobre nós</h5>
+                <li><a href="#">Quem somos?</a></li>
+                <li><a href="#">Missão, valores e visão</a></li>
+                <li><a href="#">Por que Umbrella Officing</a></li>
+                <li><a href="#">Desenvolvedores</a></li>
+            </ul>
+
+            </div>
+            
             <div id="bottom_footer">
                 <div>
-                    <div id="network_div">
+                    <div id="network_div"> 
                         <img src="images/default/icon_intagram.svg" alt="ícone do instagram">
                         <img src="images/default/icon_facebook.svg" alt="ícone do facebook">
                     </div>
@@ -169,16 +136,15 @@
                     <div id="scroll_up">
                         <img src="images/default/arrow_up.svg" alt="ícone de flecha">
                     </div>
-                </div>
-
             </div>
 
+        </div>
 
+        
     </footer>
 
 
     <script src="script/default/default.js"></script>
-
 </body>
 
 </html>

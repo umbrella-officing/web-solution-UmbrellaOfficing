@@ -9,14 +9,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 64.7em;
     width: calc(50% - 290px);
     background-color: var(--scale-9-blue);
 }
 
-/*Menu lateral - lateral*/
+/*Menu lateral*/
 #my-profile_section1>div nav {
     position: relative;
+    overflow: auto; 
 }
 
 #my-profile_section1>div nav ul {

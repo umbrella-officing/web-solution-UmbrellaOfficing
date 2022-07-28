@@ -1,5 +1,5 @@
 module.exports = (app) => {
     app.get('/notificacoes', (req, res)=>{
-        res.render('my-account/my-notifications')
+        res.render('my-account/notifications')
     });
 }

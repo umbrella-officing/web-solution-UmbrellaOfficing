@@ -1,0 +1,11 @@
+#modal-cancel {
+    padding-top: 181px;
+    justify-content: space-between;
+    color: var(--text-1-black);
+}
+
+#modal-cancel {
+    width: 686px;
+    height: 214px;
+    color: var(--text-1-black);
+}
