@@ -4,11 +4,12 @@
     color: var(--text-1-black);
 }
 
-#my-profile-public_section1-background {
+#my-profile-public_section1::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 100%;
     width: calc(50% - 290px);
     background-color: var(--scale-9-blue);
 }
@@ -90,18 +91,20 @@
 }
 
 .my-profile-public_section1-right p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     margin: 10px 0 50px;
+    color: #4B4B4B;
 }
 
 .my-profile-public_section1-right {
     display: flex;
+    justify-content: space-between;
+    width: 784px; 
 }
 
 .my-profile-public_section1-right>div:nth-child(2) {
     width: 35px;
-    margin-left: 150px;
 }
 
 .my-profile-public_section1-right>div:nth-child(2) img {
@@ -120,4 +123,5 @@
 
 .face {
     color: #0000FF;
+    margin-left: -4px;
 }
