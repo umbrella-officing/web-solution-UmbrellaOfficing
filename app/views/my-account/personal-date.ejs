@@ -12,6 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/personal-date.css">
+    <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -79,20 +80,20 @@
     <main>
         <section id="personal-date_section1" class="container_margin_default">
             <div class="default_margin">
-                <div id="personal-date_section1-background"></div>
                 <nav>
                     <ul>
-                        <li>
-                            <img src="images/my-account/my-profile.svg" alt="meu perfil">
-                            Meu perfil
+                        <li class="option">
+                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
+                                Meu perfil</a>
                         </li>
-                        <li>
-                            <img src="images/my-account/personal-data.svg" alt="favoritos">
-                            Dados pessoais
+                        <li class="option_active">
+                            <a href="#">
+                                <i class="fa-solid fa-wallet wallet"></i>
+                                Dados pessoais</a>
                         </li>
-                        <li>
-                            <img src="images/my-account/reservations.svg" alt="suporte">
-                            Minhas reservas
+                        <li class="option">
+                            <a href="/reservas"><i class="fa-solid fa-calendar-check reserve"></i>
+                                Minhas reservas</a>
                         </li>
                     </ul>
                 </nav>

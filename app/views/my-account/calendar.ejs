@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/my-account/reservations.css">
+    <link rel="stylesheet" href="style/owners-center/calendar.css">
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
 </head>
 
@@ -78,76 +78,73 @@
     <div id='box_black'></div>
 
     <main>
-        <section id="reservations_section1" class="container_margin_default">
-            <div class="default_margin">
-                <nav>
-                    <ul>
-                        <li class="option">
-                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
-                                Meu perfil</a>
-                        </li>
-                        <li class="option">
-                            <a href="/dados-pessoais">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                Dados pessoais</a>
-                        </li>
-                        <li class="option_active">
-                            <a href="#"><i class="fa-solid fa-calendar-check reserve"></i>
-                                Minhas reservas</a>
-                            </li>kk
-                    </ul>
-                </nav>
-
-                <div>
-                    <h1>Minhas reservas</h1>
-
-                    <div id="reservations_section1-space">
-                        <img src="images/my-account/favorites/apartament.png" alt="apartamento">
-
-                        <div>
-                            <p>Amanhã, às 19:00</p>
-                            <h2>Água Branca (Apartamento)</h2>
-                            <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
-                            <p>7m² | Modelo privado | 2 banheiros</p>
-
-                            <div class="reservations_section1-space-div-flex">
-                                <h3>R$ 7,90/h</h3>
-
-                                <div>
-
-                                    <button type="submit" id="visits">Próximas visitas</button>
-                                    <button type="submit" id="cancel">Cancelar reserva</button>
-                                </div>
-                            </div>
-                        </div>
+        <div id="modal-cancel" class="modal-cancel">
+            <form action="/my-profile" method="post">
+                    <div>
+                        <label for="about-me">Diga o motivo pelo qual você deseja cancelar</label>
+                        <textarea name="about-me" id="about-me" rows="6"></textarea>
                     </div>
 
-                    <div id="reservations_section1-space">
-                        <img src="images/my-account/favorites/apartament.png" alt="apartamento">
-
-                        <div>
-                            <p>Amanhã, às 19:00</p>
-                            <h2>Água Branca (Apartamento)</h2>
-                            <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
-                            <p>7m² | Modelo privado | 2 banheiros</p>
-
-                            <div class="reservations_section1-space-div-flex">
-                                <h3>R$ 7,90/h</h3>
-
-                                <div>
-
-                                    <button type="submit" id="visits">Próximas visitas</button>
-                                    <button type="submit" id="cancel">Cancelar reserva</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </section>
+            <button>Avançar</button>
+            </form>
+        </div>
     </main>
+
+    <footer class="container_margin_default">
+
+        <div class="default_margin">
+            <div id="margin2">
+            <div id="logo">
+                <img src="images/default/logo_footer.svg" alt="logo">
+                <h4>Escritorizando <span><br>espaços </span></h4>
+                <span>Umbrella Officing&copy 2022</span>
+            </div>
+
+            <ul>
+                <h5>Junte-se a nós</h5>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Cadastre-se</a></li>
+                <li><a href="#">Sua conta</a></li>
+                <li><a href="#">Faça sua reserva</a></li>
+                <li><a href="#">Anuncie seu espaço</a></li>
+            </ul>
+
+            <ul>
+                <h5>Atendimento</h5>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">Fórum</a></li>
+                <li><a href="#">Central de ajuda</a></li>
+            </ul>
+
+            <ul>
+                <h5>Sobre nós</h5>
+                <li><a href="#">Quem somos?</a></li>
+                <li><a href="#">Missão, valores e visão</a></li>
+                <li><a href="#">Por que Umbrella Officing</a></li>
+                <li><a href="#">Desenvolvedores</a></li>
+            </ul>
+
+            </div>
+            
+            <div id="bottom_footer">
+                <div>
+                    <div id="network_div"> 
+                        <img src="images/default/icon_intagram.svg" alt="ícone do instagram">
+                        <img src="images/default/icon_facebook.svg" alt="ícone do facebook">
+                    </div>
+
+                    <div id="scroll_up">
+                        <img src="images/default/arrow_up.svg" alt="ícone de flecha">
+                    </div>
+            </div>
+
+        </div>
+
+        
+    </footer>
+
+
+    <script src="script/default/default.js"></script>
 </body>
 
 </html>

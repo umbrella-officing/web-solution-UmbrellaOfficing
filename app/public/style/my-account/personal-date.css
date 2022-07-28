@@ -1,73 +1,103 @@
-#personal-date_section1 > div{
+#personal-date_section1>div {
     padding-top: 181px;
     justify-content: space-between;
     color: var(--text-1-black);
 }
-/* 
-Menu lateral - fixo
-#personal-date_section1-background {
+
+
+#personal-date_section1::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 109.4em;
     width: calc(50% - 290px);
     background-color: var(--scale-9-blue);
 }
 
-#personal-date_section1 > div nav {
+/*Menu lateral*/
+#personal-date_section1>div nav {
     position: relative;
 }
 
-#personal-date_section1 > div nav ul{
+#personal-date_section1>div nav ul {
     list-style: none;
 }
 
-#personal-date_section1 > div nav ul li{
+#personal-date_section1>div nav ul li {
     display: flex;
-    margin: 40px 0;
+    height: 50px;
+    margin: 30px 0;
     align-items: center;
 }
 
-#personal-date_section1 > div nav li {
-    font-size: 18px;
-    font-weight: 400;
+#personal-date_section1>div nav ul li a {
+    text-decoration: none
 }
 
-#personal-date_section1 > div nav li img {
-    margin-right: 10px;
-} */
+.profile,
+.wallet,
+.reserve {
+    font-size: 30px;
+}
+
+
+.option_active a {
+    border-left: 3px solid #5B61C4;
+    font-size: 18px;
+    font-weight: 400;
+    font-weight: 600;
+    color: var(--scale-13-blue);
+}
+
+.option a {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-1-black);
+}
+
+.wallet {
+    margin: 0 10px 0 18px;
+}
+
+.profile,
+.reserve {
+    color: var(--gray-border);
+    margin: 0 10px 0 21px;
+}
 
 
 /*Conteúdo*/
-#personal-date_section1 > div > nav ~ div {
+#personal-date_section1>div>nav~div {
     width: 784px;
     margin-bottom: 80px;
 }
 
-#personal-date_section1 > div > div h1{
+#personal-date_section1>div>div h1 {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: -10px;
 }
 
-#personal-date_section1 > div > div form h2{
+#personal-date_section1>div>div form h2 {
     font-size: 18px;
     font-weight: 600;
     margin-top: 40px;
 }
 
-#personal-date_section1 form > div > div label {
+#personal-date_section1 form>div>div label {
     display: flex;
     flex-direction: column;
     margin: 30px 0 10px 0;
 }
 
-#personal-date_section1 form > div > div label{
+#personal-date_section1 form>div>div label {
     font-size: 16px;
     font-weight: 500;
 }
 
-#personal-date_section1 form > div > div input, select{
+#personal-date_section1 form>div>div input,
+select {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 10px;
@@ -75,7 +105,8 @@ Menu lateral - fixo
     width: -webkit-fill-available;
 }
 
-#personal-date_section1 form > div input, select{
+#personal-date_section1 form>div input,
+select {
     font-family: var(--font-primary);
     font-size: 14px;
 }

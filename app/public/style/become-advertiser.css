@@ -23,10 +23,13 @@
     color: var(--text-1-black);
 }
 
-#become-advertiser_section4 > div:nth-child(1) div {
-    display: inline-block;
-    position: relative;
+
+#become-advertiser_section4  {
+    background-image: url("../images/become-advertiser/community.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 
 
   

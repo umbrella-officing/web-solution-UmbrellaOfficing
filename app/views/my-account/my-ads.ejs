@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/my-account/reservations.css">
+    <link rel="stylesheet" href="style/owners-center/my-ads.css">
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
 </head>
 
@@ -78,71 +78,77 @@
     <div id='box_black'></div>
 
     <main>
-        <section id="reservations_section1" class="container_margin_default">
+        <section id="my-ads_section1" class="container_margin_default">
             <div class="default_margin">
-                <nav>
+                <nav id="owners-center_navigation">
                     <ul>
-                        <li class="option">
-                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
-                                Meu perfil</a>
-                        </li>
-                        <li class="option">
-                            <a href="/dados-pessoais">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                Dados pessoais</a>
-                        </li>
                         <li class="option_active">
-                            <a href="#"><i class="fa-solid fa-calendar-check reserve"></i>
-                                Minhas reservas</a>
-                            </li>kk
+                            <a href="#"> <a href="#"><i class="fa-duotone fa-bullhorn ads"></i>
+                                Meus anúncios</a>
+                        </li>
+                        <li class="option">
+                            <a href="">
+                                <div>
+                                <i class="fa-solid fa-user-large announce1"></i>
+                                <i class="fa-solid fa-bullhorn announce2"></i>
+                            </div>
+                                Fazer anúncio</a>
+                        </li>
+                        <li class="option">
+                            <a href="/calendario"><i class="fa-solid fa-calendar calendar"></i></i>
+                                Calendário</a>
+                        </li>
                     </ul>
                 </nav>
 
                 <div>
-                    <h1>Minhas reservas</h1>
+                    <h1>Meus anúncios</h1>
 
-                    <div id="reservations_section1-space">
-                        <img src="images/my-account/favorites/apartament.png" alt="apartamento">
+                    <nav id="my-ads_navigation">
+                        <ul>
+                            <li>Espaços ativos</li>
+                            <li>Espaços inativos</li>
+                        </ul>
+                    </nav>
+
+                    <div id="my-ads_section1-space">
+                        <img src="images/my-account/reservations/apartment.svg" alt="apartamento">
 
                         <div>
-                            <p>Amanhã, às 19:00</p>
-                            <h2>Água Branca (Apartamento)</h2>
-                            <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
-                            <p>7m² | Modelo privado | 2 banheiros</p>
+                            <h2>Villa Alta (Apartamento)</h2>
+                            <p>Rua Augusto Pedrosa 011, Liberdade, São Paulo/SP</p>
+                            <h3>1 sala cadastradas</h3>
 
-                            <div class="reservations_section1-space-div-flex">
-                                <h3>R$ 7,90/h</h3>
+                            <div class="my-ads_section1-space-div-flex">
+                                <h3>Cadastrado em: 22/04/2022</h3>
 
                                 <div>
-
-                                    <button type="submit" id="visits">Próximas visitas</button>
-                                    <button type="submit" id="cancel">Cancelar reserva</button>
+                                    <button type="submit" id="visits"><i class="fa-solid fa-check check"></i></button>
+                                    <button type="submit" id="delete"><i class="fa-solid fa-trash-can trash"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="reservations_section1-space">
-                        <img src="images/my-account/favorites/apartament.png" alt="apartamento">
+                    <div id="my-ads_section1-space">
+                        <img src="images/my-account/reservations/apartment.svg" alt="apartamento">
 
                         <div>
-                            <p>Amanhã, às 19:00</p>
-                            <h2>Água Branca (Apartamento)</h2>
-                            <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
-                            <p>7m² | Modelo privado | 2 banheiros</p>
+                            <h2>Villa Alta (Apartamento)</h2>
+                            <p>Rua Augusto Pedrosa 011, Liberdade, São Paulo/SP</p>
+                            <h3>1 sala cadastradas</h3>
 
-                            <div class="reservations_section1-space-div-flex">
-                                <h3>R$ 7,90/h</h3>
+                            <div class="my-ads_section1-space-div-flex">
+                                <button type="submit" id="solicitation_res">Solicitações de reserva</button>
 
                                 <div>
-
-                                    <button type="submit" id="visits">Próximas visitas</button>
-                                    <button type="submit" id="cancel">Cancelar reserva</button>
+                                    <button type="submit" id="eyes"><i class="fa-solid fa-eye eyes"></i></button>
+                                    <button type="submit" id="edit"><i class="fa-solid fa-pen-to-square edit"></i></button>
+                                    <button type="submit" id="delete"><i class="fa-solid fa-trash-can trash"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
 
                 </div>
             </div>
