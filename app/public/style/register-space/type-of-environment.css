@@ -1,0 +1,13 @@
+#type-of-environment_section{
+    padding-top: 105px;
+}
+
+#type-of-environment_section > div{
+    justify-content: center;
+}
+
+#type-of-environment_section > div h1{
+    font-size: 40px;
+    max-width: 306px;
+    color: var(--text-1-black);
+}
