@@ -7,12 +7,16 @@ ul{
 }
 
 #finalization_section1{
-    padding-top: 220px;
+    padding-top: 180px;
 }
 
 #finalization_section1 > div{
     align-items: initial;
     justify-content: space-between;
+}
+
+#finalization_section1 > div > div h1{
+    font-size: 30px;
 }
 
 #finalization_section1 > div > div p{
@@ -90,12 +94,29 @@ ul{
     background-color: #fff;
     border: none;
     font-size: 12px;
+    font-weight: 700;
 }
 
 
 
 #second_list > li > div > img{
     margin-right: 10px;
+}
+
+#finalization_section1 > div > div > div > button{
+    width: 175px;
+    height: 30px;
+    background-color: var(--scale-2-purple);
+    border: none;
+    color: var(--white);
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+#finalization_section1 > div > div > div{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 
