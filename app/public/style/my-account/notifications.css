@@ -1,24 +1,64 @@
 #notifications_section1 > div {
     padding-top: 181px;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     color: var(--text-1-black);
 } 
 
 /*Conteúdo*/
-#notifications_section1>div>div h1 {
+#notifications_section1>div h1 {
     font-size: 25px;
     font-weight: bold;
 }
 
-#notification_navigation ul {
-    display: flex;
-    margin-top: 20px;
+#notifications_section1>div nav{
+    width: 100%;
+    border-bottom: 1px solid var(--gray-border);
+    padding-bottom: 7px;
+}
+
+#notifications_section1>div nav ul{
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: 30%;
+    margin: 20px 0 0 0;
+}
+
+#notification_section1 a{
+    text-decoration: none;
+    color: var(--text-1-black)
 }
 
 #notification_navigation ul li{
     font-size: 16px;
-    margin-right: 40px;
+}
+
+#notifications_section1 > div > article > select{
+    font-family: var(--font-primary);
+    font-size: 14px;
+    padding: 0 15px;
+    width: 176px;
+    height: 32px;
+    border-radius: 30px;
+    border: 1px solid var(--scale-7-blue);
+}
+
+
+/* Articles dinâmicos*/
+#last-notifications{
+    display: block;
+    /* background-color: brown; */
+}
+
+#unread-notifications {
+    display: none;
+    /* background-color: aquamarine; */
+}
+
+#read-notifications{
+    display: none;
+    /* background-color: aliceblue; */
 }
 
 #my-profile_section1-notification{

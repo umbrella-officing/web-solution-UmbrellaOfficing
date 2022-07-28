@@ -10,20 +10,18 @@ const myPersonalDate = require('./app/routes/my-account/personal-date')(app);
 const myReservations = require('./app/routes/my-account/reservations')(app);
 const myNotifications = require('./app/routes/my-account/notifications')(app);
 const myFavorits = require('./app/routes/my-account/favorites')(app);
+const myAds = require('./app/routes/my-account/my-ads')(app);
+const myCalendar = require('./app/routes/my-account/calendar')(app);
 
 /* Requisições tela: Torne-se um anunciante! */
 const myAdvertiser = require('./app/routes/become-advertiser')(app);
 
-/* Requisições telas: Central do proprietário */
-const myAds = require('./app/routes/owners-center/my-ads')(app);
-const myCalendar = require('./app/routes/owners-center/calendar')(app);
-
-/* Requisições telas: Central do proprietário - Anunciar*/
-const addRoom = require('./app/routes/add-room')(app);
-const officingFeatures = require('./app/routes/officing-features')(app);
-const apresentation = require('./app/routes/apresentation')(app);
-const photos = require('./app/routes/photos')(app);
+/* Requisições telas: Anunciar*/
+const addRoom = require('./app/routes/register-space/add-room')(app);
+const officingFeatures = require('./app/routes/register-space/officing-features')(app);
+const apresentation = require('./app/routes/register-space/apresentation')(app);
+const photos = require('./app/routes/register-space/photos')(app);
 
 app.listen(port,()=>{
     console.log(`Servidor no ar rodando na porta ${port}`)
-})
+});
