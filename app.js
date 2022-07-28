@@ -17,6 +17,7 @@ const myCalendar = require('./app/routes/my-account/calendar')(app);
 const myAdvertiser = require('./app/routes/become-advertiser')(app);
     
 /* Requisições telas: Anunciar*/
+const environment = require('./app/routes/register-space/type-of-environment')(app);
 const addRoom = require('./app/routes/register-space/add-room')(app);
 const officingFeatures = require('./app/routes/register-space/officing-features')(app);
 const apresentation = require('./app/routes/register-space/apresentation')(app);
