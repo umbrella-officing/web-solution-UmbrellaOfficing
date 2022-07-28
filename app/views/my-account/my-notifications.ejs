@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,12 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/notifications.css">
 </head>
+
 <body>
     <header id="header" class="container_margin_default">
         <div class="default_margin">
@@ -22,74 +25,82 @@
 
         <section id="notifications_section1" class="container_margin_default">
             <div class="default_margin">
-            
+
                 <h1>Notificações</h1>
 
                 <nav>
                     <ul>
-                        <a href="javascript:notifications(1);"><li id="li-lastN">Últimas notificações</li></a>
-                        <a href="javascript:notifications(2);"><li id="li-unreadN">Não lidas</li></a>
-                        <a href="javascript:notifications(3);"><li id="li-readN">Lidas</li></a>
+                        <a href="javascript:notifications(1);">
+                            <li id="li-lastN">Últimas notificações</li>
+                        </a>
+                        <a href="javascript:notifications(2);">
+                            <li id="li-unreadN">Não lidas</li>
+                        </a>
+                        <a href="javascript:notifications(3);">
+                            <li id="li-readN">Lidas</li>
+                        </a>
                     </ul>
                 </nav>
                 <hr>
 
-                    <article id="last-notifications">
-                <select name="orderBy" id="orderBy_select">
-                    <option value="">Ordenar por</option>
-                    <option value="Mais recentes">Mais recentes</option>
-                    <option value="Mais antigas">Mais antigas</option>
-                </select>
-         
+                <article id="last-notifications">
+                    <select name="orderBy" id="orderBy_select">
+                        <option value="">Ordenar por</option>
+                        <option value="Mais recentes">Mais recentes</option>
+                        <option value="Mais antigas">Mais antigas</option>
+                    </select>
 
-                    </article>
 
-                    <article id="unread-notifications">
-                        <select name="orderBy" id="orderBy_select">
-                            <option value="">Ordenar por</option>
-                            <option value="Mais recentes">Mais recentes</option>
-                            <option value="Mais antigas">Mais antigas</option>
-                        </select>
-                 
-                        <div id="my-profile_section1-notification">
-                            <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
-    
+                </article>
+
+                <article id="unread-notifications">
+                    <select name="orderBy" id="orderBy_select">
+                        <option value="">Ordenar por</option>
+                        <option value="Mais recentes">Mais recentes</option>
+                        <option value="Mais antigas">Mais antigas</option>
+                    </select>
+
+                    <div id="my-profile_section1-notification">
+                        <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
+
+                        <div>
                             <div>
-                                <div>
-                                    <h2>Lorem Ipsum</h2>
-    
-                                    <div>
-                                        <h3>Novo</h3>
-                                    </div>
-                                </div>
-    
-                                <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. 
-                                        Proin gravida dolor sit amet lacus </p>
-    
-                                    <h4>22/03/2022</h4>
-                                </div>
-    
-                            </div>
-    
-                        </div>
-                    </article>
+                                <h2>Lorem Ipsum</h2>
 
-                    <article id="read-notifications">
-                        <select name="orderBy" id="orderBy_select">
-                            <option value="">Ordenar por</option>
-                            <option value="Mais recentes">Mais recentes</option>
-                            <option value="Mais antigas">Mais antigas</option>
-                        </select>
-                 
-        
-                    </article>
-                </div>
+                                <div>
+                                    <h3>Novo</h3>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                                    laoreet.
+                                    Proin gravida dolor sit amet lacus </p>
+
+                                <h4>22/03/2022</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </article>
+
+                <article id="read-notifications">
+                    <select name="orderBy" id="orderBy_select">
+                        <option value="">Ordenar por</option>
+                        <option value="Mais recentes">Mais recentes</option>
+                        <option value="Mais antigas">Mais antigas</option>
+                    </select>
+
+
+                </article>
+            </div>
             </div>
         </section>
         <script src="script/my-account/notifications.js"></script>
         <script src="script/default/default.js"></script>
     </body>
-    
+
 </body>
+
 </html>
