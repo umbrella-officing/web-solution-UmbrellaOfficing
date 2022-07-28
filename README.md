@@ -1,2 +1,2 @@
-# web-solution-Umbrella-Ofiicing
-Uma plataforma que anuncia espaços de coworking
+# web-solution-Umbrella-Officing
+Uma plataforma que permite pessoas comuns anunciarem espaços de coworking
