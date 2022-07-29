@@ -1,0 +1,162 @@
+.container_search{
+    display: none;
+}
+
+#type-of-environment_section{
+    padding-top: 165px;
+}
+
+#type-of-environment_section > div{
+    justify-content: space-between;
+    /* flex-direction: column; */
+}
+
+#type-of-environment_section > div h1{
+    font-size: 40px;
+    max-width: 306px;
+    color: var(--text-1-black);
+}
+
+#second{
+    display: flex;
+    max-width: 568px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#second > div > p{
+    font-size: 22px;
+    max-width: 568px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+#second > div > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#second > div > div > div{
+    max-width: 273px;
+    height: 293px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid var(--gray-border);
+    border-radius: 20px;
+    width: 100%;
+}
+
+.hint{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#second > div > div > div p{
+    max-width: 150px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 20px
+}
+
+#typeOf1{
+    width: 136px;
+    height: 118px;
+}
+
+#typeOf2{
+    width: 136px;
+    height: 105px;
+}
+
+#second > :last-child{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#second > div > button{
+    width: 186px;
+    height: 36px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--scale-2-purple);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+article{
+    width: 100%;
+    padding: 185px 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+
+article > div{
+    width: 541px;
+    height: 270px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+article > div > :nth-child(2) > div{
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+article > div > div{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    position: relative;
+}
+
+article > div > :nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+article > div > div > :nth-child(2) > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+article > div > :nth-child(2) > div  > img{
+    width: 136px;
+    height: 118px;  
+    margin-bottom: 13px; 
+}
+
+article > div > :nth-child(2) > :first-child > p{
+    max-width: 140px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+article > div > :nth-child(2) > :nth-child(2) > p{
+    max-width: 245px;
+    font-weight: 500;
+    font-size: 20px;
+}
