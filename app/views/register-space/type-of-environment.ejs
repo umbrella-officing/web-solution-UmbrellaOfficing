@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/register-space/type-of-environment.css">
 </head>
+
 <body>
     <header id="header" class="container_margin_default">
         <div class="default_margin">
@@ -22,24 +25,24 @@
                     <li class="option_office checked">Espaço adaptado</li>
                     <li class="option_office">Espaço corporativo</li>
                 </ul>
-                    <div class="container_search">
-                        <span id="search_txt">Busque locais para trabalho</span>
-                        <div id='container_informations_find_coworking'>
-                            <input id="localization" type="text" placeholder="Localização:">
-                            <input type="date" id="check_in">
-                        </div>
-                        <a href="#">
-                            <div>
-                                <img src="images/default/search.svg" alt="pesquisa">
-                            </div>
-                        </a>  
+                <div class="container_search">
+                    <span id="search_txt">Busque locais para trabalho</span>
+                    <div id='container_informations_find_coworking'>
+                        <input id="localization" type="text" placeholder="Localização:">
+                        <input type="date" id="check_in">
                     </div>
+                    <a href="#">
+                        <div>
+                            <img src="images/default/search.svg" alt="pesquisa">
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <div id="menu">
                 <div id='menu_sign-in-up'>
-                        <img src="images/default/user.svg" alt="usuário">
-                        <img src="images/default/menu_hamburguer.svg" alt="menu">
+                    <img src="images/default/user.svg" alt="usuário">
+                    <img src="images/default/menu_hamburguer.svg" alt="menu">
                 </div>
                 <div class="menu_open">
                     <div>
@@ -80,49 +83,83 @@
                     <h1>Cadastre seu espaço em poucos passos</h1>
                 </div>
 
-        <div id="second"> <!--Inclui o botão no contexto da segunda parte da página-->
-            <div> <!--Engloba os elementos antes do botão para que não se dispersem com o flex-direction: colunm, usado por causa do botão -->
-            <p>Para começar, escolha o tipo do ambiente em que seu espaço está:</p>
-            
-            <div> <!--Alinha as duas divs com margem que contém as imagens ilustrativas-->
-                <div>
-                    <div class="hint">
-                        <img src="images/register-space/type-of-environment/hint-icon.svg" alt="Dica">
-                    </div>
-                    <img id="typeOf1" src="images/register-space/type-of-environment/adaptable.png" alt="Espaços adaptáveis">
-                    <p>Ambiente adaptado</p>
-                </div>
-                <div>
-                    <div class="hint">
-                        <img src="images/register-space/type-of-environment/hint-icon.svg" alt="Dica">
-                    </div>
-                    
-                    <img id="typeOf2" src="images/register-space/type-of-environment/corporate.png" alt="Espaços corporativos">
-                    <p>Ambiente corporativo</p>
-                </div>
-            </div>
-            </div>
-                <div>
-                    <button>Avançar</button>
-                </div>
-        </div>
-        </div>
+                <div id="second">
+                    <!--Inclui o botão no contexto da segunda parte da página-->
+                    <div>
+                        <!--Engloba os elementos antes do botão para que não se dispersem com o flex-direction: colunm, usado por causa do botão -->
+                        <p>Para começar, escolha o tipo do ambiente em que seu espaço está:</p>
 
-        <article>
-            <div>
-                <!-- <div id="close">
-                    <img src="images/default/close-icon.svg" alt="Fechar">
-                </div> -->
+                        <div>
+                            <!--Alinha as duas divs com margem que contém as imagens ilustrativas-->
+                            <div>
+                                <div class="hint">
+                                    <img src="images/register-space/type-of-environment/hint-icon.svg" alt="Dica">
+                                </div>
+                                <img id="typeOf1" src="images/register-space/type-of-environment/adaptable.png"
+                                    alt="Espaços adaptáveis">
+                                <p>Ambiente adaptado</p>
+                            </div>
+                            <div>
+                                <div class="hint">
+                                    <img src="images/register-space/type-of-environment/hint-icon.svg" alt="Dica">
+                                </div>
 
-                <div id="teste">
-                    <img src="images/register-space/type-of-environment/adaptable.png" alt="">
-                    <p>Ambiente adaptado</p>
+                                <img id="typeOf2" src="images/register-space/type-of-environment/corporate.png"
+                                    alt="Espaços corporativos">
+                                <p>Ambiente corporativo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button>Avançar</button>
+                    </div>
                 </div>
             </div>
-        </article>
+
+            <article id="hint-adaptable"> 
+                <div>
+                        <div>
+                            <img src="images/default/close-icon.svg" alt="Fechar">
+                        </div>
+
+                        <div>
+                            <div>
+                                <img src="images/register-space/type-of-environment/adaptable.png" alt="">
+                                <p>Ambiente adaptado</p>
+                            </div>
+
+                            <div>
+                                <p>Seja sua casa ou até mesmo um trailer. São espaços que podem ser adaptados ao
+                                    trabalho.</p>
+                            </div>
+                        </div>
+                
+                </div>
+            </article>
+
+            <article id="hint-corporate"> 
+                <div>
+                        <div>
+                            <img src="images/default/close-icon.svg" alt="Fechar">
+                        </div>
+
+                        <div>
+                            <div>
+                                <img src="images/register-space/type-of-environment/corporate.png" alt="">
+                                <p>Ambiente corporativo</p>
+                            </div>
+
+                            <div>
+                                <p>Locais essencialmente destinados ao trabalho, como coworkings 
+                                    e escritórios tradicionais.</p>
+                            </div>
+                        </div>
+                
+                </div>
+            </article>
         </section>
 
-            </div>
+        </div>
     </main>
 
     <div id='box_black'></div>
@@ -132,4 +169,5 @@
     <script src="script/default/default.js"></script>
 
 </body>
+
 </html>

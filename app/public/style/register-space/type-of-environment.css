@@ -102,6 +102,10 @@ article{
     align-items: center;
     top: 0;
     left: 0;
+
+}
+
+#hint-corporate{
     display: none;
 }
 
@@ -111,28 +115,51 @@ article > div{
     background-color: #fff;
     border-radius: 20px;
     padding: 25px;
+}
+
+article > div > :nth-child(2) > div{
+    padding: 25px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
 }
 
 article > div > div{
     display: flex;
+    width: 100%;
     justify-content: flex-end;
+    position: relative;
 }
 
-article :nth-child(2){
+article > div > :nth-child(2){
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+article > div > div > :nth-child(2) > div{
+    display: flex;
+    align-items: center;
     flex-direction: column;
-    max-width: 50%;
 }
 
-article :nth-child(2) > img{
+article > div > :nth-child(2) > div  > img{
     width: 136px;
-    height: 118px;    
+    height: 118px;  
+    margin-bottom: 13px; 
 }
 
-article :nth-child(2) > p{
+article > div > :nth-child(2) > :first-child > p{
+    max-width: 140px;
     text-align: center;
     font-size: 22px;
+    font-weight: 600;
+}
+
+article > div > :nth-child(2) > :nth-child(2) > p{
+    max-width: 245px;
     font-weight: 500;
+    font-size: 20px;
 }
