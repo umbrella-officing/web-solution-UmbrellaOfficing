@@ -1,3 +1,7 @@
+.container_search{
+    display: none;
+}
+
 #personal-date_section1>div {
     padding-top: 181px;
     justify-content: space-between;
@@ -15,9 +19,11 @@
     background-color: var(--scale-9-blue);
 }
 
+
 /*Menu lateral*/
 #personal-date_section1>div nav {
     position: relative;
+    overflow: auto;
 }
 
 #personal-date_section1>div nav ul {
@@ -26,8 +32,8 @@
 
 #personal-date_section1>div nav ul li {
     display: flex;
-    height: 50px;
-    margin: 30px 0;
+    height: 40px;
+    margin: 25px 0;
     align-items: center;
 }
 
@@ -37,21 +43,22 @@
 
 .profile,
 .wallet,
-.reserve {
-    font-size: 30px;
+.reserve,
+.ads,
+.calendar {
+    font-size: 26px;
 }
 
 
 .option_active a {
     border-left: 3px solid #5B61C4;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 16px;
     font-weight: 600;
     color: var(--scale-13-blue);
 }
 
 .option a {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--text-1-black);
 }
@@ -61,11 +68,12 @@
 }
 
 .profile,
-.reserve {
+.reserve,
+.ads,
+.calendar {
     color: var(--gray-border);
     margin: 0 10px 0 21px;
 }
-
 
 /*Conteúdo*/
 #personal-date_section1>div>nav~div {
@@ -96,17 +104,16 @@
     font-weight: 500;
 }
 
-#personal-date_section1 form>div>div input,
-select {
+#personal-date_section1 form>div>div input {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 10px;
     resize: none;
     width: -webkit-fill-available;
+    outline: none;
 }
 
-#personal-date_section1 form>div input,
-select {
+#personal-date_section1 form>div input {
     font-family: var(--font-primary);
     font-size: 14px;
 }
@@ -116,6 +123,40 @@ select {
     grid-template-columns: 352px 352px;
     grid-column-gap: 80px;
 }
+
+.listDropDown {
+    width: 352px;
+    height: 80px;
+    border-radius: 5px;
+    /* border: 1px solid var(--gray-border); */
+    box-shadow: 0 0 8px 0 rgb(128 128 128 / 20%);
+    box-sizing: border-box;
+    margin-top: 10px;
+    overflow: auto;
+    display: none;
+    transform: translate(0px, -10px);
+}
+
+/* ::-webkit-scrollbar {
+    background-color: var(--text-1-black);
+    width: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+} */
+
+.listDropDown > .item {
+    padding: 10px;
+    box-sizing: border-box;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.listDropDown > .item:hover{
+    padding-left: 12px;
+    transition: .3s;
+}
+
+
 
 .personal-date_section1_form-colum2-dif1 {
     display: grid;
@@ -139,7 +180,7 @@ select {
 }
 
 #edit_ad {
-    font-size: 16px;
+    font-size: 14px;
     font-family: var(--font-primary);
     font-weight: 500;
     margin: 40px 0 0 558px;

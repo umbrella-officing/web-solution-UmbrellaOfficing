@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,8 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/notifications.css">
 </head>
@@ -21,24 +23,24 @@
                     <li class="option_office checked">Espaço adaptado</li>
                     <li class="option_office">Espaço corporativo</li>
                 </ul>
-                    <div class="container_search">
-                        <span id="search_txt">Busque locais para trabalho</span>
-                        <div id='container_informations_find_coworking'>
-                            <input id="localization" type="text" placeholder="Localização:">
-                            <input type="date" id="check_in">
-                        </div>
-                        <a href="#">
-                            <div>
-                                <img src="images/default/search.svg" alt="pesquisa">
-                            </div>
-                        </a>  
+                <div class="container_search">
+                    <span id="search_txt">Busque locais para trabalho</span>
+                    <div id='container_informations_find_coworking'>
+                        <input id="localization" type="text" placeholder="Localização:">
+                        <input type="date" id="check_in">
                     </div>
+                    <a href="#">
+                        <div>
+                            <img src="images/default/search.svg" alt="pesquisa">
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <div id="menu">
                 <div id='menu_sign-in-up'>
-                        <img src="images/default/user.svg" alt="usuário">
-                        <img src="images/default/menu_hamburguer.svg" alt="menu">
+                    <img src="images/default/user.svg" alt="usuário">
+                    <img src="images/default/menu_hamburguer.svg" alt="menu">
                 </div>
                 <div class="menu_open">
                     <div>
@@ -76,120 +78,128 @@
 
         <section id="notifications_section1" class="container_margin_default">
             <div class="default_margin">
-            
+
                 <h1>Notificações</h1>
 
                 <nav>
                     <ul>
-                        <a href="javascript:notificacoes(1);" autofocus><li id="li-lastN">Últimas notificações</li></a>
-                        <a href="javascript:notificacoes(2);"><li id="li-unreadN">Não lidas</li></a>
-                        <a href="javascript:notificacoes(3);"><li id="li-readN">Lidas</li></a>
+                        <a href="javascript:notificacoes(1);" autofocus>
+                            <li id="li-lastN">Últimas notificações</li>
+                        </a>
+                        <a href="javascript:notificacoes(2);">
+                            <li id="li-unreadN">Não lidas</li>
+                        </a>
+                        <a href="javascript:notificacoes(3);">
+                            <li id="li-readN">Lidas</li>
+                        </a>
                     </ul>
                 </nav>
                 <hr>
 
-                    <article id="last-notifications">
-                <select name="orderBy" id="orderBy_select">
-                    <option value="">Ordenar por</option>
-                    <option value="Mais recentes">Mais recentes</option>
-                    <option value="Mais antigas">Mais antigas</option>
-                </select>
-         
+                <article id="last-notifications">
+                    <select name="orderBy" id="orderBy_select">
+                        <option value="">Ordenar por</option>
+                        <option value="Mais recentes">Mais recentes</option>
+                        <option value="Mais antigas">Mais antigas</option>
+                    </select>
+                </article>
 
-                    </article>
+                <article id="unread-notifications">
+                    <select name="orderBy" id="orderBy_select">
+                        <option value="">Ordenar por</option>
+                        <option value="Mais recentes">Mais recentes</option>
+                        <option value="Mais antigas">Mais antigas</option>
+                    </select>
 
-                    <article id="unread-notifications">
-                        <select name="orderBy" id="orderBy_select">
-                            <option value="">Ordenar por</option>
-                            <option value="Mais recentes">Mais recentes</option>
-                            <option value="Mais antigas">Mais antigas</option>
-                        </select>
-                 
-                        <div class="notification">
-                            <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
-    
-                            <div>
-                                <div>
-                                    <h2>Lorem Ipsum dolor sit</h2>
-    
-                                    <div>
-                                        <h3>Novo</h3>
-                                    </div>
-                                </div>
-    
-                                <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. 
-                                        Proin gravida dolor sit amet lacus </p>
-    
-                                    <h4>22/03/2022</h4>
-                                </div>
-    
-                            </div>
-    
-                        </div>
-                    </article>
+                    <div class="notification">
+                        <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
 
-                    <article id="read-notifications">
-                        <select name="orderBy" id="orderBy_select">
-                            <option value="">Ordenar por</option>
-                            <option value="Mais recentes">Mais recentes</option>
-                            <option value="Mais antigas">Mais antigas</option>
-                        </select>
-                 
-                        <div class="notification">
-                            <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
-    
+                        <div>
                             <div>
+                                <h2>Lorem Ipsum dolor sit</h2>
+
                                 <div>
-                                    <h2>Lorem Ipsum dolor sit</h2>
-    
-                                    <div>
-                                        <h3>Novo</h3>
-                                    </div>
+                                    <h3>Novo</h3>
                                 </div>
-    
-                                <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. 
-                                        Proin gravida dolor sit amet lacus </p>
-    
-                                    <h4>22/03/2022</h4>
-                                </div>
-    
                             </div>
-    
-                        </div>
-    
-                        <div class="notification">
-                            <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
-    
+
                             <div>
-                                <div>
-                                    <h2>Lorem Ipsum dolor sit</h2>
-    
-                                    <div>
-                                        <h3>Novo</h3>
-                                    </div>
-                                </div>
-    
-                                <div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. 
-                                        Proin gravida dolor sit amet lacus </p>
-    
-                                    <h4>22/03/2022</h4>
-                                </div>
-    
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                                    laoreet.
+                                    Proin gravida dolor sit amet lacus </p>
+
+                                <h4>22/03/2022</h4>
                             </div>
-    
+
                         </div>
-    
-                    </article>
-                </div>
+
+                    </div>
+                </article>
+
+                <article id="read-notifications">
+                    <select name="orderBy" id="orderBy_select">
+                        <option value="">Ordenar por</option>
+                        <option value="Mais recentes">Mais recentes</option>
+                        <option value="Mais antigas">Mais antigas</option>
+                    </select>
+
+                    <div class="notification">
+                        <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
+
+                        <div>
+                            <div>
+                                <h2>Lorem Ipsum dolor sit</h2>
+
+                                <div>
+                                    <h3>Novo</h3>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                                    laoreet.
+                                    Proin gravida dolor sit amet lacus </p>
+
+                                <h4>22/03/2022</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="notification">
+                        <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
+
+                        <div>
+                            <div>
+                                <h2>Lorem Ipsum dolor sit</h2>
+
+                                <div>
+                                    <h3>Novo</h3>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                                    laoreet.
+                                    Proin gravida dolor sit amet lacus </p>
+
+                                <h4>22/03/2022</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+            </div>
             </div>
         </section>
         <script src="script/default/default.js"></script>
         <script src="script/my-account/notifications.js"></script>
 
     </body>
-    
+
 </body>
+
 </html>

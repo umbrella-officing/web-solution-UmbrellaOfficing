@@ -1,3 +1,7 @@
+.container_search{
+    display: none;
+}
+
 #my-profile_section1>div {
     padding-top: 181px;
     justify-content: space-between;
@@ -9,7 +13,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 64.7em;
+    height: 67.6em;
     width: calc(50% - 290px);
     background-color: var(--scale-9-blue);
 }
@@ -26,8 +30,8 @@
 
 #my-profile_section1>div nav ul li {
     display: flex;
-    height: 50px;
-    margin: 30px 0;
+    height: 40px;
+    margin: 25px 0;
     align-items: center;
 }
 
@@ -37,21 +41,22 @@
 
 .profile,
 .wallet,
-.reserve {
-    font-size: 30px;
+.reserve,
+.ads,
+.calendar {
+    font-size: 26px;
 }
 
 
 .option_active a {
     border-left: 3px solid #5B61C4;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 16px;
     font-weight: 600;
     color: var(--scale-13-blue);
 }
 
 .option a {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--text-1-black);
 }
@@ -61,7 +66,9 @@
 }
 
 .wallet,
-.reserve {
+.reserve,
+.ads,
+.calendar {
     color: var(--gray-border);
     margin: 0 10px 0 21px;
 }
@@ -77,7 +84,7 @@
 }
 
 #my-profile_section1>div h1~p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     margin: 20px 0 40px;
 }
@@ -89,7 +96,7 @@
 }
 
 #my-profile_section1 form>div label {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -102,7 +109,7 @@
 input {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
-    padding: 15px;
+    padding: 12.5px;
     resize: none;
     font-size: 14px;
     width: -webkit-fill-available;
@@ -111,7 +118,6 @@ input {
 .my-profile_section1-form-flex {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
 }
 
 
@@ -178,4 +184,25 @@ input {
 .face {
     color: #0000FF;
     margin-right: 5px;
+}
+
+
+#edit_ad {
+    background-color: var(--scale-2-purple);
+    border: none;
+    width: 226px;
+    height: 36px;
+    color: var(--white);
+    border-radius: 40px;
+}
+
+#edit_ad {
+    font-size: 14px;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    margin: 40px 0 0 558px;
+}
+
+footer {
+    margin-top: 80px;
 }

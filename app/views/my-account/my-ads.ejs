@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/owners-center/my-ads.css">
+    <link rel="stylesheet" href="style/my-account/my-ads.css">
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
 </head>
 
@@ -78,24 +78,29 @@
     <div id='box_black'></div>
 
     <main>
-        <section id="my-ads_section1" class="container_margin_default">
+        <div id="my-ads" class="container_margin_default">
             <div class="default_margin">
-                <nav id="owners-center_navigation">
+                <nav id="my-account_navigation">
                     <ul>
+                        <li class="option">
+                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
+                                Meu perfil</a>
+                        </li>
+                        <li class="option">
+                            <a href="/dados-pessoais">
+                                <i class="fa-solid fa-wallet wallet"></i>
+                                Dados pessoais</a>
+                        </li>
+                        <li class="option">
+                            <a href="/reservas"><i class="fa-solid fa-calendar-check reserve"></i>
+                                Minhas reservas</a>
+                        </li>
                         <li class="option_active">
-                            <a href="#"> <a href="#"><i class="fa-duotone fa-bullhorn ads"></i>
+                            <a href="#"><i class="fa-solid fa-bullhorn ads"></i>
                                 Meus anúncios</a>
                         </li>
                         <li class="option">
-                            <a href="">
-                                <div>
-                                <i class="fa-solid fa-user-large announce1"></i>
-                                <i class="fa-solid fa-bullhorn announce2"></i>
-                            </div>
-                                Fazer anúncio</a>
-                        </li>
-                        <li class="option">
-                            <a href="/calendario"><i class="fa-solid fa-calendar calendar"></i></i>
+                            <a href="/calendario"><i class="fa-solid fa-calendar-days calendar"></i>
                                 Calendário</a>
                         </li>
                     </ul>
@@ -106,54 +111,204 @@
 
                     <nav id="my-ads_navigation">
                         <ul>
-                            <li>Espaços ativos</li>
-                            <li>Espaços inativos</li>
+                            <a href="javascript:ads(1)" autofocus>
+                                <li>Espaços ativos</li>
+                            </a>
+                            <a href="javascript:ads(2)">
+                                <li>Espaços inativos</li>
+                            </a>
                         </ul>
                     </nav>
+                    <hr>
 
-                    <div id="my-ads_section1-space">
-                        <img src="images/my-account/reservations/apartment.svg" alt="apartamento">
+                    <article id="actives_space">
+                        <section>
+                            <img src="images/my-account/favorites/kitnet.png" alt="Escritório privado adaptado">
 
-                        <div>
-                            <h2>Villa Alta (Apartamento)</h2>
-                            <p>Rua Augusto Pedrosa 011, Liberdade, São Paulo/SP</p>
-                            <h3>1 sala cadastradas</h3>
+                            <div>
+                                <h2>Escritório Aqua (Kitnet)</h2>
+                                <p>Rua Augusto Pedrosa 011, Liberdade, São Paulo/SP</p>
+                                <h3>1 sala cadastradas</h3>
 
-                            <div class="my-ads_section1-space-div-flex">
-                                <h3>Cadastrado em: 22/04/2022</h3>
+                                <div class="my-ads_space-div-flex">
+                                    <h3>Cadastrado em: 22/04/2022</h3>
 
-                                <div>
-                                    <button type="submit" id="visits"><i class="fa-solid fa-check check"></i></button>
-                                    <button type="submit" id="delete"><i class="fa-solid fa-trash-can trash"></i></button>
+                                    <div>
+                                        <button type="submit" id="view_officing"><a href=""><i
+                                                    class="fa-solid fa-check check"></a></i></button>
+                                        <button type="submit" id="delete"><i
+                                                class="fa-solid fa-trash-can trash"></i></button>
+                                    </div>
+                                </div>
+                        </section>
+                        <section>
+                            <img src="images/my-account/favorites/kitnet.png" alt="Escritório privado adaptado">
+
+                            <div>
+                                <h2>Escritório Aqua (Kitnet)</h2>
+                                <p>Rua Augusto Pedrosa 011, Liberdade, São Paulo/SP</p>
+                                <h3>1 sala cadastradas</h3>
+
+                                <div class="my-ads_space-div-flex">
+                                    <h3>Cadastrado em: 22/04/2022</h3>
+
+                                    <div>
+                                        <button type="submit" id="view_officing"><a href=""><i
+                                                    class="fa-solid fa-check check"></a></i></button>
+                                        <button type="submit" id="delete"><i
+                                                class="fa-solid fa-trash-can trash"></i></button>
+                                    </div>
+                                </div>
+                        </section>
+                        <section>
+                            <img src="images/my-account/favorites/kitnet.png" alt="Escritório privado adaptado">
+
+                            <div>
+                                <h2>Escritório Aqua (Kitnet)</h2>
+                                <p>Rua Augusto Pedrosa 011, Liberdade, São Paulo/SP</p>
+                                <h3>1 sala cadastradas</h3>
+
+                                <div class="my-ads_space-div-flex">
+                                    <h3>Cadastrado em: 22/04/2022</h3>
+
+                                    <div>
+                                        <button type="submit" id="view_officing"><a href=""><i
+                                                    class="fa-solid fa-check check"></a></i></button>
+                                        <button type="submit" id="delete"><i
+                                                class="fa-solid fa-trash-can trash"></i></button>
+                                    </div>
+                                </div>
+                        </section>
+                    </article>
+                    </article>
+                    <article id="inactives_space" display="none">
+                        <section>
+                            <img src="images/my-account/favorites/apartament.png" alt="apartamento">
+
+                            <div>
+                                <h2>Escritório Lape</h2>
+                                <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
+                                <h3>3 sala cadastradas</h3>
+
+                                <div class="my-ads_space-div-flex">
+                                    <button type="submit" id="solicitation_res">Solicitações de reserva</button>
+
+                                    <div>
+                                        <button type="submit" id="eyes"><i class="fa-solid fa-eye eyes"></i></button>
+                                        <button type="submit" id="edit"><i
+                                                class="fa-solid fa-pen-to-square edit"></i></button>
+                                        <button type="submit" id="delete"><i
+                                                class="fa-solid fa-trash-can trash"></i></button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </section>
+                        <section>
+                            <img src="images/my-account/favorites/apartament.png" alt="apartamento">
 
-                    <div id="my-ads_section1-space">
-                        <img src="images/my-account/reservations/apartment.svg" alt="apartamento">
+                            <div>
+                                <h2>Escritório Lape</h2>
+                                <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
+                                <h3>3 sala cadastradas</h3>
 
-                        <div>
-                            <h2>Villa Alta (Apartamento)</h2>
-                            <p>Rua Augusto Pedrosa 011, Liberdade, São Paulo/SP</p>
-                            <h3>1 sala cadastradas</h3>
+                                <div class="my-ads_space-div-flex">
+                                    <button type="submit" id="solicitation_res">Solicitações de reserva</button>
 
-                            <div class="my-ads_section1-space-div-flex">
-                                <button type="submit" id="solicitation_res">Solicitações de reserva</button>
-
-                                <div>
-                                    <button type="submit" id="eyes"><i class="fa-solid fa-eye eyes"></i></button>
-                                    <button type="submit" id="edit"><i class="fa-solid fa-pen-to-square edit"></i></button>
-                                    <button type="submit" id="delete"><i class="fa-solid fa-trash-can trash"></i></button>
+                                    <div>
+                                        <button type="submit" id="eyes"><i class="fa-solid fa-eye eyes"></i></button>
+                                        <button type="submit" id="edit"><i
+                                                class="fa-solid fa-pen-to-square edit"></i></button>
+                                        <button type="submit" id="delete"><i
+                                                class="fa-solid fa-trash-can trash"></i></button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </section>
+                        <section>
+                            <img src="images/my-account/favorites/apartament.png" alt="apartamento">
 
+                            <div>
+                                <h2>Escritório Lape</h2>
+                                <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
+                                <h3>3 sala cadastradas</h3>
+
+                                <div class="my-ads_space-div-flex">
+                                    <button type="submit" id="solicitation_res">Solicitações de reserva</button>
+
+                                    <div>
+                                        <button type="submit" id="eyes"><i class="fa-solid fa-eye eyes"></i></button>
+                                        <button type="submit" id="edit"><i
+                                                class="fa-solid fa-pen-to-square edit"></i></button>
+                                        <button type="submit" id="delete"><i
+                                                class="fa-solid fa-trash-can trash"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
                 </div>
             </div>
-        </section>
+            </section>
     </main>
+
+
+    <footer class="container_margin_default">
+
+        <div class="default_margin">
+            <div id="margin2">
+                <div id="logo">
+                    <img src="images/default/logo_footer.svg" alt="logo">
+                    <h4>Escritorizando <span><br>espaços </span></h4>
+                    <span>Umbrella Officing&copy 2022</span>
+                </div>
+
+                <ul>
+                    <h5>Junte-se a nós</h5>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Cadastre-se</a></li>
+                    <li><a href="#">Sua conta</a></li>
+                    <li><a href="#">Faça sua reserva</a></li>
+                    <li><a href="#">Anuncie seu espaço</a></li>
+                </ul>
+
+                <ul>
+                    <h5>Atendimento</h5>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Fórum</a></li>
+                    <li><a href="#">Central de ajuda</a></li>
+                </ul>
+
+                <ul>
+                    <h5>Sobre nós</h5>
+                    <li><a href="#">Quem somos?</a></li>
+                    <li><a href="#">Missão, valores e visão</a></li>
+                    <li><a href="#">Por que Umbrella Officing</a></li>
+                    <li><a href="#">Desenvolvedores</a></li>
+                </ul>
+
+            </div>
+
+            <div id="bottom_footer">
+                <div>
+                    <div id="network_div">
+                        <img src="images/default/icon_intagram.svg" alt="ícone do instagram">
+                        <img src="images/default/icon_facebook.svg" alt="ícone do facebook">
+                    </div>
+
+                    <div id="scroll_up">
+                        <img src="images/default/arrow_up.svg" alt="ícone de flecha">
+                    </div>
+                </div>
+
+            </div>
+
+
+    </footer>
+
+    <script src="script/default/default.js"></script>
+    <script src="script/my-account/my-ads.js"></script>
+
+
 </body>
 
 </html>

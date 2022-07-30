@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/my-account/reservations.css">
+    <link rel="stylesheet" href="style/my-account/personal-date.css">
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
 </head>
 
@@ -78,80 +78,133 @@
     <div id='box_black'></div>
 
     <main>
-        <section id="my-reservations_section1" class="container_margin_default">
+        <section id="edit-ad_section1" class="container_margin_default">
             <div class="default_margin">
                 <nav>
+                    <button>
+                        <i class="fa-solid fa-circle-chevron-left"></i>
+                        <p>Voltar</p>
+                    </button>
                     <ul>
                         <li class="option">
                             <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
-                                Meu perfil</a>
-                        </li>
-                        <li class="option">
-                            <a href="/dados-pessoais">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                Dados pessoais</a>
+                                Classificação</a>
                         </li>
                         <li class="option_active">
-                            <a href="#"><i class="fa-solid fa-calendar-check reserve"></i>
-                                Minhas reservas</a>
+                            <a href="#">
+                                <i class="fa-solid fa-wallet wallet"></i>
+                                Informações pessoais</a>
+                        </li>
+                        <li class="option">
+                            <a href="/reservas"><i class="fa-solid fa-calendar-check reserve"></i>
+                                Localização</a>
                         </li>
                         <li class="option">
                             <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
-                                    Meus anúncios</a>
-                        </li>
-                        <li class="option">
-                            <a href="/calendario"><i class="fa-solid fa-calendar-days calendar"></i>
-                                Calendário</a>
+                                Salas</a>
                         </li>
                     </ul>
                 </nav>
 
                 <div>
-                    <h1>Minhas reservas</h1>
+                    <h1>Escitório Lape</h1>
 
-                    <div id="my-reservations_section1-space">
-                        <img src="images/my-account/favorites/apartament.png" alt="apartamento">
-
+                    <form action="/edit-ad" method="post">
                         <div>
-                            <p>Amanhã, às 19:00</p>
-                            <h2>Água Branca (Apartamento)</h2>
-                            <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
-                            <p>7m² | Modelo privado | 2 banheiros</p>
-
-                            <div class="reservations_section1-space-div-flex">
-                                <h3>R$ 7,90/h</h3>
-
-                                <div>
-
-                                    <button type="submit" id="visits">Próximas visitas</button>
-                                    <button type="submit" id="cancel">Cancelar reserva</button>
+                            <div>
+                                <label for="environment_type">Tipo do ambiente</label>
+                                <input type="text" name="environment_type" id="environment_type"/>
+                                <div class="dropDown">
+                                    <div class="listDropDown">
+                                        <div class="item" id="item-1" onMouseDown="category(1)">Feminino</div>
+                                        <div class="item" id="item-2" onMouseDown="category(2)">Masculino</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div id="my-reservations_section1-space">
-                        <img src="images/my-account/favorites/apartament.png" alt="Sala de Reunião adaptada">
-
-                        <div>
-                            <p>Amanhã, às 19:00</p>
-                            <h2>Água Branca (Apartamento)</h2>
-                            <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
-                            <p>7m² | Modelo privado | 2 banheiros</p>
-
-                            <div class="reservations_section1-space-div-flex">
-                                <h3>R$ 7,90/h</h3>
-
+                            
+                            <div class="personal-date_section1_form-colum2">
                                 <div>
-
-                                    <button type="submit" id="visits">Próximas visitas</button>
-                                    <button type="submit" id="cancel">Cancelar reserva</button>
+                                    <label for="category">Categoria</label>
+                                    <input type="text" name="environment_type" id="environment_type"/>
+                                    <div class="dropDown">
+                                        <div class="listDropDown">
+                                            <div class="item" id="item-1" onMouseDown="category(1)">Feminino</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="sub_category">Sub-categoria</label>
+                                    <input type="text" name="environment_type" id="environment_type"/>
+                                    <div class="dropDown">
+                                        <div class="listDropDown">
+                                            <div class="item" id="item-1" onMouseDown="category(1)">Feminino</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                    
+                            <div>
+                            <h2>Informações básicas</h2>
+                            <button id="edit_photos">Editar</button>
+
+                            <div class="photos">
+                                <div id="photo1"></div>
+                                <div id="photo2"></div>
+                                <div id="photo3"></div>
+                                <p>Mais...</p>
+                            </div>
+                            </div>
 
 
+                            <div>
+                                <label for="title">Título</label>
+                                <input type="text" name="title" id="title" placeholder="Escritório Lape" />
+                            </div>
+
+                            
+                            <div>
+                                <label for="title">Descrição</label>
+                                <textarea type="text" name="description" id="description"></textarea>
+                            </div>
+
+                            <h2>Localização</h2>
+                            <div>
+                                <label for="cep">CEP</label>
+                                <input type="text" name="cep_ad" id="cep_ad" placeholder="345.567.123-03" />
+                            </div>
+                            <div class="personal-date_section1_form-colum2-dif1">
+                                <div>
+                                    <label for="rua">Rua</label>
+                                    <input type="text" name="rua_ad" id="rua_ad" placeholder="Rua Tomé de Souza" />
+                                </div>
+                                <div>
+                                    <label for="number">Nº</label>
+                                    <input type="text" name="number_ad" id="number_ad" placeholder="569" />
+                                </div>
+                            </div>
+                            <div class="personal-date_section1_form-colum2">
+                                <div>
+                                    <label for="bairro">Bairro</label>
+                                    <input type="text" name="bairro_ad" id="bairro-ad" placeholder="Aldeia da Serra" />
+                                </div>
+                                <div>
+                                    <label for="cidade">Cidade | Estado</label>
+                                    <input type="text" name="cidade_estado_ad" id="cidade_estado_ad"
+                                        placeholder="Barueri, SP" />
+                                </div>
+                            </div>
+
+                            <h2>Informações para login</h2>
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="alineribeiro@gmail.com" />
+                            </div>
+                            <div>
+                                <label for="password">Senha</label>
+                                <input type="password" name="password" id="password" />
+                            </div>
+                            <button type="submit" id="edit_ad">Editar informações</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -204,12 +257,11 @@
                         <img src="images/default/arrow_up.svg" alt="ícone de flecha">
                     </div>
                 </div>
-
             </div>
-
-
     </footer>
 
     <script src="script/default/default.js"></script>
+    <script src="script/my-account/personal-date.js"></script>
 </body>
+
 </html>
