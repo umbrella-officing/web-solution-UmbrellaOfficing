@@ -18,6 +18,7 @@ const myAdvertiser = require('./app/routes/become-advertiser')(app);
     
 /* Requisições telas: Anunciar*/
 const environment = require('./app/routes/register-space/type-of-environment')(app);
+const adaptableCategories = require('./app/routes/register-space/categories/adaptables/adaptables-categories')(app);
 const addRoom = require('./app/routes/register-space/add-room')(app);
 const officingFeatures = require('./app/routes/register-space/officing-features')(app);
 const apresentation = require('./app/routes/register-space/apresentation')(app);
