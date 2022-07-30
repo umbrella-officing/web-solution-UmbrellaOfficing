@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/my-account/personal-date.css">
+    <link rel="stylesheet" href="style/my-account/edit-ad.css">
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
 </head>
 
@@ -78,54 +78,49 @@
     <div id='box_black'></div>
 
     <main>
-        <section id="edit-ad_section1" class="container_margin_default">
+        <section id="edit-ad_section" class="container_margin_default">
             <div class="default_margin">
                 <nav>
-                    <button>
-                        <i class="fa-solid fa-circle-chevron-left"></i>
+                    <button id="come_back">
+                        <i class="fa-solid fa-circle-chevron-left chevron_left"></i>
                         <p>Voltar</p>
                     </button>
                     <ul>
-                        <li class="option">
-                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
-                                Classificação</a>
-                        </li>
                         <li class="option_active">
-                            <a href="#">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                Informações pessoais</a>
+                            Classificação
                         </li>
                         <li class="option">
-                            <a href="/reservas"><i class="fa-solid fa-calendar-check reserve"></i>
-                                Localização</a>
+                            Informações pessoais
                         </li>
                         <li class="option">
-                            <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
-                                Salas</a>
+                            Localização
+                        </li>
+                        <li class="option">
+                            Salas
                         </li>
                     </ul>
                 </nav>
 
                 <div>
-                    <h1>Escitório Lape</h1>
+                    <h1>Escritório Lape</h1>
 
                     <form action="/edit-ad" method="post">
                         <div>
                             <div>
                                 <label for="environment_type">Tipo do ambiente</label>
-                                <input type="text" name="environment_type" id="environment_type"/>
+                                <input type="text" name="environment_type" id="environment_type" />
                                 <div class="dropDown">
                                     <div class="listDropDown">
-                                        <div class="item" id="item-1" onMouseDown="category(1)">Feminino</div>
-                                        <div class="item" id="item-2" onMouseDown="category(2)">Masculino</div>
+                                        <div class="item" id="item-1" onMouseDown="category(1)">Adaptável</div>
+                                        <div class="item" id="item-2" onMouseDown="category(2)">Usual</div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="personal-date_section1_form-colum2">
+
+                            <div class="edit-ad_section_form-colum2">
                                 <div>
                                     <label for="category">Categoria</label>
-                                    <input type="text" name="environment_type" id="environment_type"/>
+                                    <input type="text" name="category" id="category" />
                                     <div class="dropDown">
                                         <div class="listDropDown">
                                             <div class="item" id="item-1" onMouseDown="category(1)">Feminino</div>
@@ -134,7 +129,7 @@
                                 </div>
                                 <div>
                                     <label for="sub_category">Sub-categoria</label>
-                                    <input type="text" name="environment_type" id="environment_type"/>
+                                    <input type="text" name="environment_type" id="environment_type" />
                                     <div class="dropDown">
                                         <div class="listDropDown">
                                             <div class="item" id="item-1" onMouseDown="category(1)">Feminino</div>
@@ -142,17 +137,20 @@
                                     </div>
                                 </div>
                             </div>
-                    
-                            <div>
-                            <h2>Informações básicas</h2>
-                            <button id="edit_photos">Editar</button>
 
-                            <div class="photos">
-                                <div id="photo1"></div>
-                                <div id="photo2"></div>
-                                <div id="photo3"></div>
-                                <p>Mais...</p>
-                            </div>
+                            <div>
+                                <div class="edit-ad_section_flex">
+                                    <h2>Informações básicas</h2>
+                                    <button id="edit_photos">Editar</button>
+                                </div>
+
+                                <label for="photos">Fotos</label>
+                                <div class="photos">
+                                    <div id="photo1"></div>
+                                    <div id="photo2"></div>
+                                    <div id="photo3"></div>
+                                    <p>Mais...</p>
+                                </div>
                             </div>
 
 
@@ -161,10 +159,10 @@
                                 <input type="text" name="title" id="title" placeholder="Escritório Lape" />
                             </div>
 
-                            
+
                             <div>
                                 <label for="title">Descrição</label>
-                                <textarea type="text" name="description" id="description"></textarea>
+                                <textarea type="text" name="description" id="description" rows="8"></textarea>
                             </div>
 
                             <h2>Localização</h2>
@@ -172,7 +170,7 @@
                                 <label for="cep">CEP</label>
                                 <input type="text" name="cep_ad" id="cep_ad" placeholder="345.567.123-03" />
                             </div>
-                            <div class="personal-date_section1_form-colum2-dif1">
+                            <div class="edit-ad_section_form-colum2-dif1">
                                 <div>
                                     <label for="rua">Rua</label>
                                     <input type="text" name="rua_ad" id="rua_ad" placeholder="Rua Tomé de Souza" />
@@ -182,7 +180,7 @@
                                     <input type="text" name="number_ad" id="number_ad" placeholder="569" />
                                 </div>
                             </div>
-                            <div class="personal-date_section1_form-colum2">
+                            <div class="edit-ad_section_form-colum2">
                                 <div>
                                     <label for="bairro">Bairro</label>
                                     <input type="text" name="bairro_ad" id="bairro-ad" placeholder="Aldeia da Serra" />
@@ -194,15 +192,6 @@
                                 </div>
                             </div>
 
-                            <h2>Informações para login</h2>
-                            <div>
-                                <label for="email">Email</label>
-                                <input type="email" name="email" id="email" placeholder="alineribeiro@gmail.com" />
-                            </div>
-                            <div>
-                                <label for="password">Senha</label>
-                                <input type="password" name="password" id="password" />
-                            </div>
                             <button type="submit" id="edit_ad">Editar informações</button>
                     </form>
                 </div>
