@@ -102,12 +102,9 @@ article{
     align-items: center;
     top: 0;
     left: 0;
-
-}
-
-#hint-corporate{
     display: none;
 }
+
 
 article > div{
     width: 541px;
