@@ -1,7 +1,7 @@
 const openInputsearchCoworkingSpaces = ()=> {
 
     const header = document.querySelector('#header')
-    const search = document.querySelector('.container_search')
+    const search = document.querySelector('.container_search_input')
     const search_txt = document.querySelector('#search_txt')
     const container_informations_find_coworking = document.querySelector('#container_informations_find_coworking')
     const box_black = document.querySelector('#box_black')
@@ -74,6 +74,41 @@ const openMenuHamburguer = () =>{
         }
     })
     
+    popUp_login_signUp()
+}
+
+const popUp_login_signUp = () => {
+
+    const optionsMenu = document.querySelectorAll('.popUp-login-signUp')
+    const containerPopUp = document.querySelector('#container_popUp_login-signUp')
+    const AllPopUp = document.querySelectorAll(".popUp")
+
+    optionsMenu.forEach(option=>option.addEventListener('click',openPopUp))
+
+    function openPopUp (){
+        containerPopUp.style.display = 'flex'
+        if(this == optionsMenu[0]){
+            AllPopUp[0].classList.add('popUpChecked')
+        }
+
+        else{
+            AllPopUp[1].classList.add('popUpChecked')
+        }
+
+        closePopUP()
+    }
+
+    function closePopUP() {
+       containerPopUp.addEventListener('click',e=>{
+
+        if(e.target.classList == 'close_popup' || e.target == containerPopUp){
+        containerPopUp.style.display = 'none'
+        AllPopUp.forEach(popUp => popUp.classList.remove('popUpChecked'))
+        }
+
+       })
+    }
+
 }
 
 openMenuHamburguer()

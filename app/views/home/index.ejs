@@ -8,6 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/home/home.css">
 </head>
@@ -15,12 +21,12 @@
     <header id="header" class="container_margin_default">
         <div class="default_margin">
             <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
-            <div>
+            <div id="container_search">
                 <ul id="type_office">
                     <li class="option_office checked">Espaço adaptado</li>
                     <li class="option_office">Espaço corporativo</li>
                 </ul>
-                    <div class="container_search">
+                    <div class="container_search_input">
                         <span id="search_txt">Busque locais para trabalho</span>
                         <div id='container_informations_find_coworking'>
                             <input id="localization" type="text" placeholder="Localização:">
@@ -47,26 +53,99 @@
                     <div>
                         <nav>
                             <ul>
-                                <li>
+                                <li class="popUp-login-signUp">
                                     <img src="images/default/my-perfil.png" alt="meu perfil">
-                                    My profile
+                                    Login
                                 </li>
-                                <li>
-                                    <img src="images/default/favorite.png" alt="favoritos">
+                                <li class="popUp-login-signUp">
+                                    <img src="images/default/sign_up.png" alt="favoritos">
+                                    Cadastre-se
+                                </li>
+                                <li class="popUp-login-signUp">
+                                    <img src="images/default/favorite.png" alt="suporte">
                                     Favoritos
-                                </li>
-                                <li>
-                                    <img src="images/default/question.png" alt="suporte">
-                                    Help & Support
                                 </li>
                             </ul>
                         </nav>
                     </div>
                     <div>
-                        <img src="images/default/log-out.png" alt="sair da conta">
-                        Logout
+                        <img src="images/default/question.png" alt="sair da conta">
+                        Help & Support
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id="container_popUp_login-signUp">
+            <div class="popUp">
+                <img class="close_popup" src="images/default/close_icon.svg" alt="close">
+                <h2>Umbrella Officing</h2>
+                <h3>Seja bem-vindo</h3>
+                <div>
+                    <span>Faça seu login para continuar</span>
+                    <form>       
+                        <label for="cpf-email">
+                            CPF ou E-mail :
+                            <input type="text" id="cpf-email">
+                        </label>
+                        
+                        <label for="password-login">
+                            Senha:
+                            <input type="password" id="password-login">
+                        </label>
+
+                        <div>
+                            <a href="#">Esqueceu a senha?</a>
+                        </div>
+                        
+                        <button type="submit">LOGIN</button>
+                    </form>
+                    <div id="alternatives">
+                        <div><span>OR</span></div>
+                        <div>
+                            <span>Faça login com suas Redes Sociais</span>
+                            <img src="images/default/icon-google.png" alt="ícone do google">
+                            <img src="images/default/icon-facebok.svg" alt="ícone do facebbok">
+                            <img src="images/default/icon-apple.png" alt="ícone do facebbok">
+                            <span>Ainda não possui conta? <a href="#">Cadastre-se</a></span>
+                        </div>
+                    </div>
+            </div>     
+            </div>
+            <div class="popUp">
+                <img class="close_popup" src="images/default/close_icon.svg" alt="close">
+                <h2>Umbrella Officing</h2>
+                <h3>Seja bem-vindo</h3>
+                <div>
+                    <span>Cadastre-se e faça parte da nossa comunidade</span>
+                    <form>
+                        <label for="name">
+                            Nome:
+                            <input type="text" id="name">
+                        </label>
+
+                        <label for="middlename">
+                            Sobrenome:
+                            <input type="text" id="middlename">
+                        </label>
+
+                        <label for="cpf">
+                            CPF:
+                            <input type="number" id="cpf">
+                        </label>
+
+                        <label for="birth_date">
+                            Data de nascimento
+                            <input type="date" id="birth_date">
+                        </label>
+                        
+                        <label for="phone">
+                            Telefone:
+                            <input type="number" id="phone">
+                        </label>
+
+                        <button type="submit">CADASTRAR</button>
+                    </form>
+            </div>        
             </div>
         </div>
     </header>
@@ -103,32 +182,32 @@
                 <h3>Por que escolher o nosso serviço?</h3>
                 <ul>
                     <li>
-                        <img src="images/home/user.svg" alt="usuário">
+                        <img id="geolocation" src="images/home/geolocation.svg" alt="Geolocalização">
                         <h4>Geolocalização</h4>
                         <p>Trabalhe em várias localidades e pontos de referência. Em outras palavras... onde você quiser!</p>
                     </li>
                     <li>
-                        <img src="images/home/user.svg" alt="usuário">
-                        <h4>Custo-benefício</h4>
-                        <p>Reduza as despesas de casa e os custos de transporte que você já conhece.</p>
+                        <img src="images/home/cost-benefit.png" alt="Custo benefício">
+                        <h4>Custo benefício</h4>
+                        <p>Reduza as despesas de casa e os custos de transporte que você já conhece</p>
                     </li>
                     <li>
-                        <img src="images/home/user.svg" alt="usuário">
+                        <img src="images/home/networking.png" alt="rede de contato(networking)">
                         <h4>Networking</h4>
-                        <p>Conheça profissionais que pensem como você e agreguem valor à sua vida profissional.</p>
+                        <p>Conheça profissionais que pensem como você e agreguem valor à sua vida profissional</p>
                     </li>
                     <li>
-                        <img src="images/home/user.svg" alt="usuário">
+                        <img src="images/home/income.png" alt="renda">
                         <h4>Renda</h4>
                         <p>Anuncie um espaço seu que pode ser anunciado e ganhe dinheiro com isso. Simples!</p>
                     </li>
                     <li>
-                        <img src="images/home/user.svg" alt="usuário">
+                        <img src="images/home/flexibility.png" alt="flexibilidade">
                         <h4>Flexibilidade</h4>
-                        <p>Encontre uma infinidade de espaços bem estruturados, sendo eles adaptados ou corporativos</p>
+                        <p>Escolha dentre várias opções que vão desde espaços privativos a salas de reunião.</p>
                     </li>
                     <li>
-                        <img src="images/home/user.svg" alt="usuário">
+                        <img src="images/home/no-bureaucracy.svg" alt="sem burocracia">
                         <h4>Sem burocracia</h4>
                         <p>Se livre da papelada e usufrua de um serviço que vai além da sua demanda de necessidade</p>
                     </li>
@@ -142,56 +221,154 @@
                 <img src="images/home/community.png" alt="comunidade de anfitriões">
                 <div>
                     <h3>Excelência</h3>
-                    <p>A nossa comunidade de anunciantes garante a você as melhores reservas de espaços.</p>
-                    <a href="#"><button>Reserve já</button></a>
+                    <p>A nossa comunidade de proprietários garante a você as
+                    melhores reservas de espaços</p>
+                       <a href="#"><button>Reserve já</button></a>
                 </div>
             </div>
         </section>
 
         <section id='home_section4' class="container_margin_default">
             <div class="default_margin">
-                <h2>Mensagens da nossa comunidade <img src="images/home/emoji-smiling.svg" alt="emoji sorrindo"></h2>
-                <div id="home_section4_background"></div>
-                <div id="home_section4_reports">
-                    <h3>Andrea Filho</h3>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit."</p>
+                <h2>Mensagens <br>da nossa comunidade <img src="images/home/emoji.svg" alt="emoji"></h2>
+                <div id="home_section4_padding">
+                    <div id="home_section4_background"></div>
+                    <ul class="reports">
+                        <li>
+                            <p>"Há anos com um quarto de hóspedes totalmente abandonado.
+                                A solução de anunciá-lo na plataforma realmente abriu meus olhos"</p>
+                            <h3>Andrea Filho <span>Proprietária desde 2021</span></h3>
+                        </li>
+                        <li>
+                            <p>"Há anos com um quarto de hóspedes totalmente abandonado.
+                                A solução de anunciá-lo na plataforma realmente abriu meus olhos"</p>
+                            <h3>Andrea Filho <span>Proprietária desde 2021</span></h3>
+                        </li>
+                        <li>
+                            <p>"Há anos com um quarto de hóspedes totalmente abandonado.
+                                A solução de anunciá-lo na plataforma realmente abriu meus olhos"</p>
+                            <h3>Andrea Filho <span>Proprietária desde 2021</span></h3>
+                        </li>
+                        <li>
+                            <p>"Há anos com um quarto de hóspedes totalmente abandonado.
+                                A solução de anunciá-lo na plataforma realmente abriu meus olhos"</p>
+                            <h3>Andrea Filho <span>Proprietária desde 2021</span></h3>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id='home_section5' class="container_margin_default">
+        <section id="home_section5" class="container_margin_default">
             <div class="default_margin">
                 <h2>Alguns locais para te inspirar:</h2>
-
-                <ul>
+                <ul class="slider">
                     <li>
-                        <img src="images/home/kitnets_agua_branca.svg" alt="coworking em Água Branca - SC">
                         <div>
-                            <h4>Água Branca - SC</h4>
-                            Escritório Privado - Kitnets
+                            <img src="images/home/kitnets_agua_branca.svg" alt="coworking em Água Branca - SC">
+                            <div class="description_coworking">
+                                <h4>Água Branca - SC</h4>
+                                Escritório Privado - Kitnets
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <img src="images/home/coworking-sao-carlos-sp.svg" alt="coworking em São Carlos - SP">
                         <div>
-                            <h4>São Carlos - SP</h4>
-                            Escritório Privado - Casa Comum
+                            <img src="images/home/coworking-sao-carlos-sp.svg" alt="coworking em São Carlos - SP">
+                            <div class="description_coworking">
+                                <h4>São Carlos - SP</h4>
+                                Escritório Privado - Casa Comum
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <img src="images/home/coworking-recife-pe.svg" alt="coworking em Maria Anunciação - MG">
                         <div>
-                            <h4>Maria Anunciação - MG</h4>
-                            Escritório Privado - Apartamento
+                            <img src="images/home/coworking-recife-pe.svg" alt="coworking em Maria Anunciação - MG">
+                            <div class="description_coworking">
+                                <h4>Maria Anunciação - MG</h4>
+                                Escritório Privado - Apartamento
+                            </div>
                         </div>
                     </li>
                     <li>
-                        <img src="images/home/coworking-alphaville-sp.svg" alt="coworking em Maria Anunciação - MG">
                         <div>
-                            <h4>Maria Anunciação - MG</h4>
-                            Escritório Privado - Apartamento
+                            <img src="images/home/coworking-alphaville-sp.svg" alt="coworking em Maria Anunciação - MG">
+                            <div class="description_coworking">
+                                <h4>Maria Anunciação - MG</h4>
+                                Escritório Privado - Apartamento
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/home/kitnets_agua_branca.svg" alt="coworking em Água Branca - SC">
+                            <div class="description_coworking">
+                                <h4>Água Branca - SC</h4>
+                                Escritório Privado - Kitnets
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/home/coworking-sao-carlos-sp.svg" alt="coworking em São Carlos - SP">
+                            <div class="description_coworking">
+                                <h4>São Carlos - SP</h4>
+                                Escritório Privado - Casa Comum
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/home/coworking-recife-pe.svg" alt="coworking em Maria Anunciação - MG">
+                            <div class="description_coworking">
+                                <h4>Maria Anunciação - MG</h4>
+                                Escritório Privado - Apartamento
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/home/coworking-alphaville-sp.svg" alt="coworking em Maria Anunciação - MG">
+                            <div class="description_coworking">
+                                <h4>Maria Anunciação - MG</h4>
+                                Escritório Privado - Apartamento
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/home/kitnets_agua_branca.svg" alt="coworking em Água Branca - SC">
+                            <div class="description_coworking">
+                                <h4>Água Branca - SC</h4>
+                                Escritório Privado - Kitnets
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/home/coworking-sao-carlos-sp.svg" alt="coworking em São Carlos - SP">
+                            <div class="description_coworking">
+                                <h4>São Carlos - SP</h4>
+                                Escritório Privado - Casa Comum
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/home/coworking-recife-pe.svg" alt="coworking em Maria Anunciação - MG">
+                            <div class="description_coworking">
+                                <h4>Maria Anunciação - MG</h4>
+                                Escritório Privado - Apartamento
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/home/coworking-alphaville-sp.svg" alt="coworking em Maria Anunciação - MG">
+                            <div class="description_coworking">
+                                <h4>Maria Anunciação - MG</h4>
+                                Escritório Privado - Apartamento
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -205,9 +382,9 @@
                 <img src="images/home/host.png" alt="anfitrião">
 
                 <div>
-                    <h3>Esclareça suas dúvidas conosco ou com outros proprietários</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. </p>
-                   <a href="#"><button>Como funciona?</button></a>
+                    <h3>Esclareça suas dúvidas <br>conosco ou com outros anfitriões</h3>
+                    <p>Tire instantaneamente suas dúvidas através do nosso canal de atendimento no WhatsApp</p>
+                   <a href="#"><button>Entrar em contato</button></a>
                 </div>
 
             </div>
@@ -251,12 +428,11 @@
             </ul>
 
             </div>
-            
             <div id="bottom_footer">
                 <div>
                     <div id="network_div"> 
-                        <img src="images/default/icon_intagram.svg" alt="ícone do instagram">
-                        <img src="images/default/icon_facebook.svg" alt="ícone do facebook">
+                        <img src="images/default/icon_intagram_footer.svg" alt="ícone do instagram">
+                        <img src="images/default/icon_facebook_footer.svg" alt="ícone do facebook">
                     </div>
 
                     <div id="scroll_up">
@@ -269,8 +445,12 @@
         
     </footer>
 
-
-    <script src="script/default/default.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="script/default/header/header.js"></script>
+    <script src="script/home/reports.js"></script>
+    <script src="script/home/coworking_places_inspire.js"></script>
 </body>
 </html>
