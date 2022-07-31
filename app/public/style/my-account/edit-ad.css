@@ -306,3 +306,19 @@
     outline: none;
     width: 100px;
 }
+
+#edit_ad {
+    background-color: var(--scale-2-purple);
+    border: none;
+    width: 226px;
+    height: 36px;
+    color: var(--white);
+    border-radius: 40px;
+}
+
+#edit_ad {
+    font-size: 14px;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    margin: 40px 0 0 558px;
+}
