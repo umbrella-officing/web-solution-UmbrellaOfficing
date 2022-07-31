@@ -290,3 +290,603 @@ section > div {
     margin-top: -30px;
 }
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/default/default.css">
+    <link rel="stylesheet" href="style/my-account/edit-ad.css">
+    <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header" class="container_margin_default">
+        <div class="default_margin">
+            <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
+            <div>
+                <ul id="type_office">
+                    <li class="option_office checked">Espaço adaptado</li>
+                    <li class="option_office">Espaço corporativo</li>
+                </ul>
+                <div class="container_search">
+                    <span id="search_txt">Busque locais para trabalho</span>
+                    <div id='container_informations_find_coworking'>
+                        <input id="localization" type="text" placeholder="Localização:">
+                        <input type="date" id="check_in">
+                    </div>
+                    <a href="#">
+                        <div>
+                            <img src="images/default/search.svg" alt="pesquisa">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div id="menu">
+                <div id='menu_sign-in-up'>
+                    <img src="images/default/user.svg" alt="usuário">
+                    <img src="images/default/menu_hamburguer.svg" alt="menu">
+                </div>
+                <div class="menu_open">
+                    <div>
+                        <img src="images/default/perfil.svg" alt="foto de perfil">
+                        <h3>Luana Almeida <span>Coworker</span></h3>
+                    </div>
+                    <div>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <img src="images/default/my-perfil.png" alt="meu perfil">
+                                    My profile
+                                </li>
+                                <li>
+                                    <img src="images/default/favorite.png" alt="favoritos">
+                                    Favoritos
+                                </li>
+                                <li>
+                                    <img src="images/default/question.png" alt="suporte">
+                                    Help & Support
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        <img src="images/default/log-out.png" alt="sair da conta">
+                        Logout
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id='box_black'></div>
+
+    <main>
+        <section id="edit-ad_section" class="container_margin_default">
+            <div class="default_margin">
+                <nav>
+                    <button id="come_back">
+                        <i class="fa-solid fa-circle-chevron-left chevron_left"></i>
+                        <p>Voltar</p>
+                    </button>
+                    <ul>
+                        <li class="option_active">
+                            Classificação
+                        </li>
+                        <li class="option">
+                            Informações pessoais
+                        </li>
+                        <li class="option">
+                            Localização
+                        </li>
+                        <li class="option">
+                            Salas
+                        </li>
+                    </ul>
+                </nav>
+
+                <div>
+                    <h1>Escritório Lape</h1>
+
+                    <form action="/edit-ad" method="post">
+                        <div class="edit-ad_section_form1">
+                            <div>
+                                <label for="environment_type">Tipo do ambiente</label>
+                                <input type="text" name="environment_type" id="environment_type" />
+                                <div class="dropDown">
+                                    <div class="listDropDown">
+                                        <div class="item" id="item-1" onMouseDown="category(1)">Adaptável</div>
+                                        <div class="item" id="item-2" onMouseDown="category(2)">Usual</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="edit-ad_section_form1-colum2">
+                                <div>
+                                    <label for="category">Categoria</label>
+                                    <input type="text" name="category" id="category" />
+                                    <div class="dropDown">
+                                        <div class="listDropDown">
+                                            <div class="item" id="item-1" onMouseDown="category(1)">Feminino</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="sub_category">Sub-categoria</label>
+                                    <input type="text" name="sub_category" id="sub_category" />
+                                    <div class="dropDown">
+                                        <div class="listDropDown">
+                                            <div class="item" id="item-1" onMouseDown="category(1)">Feminino</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="edit-ad_section_flex">
+                                    <h2>Informações básicas</h2>
+                                    <button id="edit_photos">Editar</button>
+                                </div>
+
+                                <label for="photos">Fotos</label>
+                                <div class="photos">
+                                    <div id="photo1"></div>
+                                    <div id="photo2"></div>
+                                    <div id="photo3"></div>
+                                    <p>Mais...</p>
+                                </div>
+                            </div>
+
+
+                            <div>
+                                <label for="title">Título</label>
+                                <input type="text" name="title" id="title" placeholder="Escritório Lape" />
+                            </div>
+
+
+                            <div>
+                                <label for="title">Descrição</label>
+                                <textarea type="text" name="description" id="description" rows="8"></textarea>
+                            </div>
+
+                            <h2>Localização</h2>
+                            <div>
+                                <label for="cep">CEP</label>
+                                <input type="text" name="cep_ad" id="cep_ad" placeholder="345.567.123-03" />
+                            </div>
+                            <div class="edit-ad_section_form1-colum2-dif1">
+                                <div>
+                                    <label for="rua">Rua</label>
+                                    <input type="text" name="rua_ad" id="rua_ad" placeholder="Rua Tomé de Souza" />
+                                </div>
+                                <div>
+                                    <label for="number">Nº</label>
+                                    <input type="text" name="number_ad" id="number_ad" placeholder="569" />
+                                </div>
+                            </div>
+                            <div class="edit-ad_section_form1-colum2">
+                                <div>
+                                    <label for="bairro">Bairro</label>
+                                    <input type="text" name="bairro_ad" id="bairro-ad" placeholder="Aldeia da Serra" />
+                                </div>
+                                <div>
+                                    <label for="cidade">Cidade | Estado</label>
+                                    <input type="text" name="cidade_estado_ad" id="cidade_estado_ad"
+                                        placeholder="Barueri, SP" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <input type="text" name="room" id="room" placeholder="Sala 01" />
+                            <div class="dropDown">
+                                <div class="listDropDown">
+                                    <div class="item" id="item-1" onMouseDown="category(1)">Sala 02</div>
+                                    <div class="item" id="item-2" onMouseDown="category(2)">Sala 03</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="edit-ad_section_form2">
+                            <h2>Preço e características gerais</h2>
+
+                                <div class="edit-ad_section_form2_flex">
+                                    <div>
+                                        <input type="price" name="price" id="price" />
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <label for="size_room">Tamanho da sala</label>
+                                            <input type="size_room" name="size_room" id="size_room" />
+                                        </div>
+                                        <a href="#" onclick="decrementaValor(0); return false;">-</a>
+                                        <input name="resultado" id="resultado" value="0">
+                                        <a href="#" onclick="incrementaValor(10);return false;">+</a>
+                                    </div>
+                                </div>
+
+
+                                    <!-- <div>
+                                        <div>
+                                            <label for="access_to_bathrooms">Acesso à banheiros</label>
+                                            <input type="access_to_bathrooms" name="access_to_bathrooms"
+                                                id="access_to_bathrooms" />
+                                        </div>
+                                        <a href="#" onclick="decrementaValor(0); return false;">-</a>
+                                        <input name="resultado" id="resultado" value="0">
+                                        <a href="#" onclick="incrementaValor(10);return false;">+</a>
+                                    </div> -->
+
+                                    <!-- <h2>Recursos</h2>
+                                        <div>
+                                            <div>
+                                                <label for="wifi">Wifi (Mbps)</label>
+                                                <input type="access_to_bathrooms" name="access_to_bathrooms"
+                                                    id="access_to_bathrooms" />
+                                            </div>
+
+                                        </div>
+
+                                        <div>
+                                            <label for="sockets">Tomadas</label>
+                                            <a href="#" onclick="decrementaValor(0); return false;">-</a>
+                                            <input name="resultado" id="resultado" value="0">
+                                            <a href="#" onclick="incrementaValor(10);return false;">+</a>
+                                        </div>
+
+                                        <div>
+                                            <label for="tables">Mesas</label>
+                                            <a href="#" onclick="decrementaValor(0); return false;">-</a>
+                                            <input name="resultado" id="resultado" value="0">
+                                            <a href="#" onclick="incrementaValor(10);return false;">+</a>
+                                        </div>
+
+                                        <div>
+                                            <label for="windows">Janelas</label>
+                                            <a href="#" onclick="decrementaValor(0); return false;">-</a>
+                                            <input name="resultado" id="resultado" value="0">
+                                            <a href="#" onclick="incrementaValor(10);return false;">+</a>
+                                        </div>
+
+                                        
+                                        <div>
+                                            <label for="computers">Computadores</label>
+                                            <a href="#" onclick="decrementaValor(0); return false;">-</a>
+                                            <input name="resultado" id="resultado" value="0">
+                                            <a href="#" onclick="incrementaValor(10);return false;">+</a>
+                                        </div>
+
+                                        <div>
+                                            <label for="air_conditioning">Ar-condicionado</label>
+                                            <a href="#" onclick="decrementaValor(0); return false;">-</a>
+                                            <input name="resultado" id="resultado" value="0">
+                                            <a href="#" onclick="incrementaValor(10);return false;">+</a>
+                                        </div>
+
+                                        <div>
+                                            <label for="seats">Assentos</label>
+                                            <a href="#" onclick="decrementaValor(0); return false;">-</a>
+                                            <input name="resultado" id="resultado" value="0">
+                                            <a href="#" onclick="incrementaValor(10);return false;">+</a>
+                                        </div>
+                                    </div> -->
+
+                            </div>
+                        </div>
+
+                        <button type="submit" id="edit_ad">Editar informações</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container_margin_default">
+
+        <div class="default_margin">
+            <div id="margin2">
+                <div id="logo">
+                    <img src="images/default/logo_footer.svg" alt="logo">
+                    <h4>Escritorizando <span><br>espaços </span></h4>
+                    <span>Umbrella Officing&copy 2022</span>
+                </div>
+
+                <ul>
+                    <h5>Junte-se a nós</h5>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Cadastre-se</a></li>
+                    <li><a href="#">Sua conta</a></li>
+                    <li><a href="#">Faça sua reserva</a></li>
+                    <li><a href="#">Anuncie seu espaço</a></li>
+                </ul>
+
+                <ul>
+                    <h5>Atendimento</h5>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Fórum</a></li>
+                    <li><a href="#">Central de ajuda</a></li>
+                </ul>
+
+                <ul>
+                    <h5>Sobre nós</h5>
+                    <li><a href="#">Quem somos?</a></li>
+                    <li><a href="#">Missão, valores e visão</a></li>
+                    <li><a href="#">Por que Umbrella Officing</a></li>
+                    <li><a href="#">Desenvolvedores</a></li>
+                </ul>
+
+            </div>
+
+            <div id="bottom_footer">
+                <div>
+                    <div id="network_div">
+                        <img src="images/default/icon_intagram.svg" alt="ícone do instagram">
+                        <img src="images/default/icon_facebook.svg" alt="ícone do facebook">
+                    </div>
+
+                    <div id="scroll_up">
+                        <img src="images/default/arrow_up.svg" alt="ícone de flecha">
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <script src="script/default/default.js"></script>
+    <script src="script/my-account/personal-date.js"></script>
+</body>
+
+</html>
+
+
+.container_search{
+    display: none;
+}
+
+#edit-ad_section>div {
+    padding-top: 181px;
+    justify-content: space-between;
+    color: var(--text-1-black);
+}
+
+
+#edit-ad_section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 109.4em;
+    width: calc(50% - 290px);
+}
+
+
+/*Menu lateral*/
+#come_back{
+    display: flex;
+    width: 64px;
+    padding: 0;
+    align-items: center;
+    background-color: white;
+    border: none;
+}
+
+#come_back{
+    font-family: var(--font-primary);
+    font-size: 14px;
+    color: var(--scale-13-blue);
+}
+
+.chevron_left {
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+#edit-ad_section>div nav ul {
+    list-style: none;
+}
+
+#edit-ad_section>div nav ul li {
+    display: flex;
+    height: 40px;
+    margin: 25px 28px;
+    align-items: center;
+}
+
+#edit-ad_section>div nav ul li {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-1-black);
+}
+
+/* .option_active a {
+    border-left: 3px solid #5B61C4;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--scale-13-blue);
+} */
+
+/*Conteúdo*/
+#edit-ad_section>div>nav~div {
+    width: 784px;
+    margin-bottom: 80px;
+}
+
+#edit-ad_section>div>div h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.edit-ad_section_form1 h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+
+.edit-ad_section_form1 label {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 10px 0;
+}
+
+
+.edit-ad_section_form1 label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.edit-ad_section_form1 input, textarea {
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    width: -webkit-fill-available;
+    outline: none;
+}
+
+.edit-ad_section input {
+    font-family: var(--font-primary);
+    font-size: 14px;
+}
+
+.edit-ad_section_form1-colum2 {
+    display: grid;
+    grid-template-columns: 352px 352px;
+    grid-column-gap: 80px;
+}
+
+.listDropDown {
+    width: 352px;
+    height: 80px;
+    border-radius: 5px;
+    /* border: 1px solid var(--gray-border); */
+    box-shadow: 0 0 8px 0 rgb(128 128 128 / 20%);
+    box-sizing: border-box;
+    margin-top: 10px;
+    overflow: auto;
+    display: none;
+    transform: translate(0px, -10px);
+}
+
+/* ::-webkit-scrollbar {
+    background-color: var(--text-1-black);
+    width: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+} */
+
+.listDropDown > .item {
+    padding: 10px;
+    box-sizing: border-box;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.listDropDown > .item:hover{
+    padding-left: 12px;
+    transition: .3s;
+}
+
+.edit-ad_section_flex, .photos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#edit_photos {
+    background-color: var(--scale-2-purple);
+    border: none;
+    width: 112px;
+    height: 24px;
+    color: var(--white);
+    border-radius: 40px;
+    margin-top: 40px;
+}
+
+#edit_photos {
+    font-size: 14px;
+    font-family: var(--font-primary);
+    font-weight: 500;
+}
+
+.photos{
+    margin-top: 30px;
+}
+
+#photo1, #photo2, #photo3 {
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    padding: 10px;
+    width: 162px;
+    height: 131px;
+}
+
+.photos p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.edit-ad_section_form1-colum2-dif1 {
+    display: grid;
+    grid-template-columns: 452px 252px;
+    grid-column-gap: 80px;
+}
+
+#room {
+    width: 127px;
+    height: 30px;
+    text-align: center;
+    margin-top: 30px;
+    border: none;
+}
+
+#room::placeholder {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--scale-13-blue);
+}
+
+.edit-ad_section_form2 {
+    border: 1px solid var(--gray-border);
+    border-radius: 0 0 10px 10px;
+    padding: 30px 20px 30px 20px;
+}
+
+.edit-ad_section_form2 h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.edit-ad_section_form2_flex {
+    /* display: grid;
+    grid-template-columns: 200px 20;
+    grid-column-gap: 80px; */
+} 
+
+
+
+#edit_ad {
+    background-color: var(--scale-2-purple);
+    border: none;
+    width: 226px;
+    height: 36px;
+    color: var(--white);
+    border-radius: 40px;
+}
+
+#edit_ad {
+    font-size: 14px;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    margin: 40px 0 0 558px;
+}
