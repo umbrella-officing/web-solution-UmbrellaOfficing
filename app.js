@@ -13,6 +13,7 @@ const myFavorits = require('./app/routes/my-account/favorites')(app);
 const myAds = require('./app/routes/my-account/my-ads')(app);
 const myCalendar = require('./app/routes/my-account/calendar')(app);
 const editAd = require('./app/routes/my-account/edit-ad')(app);
+const bookingSolicitations = require('./app/routes/my-account/booking-solicitations')(app);
 
 /* Requisições tela: Torne-se um anunciante! */
 const myAdvertiser = require('./app/routes/become-advertiser')(app);
