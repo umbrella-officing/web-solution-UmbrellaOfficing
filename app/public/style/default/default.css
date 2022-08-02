@@ -22,6 +22,7 @@
     --scale-7-blue:#264082;
     --scale-8-blue:#010290;
     --scale-9-blue:#F6F5FA;
+    --scale-10-blue:#0008ea;
     --scale-10-wine: #A60014;
     --scale-11-blue: #7397E3;
     --scale-12-red: #D52F2F;
@@ -291,6 +292,10 @@ header > div {
 }
 
 .menu_open ul li, .menu_open > div:last-child{
+    cursor: pointer;
+}
+
+.menu_open ul li, .menu_open > div:last-child{
     font-size: 14.5px;
     font-weight: 400;
 }
@@ -486,7 +491,7 @@ header > div {
 }
 
 #alternatives > div:last-child span a{
-    color: var(--scale-9-blue);
+    color: var(--scale-10-blue);
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
