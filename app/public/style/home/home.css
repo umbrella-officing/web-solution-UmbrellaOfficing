@@ -124,7 +124,7 @@
 }
 
 #home_section3{
-    background:#b20fff;
+    background: var(--scale-4-purple);
     padding-bottom: 34px;
 }
 
@@ -169,9 +169,10 @@
     font-weight: 500;
     font-family: var(--font-primary);
     border-radius: 45px;
-    padding: 10px 45px;
-    background: rgb(49, 3, 109);
+    padding: 7px 45px;
+    background: var(--scale-2-purple);
     border: none;
+    font-size: 20px;
 }
 
 #home_section4{
