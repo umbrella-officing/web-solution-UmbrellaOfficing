@@ -1,0 +1,206 @@
+.container_search{
+    display: none;
+}
+
+#my-ads > div {
+    padding-top: 181px;
+    justify-content: space-between;
+    color: var(--text-1-black);
+}
+
+#my-ads::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(50% - 290px);
+    background-color: var(--scale-9-blue);
+}
+
+/*Menu lateral*/
+#my-account_navigation {
+    position: relative;
+    overflow: auto;
+}
+
+#my-account_navigation ul {
+    list-style: none;
+}
+
+#my-account_navigation ul li {
+    height: 40px;
+    margin: 25px 0;
+    align-items: center;
+}
+
+#my-account_navigation ul li a {
+    text-decoration: none
+}
+
+.profile,
+.wallet,
+.reserve,
+.ads,
+.calendar {
+    font-size: 26px;
+}
+
+
+.option_active a {
+    border-left: 3px solid #5B61C4;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--scale-13-blue);
+}
+
+.option a {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-1-black);
+}
+
+.ads{
+    margin: 0 10px 0 18px;
+}
+
+.profile,
+.wallet,
+.reserve,
+.calendar {
+    color: var(--gray-border);
+    margin: 0 10px 0 21px;
+}
+
+/*Conteúdo*/
+#actives_space, #inactives_space{
+    width: 784px;
+}
+
+#my-ads>div>div h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#my-ads_navigation ul {
+    display: flex;
+    margin: 30px 0 7px;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-1-black);
+}
+
+
+#my-ads_navigation ul a:focus{
+    font-weight: 900;
+    color: var(--scale-3-purple);
+    outline: none
+}
+
+#my-ads_navigation ul li{
+    font-size: 16px;
+    margin-right: 40px;
+}
+
+#inactives_space {
+    display: none;
+}
+
+#actives_space section, 
+#inactives_space section{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+#actives_space section > div, 
+#inactives_space section > div{
+    padding: 20px;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 5px 5px 5px 5px rgb(128 128 128 / 35%);
+    width: 100%;
+    height: 197px;
+    box-sizing: border-box;
+}
+
+#actives_space section > div h2, #inactives_space section > div h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#actives_space section > div p, #inactives_space section > div p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+#actives_space section > div h3, #inactives_space section > div h3{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.my-ads_space-div-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+    align-items: self-end;
+}
+
+.my-ads_space-div-flex h3{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 24px;
+} 
+
+.my-ads_space-div-flex > div button{
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 38px;
+}
+
+#view_officing {
+    background-color: var(--scale-1-blue);
+    margin-right: 10px;
+}
+
+#delete {
+    background-color: var(--scale-12-red);
+}
+
+#eyes {
+    background-color: var(--scale-1-blue);
+    margin-right: 10px;
+}
+
+#edit {
+    background-color: var(--scale-2-purple);
+    margin-right: 10px;
+}
+
+.eyes, .edit, .check, .trash{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+}
+
+
+#solicitation_res {
+    font-size: 13px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+}
+
+#solicitation_res {
+    background-color: var(--scale-2-purple);
+    border: none;
+    width: 198px;
+    height: 38px;
+    color: var(--white);
+    border-radius: 40px;
+}

@@ -95,6 +95,14 @@
                             <a href="/reservas"><i class="fa-solid fa-calendar-check reserve"></i>
                                 Minhas reservas</a>
                         </li>
+                        <li class="option">
+                            <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
+                                Meus anúncios</a>
+                        </li>
+                        <li class="option">
+                            <a href="/calendario"><i class="fa-solid fa-calendar-days calendar"></i>
+                                Calendário</a>
+                        </li>
                     </ul>
                 </nav>
 
@@ -115,10 +123,14 @@
                                 </div>
                                 <div>
                                     <label for="gender">Sexo</label>
-                                    <select id="gender" name="gender">
-                                        <option value="feminino">Feminino</option>
-                                        <option value="masculino">Masculino</option>
-                                    </select>
+                                    <input type="text" name="gender" id="gender" placeholder="Selecione"
+                                        onFocus="dropdown(0)" onBlur="dropdown(1)" />
+                                    <div class="dropDown">
+                                        <div class="listDropDown">
+                                            <div class="item" id="item-1" onMouseDown="category(1)">Feminino</div>
+                                            <div class="item" id="item-2" onMouseDown="category(2)">Masculino</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div>
@@ -247,9 +259,8 @@
             </div>
     </footer>
 
-
     <script src="script/default/default.js"></script>
-
+    <script src="script/my-account/personal-date.js"></script>
 </body>
 
 </html>

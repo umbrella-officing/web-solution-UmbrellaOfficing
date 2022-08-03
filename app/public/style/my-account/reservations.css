@@ -1,10 +1,10 @@
-#reservations_section1>div {
+#my-reservations_section1>div {
     padding-top: 181px;
     justify-content: space-between;
     color: var(--text-1-black);
 }
 
-#reservations_section1::before {
+#my-reservations_section1::before {
     content: "";
     position: absolute;
     top: 0;
@@ -14,74 +14,79 @@
     background-color: var(--scale-9-blue);
 }
 
-/*Menu lateral - lateral*/
-#reservations_section1>div nav {
+
+/*Menu lateral*/
+#my-reservations_section1>div nav {
     position: relative;
+    overflow: auto;
 }
 
-#reservations_section1>div nav ul {
+#my-reservations_section1>div nav ul {
     list-style: none;
 }
 
-#reservations_section1>div nav ul li {
+#my-reservations_section1>div nav ul li {
     display: flex;
-    height: 50px;
-    margin: 30px 0;
+    height: 40px;
+    margin: 25px 0;
     align-items: center;
 }
 
-#reservations_section1>div nav ul li a {
+#my-reservations_section1>div nav ul li a {
     text-decoration: none
 }
 
 .profile,
 .wallet,
-.reserve {
-    font-size: 30px;
+.reserve,
+.ads,
+.calendar {
+    font-size: 26px;
 }
 
 
 .option_active a {
     border-left: 3px solid #5B61C4;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 16px;
     font-weight: 600;
     color: var(--scale-13-blue);
 }
 
 .option a {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--text-1-black);
 }
 
-.reserve {
+.reserve{
     margin: 0 10px 0 18px;
 }
 
 .profile,
-.wallet {
+.wallet,
+.ads,
+.calendar {
     color: var(--gray-border);
     margin: 0 10px 0 21px;
 }
 
 /*Conteúdo*/
-#reservations_section1>div>nav~div {
+#my-reservations_section1>div>nav~div {
     width: 784px;
 }
 
-#reservations_section1>div>div h1 {
+#my-reservations_section1>div>div h1 {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-#reservations_section1-space {
+#my-reservations_section1-space {
     display: flex;
     margin-bottom: 40px;
 }
 
-#reservations_section1-space>div {
+#my-reservations_section1-space>div {
     padding: 20px;
     border-radius: 0px 10px 10px 0px;
     box-shadow: 5px 5px 5px 5px rgb(128 128 128 / 35%);
@@ -90,29 +95,29 @@
     box-sizing: border-box;
 }
 
-#reservations_section1-space>div p:nth-child(1) {
+#my-reservations_section1-space>div p:nth-child(1) {
     font-size: 12px;
     font-weight: 600;
     color: var(--scale-12-red);
     margin-left: 80%;
 }
 
-#reservations_section1-space>div h2 {
+#my-reservations_section1-space>div h2 {
     font-size: 18px;
     font-weight: bold;
-    margin: 0 0 5px;
+    margin: -5px 0 5px 0;
 }
 
-#reservations_section1-space>div p {
+#my-reservations_section1-space>div p {
     font-size: 14px;
     font-weight: 400;
-    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .reservations_section1-space-div-flex {
     display: flex;
     justify-content: space-between;
-    margin-top: 44px;
+    margin-top: 50px;
 }
 
 .reservations_section1-space-div-flex>div button {
@@ -136,4 +141,91 @@
 
 #cancel {
     background-color: var(--scale-12-red);
+}
+
+
+
+#home_section5{
+    overflow: hidden;
+}
+
+#home_section5 > div{
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 105px;
+}
+
+#home_section5 > div h2{
+    margin-bottom: 40px;
+}
+
+#home_section5 .slider{
+    list-style: none;
+    width:calc(107% - 2px);
+}
+
+.arrows{
+    position: absolute;
+    top: 148px;
+    z-index: 599;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.slider > button:first-child{
+    left: -40px;
+}
+
+.arrow-right{
+    right: calc(5% - 22px);
+}
+
+.slider .fa{
+    font-size: 30px;
+    color: #333;
+}
+
+.arrows:hover{
+    background: rgba(82, 82, 82, 0.2);
+    transition: .3s;
+}
+
+#home_section5 .slick-slide{
+    border-radius: 20px 20px 10px 10px;
+    padding-bottom: 16px;
+}
+
+#home_section5 .slick-dots{
+    list-style: none;
+    bottom: -40px;
+    max-width: 1160px;
+}
+
+.slider li > div{
+    width: 74%;
+    max-width: 231px;
+    min-width: 180px;
+}
+
+.slider li img {
+    width: 100%;
+}
+
+.description_coworking{
+    padding: 10px 10px 27px 10px;
+    font-size: 13.4px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 5px 5px 5px 0px rgb(128 128 128 / 35%);
+    width: 100%;
+    height: 95px;
+    box-sizing: border-box;
+}
+
+.description_coworking h4{
+    font-size: 1.1em;
+    margin:11px 0 7px 0;
 }

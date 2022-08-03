@@ -10,8 +10,8 @@
   "author": "Felipe Mendes Martins, Felipe Xavier Gomes, Julia Rodrigues Gomes, Eduardo Felinto Gonçalves, Natan Gonçalves Diniz",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.7",
-    "express": "^4.17.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
     "nodemon": "^2.0.19"
   }
 }

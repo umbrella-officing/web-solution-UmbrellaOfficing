@@ -22,6 +22,7 @@
     --scale-7-blue:#264082;
     --scale-8-blue:#010290;
     --scale-9-blue:#F6F5FA;
+    --scale-10-blue:#0008ea;
     --scale-10-wine: #A60014;
     --scale-11-blue: #7397E3;
     --scale-12-red: #D52F2F;
@@ -29,7 +30,7 @@
     --gradient:linear-gradient(180deg, #81A4F3, #D16CC1)
 }
 
-html, button, input, textarea{
+html, button, input{
     font-family: var(--font-primary);
 }
 
@@ -88,7 +89,7 @@ header > div {
     position: relative;
 }
 
-header > div > div{
+#container_search{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -133,7 +134,7 @@ header > div > div{
     transform: scaleX(1.5);
 }
 
-.container_search{
+.container_search_input{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -145,7 +146,7 @@ header > div > div{
     transition: 250ms ease;
 }
 
-.container_search.expanded{
+.container_search_input.expanded{
     width: 762px;
     position: absolute;
     transform: translateY(47px);
@@ -189,7 +190,7 @@ header > div > div{
     box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
 }
 
-.container_search > a > div {
+.container_search_input > a > div {
     display: flex;
     z-index: 99;
     padding: 9px 12px;
@@ -198,7 +199,7 @@ header > div > div{
     cursor: pointer;
 }
 
-header > div > div:nth-child(3){
+#menu{
     border-radius: 40px;
     background: var(--scale-2-purple);
     position: relative;
@@ -291,6 +292,10 @@ header > div > div:nth-child(3){
 }
 
 .menu_open ul li, .menu_open > div:last-child{
+    cursor: pointer;
+}
+
+.menu_open ul li, .menu_open > div:last-child{
     font-size: 14.5px;
     font-weight: 400;
 }
@@ -303,6 +308,193 @@ header > div > div:nth-child(3){
 .menu_open > div:last-child{
     display: flex;
     align-items: center;
+}
+
+#container_popUp_login-signUp{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+}
+
+.popUp{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
+    padding: 54px 0 20px 0;
+}
+
+@keyframes fadeIn{
+    from{
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.popUpChecked{
+    display: flex;
+    animation:fadeIn ease .27s;
+}
+
+#container_popUp_login-signUp > div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 50px;
+    width: 285px;
+}
+
+.close_popup{
+    position: absolute;
+    left: 25px;
+    top: 22px;
+    width: 17px;
+    cursor: pointer;
+}
+
+#container_popUp_login-signUp  h2{
+    font-weight: bold;
+}
+
+#container_popUp_login-signUp h3{
+    margin: 7px 0 18px 0;
+    font-weight: 500;
+}
+
+#container_popUp_login-signUp span{
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #555;
+}
+
+#container_popUp_login-signUp form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#container_popUp_login-signUp label{
+    margin: 15px 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    width: 100%;
+}
+
+#container_popUp_login-signUp input{
+    display: block;
+    border: none;
+    border-bottom: 1px solid #c4c4c4;
+    background: transparent;
+    outline-color: #5b61c4;
+    margin-top: 5px;
+    width: 100%;
+    font-size: 13px;
+    color: #000;
+}
+
+#container_popUp_login-signUp form > div{
+    width: 100%;
+    flex-basis: 25px;
+    text-align: right;
+}
+
+#container_popUp_login-signUp form > div a {
+    color: #666666;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#container_popUp_login-signUp a:active{
+    color: red !important;
+}
+
+#container_popUp_login-signUp form button{
+    margin: 15px auto 0 auto;
+    border-radius: 24px;
+    border: none;
+    width: 100%;
+    padding: 15px 5px;
+    background: var(--scale-2-purple);
+    color: var(--white);
+    font-size: 11.5px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+}
+
+#alternatives{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#alternatives > div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    flex-basis: 50px;
+}
+
+#alternatives > div:first-child span {
+    background: white;
+    margin: 0;
+    z-index: 99;
+    text-align: center;
+    width: 16%;
+    font-size: 11px;
+}
+
+#alternatives > div:first-child::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #c4c4c4;
+}
+
+#alternatives > div:last-child{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+}
+
+#alternatives > div:last-child img{
+    margin:16px 15px;
+}
+
+#alternatives > div:last-child span{
+    font-size: 13px;
+}
+
+#alternatives > div:last-child span a{
+    color: var(--scale-10-blue);
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #box_black{
@@ -380,8 +572,8 @@ footer a {
 
 #scroll_up img{
     padding: 8px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background: var(--scale-2-purple);
     border-radius: 10px;
 }
