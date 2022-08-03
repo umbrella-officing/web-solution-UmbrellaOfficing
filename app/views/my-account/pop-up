@@ -291,3 +291,416 @@ section > div {
 }
 
 
+<div id="booking-solicitations" class="container_margin_default">
+    <div class="default_margin">
+        <nav>
+            <a href="/meus-anuncios"><button id="come_back"> 
+                <i class="fa-solid fa-circle-chevron-left chevron_left"></i>
+                <p>Voltar</p>
+            </button></a>
+            <ul>
+                <a href="javascript:solicitations(1)" autofocus><li class="option_active">
+                    Confirmação pendente
+                </li></a>
+                <a href="javascript:solicitations(2)"><li>
+                    Confirmadas
+                </li></a>
+                <a href="javascript:solicitations(3)"><li>
+                    Canceladas
+                </li></a>
+                <a href="javascript:solicitations(4)"><li>
+                    Avaliação do cliente
+                </li></a>
+            </ul>
+        </nav>
+
+        <!-- <div>
+            <h1>Solicitações de reservas</h1>
+
+            <article id="pending-confirmation">
+                <section id="booking-solicitations_section">
+                    <ul>
+                        <li>Perfil</li>
+                        <li>Espaço</li>
+                        <li>Sala</li>
+                        <li>Dias</li>
+                        <li>Ações</li>
+                    </ul>
+
+                    <div class="booking-solicitations_section_column">
+                        <div>
+                            <img src="images/my-account/booking-solicitations/persona_larissa.png" alt="Usuário">
+                            <h2>Larissa Ferreira</h2>
+                        </div>
+                           
+                        <p>Escritório Lape</p>
+                        <p>Sala 02</p>
+                        <p>3 dias</p>
+                        
+                        <div>
+                            <button type="submit" id="calendar">
+                                <a href=""><i class="fa-solid fa-calendar calendar"></i></a></i>
+                            </button>
+                            <button type="submit" id="check">
+                                <i class="fa-solid fa-check check"></i>
+                            </button>
+                            <button type="submit" id="delete">
+                                <i class="fa-solid fa-xmark close close"></i>
+                            </button>
+                        </div>
+                        <h4>Solicitada: 24/04/2022</h4>
+                    </div>
+                    <hr>
+                </section>
+                <section id="booking-solicitations_section">
+                    <ul>
+                        <li>Perfil</li>
+                        <li>Espaço</li>
+                        <li>Sala</li>
+                        <li>Dias</li>
+                        <li>Ações</li>
+                    </ul>
+
+                    <div class="booking-solicitations_section_column">
+                        <div>
+                            <img src="images/my-account/booking-solicitations/persona_larissa.png" alt="Usuário">
+                            <h2>Larissa Ferreira</h2>
+                        </div>
+                           
+                        <p>Escritório Lape</p>
+                        <p>Sala 02</p>
+                        <p>3 dias</p>
+                        
+                        <div>
+                            <button type="submit" id="calendar">
+                                <a href=""><i class="fa-solid fa-calendar calendar"></i></a></i>
+                            </button>
+                            <button type="submit" id="check">
+                                <i class="fa-solid fa-check check"></i>
+                            </button>
+                            <button type="submit" id="delete">
+                                <i class="fa-solid fa-xmark close close"></i>
+                            </button>
+                        </div>
+                        <h4>Solicitada: 24/04/2022</h4>
+                    </div>
+                    <hr>
+                </section>
+            </article>
+
+            <article id="confirmed">
+                <section id="booking-solicitations_section">
+                    <ul>
+                        <li>Perfil</li>
+                        <li>Espaço</li>
+                        <li>Sala</li>
+                        <li>Próxima visita</li>
+                        <li>Ações</li>
+                    </ul>
+
+                    <div class="booking-solicitations_section_column">
+                        <div>
+                            <img src="images/my-account/booking-solicitations/persona_rodrigo.png" alt="Usuário">
+                            <h2>Rodrigo Queiroz</h2>
+                        </div>
+                           
+                        <p>Escritório Lape</p>
+                        <p>Sala 02</p>
+                        <p>Hoje</p>
+                        
+                        <div>
+                            <button type="submit" id="calendar">
+                                <a href=""><i class="fa-solid fa-calendar calendar"></i></a></i>
+                            </button>
+                            <button type="submit" id="delete">
+                                <i class="fa-solid fa-xmark close close"></i>
+                            </button>
+                        </div>
+                        <h4>Solicitada: 24/04/2022</h4>
+                    </div>
+                    <hr>
+                </section>
+                <section id="booking-solicitations_section">
+                    <ul>
+                        <li>Perfil</li>
+                        <li>Espaço</li>
+                        <li>Sala</li>
+                        <li>Próxima visita</li>
+                        <li>Ações</li>
+                    </ul>
+
+                    <div class="booking-solicitations_section_column">
+                        <div>
+                            <img src="images/my-account/booking-solicitations/persona_rodrigo.png" alt="Usuário">
+                            <h2>Rodrigo Queiroz</h2>
+                        </div>
+                           
+                        <p>Escritório Lape</p>
+                        <p>Sala 02</p>
+                        <p>Hoje</p>
+                        
+                        <div>
+                            <button type="submit" id="calendar">
+                                <a href=""><i class="fa-solid fa-calendar calendar"></i></a></i>
+                            </button>
+                            <button type="submit" id="delete">
+                                <i class="fa-solid fa-xmark close close"></i>
+                            </button>
+                        </div>
+                        <h4>Solicitada: 24/04/2022</h4>
+                    </div>
+                    <hr>
+                </section>
+            </article>
+
+            <article id="canceled">
+                <section id="booking-solicitations_section">
+                    <ul>
+                        <li>Perfil</li>
+                        <li>Espaço</li>
+                        <li>Sala</li>
+                        <li>Próxima visita</li>
+                        <li>Ações</li>
+                    </ul>
+
+                    <div class="booking-solicitations_section_column">
+                        <div>
+                            <img src="images/my-account/booking-solicitations/persona_rodrigo.png" alt="Usuário">
+                            <h2>Rodrigo Queiroz</h2>
+                        </div>
+                           
+                        <p>Escritório Lape</p>
+                        <p>Sala 02</p>
+                        <p>Hoje</p>
+                        
+                        <div>
+                            <button type="submit" id="calendar">
+                                <a href=""><i class="fa-solid fa-calendar calendar"></i></a></i>
+                            </button>
+                            <button type="submit" id="renovation">
+                                <a href=""><i class="fa-solid fa-rotate rotate"></i></i></a></i>
+                            </button>
+                            <button type="submit" id="delete">
+                                <i class="fa-solid fa-xmark close close"></i>
+                            </button>
+                        </div>
+                        <h4>Solicitada: 24/04/2022</h4>
+                    </div>
+                    <hr>
+                </section>
+            </article>
+
+            <article id="client-avaliation">
+                <section id="booking-solicitations_section">
+                    <ul>
+                        <li>Perfil</li>
+                        <li>Espaço</li>
+                        <li>Sala</li>
+                        <li>Próxima visita</li>
+                        <li>Ações</li>
+                    </ul>
+
+                    <div class="booking-solicitations_section_column">
+                        <div>
+                            <img src="images/my-account/booking-solicitations/persona_rodrigo.png" alt="Usuário">
+                            <h2>Rodrigo Queiroz</h2>
+                        </div>
+                           
+                        <p>Escritório Lape</p>
+                        <p>Sala 02</p>
+                        <p>Hoje</p>
+                        
+                        <button type="submit" id="avaliation">Avaliar cliente</button>
+                        <h4>Solicitada: 24/04/2022</h4>
+                    </div>
+                    <hr>
+                </section>
+            </article>
+        </div> -->
+    </div>
+</div>
+
+
+
+
+#become-advertiser_section2 > div{
+    position: relative;
+    padding-top: 181px;
+    padding-bottom: 105px;
+    justify-content: space-between;
+}
+
+#become-advertiser_section2 > div > div {
+    max-width: 520px;
+}
+
+#become-advertiser_section2 > div h2{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--text-1-black);
+    margin-bottom: 20px;
+}
+
+#become-advertiser_section2 > div p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    color: var(--text-1-black);
+}
+
+
+#become-advertiser_section4  {
+    background-image: url("../images/become-advertiser/community.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+/*Menu lateral*/
+#come_back{
+    display: flex;
+    width: 64px;
+    padding: 0;
+    align-items: center;
+    background-color: white;
+    border: none;
+}
+
+#come_back{
+    font-family: var(--font-primary);
+    font-size: 14px;
+    color: var(--scale-13-blue);
+}
+
+.chevron_left {
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#booking-solicitations>div nav ul {
+    list-style: none;
+}
+
+#booking-solicitations>div nav ul a{
+    color: var(--text-1-black);
+}
+
+#booking-solicitations a:focus{
+    font-weight: 900;
+    color: var(--scale-3-purple);
+    outline: none
+}
+
+#booking-solicitations>div nav ul a li {
+    display: flex;
+    height: 40px;
+    margin: 25px 28px;
+    align-items: center;
+}
+
+#booking-solicitations>div nav ul a li {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-1-black);
+}
+
+#booking-solicitations > div article {
+    width: 784px;
+}
+
+
+#booking-solicitations > div h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#booking-solicitations > div article section ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 158px 158px 158px 158px 158px;
+    margin-bottom: 10px;
+}
+
+
+#booking-solicitations > div article section ul li{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.booking-solicitations_section_column {
+    display: grid;
+    grid-template-columns: 158px 158px 158px 158px 158px;
+    align-items: center;
+}
+
+.booking-solicitations_section_column > div {
+    display: flex;
+}
+
+.booking-solicitations_section_column > div h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.booking-solicitations_section_column h4 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+
+.booking-solicitations_section_column p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.booking-solicitations_section_column > div button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 40px;
+    align-items: center;
+}
+
+.calendar, .check, .close, .rotate {
+    font-size: 20px;
+    color: white;
+}
+
+#calendar {
+    background-color: var(--scale-2-purple);
+    margin-right: 16px;
+}
+
+#check, #renovation {
+    background-color: var(--scale-8-blue);
+    margin-right: 16px;
+}
+
+#delete {
+    background-color: var(--scale-12-red);
+}
+
+hr {
+    background-color: var(--gray-border);
+}
+
+#avaliation {
+    background-color: var(--scale-2-purple);
+    border: none;
+    border-radius: 30px;
+    height: 27px;
+}
+
+#avaliation {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}

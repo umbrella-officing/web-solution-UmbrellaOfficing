@@ -1,0 +1,63 @@
+
+.container_search{
+    display: none;
+}
+
+#booking-requests > div{
+    position: relative;
+    padding-top: 181px;
+    padding-bottom: 80px;
+    justify-content: space-between;
+}
+
+/*Menu lateral*/
+#come_back{
+    display: flex;
+    width: 64px;
+    padding: 0;
+    align-items: center;
+    background-color: white;
+    border: none;
+}
+
+#come_back{
+    font-family: var(--font-primary);
+    font-size: 14px;
+    color: var(--scale-13-blue);
+}
+
+.chevron_left {
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#booking-requests>div nav ul {
+    list-style: none;
+}
+
+#booking-requests>div nav ul a{
+    color: var(--text-1-black);
+}
+
+#booking-requests a:focus{
+    font-weight: 900;
+    color: var(--scale-3-purple);
+    outline: none
+}
+
+#booking-requests>div nav ul a li {
+    display: flex;
+    height: 40px;
+    margin: 25px 28px;
+    align-items: center;
+}
+
+#booking-requests>div nav ul a li {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-1-black);
+}
