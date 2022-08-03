@@ -2,8 +2,12 @@
     display: none;
 }
 
+#my-profile_section1 {
+    position: relative;
+}
+
 #my-profile_section1>div {
-    padding-top: 181px;
+    padding: 181px 0;
     justify-content: space-between;
     color: var(--text-1-black);
 }
@@ -13,7 +17,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 67.6em;
+    height: 100%;
     width: calc(50% - 290px);
     background-color: var(--scale-9-blue);
 }
@@ -201,8 +205,4 @@ input {
     font-family: var(--font-primary);
     font-weight: 500;
     margin: 40px 0 0 558px;
-}
-
-footer {
-    margin-top: 80px;
 }
