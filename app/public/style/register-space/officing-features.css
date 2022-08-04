@@ -57,13 +57,21 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-top: 26px;
 }
 
-#liAlign{
+#private-bathrooms{
+    margin-top: 9px;
+}
+
+#private-bathrooms > p{
+    font-weight: 400;
+}
+
+#liAlign2{
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    margin-top: 6px;
 }
 
 .label-yn{
