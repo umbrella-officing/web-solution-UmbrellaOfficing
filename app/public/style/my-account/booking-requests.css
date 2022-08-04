@@ -1,9 +1,8 @@
-
-.container_search{
+.container_search {
     display: none;
 }
 
-#booking-requests > div{
+#booking-requests>div {
     position: relative;
     padding-top: 181px;
     padding-bottom: 80px;
@@ -11,7 +10,7 @@
 }
 
 /*Menu lateral*/
-#come_back{
+#come_back {
     display: flex;
     width: 64px;
     padding: 0;
@@ -20,7 +19,7 @@
     border: none;
 }
 
-#come_back{
+#come_back {
     font-family: var(--font-primary);
     font-size: 14px;
     color: var(--scale-13-blue);
@@ -33,17 +32,14 @@
 
 a {
     text-decoration: none;
+    color: var(--text-1-black);
 }
 
 #booking-requests>div nav ul {
     list-style: none;
 }
 
-#booking-requests>div nav ul a{
-    color: var(--text-1-black);
-}
-
-#booking-requests a:focus{
+#booking-requests a:focus {
     font-weight: 900;
     color: var(--scale-3-purple);
     outline: none
@@ -60,4 +56,121 @@ a {
     font-size: 16px;
     font-weight: 400;
     color: var(--text-1-black);
+}
+
+#booking-requests>div article {
+    width: 784px;
+}
+
+.chooseOption {
+    content: "";
+    border-left: solid 0.2rem var(--scale-3-purple);
+    height: 4.8rem;
+    position: absolute;
+    top: 0.4rem;
+}
+
+#booking-requests>div h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#booking-requests>div article ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 158px 158px 158px 158px 158px;
+    margin-bottom: 10px;
+}
+
+
+#booking-requests>div article ul li {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#booking-requests_section {
+    display: grid;
+    grid-template-columns: 158px 158px 158px 158px 158px;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--gray-border);
+}
+
+#booking-requests_section>div {
+    display: flex;
+}
+
+
+#booking-requests_section>div h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+#booking-requests_section  h4 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+#booking-requests_section p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#booking-requests_section >div button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 40px;
+    align-items: center;
+}
+
+.calendar,
+.check,
+.close,
+.rotate {
+    font-size: 20px;
+    color: white;
+}
+
+#calendar {
+    background-color: var(--scale-2-purple);
+    margin-right: 16px;
+}
+
+#check,
+#renovation {
+    background-color: var(--scale-8-blue);
+    margin-right: 16px;
+}
+
+#delete {
+    background-color: var(--scale-12-red);
+}
+
+#avaliation {
+    background-color: var(--scale-2-purple);
+    border: none;
+    border-radius: 30px;
+    height: 27px;
+}
+
+#avaliation {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+section::after {
+    content: "";
+    border: 2px;
+    color: aqua;
+}
+
+#confirmed,
+#canceled,
+#client-avaliation {
+    display: none;
 }
