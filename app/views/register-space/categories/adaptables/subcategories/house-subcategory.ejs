@@ -11,7 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/register-space/add-room.css">
+    <link rel="stylesheet" href="style/register-space/categories/adaptables/adaptables-categories.css">
+    <link rel="stylesheet" href="style/register-space/categories/adaptables/subcategories/apartment-subcategory.css">
+
 </head>
 <body>
     <header id="header" class="container_margin_default">
@@ -71,29 +73,46 @@
                 </div>
             </div>
         </div>
-    </header> 
+    </header>
 
     <div id='box_black'></div>
 
     <main>
-        
-        <section id="add_room_section" class="container_margin_default"> 
+        <section id="adaptables-categories_section" class="container_margin_default">
             <div class="default_margin">
-                
-                <div id="alignH1">
-                    <img src="images/default/return-arrow.png" alt="Seta para voltar à tela anterior">
-                    <h1>Adicione as salas que você quer anunciar</h1>
+                <div class="align-elements" id="return-arrow-div">
+                    <img src="images/default/return-arrow.png" alt="voltar">
                 </div>
-                
-                
-            <div id="add">
-                <p>Adicionar sala +</p>
+
+                <div class="align-elements">
+                    <h1>Escolha a categoria</h1>
+                    <ul>
+                        <li>
+                            <div><img src="images/register-space/adaptables-categories/common-apartment.png" alt="Apartamento comum">
+                            <div class="subtitle">
+                                <h2>Casa comum</h2>
+                            </div>
+                        </div>
+                    </li>
+                        <li>
+                            <div>
+                                <img src="images/register-space/adaptables-categories/kitnet.png" alt="">
+                                <div class="subtitle">
+                                    <h2>Microcasa</h2>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="align-elements" id="align-buttons">
+                    <button>Nenhuma das opções</button>
+                        <button id="advanceButton">Avançar</button>
+                </div>
+
+
             </div>
-            <div>
-                <button>Avançar</button>
-            </div>
-            </div>
-    </section>
+        </section>
     </main>
 
     <script src="script/default/default.js"></script>

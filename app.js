@@ -20,11 +20,17 @@ const myAdvertiser = require('./app/routes/become-advertiser')(app);
     
 /* Requisições telas: Anunciar*/
 const environment = require('./app/routes/register-space/type-of-environment')(app);
+const adaptableCategories = require('./app/routes/register-space/categories/adaptables/adaptables-categories')(app);
 const addRoom = require('./app/routes/register-space/add-room')(app);
 const officingFeatures = require('./app/routes/register-space/officing-features')(app);
 const apresentation = require('./app/routes/register-space/apresentation')(app);
 const photos = require('./app/routes/register-space/photos')(app);
 const finalization = require('./app/routes/register-space/finalization')(app);
+
+/*Requisições das subcategorias*/
+const subApartment = require('./app/routes/register-space/categories/adaptables/subcategories/apartment-subcategory')(app);
+const subUnity = require('./app/routes/register-space/categories/adaptables/subcategories/unity-subcategory')(app);
+const subHouse = require('./app/routes/register-space/categories/adaptables/subcategories/house-subcategory')(app);
 
 app.listen(port,()=>{
     console.log(`Servidor no ar rodando na porta ${port}`)
