@@ -27,7 +27,7 @@ ul{
     padding-top: 35px;
 }
 
-#adaptables-categories_section > div > img{
+#adaptables-categories_section > div > :first-child > img{
     width: 40px;
     height: 40px;
 }

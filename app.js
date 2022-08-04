@@ -29,6 +29,8 @@ const finalization = require('./app/routes/register-space/finalization')(app);
 
 /*Requisições das subcategorias*/
 const subApartment = require('./app/routes/register-space/categories/adaptables/subcategories/apartment-subcategory')(app);
+const subUnity = require('./app/routes/register-space/categories/adaptables/subcategories/unity-subcategory')(app);
+const subHouse = require('./app/routes/register-space/categories/adaptables/subcategories/house-subcategory')(app);
 
 app.listen(port,()=>{
     console.log(`Servidor no ar rodando na porta ${port}`)
