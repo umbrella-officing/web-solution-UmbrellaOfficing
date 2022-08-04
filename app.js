@@ -27,6 +27,9 @@ const apresentation = require('./app/routes/register-space/apresentation')(app);
 const photos = require('./app/routes/register-space/photos')(app);
 const finalization = require('./app/routes/register-space/finalization')(app);
 
+/*Requisições das subcategorias*/
+const subApartment = require('./app/routes/register-space/categories/adaptables/subcategories/apartment-subcategory')(app);
+
 app.listen(port,()=>{
     console.log(`Servidor no ar rodando na porta ${port}`)
 });
