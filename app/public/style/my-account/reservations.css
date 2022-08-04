@@ -1,5 +1,13 @@
+.container_search{
+    display: none;
+}
+
+#my-reservations_section1 {
+    position: relative;
+}
+
 #my-reservations_section1>div {
-    padding-top: 181px;
+    padding: 181px 0 80px 0;
     justify-content: space-between;
     color: var(--text-1-black);
 }

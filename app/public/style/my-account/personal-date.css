@@ -2,8 +2,12 @@
     display: none;
 }
 
+#personal-date_section1 {
+    position: relative;
+}
+
 #personal-date_section1>div {
-    padding-top: 181px;
+    padding: 181px 0 80px 0;
     justify-content: space-between;
     color: var(--text-1-black);
 }
@@ -14,7 +18,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 109.4em;
+    height: 100%;
     width: calc(50% - 290px);
     background-color: var(--scale-9-blue);
 }

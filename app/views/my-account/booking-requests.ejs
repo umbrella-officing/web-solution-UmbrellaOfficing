@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/my-account/booking-solicitations.css">
+    <link rel="stylesheet" href="style/my-account/booking-requests.css">
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
 </head>
 
@@ -81,29 +81,163 @@
         <div id="booking-requests" class="container_margin_default">
             <div class="default_margin">
                 <nav>
+                    <a href="/meus-anuncios"><button id="come_back">
+                            <i class="fa-solid fa-circle-chevron-left chevron_left"></i>
+                            <p>Voltar</p>
+                        </button>
+                    </a>
                     <ul>
-                        <li class="option_active">
-                            <a href="javascript:solicitations(1)" autofocus>
-                                Confirmação pendente</a>
-                        </li>
-                        <li class="option">
-                            <a href="javascript:solicitations(1)">
-                                Confirmadas</a>
-                        </li>
-                        <li class="option">
-                           <a href="javascript:solicitations(1)">
-                                Canceladas</a>
-                        </li>
-                        <li class="option">
-                            <a href="javascript:solicitations(1)">
-                                Avaliação do cliente</a>
-                        </li>
+                        <a href="javascript:requests(1)" chooseOption>
+                            <li class="option_menu">
+                                Confirmação <br>pendente
+                            </li>
+                        </a>
+                        <a href="javascript:requests(2)">
+                            <li class="option_menu">
+                                Confirmadas
+                            </li>
+                        </a>
+                        <a href="javascript:requests(3)">
+                            <li class="option_menu">
+                                Canceladas
+                            </li>
+                        </a>
+                        <a href="javascript:requests(4)">
+                            <li class="option_menu">
+                                Avaliação do cliente
+                            </li>
+                        </a>
                     </ul>
                 </nav>
 
-               
+                <div>
+                    <h1>Solicitações de reservas</h1>
+
+                    <article id="pending-confirmation">
+                        <ul>
+                            <li>Perfil</li>
+                            <li>Espaço</li>
+                            <li>Sala</li>
+                            <li>Dias</li>
+                            <li>Ações</li>
+                        </ul>
+                        <section id="booking-requests_section">
+                            <div>
+                                <img src="images/my-account/booking-solicitations/persona_larissa.png" alt="Usuário">
+                                <h2>Larissa Ferreira</h2>
+                            </div>
+
+                            <p>Escritório Lape</p>
+                            <p>Sala 02</p>
+                            <p>3 dias</p>
+
+                            <div>
+                                <button type="submit" id="calendar">
+                                    <a href=""><i class="fa-solid fa-calendar calendar"></i></a></i>
+                                </button>
+                                <button type="submit" id="check">
+                                    <i class="fa-solid fa-check check"></i>
+                                </button>
+                                <button type="submit" id="delete">
+                                    <i class="fa-solid fa-xmark close close"></i>
+                                </button>
+                            </div>
+                            <h4>Solicitada: 24/04/2022</h4>
+                        </section>
+                    </article>
+
+                    <article id="confirmed">
+                        <ul>
+                            <li>Perfil</li>
+                            <li>Espaço</li>
+                            <li>Sala</li>
+                            <li>Próxima visita</li>
+                            <li>Ações</li>
+                        </ul>
+                        <section id="booking-requests_section">
+                            <div>
+                                <img src="images/my-account/booking-solicitations/persona_rodrigo.png" alt="Usuário">
+                                <h2>Rodrigo Queiroz</h2>
+                            </div>
+
+                            <p>Escritório Lape</p>
+                            <p>Sala 02</p>
+                            <p>Hoje</p>
+
+                            <div>
+                                <button type="submit" id="calendar">
+                                    <a href=""><i class="fa-solid fa-calendar calendar"></i></a></i>
+                                </button>
+                                <button type="submit" id="delete">
+                                    <i class="fa-solid fa-xmark close close"></i>
+                                </button>
+                            </div>
+                            <h4>Solicitada: 24/04/2022</h4>
+                        </section>
+                    </article>
+
+                    <article id="canceled">
+                        <ul>
+                            <li>Perfil</li>
+                            <li>Espaço</li>
+                            <li>Sala</li>
+                            <li>Próxima visita</li>
+                            <li>Ações</li>
+                        </ul>
+
+                        <section id="booking-requests_section">
+                            <div>
+                                <img src="images/my-account/booking-solicitations/persona_rodrigo.png" alt="Usuário">
+                                <h2>Rodrigo Queiroz</h2>
+                            </div>
+
+                            <p>Escritório Lape</p>
+                            <p>Sala 02</p>
+                            <p>Hoje</p>
+
+                            <div>
+                                <button type="submit" id="calendar">
+                                    <a href=""><i class="fa-solid fa-calendar calendar"></i></a></i>
+                                </button>
+                                <button type="submit" id="renovation">
+                                    <a href=""><i class="fa-solid fa-rotate rotate"></i></i></a></i>
+                                </button>
+                                <button type="submit" id="delete">
+                                    <i class="fa-solid fa-xmark close close"></i>
+                                </button>
+                            </div>
+                            <h4>Solicitada: 24/04/2022</h4>
+                        </section>
+                    </article>
+
+                    <article id="client-avaliation">
+                        <ul>
+                            <li>Perfil</li>
+                            <li>Espaço</li>
+                            <li>Sala</li>
+                            <li>Próxima visita</li>
+                            <li>Ações</li>
+                        </ul>
+
+                        <section id="booking-requests_section">
+                            <div>
+                                <img src="images/my-account/booking-solicitations/persona_rodrigo.png" alt="Usuário">
+                                <h2>Rodrigo Queiroz</h2>
+                            </div>
+
+                            <p>Escritório Lape</p>
+                            <p>Sala 02</p>
+                            <p>Hoje</p>
+
+                            <button type="submit" id="avaliation">Avaliar cliente</button>
+                            <h4>Solicitada: 24/04/2022</h4>
+                            <hr>
+                        </section>
+                    </article>
+
+                </div>
             </div>
-            </section>
+        </div>
     </main>
 
 

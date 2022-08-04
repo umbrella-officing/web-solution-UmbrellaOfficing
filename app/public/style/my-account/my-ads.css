@@ -2,8 +2,12 @@
     display: none;
 }
 
+#my-ads {
+    position: relative;
+}
+
 #my-ads > div {
-    padding-top: 181px;
+    padding: 181px 0 80px 0;
     justify-content: space-between;
     color: var(--text-1-black);
 }
@@ -103,10 +107,6 @@ a{
 #my-ads_navigation ul li{
     font-size: 16px;
     margin-right: 40px;
-}
-
-#inactives_space {
-    display: none;
 }
 
 #actives_space section, 
