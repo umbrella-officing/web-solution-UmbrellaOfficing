@@ -3,18 +3,28 @@
 }
 
 #type-of-environment_section{
-    padding-top: 165px;
+    height: 100vh;
+    min-height: 840px;
+    max-height: 840px;
 }
 
 #type-of-environment_section > div{
-    justify-content: space-between;
-    /* flex-direction: column; */
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 #type-of-environment_section > div h1{
     font-size: 40px;
     max-width: 306px;
     color: var(--text-1-black);
+}
+
+#align-elements{
+    display: flex;
+    align-items: center;
+    margin-top: 180px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #second{
@@ -24,6 +34,7 @@
     justify-content: flex-end;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 #second > div > p{
@@ -74,13 +85,26 @@
     height: 105px;
 }
 
-#second > :last-child{
-    margin-top: 30px;
+#buttons-div{
+    /* margin-top: 80px; */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-#second > div > button{
+#buttons-div :first-child{
+    max-width: 340px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 20px;
+    border: none;
+    background-color: var(--scale-1-blue);
+    color: var(--white);
+}
+
+#buttons-div :nth-child(2){
     width: 186px;
     height: 36px;
     border: none;
