@@ -29,7 +29,7 @@
     --scale-12-red: #D52F2F;
     --scale-13-blue: #5B61C4;
     --scale-14-blue: #7397E3;
-    --gradient:linear-gradient(180deg, #81A4F3, #D16CC1)
+    --gradient:linear-gradient(180deg, #81A4F3, #D16CC1);    
 }
 
 html, button, input{

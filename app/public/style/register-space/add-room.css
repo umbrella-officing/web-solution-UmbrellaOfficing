@@ -1,67 +1,64 @@
+body{    
+    background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
+    background-repeat: no-repeat;
+}
+
 .container_search{
     display: none;
 }
 
-#add_room_section{
-    padding-top: 143px;
-    display: flex;
+#add-room_section{
+    padding: 180px 0 75px 0;
     align-items: center;
-    flex-direction: column;/*Quando eu tirei daqui, o site quebrou. Por quê? */
 }
 
-#add_room_section > div{
-    flex-direction: column;
-    align-items: flex-start;
+#add-room_section > div{
+    justify-content: space-between;
     position: relative;
 }
 
-#add_room_section > div > :first-child{
+#title-div{
+    height: 61vh;
     display: flex;
     align-items: center;
 }
 
-#add_room_section > div > :first-child p{
-    font-size: 14px;
+h1{
+    color: var(--white);
+    font-size: 40px;
+    max-width: 475px;
 }
 
-#add_room_section > div > div > h1{
-    font-size: 30px;
-    font-weight: 700;
+#rooms{
+    margin-top: 40px;
+    width: calc(50% - 60px);
 }
 
-#add_room_section > div img{
-    margin-right: 30px;
-}
-
-#alignH1{
-    padding-top: 20px;
-}
-
-#add{
+.roomDiv{
     border: 1px solid var(--gray-border);
     border-radius: 20px;
-    text-align: center;
-    padding: 62px 78px;
-    margin-top: 72px;
-}
-
-#add_room_section > div > div p{
-    max-width: 130px;
-    font-size: 25px;
-}
-
-#add_room_section > div > div > button{
-    width: 186px;
-    height: 36px;
-    background-color: var(--scale-2-purple);
-    border-style: none;
-    border-radius: 20px;
-    color: var(--white);
-    margin-top: 60px;
-}
-
-#add_room_section > div > :last-child{
-    width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.roomDiv > p{
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-1-black);
+}
+
+button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: none;
+    width: 185px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: var(--scale-2-purple);
+    color: var(--white);
+    font-weight: 600;
 }

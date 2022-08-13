@@ -1,18 +1,23 @@
+<!--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-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/register-space/add-room.css">
 </head>
+
 <body>
     <header id="header" class="container_margin_default">
         <div class="default_margin">
@@ -22,24 +27,24 @@
                     <li class="option_office checked">Espaço adaptado</li>
                     <li class="option_office">Espaço corporativo</li>
                 </ul>
-                    <div class="container_search">
-                        <span id="search_txt">Busque locais para trabalho</span>
-                        <div id='container_informations_find_coworking'>
-                            <input id="localization" type="text" placeholder="Localização:">
-                            <input type="date" id="check_in">
-                        </div>
-                        <a href="#">
-                            <div>
-                                <img src="images/default/search.svg" alt="pesquisa">
-                            </div>
-                        </a>  
+                <div class="container_search">
+                    <span id="search_txt">Busque locais para trabalho</span>
+                    <div id='container_informations_find_coworking'>
+                        <input id="localization" type="text" placeholder="Localização:">
+                        <input type="date" id="check_in">
                     </div>
+                    <a href="#">
+                        <div>
+                            <img src="images/default/search.svg" alt="pesquisa">
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <div id="menu">
                 <div id='menu_sign-in-up'>
-                        <img src="images/default/user.svg" alt="usuário">
-                        <img src="images/default/menu_hamburguer.svg" alt="menu">
+                    <img src="images/default/user.svg" alt="usuário">
+                    <img src="images/default/menu_hamburguer.svg" alt="menu">
                 </div>
                 <div class="menu_open">
                     <div>
@@ -71,32 +76,33 @@
                 </div>
             </div>
         </div>
-    </header> 
+    </header>
 
     <div id='box_black'></div>
 
     <main>
         
-        <section id="add_room_section" class="container_margin_default"> 
+        <section class="container_margin_default" id="add-room_section">
             <div class="default_margin">
-                
-                <div id="alignH1">
-                    <img src="images/default/return-arrow.png" alt="Seta para voltar à tela anterior">
+                <div id="title-div">
                     <h1>Adicione as salas que você quer anunciar</h1>
                 </div>
-                
-                
-            <div id="add">
-                <p>Adicionar sala +</p>
+
+
+            <div id="rooms">
+                <div id="room1" class="roomDiv">
+                    <p>Adicionar sala +</p>
+                </div>
             </div>
-            <div>
-                <button>Avançar</button>
-            </div>
-            </div>
-    </section>
+            
+            <button>Avançar</button>
+        </div>
+        </section>
+        
     </main>
 
     <script src="script/default/default.js"></script>
 
 </body>
+
 </html>
