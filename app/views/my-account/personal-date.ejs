@@ -10,9 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/personal-date.css">
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
 </head>
 
 <body>
@@ -114,43 +117,44 @@
                             <h2>Informações pessoais</h2>
                             <div>
                                 <label for="name">Nome</label>
-                                <input type="text" name="name" id="name" placeholder="Aline Ribeiro" />
+                                <input type="text" class="form-control" name="name" id="name" >
                             </div>
                             <div class="personal-date_section1_form-colum2">
                                 <div>
-                                    <label for="birth-date">Data de nascimento</label>
-                                    <input type="date" name="birth-date" id="birth-date" />
+                                    <label for="birth-date">Data de nascimento</label>  
+                                    <input type="date" class="form-control" name="birth-date" id="birth-date" >
                                 </div>
                                 <div>
                                     <label for="gender">Sexo</label>
-                                    <input type="text" name="gender" id="gender" placeholder="Selecione"
-                                        onFocus="dropdown(0)" onBlur="dropdown(1)" />
+                                    <input type="text" name="gender" id="gender" placeholder="Selecione uma opção"
+                                        onFocus="dropdown(0)" onBlur="dropdown(1)" class="form-select" />
+
                                     <div class="dropDown">
                                         <div class="listDropDown">
-                                            <div class="item" id="item-1" onMouseDown="category(1)">Feminino</div>
-                                            <div class="item" id="item-2" onMouseDown="category(2)">Masculino</div>
+                                            <div class="item" id="item-1" onMouseDown="option(1)">Feminino</div>
+                                            <div class="item" id="item-2" onMouseDown="option(2)">Masculino</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <label for="profession">Profissão</label>
-                                <input type="text" name="profession" id="profession" placeholder="Empreendedora" />
+                                <input type="text" class="form-control" name="profession" id="profession" />
                             </div>
 
                             <h2>Identificação</h2>
                             <div>
                                 <label for="cpf">CPF</label>
-                                <input type="text" name="cpf" id="cpf" placeholder="345.567.123-03" />
+                                <input type="text" class="form-control" name="cpf" id="cpf" />
                             </div>
                             <div class="personal-date_section1_form-colum2-dif1">
                                 <div>
                                     <label for="rg">RG</label>
-                                    <input type="text" name="rg" id="rg" placeholder="12.345.678-90" />
+                                    <input type="text" class="form-control" name="rg" id="rg" />
                                 </div>
                                 <div>
                                     <label for="orgao-exp">Orgão Expedidor</label>
-                                    <input type="text" name="orgao-exp" id="orgao-exp" />
+                                    <input type="text" class="form-control" name="orgao-exp" id="orgao-exp" />
                                 </div>
                             </div>
 
@@ -158,49 +162,48 @@
                             <div class="personal-date_section1_form-colum2">
                                 <div>
                                     <label for="phone">Telefone</label>
-                                    <input type="number" name="phone" id="phone" placeholder="12.345.678-90" />
+                                    <input type="text" class="form-control" name="phone" id="phone"/>
                                 </div>
                                 <div>
                                     <label for="cell">Celular</label>
-                                    <input type="number" name="cell" id="cell" placeholder="12.345.678-90" />
+                                    <input type="text" class="form-control" name="cell" id="cell" />
                                 </div>
                             </div>
 
                             <h2>Endereço</h2>
                             <div>
                                 <label for="cep">CEP</label>
-                                <input type="text" name="cep" id="cep" placeholder="345.567.123-03" />
+                                <input type="text" class="form-control" name="cep" id="cep" />
                             </div>
                             <div class="personal-date_section1_form-colum2-dif2">
                                 <div>
                                     <label for="rua">Rua</label>
-                                    <input type="text" name="rua" id="rua" placeholder="Rua Tomé de Souza" />
+                                    <input type="text" class="form-control" name="rua" id="rua" />
                                 </div>
                                 <div>
                                     <label for="number">Nº</label>
-                                    <input type="text" name="number" id="number" placeholder="569" />
+                                    <input type="text"class="form-control" name="number" id="number" />
                                 </div>
                             </div>
                             <div class="personal-date_section1_form-colum2">
                                 <div>
                                     <label for="bairro">Bairro</label>
-                                    <input type="text" name="bairro" id="bairro" placeholder="Aldeia da Serra" />
+                                    <input type="text" class="form-control" name="bairro" id="bairro" />
                                 </div>
                                 <div>
                                     <label for="cidade">Cidade | Estado</label>
-                                    <input type="text" name="cidade_estado" id="cidade_estado"
-                                        placeholder="Barueri, SP" />
+                                    <input type="text" class="form-control" name="cidade_estado" id="cidade_estado" />
                                 </div>
                             </div>
 
                             <h2>Informações para login</h2>
                             <div>
                                 <label for="email">Email</label>
-                                <input type="email" name="email" id="email" placeholder="alineribeiro@gmail.com" />
+                                <input class="form-control" type="email" name="email" id="email" />
                             </div>
                             <div>
                                 <label for="password">Senha</label>
-                                <input type="password" name="password" id="password" />
+                                <input class="form-control" type="password" name="password" id="password" />
                             </div>
                             <button type="submit" id="edit_ad">Editar informações</button>
                     </form>

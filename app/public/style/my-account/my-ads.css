@@ -25,7 +25,6 @@
 /*Menu lateral*/
 #my-account_navigation {
     position: relative;
-    overflow: auto;
 }
 
 #my-account_navigation ul {
@@ -76,6 +75,7 @@
     margin: 0 10px 0 21px;
 }
 
+
 /*Conteúdo*/
 #actives_space, #inactives_space{
     width: 784px;
@@ -84,6 +84,10 @@
 #my-ads>div>div h1 {
     font-size: 25px;
     font-weight: bold;
+}
+
+#my-ads_navigation {
+    margin-bottom: 30px;
 }
 
 #my-ads_navigation ul {
@@ -101,7 +105,9 @@ a{
 #my-ads_navigation ul a:focus{
     font-weight: 900;
     color: var(--scale-3-purple);
-    outline: none
+    outline: none;
+    border-bottom: 3px solid var(--scale-3-purple);
+    padding-bottom: 10px;
 }
 
 #my-ads_navigation ul li{
@@ -191,16 +197,84 @@ a{
 
 
 #solicitation_res {
-    font-size: 13px;
+    font-size: 14px;
     font-family: var(--font-primary);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #solicitation_res {
     background-color: var(--scale-2-purple);
     border: none;
     width: 198px;
-    height: 38px;
+    height: 34px;
     color: var(--white);
     border-radius: 40px;
+}
+
+#inactives_space {
+    display: none;
+}
+
+#container_popUp_delete {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+}
+
+.popUpChecked {
+    display: flex;
+    animation: fadeIn ease .27s;
+}
+
+.popUp_delete {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
+    padding: 20px;
+    width: 800px;
+    height: 180px;
+}
+
+.close_popup_delete {
+    margin-left: 780px;
+    width: 18px;
+    cursor: pointer;
+}
+
+.popUp_delete p{
+    text-align: center;
+    font-size: 16px;
+}
+
+.popUp_delete > div button {
+    width: 188px;
+    height: 38px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+.popUp_delete > div {
+    align-items: center;
+}
+
+#no {
+    background-color: var(--scale-14-blue);
+    border: none;
+    color: white;
+    margin-right: 30px;
+}
+
+#yes {
+    background-color: white;
+    border: 3px solid var(--scale-12-red);
+    color: var(--scale-12-red);
 }

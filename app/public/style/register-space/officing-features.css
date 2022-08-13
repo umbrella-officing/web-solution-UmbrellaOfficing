@@ -9,6 +9,7 @@ body{
 
 ul{
     list-style: none;
+    position: relative;
 }
 
 #officing_features_section{
@@ -92,7 +93,9 @@ input[type="radio"]{
     font-family: var(--font-primary);
     font-size: 20px;
     font-weight: 600;
-    margin: 50px 0 0 157px;
+    margin-top: 40px;
+    position: absolute;
+    right: 0;
 }
 
 #first-step{

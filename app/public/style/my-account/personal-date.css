@@ -1,3 +1,8 @@
+body {
+    font-family: var(--font-primary); 
+    line-height: var(--bs-body-line-height); 
+}
+
 .container_search{
     display: none;
 }
@@ -108,7 +113,7 @@
     font-weight: 500;
 }
 
-#personal-date_section1 form>div>div input {
+#personal-date_section1 form>div>div input{
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 10px;
@@ -124,54 +129,50 @@
 
 .personal-date_section1_form-colum2 {
     display: grid;
-    grid-template-columns: 352px 352px;
-    grid-column-gap: 80px;
+    grid-template-columns: 379.5px 379.5px;
+    grid-column-gap: 25px;
 }
 
-.listDropDown {
-    width: 352px;
-    height: 80px;
+::-webkit-input-placeholder{color: var(--text-3-black)}
+input::-moz-placeholder{color: var(--text-3-black)}
+
+.dropDown {
+    width: 379.5px;
+    height: 84px;
     border-radius: 5px;
-    /* border: 1px solid var(--gray-border); */
-    box-shadow: 0 0 8px 0 rgb(128 128 128 / 20%);
+    border: 1px solid var(--gray-border);
     box-sizing: border-box;
     margin-top: 10px;
-    overflow: auto;
     display: none;
     transform: translate(0px, -10px);
 }
 
-/* ::-webkit-scrollbar {
-    background-color: var(--text-1-black);
-    width: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-} */
-
-.listDropDown > .item {
+.item {
     padding: 10px;
+    font-size: 14px;
     box-sizing: border-box;
-    transition: .3s;
     cursor: pointer;
 }
 
-.listDropDown > .item:hover{
-    padding-left: 12px;
-    transition: .3s;
+.item:hover{
+    background-color: var(--scale-3-blue / 20%);
 }
 
-
+#password {
+    font-size: 14px;
+    color: var(--text-1-black);
+}
 
 .personal-date_section1_form-colum2-dif1 {
     display: grid;
-    grid-template-columns: 452px 252px;
-    grid-column-gap: 80px;
+    grid-template-columns: 505px 253px;
+    grid-column-gap: 25px;
 }
 
 .personal-date_section1_form-colum2-dif2 {
     display: grid;
-    grid-template-columns: 652px 90px;
-    grid-column-gap: 40px;
+    grid-template-columns: 667px 91px;
+    grid-column-gap: 25px;
 }
 
 #edit_ad {

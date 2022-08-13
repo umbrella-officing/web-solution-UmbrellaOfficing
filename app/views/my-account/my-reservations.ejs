@@ -97,7 +97,7 @@
                         </li>
                         <li class="option">
                             <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
-                                    Meus anúncios</a>
+                                Meus anúncios</a>
                         </li>
                         <li class="option">
                             <a href="/calendario"><i class="fa-solid fa-calendar-days calendar"></i>
@@ -150,6 +150,41 @@
                             </div>
                         </div>
                     </div>
+
+                    <div id="popUp-cancel">
+                        <form action="/modal-cancel" method="post">
+                            <div class="popUp-cancel_state1">
+                                <label for="about-me">Diga o motivo pelo qual você deseja cancelar</label>
+                                <textarea name="about-me" id="about-me" rows="6"></textarea>
+                                <div>
+                                    <p>Etapa 1/3</p>
+
+                                    <button id="go">Avançar</button>
+                                </div>
+                            </div>
+
+                            <!-- <div id="modal-cancel_state2">
+                                <i class="fa-solid fa-circle-chevron-left arrow-left"></i>
+                                <div>
+                                    <img src="images/my-account/reservations/cancel_reservations1.png">
+                                    <div>
+                                        <label for="about-me">Avalie o espaço</label>
+                                        <div>
+
+                                        </div>
+                                        <textarea name="about-me" id="about-me" rows="2"
+                                            placeholder="Comente aqui (opcional)">
+                                            </textarea>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Etapa 2/3</p>
+
+                                    <button id="go">Avançar</button>
+                                </div> -->
+                        </form>
+                    </div>
+
 
 
                 </div>
@@ -212,4 +247,5 @@
 
     <script src="script/default/default.js"></script>
 </body>
+
 </html>

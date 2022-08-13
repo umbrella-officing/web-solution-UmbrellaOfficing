@@ -1,3 +1,8 @@
+body {
+    font-family: var(--font-primary);
+    list-style: none;
+}
+
 .container_search{
     display: none;
 }
@@ -101,6 +106,7 @@
 #my-profile_section1 form>div label {
     font-size: 18px;
     font-weight: 600;
+    font-family: var(--font-primary);
 }
 
 #my-profile_section1 form>div textarea {
@@ -108,14 +114,15 @@
 }
 
 
-#my-profile_section1 form>div textarea,
-input {
+.form-control {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
-    padding: 12.5px;
+    padding: 11px;
     resize: none;
-    font-size: 14px;
+    font-size: 14.5px;
+    font-family: var(--font-primary);
     width: -webkit-fill-available;
+    color: var(--text-1-black);
 }
 
 .my-profile_section1-form-flex {
@@ -125,10 +132,9 @@ input {
 
 
 .my-profile_section1-form-flex>div:nth-child(1) {
-    width: 234px;
     border: 1px solid var(--gray-border);
     border-radius: 5px;
-    padding: 35px 35px 0 35px
+    padding: 35px;
 }
 
 .my-profile_section1-form-flex>div:nth-child(1) p {
@@ -139,7 +145,8 @@ input {
 .my-profile_section1-form-flex>div:nth-child(1) h4 {
     font-size: 16px;
     font-weight: 600;
-    margin: 22px 0 10px 0;
+    font-family: var(--font-primary);
+    margin: 28px 0 14px 0;
 }
 
 .my-profile_section1-form-flex>div:nth-child(1) ul {
@@ -159,6 +166,13 @@ input {
     width: 344px;
 }
 
+.my-profile_section1-form-flex>div:nth-child(2) h3 {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--font-primary);
+}
+
+
 .my-profile_section1-form-flex>div:nth-child(2) p {
     font-size: 12px;
     margin-top: 5px;
@@ -167,26 +181,37 @@ input {
 #my-profile_section1-form2-url {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     margin-top: 20px;
 }
 
+
+#my-profile_section1-form2-url div{
+    width: 100%;
+}
+
 .whats,
-.face {
+.face,
+.linkedin {
     font-size: 2.5rem;
     justify-content: space-between;
-    align-items: center;
 }
+
 
 #my-profile_section1-form2-url img,
 .whats {
-    color: #1BD741;
+    color: #15cc3a;
     margin-right: 10px;
 }
 
 .face {
-    color: #0000FF;
-    margin-right: 5px;
+    color: #1749b3;
+    margin-right: 5.5px;
+}
+
+.linkedin {
+    color: #0c87c1;
+    margin-right: 10px;
 }
 
 
