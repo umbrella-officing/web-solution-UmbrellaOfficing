@@ -58,7 +58,7 @@ const closeInputsearchCoworkingSpaces = (box_black,header,search,search_txt,cont
 openInputsearchCoworkingSpaces()
 
 
-const openMenuHamburguer = () =>{
+const menuHamburguer  = () =>{
     const menu_sign_in_up = document.querySelector('#menu_sign-in-up')
     const menu_open = document.querySelector('.menu_open')
 
@@ -111,4 +111,4 @@ const popUp_login_signUp = () => {
 
 }
 
-openMenuHamburguer()
+menuHamburguer ()
