@@ -82,7 +82,7 @@ input[type="radio"]{
     margin-right: 5px;
 }
 
-input[type="submit"]{
+.button{
     background-color: var(--scale-2-purple);
     width: 186px;
     height: 36px;
@@ -94,3 +94,21 @@ input[type="submit"]{
     font-weight: 600;
     margin: 50px 0 0 157px;
 }
+
+#first-step{
+    display: none;
+}
+
+/* input[type="submit"]{
+    background-color: var(--scale-2-purple);
+    width: 186px;
+    height: 36px;
+    border: none;
+    border-radius: 20px;
+    color: var(--white);
+    font-family: var(--font-primary);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 50px 0 0 157px;
+} */
+

@@ -86,20 +86,23 @@
 
                 
                     <form action="">
+                        <div id="first-step">
                         <ul>
                         <li>
                             <div class="liAlign">
                                 
                                     <label><h2>Pessoas</h2><p class="hintText">Indicamos 1 pessoa/7m²</p></label>
-                                
-                                <input type="number" id="points" name="points" min="1" max="100" step="1" value="1">
+                                <button>
+                                    
+                                </button>
+                                <input type="result" id="people" name="people">
                             </div>
                 </li>
                         <li>
                             <ul>
                                 <div class="liAlign">
                             <label><h2> Acesso a banheiros</h2></label>
-                            <input type="number" id="points" name="points" min="1" max="100" step="1" value="1">
+                            <input type="result" id="bathrooms" name="bathrooms">
                         </div>
                         
                         <li id="private-bathrooms"><p>Algum dos banheiros indicados é privado?</p>
@@ -117,9 +120,15 @@
 
                     <li class="liAlign"><label><h2>Tamanho da sala</h2><p class="hintText">Em m²</p></label>
                         <input type="text" name="roomSize" id="roomSize" placeholder="Ex: 10"></li>
-                        <input type="submit" value="Avançar">
+                        <button class="button">Avançar</button>
                     </ul>
+                </div>
+
+                <div id="second-step">
+                    
+                </div>
                     </form>
+                    
            
             </div>
     </section>
