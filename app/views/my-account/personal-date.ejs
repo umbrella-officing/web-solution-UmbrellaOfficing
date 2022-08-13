@@ -124,18 +124,21 @@
                                     <label for="birth-date">Data de nascimento</label>  
                                     <input type="date" class="form-control" name="birth-date" id="birth-date" >
                                 </div>
-                                <div>
-                                    <label for="gender">Sexo</label>
-                                    <input type="text" name="gender" id="gender" placeholder="Selecione uma opção"
-                                        onFocus="dropdown(0)" onBlur="dropdown(1)" class="form-select" />
-
-                                    <div class="dropDown">
-                                        <div class="listDropDown">
-                                            <div class="item" id="item-1" onMouseDown="option(1)">Feminino</div>
-                                            <div class="item" id="item-2" onMouseDown="option(2)">Masculino</div>
-                                        </div>
+                                <div class="select-box">
+                                    <div class="options-container">
+                                      <div class="option">
+                                        <input type="radio" class="radio" id="gender" name="category"/>
+                                        <label for="feminino">Feminino</label>
+                                      </div>
+                            
+                                      <div class="option">
+                                        <input type="radio" class="radio" id="masc" name="category" />
+                                        <label for="masc">Masculino</label>
+                                      </div>
                                     </div>
-                                </div>
+                            
+                                    <div class="selected">Feminino</div>
+                                  </div>
                             </div>
                             <div>
                                 <label for="profession">Profissão</label>

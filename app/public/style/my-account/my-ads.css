@@ -7,8 +7,9 @@
 }
 
 #my-ads > div {
-    padding: 181px 0 80px 0;
+    padding: 220px 0 80px 0;
     justify-content: space-between;
+    align-items: flex-start;
     color: var(--text-1-black);
 }
 
@@ -127,7 +128,6 @@ a{
     border-radius: 0px 10px 10px 0px;
     box-shadow: 5px 5px 5px 5px rgb(128 128 128 / 35%);
     width: 100%;
-    height: 197px;
     box-sizing: border-box;
 }
 
@@ -216,6 +216,7 @@ a{
 }
 
 #container_popUp_delete {
+    display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -233,7 +234,7 @@ a{
 .popUp_delete {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     position: relative;
     border-radius: 16px;
     background: white;
@@ -244,7 +245,6 @@ a{
 }
 
 .close_popup_delete {
-    margin-left: 780px;
     width: 18px;
     cursor: pointer;
 }
@@ -252,6 +252,13 @@ a{
 .popUp_delete p{
     text-align: center;
     font-size: 16px;
+    margin-top: 10px;
+}
+
+.popUp_delete div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .popUp_delete > div button {
@@ -261,10 +268,6 @@ a{
     font-size: 16px;
     font-weight: 600;
     margin: 30px 0;
-}
-
-.popUp_delete > div {
-    align-items: center;
 }
 
 #no {
