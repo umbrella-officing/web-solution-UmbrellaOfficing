@@ -181,8 +181,13 @@ body {
 #my-profile_section1-form2-url {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     margin-top: 20px;
+}
+
+
+#my-profile_section1-form2-url div{
+    width: 100%;
 }
 
 .whats,
@@ -190,7 +195,6 @@ body {
 .linkedin {
     font-size: 2.5rem;
     justify-content: space-between;
-    align-items: center;
 }
 
 

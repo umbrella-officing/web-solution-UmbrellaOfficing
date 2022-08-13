@@ -1,11 +1,12 @@
 function ads(x){
-    if(x === 1){
-        document.getElementById("actives_space").style.display="block";
-        document.getElementById("inactives_space").style.display="none";
-    }
+    const actives_space = document.getElementById("actives_space");
+    const inactives_space = document.getElementById("inactives_space");
 
-    else if(x === 2){
-        document.getElementById("actives_space").style.display="none";
-        document.getElementById("inactives_space").style.display="block";
-    }
+    if(x === 1){
+        actives_space.style.display="block";
+        inactives_space.style.display="none";
+        return
+    } 
+    actives_space.style.display="none";
+    inactives_space.style.display="block";
 }
