@@ -1,19 +1,19 @@
-function dropdown(p){
-    var e = document.getElementsByClassName('dropDown')[0];
-    var d = ['block', 'none'];
+const selected = document.querySelector(".selected");
+const optionsContainer = document.querySelector(".options-container");
 
-    e.style.display = d[p];
+const optionsList = document.querySelectorAll(".option");
 
-    var t = ['0px', '0px,-10px'];
-    setTimeout(function(){
-        e.style.transform = 'translate('+t[p]+')';
-    },0);
-}
+selected.addEventListener("click", () => {
+  optionsContainer.classList.toggle("active");
+});
 
-function option(o) {
-    var item = document.getElementById('item-'+o).innerHTML;
-    document.getElementsByTagName('input')[0].value = item
-}
+optionsList.forEach(o => {
+  o.addEventListener("click", () => {
+    selected.innerHTML = o.querySelector("option").innerHTML;
+    optionsContainer.classList.remove("active");
+  });
+});
+
 
 
 $(document).ready(function () {
