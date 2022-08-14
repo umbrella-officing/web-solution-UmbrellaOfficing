@@ -12,8 +12,9 @@ body {
 }
 
 #my-profile_section1>div {
-    padding: 181px 0 80px 0;
+    padding: 220px 0 80px 0;
     justify-content: space-between;
+    align-items: flex-start;
     color: var(--text-1-black);
 }
 
@@ -228,5 +229,5 @@ body {
     font-size: 14px;
     font-family: var(--font-primary);
     font-weight: 500;
-    margin: 40px 0 0 558px;
+    margin-top: 40px;
 }
