@@ -99,7 +99,7 @@ const popUp_login_signUp = () => {
     }
 
     function closePopUP() {
-        container_popUp_delete.addEventListener('click',e=>{
+       containerPopUp.addEventListener('click',e=>{
 
         if(e.target.classList == 'close_popup' || e.target == containerPopUp){
         containerPopUp.style.display = 'none'
