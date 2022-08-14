@@ -1,14 +1,27 @@
-function ads(x) {
+function ads() {
     const actives_space = document.getElementById("actives_space");
     const inactives_space = document.getElementById("inactives_space");
+    const optionsNavigation = document.querySelectorAll('.options-navigation')
 
-    if (x === 1) {
-        actives_space.style.display = "block";
-        inactives_space.style.display = "none";
-        return
+    optionsNavigation.forEach(option=>{
+        option.addEventListener('click',optionChecked)
+    })
+
+    function optionChecked(){
+        if(this == optionsNavigation[0]){
+            optionsNavigation[1].classList.remove('option-checked')
+            this.classList.add('option-checked')
+            actives_space.style.display = "block";
+            inactives_space.style.display = "none";
+            return
+        }
+
+        optionsNavigation[0].classList.remove('option-checked')
+        this.classList.add('option-checked')
+        actives_space.style.display = "none";
+        inactives_space.style.display = "block";
+
     }
-    actives_space.style.display = "none";
-    inactives_space.style.display = "block";
 }
 
 const openPopDelete = () => {
@@ -24,6 +37,8 @@ const openPopDelete = () => {
     closePopDelete(container_popUp_delete)
     
 }
+
+ads()
 
 function closePopDelete(container_popUp_delete) {
     container_popUp_delete.addEventListener('click', e => {
