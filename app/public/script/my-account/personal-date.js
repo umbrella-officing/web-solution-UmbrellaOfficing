@@ -14,8 +14,6 @@ optionsList.forEach(o => {
   });
 });
 
-
-
 $(document).ready(function () {
     $("#cpf").mask("000.000.000-00");
     $("#rg").mask("999.999.999-W", {

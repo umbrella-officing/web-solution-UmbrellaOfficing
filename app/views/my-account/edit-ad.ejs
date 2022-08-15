@@ -124,26 +124,44 @@
 
                     <form action="" method="">
                         <div class="edit-ad_section_form1">
-                            <div>
-                                <label for="environment_type">Tipo do ambiente</label>
-                                <input type="text" class="form-control" name="environment_type" id="environment_type"
-                                onFocus="type_environment(0)" onBlur="type_environment(1)" />
-                                <div class="typeEnvironment">
-                                    <div class="listTypeEnvironment">
-                                        <div class="type" id="type-1" onMouseDown="category(1)">Ambiente adaptável</div>
-                                        <div class="type" id="type-2" onMouseDown="category(2)">Ambiente usual</div>
+                            <div class="select-box">
+                                <label for="type_of_environment">Tipo de ambiente</label>
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="adaptable" name="category"
+                                            class="form-control" />
+                                        <option for="adaptable">Ambiente adaptável</option>
                                     </div>
+
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="usual" name="category" />
+                                        <option for="usual">Ambiente usual</option>
+                                    </div>
+                                </div>
+
+                                <div class="selected">
+                                    Ambiente adaptável
                                 </div>
                             </div>
 
                             <div class="edit-ad_section_form1-colum2">
-                                <div>
+                                <div class="selectCategory-box">
                                     <label for="category">Categoria</label>
-                                    <input type="text" class="form-control" name="category" id="category" />
-                                    <div class="dropDown">
-                                        <div class="listDropDown">
-                                            <div class="item" id="item-1" onMouseDown="category(1)"></div>
+                                    <div class="options-category">
+                                        <div class="option-category">
+                                            <input type="radio" class="radio1" id="" name="category"
+                                                class="form-control" />
+                                            <option for="">Categoria 1</option>
                                         </div>
+    
+                                        <div class="option-category">
+                                            <input type="radio" class="radio1" id="" name="category" />
+                                            <option for="">Categoria 2</option>
+                                        </div>
+                                    </div>
+    
+                                    <div class="selectedCategory">
+                                        
                                     </div>
                                 </div>
                                 <div>
