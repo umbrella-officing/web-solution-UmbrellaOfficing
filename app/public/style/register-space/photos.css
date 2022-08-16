@@ -26,30 +26,41 @@ main{
     align-items: center;
 }
 
-#photos_section > div > article{
+#photos_section > div > div{
     display: flex;
 }
 
-#photos_section > div > article > h1{
+#photos_section > div > div > h1{
     font-size: 40px;
     max-width: 310px;
     color: var(--white)
 }
 
-#photos_section > div > article > form{
+#photos_section > div > div > form{
     width: 506px;
 }
 
-#photos_section > div > article > form ul{
+#photos_section > div > div > form ul{
     list-style: none;
     width: 100%;
 }
 
-#grid_imgUp{
+#photos_section > div > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#align-items{
+    position: relative;
+}
+
+/* #grid_imgUp{
     max-width: 510px;
     margin: 0 auto;
     grid-template: "photo1 photo2" 478px "photo3 photo3" 478px;
-}
+} */
 
 .item{
     border: 1px solid var(--gray-border);
@@ -91,11 +102,22 @@ input[type="submit"]{
 }
 
 .divImg{
-    width: 200px;
-    height: 125px;
+    height: 250px;
     border: 1px solid var(--gray-border);
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#addImg-icon{
+    width: 80px;
+    height: 80px;
+}
+
+/* #addImg-icon :after{
+    content: "Adicionar imagem +"
+} */
 
 input[type="file"]{
     display: none;
