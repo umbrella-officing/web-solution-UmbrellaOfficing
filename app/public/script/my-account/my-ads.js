@@ -28,11 +28,14 @@ const openPopDelete = () => {
     const iconDelete = document.querySelectorAll(".delete");
     const container_popUp_delete = document.getElementById("container_popUp_delete");
 
+    console.log({iconDelete})
+
     iconDelete.forEach(element=> {
         element.addEventListener('click', () => {
         container_popUp_delete.style.display = 'flex'
     })
     })
+
 
     closePopDelete(container_popUp_delete)
     
@@ -43,6 +46,8 @@ ads()
 function closePopDelete(container_popUp_delete) {
     container_popUp_delete.addEventListener('click', e => {
 
+        console.log(e.target)
+
         if (e.target.id == 'close_pop' || e.target == container_popUp_delete) {
             container_popUp_delete.style.display = 'none'
         }
@@ -50,3 +55,4 @@ function closePopDelete(container_popUp_delete) {
 }
 
 openPopDelete()
+
