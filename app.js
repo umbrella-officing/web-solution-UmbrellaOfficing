@@ -32,6 +32,10 @@ const subApartment = require('./app/routes/register-space/categories/adaptables/
 const subUnity = require('./app/routes/register-space/categories/adaptables/subcategories/unity-subcategory')(app);
 const subHouse = require('./app/routes/register-space/categories/adaptables/subcategories/house-subcategory')(app);
 
+/*Requisições da tela admin*/
+const generalControl =require('./app/routes/admin/general-control')(app);
+
+
 app.listen(port,()=>{
     console.log(`Servidor no ar rodando na porta ${port}`)
 });

@@ -103,7 +103,7 @@ a{
 }
 
 
-#my-ads_navigation ul a:focus{
+.option-checked{
     font-weight: 900;
     color: var(--scale-3-purple);
     outline: none;
@@ -114,6 +114,7 @@ a{
 #my-ads_navigation ul li{
     font-size: 16px;
     margin-right: 40px;
+    cursor: pointer;
 }
 
 #actives_space section, 

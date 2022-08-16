@@ -1,36 +1,34 @@
-function spacedown(p){
-    var e = document.getElementsByClassName('change_space')[0];
-    var d = ['block', 'none'];
+const selected = document.querySelector(".selected");
+const optionsContainer = document.querySelector(".options-container");
 
-    e.style.display = d[p];
+const optionsList = document.querySelectorAll(".option");
 
-    var t = ['0px', '0px,-10px'];
-    setTimeout(function(){
-        e.style.transform = 'translate('+t[p]+')';
-    },0);
-}
+selected.addEventListener("click", () => {
+  optionsContainer.classList.toggle("active");
+});
 
-function option(o) {
-    var item = document.getElementById('space-'+o).innerHTML;
-    document.getElementsByTagName('input')[0].value = item
-}
+optionsList.forEach(o => {
+  o.addEventListener("click", () => {
+    selected.innerHTML = o.querySelector("option").innerHTML;
+    optionsContainer.classList.remove("active");
+  });
+});
 
-function type_environment(p){
-    var e = document.getElementsByClassName('typeEnvironment')[0];
-    var d = ['block', 'none'];
+const selectedCategory = document.querySelector(".selectCategory-box");
+const optionsCategory = document.querySelector(".options-category");
 
-    e.style.display = d[p];
+const optionsCategoryList = document.querySelectorAll(".option-category");
 
-    var t = ['0px', '0px,-10px'];
-    setTimeout(function(){
-        e.style.transform = 'translate('+t[p]+')';
-    },0);
-}
+selectedCategory.addEventListener("click", () => {
+  optionsCategory.classList.toggle("active1");
+});
 
-function category(y) {
-    var item = document.getElementById('type-'+y).innerHTML;
-    document.getElementsByTagName('input')[0].value = item
-}
+optionsCategoryList.forEach(o => {
+  o.addEventListener("click", () => {
+    selectedCategory.innerHTML = o.querySelector("option-category").innerHTML;
+    optionsCategory.classList.remove("active1");
+  });
+});
 
 
 $(document).ready(function () {
@@ -38,24 +36,3 @@ $(document).ready(function () {
     $("#price").mask("R$: 0,00");
 });
 
-// function incrementValue(valueMax) {
-//     var value = parseInt(document.getElementById('result', 'result1', 'result2', 'result3', 'result4', 'result5').value, 10);
-//     value = isNaN(value) ? 0 : value;
-//     if (value >= valueMax) {
-//         value = valueMax;
-//     } else {
-//         value++;
-//     }
-//     document.getElementById('result', 'result1', 'result2', 'result3', 'result4', 'result5').value = value;
-// }
-
-// function decrementValue(valueMin) {
-//     var value = parseInt(document.getElementById('result', 'result1', 'result2', 'result3', 'result4', 'result5').value, 10);
-//     value = isNaN(value) ? 0 : value;
-//     if (value <= valueMin) {
-//         value = 0;
-//     } else {
-//         value--;
-//     }
-//     document.getElementById('result', 'result1', 'result2', 'result3', 'result4', 'result5').value = value;
-// }

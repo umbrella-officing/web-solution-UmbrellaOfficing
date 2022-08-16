@@ -7,6 +7,13 @@ body{
     background-repeat: no-repeat;
 }
 
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 ul{
     list-style: none;
     position: relative;
@@ -15,7 +22,6 @@ ul{
 #officing_features_section{
     display: flex;
     justify-content: center;
-    padding-top: 105px;
     height: 590px;
 }
 

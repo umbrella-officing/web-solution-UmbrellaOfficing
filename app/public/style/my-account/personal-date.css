@@ -1,9 +1,9 @@
 body {
-    font-family: var(--font-primary); 
-    line-height: var(--bs-body-line-height); 
+    font-family: var(--font-primary);
+    line-height: var(--bs-body-line-height);
 }
 
-.container_search{
+.container_search {
     display: none;
 }
 
@@ -114,7 +114,7 @@ body {
     font-weight: 500;
 }
 
-#personal-date_section1 form>div>div input{
+#personal-date_section1 form>div>div input {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 10px;
@@ -134,79 +134,84 @@ body {
     grid-column-gap: 25px;
 }
 
+.select-box {
+    display: flex;
+    width: 379.5px;
+    flex-direction: column;
+}
 
 .select-box .options-container {
-  max-height: 0;
-  width: 100%;
-  opacity: 0;
-  transition: all 0.4s;
-  border-radius: 8px;
-  overflow: hidden;
-  order: 1;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    order: 1;
 }
 
 .selected {
-  border-radius: 8px;
-  margin-bottom: 8px;
-  position: relative;
-  order: 0;
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    order: 0;
 }
 
 .selected::after {
-  content: "";
-  background: url("img/arrow-down.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  position: absolute;
-  height: 100%;
-  width: 32px;
-  right: 10px;
-  top: 5px;
-
-  transition: all 0.4s;
+    content: "";
+    background-image: url("../images/my-account/arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+    transition: all 0.4s;
 }
 
 .select-box .options-container.active {
-  max-height: 240px;
-  opacity: 1;
-  overflow-y: scroll;
+    max-height: 100px;
+    opacity: 1;
 }
 
-.select-box .options-container.active + .selected::after {
-  transform: rotateX(180deg);
-  top: -6px;
+.option label {
+    margin: 10px;
+    height: 50px;
+}
+
+.select-box .options-container.active+.selected::after {
+    transform: rotateX(180deg);
+    top: -6px;
 }
 
 .select-box .options-container::-webkit-scrollbar {
-  width: 8px;
-  background: #0d141f;
-  border-radius: 0 8px 8px 0;
+    width: 8px;
+    border-radius: 0 8px 8px 0;
 }
 
 .select-box .options-container::-webkit-scrollbar-thumb {
-  background: #525861;
-  border-radius: 0 8px 8px 0;
+    border-radius: 0 8px 8px 0;
 }
 
 .select-box .option,
 .selected {
-  padding: 12px 24px;
-  cursor: pointer;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .select-box .option:hover {
-  background: #414b57;
+    background: var(--scale-9-blue);
 }
 
 .select-box label {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .select-box .option .radio {
-  display: none;
+    display: none;
 }
-
 
 #password {
     font-size: 14px;
