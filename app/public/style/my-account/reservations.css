@@ -1,3 +1,7 @@
+body {
+    font-family: var(--font-primary);
+}
+
 .container_search{
     display: none;
 }
@@ -256,7 +260,8 @@
     box-sizing: border-box;  
     background: #B2B0FF;
     padding: 20px;
-    width: 830px;
+    width: 900px;
+    height: 250px;
     padding: 30px 45px 15px 45px;
     animation: fadeIn ease .27s;
 }
@@ -267,7 +272,7 @@
     color: white;
 }
 
-#popUp-cancel_state1 textarea {
+.popUp_cancel form textarea {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 15px;
@@ -307,7 +312,7 @@
 }
 
 .arrow-left {
-    font-size: 28px;
+    font-size: 26px;
     color: var(--scale-2-purple);
     margin: -5px 0 0 -20px;
 }
@@ -317,9 +322,13 @@
 }
 
 #popUp-cancel_state2 > div img{
-    width: 200px;
+    width: 170px;
     margin: -20px 60px 0 -10px
 }
+
+.popUp_flex > div {
+    width: 100%;
+} 
 
 #popUp-cancel_state2 > div label{
     font-size: 20px;
@@ -327,6 +336,8 @@
     color: white;
 }
 
+
 #popUp-cancel_state2 div > button::after {
     margin-top: -30px;
 }
+
