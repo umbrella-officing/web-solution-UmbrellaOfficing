@@ -278,7 +278,7 @@
     margin-top: 15px;
 }
 
-#popUp_go {
+.popUp_go {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
