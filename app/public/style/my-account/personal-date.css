@@ -159,23 +159,24 @@ body {
     order: 0;
 }
 
-.selected::after {
+
+.selected img {
     content: "";
-    background-image: url("../images/my-account/arrow.svg");
+    background: url("../images/my-account/arrow-down.svg");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
     height: 100%;
-    width: 32px;
+    width: 12px;
     right: 10px;
-    top: 5px;
+    top: 0px;
+  
     transition: all 0.4s;
-}
+  }
 
 .select-box .options-container.active {
     max-height: 100px;
     opacity: 1;
-    overflow-y: scroll;
 }
 
 .option label {

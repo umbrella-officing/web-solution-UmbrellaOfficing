@@ -2,13 +2,14 @@ body {
     font-family: var(--font-primary);
 }
 
-.container_search{
+.container_search {
     display: none;
 }
 
 #edit-ad_section>div {
-    padding-top: 181px;
+    padding: 220px 0 80px 0;
     justify-content: space-between;
+    align-items: flex-start;
     color: var(--text-1-black);
 }
 
@@ -24,7 +25,11 @@ body {
 
 
 /*Menu lateral*/
-#come_back{
+#edit-ad_section a {
+    text-decoration: none
+}
+
+#come_back {
     display: flex;
     width: 64px;
     padding: 0;
@@ -33,7 +38,7 @@ body {
     border: none;
 }
 
-#come_back{
+#come_back {
     font-family: var(--font-primary);
     font-size: 14px;
     color: var(--scale-13-blue);
@@ -42,10 +47,6 @@ body {
 .chevron_left {
     font-size: 25px;
     margin-right: 5px;
-}
-
-#edit-ad_section>div nav ul {
-    list-style: none;
 }
 
 #edit-ad_section>div nav ul li {
@@ -76,7 +77,7 @@ body {
 
 .edit-ad_section_change-space {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
 .edit-ad_section_change-space h1 {
@@ -99,6 +100,125 @@ body {
     color: var(--text-1-black);
 }
 
+
+.select-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.options-spaces,
+.options-container,
+.options-category,
+.options-subcategory {
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    overflow: hidden;
+    order: 1;
+}
+
+.selected,
+.selected-category,
+.selected-subcategory {
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    order: 0;
+}
+
+.selected-space img,
+.selected img,
+.selected-category img,
+.selected-subcategory img {
+    content: "";
+    background: url("../images/my-account/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 12px;
+    right: 10px;
+    top: 0px;
+
+    transition: all 0.4s;
+}
+
+.select-box .options-spaces.active,
+.select-box .options-container.active1,
+.select-box .options-category.active2,
+.select-box .options-subcategory.active3 {
+    max-height: 100px;
+    opacity: 1;
+}
+
+.select-box .options-spaces.active,
+.select-box .options-category.active2,
+.select-box .options-subcategory.active3 {
+    overflow-y: scroll;
+}
+
+.option label {
+    margin: 10px;
+    height: 50px;
+}
+
+.select-box .options-spaces.active+.selected-space::after,
+.select-box .options-container.active1+.selected::after,
+.select-box .options-category.active2+.selected-category::after,
+.select-box .options-subcategory.active3+.selected-subcategory::after {
+    transform: rotateX(180deg);
+    top: -6px;
+}
+
+.select-box .options-spaces::-webkit-scrollbar,
+.select-box .options-container::-webkit-scrollbar,
+.select-box .options-category::-webkit-scrollbar,
+.select-box .options-subcategory::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-spaces::-webkit-scrollbar-thumb,
+.select-box .options-container::-webkit-scrollbar-thumb,
+.select-box .options-category::-webkit-scrollbar-thumb,
+.select-box .options-subcategory::-webkit-scrollbar-thumb {
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .option-space,
+.select-space,
+.option,
+.selected,
+.option-category,
+.selected-category,
+.option-subcategory,
+.selected-subcategory {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.select-box .option-space:hover,
+.select-box .option:hover,
+.select-box .option-category:hover,
+.select-box .option-subcategory:hover {
+    background: var(--scale-9-blue);
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option-space .radio,
+.option .radio1,
+.option-category .radio2,
+.option-subcategory .radio3 {
+    display: none;
+}
+
 .change_space {
     width: 180px;
     height: 105px;
@@ -110,18 +230,20 @@ body {
     transform: translate(0px, -10px);
 }
 
-.space, .type {
+.space,
+.type {
     padding: 10px 10px 0 10px;
     font-size: 14px;
     box-sizing: border-box;
     cursor: pointer;
 }
 
-.space:hover, .type:hover{
+.space:hover,
+.type:hover {
     background-color: var(--scale-3-blue / 20%);
 }
 
-.typeEnvironment{
+.typeEnvironment {
     width: 100%;
     height: 75px;
     border-radius: 5px;
@@ -145,13 +267,13 @@ body {
     margin: 30px 0 10px 0;
 }
 
-
 .edit-ad_section_form1 label {
     font-size: 16px;
     font-weight: 500;
 }
 
-.edit-ad_section_form1 input, textarea {
+.edit-ad_section_form1 input,
+textarea {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 10px;
@@ -171,7 +293,8 @@ body {
     grid-column-gap: 25px;
 }
 
-.edit-ad_section_flex, .photos {
+.edit-ad_section_flex,
+.photos {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -193,11 +316,13 @@ body {
     font-weight: 500;
 }
 
-.photos{
+.photos {
     margin-top: 30px;
 }
 
-#photo1, #photo2, #photo3 {
+#photo1,
+#photo2,
+#photo3 {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 10px;
@@ -260,7 +385,6 @@ body {
     outline: none;
 }
 
-
 #price {
     font-size: 25px;
     font-weight: 600;
@@ -281,7 +405,6 @@ body {
 .edit-ad_section_form2 label {
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 5px;
     text-align: center;
 }
 
@@ -298,19 +421,19 @@ body {
     align-items: center;
 }
 
-.edit-ad_section_form2_flex3 input{
+.edit-ad_section_form2_flex3 input {
     width: 40px;
     height: 20px;
     border: none;
     text-align: center;
 }
 
-.edit-ad_section_form2_flex3 input{
+.edit-ad_section_form2_flex3 input {
     font-size: 16px;
 }
 
 
-.edit-ad_section_form2_flex3 button{
+.edit-ad_section_form2_flex3 button {
     width: 35px;
     height: 35px;
     background-color: white;
@@ -318,14 +441,23 @@ body {
     border-radius: 35px;
 }
 
-.edit-ad_section_form2_flex3 button{
-   font-size: 20px;
-   text-align: center;
-   color: #8C8C8C;
-   padding: 1px;
+.edit-ad_section_form2_flex3 button {
+    font-size: 20px;
+    text-align: center;
+    color: #8C8C8C;
+    padding: 1px;
 }
 
-#size_room, #floatingSelect {
+#size_room {
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+    width: 110px;
+    height: 50px;
+}
+
+#floatingSelect {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 18px 10px 0 10px;
@@ -347,7 +479,8 @@ body {
     text-align: left;
 }
 
-.form-select, .form-select option {
+.form-select,
+.form-select option {
     font-size: 14px;
     border: none;
 }
