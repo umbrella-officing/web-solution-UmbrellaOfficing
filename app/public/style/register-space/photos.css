@@ -111,8 +111,8 @@ input[type="submit"]{
 }
 
 #addImg-icon{
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
 }
 
 /* #addImg-icon :after{
@@ -121,4 +121,31 @@ input[type="submit"]{
 
 input[type="file"]{
     display: none;
+}
+
+.picture-image{
+    width: 372px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed currentColor;
+    border-radius: 20px;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    color: rgb(90, 90, 90);
+    transition: color 100ms ease-in-out;
+}
+
+.picture-image:hover{
+    color: var(--scale-1-blue);
+}
+
+.picture-image:active{
+    color: var(--scale-8-blue);
+    border: 1.5px dashed currentColor;
+    font-weight: 400;
+}
+
+.upImg{
+    max-width: 100%;
 }
