@@ -26,6 +26,7 @@ const officingFeatures = require('./app/routes/register-space/officing-features'
 const apresentation = require('./app/routes/register-space/apresentation')(app);
 const photos = require('./app/routes/register-space/photos')(app);
 const finalization = require('./app/routes/register-space/finalization')(app);
+const localization = require('./app/routes/register-space/localization')(app);
 
 /*Requisições das subcategorias*/
 const subApartment = require('./app/routes/register-space/categories/adaptables/subcategories/apartment-subcategory')(app);
