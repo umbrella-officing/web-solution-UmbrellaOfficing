@@ -7,17 +7,19 @@ const openInputsearchCoworkingSpaces = ()=> {
     const box_black = document.querySelector('#box_black')
     const type_office = document.querySelector('#type_office')
 
-    search.addEventListener('click',(e)=>{
-        header.classList.add('header_expanded')
-        type_office.style.display = 'flex'
-        search_txt.style.display = 'none'
-        search.classList.add("expanded")
-        container_informations_find_coworking.style.display = 'flex'
-        box_black.style.display = 'block'
+    if(search !== null){
+        console.log('teste')
+        search.addEventListener('click',(e)=>{
+            header.classList.add('header_expanded')
+            type_office.style.display = 'flex'
+            search_txt.style.display = 'none'
+            search.classList.add("expanded")
+            container_informations_find_coworking.style.display = 'flex'
+            box_black.style.display = 'block'
     })
-    
-    select_type_office()
     closeInputsearchCoworkingSpaces(box_black,header,search,search_txt,container_informations_find_coworking)
+}
+    select_type_office()
 }
 
 const select_type_office = () => {
@@ -54,9 +56,6 @@ const closeInputsearchCoworkingSpaces = (box_black,header,search,search_txt,cont
         }
         })
 }
-
-openInputsearchCoworkingSpaces()
-
 
 const menuHamburguer  = () =>{
     const menu_sign_in_up = document.querySelector('#menu_sign-in-up')
@@ -111,4 +110,5 @@ const popUp_login_signUp = () => {
 
 }
 
+openInputsearchCoworkingSpaces()
 menuHamburguer ()

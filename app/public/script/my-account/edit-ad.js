@@ -74,3 +74,8 @@ let a = 1;
 
 plus.addEventListener('click', () => update(++a));
 minus.addEventListener('click', () => update(--a));
+
+$(document).ready(function () {
+    $("#cep_ad").mask("00.000-000");
+    $("#price").mask("R$: 0,00");
+});

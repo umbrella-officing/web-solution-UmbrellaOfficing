@@ -1,0 +1,36 @@
+body{
+    background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
+    background-repeat: no-repeat;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 1050px;
+}
+
+.default_margin{
+    justify-content: space-between;
+    align-items: center;
+}
+
+#localization_section{
+    margin-top: 105px;
+}
+
+h1{
+    max-width: 350px;
+    font-size: 40px;
+    color: var(--white);
+}
+
+#map{
+    width: 100vw;
+    left: 50%;
+    position: fixed;
+    height: 100vh;
+    max-height: calc(1000px - 105px);
+    position: fixed;
+}

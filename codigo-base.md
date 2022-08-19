@@ -1,5 +1,3 @@
-<!--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-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
 </head>
 <body>
     <header id="header" class="container_margin_default">
         <div class="default_margin">
             <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
-            <div>
+            <div id="container_search">
                 <ul id="type_office">
                     <li class="option_office checked">Espaço adaptado</li>
                     <li class="option_office">Espaço corporativo</li>
                 </ul>
-                    <div class="container_search">
+                    <div class="container_search_input">
                         <span id="search_txt">Busque locais para trabalho</span>
                         <div id='container_informations_find_coworking'>
                             <input id="localization" type="text" placeholder="Localização:">
@@ -50,30 +47,102 @@
                     <div>
                         <nav>
                             <ul>
-                                <li>
+                                <li class="popUp-login-signUp">
                                     <img src="images/default/my-perfil.png" alt="meu perfil">
-                                    My profile
+                                    Login
+                                </li>
+                                <li class="popUp-login-signUp">
+                                    <img src="images/default/sign_up.png" alt="favoritos">
+                                    Cadastre-se
                                 </li>
                                 <li>
-                                    <img src="images/default/favorite.png" alt="favoritos">
+                                    <img src="images/default/favorite.png" alt="suporte">
                                     Favoritos
-                                </li>
-                                <li>
-                                    <img src="images/default/question.png" alt="suporte">
-                                    Help & Support
                                 </li>
                             </ul>
                         </nav>
                     </div>
                     <div>
-                        <img src="images/default/log-out.png" alt="sair da conta">
-                        Logout
+                        <img src="images/default/question.png" alt="sair da conta">
+                        Help & Support
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+        <div id="container_popUp_login-signUp">
+            <div class="popUp">
+                <img class="close_popup" src="images/default/close_icon.svg" alt="close">
+                <h2>Umbrella Officing</h2>
+                <h3>Seja bem-vindo</h3>
+                <div>
+                    <span>Faça seu login para continuar</span>
+                    <form>       
+                        <label for="cpf-email">
+                            CPF ou E-mail :
+                            <input type="text" id="cpf-email">
+                        </label>
+                        
+                        <label for="password-login">
+                            Senha:
+                            <input type="password" id="password-login">
+                        </label>
 
+                        <div>
+                            <a href="#">Esqueceu a senha?</a>
+                        </div>
+                        
+                        <button type="submit">LOGIN</button>
+                    </form>
+                    <div id="alternatives">
+                        <div><span>OR</span></div>
+                        <div>
+                            <span>Faça login com suas Redes Sociais</span>
+                            <img src="images/default/icon-google.png" alt="ícone do google">
+                            <img src="images/default/icon-facebok.svg" alt="ícone do facebbok">
+                            <img src="images/default/icon-apple.png" alt="ícone do facebbok">
+                            <span>Ainda não possui conta? <a href="#">Cadastre-se</a></span>
+                        </div>
+                    </div>
+            </div>     
+            </div>
+            <div class="popUp">
+                <img class="close_popup" src="images/default/close_icon.svg" alt="close">
+                <h2>Umbrella Officing</h2>
+                <h3>Seja bem-vindo</h3>
+                <div>
+                    <span>Cadastre-se e faça parte da nossa comunidade</span>
+                    <form>
+                        <label for="name">
+                            Nome:
+                            <input type="text" id="name">
+                        </label>
+
+                        <label for="middlename">
+                            Sobrenome:
+                            <input type="text" id="middlename">
+                        </label>
+
+                        <label for="cpf">
+                            CPF:
+                            <input type="number" id="cpf">
+                        </label>
+
+                        <label for="birth_date">
+                            Data de nascimento
+                            <input type="date" id="birth_date">
+                        </label>
+                        
+                        <label for="phone">
+                            Telefone:
+                            <input type="number" id="phone">
+                        </label>
+
+                        <button type="submit">CADASTRAR</button>
+                    </form>
+            </div>        
+            </div>
+        </div>
+    </header>
     <div id='box_black'></div>
 
 
@@ -130,7 +199,7 @@
         
     </footer>
 
-    <script src="script/default/default.js"></script>
+    <script src="script/default/header/header.js"></script>
 
 </body>
 </html>

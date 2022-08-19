@@ -79,38 +79,40 @@
         
         <section id="photos_section" class="container_margin_default"> 
             <div class="default_margin">
-                <article>
+                <div id="align-items">
                 <h1>Envie algumas fotos do seu officing</h1>
-            </article>
 
-            <article>
                 <form action="">
-                <ul>
-                    <div id="grid_imgUp">
-                        <li>
-                            <div id="item1" class="item"></div>
-                        </li>
-                        <li>
-                            <div id="item2" class="item"></div>
-                        </li>
-                        <li>
-                            <div id="item3" class="item"></div>
-                        </li>
-                    </div>
+
+                    <label for="picture-input" class="picture" tabIndex="0">
+                        <input type="file" accept="image/*" class="picture-input" id="picture-input">
+                        <span class="picture-image"></span>
+                    </label>
+                    
+            
+                            <!-- <label for="img1">
+                                <div class="divImg">
+                                    <img id="addImg-icon" src="images/register-space/add-image.png" alt="Adicionar uma foto do espaço">
+                            </div>
+                        </label>
+                            <input type="file" accept="image/*" name="img1" id="img1">
+                   -->
+                   
 
 
-                </ul>
                 <input type="submit" value="Avançar">
+
                 <!-- <input type="file" id="img" name="img" accept="image/*">
                 <input type="file" id="img" name="img" accept="image/*">
                 <input type="file" id="img" name="img" accept="image/*"> -->
             </form>
-            </article>
+        </div>
             </div>
     </section>
     </main>
 
     <script src="script/default/default.js"></script>
+    <script src="script/register-space/photos.js"></script>
 
 </body>
 </html>

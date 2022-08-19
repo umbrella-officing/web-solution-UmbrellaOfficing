@@ -26,11 +26,19 @@ const officingFeatures = require('./app/routes/register-space/officing-features'
 const apresentation = require('./app/routes/register-space/apresentation')(app);
 const photos = require('./app/routes/register-space/photos')(app);
 const finalization = require('./app/routes/register-space/finalization')(app);
+const localization = require('./app/routes/register-space/localization')(app);
 
 /*Requisições das subcategorias*/
 const subApartment = require('./app/routes/register-space/categories/adaptables/subcategories/apartment-subcategory')(app);
 const subUnity = require('./app/routes/register-space/categories/adaptables/subcategories/unity-subcategory')(app);
 const subHouse = require('./app/routes/register-space/categories/adaptables/subcategories/house-subcategory')(app);
+
+/*Requisições das subcategorias*/
+const search = require('./app/routes/search-spaces/search')(app)
+
+/*Requisições da tela admin*/
+const generalControl =require('./app/routes/admin/general-control')(app);
+
 
 app.listen(port,()=>{
     console.log(`Servidor no ar rodando na porta ${port}`)
