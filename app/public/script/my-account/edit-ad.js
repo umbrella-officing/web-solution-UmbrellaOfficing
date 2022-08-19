@@ -62,3 +62,15 @@ optionsSubcategoryList.forEach(o => {
   });
 });
 
+const plus = document.querySelectorAll('.plus'),
+      minus = document.querySelectorAll('.minus'),
+      num = document.querySelectorAll('.num');
+
+update = (n) => {
+    num.innerText = ( n <10 && n > 0) ? `${n}` : n;
+}
+
+let a = 1;
+
+plus.addEventListener('click', () => update(++a));
+minus.addEventListener('click', () => update(--a));
