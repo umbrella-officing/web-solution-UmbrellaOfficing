@@ -62,9 +62,9 @@ optionsSubcategoryList.forEach(o => {
   });
 });
 
-const plus = document.querySelectorAll('.plus'),
-      minus = document.querySelectorAll('.minus'),
-      num = document.querySelectorAll('.num');
+const plus = document.querySelector('.plus'),
+      minus = document.querySelector('.minus'),
+      num = document.querySelector('.num');
 
 update = (n) => {
     num.innerText = ( n <10 && n > 0) ? `${n}` : n;
