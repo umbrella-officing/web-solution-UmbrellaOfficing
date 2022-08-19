@@ -2,16 +2,18 @@
     display: none;
 }
 
-body{    
+body{
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
 }
 
 main{
     height: 100vh;
+    max-height: 1050px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10%;
 }
 
 ul{
@@ -22,7 +24,6 @@ ul{
 #officing_features_section{
     display: flex;
     justify-content: center;
-    height: 590px;
 }
 
 #officing_features_section > div{
@@ -34,6 +35,8 @@ ul{
     font-size: 40px;
     font-weight: 700;
     max-width: 435px;
+    position: fixed;
+    top: 50%;
 }
 
 #officing_features_section > div > form{
@@ -89,6 +92,13 @@ input[type="radio"]{
     margin-right: 5px;
 }
 
+.align-button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 100px;
+}
+
 .button{
     background-color: var(--scale-2-purple);
     width: 186px;
@@ -100,7 +110,6 @@ input[type="radio"]{
     font-size: 20px;
     font-weight: 600;
     margin-top: 40px;
-    position: absolute;
     right: 0;
 }
 
@@ -118,4 +127,30 @@ input[type="radio"]{
     font-weight: 600;
     margin: 50px 0 0 157px;
 } */
+
+#second-step > ul{
+    padding-top: 50%;
+}
+
+#second-step > ul > li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid var(--gray-border);
+    border-radius: 20px;
+    padding: 14px 0 14px 18px;
+}
+
+#second-step > ul > li > p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.feature-icon{
+    width: 32px;
+    height: 31px;
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+}
 

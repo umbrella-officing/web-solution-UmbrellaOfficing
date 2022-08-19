@@ -8,7 +8,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 1000px;
+    max-height: 1050px;
 }
 
 .default_margin{
