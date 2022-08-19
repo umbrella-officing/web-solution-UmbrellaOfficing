@@ -33,6 +33,9 @@ const subApartment = require('./app/routes/register-space/categories/adaptables/
 const subUnity = require('./app/routes/register-space/categories/adaptables/subcategories/unity-subcategory')(app);
 const subHouse = require('./app/routes/register-space/categories/adaptables/subcategories/house-subcategory')(app);
 
+/*Requisições das subcategorias*/
+const search = require('./app/routes/search-spaces/search')(app)
+
 /*Requisições da tela admin*/
 const generalControl =require('./app/routes/admin/general-control')(app);
 
