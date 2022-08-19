@@ -8,14 +8,14 @@ const openInputsearchCoworkingSpaces = ()=> {
     const type_office = document.querySelector('#type_office')
 
     if(search !== null){
-    console.log('teste')
-    search.addEventListener('click',(e)=>{
-        header.classList.add('header_expanded')
-        type_office.style.display = 'flex'
-        search_txt.style.display = 'none'
-        search.classList.add("expanded")
-        container_informations_find_coworking.style.display = 'flex'
-        box_black.style.display = 'block'
+        console.log('teste')
+        search.addEventListener('click',(e)=>{
+            header.classList.add('header_expanded')
+            type_office.style.display = 'flex'
+            search_txt.style.display = 'none'
+            search.classList.add("expanded")
+            container_informations_find_coworking.style.display = 'flex'
+            box_black.style.display = 'block'
     })
     closeInputsearchCoworkingSpaces(box_black,header,search,search_txt,container_informations_find_coworking)
 }
