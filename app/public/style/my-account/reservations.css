@@ -245,7 +245,7 @@ body {
 }
 
 #container_popUp_cancel {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -303,7 +303,7 @@ body {
     color: var(--scale-2-purple);
 }
 
-#go, #submit {
+.go, #submit {
     background-color: var(--scale-2-purple);
     border: none;
     width: 134px;
@@ -312,7 +312,7 @@ body {
     border-radius: 30px;
 }
 
-#go, #submit {
+.go, #submit {
     font-size: 14.5px;
     font-family: var(--font-primary);
     font-weight: 500;
@@ -390,4 +390,9 @@ body {
 
 #popUp-cancel_state2 div>button::after {
     margin-top: -30px;
+}
+
+#popUp-cancel_state2, 
+#popUp-cancel_state3 {
+    display: none;
 }

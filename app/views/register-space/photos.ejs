@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/register-space/photos.css">
 </head>
+
 <body>
     <header id="header" class="container_margin_default">
         <div class="default_margin">
@@ -22,24 +25,24 @@
                     <li class="option_office checked">Espaço adaptado</li>
                     <li class="option_office">Espaço corporativo</li>
                 </ul>
-                    <div class="container_search">
-                        <span id="search_txt">Busque locais para trabalho</span>
-                        <div id='container_informations_find_coworking'>
-                            <input id="localization" type="text" placeholder="Localização:">
-                            <input type="date" id="check_in">
-                        </div>
-                        <a href="#">
-                            <div>
-                                <img src="images/default/search.svg" alt="pesquisa">
-                            </div>
-                        </a>  
+                <div class="container_search">
+                    <span id="search_txt">Busque locais para trabalho</span>
+                    <div id='container_informations_find_coworking'>
+                        <input id="localization" type="text" placeholder="Localização:">
+                        <input type="date" id="check_in">
                     </div>
+                    <a href="#">
+                        <div>
+                            <img src="images/default/search.svg" alt="pesquisa">
+                        </div>
+                    </a>
+                </div>
             </div>
 
             <div id="menu">
                 <div id='menu_sign-in-up'>
-                        <img src="images/default/user.svg" alt="usuário">
-                        <img src="images/default/menu_hamburguer.svg" alt="menu">
+                    <img src="images/default/user.svg" alt="usuário">
+                    <img src="images/default/menu_hamburguer.svg" alt="menu">
                 </div>
                 <div class="menu_open">
                     <div>
@@ -71,48 +74,64 @@
                 </div>
             </div>
         </div>
-    </header> 
+    </header>
 
     <div id='box_black'></div>
 
     <main>
-        
-        <section id="photos_section" class="container_margin_default"> 
+
+        <section id="photos_section" class="container_margin_default">
             <div class="default_margin">
                 <div id="align-items">
-                <h1>Envie algumas fotos do seu officing</h1>
-
-                <form action="">
-
-                    <label for="picture-input" class="picture" tabIndex="0">
-                        <input type="file" accept="image/*" class="picture-input" id="picture-input">
-                        <span class="picture-image"></span>
-                    </label>
                     
-            
-                            <!-- <label for="img1">
+                    <img src="images/default/return_arrow-white.svg" alt="Ícone de seta - Voltar">
+                    <h1>Envie algumas fotos do seu officing</h1>
+
+                    <form action="">
+
+                        <div>
+                            <label for="picture-input" class="picture" tabIndex="0">
+                                <input type="file" accept="image/*" class="picture-input" id="picture-input">
+                                <span class="picture-image"></span>
+                            </label>
+                            <label for="picture-input" class="picture" tabIndex="0">
+                                <input type="file" accept="image/*" class="picture-input" id="picture-input">
+                                <span class="picture-image"></span>
+                            </label>
+                        </div>
+
+                       
+
+                        <label for="picture-input" class="picture" tabIndex="0">
+                            <input type="file" accept="image/*" class="picture-input" id="picture-input">
+                            <span class="picture-image"></span>
+                        </label>
+
+
+                        <!-- <label for="img1">
                                 <div class="divImg">
                                     <img id="addImg-icon" src="images/register-space/add-image.png" alt="Adicionar uma foto do espaço">
                             </div>
                         </label>
                             <input type="file" accept="image/*" name="img1" id="img1">
                    -->
-                   
 
 
-                <input type="submit" value="Avançar">
 
-                <!-- <input type="file" id="img" name="img" accept="image/*">
+                        <input type="submit" value="Avançar">
+
+                        <!-- <input type="file" id="img" name="img" accept="image/*">
                 <input type="file" id="img" name="img" accept="image/*">
                 <input type="file" id="img" name="img" accept="image/*"> -->
-            </form>
-        </div>
+                    </form>
+                </div>
             </div>
-    </section>
+        </section>
     </main>
 
     <script src="script/default/header/header.js"></script>
     <script src="script/register-space/photos.js"></script>
 
 </body>
+
 </html>
