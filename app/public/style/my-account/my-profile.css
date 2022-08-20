@@ -3,7 +3,7 @@ body {
     list-style: none;
 }
 
-.container_search{
+.container_search {
     display: none;
 }
 
@@ -131,7 +131,6 @@ body {
     justify-content: space-between;
 }
 
-
 .my-profile_section1-form-flex>div:nth-child(1) {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
@@ -150,31 +149,76 @@ body {
     margin: 28px 0 14px 0;
 }
 
-.my-profile_section1-form-flex>div:nth-child(1) ul {
+.rating {
     display: flex;
-    list-style: none;
 }
 
-.my-profile_section1-form-flex>div:nth-child(1) ul li {
-    width: 41px;
-    height: 8px;
-    margin-right: 6px;
+.rating input {
+    display: none;
+}
+
+.rating label {
+    display: block;
+    cursor: pointer;
+    margin-right: 15px;
+    width: 25px;
+}
+
+.rating label:before {
+    content: "";
+    width: 35px;
+    height: 9px;
+    border-radius: 10px;
+    border: 2px solid var(--gray-border);
+    margin-right: 5px;
+    position: absolute;
+    display: block;
+    font-size: 25px;
+    background-color: white;
+    text-shadow: 0 2px 2px rgb(128 128 128 / 10%);
+}
+
+
+.rating label:after {
+    content: "";
+    width: 35px;
+    height: 9px;
+    border-radius: 10px;
+    margin-right: 5px;
+    position: relative;
+    top: 0;
+    display: block;
+    font-size: 25px;
     background-color: var(--scale-2-purple);
+    opacity: 0;
+    transition: .5s;
+}
+
+.rating label:hover:after,
+.rating label:hover~label:after,
+.rating input:checked~label:after {
+    opacity: 1;
+}
+
+.rive {
+    font-size: 30px;
+    margin-right: 6px;
+    color: var(--scale-2-purple);
     border-radius: 16px;
 }
 
-.my-profile_section1-form-flex>div:nth-child(2) {
-    width: 344px;
+.social-medias {
+    width: 50%;
 }
 
-.my-profile_section1-form-flex>div:nth-child(2) h3 {
+.social-medias h3 {
     font-size: 18px;
     font-weight: 600;
     font-family: var(--font-primary);
 }
 
 
-.my-profile_section1-form-flex>div:nth-child(2) p {
+.social-medias p {
     font-size: 12px;
     margin-top: 5px;
 }
@@ -187,7 +231,7 @@ body {
 }
 
 
-#my-profile_section1-form2-url div{
+#my-profile_section1-form2-url div {
     width: 100%;
 }
 

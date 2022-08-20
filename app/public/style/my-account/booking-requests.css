@@ -1,3 +1,7 @@
+body {
+    font-family: var(--font-primary);
+}
+
 .container_search {
     display: none;
 }
@@ -174,3 +178,128 @@ section::after {
 #client-avaliation {
     display: none;
 }
+
+#container_popUp_avaliation-owner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+}
+
+.popUp_avaliation-owner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 16px 16px 0 0;
+    box-sizing: border-box;
+    background: #B2B0FF;
+    padding: 20px;
+    width: 950px;
+    padding: 40px 45px 15px 45px;
+    animation: fadeIn ease .27s;
+}
+
+.popUp_flex {
+    display: flex;
+    top: 0;
+}
+
+.popUp_flex img {
+    width: 200px;
+    margin: -20px 50px 0 -10px
+}
+
+.popUp_flex div {
+    width: 100%;
+}
+
+.popUp_flex label {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+
+.rating {
+    display: flex;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    display: block;
+    cursor: pointer;
+    margin-right: 15px;
+    width: 28px;
+}
+
+.rating label:before {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 28px;
+    color: white;
+    text-shadow: 0 2px 2px rgb(128 128 128 / 10%);
+}
+
+
+.rating label:after {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    top: 0;
+    display: block;
+    font-size: 28px;
+    color: var(--scale-15-yellow);
+    opacity: 0;
+    transition: .5s;
+}
+
+.rating label:hover:after,
+.rating label:hover~label:after,
+.rating input:checked~label:after {
+    opacity: 1;
+}
+
+.popUp_flex textarea {
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    resize: none;
+    width: -webkit-fill-available;
+    outline: none;
+    margin-top: 15px;
+}
+
+.popUp_flex textarea {
+    font-size: 16px;
+}
+
+.popUp_flex ~ div {
+    display: flex;
+}
+
+#submit {
+    align-self: flex-end;
+    background-color: var(--scale-2-purple);
+    border: none;
+    width: 150px;
+    height: 32px;
+    color: var(--white);
+    border-radius: 30px;
+}
+
+#submit {
+    font-size: 16px;
+    font-family: var(--font-primary);
+    font-weight: 500;
+}
+
