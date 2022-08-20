@@ -11,19 +11,13 @@ const operationsValues = () =>{
         function operations(specification,index){
 
             if(index == index){
-                var amountInput = specification.childNodes[3]
-                console.log(amountInput.value++)
+                var amountInput = specification.childNodes[index++]
+                console.log(index)
 
+                console.log(amountInput)
 
             }
         }
-
-        // function operations(e){  
-        //     if(e.target){
-        //         var teste = this.childNodes[3]
-        //         console.log(teste)
-        //     }  
-        // }
 
 }
 
