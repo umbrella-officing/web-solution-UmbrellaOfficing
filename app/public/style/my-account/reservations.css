@@ -396,8 +396,8 @@ body {
 }
 
 
-/* #popUp-cancel_state1,
-#popUp-cancel_state2 {
+#popUp-cancel_state2,
+#popUp-cancel_state3 {
     display: none;
-} */
+}
 

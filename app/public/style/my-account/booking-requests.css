@@ -128,7 +128,9 @@ a {
     height: 40px;
     border: none;
     border-radius: 40px;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .calendar,
@@ -154,14 +156,14 @@ a {
     background-color: var(--scale-12-red);
 }
 
-#avaliation {
+.avaliation {
     background-color: var(--scale-2-purple);
     border: none;
     border-radius: 30px;
     height: 27px;
 }
 
-#avaliation {
+.avaliation {
     font-size: 14px;
     font-weight: 500;
     color: white;
@@ -180,7 +182,7 @@ section::after {
 }
 
 #container_popUp_avaliation-owner {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -218,7 +220,7 @@ section::after {
 }
 
 .popUp_flex label {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: white;
 }
