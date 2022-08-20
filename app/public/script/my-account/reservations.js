@@ -5,11 +5,11 @@ const openPopCancel = () => {
 
     console.log({buttonCancel})
 
-    buttonCancel.forEach(element=> {
+    buttonCancel.forEach((element,index)=> {
         element.addEventListener('click', () => {
         container_popUp_cancel.style.display = 'flex'
+        console.log(index)
     })
     })
-
-    
 }
+openPopCancel()

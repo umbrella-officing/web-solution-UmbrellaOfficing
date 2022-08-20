@@ -245,7 +245,7 @@ body {
 }
 
 #container_popUp_cancel {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
