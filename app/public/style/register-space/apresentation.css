@@ -24,6 +24,11 @@ main{
     height: 100%;
 }
 
+#apresentation_section .arrow {
+    font-size: 30px;
+    color: white;
+}
+
 #apresentation_section h1{
     font-size: 40px;
     color: var(--white);
