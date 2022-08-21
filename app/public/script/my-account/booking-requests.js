@@ -43,3 +43,34 @@ function requests(x){
         document.getElementById("client-avaliation").style.display="block";
     }
 }
+
+
+const openPopAvaliation = () => {
+    const buttonAvaliation= document.querySelectorAll(".avaliation");
+    const avaliationOwner = document.getElementById("container_popUp_avaliation-owner");
+
+    buttonAvaliation.forEach(element=> {
+        element.addEventListener('click', () => {
+        avaliationOwner.style.display = 'flex'
+    })
+    })
+
+
+    closePopAvaliation(avaliationOwner)
+    
+}
+
+openPopAvaliation();
+
+function closePopAvaliation(avaliationOwner) {
+    avaliationOwner.addEventListener('click', e => {
+
+        console.log(e.target)
+
+        if (e.target == avaliationOwner) {
+            avaliationOwner.style.display = 'none'
+        }
+    })
+}
+
+closePopAvaliation();

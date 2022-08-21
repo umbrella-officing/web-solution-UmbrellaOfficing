@@ -5,6 +5,7 @@
 body{
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
     background-repeat: no-repeat;
+    font-family: var(--font-primary);
     height: 100vh;
 }
 
@@ -21,6 +22,11 @@ main{
     display: flex;
     justify-content: center;
     height: 100%;
+}
+
+#apresentation_section .arrow {
+    font-size: 30px;
+    color: white;
 }
 
 #apresentation_section h1{
