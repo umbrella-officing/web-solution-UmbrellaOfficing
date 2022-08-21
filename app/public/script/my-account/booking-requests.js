@@ -60,8 +60,6 @@ const openPopAvaliation = () => {
     
 }
 
-openPopAvaliation();
-
 function closePopAvaliation(avaliationOwner) {
     avaliationOwner.addEventListener('click', e => {
 
@@ -73,4 +71,4 @@ function closePopAvaliation(avaliationOwner) {
     })
 }
 
-closePopAvaliation();
+openPopAvaliation()

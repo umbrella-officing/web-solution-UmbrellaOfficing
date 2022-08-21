@@ -2,14 +2,11 @@ body {
     font-family: var(--font-primary);
 }
 
-.container_search {
-    display: none;
-}
-
 #booking-requests>div {
     position: relative;
     padding-top: 181px;
     padding-bottom: 80px;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -25,12 +22,12 @@ body {
 
 #come_back {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 600;
     color: var(--scale-13-blue);
 }
 
-.chevron_left {
-    font-size: 25px;
+#come_back img{
     margin-right: 5px;
 }
 
@@ -225,7 +222,6 @@ section::after {
     color: white;
 }
 
-
 .rating {
     display: flex;
 }
@@ -287,10 +283,10 @@ section::after {
 
 .popUp_flex ~ div {
     display: flex;
+    justify-content: flex-end;
 }
 
 #submit {
-    align-self: flex-end;
     background-color: var(--scale-2-purple);
     border: none;
     width: 150px;

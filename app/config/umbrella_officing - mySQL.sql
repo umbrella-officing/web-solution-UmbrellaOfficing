@@ -39,7 +39,7 @@ select*from usuarios;
 /*CREATE TABLE administradores (foto_admin Texto(1),
 nome_admin Texto(1), cpf_admin Texto(1) PRIMARY KEY, senha_admin Texto(1))*/
 create table administradores (
-/*foto_admin,*/
+foto_admin varchar(150),
 nome_admin varchar(100),
 cpf_admin char(11) primary key,
 senha_admin char(8)

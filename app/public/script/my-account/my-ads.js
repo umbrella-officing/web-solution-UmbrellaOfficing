@@ -48,7 +48,7 @@ function closePopDelete(container_popUp_delete) {
 
         console.log(e.target)
 
-        if (e.target.id == 'close_pop' || e.target == container_popUp_delete) {
+        if (e.target.id == 'close_pop' || e.target == container_popUp_delete || e.target.id == 'no') {
             container_popUp_delete.style.display = 'none'
         }
     })
