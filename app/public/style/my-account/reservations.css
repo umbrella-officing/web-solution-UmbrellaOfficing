@@ -254,7 +254,7 @@ body {
 }
 
 .popUp_cancel {
-    display: none;
+    display: flex;
     flex-direction: column;
     position: relative;
     border-radius: 16px 16px 0 0;
@@ -272,19 +272,16 @@ body {
     color: white;
 }
 
-.popUp_cancel form textarea {
+.popUp_cancel textarea {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
+    font-size: 15px;
     padding: 15px;
     box-sizing: border-box;
     resize: none;
     width: -webkit-fill-available;
     outline: none;
     margin-top: 15px;
-}
-
-.popUp_cancel form textarea {
-    font-size: 15px;
 }
 
 .popUp_go {
@@ -317,10 +314,17 @@ body {
     font-weight: 500;
 }
 
+.popUp_cancel > div > div > div:first-child{
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+    margin: -5px 0 0 -20px;
+}
+
 .arrow-left {
     font-size: 26px;
     color: var(--scale-2-purple);
-    margin: -5px 0 0 -20px;
+    cursor: pointer;
 }
 
 .popUp_flex {
@@ -393,9 +397,7 @@ body {
     margin-top: -30px;
 }
 
-
 #popUp-cancel_state2,
 #popUp-cancel_state3 {
     display: none;
 }
-

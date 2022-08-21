@@ -39,6 +39,8 @@ const search = require('./app/routes/search-spaces/search')(app)
 /*Requisições da tela admin*/
 const generalControl =require('./app/routes/admin/general-control')(app);
 
+const helpCenter = require('./app/routes/help-center')(app);
+
 
 app.listen(port,()=>{
     console.log(`Servidor no ar rodando na porta ${port}`)
