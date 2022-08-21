@@ -29,39 +29,39 @@
 // closePopCancel();
 
 const switchContent = () => {
-    const popUpCancel = document.querySelectorAll(".popUp_cancel form > div");
-
-    console.log(popUpCancel);
+    const popUpCancel = document.querySelectorAll(".popUp_cancel > div > div");
 
     popUpCancel.forEach((content, index, arr)=>{
-        content.addEventListener('click', () => {
-            state(content, index, arr)
+        content.addEventListener('click', (e) => {
+            if(e.target.name == 'next'){
+                nextContent(index, arr)
+            }
+
+            if(e.target.className == 'fa-solid fa-circle-chevron-left arrow-left'){
+                previousContent(index, arr)
+            }
+
         })
     })
 
-    function state(content, index, arr){
-        console.log(arr)
-         
-        if(index == index){
-            var teste = content.children
-            var teste1 = teste[2].children[1]
+    function nextContent(index, arr){
+        var lengthArray = arr.length-=1
 
-            teste1.addEventListener('click', () => {
-                console.log('teste')
-                arr[index].style.display = 'none';
-                arr[index++].style.display = 'block';
+                if(index == index && index < lengthArray){
+                        var i = index
+                        arr[i].style.display = 'none'
+                        arr[i+=1].style.display = 'block'
+                }
+    }
 
-    
-                // content[index++].style.display = 'block';
-
-            })
-            // console.log(teste)
-            // console.log(teste1)
-        }
-        
+    function previousContent(index, arr){
+                if(index == index){
+                        var i = index
+                        arr[i].style.display = 'none'
+                        arr[i-=1].style.display = 'block'
+                }
     }
      
 }
 
 switchContent()
-
