@@ -1,4 +1,4 @@
-.container_search{
+.container_search {
     display: none;
 }
 
@@ -6,7 +6,7 @@
     position: relative;
 }
 
-#my-ads > div {
+#my-ads>div {
     padding: 220px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
@@ -19,7 +19,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: calc(50% - 290px);
+    width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
 }
 
@@ -64,7 +64,7 @@
     color: var(--text-1-black);
 }
 
-.ads{
+.ads {
     margin: 0 10px 0 18px;
 }
 
@@ -78,8 +78,9 @@
 
 
 /*Conteúdo*/
-#actives_space, #inactives_space{
-    width: 784px;
+#actives_space,
+#inactives_space {
+    width: 744px;
 }
 
 #my-ads>div>div h1 {
@@ -97,13 +98,13 @@
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--text-1-black);
 }
 
 
-.option-checked{
+.option-checked {
     font-weight: 900;
     color: var(--scale-3-purple);
     outline: none;
@@ -111,20 +112,20 @@ a{
     padding-bottom: 10px;
 }
 
-#my-ads_navigation ul li{
+#my-ads_navigation ul li {
     font-size: 16px;
     margin-right: 40px;
     cursor: pointer;
 }
 
-#actives_space section, 
-#inactives_space section{
+#actives_space ul li,
+#inactives_space ul li {
     display: flex;
     margin-bottom: 40px;
 }
 
-#actives_space section > div, 
-#inactives_space section > div{
+#actives_space ul li>div,
+#inactives_space ul li>div {
     padding: 20px;
     border-radius: 0px 10px 10px 0px;
     box-shadow: 5px 5px 5px 5px rgb(128 128 128 / 35%);
@@ -132,19 +133,22 @@ a{
     box-sizing: border-box;
 }
 
-#actives_space section > div h2, #inactives_space section > div h2 {
+#actives_space ul li h2,
+#inactives_space ul li>div h2 {
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
 }
 
-#actives_space section > div p, #inactives_space section > div p {
+#actives_space ul li>div p,
+#inactives_space ul li>div p {
     font-size: 14px;
     font-weight: 400;
     margin-top: 5px;
 }
 
-#actives_space section > div h3, #inactives_space section > div h3{
+#actives_space ul li>div h3,
+#inactives_space ul li>div h3 {
     font-size: 14px;
     font-weight: 500;
     margin-top: 10px;
@@ -157,13 +161,13 @@ a{
     align-items: self-end;
 }
 
-.my-ads_space-div-flex h3{
+.my-ads_space-div-flex h3 {
     font-size: 14px;
     font-weight: 500;
     margin-top: 24px;
-} 
+}
 
-.my-ads_space-div-flex > div button{
+.my-ads_space-div-flex>div button {
     border: none;
     width: 38px;
     height: 38px;
@@ -189,7 +193,10 @@ a{
     margin-right: 10px;
 }
 
-.eyes, .edit, .check, .trash{
+.eyes,
+.edit,
+.check,
+.trash {
     font-size: 18px;
     color: #fff;
     text-align: center;
@@ -242,7 +249,7 @@ a{
     padding: 20px;
     width: 800px;
     height: 180px;
-    animation:fadeIn ease .27s;
+    animation: fadeIn ease .27s;
 }
 
 #close_pop {
@@ -251,14 +258,14 @@ a{
     align-self: end;
 }
 
-.popUp_delete p{
+.popUp_delete p {
     text-align: center;
     font-size: 16px;
     margin-top: 10px;
     font-weight: 600;
 }
 
-.popUp_delete p > span {
+.popUp_delete p>span {
     color: var(--scale-12-red);
 }
 
@@ -268,7 +275,7 @@ a{
     justify-content: center;
 }
 
-.popUp_delete > div button {
+.popUp_delete>div button {
     width: 188px;
     height: 38px;
     border-radius: 20px;

@@ -1,50 +1,45 @@
 body {
     font-family: var(--font-primary);
-    list-style: none;
 }
 
-.container_search {
-    display: none;
-}
-
-#my-profile_section1 {
+#my-profile {
     position: relative;
 }
 
-#my-profile_section1>div {
+#my-profile>div {
     padding: 220px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
 }
 
-#my-profile_section1::before {
+#my-profile::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    width: calc(50% - 290px);
+    width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
 }
 
 /*Menu lateral*/
-#my-profile_section1>div nav {
+#my-profile>div nav {
     position: relative;
 }
 
-#my-profile_section1>div nav ul {
+#my-profile>div nav ul {
     list-style: none;
 }
 
-#my-profile_section1>div nav ul li {
+#my-profile>div nav ul li {
     display: flex;
     height: 40px;
     margin: 25px 0;
     align-items: center;
 }
 
-#my-profile_section1>div nav ul li a {
+#my-profile>div nav ul li a {
     text-decoration: none
 }
 
@@ -83,16 +78,16 @@ body {
 }
 
 /*Conteúdo*/
-#my-profile_section1>div>nav~div {
-    width: 784px;
+#my-profile_section1 {
+    width: 744px;
 }
 
-#my-profile_section1>div>div h1 {
+#my-profile_section1 h1 {
     font-size: 25px;
     font-weight: bold;
 }
 
-#my-profile_section1>div h1~p {
+#my-profile_section1 h1~p {
     font-size: 16px;
     font-weight: 400;
     margin: 20px 0 40px;
@@ -113,7 +108,6 @@ body {
 #my-profile_section1 form>div textarea {
     margin: 10px 0 40px 0;
 }
-
 
 .form-control {
     border: 1px solid var(--gray-border);
@@ -151,6 +145,7 @@ body {
 
 .rating {
     display: flex;
+    transform: rotate(180deg);
 }
 
 .rating input {
@@ -170,7 +165,7 @@ body {
     height: 9px;
     border-radius: 10px;
     border: 2px solid var(--gray-border);
-    margin-right: 5px;
+    margin-left: 5px;
     position: absolute;
     display: block;
     font-size: 25px;
@@ -184,7 +179,7 @@ body {
     width: 35px;
     height: 9px;
     border-radius: 10px;
-    margin-right: 5px;
+    margin-left: 5px;
     position: relative;
     top: 0;
     display: block;
@@ -196,15 +191,8 @@ body {
 
 .rating label:hover:after,
 .rating label:hover~label:after,
-.rating input:checked~label:after {
+.rating input:checked~label:after{
     opacity: 1;
-}
-
-.rive {
-    font-size: 30px;
-    margin-right: 6px;
-    color: var(--scale-2-purple);
-    border-radius: 16px;
 }
 
 .social-medias {
@@ -223,7 +211,7 @@ body {
     margin-top: 5px;
 }
 
-#my-profile_section1-form2-url {
+.social-medias_flex {
     display: flex;
     justify-content: space-between;
     align-items: start;
@@ -231,7 +219,7 @@ body {
 }
 
 
-#my-profile_section1-form2-url div {
+.social-medias_flex div {
     width: 100%;
 }
 
@@ -243,7 +231,7 @@ body {
 }
 
 
-#my-profile_section1-form2-url img,
+.social-medias_flex img,
 .whats {
     color: #15cc3a;
     margin-right: 10px;
@@ -259,6 +247,10 @@ body {
     margin-right: 10px;
 }
 
+.my-profile_section1-form-flex ~ div {
+    display: flex;
+    justify-content: flex-end;
+}
 
 #edit_ad {
     background-color: var(--scale-2-purple);

@@ -6,46 +6,46 @@ body {
     display: none;
 }
 
-#my-reservations_section1 {
+#my-reservations {
     position: relative;
 }
 
-#my-reservations_section1>div {
+#my-reservations>div {
     padding: 220px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
 }
 
-#my-reservations_section1::before {
+#my-reservations::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    width: calc(50% - 290px);
+    width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
 }
 
 
 /*Menu lateral*/
-#my-reservations_section1>div nav {
+#my-reservations>div nav {
     position: relative;
     overflow: auto;
 }
 
-#my-reservations_section1>div nav ul {
+#my-reservations>div nav ul {
     list-style: none;
 }
 
-#my-reservations_section1>div nav ul li {
+#my-reservations>div nav ul li {
     display: flex;
     height: 40px;
     margin: 25px 0;
     align-items: center;
 }
 
-#my-reservations_section1>div nav ul li a {
+#my-reservations>div nav ul li a {
     text-decoration: none
 }
 
@@ -84,59 +84,60 @@ body {
 }
 
 /*Conteúdo*/
-#my-reservations_section1>div>nav~div {
-    width: 784px;
+#my-reservations>div>nav~div {
+    width: 744px;
 }
 
-#my-reservations_section1>div>div h1 {
+#my-reservations>div h1 {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-#my-reservations_section1-space {
+#my-reservations_section1 ul li {
     display: flex;
     margin-bottom: 40px;
 }
 
-#my-reservations_section1-space>div {
+#my-reservations_section1 ul li > div{
     padding: 20px;
     border-radius: 0px 10px 10px 0px;
     box-shadow: 5px 5px 5px 5px rgb(128 128 128 / 35%);
-    width: 100%;
+    width: 542px;
     box-sizing: border-box;
 }
 
-#my-reservations_section1-space>div p:nth-child(1) {
+#my-reservations_section1 ul li>div p:nth-child(1) {
     font-size: 12px;
     font-weight: 600;
     color: var(--scale-12-red);
-    margin-left: 80%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-#my-reservations_section1-space>div h2 {
+#my-reservations_section1 ul li>div h2 {
     font-size: 18px;
     font-weight: bold;
     margin: -5px 0 5px 0;
 }
 
-#my-reservations_section1-space>div p {
+#my-reservations_section1 ul li>div p {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 5px;
 }
 
-.reservations_section1-space-div-flex {
+#my-reservations_section1 ul li .space-flex {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
 }
 
-.reservations_section1-space-div-flex h3{
+#my-reservations_section1 ul li .space-flex h3{
     font-size: 22px;
 }
 
-.reservations_section1-space-div-flex>div button {
+#my-reservations_section1 ul li .space-flex div button {
     border: none;
     width: 130px;
     height: 26px;
@@ -144,7 +145,7 @@ body {
     border-radius: 40px;
 }
 
-.reservations_section1-space-div-flex>div button {
+#my-reservations_section1 ul li .space-flex div button {
     font-size: 12px;
     font-family: var(--font-primary);
     font-weight: 500;
@@ -159,24 +160,17 @@ body {
     background-color: var(--scale-12-red);
 }
 
-#home_section5 {
+#my-reservations_section2 {
     overflow: hidden;
 }
 
-#home_section5>div {
-    position: relative;
-    width: 100%;
-    max-width: 1160px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 105px;
+#my-reservations_section2 h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 40px 0;
 }
 
-#home_section5>div h2 {
-    margin-bottom: 40px;
-}
-
-#home_section5 .slider {
+#my-reservations_section2 .slider {
     list-style: none;
     width: calc(107% - 2px);
 }
@@ -208,44 +202,48 @@ body {
     transition: .3s;
 }
 
-#home_section5 .slick-slide {
+#my-reservations_section2 .slick-slide {
     border-radius: 20px 20px 10px 10px;
     padding-bottom: 16px;
 }
 
-#home_section5 .slick-dots {
+#my-reservations_section2 .slick-dots {
     list-style: none;
     bottom: -40px;
-    max-width: 1160px;
+    max-width: 744px;
 }
 
 .slider li>div {
     width: 74%;
-    max-width: 231px;
-    min-width: 180px;
+    max-width: 234px;
 }
 
 .slider li img {
     width: 100%;
 }
 
-.description_coworking {
-    padding: 10px 10px 27px 10px;
-    font-size: 13.4px;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 5px 5px 5px 0px rgb(128 128 128 / 35%);
+.description {
+    padding: 20px 20px 60px 20px;
+    background-color: var(--scale-1-gray);
     width: 100%;
-    height: 95px;
+    height: 166px;
     box-sizing: border-box;
 }
 
-.description_coworking h4 {
-    font-size: 1.1em;
-    margin: 11px 0 7px 0;
+.description h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 #container_popUp_cancel {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;

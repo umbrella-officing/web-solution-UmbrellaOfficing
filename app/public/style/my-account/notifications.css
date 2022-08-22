@@ -2,17 +2,15 @@
     display: none;
 }
 
-nav{
+nav {
     width: 100%;
-    border-bottom: 1px solid var(--gray-border);
-    padding-bottom: 7px;
 }
 
-ul{
+nav ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
-    max-width: 30%;
+    max-width: 40%;
     margin: 20px 0 0 0;
 }
 
@@ -21,12 +19,29 @@ a{
     color: var(--text-1-black);
 }
 
-a:focus{
+/* a:focus{
     font-weight: 900;
     color: var(--scale-3-purple);
     outline: none
+} */
+
+nav ul li {
+    font-size: 16px;
+    margin-right: 40px;
+    cursor: pointer;
 }
 
+.active {
+    font-weight: 900;
+    color: var(--scale-3-purple);
+    outline: none;
+    border-bottom: 3px solid var(--scale-3-purple);
+    padding-bottom: 10px;
+}
+
+.notifications {
+    margin: 0 10px 0 18px;
+}
 
 #notifications_section1{
     padding-top: 193px;

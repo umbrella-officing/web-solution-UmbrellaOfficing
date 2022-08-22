@@ -1,3 +1,129 @@
+header{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    position: absolute;
+}
+
+#become-advertiser_section1 > div{
+    justify-content: space-between;
+}
 
 
-  
+/* #section1_bg{
+    width: 1340px;
+    height: 567px;
+} */
+
+#become-advertiser_section2{
+    padding: 80px 0;
+}
+
+
+#become-advertiser_section2 > div{
+    justify-content: space-between;
+
+
+}
+
+#become-advertiser_section2 > div > :first-child{
+    flex-direction: column;
+}
+
+#become-advertiser_section2 > div > div > h2{
+    max-width: 450px;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+#become-advertiser_section2 > div > div > p{
+    font-size: 22px;
+    font-weight: 500;
+    max-width: 440px;
+    margin: 25px 0 35px 0;
+}
+
+#become-advertiser_section2 > div > div > input{
+    width: 375px;
+    height: 45px;
+    color: #d1d1d1;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+iframe{
+    border: 1px solid;
+}
+
+#become-advertiser_section3{
+    position: relative;
+    border: 3px solid var(--scale-3-blue);
+    border-right: none;
+}
+
+#bg_sec3{
+    background-color: var(--scale-3-blue);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 48%;
+    height: 100%;
+}
+
+#become-advertiser_section3 > div > h2{
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 700;
+    max-width: 340px;
+}
+
+#become-advertiser_section4 > div > div{
+    background-image: url("images/become-advertiser/community-img.jpg");
+    width: 1660px;
+    height: 1000px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+#section3-slide{
+    position: relative;
+    right: 0;
+}
+
+#adaptable-icon{
+    width: 33px;
+    height: 33px;
+}
+
+#section3-slide > p{
+    font-weight: 700;
+    font-size: 18px;
+    max-width: 225px;
+    color: var(--scale-3-blue);
+}
+
+.check{
+    width: 11px;
+    height: 8px;
+}
+
+#section3-slide > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 110px;
+    margin-top: 15px;
+}
+
+#section3-slide > ul > div{
+    display: flex;
+}
+
+#section3-slide > ul > li{
+    max-width: 235px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}

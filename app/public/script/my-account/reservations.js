@@ -1,32 +1,30 @@
-// const openPopCancel = () => {
-//     const buttonCancel = document.querySelectorAll(".cancel");
-//     const container_popUp_cancel = document.getElementById("container_popUp_cancel");
+const openPopCancel = () => {
+    const buttonCancel = document.querySelectorAll(".cancel");
+    const container_popUp_cancel = document.getElementById("container_popUp_cancel");
 
-//     buttonCancel.forEach(element=> {
-//         element.addEventListener('click', () => {
-//         container_popUp_cancel.style.display = 'flex'
-//     })
-//     })
+    buttonCancel.forEach(element=> {
+        element.addEventListener('click', () => {
+        container_popUp_cancel.style.display = 'flex'
+    })
+    })
 
 
-//     closePopCancel(container_popUp_cancel)
+    closePopCancel(container_popUp_cancel)
     
-// }
+}
 
-// openPopCancel();
+function closePopCancel(container_popUp_cancel) {
+    container_popUp_cancel.addEventListener('click', e => {
 
-// function closePopCancel(container_popUp_cancel) {
-//     container_popUp_cancel.addEventListener('click', e => {
+        console.log(e.target)
 
-//         console.log(e.target)
+        if (e.target == container_popUp_cancel) {
+            container_popUp_cancel.style.display = 'none'
+        }
+    })
+}
 
-//         if (e.target == container_popUp_cancel) {
-//             container_popUp_cancel.style.display = 'none'
-//         }
-//     })
-// }
-
-// closePopCancel();
+openPopCancel();
 
 const switchContent = () => {
     const popUpCancel = document.querySelectorAll(".popUp_cancel > div > div");
