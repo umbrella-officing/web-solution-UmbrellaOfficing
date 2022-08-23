@@ -1,18 +1,42 @@
 const selectedSpace = document.querySelector(".selected-space");
-const optionsSpaces = document.querySelector(".options-spaces");
+const optionsContainer_space = document.querySelector(".options-container-space");
+const searchBox = document.querySelector(".search-box input");
 
-const optionsSpacesList = document.querySelectorAll(".option-space");
+const optionsList_spaces = document.querySelectorAll(".option-space");
 
 selectedSpace.addEventListener("click", () => {
-  optionsSpaces.classList.toggle("active");
+  optionsContainer_space.classList.toggle("active-space");
+
+  searchBox.value = "";
+  filterList("");
+
+  if (optionsContainer_space.classList.contains("active-space")) {
+    searchBox.focus();
+  }
 });
 
-optionsSpacesList.forEach(o => {
+optionsList_spaces.forEach(o => {
   o.addEventListener("click", () => {
-    selectedSpace.innerHTML = o.querySelector("options-space").innerHTML;
-    optionsSpaces.classList.remove("active");
+    selectedSpace.innerHTML = o.querySelector("label").innerHTML;
+    optionsContainer_space.classList.remove("active-space");
   });
 });
+
+searchBox.addEventListener("keyup", function(e) {
+  filterList(e.target.value);
+});
+
+const filterList = searchTerm => {
+  searchTerm = searchTerm.toLowerCase();
+  optionsList_spaces.forEach(option => {
+    let label = option.firstElementChild.nextElementSibling.innerText.toLowerCase();
+    if (label.indexOf(searchTerm) != -1) {
+      option.style.display = "block";
+    } else {
+      option.style.display = "none";
+    }
+  });
+};
 
 const selected = document.querySelector(".selected");
 const optionsContainer = document.querySelector(".options-container");

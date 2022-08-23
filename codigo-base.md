@@ -21,7 +21,7 @@
                     <li class="option_office">Espaço corporativo</li>
                 </ul>
                     <div class="container_search_input">
-                        <span id="search_txt">Busque locais para trabalho</span>
+                        <span id="search_txt">Pesquise locais para trabalhar</span>
                         <div id='container_informations_find_coworking'>
                             <input id="localization" type="text" placeholder="Localização:">
                             <input type="date" id="check_in">

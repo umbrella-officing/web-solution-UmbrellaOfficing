@@ -14,9 +14,6 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/edit-ad.css">
-    <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
 </head>
 
 <body>
@@ -86,8 +83,8 @@
             <div class="default_margin">
                 <nav>
                     <a href="/meus-anuncios"><button id="come_back">
-                            <i class="fa-solid fa-circle-chevron-left chevron_left"></i>
-                            <p>Voltar</p>
+                            <img src="images/my-account/booking-solicitations/arrow-blue.svg" alt="Seta para voltar">
+                            Voltar
                         </button></a>
                     <ul>
                         <li class="option_active">
@@ -108,18 +105,28 @@
                 <div>
                     <div class="edit-ad_section_change-space">
                         <h1>Escritório Lape</h1>
-                        <div class="select-box-spaces">
-                            <div class="options-spaces">
-                                <div class="option-space">
-                                    <input type="radio" class="radio" id="" name="space" />
-                                    <option for="">Ambiente adaptável</option>
-                                </div>
+                        <div class="select-box-space">
 
+                            <div class="options-container-space">
+
+                                <div class="option-space" id="option1-space">
+                                    <input type="radio" class="radio-space" />
+                                    <label for="space">Espaço 1</label>
+                                </div>
                                 <div class="option-space">
-                                    <input type="radio" class="radio" id="" name="space" />
-                                    <option for="">Ambiente usual</option>
+                                    <input type="radio" class="radio-space" />
+                                    <label for="space">Espaço 2</label>
+                                </div>
+                                <div class="option-space">
+                                    <input type="radio" class="radio-space" />
+                                    <label for="space">Espaço 3</label>
+                                </div>
+                                <div class="option-space">
+                                    <input type="radio" class="radio-space" />
+                                    <label for="space">Espaço 4</label>
                                 </div>
                             </div>
+
 
                             <div class="selected-space">
                                 Mudar de espaço
@@ -251,12 +258,6 @@
 
                         <div>
                             <input type="text" name="room" id="room" placeholder="Sala 01" />
-                            <div class="dropDown">
-                                <div class="listDropDown">
-                                    <div class="item" id="item-1" onMouseDown="category(1)">Sala 02</div>
-                                    <div class="item" id="item-2" onMouseDown="category(2)">Sala 03</div>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="edit-ad_section_form2">
@@ -497,6 +498,9 @@
             </div>
     </footer>
 
+    <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
     <script src="script/default/header/header.js"></script>
     <script src="script/my-account/edit-ad.js"></script>
 

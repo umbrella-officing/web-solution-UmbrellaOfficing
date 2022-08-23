@@ -12,37 +12,17 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/my-account/booking-requests.css">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
         crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/default/default.css">
+    <link rel="stylesheet" href="style/my-account/booking-requests.css">
 </head>
 
 <body>
     <header id="header" class="container_margin_default">
         <div class="default_margin">
             <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
-            <div>
-                <ul id="type_office">
-                    <li class="option_office checked">Espaço adaptado</li>
-                    <li class="option_office">Espaço corporativo</li>
-                </ul>
-                <div class="container_search">
-                    <span id="search_txt">Busque locais para trabalho</span>
-                    <div id='container_informations_find_coworking'>
-                        <input id="localization" type="text" placeholder="Localização:">
-                        <input type="date" id="check_in">
-                    </div>
-                    <a href="#">
-                        <div>
-                            <img src="images/default/search.svg" alt="pesquisa">
-                        </div>
-                    </a>
-                </div>
-            </div>
-
             <div id="menu">
                 <div id='menu_sign-in-up'>
                     <img src="images/default/user.svg" alt="usuário">
@@ -121,9 +101,9 @@
                     <article id="pending-confirmation">
                         <ul>
                             <li>Perfil</li>
-                            <li>Espaço</li>
-                            <li>Sala</li>
+                            <li>Espaço | Sala</li>
                             <li>Dias</li>
+                            <li>Solicitada</li>
                             <li>Ações</li>
                         </ul>
                         <section id="booking-requests_section">
@@ -132,9 +112,11 @@
                                 <h2>Larissa Ferreira</h2>
                             </div>
 
-                            <p>Escritório Lape</p>
-                            <p>Sala 02</p>
+                            <p>Escritório Lape
+                                <br> Sala 02
+                            </p>
                             <p>3 dias</p>
+                            <p>30/02/2022</p>
 
                             <div>
                                 <button type="submit" id="calendar">
@@ -147,16 +129,15 @@
                                     <i class="fa-solid fa-xmark close close"></i>
                                 </button>
                             </div>
-                            <h4>Solicitada: 24/04/2022</h4>
                         </section>
                     </article>
 
                     <article id="confirmed">
                         <ul>
                             <li>Perfil</li>
-                            <li>Espaço</li>
-                            <li>Sala</li>
+                            <li>Espaço | Sala</li>
                             <li>Próxima visita</li>
+                            <li>Solicitada</li>
                             <li>Ações</li>
                         </ul>
                         <section id="booking-requests_section">
@@ -165,9 +146,11 @@
                                 <h2>Rodrigo Queiroz</h2>
                             </div>
 
-                            <p>Escritório Lape</p>
-                            <p>Sala 02</p>
+                            <p>Escritório Lape
+                                <br>Sala 02
+                            </p>
                             <p>Hoje</p>
+                            <p>03/02/2022</p>
 
                             <div>
                                 <button type="submit" id="calendar">
@@ -177,16 +160,15 @@
                                     <i class="fa-solid fa-xmark close close"></i>
                                 </button>
                             </div>
-                            <h4>Solicitada: 24/04/2022</h4>
                         </section>
                     </article>
 
                     <article id="canceled">
                         <ul>
                             <li>Perfil</li>
-                            <li>Espaço</li>
-                            <li>Sala</li>
+                            <li>Espaço | Sala</li>
                             <li>Próxima visita</li>
+                            <li>Solicitada</li>
                             <li>Ações</li>
                         </ul>
 
@@ -196,9 +178,11 @@
                                 <h2>Rodrigo Queiroz</h2>
                             </div>
 
-                            <p>Escritório Lape</p>
-                            <p>Sala 02</p>
+                            <p>Escritório Lape
+                                <br>Sala
+                            </p>
                             <p>Hoje</p>
+                            <p>03/02/2022</p>
 
                             <div>
                                 <button type="submit" id="calendar">
@@ -211,16 +195,15 @@
                                     <i class="fa-solid fa-xmark close close"></i>
                                 </button>
                             </div>
-                            <h4>Solicitada: 24/04/2022</h4>
                         </section>
                     </article>
 
                     <article id="client-avaliation">
                         <ul>
                             <li>Perfil</li>
-                            <li>Espaço</li>
-                            <li>Sala</li>
+                            <li>Espaço | Sala</li>
                             <li>Próxima visita</li>
+                            <li>Solicitada</li>
                             <li>Ações</li>
                         </ul>
 
@@ -230,47 +213,48 @@
                                 <h2>Rodrigo Queiroz</h2>
                             </div>
 
-                            <p>Escritório Lape</p>
-                            <p>Sala 02</p>
+                            <p>Escritório Lape
+                                <br> Sala 02
+                            </p>
                             <p>Hoje</p>
+                            <p>03/02/2022</p>
 
                             <button type="submit" class="avaliation">Avaliar cliente</button>
-                            <h4>Solicitada: 24/04/2022</h4>
                         </section>
                     </article>
 
                     <div id="container_popUp_avaliation-owner">
                         <div class="popUp_avaliation-owner">
                             <form action="" method="">
-                                    <div class="popUp_flex">
-                                        <img src="images/my-account/reservations/cancel_reservations2.png">
-                                        <div>
-                                            <label for="comment1">Avalie o espaço</label>
-
-                                            <div class="rating">
-                                                <input type="radio" name="star" id="star1">
-                                                <label for="star1"></label>
-
-                                                <input type="radio" name="star" id="star2">
-                                                <label for="star2"></label>
-
-                                                <input type="radio" name="star" id="star3">
-                                                <label for="star3"></label>
-
-                                                <input type="radio" name="star" id="star4">
-                                                <label for="star4"></label>
-
-                                                <input type="radio" name="star" id="star5">
-                                                <label for="star5"></label>
-                                            </div>
-
-                                            <textarea name="comment1" id="comment1" rows="2"
-                                                placeholder="Comente aqui (opcional)" class="form-control"></textarea>
-                                        </div>
-                                    </div>
+                                <div class="popUp_flex">
+                                    <img src="images/my-account/reservations/cancel_reservations2.png">
                                     <div>
-                                        <button id="submit">Enviar</button>
-                                    </div> 
+                                        <label for="comment1">Avalie o espaço</label>
+
+                                        <div class="rating">
+                                            <input type="radio" name="star" id="star1">
+                                            <label for="star1"></label>
+
+                                            <input type="radio" name="star" id="star2">
+                                            <label for="star2"></label>
+
+                                            <input type="radio" name="star" id="star3">
+                                            <label for="star3"></label>
+
+                                            <input type="radio" name="star" id="star4">
+                                            <label for="star4"></label>
+
+                                            <input type="radio" name="star" id="star5">
+                                            <label for="star5"></label>
+                                        </div>
+
+                                        <textarea name="comment1" id="comment1" rows="2"
+                                            placeholder="Comente aqui (opcional)" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button id="submit">Enviar</button>
+                                </div>
                             </form>
 
                         </div>
@@ -279,60 +263,57 @@
             </div>
     </main>
 
-
     <footer class="container_margin_default">
 
         <div class="default_margin">
             <div id="margin2">
-                <div id="logo">
-                    <img src="images/default/logo_footer.svg" alt="logo">
-                    <h4>Escritorizando <span><br>espaços </span></h4>
-                    <span>Umbrella Officing&copy 2022</span>
-                </div>
-
-                <ul>
-                    <h5>Junte-se a nós</h5>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#">Cadastre-se</a></li>
-                    <li><a href="#">Sua conta</a></li>
-                    <li><a href="#">Faça sua reserva</a></li>
-                    <li><a href="#">Anuncie seu espaço</a></li>
-                </ul>
-
-                <ul>
-                    <h5>Atendimento</h5>
-                    <li><a href="#">Chat</a></li>
-                    <li><a href="#">Fórum</a></li>
-                    <li><a href="#">Central de ajuda</a></li>
-                </ul>
-
-                <ul>
-                    <h5>Sobre nós</h5>
-                    <li><a href="#">Quem somos?</a></li>
-                    <li><a href="#">Missão, valores e visão</a></li>
-                    <li><a href="#">Por que Umbrella Officing</a></li>
-                    <li><a href="#">Desenvolvedores</a></li>
-                </ul>
-
+            <div id="logo">
+                <img src="images/default/logo_footer.svg" alt="logo">
+                <h4>Escritorizando <span><br>espaços </span></h4>
+                <span>Umbrella Officing&copy 2022</span>
             </div>
 
+            <ul>
+                <h5>Junte-se a nós</h5>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Cadastre-se</a></li>
+                <li><a href="#">Sua conta</a></li>
+                <li><a href="#">Faça sua reserva</a></li>
+                <li><a href="#">Anuncie seu espaço</a></li>
+            </ul>
+
+            <ul>
+                <h5>Atendimento</h5>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">Fórum</a></li>
+                <li><a href="#">Central de ajuda</a></li>
+            </ul>
+
+            <ul>
+                <h5>Sobre nós</h5>
+                <li><a href="#">Quem somos?</a></li>
+                <li><a href="#">Missão, valores e visão</a></li>
+                <li><a href="#">Por que Umbrella Officing</a></li>
+                <li><a href="#">Desenvolvedores</a></li>
+            </ul>
+
+            </div>
             <div id="bottom_footer">
                 <div>
-                    <div id="network_div">
-                        <img src="images/default/icon_intagram.svg" alt="ícone do instagram">
-                        <img src="images/default/icon_facebook.svg" alt="ícone do facebook">
+                    <div id="network_div"> 
+                        <img src="images/default/icon_intagram_footer.svg" alt="ícone do instagram">
+                        <img src="images/default/icon_facebook_footer.svg" alt="ícone do facebook">
                     </div>
 
                     <div id="scroll_up">
                         <img src="images/default/arrow_up.svg" alt="ícone de flecha">
                     </div>
-                </div>
-
             </div>
 
-
+        </div>
     </footer>
 
+    <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
     <script src="script/default/header/header.js"></script>
     <script src="script/my-account/booking-requests.js"></script>
 
