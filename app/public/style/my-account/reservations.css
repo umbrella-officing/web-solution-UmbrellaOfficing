@@ -160,9 +160,9 @@ body {
     background-color: var(--scale-12-red);
 }
 
-#my-reservations_section2 {
+/* #my-reservations_section2 {
     overflow: hidden;
-}
+} */
 
 #my-reservations_section2 h2 {
     font-size: 25px;
@@ -172,7 +172,7 @@ body {
 
 #my-reservations_section2 .slider {
     list-style: none;
-    width: calc(107% - 2px);
+    width: calc(106% - 5px);
 }
 
 .arrows {
@@ -189,7 +189,7 @@ body {
 }
 
 .arrow-right {
-    right: calc(5% - 22px);
+    right: calc(3.5% - 22px);
 }
 
 .slider .fa {
@@ -214,7 +214,7 @@ body {
 }
 
 .slider li>div {
-    width: 74%;
+    width: 84%;
     max-width: 234px;
 }
 
