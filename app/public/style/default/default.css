@@ -30,6 +30,7 @@
     --scale-13-blue: #5B61C4;
     --scale-14-blue: #7397E3;
     --scale-15-yellow: #FFCB46;
+    --scale-16-gray: #E5E5E7;
     --gradient:linear-gradient(180deg, #81A4F3, #D16CC1);  
 }
 
@@ -532,6 +533,11 @@ footer > div {
     max-width: 365px;
 }
 
+#logo img{
+    margin-right: 10px;
+}
+
+
 #logo span{
     font-weight: normal;
 }
@@ -568,15 +574,15 @@ footer a {
 
 #network_div img{
     margin-right: 10px;
-    padding: 7px 7px;
-    border-radius: 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
     background: var(--scale-2-purple);
 }
 
 #scroll_up img{
-    padding: 8px;
+    padding: 10px;
     width: 20px;
     height: 20px;
     background: var(--scale-2-purple);
-    border-radius: 10px;
+    border-radius: 5px;
 }

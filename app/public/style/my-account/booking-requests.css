@@ -18,11 +18,12 @@ body {
     align-items: center;
     background-color: white;
     border: none;
+    margin-bottom: 35px;
 }
 
 #come_back {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--scale-13-blue);
 }
@@ -74,7 +75,7 @@ a {
 #booking-requests>div h1 {
     font-size: 25px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 #booking-requests>div article ul {
@@ -82,12 +83,16 @@ a {
     display: grid;
     grid-template-columns: 158px 158px 158px 158px 158px;
     margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--gray-border);
 }
 
 
 #booking-requests>div article ul li {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
+    text-transform: uppercase;
+    color: #898989;
 }
 
 #booking-requests_section {
@@ -95,36 +100,35 @@ a {
     grid-template-columns: 158px 158px 158px 158px 158px;
     align-items: center;
     padding-bottom: 15px;
-    border-bottom: 2px solid var(--gray-border);
+    border-bottom: 1px solid var(--gray-border);
 }
 
 #booking-requests_section>div {
     display: flex;
+    margin-top: 10px;
 }
 
+#booking-requests_section img {
+    width: 45px;
+    height: 45px;
+}
 
 #booking-requests_section>div h2 {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
     margin-left: 10px;
 }
 
-#booking-requests_section  h4 {
-    font-size: 13px;
-    font-weight: 500;
-    margin-top: 15px;
-}
-
 #booking-requests_section p {
-    font-size: 16px;
+    font-size: 15.5px;
     font-weight: 400;
 }
 
 #booking-requests_section >div button {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border: none;
-    border-radius: 40px;
+    border-radius: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,7 +138,7 @@ a {
 .check,
 .close,
 .rotate {
-    font-size: 20px;
+    font-size: 16px;
     color: white;
 }
 
