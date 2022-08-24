@@ -1,3 +1,16 @@
+const listSpecifications = () => {
+
+    const listProducts = document.querySelector('[data-js="list-products"]')
+
+    const products = [{name:'computadores', img:'images/search-spaces/search/computer.svg'},
+                  {name:'tomada'}, {img:'images/search-spaces/search/sockets.svg'}
+                 ]
+
+    
+    
+    operationsValues()
+}
+
 const operationsValues = () =>{
     const specifications = document.querySelectorAll(".specification")
 
@@ -41,3 +54,4 @@ const operationsValues = () =>{
 }
 
 operationsValues()
+listSpecifications()
