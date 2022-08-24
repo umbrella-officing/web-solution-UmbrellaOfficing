@@ -31,7 +31,7 @@
 
 #filter h5{
     color:#1b1b1b;
-    font-weight: 500;
+    font-weight: 570;
 }
 
 #filter > div:first-child{
@@ -216,6 +216,71 @@ input[type="number"]::-webkit-inner-spin-button {
 
   .specifications label{
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 12.5px;
     margin-right: auto;
+  }
+
+  #more_specifications{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #more_specifications ul{
+    width: 100%;
+  }
+
+  #more_specifications ul li > div > img{
+    width: 18px;
+  }
+
+  #openList, #additional-specifications > div > div > button{
+    align-self: flex-end;
+    background: var(--scale-5-purple);
+    border: none;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 5px 13px;
+  }
+
+  #additional-specifications{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 999;
+  }
+
+  #additional-specifications > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
+    padding: 40px 0 20px 0;
+    animation:fadeIn ease .27s;
+  }
+
+  #additional-specifications > div > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 50px;
+    width: 285px;
+  }
+
+  #additional-specifications > div label{
+    font-size: 14px;
+    font-weight:500;
+  } 
+
+  #additional-specifications > div img{
+    width: 15px;
   }
