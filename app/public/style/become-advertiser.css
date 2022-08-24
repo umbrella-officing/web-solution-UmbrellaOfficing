@@ -4,29 +4,41 @@ header{
     position: absolute;
 }
 
+#become-advertiser_section1 > div > .default_margin{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+} 
 
 #become-advertiser_section1 > div{
     justify-content: space-between;
     position: relative;
+    width: 1340px;
+    height: 560px;
+    background-image: url("../images/become-advertiser/bg-section1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 
-#become-advertiser_section1 > div > div{
+#become-advertiser_section1 > div > div > div { 
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding: 0 80px;
 }
 
-#become-advertiser_section1 > div > div > h1{
+.default_margin > div > h1{
     color: var(--white);
     font-size: 35px;
     font-weight: 600;
     max-width: 470px;
 }
 
-#become-advertiser_section1 > div > div > div{
+#start-now_div{
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -205,12 +217,17 @@ iframe{
 
 #become-advertiser_section4 > div > div{
     width: 960px;
-    height: 515px;
+    height: 515px; 
+    background-image: url("../images/become-advertiser/community-img.jpg");
+    background-size: cover;
+    background-position: 0;
+    background-repeat: no-repeat;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: -1;
 }
 
 #become-advertiser_section4 > div > div > h2{
