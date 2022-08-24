@@ -1,5 +1,6 @@
 #header-admin span~div {
     display: flex;
+    padding-bottom: 16px;
 }
 
 #header-admin span~div h3 {
@@ -9,13 +10,23 @@
     margin-right: 15px;
 }
 
-#header-admin div img::before {
-    content: '\f106';
+/* #header-admin div div img::after {
+    background-image: url();
     position: absolute;
     right: 20px;
     font-family: 'Font Awesome 5 Free';
     font-weight: 700;
     color: black;
+    transform: rotate(180deg);
+    transition: all .4s;
+} */
+
+#header-admin div div img::after {
+    background-image: url("../images/my-account/arrow-down.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 20px;
     transform: rotate(180deg);
     transition: all .4s;
 }
@@ -32,8 +43,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: calc(50% - 240px);
+    height: 100%;
+    width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
     z-index: 5000;
 }
@@ -48,12 +59,6 @@
 #admin > div nav ul {
     list-style: none;
 }
-
-/* #admin nav {
-    height: 40px;
-    margin: 25px 0;
-    align-items: center;
-} */
 
 #admin > div nav ul li a {
     text-decoration: none;

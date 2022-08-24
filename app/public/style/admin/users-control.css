@@ -8,12 +8,47 @@
     font-weight: 600;
 }
 
+.container_search-users_input {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--gray-border);
+    width: 400px;
+    position: relative;
+    border-radius: 40px;
+    transform: initial;
+    transition: 250ms ease;
+    margin: 20px 0 40px 0;
+}
+
+#search-users_txt {
+    width: inherit;
+    background: inherit;
+    border: none;
+    border-radius: inherit;
+    font-family: var(--font-primary);
+    font-size: 16.5px;
+    font-weight: 500;
+    color: #666;
+    outline: none;
+    padding-left: 20px;
+}
+
+.container_search-users_input div {
+    display: flex;
+    padding: 9px 12px;
+    background-color: var(--scale-13-blue);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 #users-control_section1 ul li {
     list-style: none;
     display: grid;
     align-items: center;
     grid-template-columns: 290px 290px 124px;
     grid-column-gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gray-border)
 }
 
 #users-control_section1 ul li div:nth-child(1) {
