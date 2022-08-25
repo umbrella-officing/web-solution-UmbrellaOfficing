@@ -13,20 +13,38 @@
 #help-center_section1 > div > div{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #help-center_section1 > div > div > h1{
     font-size: 40px;
     color: #333333;
+    margin-bottom: 20px;
 } 
 
-#help-center_section1 > div > div > input{
+#help-center_section1 > div > div > div{
+    position: relative;
+    width: 570px;
+}
+
+#ask-input{
     border: 1px solid var(--gray-border);
     border-radius: 40px;
     height: 50px;
     font-size: 14px;
     padding-left: 24px;
-    margin-top: 20px;
+    width: 100%
+}
+
+#search-button{
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--scale-2-purple);
+    border: none;
+    position: absolute;
+    right: 0;
+    margin: 15px 15px 0 0;
 }
 
 #become-advertiser_section2{
@@ -45,6 +63,7 @@
     justify-content: space-around;
     padding-bottom: 10px;
     margin-top: 60px;
+    position: relative;
 }
 
 #align-options > button{
@@ -53,6 +72,21 @@
     font-size: 20px;
     font-weight: 800;
     text-align: center;
+}
+
+/* #forCustomers:focus{
+    outline: none;
+    color: var(--scale-5-blue);
+} */
+
+#align-options:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 50%;
+    background-color: var(--scale-5-blue);
 }
 
 #align-list{
@@ -74,6 +108,10 @@
     font-weight: 500;
     border-radius: 10px;
     margin: 15px 0;
+}
+
+.advertisers-topics{
+    display: none;
 }
 
 #become-advertiser_section3{

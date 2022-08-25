@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/help-center.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header id="header" class="container_margin_default">
@@ -146,7 +147,10 @@
         <div class="default_margin">
         <div>
             <h1>Em que podemos te ajudar?</h1>
-            <input type="search" name="" id="" placeholder="Pesquise por orientações, dicas e muito mais">
+            <div>
+                <input type="search" name="" id="ask-input" placeholder="Pesquise por orientações, dicas e muito mais">
+                <button id="search-button">Buscar</button>
+            </div>
         </div>
     </div>
     </section>
@@ -154,19 +158,33 @@
     <section class="container_margin_default" id="become-advertiser_section2">
         <div class="default_margin">
             <div id="align-options">
-                <button>Para clientes</button>
-                <button>Para anunciantes</button>
+                <button id="forCustomers" class="btn" autofocus>Para clientes</button>
+                <button id="forAdvertisers" class="btn">Para anunciantes</button>
             </div>
 
             <div id="align-list">
-                <ol>
+                <ol class="customers-topics">
                     <li>1. Lorem ipsum</li>
                     <li>2. Lorem ipsum</li>
                     <li>3. Lorem ipsum</li>
                     <li>4. Lorem ipsum</li>
                 </ol>
 
-                <ol>
+                <ol class="customers-topics">
+                    <li>5. Lorem ipsum</li>
+                    <li>6. Lorem ipsum</li>
+                    <li>7. Lorem ipsum</li>
+                    <li>8. Lorem ipsum</li>
+                </ol>
+
+                <ol class="advertisers-topics">
+                    <li>1. Lorem ipsum</li>
+                    <li>2. Lorem ipsum</li>
+                    <li>3. Lorem ipsum</li>
+                    <li>4. Lorem ipsum</li>
+                </ol>
+
+                <ol class="advertisers-topics">
                     <li>5. Lorem ipsum</li>
                     <li>6. Lorem ipsum</li>
                     <li>7. Lorem ipsum</li>
@@ -294,6 +312,7 @@
     </footer>
 
     <script src="script/default/header/header.js"></script>
+    <script src="script/help-center/help-center.js"></script>
 
 </body>
 </html>
