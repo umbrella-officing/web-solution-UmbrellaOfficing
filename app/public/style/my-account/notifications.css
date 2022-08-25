@@ -1,9 +1,10 @@
-.container_search{
-    display: none;
+nav {
+    width: 100%;
 }
 
 nav {
-    width: 100%;
+    border-bottom: 1px solid var(--gray-border);
+    padding-bottom: 10px;
 }
 
 nav ul{
@@ -19,11 +20,11 @@ a{
     color: var(--text-1-black);
 }
 
-/* a:focus{
+a:focus{
     font-weight: 900;
     color: var(--scale-3-purple);
     outline: none
-} */
+}
 
 nav ul li {
     font-size: 16px;
@@ -31,7 +32,7 @@ nav ul li {
     cursor: pointer;
 }
 
-.active {
+.acctive-notifications {
     font-weight: 900;
     color: var(--scale-3-purple);
     outline: none;
@@ -122,4 +123,85 @@ nav ul li {
     font-weight: 600;
     text-align: right;
     margin-top: 32px;
+}
+
+.select-box {
+    display: flex;
+    width: 244px;
+    flex-direction: column;
+    margin: 20px 0 30px 0;
+}
+
+.select-box .options-container {
+    background: white;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 10px;
+    overflow: hidden;
+
+    order: 1;
+}
+
+.selected:after {
+    content: '\f106';
+    position: absolute;
+    right: 20px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 20px;
+    font-weight: 700;
+    color: black;
+    transform: rotate(180deg);
+    transition: all .4s;
+}
+
+.selected {
+    background: white;
+    border-radius: 50px;
+    border: 1px solid var(--gray-border);
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-1-black);
+    position: relative;
+    order: 0;
+}
+
+.select-box .options-container.active {
+    max-height: 76px;
+    border: 1px solid var(--gray-border);
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: var(--gray-border);
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+    background: var(--scale-13-blue);
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+    height: 38px;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.select-box .option:hover {
+    background: #f1f6ff;
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option .radio {
+    display: none;
 }

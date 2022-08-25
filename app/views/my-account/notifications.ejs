@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
+    <link rel="stylesheet" href="style/my-account/my-account.css">
     <link rel="stylesheet" href="style/my-account/notifications.css">
 </head>
 
@@ -18,21 +19,44 @@
     <header id="header" class="container_margin_default">
         <div class="default_margin">
             <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
-            <div>
-                <ul id="type_office">
-                    <li class="option_office checked">Espaço adaptado</li>
-                    <li class="option_office">Espaço corporativo</li>
-                </ul>
-                <div class="container_search">
-                    <span id="search_txt">Busque locais para trabalho</span>
-                    <div id='container_informations_find_coworking'>
-                        <input id="localization" type="text" placeholder="Localização:">
-                        <input type="date" id="check_in">
+
+            <span>
+                <a href="/tipo-de-ambiente"><button id="advertiser">Quero anunciar</button></a>
+
+                <div id="menu">
+                    <div id='menu_sign-in-up'>
+                        <img src="images/default/user.svg" alt="usuário">
+                        <img src="images/default/menu_hamburguer.svg" alt="menu">
                     </div>
-                    <a href="#">
+
+                    <div class="menu_open">
                         <div>
-                            <img src="images/default/search.svg" alt="pesquisa">
+                            <img src="images/default/perfil.svg" alt="foto de perfil">
+                            <h3>Luana Almeida <span>Coworker</span></h3>
                         </div>
+                        <div>
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <img src="images/default/my-perfil.png" alt="meu perfil">
+                                        My profile
+                                    </li>
+                                    <li>
+                                        <img src="images/default/favorite.png" alt="favoritos">
+                                        Favoritos
+                                    </li>
+                                    <li>
+                                        <img src="images/default/question.png" alt="suporte">
+                                        Help & Support
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div>
+                            <img src="images/default/log-out.png" alt="sair da conta">
+                            Logout
+                        </div>
+<<<<<<< HEAD
                     </a>
                 </div>
             </div>
@@ -68,9 +92,11 @@
                     <div>
                         <img src="images/default/log-out.png" alt="sair da conta">
                         Logout
+=======
+>>>>>>> b78bd2df81b1510418f6d6a690e649f3bd62c73c
                     </div>
                 </div>
-            </div>
+            </span>
         </div>
     </header>
 
@@ -81,7 +107,7 @@
 
                 <h1>Notificações</h1>
 
-                <!-- <nav>
+                <nav>
                     <ul>
                         <a href="javascript:notificacoes(1);" autofocus>
                             <li id="li-lastN">Últimas notificações</li>
@@ -94,31 +120,56 @@
                         </a>
                     </ul>
                 </nav>
-                <hr> -->
-
-                <nav>
-                    <ul>
-                        <li class="options-notifications option-active">Últimas notificações</li>
-                        <li class="options-notifications">Não lidas</li>
-                        <li class="options-notifications">Lidas</li>
-                    </ul>
-                </nav>
+                <hr>
 
                 <article id="last-notifications">
-                    <select name="orderBy" id="orderBy_select">
-                        <option value="">Ordenar por</option>
-                        <option value="Mais recentes">Mais recentes</option>
-                        <option value="Mais antigas">Mais antigas</option>
-                    </select>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="most-recents" name="category" />
+                                <label for="most-recents">Mais recentes</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="oldest" name="category" />
+                                <label for="oldest">Mais antigas</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                                <label for="alphabetical-order">De A-Z</label>
+                            </div>
+                        </div>
+
+                        <div class="selected">
+                            Ordernar por
+                        </div>
+                    </div>
                 </article>
 
                 <article id="unread-notifications">
-                    <select name="orderBy" id="orderBy_select">
-                        <option value="">Ordenar por</option>
-                        <option value="Mais recentes">Mais recentes</option>
-                        <option value="Mais antigas">Mais antigas</option>
-                    </select>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="most-recents" name="category" />
+                                <label for="most-recents">Mais recentes</label>
+                            </div>
 
+                            <div class="option">
+                                <input type="radio" class="radio" id="oldest" name="category" />
+                                <label for="oldest">Mais antigas</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                                <label for="alphabetical-order">De A-Z</label>
+                            </div>
+                        </div>
+
+                        <div class="selected">
+                            Ordernar por
+                        </div>
+                    </div>
                     <div class="notification">
                         <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
 
@@ -145,11 +196,28 @@
                 </article>
 
                 <article id="read-notifications">
-                    <select name="orderBy" id="orderBy_select">
-                        <option value="">Ordenar por</option>
-                        <option value="Mais recentes">Mais recentes</option>
-                        <option value="Mais antigas">Mais antigas</option>
-                    </select>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="most-recents" name="category" />
+                                <label for="most-recents">Mais recentes</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="oldest" name="category" />
+                                <label for="oldest">Mais antigas</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                                <label for="alphabetical-order">De A-Z</label>
+                            </div>
+                        </div>
+
+                        <div class="selected">
+                            Ordernar por
+                        </div>
+                    </div>
 
                     <div class="notification">
                         <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
@@ -203,6 +271,8 @@
             </div>
             </div>
         </section>
+
+        <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
         <script src="script/default/header/header.js"></script>
         <script src="script/my-account/notifications.js"></script>
 

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
+    <link rel="stylesheet" href="style/my-account/my-account.css">
     <link rel="stylesheet" href="style/my-account/favorites.css">
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
 </head>
@@ -19,21 +20,44 @@
     <header id="header" class="container_margin_default">
         <div class="default_margin">
             <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
-            <div>
-                <ul id="type_office">
-                    <li class="option_office checked">Espaço adaptado</li>
-                    <li class="option_office">Espaço corporativo</li>
-                </ul>
-                <div class="container_search">
-                    <span id="search_txt">Busque locais para trabalho</span>
-                    <div id='container_informations_find_coworking'>
-                        <input id="localization" type="text" placeholder="Localização:">
-                        <input type="date" id="check_in">
+
+            <span>
+                <a href="/tipo-de-ambiente"><button id="advertiser">Quero anunciar</button></a>
+
+                <div id="menu">
+                    <div id='menu_sign-in-up'>
+                        <img src="images/default/user.svg" alt="usuário">
+                        <img src="images/default/menu_hamburguer.svg" alt="menu">
                     </div>
-                    <a href="#">
+
+                    <div class="menu_open">
                         <div>
-                            <img src="images/default/search.svg" alt="pesquisa">
+                            <img src="images/default/perfil.svg" alt="foto de perfil">
+                            <h3>Luana Almeida <span>Coworker</span></h3>
                         </div>
+                        <div>
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <img src="images/default/my-perfil.png" alt="meu perfil">
+                                        My profile
+                                    </li>
+                                    <li>
+                                        <img src="images/default/favorite.png" alt="favoritos">
+                                        Favoritos
+                                    </li>
+                                    <li>
+                                        <img src="images/default/question.png" alt="suporte">
+                                        Help & Support
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div>
+                            <img src="images/default/log-out.png" alt="sair da conta">
+                            Logout
+                        </div>
+<<<<<<< HEAD
                     </a>
                 </div>
             </div>
@@ -69,9 +93,11 @@
                     <div>
                         <img src="images/default/log-out.png" alt="sair da conta">
                         Logout
+=======
+>>>>>>> b78bd2df81b1510418f6d6a690e649f3bd62c73c
                     </div>
                 </div>
-            </div>
+            </span>
         </div>
     </header>
 

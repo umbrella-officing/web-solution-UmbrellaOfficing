@@ -31,7 +31,7 @@
     transition: all .4s;
 }
 
-#admin > div {
+#admin>div {
     padding: 220px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
@@ -51,24 +51,24 @@
 
 
 /*Menu lateral*/
-#admin > div nav {
+#admin>div nav {
     position: relative;
     z-index: 8000;
 }
 
-#admin > div nav ul {
+#admin>div nav ul {
     list-style: none;
 }
 
-#admin > div nav ul li a {
+#admin>div nav ul li a {
     text-decoration: none;
     color: var(--text-1-black);
     font-size: 16px;
     font-weight: 400;
 }
 
-#admin > div nav ul li {
-    margin-bottom: 20px;
+#admin>div nav ul li {
+    margin-bottom: 35px;
 }
 
 .icon {
@@ -100,4 +100,128 @@
     text-align: center;
     color: white;
     margin-right: 10px;
+}
+
+#users-control_section1 h1~div,
+#ads-control_section1 h1~div {
+    display: grid;
+    grid-template-columns: 402px 244px;
+    grid-column-gap: 100px;
+    margin: 20px 0 40px 0;
+}
+
+.container_search-admin_input {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--gray-border);
+    width: 400px;
+    position: relative;
+    border-radius: 38px;
+    height: 38px;
+    transform: initial;
+    transition: 250ms ease;
+}
+
+#search-admin_txt {
+    width: inherit;
+    background: inherit;
+    border: none;
+    border-radius: inherit;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    outline: none;
+    padding-left: 20px;
+}
+
+.container_search-admin_input div {
+    display: flex;
+    padding: 9px 12px;
+    background-color: var(--scale-13-blue);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.select-box {
+    display: flex;
+    position: absolute;
+    width: 244px;
+    flex-direction: column;
+    margin-left: 502px;
+}
+
+.select-box .options-container {
+    background: white;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 10px;
+    overflow: hidden;
+
+    order: 1;
+}
+
+.selected:after {
+    content: '\f106';
+    position: absolute;
+    right: 20px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 20px;
+    font-weight: 700;
+    color: black;
+    transform: rotate(180deg);
+    transition: all .4s;
+}
+
+.selected {
+    background: white;
+    border-radius: 50px;
+    border: 1px solid var(--gray-border);
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-1-black);
+    position: relative;
+    order: 0;
+}
+
+
+.select-box .options-container.active {
+    max-height: 76px;
+    border: 1px solid var(--gray-border);
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: var(--gray-border);
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+    background: var(--scale-13-blue);
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+    height: 38px;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.select-box .option:hover {
+    background: #f1f6ff;
+}
+
+.select-box label {
+    cursor: pointer;
+}
+
+.select-box .option .radio {
+    display: none;
 }
