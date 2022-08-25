@@ -22,7 +22,11 @@ const additionalSpecifications = ()=>{
     const listSpecifications = document.querySelector('#list-add-specifications')
     
     const list = [{nameEng:'Computer',name:'Computadores', img:'images/search-spaces/search/computer.svg', value:2},
-                  {nameEng:'Sockets', name:'Tomadas', img:'images/search-spaces/search/sockets.svg', value:5}  
+                  {nameEng:'Sockets', name:'Tomadas', img:'images/search-spaces/search/sockets.svg', value:5},
+                  {nameEng:'Chair', name:'Cadeiras', img:'images/search-spaces/search/chair.png', value:5},
+                  {nameEng:'Table', name:'Mesas', img:'images/search-spaces/search/table.png', value:8},
+                  {nameEng:'Window', name:'Janelas', img:'images/search-spaces/search/window.png', value:3},
+                  {nameEng:'air-conditioning', name:'Ar condicionado', img:'images/search-spaces/search/air-conditioning.png', value:2}  
                 ]
                 
    const createList = list.forEach(item=>{
