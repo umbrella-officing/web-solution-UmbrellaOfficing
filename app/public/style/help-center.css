@@ -46,3 +46,11 @@
     font-weight: 800;
     text-align: center;
 }
+
+#align-list{
+    display: flex;
+}
+
+#align-list > ol > li{
+    border: 1px solid var(--gray-border);
+}
