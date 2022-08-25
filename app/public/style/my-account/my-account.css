@@ -3,17 +3,26 @@
     align-items: center;
 }
 
-#header div span a button {
+#container_menu{
+    display: flex;
+    align-items: center;
+}
+
+#container_menu > a > button{
     width: 160px;
     height: 40px;
     background-color: var(--scale-2-purple);
     border: none;
     border-radius: 50px;
-    margin-right: 50px;
+    margin-right: 40px;
 }
 
-#header div span a button {
-   font-size: 14.5px;
-   font-weight: 600;
-   color: white;
-}
+#container_menu > a > button{
+    font-size: 14.5px;
+    font-weight: 600;
+    color: white;
+ }
+
+ .menu_open_checked{
+    top:102px;
+ }

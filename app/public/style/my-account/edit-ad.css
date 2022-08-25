@@ -530,3 +530,13 @@ body {
     font-weight: 500;
     margin: 40px 0 0 558px;
 }
+
+.edit-ad_section_form2_flex2 > div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.edit-ad_section_form2 .edit-ad_section_form2_flex2-column{
+    flex-direction: column;
+    align-items: flex-start;
+}

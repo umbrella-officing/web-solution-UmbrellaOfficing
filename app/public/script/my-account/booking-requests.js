@@ -5,15 +5,15 @@ const chooseOption = () => {
     });
     function checked() {
         options_menu.forEach(option => {
-            option.classList.remove("chooseOption")
+            option.classList.remove("option-checked")
         });
-        this.classList.add("chooseOption")
+        this.classList.add("option-checked")
     };
 };
 
 chooseOption();
 
-function requests(x){
+function bookingRequests(x){
     if(x === 1){
         document.getElementById("pending-confirmation").style.display="block";
         document.getElementById("confirmed").style.display="none";
@@ -34,7 +34,6 @@ function requests(x){
         document.getElementById("canceled").style.display="block";
         document.getElementById("client-avaliation").style.display="none";
     }
-
     
     else {
         document.getElementById("pending-confirmation").style.display="none";
@@ -44,6 +43,7 @@ function requests(x){
     }
 }
 
+bookingRequests();
 
 const openPopAvaliation = () => {
     const buttonAvaliation= document.querySelectorAll(".avaliation");
