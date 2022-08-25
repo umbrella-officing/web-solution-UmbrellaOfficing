@@ -24,3 +24,25 @@
     padding-left: 24px;
     margin-top: 20px;
 }
+
+#become-advertiser_section2 > div{
+    display: flex;
+    flex-direction: column;
+}
+
+#align-options{
+    border-bottom: 1px solid var(--gray-border);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    margin-top: 60px;
+}
+
+#align-options > button{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+}
