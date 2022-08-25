@@ -69,7 +69,7 @@
 
                 <h1>Notificações</h1>
 
-                <!-- <nav>
+                <nav>
                     <ul>
                         <a href="javascript:notificacoes(1);" autofocus>
                             <li id="li-lastN">Últimas notificações</li>
@@ -82,31 +82,56 @@
                         </a>
                     </ul>
                 </nav>
-                <hr> -->
-
-                <nav>
-                    <ul>
-                        <li class="options-notifications option-active">Últimas notificações</li>
-                        <li class="options-notifications">Não lidas</li>
-                        <li class="options-notifications">Lidas</li>
-                    </ul>
-                </nav>
+                <hr>
 
                 <article id="last-notifications">
-                    <select name="orderBy" id="orderBy_select">
-                        <option value="">Ordenar por</option>
-                        <option value="Mais recentes">Mais recentes</option>
-                        <option value="Mais antigas">Mais antigas</option>
-                    </select>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="most-recents" name="category" />
+                                <label for="most-recents">Mais recentes</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="oldest" name="category" />
+                                <label for="oldest">Mais antigas</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                                <label for="alphabetical-order">De A-Z</label>
+                            </div>
+                        </div>
+
+                        <div class="selected">
+                            Ordernar por
+                        </div>
+                    </div>
                 </article>
 
                 <article id="unread-notifications">
-                    <select name="orderBy" id="orderBy_select">
-                        <option value="">Ordenar por</option>
-                        <option value="Mais recentes">Mais recentes</option>
-                        <option value="Mais antigas">Mais antigas</option>
-                    </select>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="most-recents" name="category" />
+                                <label for="most-recents">Mais recentes</label>
+                            </div>
 
+                            <div class="option">
+                                <input type="radio" class="radio" id="oldest" name="category" />
+                                <label for="oldest">Mais antigas</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                                <label for="alphabetical-order">De A-Z</label>
+                            </div>
+                        </div>
+
+                        <div class="selected">
+                            Ordernar por
+                        </div>
+                    </div>
                     <div class="notification">
                         <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
 
@@ -133,11 +158,28 @@
                 </article>
 
                 <article id="read-notifications">
-                    <select name="orderBy" id="orderBy_select">
-                        <option value="">Ordenar por</option>
-                        <option value="Mais recentes">Mais recentes</option>
-                        <option value="Mais antigas">Mais antigas</option>
-                    </select>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="most-recents" name="category" />
+                                <label for="most-recents">Mais recentes</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="oldest" name="category" />
+                                <label for="oldest">Mais antigas</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                                <label for="alphabetical-order">De A-Z</label>
+                            </div>
+                        </div>
+
+                        <div class="selected">
+                            Ordernar por
+                        </div>
+                    </div>
 
                     <div class="notification">
                         <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
@@ -191,6 +233,8 @@
             </div>
             </div>
         </section>
+
+        <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
         <script src="script/default/header/header.js"></script>
         <script src="script/my-account/notifications.js"></script>
 
