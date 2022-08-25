@@ -93,7 +93,7 @@
     width: 100%;
 }
 
-#buttons-div :first-child{
+#buttons-div > a > button{
     max-width: 340px;
     font-size: 15px;
     font-weight: 700;
@@ -104,7 +104,7 @@
     color: var(--white);
 }
 
-#buttons-div :nth-child(2){
+#buttons-div :nth-child(2) > button{
     width: 186px;
     height: 36px;
     border: none;
@@ -113,11 +113,13 @@
     color: var(--white);
     font-weight: 600;
     font-size: 20px;
+    padding: 0;
 }
 
 article{
     width: 100%;
-    padding: 185px 0;
+    height: 100vh;
+    /* padding: 185px 0; */
     background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
     z-index: 1000;
