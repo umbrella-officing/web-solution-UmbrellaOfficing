@@ -184,134 +184,103 @@
                                     </button>
                                 </div>
                             </div>
-                            <div>
-                                <h5>Especificações</h5>
-                                <ul>
-                                    <li class="specifications">
-                                        <div>
-                                            <img src="images/search-spaces/search/wi-fi.svg" alt="wi-fi">
-                                        </div>
+                        <div id="more_specifications">
+                            <h5>Especificações</h5>
+                            <ul>
+                                <li class="specifications">
+                                    <div>
+                                        <img src="images/search-spaces/search/wi-fi.svg" alt="wi-fi">
+                                    </div>
                                         <label for="wi-fi">Wi-fi</label>
                                         <div class="specification">
                                             <button>
-                                                <img class="subtract" src="images/search-spaces/search/subtract.png"
-                                                    alt="subtrair">
-                                            </button>
+                                                <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
+                                            </button> 
                                             <input type="number" min="0" value="4" name="people" disabled>
                                             <button>
                                                 <img class="addition" src="images//search-spaces/search/button-add.png"
                                                     name="addition" alt="adicionar">
                                             </button>
                                         </div>
-                                    </li>
-                                    <li class="specifications">
-                                        <div>
-                                            <img src="images/search-spaces/search/computer.svg" alt="computador">
-                                        </div>
+                                </li>
+                                <li class="specifications">
+                                    <div>
+                                        <img src="images/search-spaces/search/computer.svg" alt="computador">
+                                    </div>    
                                         <label for="compurters">Computadores</label>
                                         <div class="specification">
                                             <button>
-                                                <img class="subtract" src="images/search-spaces/search/subtract.png"
-                                                    alt="subtrair">
-                                            </button>
+                                                <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
+                                            </button> 
                                             <input type="number" min="0" value="4" name="people" disabled>
-                                            <button>
-                                                <img class="addition" src="images//search-spaces/search/button-add.png"
-                                                    name="addition" alt="adicionar">
+                                             <button>
+                                                <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
                                             </button>
                                         </div>
-                                    </li>
-                                    <li class="specifications">
-                                        <div>
-                                            <img src="images/search-spaces/search/sockets.svg" alt="tomadas">
-                                        </div>
+                                </li>
+                                <li class="specifications">
+                                    <div>
+                                        <img src="images/search-spaces/search/sockets.svg" alt="tomadas">
+                                    </div>    
                                         <label for="sockets">Tomadas</label>
                                         <div class="specification">
                                             <button>
-                                                <img class="subtract" src="images/search-spaces/search/subtract.png"
-                                                    alt="subtrair">
-                                            </button>
+                                                <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
+                                            </button> 
                                             <input type="number" min="0" value="4" name="people" disabled>
-                                            <button>
-                                                <img class="addition" src="images//search-spaces/search/button-add.png"
-                                                    name="addition" alt="adicionar">
+                                             <button>
+                                                <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
                                             </button>
                                         </div>
-                                    </li>
-                                </ul>
-                                <button>Mais...</button>
-                            </div>
-                        </div>
-                        <div class="margin_filter gap">
-                            <ul class="avaliation">
-                                <li class="star-icon active" data-avaliacao="1"></li>
-                                <li class="star-icon" data-avaliacao="2"></li>
-                                <li class="star-icon" data-avaliacao="3"></li>
-                                <li class="star-icon" data-avaliacao="4"></li>
-                                <li class="star-icon" data-avaliacao="5"></li>
-                            </ul>
-                        </div>
-                        <div class="margin_filter gap">
-                            <ul>
-                                <h5>Ambientes Adaptados</h5>
-                                <li>Casas</li>
-                                <li>Apartamentos</li>
-                                <li>Unidades à parte</li>
-                            </ul>
-
-                            <ul>
-                                <h5>Ambientes corporativos</h5>
-                                <li>
-                                    <label for="office">
-                                        Escritório
-                                        <input type="checkbox" id="office">
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="coworking">
-                                        Coworking
-                                        <input type="checkbox" id="coworking">
-                                    </label>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="search_section1_spaces">
-                    <ul>
-                        <li>
-                            <div>
-                                <img src="images/my-account/favorites/apartament.png" alt="apartamento">
-                                <button type="" id="share">Compartilhar
-                                    <i class="fa-solid fa-share-nodes fa-share"></i></button>
-                            </div>
-
-                            <div>
-                                <span>
-                                    <h4>Escritório Compartilhado</h4>
-                                    <span><i class="fa-solid fa-heart favorite"></i></span>
-                                </span>
-
-                                <h2>Escritório Lape</h2>
-                                <p>6-8 pessoas | 2 Salas | 1 banheiro</p>
-                                <p>Descrição: Com ar condicionado e caixa de som. Ideal para equipes pequenas...</p>
-
+                            <button id="openList">Mais...</button>
+                            <div id="additional-specifications">
                                 <div>
-                                    <h3>R$: 15/hora</h3>
-
-                                    <div class="avaliation">
-                                        <span><i class="fa-solid fa-star star"></i>
-                                            4.8 |</span>
-
-                                        <span>
-                                            <i class="fa-solid fa-comments comments"></i>
-                                            12</span>
+                                    <div>
+                                        <h2>Especificações</h2>
+                                        <ul id="list-add-specifications"></ul>
+                                        <button>Concluir</button>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                        </div>
+                            <div class="margin_filter gap">
+                                <ul class="avaliation">
+                                    <li class="star-icon active" data-avaliacao="1"></li>
+                                    <li class="star-icon" data-avaliacao="2"></li>
+                                    <li class="star-icon" data-avaliacao="3"></li>
+                                    <li class="star-icon" data-avaliacao="4"></li>
+                                    <li class="star-icon" data-avaliacao="5"></li>
+                                  </ul>
+                            </div>
+                            <div class="margin_filter gap">
+                                <ul>
+                                    <h5>Ambientes Adaptados</h5>
+                                    <li>Casas</li>
+                                    <li>Apartamentos</li>
+                                    <li>Unidades à parte</li>
+                                </ul>
+                               
+                                <ul>
+                                    <h5>Ambientes corporativos</h5>
+                                    <li>
+                                        <label for="office">
+                                            Escritório
+                                            <input type="checkbox" id="office">
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="coworking">
+                                            Coworking
+                                            <input type="checkbox" id="coworking">
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -373,7 +342,7 @@
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
     <script src="script/default/header/header.js"></script>
     <script src="script/search-spaces/search/range.js"></script>
-    <script src="script/search-spaces/search/specification-values.js"></script>
+    <script src="script/search-spaces/search/specification-value.js"></script>
 </body>
 
 </html>
