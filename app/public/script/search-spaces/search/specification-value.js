@@ -1,11 +1,28 @@
+const openPopUp = () =>{
+    const openList = document.querySelector("#openList")
+    const container = document.querySelector('#additional-specifications')
 
+    openList.addEventListener('click',()=>{
+        container.style.display = 'flex'
+    })
+
+    close_popup(container)
+
+}
+
+const close_popup = (container)=> {
+    container.addEventListener('click',(e)=>{
+        if(e.target.id == 'close_popUp' || e.target == container)
+        container.style.display = 'none'
+    })
+}
 
 const additionalSpecifications = ()=>{
 
     const listSpecifications = document.querySelector('#list-add-specifications')
     
     const list = [{nameEng:'Computer',name:'Computadores', img:'images/search-spaces/search/computer.svg', value:2},
-                  {nameEng:'Sockets', name:'Tomadas', img:'images/search-spaces/search/sockets.svg', value:10}  
+                  {nameEng:'Sockets', name:'Tomadas', img:'images/search-spaces/search/sockets.svg', value:5}  
                 ]
                 
    const createList = list.forEach(item=>{
@@ -21,7 +38,7 @@ const additionalSpecifications = ()=>{
                     <button>
                         <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
                     </button> 
-                    <input type="number" min="0" value="4" name="${item.nameEng}" disabled>
+                    <input type="number" min="0" value="${item.value}" name="${item.nameEng}" disabled>
                     <button>
                         <img class="addition" src="images//search-spaces/search/button-add.png"
                         name="addition" alt="adicionar">
@@ -32,7 +49,6 @@ const additionalSpecifications = ()=>{
     })
 
 }
-additionalSpecifications()
 
 
 const operationsValues = () =>{
@@ -76,4 +92,6 @@ const operationsValues = () =>{
         
 }
 
+openPopUp()
+additionalSpecifications()
 operationsValues()

@@ -3,14 +3,12 @@
     --text-1-black: #333333;
     --text-2-black:#3E3C3C;
     --text-3-black:#7D7D7D;
-    /* --text-gray:#666; */
     --white:#fff;
     --scale-1-gray:#F2F2F2;
     --scale-gray:#F5F5F5;
     --scale-2-gray:#EFEFEF;
     --gray-border: #d1d1d1;
     --scale-1-purple:#985bdf;
-    /* #8b5bc2*/
     --scale-2-purple:#650c85;
     --scale-5-purple:#640c84;
     --scale-3-purple: #5B61C4;
@@ -220,6 +218,7 @@ header > div {
 
 #menu_sign-in-up > img:nth-child(2){
     margin-left: 16px;
+    
 }
 
 .menu_open{
@@ -259,10 +258,12 @@ header > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 62%;
 }
 
 .menu_open > div:first-child img{
     margin-right: 21px;
+    width: 70px;
 }
 
 .menu_open > div:first-child h3{

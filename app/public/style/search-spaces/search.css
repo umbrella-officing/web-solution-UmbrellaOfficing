@@ -29,11 +29,6 @@
     margin-bottom: 40px;
 }
 
-#filter h5{
-    color:#1b1b1b;
-    font-weight: 570;
-}
-
 #filter > div:first-child{
     height: 27px;
     padding-top: 18px;
@@ -42,22 +37,22 @@
     background: #748fe0;
     border-radius: 10px 10px 0 0;
     color: white;
-    
-    
 }
 
 #filter ul{
     list-style: none;
 }
 
+#filter h5{
+  font-size: 14px;
+  color:#1b1b1b;
+  font-weight: 500;
+}
+
 #price_input > div:first-child{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-#price_input h5{
-    font-size: 15px;
 }
 
 #price_input > div:nth-child(2){
@@ -156,10 +151,6 @@ input[type="number"]::-webkit-inner-spin-button {
     align-items: center;
     justify-content: space-between;
   }
-  
-  #amount-people h5{
-    font-size: 15px;
-  }
 
   .specification{
     display: flex;
@@ -183,6 +174,7 @@ input[type="number"]::-webkit-inner-spin-button {
     text-align: center;
     width: 24px;
     font-size: 15px;
+    background: transparent;
     border: none;
     padding: 0;
   }
@@ -283,4 +275,19 @@ input[type="number"]::-webkit-inner-spin-button {
 
   #additional-specifications > div img{
     width: 15px;
+  }
+
+  #additional-specifications > div input[type="number"]{
+    width: 32px;
+  }
+
+  .rating{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    width: 70%;
+  }
+
+  .rating img{
+    width: 22px;
   }
