@@ -9,6 +9,8 @@ ul{
 
 #adaptables-categories_section{
     padding-top: 105px;
+    height: 100vh;
+    max-height: 700px;
 }
 
 #adaptables-categories_section > div{
