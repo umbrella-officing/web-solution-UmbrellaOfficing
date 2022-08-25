@@ -48,7 +48,7 @@ a {
     align-items: center;
 }
 
-.option-checked{
+.option-checked {
     border-left: 3px solid var(--scale-13-blue);
     font-size: 16px;
     font-weight: 600;
@@ -58,8 +58,6 @@ a {
 
 .options_menu {
     font-size: 16px;
-    font-weight: 400;
-    color: var(--text-1-black);
 }
 
 #booking-requests>div article {
@@ -307,9 +305,4 @@ section::after {
     font-weight: 500;
 }
 
-#confirmed, 
-#canceled,
-#client-avaliation {
-    display: none;
-}
 

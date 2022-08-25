@@ -1,4 +1,4 @@
-const chooseOption = () => {
+const optionMenu = () => {
     const options_menu = document.querySelectorAll(".options_menu");
     options_menu.forEach(option => {
         option.addEventListener("click", checked) 
@@ -11,7 +11,7 @@ const chooseOption = () => {
     };
 };
 
-chooseOption();
+optionMenu();
 
 function bookingRequests(x){
     if(x === 1){
