@@ -1,0 +1,19 @@
+#header div span {
+    display: flex;
+    align-items: center;
+}
+
+#header div span a button {
+    width: 160px;
+    background-color: var(--scale-2-purple);
+    border: none;
+    border-radius: 50px;
+    padding: 14px 16px;
+    margin-right: 50px;
+}
+
+#header div span a button {
+   font-size: 14.5px;
+   font-weight: 600;
+   color: white;
+}

@@ -1,89 +1,65 @@
-const selectedSpace = document.querySelector(".selected-space");
-const optionsContainer_space = document.querySelector(".options-container-space");
-const searchBox = document.querySelector(".search-box input");
-
-const optionsList_spaces = document.querySelectorAll(".option-space");
-
-selectedSpace.addEventListener("click", () => {
-  optionsContainer_space.classList.toggle("active-space");
-
-  searchBox.value = "";
-  filterList("");
-
-  if (optionsContainer_space.classList.contains("active-space")) {
-    searchBox.focus();
-  }
-});
-
-optionsList_spaces.forEach(o => {
-  o.addEventListener("click", () => {
-    selectedSpace.innerHTML = o.querySelector("label").innerHTML;
-    optionsContainer_space.classList.remove("active-space");
-  });
-});
-
-searchBox.addEventListener("keyup", function(e) {
-  filterList(e.target.value);
-});
-
-const filterList = searchTerm => {
-  searchTerm = searchTerm.toLowerCase();
-  optionsList_spaces.forEach(option => {
-    let label = option.firstElementChild.nextElementSibling.innerText.toLowerCase();
-    if (label.indexOf(searchTerm) != -1) {
-      option.style.display = "block";
-    } else {
-      option.style.display = "none";
-    }
-  });
-};
-
 const selected = document.querySelector(".selected");
 const optionsContainer = document.querySelector(".options-container");
 
 const optionsList = document.querySelectorAll(".option");
 
 selected.addEventListener("click", () => {
-  optionsContainer.classList.toggle("active1");
+  optionsContainer.classList.toggle("active");
 });
 
 optionsList.forEach(o => {
   o.addEventListener("click", () => {
     selected.innerHTML = o.querySelector("option").innerHTML;
-    optionsContainer.classList.remove("active1");
+    optionsContainer.classList.remove("active");
   });
+});
+
+const selectedType = document.querySelector(".selected-type");
+const typeContainer = document.querySelector(".type-container");
+
+const typeList = document.querySelectorAll(".type");
+
+selectedType.addEventListener("click", () => {
+  typeContainer.classList.toggle("active-type");
+});
+
+typeList.forEach(t => {
+  t.addEventListener("click", () => {
+    selectedType.innerHTML = t.querySelector("option").innerHTML;
+    typeContainer.classList.remove("active-type");
+ });
 });
 
 const selectedCategory = document.querySelector(".selected-category");
-const optionsCategory= document.querySelector(".options-category");
+const categoryContainer = document.querySelector(".category-container");
 
-const optionsCategoryList = document.querySelectorAll(".option-category");
+const categoryList = document.querySelectorAll(".category");
 
 selectedCategory.addEventListener("click", () => {
-  optionsCategory.classList.toggle("active2");
+  categoryContainer.classList.toggle("active-category");
 });
 
-optionsCategoryList.forEach(o => {
-  o.addEventListener("click", () => {
-    selectedCategory.innerHTML = o.querySelector("option-category").innerHTML;
-    optionsCategory.classList.remove("active2");
-  });
+categoryList.forEach(c => {
+  c.addEventListener("click", () => {
+    selectedCategory.innerHTML = c.querySelector("option").innerHTML;
+    categoryContainer.classList.remove("active-category");
+ });
 });
 
 const selectedSubcategory = document.querySelector(".selected-subcategory");
-const optionsSubcategory= document.querySelector(".options-subcategory");
+const subcategoryContainer = document.querySelector(".subcategory-container");
 
-const optionsSubcategoryList = document.querySelectorAll(".option-subcategory");
+const subcategoryList = document.querySelectorAll(".subcategory");
 
 selectedSubcategory.addEventListener("click", () => {
-  optionsSubcategory.classList.toggle("active3");
+  subcategoryContainer.classList.toggle("active-subcategory");
 });
 
-optionsSubcategoryList.forEach(o => {
-  o.addEventListener("click", () => {
-    selectedSubcategory.innerHTML = o.querySelector("option-subcategory").innerHTML;
-    optionsSubcategory.classList.remove("active3");
-  });
+subcategoryList.forEach(s => {
+  s.addEventListener("click", () => {
+    selectedSubcategory.innerHTML = s.querySelector("option").innerHTML;
+    subcategoryContainer.classList.remove("active-subcategory");
+ });
 });
 
 const plus = document.querySelector('.plus'),

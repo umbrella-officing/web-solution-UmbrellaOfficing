@@ -55,29 +55,54 @@
                 <section id="ads-control_section1" class="container_margin_default">
                     <h1>Anúncios</h1>
 
+                    <div>
 
-                        <div class="container_search-ads_input">
-                            <input id="search-ads_txt" placeholder="Procure um anúncio"></input>
+                        <div class="container_search-admin_input">
+                            <input id="search-admin_txt" placeholder="Procure um anúncio"></input>
                             <div>
                                 <img src="images/default/search.svg" alt="Pesquisa">
                             </div>
                         </div>
+
+                        <div class="select-box">
+                            <div class="options-container">
+                                <div class="option">
+                                    <input type="radio" class="radio" id="most-recents" name="category" />
+                                    <label for="most-recents">Mais recentes</label>
+                                </div>
+
+                                <div class="option">
+                                    <input type="radio" class="radio" id="oldest" name="category" />
+                                    <label for="oldest">Mais antigas</label>
+                                </div>
+
+                                <div class="option">
+                                    <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                                    <label for="alphabetical-order">De A-Z</label>
+                                </div>
+                            </div>
+
+                            <div class="selected">
+                                Ordernar por
+                            </div>
+                        </div>
+                    </div>
 
                     <ul>
                         <li>
                             <div>
                                 <h2>Água Branca</h2>
                                 <p>Salas cadastradas: 3</p>
-                            </span>
+                                </span>
                             </div>
 
                             <div>
                                 <p>Aline dos Santos Ribeiro Luna</p>
-                                <p><strong>Cadastro: 22/04/2022 
-                                    <br>Anúncio: --</strong></p>
+                                <p><strong>Cadastro: 22/04/2022
+                                        <br>Anúncio: --</strong></p>
                             </div>
 
-                            
+
                             <div>
                                 <button type="" id="view-photos">
                                     Ver fotos
@@ -96,7 +121,7 @@
 
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
     <script src="script/default/header/header.js"></script>
-    <script src="script/my-account/edit-ad.js"></script>
+    <script src="script/admin/admin.js"></script>
 
 </body>
 
