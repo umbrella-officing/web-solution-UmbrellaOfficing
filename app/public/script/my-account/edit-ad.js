@@ -62,20 +62,53 @@ subcategoryList.forEach(s => {
  });
 });
 
-const plus = document.querySelector('.plus'),
-      minus = document.querySelector('.minus'),
-      num = document.querySelector('.num');
+$(document).ready(function () {
+  $("#cep_ad").mask("00.000-000");
+  $("#price").mask("R$: 0,00");
+});
 
-update = (n) => {
-    num.innerText = ( n <10 && n > 0) ? `${n}` : n;
+
+const operationsValues = () =>{
+  const specifications = document.querySelectorAll(".specification")
+
+  specifications.forEach((specification,index)=>{
+      specification.addEventListener('click',(v)=>{
+          if(v.target.classList == "subtract"){
+              subtractionInput(specification,index)
+          }
+
+          if(v.target.classList == "addition"){
+              additionInput(specification,index)
+          }
+      })
+  })
+
+
+      function subtractionInput(specification,index){
+
+          if(index == index){
+              var amountInput = specification.children[1]
+              var i = amountInput.value
+
+              if (i > 0) {
+                  i--
+                  amountInput.setAttribute('value', i)
+              }
+          }
+      }
+
+      function additionInput(specification,index){
+
+          if(index == index){
+              var amountInput = specification.children[1]
+              var i = amountInput.value
+              i++
+              amountInput.setAttribute('value', i)
+          }
+      }
+      
 }
 
-let a = 1;
+operationsValues()
 
-plus.addEventListener('click', () => update(++a));
-minus.addEventListener('click', () => update(--a));
 
-$(document).ready(function () {
-    $("#cep_ad").mask("00.000-000");
-    $("#price").mask("R$: 0,00");
-});

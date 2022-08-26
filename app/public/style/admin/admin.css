@@ -108,6 +108,7 @@
     grid-template-columns: 402px 244px;
     grid-column-gap: 100px;
     margin: 20px 0 40px 0;
+    position: relative;
 }
 
 .container_search-admin_input {
@@ -148,7 +149,7 @@
     position: absolute;
     width: 244px;
     flex-direction: column;
-    margin-left: 502px;
+    right: 0;
 }
 
 .select-box .options-container {
