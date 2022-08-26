@@ -122,13 +122,6 @@
     color: var(--text-1-black); 
 }
 
-.form-control:focus {
-    background-color: #fff;
-    border-color: #08bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.3rem rgb(0, 123, 255, .25);
-}
-
 .my-profile_section1-form-flex {
     display: flex;
     justify-content: space-between;
