@@ -1,3 +1,7 @@
+*{
+    color: var(--text-1-black)
+}
+
 #help-center_section1{
     padding-top: 200px;
 }
@@ -25,6 +29,10 @@
     margin-top: 20px;
 }
 
+#become-advertiser_section2{
+    padding-bottom: 40px;
+}
+
 #become-advertiser_section2 > div{
     display: flex;
     flex-direction: column;
@@ -49,8 +57,103 @@
 
 #align-list{
     display: flex;
+    padding: 30px 0 30px 0;
+}
+
+#align-list > ol{
+    list-style: none;
+    width: 345px;
+    margin: 0;
 }
 
 #align-list > ol > li{
     border: 1px solid var(--gray-border);
+    width: 90%;
+    padding: 16px 0 16px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+#become-advertiser_section3{
+    background-color: var(--scale-1-gray);
+    padding: 50px 0;
+}
+
+#become-advertiser_section3 > div{
+    flex-direction: column;
+    align-items: initial;
+}
+
+#become-advertiser_section3 > div > h2{
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+#align-mainArticles{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#align-mainArticles > div{
+    background-color: var(--white);
+    border: 1px solid var(--gray-border);
+    height: 350px;
+    border-radius: 10px;
+}
+
+#align-mainArticles > div > img{
+    border-radius: 10px 10px 0 0;
+    width: 254px;
+    height: 234px;
+}
+
+#align-mainArticles > div > h3{
+    font-size: 16px;
+    margin: 26px 0 0 16px;
+}
+
+#become-advertiser_section4{
+    padding: 105px 0;
+}
+
+#become-advertiser_section4 > div{
+    flex-direction: column;
+    align-items: initial;
+}
+
+#become-advertiser_section4 > div > :nth-child(2){
+    border-bottom: 1px solid var(--gray-border);
+    padding-bottom: 38px;
+}
+
+#become-advertiser_section4 > div > :nth-child(3){
+    margin-top: 38px;
+}
+
+#become-advertiser_section4 > div > ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+}
+
+#become-advertiser_section4 > div > ul > li{
+    max-width: 350px;
+    font-size: 15px;
+    /* background-color: blue; */
+}
+
+#become-advertiser_section4 > div > ul > li > h3{
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#become-advertiser_section4 > div > h2{
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 40px;
 }
