@@ -43,8 +43,6 @@ function bookingRequests(x){
     }
 }
 
-bookingRequests();
-
 const openPopAvaliation = () => {
     const buttonAvaliation= document.querySelectorAll(".avaliation");
     const avaliationOwner = document.getElementById("container_popUp_avaliation-owner");

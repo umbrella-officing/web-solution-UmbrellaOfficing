@@ -1,7 +1,3 @@
-body {
-    font-family: var(--font-primary);
-}
-
 #personal-date {
     position: relative;
 }
@@ -43,7 +39,8 @@ body {
 }
 
 #personal-date>div nav ul li a {
-    text-decoration: none
+    text-decoration: none;
+    align-items: center;
 }
 
 .profile,
@@ -123,10 +120,18 @@ body {
     font-size: 14px;
 }
 
-.personal-date_section1_form-colum2 {
+#personal-date_section1 form>div input:focus {
+    background-color: #fff;
+    border-color: #08bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.3rem rgb(0, 123, 255, .25);
+}
+
+.personal-date-grid2{
     display: grid;
     grid-template-columns: 359.5px 359.5px;
     grid-column-gap: 25px;
+    position: relative;
 }
 
 .select-box {
@@ -134,7 +139,7 @@ body {
     width: 359.5px;
     flex-direction: column;
     position: absolute;
-    margin-left: 384.5px;
+    right: 0;
 }
 
 .select-box .options-container {
@@ -150,7 +155,7 @@ body {
 .selected {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     position: relative;
     order: 0;
 }
@@ -196,7 +201,7 @@ body {
 }
 
 .select-box .option:hover {
-    background: var(--scale-9-blue);
+    background: #f1f6ff;
 }
 
 .select-box label {
@@ -218,7 +223,7 @@ body {
     grid-column-gap: 25px;
 }
 
-.personal-date_section1_form-colum2-dif2 {
+.personal-date-grid2-dif {
     display: grid;
     grid-template-columns: 628px 91px;
     grid-column-gap: 25px;
