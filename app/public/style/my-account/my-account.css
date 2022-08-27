@@ -6,6 +6,7 @@
 #container_menu{
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 #container_menu > a > button{
@@ -23,6 +24,15 @@
     color: white;
  }
 
- .menu_open_checked{
-    top:102px;
+ .option_active{
+    display: flex;
+    align-items: center;
  }
+
+ .option a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-1-black);
+}
