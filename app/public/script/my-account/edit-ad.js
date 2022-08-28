@@ -64,7 +64,7 @@ subcategoryList.forEach(s => {
 
 $(document).ready(function () {
   $("#cep_ad").mask("00.000-000");
-  $("#price").mask("R$: 0,00");
+  $("#price").mask("R$: 999.99", {reverse :true});
 });
 
 

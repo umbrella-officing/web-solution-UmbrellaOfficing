@@ -154,7 +154,6 @@
 
 .rating {
     display: flex;
-    transform: rotate(180deg);
 }
 
 .rating input {
@@ -168,7 +167,7 @@
     width: 25px;
 }
 
-.rating label:before {
+.rating-level:before {
     content: "";
     width: 35px;
     height: 9px;
@@ -180,10 +179,14 @@
     font-size: 25px;
     background-color: white;
     text-shadow: 0 2px 2px rgb(128 128 128 / 10%);
+    transition: .38s ease;
 }
 
+.checked_classification.rating-level::before{
+    background: var(--scale-2-purple);
+}
 
-.rating label:after {
+/* .rating label:after {
     content: "";
     width: 35px;
     height: 9px;
@@ -202,7 +205,7 @@
 .rating label:hover~label:after,
 .rating input:checked~label:after{
     opacity: 1;
-}
+} */
 
 .social-medias {
     width: 50%;

@@ -16,7 +16,7 @@ const rating = () => {
             }
 
             if(current_star_level < lengthStars){
-            for (let i = index+1; i <= arr.length; i++) {
+            for (let i = index+1; i < lengthStars; i++) {
                 arr[i].setAttribute('src','images/search-spaces/search/star.png')
               }
             }

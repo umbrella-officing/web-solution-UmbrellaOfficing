@@ -498,6 +498,8 @@ header > div {
 
 #alternatives > div:last-child span a{
     color: var(--scale-10-blue);
+    position: relative;
+    left: 3px;
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
