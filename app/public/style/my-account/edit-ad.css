@@ -333,13 +333,6 @@
     box-sizing: border-box
 }
 
-#edit-ad_section1 form>div input:focus, textarea:focus {
-    background-color: #fff;
-    border-color: #08bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.3rem rgb(0, 123, 255, .25);
-}
-
 .edit-ad_section_form1 h2 {
     font-size: 18px;
     font-weight: 600;
