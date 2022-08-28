@@ -59,11 +59,11 @@
     color: var(--scale-13-blue);
 }
 
-.option a {
+/* .option a {
     font-size: 16px;
     font-weight: 400;
     color: var(--text-1-black);
-}
+} */
 
 .wallet {
     margin: 0 10px 0 18px;
@@ -95,18 +95,18 @@
     margin-top: 40px;
 }
 
-#personal-date_section1 form>div>div label {
+#personal-date_section1 form>div label {
     display: flex;
     flex-direction: column;
     margin: 30px 0 10px 0;
 }
 
-#personal-date_section1 form>div>div label {
+#personal-date_section1 form>div label {
     font-size: 16px;
     font-weight: 500;
 }
 
-#personal-date_section1 form>div>div input {
+#personal-date_section1 form>div input {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 10px;
@@ -118,13 +118,6 @@
 #personal-date_section1 form>div input {
     font-family: var(--font-primary);
     font-size: 14px;
-}
-
-#personal-date_section1 form>div input:focus {
-    background-color: #fff;
-    border-color: #08bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.3rem rgb(0, 123, 255, .25);
 }
 
 .personal-date-grid2{

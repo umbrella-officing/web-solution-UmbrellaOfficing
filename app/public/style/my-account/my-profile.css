@@ -61,12 +61,6 @@
     color: var(--scale-13-blue);
 }
 
-.option a {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--text-1-black);
-}
-
 .profile {
     margin: 0 10px 0 18px;
 }
@@ -108,10 +102,6 @@
 }
 
 #my-profile_section1 form>div textarea {
-    margin: 10px 0 40px 0;
-}
-
-.form-control {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 11px;
@@ -120,13 +110,7 @@
     font-family: var(--font-primary);
     width: -webkit-fill-available;
     color: var(--text-1-black); 
-}
-
-.form-control:focus {
-    background-color: #fff;
-    border-color: #08bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.3rem rgb(0, 123, 255, .25);
+    margin: 10px 0 40px 0;
 }
 
 .my-profile_section1-form-flex {
@@ -233,6 +217,17 @@
 
 .social-medias_flex div {
     width: 100%;
+}
+
+.social-medias_flex div input {
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    padding: 11px;
+    resize: none;
+    font-size: 14.5px;
+    font-family: var(--font-primary);
+    width: -webkit-fill-available;
+    color: var(--text-1-black); 
 }
 
 .whats,

@@ -30,8 +30,8 @@ ul{
 }
 
 #adaptables-categories_section > div > :first-child > img{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
 }
 
 .align-elements > ul > li > div{
@@ -49,6 +49,7 @@ ul{
     background-color: var(--scale-2-purple);
     color: var(--white);
     font-size: 20px;
+    font-weight: 600;
     border: 0;
     border-radius: 20px;
     width: 186px;

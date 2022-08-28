@@ -61,11 +61,11 @@ body {
     color: var(--scale-13-blue);
 }
 
-.option a {
+/* .option a {
     font-size: 16px;
     font-weight: 400;
     color: var(--text-1-black);
-}
+} */
 
 .reserve {
     margin: 0 10px 0 18px;

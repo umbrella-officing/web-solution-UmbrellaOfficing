@@ -38,7 +38,7 @@
 }
 
 #second > div > p{
-    font-size: 22px;
+    font-size: 20px;
     max-width: 568px;
     font-weight: 400;
     margin-bottom: 25px;
@@ -54,15 +54,16 @@
     height: 293px;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     border: 1px solid var(--gray-border);
-    border-radius: 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
     width: 100%;
+    padding: 25px 10px 30px 10px;
 }
 
 .hint{
-    width: 80%;
+    width: 95%;
     display: flex;
     justify-content: flex-end;
 }
@@ -71,18 +72,13 @@
     max-width: 150px;
     font-weight: 500;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 20px
 }
 
-#typeOf1{
+#typeOf1, #typeOf2{
     width: 136px;
     height: 118px;
-}
-
-#typeOf2{
-    width: 136px;
-    height: 105px;
 }
 
 #buttons-div{
