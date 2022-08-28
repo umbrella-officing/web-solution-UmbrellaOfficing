@@ -253,9 +253,9 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    border-radius: 16px 16px 0 0;
+    border-radius: 16px ;
     box-sizing: border-box;
-    background: #B2B0FF;
+    background: white;
     padding: 20px;
     width: 950px;
     padding: 30px 45px 15px 45px;
@@ -265,7 +265,6 @@ body {
 #popUp-cancel_state1 label {
     font-size: 22px;
     font-weight: bold;
-    color: white;
 }
 
 .popUp_cancel textarea {
@@ -278,6 +277,8 @@ body {
     width: -webkit-fill-available;
     outline: none;
     margin-top: 15px;
+    font-family: var(--font-primary);
+    font-size: 16px;
 }
 
 .popUp_go {
@@ -291,7 +292,7 @@ body {
 #popUp-cancel_state2>div p,
 #popUp-cancel_state3>div p  {
     font-size: 14.5px;
-    font-weight: 500;
+    font-weight: bold;
     color: var(--scale-2-purple);
 }
 
@@ -342,7 +343,6 @@ body {
 #popUp-cancel_state3>div label {
     font-size: 24px;
     font-weight: bold;
-    color: white;
 }
 
 .rating {
