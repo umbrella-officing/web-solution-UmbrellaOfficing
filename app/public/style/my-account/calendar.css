@@ -84,7 +84,7 @@ button {
     margin-bottom: 35px;
  }
  
- #edit-ad_section1 form div h1 {
+#edit-ad_section1 form div h1 {
      font-size: 25px;
      font-weight: bold;
  }
@@ -230,7 +230,7 @@ button {
 }
 
 .day:hover {
-    background-color: #e8faed;
+    background-color: #f1f6ff;
 }
 
 .event {
