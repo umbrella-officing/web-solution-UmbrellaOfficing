@@ -76,102 +76,102 @@ button {
     color: white;
 }
 
-
-.calendar_section1-flex {
+/*Calendar: Conteúdo*/
+.calendar_section1-header {
     display: flex;
     align-items: baseline;
     position: relative;
     margin-bottom: 35px;
- }
+}
  
- #edit-ad_section1 form div h1 {
-     font-size: 25px;
-     font-weight: bold;
- }
+.calendar_section1-header h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
  
- .select-box {
-     display: flex;
-     position: absolute;
-     width: 180px;
-     flex-direction: column;
-     right: 0;
- }
+.select-box {
+    display: flex;
+    position: absolute;
+    width: 180px;
+    flex-direction: column;
+    right: 0;
+}
  
- .select-box .options-container {
-     background: white;
-     max-height: 0;
-     opacity: 0;
-     transition: all 0.4s;
-     border-radius: 10px;
-     overflow: hidden;
+.select-box .options-container {
+    background: white;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 10px;
+    overflow: hidden;
  
-     order: 1;
- }
+    order: 1;
+}
  
- .selected:after {
-     content: '\f106';
-     position: absolute;
-     right: 5px;
-     font-family: 'Font Awesome 5 Free';
-     font-weight: 20px;
-     font-weight: 700;
-     color: black;
-     transform: rotate(180deg);
-     transition: all .4s;
- }
+.selected:after {
+    content: '\f106';
+    position: absolute;
+    right: 5px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 20px;
+    font-weight: 700;
+    color: black;
+    transform: rotate(180deg);
+    transition: all .4s;
+}
  
- .selected {
-     background: white;
-     color: var(--text-1-black);
-     position: relative;
-     order: 0;
- }
+.selected {
+    background: white;
+    color: var(--text-1-black);
+    position: relative;
+    order: 0;
+}
  
- .select-box .options-container.active {
-     max-height: 80px;
-     border: 1px solid var(--gray-border);
-     opacity: 1;
-     overflow-y: scroll;
-     z-index: 5000;
-     margin-top: 8px;
- }
+.select-box .options-container.active {
+    max-height: 80px;
+    border: 1px solid var(--gray-border);
+    opacity: 1;
+    overflow-y: scroll;
+    z-index: 5000;
+    margin-top: 8px;
+}
  
- .select-box .options-container::-webkit-scrollbar {
-     width: 8px;
-     background: var(--gray-border);
-     border-radius: 0 8px 8px 0;
- }
+.select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: var(--gray-border);
+    border-radius: 0 8px 8px 0;
+}
  
- .select-box .options-container::-webkit-scrollbar-thumb {
-     background: var(--scale-13-blue);
-     border-radius: 0 8px 8px 0;
- }
+.select-box .options-container::-webkit-scrollbar-thumb {
+    background: var(--scale-13-blue);
+    border-radius: 0 8px 8px 0;
+}
  
- .select-box {
-     font-size: 16px;
-     font-weight: 500;
- }
+.select-box {
+    font-size: 16px;
+    font-weight: 500;
+}
  
- .select-box .option {
-     font-size: 16px;
-     box-sizing: border-box;
-     padding: 10px;
-     cursor: pointer;
- }
+.select-box .option {
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+}
  
- .select-box .option:hover {
-     background: #f1f6ff;
- }
+.select-box .option:hover {
+    background: #f1f6ff;
+}
  
- .select-box label {
-     cursor: pointer;
- }
+.select-box label {
+    cursor: pointer;
+}
  
- .select-box .option .radio {
-     display: none;
- }
+.select-box .option .radio {
+    display: none;
+}
 
-#calendar_header {
+#calendar_section1_container-header {
     font-size: 22px;
     font-weight: 600;
     display: flex;
@@ -179,7 +179,7 @@ button {
     justify-content: space-between;
 }
 
-#calendar_header button {
+#calendar_section1_container-header button {
     width: 30px;
     height: 29px;
     border-radius: 50%;
@@ -192,24 +192,24 @@ button {
     color: white;
 }
 
-#calendar_container {
+#calendar_section1_container {
     width: 744px;
     border: 1px solid var(--scale-16-gray);
     padding: 25px;
     border-radius: 10px;
 }
 
-#calendar_weekdays {
+#calendar_section1_weekdays {
     width: 100%;
     display: flex;
 }
 
-#calendar_weekdays div {
+#calendar_section1_weekdays div {
     width: 110px;
     margin: 25px 0 20px 0;
 }
 
-#calendar-date {
+#calendar-data {
     width: 100%;
     margin: auto;
     display: flex;
@@ -230,7 +230,7 @@ button {
 }
 
 .day:hover {
-    background-color: #e8faed;
+    background-color: #f1f6ff;
 }
 
 .event {
