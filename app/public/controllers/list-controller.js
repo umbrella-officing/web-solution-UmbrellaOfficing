@@ -6,5 +6,5 @@ exports.characters = async (req,res) => {
         if(typeof item == 'undefined') {
            return res.send('error 404')
         }
-        res.render('description/informations', {post:item})
+        res.render('teste2/teste2', {post:item})
 }

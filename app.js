@@ -46,7 +46,7 @@ const adsControl =require('./app/routes/admin/ads-control')(app);
 const helpCenter = require('./app/routes/help-center')(app);
 
 const teste = require('./app/routes/teste/teste')(app)
-const addInformations = require('./app/routes/description/informations')(app)
+const teste2 = require("./app/routes/teste2/teste2")(app)
 
 app.listen(port,()=>{
     console.log(`Servidor no ar rodando na porta ${port}`)
