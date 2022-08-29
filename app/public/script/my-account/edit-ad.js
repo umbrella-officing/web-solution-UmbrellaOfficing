@@ -69,15 +69,21 @@ $(document).ready(function () {
 
 
 const operationsValues = () =>{
+  const form = document.querySelector('[data-js="form"]')
+  
+  form.addEventListener('submit',(e)=>{
+    e.preventDefault()
+  })
+
   const specifications = document.querySelectorAll(".specification")
 
   specifications.forEach((specification,index)=>{
       specification.addEventListener('click',(v)=>{
-          if(v.target.classList == "subtract"){
+          if(v.target.classList == "fa-solid fa-minus subtract"){
               subtractionInput(specification,index)
           }
 
-          if(v.target.classList == "addition"){
+          if(v.target.classList == "fa-solid fa-plus addition"){
               additionInput(specification,index)
           }
       })

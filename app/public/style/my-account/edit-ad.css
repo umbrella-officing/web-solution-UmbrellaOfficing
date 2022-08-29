@@ -450,24 +450,24 @@
     align-items: center;
 }
 
-.subtract,
-.addition {
+.specification button {
     width: 35px;
     height: 35px;
-    background: #fff;
-    color: #8C8C8C;
     border: 2px solid;
     border-radius: 35px;
     cursor: pointer;
-    font-size: 22px;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 15px;
     font-weight: 600;
     text-align: center;
+    color: #8C8C8C;   
 }
 
 .specification input {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 30px;
     width: 40px;
     background: #fff;
@@ -475,7 +475,7 @@
     font-size: 14px;
     color: var(--text-1-black);
     font-weight: 600;
-    text-align: center;
+    text-align: end;
     box-sizing: border-box
 }
 
