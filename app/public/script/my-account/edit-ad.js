@@ -78,12 +78,12 @@ const operationsValues = () =>{
   const specifications = document.querySelectorAll(".specification")
 
   specifications.forEach((specification,index)=>{
-      specification.addEventListener('click',(v)=>{
-          if(v.target.classList == "fa-solid fa-minus subtract"){
+      specification.addEventListener('click',(e)=>{
+          if(e.target.classList == "fa-solid fa-minus subtract"){
               subtractionInput(specification,index)
           }
 
-          if(v.target.classList == "fa-solid fa-plus addition"){
+          if(e.target.classList == "fa-solid fa-plus addition"){
               additionInput(specification,index)
           }
       })
