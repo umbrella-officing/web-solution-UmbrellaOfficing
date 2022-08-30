@@ -1,15 +1,19 @@
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
+const selected = document.querySelectorAll(".selected");
+const optionsContainer = document.querySelectorAll(".options-container");
 
 const optionsList = document.querySelectorAll(".option");
 
-selected.addEventListener("click", () => {
-  optionsContainer.classList.toggle("active");
-});
-
-optionsList.forEach(e => {
+selected.forEach((e, index)=>{
   e.addEventListener("click", () => {
-    selected.innerHTML = e.querySelector("label").innerHTML;
-    optionsContainer.classList.remove("active");
+    optionsContainer[index].classList.toggle("active");
+  });
+})
+
+
+  optionsList.forEach((e,index,arr) => {
+  e.addEventListener("click", () => {
+    console.log(arr)
+    selected[i].innerHTML = e.querySelector("label").innerHTML;
+    // optionsContainer[index].classList.remove("active");
   });
 });
