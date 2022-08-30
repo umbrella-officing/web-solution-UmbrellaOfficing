@@ -222,6 +222,32 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 100%;
   }
 
+  #more_specifications .selected{
+    margin-bottom: 0;
+  }
+
+  #more_specifications .select-box .options-container{
+    position: absolute;
+  }
+
+  #more_specifications .select-box .options-container.active{
+    top: 45px;
+    max-height: 44px;
+  }
+
+  #more_specifications .select-box{
+    font-size: 11px;
+    width: 56%;
+  }
+
+  #more_specifications .select-box label{
+    font-size: 11px;
+  }
+
+  #more_specifications .select-box .option, .selected{
+    padding: 7px 24px 7px 8px;
+  }
+
   #more_specifications ul li > div > img{
     width: 18px;
   }
@@ -308,13 +334,25 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 22px;
   }
 
+ #adapted-environments > li:nth-child(2){
+    margin-top:13px;
+  }
+
+  #adapted-environments li{
+    margin-bottom: 8px;
+  }
+
   .select-box {
     display: flex;
+    position: relative;
+    font-size: 13px;
+    font-weight: 500;
     width: 100%;
     flex-direction: column;
   }
   
   .select-box .options-container {
+    /* position: absolute; */
     background: #fff;
     color: #333;
     max-height: 0;
@@ -341,14 +379,16 @@ input[type="number"]::-webkit-inner-spin-button {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    height: 75%;
-    width: 32px;
+    height: 20px;
+    width: 20px;
     right: 10px;
     transition: all 0.4s;
   }
   
   .select-box .options-container.active {
-    max-height: 240px;
+    max-height: 159px;
+    margin-bottom: 24px;
+    /* top: 52px; */
     opacity: 1;
     overflow-y: scroll;
   }
