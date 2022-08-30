@@ -4,25 +4,14 @@ header{
     position: absolute;
 }
 
-#become-advertiser_section1 > div > .default_margin{
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding: 0;
-} 
 
 #become-advertiser_section1 > div{
     justify-content: space-between;
-    position: relative;
-    width: 1340px;
-    height: 560px;
-    background-image: url("../images/become-advertiser/bg-section1.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+    width: 560px;
 }
 
 
-#become-advertiser_section1 > div > div > div { 
+#become-advertiser_section1 > div > div { 
     position: absolute;
     display: flex;
     align-items: center;
