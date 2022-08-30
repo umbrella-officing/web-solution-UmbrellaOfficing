@@ -3,7 +3,11 @@ const rating = () => {
     const listStars = document.querySelector('.rating')
     const stars = document.querySelectorAll(".star")
 
+
     stars.forEach((item, index, arr)=>{
+
+        
+
         item.addEventListener('click',(e)=>{
          
             const current_star_level = index + 1
