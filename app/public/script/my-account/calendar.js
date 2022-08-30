@@ -14,11 +14,31 @@ optionsList.forEach(o => {
   });
 });
 
+const selectedFrequency = document.querySelector(".selected-frequency");
+const frequencyContainer = document.querySelector(".frequency-container");
+
+const frequencyList = document.querySelectorAll(".frequency");
+
+selectedFrequency.addEventListener("click", () => {
+  frequencyContainer.classList.toggle("active1");
+});
+
+frequencyList.forEach(f => {
+  f.addEventListener("click", () => {
+    selectedFrequency.innerHTML = f.querySelector("option").innerHTML;
+    frequencyContainer.classList.remove("active1");
+  });
+});
+
+$(document).ready(function () {
+  $("#eventTitleInput").inputmask("h:s",{ "placeholder": "hh/mm" });
+});
+
 let nav = 0;
 let clicked = null;
 let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
 
-const calendar = document.getElementById('calendar-date');
+const calendar = document.getElementById('calendar-data');
 const newEventModal = document.getElementById('newEventModal');
 const deleteEventModal = document.getElementById('deleteEventModal');
 const backDrop = document.getElementById('modalBackDrop');
@@ -37,7 +57,7 @@ function openModal(date) {
     newEventModal.style.display = 'block';
   }
 
-  backDrop.style.display = 'block';
+  backDrop.style.display = 'flex';
 }
 
 function load() {
@@ -63,7 +83,7 @@ function load() {
   const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
   document.getElementById('monthDisplay').innerText = 
-    `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
+    `${dt.toLocaleDateString('pt-br', { month: 'long' })} ${year}`;
 
   calendar.innerHTML = '';
 
@@ -148,3 +168,4 @@ function initButtons() {
 
 initButtons();
 load();
+

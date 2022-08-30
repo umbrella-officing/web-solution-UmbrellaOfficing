@@ -1,7 +1,3 @@
-.container_search{
-    display: none;
-}
-
 body{
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
     background-repeat: repeat-y;
@@ -137,7 +133,7 @@ input[type="radio"]{
     align-items: center;
     margin-bottom: 20px;
     border: 1px solid var(--gray-border);
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 14px 0 14px 18px;
 }
 

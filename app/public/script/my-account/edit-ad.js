@@ -64,20 +64,31 @@ subcategoryList.forEach(s => {
 
 $(document).ready(function () {
   $("#cep_ad").mask("00.000-000");
-  $("#price").mask("R$: 999.99", {reverse :true});
+  $("#price").mask("999.99", {reverse :true});
+  // $('#price').mask({
+  //   prefix:'R$ ',
+  //   allowNegative: true,
+  //   thousands:'.', decimal:',',
+  //   affixesStay: true});
 });
 
 
 const operationsValues = () =>{
+  const form = document.querySelector('[data-js="form"]')
+  
+  form.addEventListener('submit',(e)=>{
+    e.preventDefault()
+  })
+
   const specifications = document.querySelectorAll(".specification")
 
   specifications.forEach((specification,index)=>{
       specification.addEventListener('click',(v)=>{
-          if(v.target.classList == "subtract"){
+          if(v.target.classList == "fa-solid fa-minus subtract"){
               subtractionInput(specification,index)
           }
 
-          if(v.target.classList == "addition"){
+          if(v.target.classList == "fa-solid fa-plus addition"){
               additionInput(specification,index)
           }
       })
