@@ -1,6 +1,3 @@
-.container_search{
-    display: none;
-}
 
 body{    
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
@@ -30,7 +27,7 @@ main{
     display: flex;
 }
 
-#photos_section > div > div > h1{
+#photos_section > div > div > div h1{
     font-size: 40px;
     max-width: 310px;
     color: var(--white)
@@ -124,16 +121,19 @@ input[type="file"]{
 }
 
 .picture-image{
-    width: 372px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px dashed currentColor;
     border-radius: 20px;
     aspect-ratio: 16/9;
     cursor: pointer;
     color: rgb(90, 90, 90);
+    background-color: var(--scale-16-gray);
     transition: color 100ms ease-in-out;
+    background-image: url(../images/register-space/icon-photos.svg);
+    background-size: cover;
+    background-position: 0;
+    background-repeat: no-repeat;
 }
 
 .picture-image:hover{
@@ -142,7 +142,7 @@ input[type="file"]{
 
 .picture-image:active{
     color: var(--scale-8-blue);
-    border: 1.5px dashed currentColor;
+    border: 1.5px solid currentColor;
     font-weight: 400;
 }
 

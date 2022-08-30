@@ -3,10 +3,6 @@ body{
     background-repeat: no-repeat;
 }
 
-.container_search{
-    display: none;
-}
-
 main{
     display: flex;
     justify-content: center;
@@ -15,30 +11,37 @@ main{
 }
 
 #add-room_section{
-    padding: 180px 0 75px 0;
-    align-items: center;
-}
-
-#add-room_section > div{
-    justify-content: space-between;
-    position: relative;
-}
-
-#title-div{
-    height: 61vh;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding-top: 105px;
 }
 
-h1{
+#add-room_section > div > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#add-room_section > div > div h1{
     color: var(--white);
     font-size: 40px;
     max-width: 475px;
+    margin-top: 30px;
 }
+
+/* #title-div{
+    height: 61vh;
+    display: flex;
+    align-items: center;
+} */
+
 
 #rooms{
     margin-top: 40px;
     width: calc(50% - 60px);
+    position: relative;
 }
 
 .roomDiv{
@@ -58,7 +61,7 @@ h1{
 
 button{
     position: absolute;
-    bottom: 0;
+    margin-top: 100px;
     right: 0;
     border: none;
     width: 185px;

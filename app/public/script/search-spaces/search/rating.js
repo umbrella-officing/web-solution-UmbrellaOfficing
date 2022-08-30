@@ -1,26 +1,29 @@
-// const rating = () => {
+const rating = () => {
 
-//     const listStars = document.querySelector('.rating')
-//     const stars = document.querySelectorAll(".star")
+    const listStars = document.querySelector('.rating')
+    const stars = document.querySelectorAll(".star")
 
-//     stars.forEach((item, index, arr)=>{
-//         item.addEventListener('click',(e)=>{
+    stars.forEach((item, index, arr)=>{
+        item.addEventListener('click',(e)=>{
          
-//             if(index == index){
-//                 for (let i = 0; i <= index; i++) {
-//                   arr[i].setAttribute('src','images/search-spaces/search/background-star.png')
-//                 }
-//             }
+            const current_star_level = index + 1
+            const lengthStars = arr.length
+            
+            if(index == index){
+                for (let i = 0; i <= index; i++) {
+                  arr[i].setAttribute('src','images/search-spaces/search/background-star.png')
+                }
+            }
 
-//             if(index ){
-//             for (let i = 0; i <= index; i++) {
-//                 arr[i].setAttribute('src','images/search-spaces/search/star.png')
-//               }
-//             }
+            if(current_star_level < lengthStars){
+            for (let i = index+1; i < lengthStars; i++) {
+                arr[i].setAttribute('src','images/search-spaces/search/star.png')
+              }
+            }
 
-//         })
-//     })
+        })
+    })
 
-// }
+}
 
-// rating()
+rating()

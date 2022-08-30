@@ -1,9 +1,5 @@
 
 
-body {
-    font-family: var(--font-primary);
-}
-
 #edit-ad>div {
     padding: 220px 0 80px 0;
     justify-content: space-between;
@@ -68,7 +64,13 @@ body {
     margin-bottom: 80px;
 }
 
-#edit-ad_section1 span h1 {
+.edit-ad_flex1 {
+   display: flex;
+   align-items: baseline;
+   position: relative;
+}
+
+#edit-ad_section1 form div h1 {
     font-size: 25px;
     font-weight: bold;
 }
@@ -78,7 +80,7 @@ body {
     position: absolute;
     width: 180px;
     flex-direction: column;
-    margin-left: 560px;
+    right: 0;
 }
 
 .select-box .options-container {
@@ -106,7 +108,6 @@ body {
 
 .selected {
     background: white;
-    margin-bottom: 8px;
     color: var(--text-1-black);
     position: relative;
     order: 0;
@@ -117,7 +118,8 @@ body {
     border: 1px solid var(--gray-border);
     opacity: 1;
     overflow-y: scroll;
-    z-index: 8000;
+    z-index: 5000;
+    margin-top: 8px;
 }
 
 .select-box .options-container::-webkit-scrollbar {
@@ -267,7 +269,7 @@ body {
     color: var(--text-1-black);
 }
 
-.edit-ad_section_form1 span {
+.edit-ad_flex2 {
     display: grid;
     grid-template-columns: 359.5px 359.5px;
     grid-column-gap: 25px;
@@ -275,10 +277,13 @@ body {
 }
 
 
-.edit-ad_section1_flex,
+.edit-ad_flex1,
 .photos {
     display: flex;
     justify-content: space-between;
+}
+
+.photos {
     align-items: center;
 }
 
@@ -325,6 +330,7 @@ body {
     width: -webkit-fill-available;
     outline: none;
     margin: 10px 0 30px 0;
+    box-sizing: border-box
 }
 
 .edit-ad_section_form1 h2 {
@@ -333,7 +339,7 @@ body {
     margin: 0 0 20px 0;
 }
 
-.edit-ad_section1_flex1 {
+.edit-ad_flex3 {
     display: grid;
     grid-template-columns: 617px 100px;
     grid-column-gap: 25px;
@@ -344,6 +350,7 @@ body {
     height: 40px;
     text-align: center;
     border: none;
+    margin-top: 20px;
 }
 
 #room::placeholder {
@@ -360,18 +367,29 @@ body {
     padding: 30px 20px 30px 20px;
 }
 
+.edit-ad_section_form2 ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-column-gap: 60px;
+}
+
+.general-features li:first-child {
+    display: block;
+}
+
+.general-features li,
+.resources li  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
 .edit-ad_section_form2 h2 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
-}
-
-.edit-ad_section_form2_flex {
-    display: grid;
-    grid-template-columns: 331px 331px;
-    grid-column-gap: 40px;
-    grid-template-rows: 50px;
-    margin-bottom: 40px;
 }
 
 #price {
@@ -381,99 +399,37 @@ body {
     padding: 15px;
     resize: none;
     outline: none;
-}
-
-#price {
     font-size: 25px;
     font-weight: 600;
     color: white;
     text-align: center;
+    box-sizing: border-box;
 }
 
-.edit-ad_section_form2_flex2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#price::placeholder{
+    color: white;
 }
 
-.edit-ad_section_form2_flex2 img {
-    margin-right: 5px;
+#price:focus {
+    color: var(--text-1-black);
+    background-color: white;
+    border-color: #08bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, .25);
+    transition: 0.3s ease-in-out;
 }
 
-.edit-ad_section_form2 label {
+.edit-ad_section_form2 ul li div label {
     font-size: 16px;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
 }
 
-.edit-ad_section_form2 p {
+.general-features li div p {
     font-size: 14px;
     font-weight: 500;
     color: #8C8C8C;
-    margin-bottom: 5px;
-}
-
-.dec_increment {
-    display: flex;
-    align-items: center;
-    user-select: none;
-}
-
-.minus,
-.plus {
-    width: 35px;
-    height: 35px;
-    background: #fff;
-    color: #8C8C8C;
-    border: 2px solid;
-    border-radius: 35px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.num {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    width: 40px;
-    background: #fff;
-    border-radius: 15px;
-    font-size: 14px;
-    color: var(--text-1-black);
-    font-weight: 600;
-}
-
-.minus span {
-    display: flex;
-    width: 8.8px;
-    height: 1.5px;
-    background: #8C8C8C;
-}
-
-.plus span:nth-child(1) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    width: 10px;
-    height: 1.5px;
-    background: #8C8C8C;
-}
-
-.plus span:nth-child(2) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    width: 1.5px;
-    height: 10px;
-    background: #8C8C8C;
+    margin-top: 5px;
 }
 
 #size_room {
@@ -485,34 +441,50 @@ body {
     height: 50px;
     box-sizing: border-box;
     padding: 10px;
+    right: 0;
 }
 
-#floatingSelect {
-    border: 1px solid var(--gray-border);
-    border-radius: 5px;
-    padding: 18px 10px 0 10px;
-    resize: none;
-    outline: none;
-    width: 110px;
-    height: 50px;
+.resources li div {
+    display: flex;
+    align-items: center;
 }
 
-.form-floating>.form-select {
-    height: 100%;
+.resources img{
+    margin-right: 15px;
 }
 
-.form-floating>label {
-    padding: 15px 0 0 10px;
-    font-size: 12px;
-    font-weight: bold;
-    color: var(--scale-13-blue);
-    text-align: left;
+.specification {
+    display: flex;
+    align-items: center;
 }
 
-.form-select,
-.form-select option {
-    font-size: 14px;
+.specification button {
+    width: 35px;
+    height: 35px;
+    border: 2px solid;
+    border-radius: 35px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #8C8C8C;   
+}
+
+.specification input {
+    display: flex;
+    height: 30px;
+    width: 40px;
+    background: #fff;
     border: none;
+    font-size: 14px;
+    color: var(--text-1-black);
+    font-weight: 600;
+    text-align: center;
+    box-sizing: border-box
 }
 
 #edit_ad {
@@ -530,3 +502,4 @@ body {
     font-weight: 500;
     margin: 40px 0 0 558px;
 }
+

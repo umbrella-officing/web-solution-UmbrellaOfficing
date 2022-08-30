@@ -37,6 +37,13 @@ html, button, input{
     font-family: var(--font-primary);
 }
 
+.outline-focus:focus{
+    background-color: #fff;
+    border-color: #08bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, .25);
+    transition: 0.3s ease-in-out;
+}
 
 body, ul, li, nav, h1, h2, h3, h4, h5, h6, p{
     margin:0;
@@ -498,6 +505,8 @@ header > div {
 
 #alternatives > div:last-child span a{
     color: var(--scale-10-blue);
+    position: relative;
+    left: 3px;
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;

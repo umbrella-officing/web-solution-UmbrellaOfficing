@@ -68,7 +68,7 @@ const menuHamburguer  = () =>{
             return
         }
 
-        if(menu_open.contains(e.target) == false){
+        if(menu_open.contains(e.target) == false || e.target.tagName == 'LI'){
             menu_open.classList.remove('menu_open_checked')
         }
     })
