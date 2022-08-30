@@ -4,7 +4,6 @@ const rating = () => {
 
     classifications.forEach((levelClassification, index, arr)=>{
         levelClassification.addEventListener('click',()=>{
-         
             console.log(levelClassification)
 
             const current_levelClassification = index + 1
@@ -21,7 +20,19 @@ const rating = () => {
                 arr[i].classList.remove('checked_classification')
               }
             }
+            
+            if(index == index){
+                for (let i = 0; i <= index; i++) {
+                  arr[i].classList.add('checked_classification')
+                  
+                }
+            }
 
+            // if(current_levelClassification < lengthLevel){
+            // for (let i = index+1; i < arr.length; i++) {
+            //     arr[i].classList.remove('checked_classification')
+            //   }
+            // }
         })
     })
 

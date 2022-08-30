@@ -8,7 +8,6 @@ const openInputsearchCoworkingSpaces = ()=> {
     const type_office = document.querySelector('#type_office')
 
     if(search !== null){
-        console.log('teste')
         search.addEventListener('click',(e)=>{
             header.classList.add('header_expanded')
             type_office.style.display = 'flex'

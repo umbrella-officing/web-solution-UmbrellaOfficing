@@ -245,7 +245,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   #more_specifications .select-box .option, .selected{
-    padding: 7px 24px 7px 8px;
+    padding: 5px 24px 5px 8px;
   }
 
   #more_specifications ul li > div > img{
