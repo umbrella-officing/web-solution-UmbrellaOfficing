@@ -325,8 +325,7 @@
     top: 0;
 }
 
-#popUp-cancel_state2>div img,
-#popUp-cancel_state3>div img  {
+.avaliation-img {
     width: 200px;
     margin: -20px 50px 0 -10px
 }
@@ -343,46 +342,20 @@
 
 .rating {
     display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 15%;
+    list-style: none;
 }
 
-.rating input {
-    display: none;
-}
-
-.rating label {
-    display: block;
+.rating li{
+    width: 50px;
+    margin-right: 12px;
     cursor: pointer;
-    margin-right: 15px;
-    width: 25px;
 }
 
-.rating label:before {
-    content: '\f005';
-    font-family: fontAwesome;
-    position: absolute;
-    display: block;
-    font-size: 25px;
-    color: white;
-    text-shadow: 0 2px 2px rgb(128 128 128 / 10%);
-}
-
-
-.rating label:after {
-    content: '\f005';
-    font-family: fontAwesome;
-    position: relative;
-    top: 0;
-    display: block;
-    font-size: 25px;
-    color: var(--scale-15-yellow);
-    opacity: 0;
-    transition: .5s;
-}
-
-.rating label:hover:after,
-.rating label:hover~label:after,
-.rating input:checked~label:after {
-    opacity: 1;
+.rating img {
+    width: 30px;
 }
 
 #popUp-cancel_state2 div>button::after {
