@@ -42,7 +42,8 @@ const calendar = document.getElementById('calendar-data');
 const newEventModal = document.getElementById('newEventModal');
 const deleteEventModal = document.getElementById('deleteEventModal');
 const backDrop = document.getElementById('modalBackDrop');
-const eventTitleInput = document.getElementById('eventTitleInput');
+const eventTitleInput = document.querySelectorAll('.eventTitleInput');
+console.log({eventTitleInput})
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 function openModal(date) {
@@ -51,7 +52,7 @@ function openModal(date) {
   const eventForDay = events.find(e => e.date === clicked);
 
   if (eventForDay) {
-    document.getElementById('eventText').innerText = eventForDay.title;
+    document.querySelectorAll('.eventText').innerText = eventForDay.title;
     deleteEventModal.style.display = 'block';
   } else {
     newEventModal.style.display = 'block';

@@ -225,10 +225,10 @@
                 <h2>Adicionar horário</h2>
             
                 <p>Abertura</p>
-                <input id="eventTitleInput" placeholder="00:00" />
+                <input class="eventTitleInput" class="opening outline-focus" placeholder="00:00" />
 
                 <p>Fechamento</p>
-                <input id="eventTitleInput" placeholder="00:00" />
+                <input class="eventTitleInput" class="outline-focus" placeholder="00:00" />
 
                 <div class="frequency-box">
                     <div class="frequency-container">
@@ -246,10 +246,15 @@
                             <input type="radio" class="radio1" id="week" name="category" />
                             <option for="week">Essa semana</option>
                         </div>
+                        
+                        <div class="frequency">
+                            <input type="radio" class="radio1" id="year" name="category" />
+                            <option for="year">Apenas esse dia</option>
+                        </div>
                     </div>
 
                     <div class="selected-frequency">
-                        Durante um ano
+                        Apenas esse dia
                     </div>
                 </div>
 
@@ -261,10 +266,10 @@
             <h2>Horário de abertura e fechamento</h2>
 
             <p>Abertura</p>
-            <p id="eventText"></p>
+            <p class="eventText"></p>
 
-            <p>Fechamento</p>
-            <p id="eventText"></p>
+            <p class="eventText">Fechamento</p>
+            <p></p>
 
             <button id="deleteButton">Deletar</button>
             <button id="closeButton">Fechar</button>
