@@ -215,32 +215,63 @@
 
                         <div id="calendar-data"></div>
                     </div>
-
-                    <div id="newEventModal">
-                        <h2>Adicionar horário</h2>
-
-                        <input type="time" min="06:00" max="22:30" id="eventTitleInput" placeholder="Event Title" />
-                        <input type="time" min="06:00" max="22:30" id="eventTitleInput" placeholder="Event Title" />
-
-                        <button id="saveButton">Salvar</button>
-                        <button id="cancelButton">Cancelar</button>
-                    </div>
-
-                    <div id="deleteEventModal">
-                        <h2>Horário de abertura e fechamento</h2>
-
-                        <p id="eventText"></p>
-
-                        <button id="deleteButton">Deletar</button>
-                        <button id="closeButton">Fechar</button>
-                    </div>
-
-                    <div id="modalBackDrop"></div>
                 </section>
 
             </div>
 
         </div>
+
+        <div id="newEventModal">
+                <h2>Adicionar horário</h2>
+            
+                <p>Abertura</p>
+                <input id="eventTitleInput" placeholder="00:00" />
+
+                <p>Fechamento</p>
+                <input id="eventTitleInput" placeholder="00:00" />
+
+                <div class="frequency-box">
+                    <div class="frequency-container">
+                        <div class="frequency">
+                            <input type="radio" class="radio1" id="year" name="category" />
+                            <option for="year">Durante um ano</option>
+                        </div>
+
+                        <div class="frequency">
+                            <input type="radio" class="radio1" id="month" name="category" />
+                            <option for="month">Durante um mês</option>
+                        </div>
+
+                        <div class="frequency">
+                            <input type="radio" class="radio1" id="week" name="category" />
+                            <option for="week">Essa semana</option>
+                        </div>
+                    </div>
+
+                    <div class="selected-frequency">
+                        Durante um ano
+                    </div>
+                </div>
+
+                <button id="saveButton">Salvar</button>
+                <button id="cancelButton">Cancelar</button>
+            </div>
+        </div>
+        <div id="deleteEventModal">
+            <h2>Horário de abertura e fechamento</h2>
+
+            <p>Abertura</p>
+            <p id="eventText"></p>
+
+            <p>Fechamento</p>
+            <p id="eventText"></p>
+
+            <button id="deleteButton">Deletar</button>
+            <button id="closeButton">Fechar</button>
+        </div>
+
+        <div id="modalBackDrop"></div>
+
     </main>
 
     <footer class="container_margin_default">
@@ -295,7 +326,10 @@
 
 
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script/default/header/header.js"></script>

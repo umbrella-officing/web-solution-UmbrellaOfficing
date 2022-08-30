@@ -406,9 +406,17 @@
     box-sizing: border-box;
 }
 
+#price::placeholder{
+    color: white;
+}
 
 #price:focus {
     color: var(--text-1-black);
+    background-color: white;
+    border-color: #08bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, .25);
+    transition: 0.3s ease-in-out;
 }
 
 .edit-ad_section_form2 ul li div label {
@@ -475,7 +483,7 @@
     font-size: 14px;
     color: var(--text-1-black);
     font-weight: 600;
-    text-align: end;
+    text-align: center;
     box-sizing: border-box
 }
 

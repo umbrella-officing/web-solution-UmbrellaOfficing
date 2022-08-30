@@ -83,7 +83,7 @@ button {
     position: relative;
     margin-bottom: 35px;
 }
- 
+
 .calendar_section1-header h1 {
     font-size: 25px;
     font-weight: bold;
@@ -250,6 +250,19 @@ button {
     box-shadow: none !important;
 }
 
+#modalBackDrop {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    z-index: 8000;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
 #newEventModal,
 #deleteEventModal {
     display: none;
@@ -269,6 +282,11 @@ button {
    margin-bottom: 25px;
 }
 
+#newEventModal p,
+#deleteEventModal p {
+   margin-bottom: 10px;
+}
+
 #eventTitleInput {
     padding: 10px;
     width: 100%;
@@ -277,6 +295,7 @@ button {
     border-radius: 5px;
     outline: none;
     border: 1px solid var(--gray-border);
+    font-size: 16px;
 }
 
 #eventTitleInput.error {
@@ -287,11 +306,95 @@ button {
     transition: 0.3s ease-in-out;
 }
 
+
+
+.frequency-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.frequency-box .frequency-container  {
+    background: white;
+    border: 1px solid var(--gray-border);
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 5px;
+    overflow: hidden;
+
+    order: 1;
+}
+
+.selected-frequency:after  {
+    content: '\f106';
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 20px;
+    font-weight: 700;
+    color: black;
+    right: 10px;
+    transform: rotate(180deg);
+    transition: all .4s;
+}
+
+.selected-frequency {
+    background: white;
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--text-1-black);
+    position: relative;
+    margin-bottom: 8px;
+    order: 0;
+}
+
+.frequency-box .frequency-container.active1 {
+    overflow-y: scroll;
+    max-height: 80px;
+    opacity: 1;
+}
+
+.frequency-box .frequency-container::-webkit-scrollbar {
+    width: 8px;
+    background: var(--gray-border);
+    border-radius: 0 8px 8px 0;
+}
+ 
+.frequency-box .frequency-container::-webkit-scrollbar-thumb {
+    background: var(--scale-13-blue);
+    border-radius: 0 8px 8px 0;
+}
+
+.frequency-box {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.frequency-box .frequency {
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.frequency-box .frequency:hover  {
+    background: #f1f6ff;
+}
+
+.frequency-box label{
+    cursor: pointer;
+}
+
+.frequency-box .frequency .radio1 {
+    display: none;
+}
+
 #cancelButton,
 #deleteButton,
 #saveButton,
 #closeButton {
-    width: 80px;
+    width: 90px;
     border-radius: 20px;
     font-weight: 500;
 }
@@ -311,18 +414,13 @@ button {
     background-color: var(--scale-13-blue);
 }
 
+#saveButton,
+#cancelButton {
+    margin-top: 15px;
+}
+
 #eventText {
     font-size: 14px;
     margin-bottom: 15px;
 }
 
-#modalBackDrop {
-    display: none;
-    top: 0px;
-    left: 0px;
-    z-index: 8000;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.25);
-}

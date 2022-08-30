@@ -64,7 +64,12 @@ subcategoryList.forEach(s => {
 
 $(document).ready(function () {
   $("#cep_ad").mask("00.000-000");
-  $("#price").mask("R$: 999.99", {reverse :true});
+  $("#price").mask("999.99", {reverse :true});
+  // $('#price').mask({
+  //   prefix:'R$ ',
+  //   allowNegative: true,
+  //   thousands:'.', decimal:',',
+  //   affixesStay: true});
 });
 
 
