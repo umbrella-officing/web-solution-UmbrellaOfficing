@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/register-space/officing-features.css">
 </head>
+
 <body>
     <header id="header" class="container_margin_default">
         <div class="default_margin">
@@ -128,99 +131,196 @@
     <div id='box_black'></div>
 
     <main>
-        
-        <section id="officing_features_section" class="container_margin_default"> 
+
+        <section id="officing_features_section" class="container_margin_default">
             <div class="default_margin">
-                <div>
-                    <a href=""><img src="images/default/return_arrow-white.svg" alt="Ícone de seta - Voltar"></a>
-                    <h1>Adicione as características do seu Officing</h1>
-                </div>
+                <div id="align-items">
+                    <div>
+                        <a href=""><img src="images/default/return_arrow-white.svg" alt="Ícone de seta - Voltar"></a>
+                        <h1>Adicione as características<br> do seu Officing</h1>
+                    </div>
 
-                
-                    <form action="">
-                        <!-- <div id="first-step">
-                        <ul>
-                        <li>
-                            <div class="liAlign">
-                                
-                                    <label><h2>Pessoas</h2><p class="hintText">Indicamos 1 pessoa/7m²</p></label>
-                                <button>
-                                    
-                                </button>
-                                <input type="result" id="people" name="people">
-                            </div>
-                </li>
-                        <li>
+
+                    <form class="formSteps" action="" method="" data-js='form'>
+                        <div id="first-step">
                             <ul>
-                                <div class="liAlign">
-                            <label><h2> Acesso a banheiros</h2></label>
-                            <input type="result" id="bathrooms" name="bathrooms">
-                        </div>
-                        
-                        <li id="private-bathrooms"><p>Algum dos banheiros indicados é privado?</p>
-                        
-                            <div id="liAlign2"><label for="yes" class="label-yn">Sim</label>
-                               <input type="radio" name="yesOrNo" id="yes">  Por que, quando eu coloco uma div aqui, o site todo quebra?
-                               <label for="no" class="label-yn">Não</label>
-                               <input type="radio" name="yesOrNo" id="no"></div>
-                            </li>
-                            </li>
+                                <li class="liAlign1">
+                                    <label>
+                                        <h2>Pessoas</h2>
+                                        <p class="hintText">Indicamos 1 pessoa/7m²</p>
+                                    </label>
+                                    <div class="specification">
+                                        <button><i class="fa-solid fa-minus subtract"></i></button>
+                                        <input type="number" min="0" value="1" name="size_people" disabled>
+                                        <button><i class="fa-solid fa-plus addition"></i></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="liAlign1">
+                                        <label>
+                                            <h2>Acesso a <br> banheiros</h2>
+                                        </label>
+                                        <div class="specification">
+                                            <button><i class="fa-solid fa-minus subtract"></i></button>
+                                            <input type="number" min="0" value="1" name="size_people" disabled>
+                                            <button><i class="fa-solid fa-plus addition"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="bathroom">
+                                        <p>Algum dos banheiros indicados é privado?</p>
+
+                                        <div id="align2">
+                                            <div>
+                                                <label for="yes" class="label-yn">Sim</label>
+                                                <input type="radio" name="yesOrNo" id="yes">
+                                            </div>
+
+                                            <div>
+                                                <label for="no" class="label-yn">Não</label>
+                                                <input type="radio" name="yesOrNo" id="no">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="liAlign1">
+                                    <label>
+                                        <h2>Tamanho da sala</h2>
+                                        <p class="hintText">Em m²</p>
+                                    </label>
+
+                                    <input type="text" class="outline-focus" name="roomSize" id="roomSize" placeholder="Ex: 10">
+                                </li>
+                                <button class="button">Avançar</button>
+                            </ul>
+                        </div> 
+
+                        <div id="second-step">
+                            <div>
+                                <img class="feature-icon" src="images/register-space/wi-fi.png" alt="Ícone - Wifi">
+                                <h2>Wifi</h2>   
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <h3>Qualidade alta</h3>
+                                    <p>Eficaz no download, upload e carregamento de
+                                        arquivos pesados</p>
+                                </li>
+                                <li>
+                                    <h3>Qualidade média</h3>
+                                    <p>Processamento médio de grandes informações,
+                                        eficiente em médios e pequenos processos.</p>
+                                    <p><b>Entre 5 e 15 MB por usuário</b></p>
+                                </li>
+                                <li>
+                                    <h3>Qualidade baixa</h3>
+                                    <p>Carregamento de pequenas informações.
+                                        Atende à demanda básica de uso do wi-fi.</p>
+                                    <p><b>Menos de 5 MB por usuário</b></p>
+                                </li>
+                                <button class="button">Avançar</button>
+                            </ul>
+                        </div> 
+
+                        <div id="third-step">
+                            <div>
+                                <img class="feature-icon" src="images/register-space/pc.png" alt="Ícone - Computador">
+                                <h2>Computador</h2>
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <h3>Qualidade alta</h3>
+                                    <p>Eficaz no processamento de informações pesadas</p>
+                                </li>
+                                <li>
+                                    <h3>Qualidade média</h3>
+                                    <p>Processamento médio de grandes informações,
+                                        eficiente em médios e pequenos processos.</p>
+                                </li>
+                                <li>
+                                    <h3>Qualidade baixa</h3>
+                                    <p>Carregamento de pequenas informações.
+                                        Atende à demanda básica de uso do wi-fi.</p>
+                                </li>
+                                <button class="button">Avançar</button>
+                            </ul>
                             
+                        </div> 
 
-                    </ul>
-                        </li>
-
-                    <li class="liAlign"><label><h2>Tamanho da sala</h2><p class="hintText">Em m²</p></label>
-                        <input type="text" name="roomSize" id="roomSize" placeholder="Ex: 10"></li>
-                        <button class="button">Avançar</button>
-                    </ul>
-                </div> -->
-
-                <div id="second-step">
-                    <ul>
-                        <li>
-                            <img class="feature-icon" src="images/register-space/wi-fi.png" alt="">
-                            <p>Wi-fi</p>
-                        </li>
-                        <li>
-                            <img class="feature-icon" src="images/register-space/pc.png" alt="">
-                            <p>Computadores</p>
-                        </li>
-                        <li>
-                            <img class="feature-icon" src="images/register-space/plug.png" alt="">
-                            <p>Tomadas</p>
-                        </li>
-                        <li>
-                            <img class="feature-icon" src="images/register-space/snowflake.png" alt="">
-                            <p>Ar-condicionado</p>
-                        </li>
-                        <li>
-                            <img class="feature-icon" src="images/register-space/table.png" alt="">
-                            <p>Mesas</p>
-                        </li>
-                        <li>
-                            <img class="feature-icon" src="images/register-space/chair.png" alt="">
-                            <p>Assentos</p>
-                        </li>
-                        <li>
-                            <img class="feature-icon" src="images/register-space/window.png" alt="">
-                            <p>Janelas</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="align-button">
-                    <button class="button">Avançar</button>
-                </div>
-                
+                        <div id="fourth-step">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <img class="feature-icon" src="images/register-space/plug.png" alt="">
+                                        <p>Tomadas</p>
+                                    </div>
+                                    <div class="specification">
+                                        <button><i class="fa-solid fa-minus subtract"></i></button>
+                                        <input type="number" min="0" value="1" name="size_people" disabled>
+                                        <button><i class="fa-solid fa-plus addition"></i></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img class="feature-icon" src="images/register-space/snowflake.png" alt="">
+                                        <p>Ar-condicionado</p>
+                                    </div>
+                                    <div class="specification">
+                                        <button><i class="fa-solid fa-minus subtract"></i></button>
+                                        <input type="number" min="0" value="1" name="size_people" disabled>
+                                        <button><i class="fa-solid fa-plus addition"></i></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img class="feature-icon" src="images/register-space/table.png" alt="">
+                                        <p>Mesas</p>
+                                    </div>
+                                    <div class="specification">
+                                        <button><i class="fa-solid fa-minus subtract"></i></button>
+                                        <input type="number" min="0" value="1" name="size_people" disabled>
+                                        <button><i class="fa-solid fa-plus addition"></i></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img class="feature-icon" src="images/register-space/chair.png" alt="">
+                                        <p>Assentos</p>
+                                    </div>
+                                    <div class="specification">
+                                        <button><i class="fa-solid fa-minus subtract"></i></button>
+                                        <input type="number" min="0" value="1" name="size_people" disabled>
+                                        <button><i class="fa-solid fa-plus addition"></i></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <img class="feature-icon" src="images/register-space/window.png" alt="">
+                                        <p>Janelas</p>
+                                    </div>
+                                    <div class="specification">
+                                        <button><i class="fa-solid fa-minus subtract"></i></button>
+                                        <input type="number" min="0" value="1" name="size_people" disabled>
+                                        <button><i class="fa-solid fa-plus addition"></i></button>
+                                    </div>
+                                </li>
+                                <button class="button">Avançar</button>
+                            </ul>
+                        </div>
                     </form>
-                    
-           
+                </div>
             </div>
-    </section>
+        </section>
     </main>
 
+
+    <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
+    <script src="script/register-space/officing-features.js"></script>
     <script src="script/default/header/header.js"></script>
 
-</body>
-</html>
 
+</body>
+
+</html>

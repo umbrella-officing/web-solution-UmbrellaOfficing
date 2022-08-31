@@ -1,7 +1,7 @@
 const pictureInput = document.querySelector("#picture-input");
 const pictureImage = document.querySelector(".picture-image");
 const pictureImageTxt = "Escolha uma imagem";
-pictureImage.innerHTML = pictureImageTxt;
+// pictureImage.innerHTML = pictureImageTxt;
 
 pictureInput.addEventListener("change", function(e){
     const inputTarget = e.target;
@@ -23,6 +23,6 @@ pictureInput.addEventListener("change", function(e){
 
         reader.readAsDataURL(file); 
     } else{
-        pictureImage.innerHTML = pictureImageTxt;
+        // pictureImage.innerHTML = pictureImageTxt;
     }
 })
