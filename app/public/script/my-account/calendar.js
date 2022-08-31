@@ -50,10 +50,10 @@ function openModal(date) {
   clicked = date;
 
   const eventForDay = events.find(e => e.date === clicked);
-
   if (eventForDay) {
-    document.querySelectorAll('.eventText').innerText = eventForDay.title;
+    document.querySelector('.eventText').innerText = eventForDay.title;
     deleteEventModal.style.display = 'block';
+    console.log(eventForDay.title)
   } else {
     newEventModal.style.display = 'block';
   }
@@ -119,33 +119,37 @@ function load() {
 }
 
 function closeModal() {
-  eventTitleInput.classList.remove('error');
+  eventTitleInput[0].classList.remove('error')
+  eventTitleInput[1].classList.remove('error');
   newEventModal.style.display = 'none';
   deleteEventModal.style.display = 'none';
   backDrop.style.display = 'none';
-  eventTitleInput.value = '';
+  eventTitleInput[0].value = '';
+  eventTitleInput[1].value = '';
   clicked = null;
   load();
 }
 
 function saveEvent() {
-  if (eventTitleInput.value) {
-    eventTitleInput.classList.remove('error');
-
+  if (eventTitleInput[1].value) {
+    eventTitleInput[0].classList.remove('error');
+    eventTitleInput[1].classList.remove('error');
     events.push({
       date: clicked,
-      title: eventTitleInput.value,
+      title:`${eventTitleInput[0].value}, ${eventTitleInput[1].value}`,
     });
 
     localStorage.setItem('events', JSON.stringify(events));
     closeModal();
   } else {
-    eventTitleInput.classList.add('error');
+    eventTitleInput[0].classList.add('error')
+    eventTitleInput[1].classList.add('error');
   }
 }
 
 function deleteEvent() {
   events = events.filter(e => e.date !== clicked);
+  console.log(events)
   localStorage.setItem('events', JSON.stringify(events));
   closeModal();
 }
