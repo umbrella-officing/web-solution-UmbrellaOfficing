@@ -30,7 +30,8 @@ main{
 #photos_section > div > div > div h1{
     font-size: 40px;
     max-width: 310px;
-    color: var(--white)
+    color: var(--white);
+    margin-top: 30px;
 }
 
 #photos_section > div > div > form{
@@ -128,12 +129,13 @@ input[type="file"]{
     aspect-ratio: 16/9;
     cursor: pointer;
     color: rgb(90, 90, 90);
-    background-color: var(--scale-16-gray);
+    border: 1px solid var(--gray-border);
     transition: color 100ms ease-in-out;
     background-image: url(../images/register-space/icon-photos.svg);
     background-size: cover;
     background-position: 0;
     background-repeat: no-repeat;
+    margin-bottom: 30px;
 }
 
 .picture-image:hover{

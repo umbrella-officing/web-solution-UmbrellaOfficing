@@ -287,7 +287,7 @@ button {
    margin-bottom: 10px;
 }
 
-#eventTitleInput {
+.eventTitleInput {
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
@@ -298,7 +298,7 @@ button {
     font-size: 16px;
 }
 
-#eventTitleInput.error {
+.eventTitleInput.error {
     border: 1px solid var(--scale-12-red);
     background-color: #fff;
     outline: 0;
@@ -419,7 +419,7 @@ button {
     margin-top: 15px;
 }
 
-#eventText {
+.eventText {
     font-size: 14px;
     margin-bottom: 15px;
 }

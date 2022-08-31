@@ -43,7 +43,6 @@ const newEventModal = document.getElementById('newEventModal');
 const deleteEventModal = document.getElementById('deleteEventModal');
 const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.querySelectorAll('.eventTitleInput');
-console.log({eventTitleInput})
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 function openModal(date) {
@@ -94,7 +93,7 @@ function load() {
 
     const dayString = `${month + 1}/${i - paddingDays}/${year}`;
 
-    if (i > paddingDays) {
+      if (i > paddingDays) {
       daySquare.innerText = i - paddingDays;
       const eventForDay = events.find(e => e.date === dayString);
 
