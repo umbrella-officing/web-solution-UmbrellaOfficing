@@ -60,8 +60,8 @@
                         </nav>
                     </div>
                     <div>
-                        <img src="images/default/question.png" alt="sair da conta">
-                        Help & Support
+                        <a href="/central-de-ajuda"></a><img src="images/default/question.png" alt="sair da conta">
+                       Central de ajuda</a>
                     </div>
                 </div>
             </div>

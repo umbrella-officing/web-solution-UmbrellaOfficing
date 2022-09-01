@@ -62,6 +62,22 @@ subcategoryList.forEach(s => {
  });
 });
 
+const selectedWifi= document.querySelector(".selected-wifi");
+const wifiContainer = document.querySelector(".wifi-container");
+
+const wifiList = document.querySelectorAll(".wifi");
+
+selectedWifi.addEventListener("click", () => {
+  wifiContainer.classList.toggle("active-wifi");
+});
+
+wifiList.forEach(w => {
+  w.addEventListener("click", () => {
+    selectedWifi.innerHTML = w.querySelector("option").innerHTML;
+    wifiContainer.classList.remove("active-wifi");
+ });
+});
+
 $(document).ready(function () {
   $("#cep_ad").mask("00.000-000");
   $("#price").mask("999.99", {reverse :true});

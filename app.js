@@ -35,6 +35,7 @@ const subHouse = require('./app/routes/register-space/categories/adaptables/subc
 
 /*Requisições das Subcategorias*/
 const search = require('./app/routes/search-spaces/search')(app)
+const officingDescription = require('./app/routes/search-spaces/officing-description')(app)
 
 /*Requisições das telas: Administrativo*/
 const generalControl =require('./app/routes/admin/general-control')(app);

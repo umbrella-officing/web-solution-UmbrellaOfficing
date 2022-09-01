@@ -180,11 +180,18 @@ header > div {
     border-radius: inherit;
 }
 
- #localization{
-    height: 58px;
+#container_informations_find_coworking > div{
+    border-radius: inherit;
+}
+
+#check_in, #localization{
     border: none;
     box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
     border-radius: inherit;
+}
+
+ #localization{
+    height: 58px;
     font-size: 17px;
     padding-left: 14px;
     outline-color: #5b61c4;
@@ -193,11 +200,9 @@ header > div {
 
 #check_in{
     border: none;
-    border-radius: inherit;
     outline-color: #5b61c4;
     height: 58px;
     padding: 0 19px;
-    box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
 }
 
 .container_search_input > a > div {

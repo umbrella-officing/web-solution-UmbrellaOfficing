@@ -28,6 +28,7 @@ openPopCancel();
 
 const switchContent = () => {
     const popUpCancel = document.querySelectorAll(".popUp_cancel > div > div");
+    console.log(popUpCancel);
 
     popUpCancel.forEach((content, index, arr)=>{
         content.addEventListener('click', (e) => {

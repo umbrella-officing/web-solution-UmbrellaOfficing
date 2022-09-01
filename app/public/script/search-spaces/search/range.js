@@ -1,7 +1,7 @@
 const rangeInput = document.querySelectorAll(".range-input input"),
 priceInput = document.querySelectorAll(".price-input input"),
 range = document.querySelector(".slider .progress");
-let priceGap = 150;
+let priceGap = 10;
 
 
 const valuesInput = () =>{

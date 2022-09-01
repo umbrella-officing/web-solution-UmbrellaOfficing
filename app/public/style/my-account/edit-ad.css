@@ -370,7 +370,7 @@
 .edit-ad_section_form2 ul {
     list-style: none;
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 321px 321px;
     grid-column-gap: 60px;
 }
 
@@ -379,7 +379,7 @@
 }
 
 .general-features li,
-.resources li  {
+.resources {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -453,6 +453,109 @@
     margin-right: 15px;
 }
 
+.resources-flex {
+    display: flex;
+    align-items: center;
+}
+
+.resources-wifi {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.resources-wifi img{
+    margin-right: 15px;
+}
+
+.wifi-box {
+    display: flex;
+    position: absolute;
+    width: 110px;
+    flex-direction: column;
+    right: 0;
+}
+
+.wifi-box .wifi-container {
+    background: white;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 10px;
+    overflow: hidden;
+
+    order: 1;
+}
+
+.selected-wifi:after {
+    content: '\f106';
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 20px;
+    font-weight: 700;
+    color: black;
+    transform: rotate(180deg);
+    transition: all .4s;
+}
+
+.selected-wifi {
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid var(--gray-border);
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: var(--text-1-black);
+    position: relative;
+    order: 0;
+}
+
+
+.wifi-box .wifi-container.active-wifi {
+    max-height: 76px;
+    border: 1px solid var(--gray-border);
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.wifi-box .wifi-container::-webkit-scrollbar {
+    width: 8px;
+    background: var(--gray-border);
+    border-radius: 0 8px 8px 0;
+}
+
+.wifi-box .wifi-container::-webkit-scrollbar-thumb {
+    background: var(--scale-13-blue);
+    border-radius: 0 8px 8px 0;
+}
+
+.wifi-box .wifi,
+.wifi-selected {
+    height: 38px;
+    font-size: 13px;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.wifi-box .wifi:hover {
+    background: #f1f6ff;
+}
+
+.wifi-box label {
+    cursor: pointer;
+}
+
+.wifi-box .wifi .radio4 {
+    display: none;
+}
+
 .specification {
     display: flex;
     align-items: center;
@@ -486,6 +589,8 @@
     text-align: center;
     box-sizing: border-box
 }
+
+
 
 #edit_ad {
     background-color: var(--scale-2-purple);
