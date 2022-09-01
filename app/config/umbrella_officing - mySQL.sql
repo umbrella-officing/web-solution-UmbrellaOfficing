@@ -49,7 +49,6 @@ fotos_anun longblob,
 localizacao varchar(60),
 favoritado char(3),
 data_cadastro_anun datetime,
-compartilhamento_espaco varchar(13),
 cpf_user char(11),
 foreign key (cpf_user) references usuarios (cpf_user)
 );
@@ -81,6 +80,7 @@ status_reserva varchar(7),
 cod_anun int,
 fotos_sala longblob,
 compartilhamento_sala char(3),
+acesso_outras_salas char(3),
 foreign key(cod_anun) references espacos (cod_anun)
 );
 
@@ -167,10 +167,10 @@ na USP.', 'Sou nômade digital e possuo uma rotina de trabalho intensa com  viag
 Fico inspirada em locais arbóreos e procuro por ambientes agradáveis.', 2, 5, '2020-02-20', 'Web Design');
 
 insert into espacos (status_anun, tipo_ambiente_anun, categoria_anun, subcategoria_anun, titulo_anun, 
-descricao_anun, localizacao, favoritado, data_cadastro_anun, compartilhamento_espaco, cpf_user) 
+descricao_anun, localizacao, favoritado, data_cadastro_anun, cpf_user) 
 values ('Ativo', 'Ambiente adaptado', 'Apartamento', 'Apartamento comum', 'Escritório Lape', 'Lorem ipsum dolor sit amet, 
 consectetur adipiscing elit. \nAenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo', 
-'Rio das Flores, Rio de Janeiro - Brasil', 'Sim', '2019-03-06 07:45', 'Compartilhado', '12345678900');
+'Rio das Flores, Rio de Janeiro - Brasil', 'Sim', '2019-03-06 07:45', '12345678900');
 
 
 INSERT INTO sala (modelo_trabalho, tipo_sala, quant_pessoas_sala, acesso_banheiros_sala, tamanho_sala, qualid_wifi_sala, qualid_computador_sala, 
@@ -178,7 +178,5 @@ qte_computadores_sala, qte_tomadas_sala, qte_mesas_sala, qte_assentos_sala, ar_c
  capacidade_pessoas, data_reserva, horario_reservado, preco_sala, status_reserva, cod_anun, compartilhamento_sala) values 
  ('Privado', '', '3', '3', '10 m²', 'Alta', 'Alta', '3', '10', '3', '3', 'Sim', '5', '6', '2020-03-03', '22:00', '150,00', 
  'Andamento', '1', 'Compartilhada');
-
-
 
 
