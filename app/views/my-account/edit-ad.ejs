@@ -135,9 +135,10 @@
             <div class="default_margin">
                 <nav>
                     <a href="/meus-anuncios"><button id="come_back">
-                            <img src="images/my-account/booking-solicitations/arrow-blue.svg" alt="Seta para voltar">
-                            Voltar
-                        </button></a>
+                        <img src="images/my-account/booking-solicitations/arrow-blue.svg" alt="Seta para voltar">
+                        Voltar
+                    </button>
+                </a>
                     <ul>
                         <li class="option">
                             Classificação
@@ -346,24 +347,38 @@
 
                             <h2>Recursos</h2>
 
-                            <ul class="resources">
-                                <li>
-                                    <div>
+                            <ul>
+                                <li class="resources-wifi">
+                                    <div class="resources-flex">
                                         <img src="images/my-account/edit-ad/wifi.svg" alt="Ícone de Wifi">
                                         <label for="wifi">Wifi</label>
                                     </div>
-                                    <div class="form-floating">
-                                        <select class="form-select" id="floatingSelect">
-                                            <option value="1">Baixa</option>
-                                            <option value="2">Média</option>
-                                            <option value="3">Alta</option>
-                                        </select>
-                                        <label for="floatingSelect">Qualidade</label>
+                                    <div class="wifi-box">
+                                        <div class="wifi-container">
+                                            <div class="wifi">
+                                                <input type="radio" class="radio4" id="" name="subcategory" />
+                                                <option for="">Baixa <br>qualid.</option>
+                                            </div>
+    
+                                            <div class="wifi">
+                                                <input type="radio" class="radio4" id="" name="subcategory" />
+                                                <option for="">Média <br>qualid.</option>
+                                            </div>
+
+                                            <div class="wifi">
+                                                <input type="radio" class="radio4" id="" name="subcategory" />
+                                                <option for="">Alta <br>qualid</option>
+                                            </div>
+                                        </div>
+    
+                                        <div class="selected-wifi">
+                                            Sinal do <br>Wi-fi
+                                        </div>
                                     </div>
                                 </li>
 
-                                <li>
-                                    <div>
+                                <li class="resources">
+                                    <div class="resources-flex">
                                         <img src="images/my-account/edit-ad/computer.svg" alt="Ícone de computador">
                                         <label for="computer">Computador</label>
                                     </div>
@@ -374,8 +389,8 @@
                                     </div>
                                 </li>
 
-                                <li>
-                                    <div>
+                                <li class="resources">
+                                    <div class="resources-flex">
                                         <img src="images/my-account/edit-ad/sockets.svg" alt="Ícone de tomada">
                                         <label for="sockets">Tomadas</label>
                                     </div>
@@ -386,8 +401,8 @@
                                     </div>
                                 </li>
 
-                                <li>
-                                    <div>
+                                <li class="resources">
+                                    <div class="resources-flex">
                                         <img src="images/my-account/edit-ad/air-conditioning.svg"
                                             alt="Ícone de ar-condicionado">
                                         <label for="air-conditioning">Ar-<br>condicionado</label>
@@ -399,8 +414,8 @@
                                     </div>
                                 </li>
 
-                                <li>
-                                    <div>
+                                <li class="resources">
+                                    <div class="resources-flex">
                                         <img src="images/my-account/edit-ad/table.svg" alt="Ícone de mesa">
                                         <label for="table">Mesas</label>
                                     </div>
@@ -411,8 +426,8 @@
                                     </div>
                                 </li>
 
-                                <li>
-                                    <div>
+                                <li class="resources">
+                                    <div class="resources-flex">
                                         <img src="images/my-account/edit-ad/seats.svg" alt="Ícone de assento">
                                         <label for="seats">Assentos</label>
                                     </div>
@@ -423,8 +438,8 @@
                                     </div>
                                 </li>
 
-                                <li>
-                                    <div>
+                                <li class="resources">
+                                    <div class="resources-flex">
                                         <img src="images/my-account/edit-ad/window.svg" alt="Ícone de janela">
                                         <label for="window">Janela</label>
                                     </div>
@@ -455,7 +470,7 @@
 
                 <ul>
                     <h5>Junte-se a nós</h5>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Home</a></li>.
                     <li><a href="#">Cadastre-se</a></li>
                     <li><a href="#">Sua conta</a></li>
                     <li><a href="#">Faça sua reserva</a></li>
