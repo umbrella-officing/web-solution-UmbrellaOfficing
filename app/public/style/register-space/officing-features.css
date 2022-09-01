@@ -1,7 +1,3 @@
-.container_search{
-    display: none;
-}
-
 body{
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
     background-repeat: repeat-y;
@@ -28,24 +24,105 @@ ul{
 
 #officing_features_section > div{
     justify-content: space-between;
+    align-items: center;
 }
 
-#officing_features_section > div > div > h1{
+#officing_features_section > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#officing_features_section > div > div > div h1{
     color: var(--white);
     font-size: 40px;
     font-weight: 700;
     max-width: 435px;
-    position: fixed;
-    top: 50%;
+    margin-top: 30px;
 }
 
-#officing_features_section > div > form{
+#officing_features_section > div > div form{
     width: 450px;
 }
 
-#officing_features_section h2{
+.liAlign1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#officing_features_section label h2{
     font-size: 22px;
     font-weight: 500;
+}
+
+.hintText{
+    font-size: 12px;
+    color: var(--text-3-black);
+    margin-top: 5px;
+}
+
+
+.specification {
+    display: flex;
+    align-items: center;
+}
+
+.specification button {
+    width: 35px;
+    height: 35px;
+    border: 2px solid;
+    border-radius: 35px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #8C8C8C;   
+}
+
+.specification input {
+    display: flex;
+    height: 30px;
+    width: 40px;
+    background: #fff;
+    border: none;
+    font-size: 14px;
+    color: var(--text-1-black);
+    font-weight: 600;
+    text-align: center;
+    box-sizing: border-box
+}
+
+.bathroom {
+    margin-top: -10px;
+}
+
+.bathroom p{
+    font-weight: 400;
+}
+
+#align2{
+    display: flex;
+    align-items: center;
+    margin: 6px 0 30px 0;
+}
+
+#align2 div{
+   margin-right: 20px;
+}
+
+.label-yn{
+    font-size: 14px;
+}
+
+input[type="radio"]{
+    width: 20px;
+    margin-right: 5px;
 }
 
 #roomSize{
@@ -57,49 +134,8 @@ ul{
     max-width: 80px;
 }
 
-.hintText{
-    font-size: 12px;
-    color: var(--text-3-black);
-    margin-top: 5px;
-}
-
-.liAlign{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 26px;
-}
-
-#private-bathrooms{
-    margin-top: 9px;
-}
-
-#private-bathrooms > p{
-    font-weight: 400;
-}
-
-#liAlign2{
-    display: flex;
-    align-items: center;
-    margin-top: 6px;
-}
-
-.label-yn{
-    font-size: 12px;
-}
-
-input[type="radio"]{
-    margin-right: 5px;
-}
-
-.align-button{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 100px;
-}
-
 .button{
+    position: absolute;
     background-color: var(--scale-2-purple);
     width: 186px;
     height: 36px;
@@ -113,36 +149,54 @@ input[type="radio"]{
     right: 0;
 }
 
-
-
-/* input[type="submit"]{
-    background-color: var(--scale-2-purple);
-    width: 186px;
-    height: 36px;
-    border: none;
-    border-radius: 20px;
-    color: var(--white);
-    font-family: var(--font-primary);
-    font-size: 20px;
-    font-weight: 600;
-    margin: 50px 0 0 157px;
-} */
-
-#second-step > ul{
-    padding-top: 50%;
-}
-
-#second-step > ul > li{
+#fourth-step > ul > li{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    border: 1px solid var(--gray-border);
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 14px 0 14px 18px;
 }
 
-#second-step > ul > li > p{
+#second-step div, 
+#third-step div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#second-step div h2, 
+#third-step div h2{
     font-size: 18px;
+}
+
+#second-step ul li, 
+#third-step ul li{
+    border: 1px solid var(--gray-border);
+    border-radius: 10px;
+    padding: 15px;
+    height: 130px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+
+#second-step ul li h3, 
+#third-step ul li h3{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--scale-13-blue);
+}
+
+#second-step ul li p, 
+#third-step ul li p{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 15px 0 15px 0;
+}
+
+#second-step ul li p b{
+    font-size: 14px;
     font-weight: 500;
 }
 
@@ -151,6 +205,17 @@ input[type="radio"]{
     height: 31px;
     margin: 0;
     padding: 0;
-    margin-right: 30px;
+    margin-right: 20px;
 }
+
+#fourth-step > ul > li div{
+    display: flex;
+    align-items: center;
+}
+
+#fourth-step > ul > li > p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
 

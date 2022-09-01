@@ -10,8 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/my-account.css">
     <link rel="stylesheet" href="style/my-account/my-profile.css">
@@ -29,7 +27,7 @@
                         <img src="images/default/menu_hamburguer.svg" alt="menu">
                     </div>
             </div>    
-                <div class="menu_open">
+               <div class="menu_open">
                     <div>
                         <img src="images/default/perfil.png" alt="foto de perfil">
                        <h3>Usuário <span>Cliente</span></h3>
@@ -42,45 +40,18 @@
                                     Login
                                 </li>
                                 <li class="popUp-login-signUp">
-                                    <img src="images/default/sign_up.png" alt="favoritos">
+                                    <img src="images/default/sign_up.png" alt="cadastre-se">
                                     Cadastre-se
                                 </li>
-                                <li class="popUp-login-signUp">
-                                    <img src="images/default/favorite.png" alt="suporte">
-                                    Favoritos
-                                </li>
+                                
                             </ul>
                         </nav>
-                    <div class="menu_open">
-                        <div>
-                            <img src="images/default/perfil.svg" alt="foto de perfil">
-                            <h3>Luana Almeida <span>Coworker</span></h3>
-                        </div>
-                        <div>
-                            <nav>
-                                <ul>
-                                    <li>
-                                        <img src="images/default/my-perfil.png" alt="meu perfil">
-                                        My profile
-                                    </li>
-                                    <li>
-                                        <img src="images/default/favorite.png" alt="favoritos">
-                                        Favoritos
-                                    </li>
-                                    <li>
-                                        <img src="images/default/question.png" alt="suporte">
-                                        Help & Support
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div>
-                            <img src="images/default/log-out.png" alt="sair da conta">
-                            Logout
-                        </div>
+                    </div>
+                    <div>
+                        <img src="images/default/question.png" alt="sair da conta">
+                        Help & Support
                     </div>
                 </div>
-        </div>
         <div id="container_popUp_login-signUp">
             <div class="popUp">
                 <img class="close_popup" src="images/default/close_icon.svg" alt="close">
@@ -196,60 +167,44 @@
                         <div>
                             <div>
                                 <label for="about-me">Sobre mim</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                                <textarea class="outline-focus" id="exampleFormControlTextarea1" rows="6"></textarea>
                             </div>
                             <div>
                                 <label for="profissional-perfil">Perfil profissional</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="outline-focus" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                         </div>
                         <div class="my-profile_section1-form-flex">
                             <div>
                                 <p>Insira suas preferências</p>
                                 <h4>Home Oficce</h4>
-                                <div class="rating">
-                                    <input type="radio" name="rule" id="home_office-rule1">
-                                    <label for="home_office-rule1"></label>
 
-                                    <input type="radio" name="rule" id="home_office-rule2">
-                                    <label for="home_office-rule2"></label>
-
-                                    <input type="radio" name="home_office-rule" id="home_office-rule3">
-                                    <label for="home_office-rule3"></label>
-
-                                    <input type="radio" name="home_office-rule" id="home_office-rule4">
-                                    <label for="home_office-rule4"></label>
-
-                                    <input type="radio" name="home_office-rule" id="home_office-rule5">
-                                    <label for="home_office-rule5"></label>
-                                </div>
+                                <ul class="rating">
+                                    <li class="rating-bar"></li>
+                                    <li class="rating-bar"></li>
+                                    <li class="rating-bar"></li>
+                                    <li class="rating-bar"></li>
+                                    <li class="rating-bar"></li>
+                                </ul>
 
                                 <h4>Coworking</h4>
-                                <div class="rating">
-                                    <input type="radio" name="rule" id="coworkig-rule1">
-                                    <label for="coworkig-rule1"></label>
 
-                                    <input type="radio" name="coworkig-rule" id="coworkig-rule2">
-                                    <label for="coworkig-rule2"></label>
-
-                                    <input type="radio" name="coworkig-rule" id="coworkig-rule3">
-                                    <label for="coworkig-rule3"></label>
-
-                                    <input type="radio" name="coworkig-rule" id="coworkig-rule4">
-                                    <label for="coworkig-rule4"></label>
-
-                                    <input type="radio" name="coworkig-rule" id="coworkig-rule5">
-                                    <label for="coworkig-rule5"></label>
-                                </div>
+                                <ul class="rating">
+                                    <li class="rating-bar"></li>
+                                    <li class="rating-bar"></li>
+                                    <li class="rating-bar"></li>
+                                    <li class="rating-bar"></li>
+                                    <li class="rating-bar"></li>
+                                </ul>
+                            
                             </div>
-
                             <div class="social-medias">
                                 <h3>Redes sociais</h3>
 
                                 <div class="social-medias_flex">
                                     <img src="images/my-account/my-profile/insta.svg" alt="Ícone do Instagram">
                                     <div>
-                                        <input class="form-control" type="text" placeholder="Adicionar Instagram">
+                                        <input class="outline-focus" type="text" placeholder="Adicionar Instagram">
                                         <p>Cole a URL do seu perfil aqui</p>
                                     </div>
                                 </div>
@@ -257,7 +212,7 @@
                                 <div class="social-medias_flex">
                                     <i class="fa-brands fa-whatsapp whats"></i>
                                     <div>
-                                        <input class="form-control" type="text" placeholder="Adicionar WhatsApp">
+                                        <input class="outline-focus" type="text" placeholder="Adicionar WhatsApp">
                                         <p>Cole a URL aqui</p>
                                     </div>
 
@@ -266,7 +221,7 @@
                                 <div class="social-medias_flex">
                                     <i class="fa-brands fa-facebook face"></i>
                                     <div>
-                                        <input class="form-control" type="text" placeholder="Adicionar Facebook">
+                                        <input class="outline-focus" type="text" placeholder="Adicionar Facebook">
                                         <p>Cole a URL do seu perfil aqui</p>
                                     </div>
 
@@ -275,7 +230,7 @@
                                 <div class="social-medias_flex">
                                     <i class="fa-brands fa-linkedin linkedin"></i>
                                     <div>
-                                        <input class="form-control" type="text" placeholder="Adicionar Linkedin">
+                                        <input class="outline-focus" type="text" placeholder="Adicionar Linkedin">
                                         <p>Cole a URL do seu perfil aqui</p>
                                     </div>
                                 </div>
@@ -293,56 +248,54 @@
 
         <div class="default_margin">
             <div id="margin2">
-                <div id="logo">
-                    <img src="images/default/logo_footer.svg" alt="logo">
-                    <h4>Escritorizando <span><br>espaços </span></h4>
-                    <span>Umbrella Officing&copy 2022</span>
-                </div>
-
-                <ul>
-                    <h5>Junte-se a nós</h5>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#">Cadastre-se</a></li>
-                    <li><a href="#">Sua conta</a></li>
-                    <li><a href="#">Faça sua reserva</a></li>
-                    <li><a href="#">Anuncie seu espaço</a></li>
-                </ul>
-
-                <ul>
-                    <h5>Atendimento</h5>
-                    <li><a href="#">Chat</a></li>
-                    <li><a href="#">Fórum</a></li>
-                    <li><a href="#">Central de ajuda</a></li>
-                </ul>
-
-                <ul>
-                    <h5>Sobre nós</h5>
-                    <li><a href="#">Quem somos?</a></li>
-                    <li><a href="#">Missão, valores e visão</a></li>
-                    <li><a href="#">Por que Umbrella Officing</a></li>
-                    <li><a href="#">Desenvolvedores</a></li>
-                </ul>
-
+            <div id="logo">
+                <img src="images/default/logo_footer.svg" alt="logo">
+                <h4>Escritorizando <span><br>espaços </span></h4>
+                <span>Umbrella Officing&copy 2022</span>
             </div>
 
+            <ul>
+                <h5>Junte-se a nós</h5>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Cadastre-se</a></li>
+                <li><a href="#">Sua conta</a></li>
+                <li><a href="#">Faça sua reserva</a></li>
+                <li><a href="#">Anuncie seu espaço</a></li>
+            </ul>
+
+            <ul>
+                <h5>Atendimento</h5>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">Fórum</a></li>
+                <li><a href="#">Central de ajuda</a></li>
+            </ul>
+
+            <ul>
+                <h5>Sobre nós</h5>
+                <li><a href="#">Quem somos?</a></li>
+                <li><a href="#">Missão, valores e visão</a></li>
+                <li><a href="#">Por que Umbrella Officing</a></li>
+                <li><a href="#">Desenvolvedores</a></li>
+            </ul>
+
+            </div>
             <div id="bottom_footer">
                 <div>
-                    <div id="network_div">
-                        <img src="images/default/icon_intagram.svg" alt="ícone do instagram">
-                        <img src="images/default/icon_facebook.svg" alt="ícone do facebook">
+                    <div id="network_div"> 
+                        <img src="images/default/icon_intagram_footer.svg" alt="ícone do instagram">
+                        <img src="images/default/icon_facebook_footer.svg" alt="ícone do facebook">
                     </div>
 
                     <div id="scroll_up">
                         <img src="images/default/arrow_up.svg" alt="ícone de flecha">
                     </div>
-                </div>
-
             </div>
 
+        </div>
     </footer>
-
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
     <script src="script/default/header/header.js"></script>
+    <script src="script/my-account/my-profile.js"></script>
 
 </body>
 

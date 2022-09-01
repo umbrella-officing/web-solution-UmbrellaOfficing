@@ -196,9 +196,9 @@ section::after {
     display: flex;
     flex-direction: column;
     position: relative;
-    border-radius: 16px 16px 0 0;
+    border-radius: 16px;
     box-sizing: border-box;
-    background: #B2B0FF;
+    background: white;
     padding: 20px;
     width: 950px;
     padding: 40px 45px 15px 45px;
@@ -222,51 +222,24 @@ section::after {
 .popUp_flex label {
     font-size: 25px;
     font-weight: bold;
-    color: white;
 }
 
-.rating {
+.rating{
     display: flex;
+    justify-content: space-between;
+    margin: 30px 10px 0 10px;
+    width: 15%;
+    list-style: none;
 }
 
-.rating input {
-    display: none;
-}
 
-.rating label {
-    display: block;
+.rating li{
+    width: 50px;
     cursor: pointer;
-    margin-right: 15px;
-    width: 28px;
 }
 
-.rating label:before {
-    content: '\f005';
-    font-family: fontAwesome;
-    position: absolute;
-    display: block;
-    font-size: 28px;
-    color: white;
-    text-shadow: 0 2px 2px rgb(128 128 128 / 10%);
-}
-
-
-.rating label:after {
-    content: '\f005';
-    font-family: fontAwesome;
-    position: relative;
-    top: 0;
-    display: block;
-    font-size: 28px;
-    color: var(--scale-15-yellow);
-    opacity: 0;
-    transition: .5s;
-}
-
-.rating label:hover:after,
-.rating label:hover~label:after,
-.rating input:checked~label:after {
-    opacity: 1;
+.rating img{
+    width: 30px;
 }
 
 .popUp_flex textarea {
@@ -278,6 +251,8 @@ section::after {
     width: -webkit-fill-available;
     outline: none;
     margin-top: 15px;
+    font-family: var(--font-primary);
+    font-size: 16px;
 }
 
 .popUp_flex textarea {

@@ -222,6 +222,32 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 100%;
   }
 
+  #more_specifications .selected{
+    margin-bottom: 0;
+  }
+
+  #more_specifications .select-box .options-container{
+    position: absolute;
+  }
+
+  #more_specifications .select-box .options-container.active{
+    top: 45px;
+    max-height: 44px;
+  }
+
+  #more_specifications .select-box{
+    font-size: 11px;
+    width: 56%;
+  }
+
+  #more_specifications .select-box label{
+    font-size: 11px;
+  }
+
+  #more_specifications .select-box .option, .selected{
+    padding: 5px 24px 5px 8px;
+  }
+
   #more_specifications ul li > div > img{
     width: 18px;
   }
@@ -300,6 +326,106 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 70%;
   }
 
+  .rating li{
+    cursor: pointer;
+  }
+
   .rating img{
     width: 22px;
   }
+
+ #adapted-environments > li:nth-child(2){
+    margin-top:13px;
+  }
+
+  #adapted-environments li{
+    margin-bottom: 8px;
+  }
+
+  .select-box {
+    display: flex;
+    position: relative;
+    font-size: 13px;
+    font-weight: 500;
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .select-box .options-container {
+    /* position: absolute; */
+    background: #fff;
+    color: #333;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    order: 1;
+  }
+  
+  .selected {
+    background: #fff;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    color: #333;
+    position: relative;
+    order: 0;
+  }
+  
+  .selected::after {
+    content: "";
+    background:url('../../images/search-spaces/search/arrow_down.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: 10px;
+    transition: all 0.4s;
+  }
+  
+  .select-box .options-container.active {
+    max-height: 159px;
+    margin-bottom: 24px;
+    /* top: 52px; */
+    opacity: 1;
+    overflow-y: scroll;
+  }
+  
+  .select-box .options-container.active + .selected::after {
+    transform: rotateX(180deg);
+  }
+  
+  .select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: inherit;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .select-box .options-container::-webkit-scrollbar-thumb {
+    background: #646a72;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .select-box .option,
+  .selected {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px 12px 8px;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px 1px rgb(1 1 1 / 10%);
+  }
+  
+  .select-box .option:hover {
+    background: #74a7e6;
+  }
+  
+  .select-box label {
+    cursor: pointer;
+  }
+  
+  .select-box .option .radio {
+    display: none;
+  }
+  

@@ -62,20 +62,80 @@ subcategoryList.forEach(s => {
  });
 });
 
-const plus = document.querySelector('.plus'),
-      minus = document.querySelector('.minus'),
-      num = document.querySelector('.num');
+const selectedWifi= document.querySelector(".selected-wifi");
+const wifiContainer = document.querySelector(".wifi-container");
 
-update = (n) => {
-    num.innerText = ( n <10 && n > 0) ? `${n}` : n;
-}
+const wifiList = document.querySelectorAll(".wifi");
 
-let a = 1;
+selectedWifi.addEventListener("click", () => {
+  wifiContainer.classList.toggle("active-wifi");
+});
 
-plus.addEventListener('click', () => update(++a));
-minus.addEventListener('click', () => update(--a));
+wifiList.forEach(w => {
+  w.addEventListener("click", () => {
+    selectedWifi.innerHTML = w.querySelector("option").innerHTML;
+    wifiContainer.classList.remove("active-wifi");
+ });
+});
 
 $(document).ready(function () {
-    $("#cep_ad").mask("00.000-000");
-    $("#price").mask("R$: 0,00");
+  $("#cep_ad").mask("00.000-000");
+  $("#price").mask("999.99", {reverse :true});
+  // $('#price').mask({
+  //   prefix:'R$ ',
+  //   allowNegative: true,
+  //   thousands:'.', decimal:',',
+  //   affixesStay: true});
 });
+
+
+const operationsValues = () =>{
+  const form = document.querySelector('[data-js="form"]')
+  
+  form.addEventListener('submit',(e)=>{
+    e.preventDefault()
+  })
+
+  const specifications = document.querySelectorAll(".specification")
+
+  specifications.forEach((specification,index)=>{
+      specification.addEventListener('click',(e)=>{
+          if(e.target.classList == "fa-solid fa-minus subtract"){
+              subtractionInput(specification,index)
+          }
+
+          if(e.target.classList == "fa-solid fa-plus addition"){
+              additionInput(specification,index)
+          }
+      })
+  })
+
+
+      function subtractionInput(specification,index){
+
+          if(index == index){
+              var amountInput = specification.children[1]
+              var i = amountInput.value
+
+              if (i > 0) {
+                  i--
+                  amountInput.setAttribute('value', i)
+              }
+          }
+      }
+
+      function additionInput(specification,index){
+
+          if(index == index){
+              var amountInput = specification.children[1]
+              var i = amountInput.value
+              i++
+              amountInput.setAttribute('value', i)
+          }
+      }
+      
+}
+
+operationsValues()
+
+
