@@ -570,9 +570,50 @@ h1, h2, h3, h4, h5, h6{
     align-self: center;
 }
 
+#price h5{
+    font-weight: 400;
+    margin: 23px 0 10px 0;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+}
+
+#price h5 span{
+    font-size: 22px;
+    margin: 0;
+    font-weight: 600;
+}
+
 #price > div ul li{
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 12px;
+}
+
+#price ul li:nth-child(2) span{
+    margin: 0;
+}
+
+#price ul li:last-child{
+    border-bottom: 1px solid #d1d1d1;
+}
+
+#result{
+    display: flex;
+    justify-content: space-between;
+}
+
+#result span{
+    font-size: 13px;
+}
+
+#price > button{
+    background: linear-gradient(180deg, #83019d, #650c85);
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    border-radius: 0 0 10px 10px;
+    font-weight: 600;
 }
