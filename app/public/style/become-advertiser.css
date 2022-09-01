@@ -15,55 +15,7 @@ header a {
     padding: 14px;
 }
 
-#section1_bg {
-    width: 100%;
-}
 
-.become-advertiser_section1-announce {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    top: 200px;
-}
-
-.become-advertiser_section1-announce h1 {
-    color: var(--white);
-    font-size: 35px;
-    font-weight: 600;
-    max-width: 470px;
-}
-
-.become-advertiser_section1-announce div{
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    padding: 42px 48px;
-}
-
-#announce{
-    font-weight: 800;
-    font-size: 25px;
-    color: var(--text-1-black);
-}
-
-#start-now{
-    width: 215px;
-    height: 45px;
-    border: 0;
-    background-color: var(--scale-2-purple);
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    border-radius: 40px;
-    margin-top: 20px;
-}
-
-#become-advertiser_section2{
-    padding: 80px 0;
-}
 
 #become-advertiser_section2 > div{
     justify-content: space-between;
