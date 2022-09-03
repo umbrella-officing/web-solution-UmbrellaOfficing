@@ -72,6 +72,7 @@
     justify-content: space-around;
     padding-bottom: 10px;
     margin-top: 60px;
+    position: relative;     
 }
 
 #align-options > button{
@@ -80,6 +81,22 @@
     font-size: 20px;
     font-weight: 800;
     text-align: center;
+    color: #555555;
+}
+
+#align-options > button:focus{
+    outline: none;
+    color: var(--scale-5-blue);
+}
+
+#align-options:after{
+    content: '';
+    width: 50%;
+    height: 2px;
+    background-color: var(--scale-5-blue);
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 #align-list{
