@@ -1,3 +1,7 @@
+*{
+    font-family: 'Montserrat';
+}
+
 ul{
     list-style: none;
     display: flex;
@@ -10,7 +14,7 @@ a {
 #adaptables-categories_section{
     padding-top: 105px;
     height: 100vh;
-    max-height: 700px;
+    max-height: 800px;
 }
 
 #adaptables-categories_section > div{
@@ -18,7 +22,7 @@ a {
     flex-direction: column;
     flex-direction: column;
     align-items: center;
-    height: 80vh;
+    height: 100%;
 }
 
 .align-elements{
@@ -72,7 +76,7 @@ a {
 }
 
 .subtitle h2{
-    font-weight: 800;
+    font-weight: 700;
     font-size: 18px;
 
 }
@@ -80,6 +84,7 @@ a {
 #adaptables-categories_section > div > div > h1{
     font-size: 40px;
     max-width: 280px;
+    font-weight: 700;
 }
 
 #align-buttons{

@@ -1,17 +1,9 @@
 create database umbrella_officing;
 use umbrella_officing;
 
-
-/*CREATE TABLE usuarios (nome_user Texto(1),dt_nasc_user Texto(1), telefone_user Texto(1),
-e-mail_user Texto(1), senha_user Texto(1), rg_user Texto(1), genero_user Texto(1),
-end_user Texto(1), redes_sociais_perfil Texto(1), cpf_user Texto(1) PRIMARY KEY, preferencias_homeoffincing Texto(1), preferencias_coworking Texto(1),
-orgão_expedidor Texto(1), foto_user Texto(1), sobre_mim_user Texto(1), perfil_profissional_user Texto(1),
-data_cadastro_user Texto(1), profissão Texto(1), cel_user Texto(1)
-)*/
-
 create table usuarios (
 nome_user varchar(100) not null,
-cpf_user char(11) primary key not null,
+cpf_user char(14) primary key not null,
 dt_nasc_user date not null,
 telefone_user varchar(14),
 celular_user varchar(14),
@@ -21,25 +13,23 @@ genero_user varchar(9),
 rg_user varchar(20),
 orgao_expedidor varchar(60),
 end_user varchar(60),
-instagram_user varchar(200),
-whats_user varchar(200),
-facebook_user varchar(200),
-linkedin varchar(200),
-sobre_mim varchar(200),
-perfil_profissional varchar(150),
+link_instagram longtext,
+link_whats_user longtext ,
+link_facebook longtext,
+link_linkedin longtext,
+sobre_mim text,
+perfil_profissional text,
 preferencias_homeoffincing char(5),
 preferencias_coworking char(5),
-fotos_user varchar(150),
+fotos_user longblob,
 data_cadastro datetime,
 profissao varchar(30)
 );
 
 select*from usuarios;
 
-/*CREATE TABLE administradores (foto_admin Texto(1),
-nome_admin Texto(1), cpf_admin Texto(1) PRIMARY KEY, senha_admin Texto(1))*/
 create table administradores (
-foto_admin varchar(150),
+foto_admin longblob,
 nome_admin varchar(100),
 cpf_admin char(11) primary key,
 senha_admin char(8)
@@ -47,11 +37,6 @@ senha_admin char(8)
 
 select*from administradores;
 
-/*CREATE TABLE espacos (descricao_anun Texto(1), status_anun Texto(1), titulo_anun Texto(1),
-tipo_ambiente_anun Texto(1), data_cadastro_anun Texto(1), fotos_anun Texto(1), categoria_anun Texto(1), subcategoria_anun Texto(1),
-favoritado Texto(1), localizacao_anun Texto(1), cod_anun Texto(1) PRIMARY KEY, cpf_user Texto(1), 
-FOREIGN KEY(cpf_user) REFERENCES usuarios (cpf_user)
-)*/
 create table espacos (
 status_anun varchar(7), 
 cod_anun int auto_increment primary key,
@@ -59,8 +44,8 @@ tipo_ambiente_anun varchar(9),
 categoria_anun varchar(15),
 subcategoria_anun varchar(15),
 titulo_anun varchar(30),
-descricao_anun varchar(100),
-fotos_anun varchar(150),
+descricao_anun text,
+fotos_anun longblob,
 localizacao varchar(60),
 favoritado char(3),
 data_cadastro_anun datetime,
@@ -70,48 +55,41 @@ foreign key (cpf_user) references usuarios (cpf_user)
 
 select*from espacos;
 
-/*CREATE TABLE sala (tamanho_sala Texto(1), qte_mesas_sala Texto(1), status_reserva Texto(1),
-data_reserva_sala Texto(1), qualid_wifi_sala Texto(1), avaliação_sala Texto(1), cancelamento Texto(1),
-qte_janelas_sala Texto(1), horario_reservado Texto(1), qte_tomadas_sala Texto(1), qte_ar-condicionado_sala Texto(1),
-capacidade_pessoas Texto(1), acesso_banheiros_sala Texto(1), preco Texto(1), quant_pessoas_sala Texto(1), cod_sala Texto(1) PRIMARY KEY,
-qte_assentos_sala Texto(1), modelo_trabalho Texto(1), qte_computadores_sala Texto(1), cod_anun Texto(1),
-FOREIGN KEY(cod_anun) REFERENCES espacos (cod_anun))*/
-
 create table sala (
 cod_sala int auto_increment primary key,
 modelo_trabalho varchar(20),
 tipo_sala varchar(30),
-quant_pessoas_sala varchar(2),
-acesso_banheiros_sala varchar(2),
+quant_pessoas_sala int,
+acesso_banheiros_sala int,
 tamanho_sala varchar(5),
 qualid_wifi_sala varchar(5),
-qte_computadores_sala varchar(2),
-qte_tomadas varchar(2), 
-qte_mesas varchar(2), 
-qte_assentos varchar(2), 
-qte_ar_condicionado varchar(2),
-qte_janelas varchar(2),
+qualid_computador_sala varchar(5),
+qte_computadores_sala int,
+qte_tomadas_sala int, 
+qte_mesas_sala int, 
+qte_assentos_sala int, 
+ar_condicionado_sala char(3),
+qte_janelas_sala int,
 capacidade_pessoas varchar(2),
 data_reserva date,
 cancelamento char(3),
 avaliação_sala varchar(5),
 horario_reservado time,
-preco int,
+preco_sala decimal(6,2),
 status_reserva varchar(7),
 cod_anun int,
+fotos_sala longblob,
+compartilhamento_sala char(3),
+acesso_outras_salas char(3),
 foreign key(cod_anun) references espacos (cod_anun)
 );
 
 select*from sala;
 
-/*CREATE TABLE notificações (cod_notificacao Texto(1) PRIMARY KEY, tipo_notificacao Texto(1),
-titulo_notificacao Texto(1), descricao_notificacao Texto(1), data_notificacao Texto(1),
-cpf_user Texto(1), FOREIGN KEY(cpf_user) REFERENCES usuarios (cpf_user)
-)*/
 create table notificacoes (
 data_notificacao date,
 titulo_notificacao varchar(20),
-descricao_notificacao varchar(20),
+descricao_notificacao text,
 status_notificacao varchar(20), 
 cod_notificacao int auto_increment primary key,
 cpf_user char(11),
@@ -120,13 +98,10 @@ foreign key(cpf_user) references usuarios (cpf_user)
 
 select*from notificacoes;
 
-/*CREATE TABLE artigo (data_artigo Texto(1), conteudo_do_artigo Texto(1),
-titulo_do_artigo Texto(1), categoria_artigo Texto(1), cod_artigo Texto(1) PRIMARY KEY,
-cpf_admin Texto(1))*/
 create table artigo (
 cod_artigo int auto_increment primary key,
 titulo_do_artigo varchar(30),
-conteudo_do_artigo varchar(255),
+conteudo_do_artigo text,
 categoria_artigo varchar(30),
 data_artigo date,
 cpf_admin char(11),
@@ -135,9 +110,6 @@ foreign key(cpf_admin) references administradores (cpf_admin)
 
 select*from artigo;
 
-/*CREATE TABLE avaliacao (num_estrelas Texto(1), data_avalia Texto(1), texto_avalia Texto(1),
-cod_avalia Texto(1) PRIMARY KEY, cod_anun Texto(1), FOREIGN KEY(cod_anun) REFERENCES espacos (cod_anun)
-)*/
 create table avaliacao (
 num_estrelas varchar(5),
 cod_avalia int auto_increment primary key,
@@ -149,10 +121,6 @@ foreign key(cod_anun) references espacos(cod_anun)
 
 select*from avaliacao;
 
-/*CREATE TABLE gerencia (cpf_admin Texto(1), cpf_user Texto(1),
-FOREIGN KEY(cpf_admin) REFERENCES administradores (cpf_admin),
-FOREIGN KEY(cpf_user) REFERENCES usuarios (cpf_user)
-)*/
 create table admin_user (
 cpf_admin char(11),
 cpf_user char(11),
@@ -161,11 +129,6 @@ foreign key(cpf_user) references usuarios (cpf_user)
 );
 
 select*from admin_user;
-
-/*CREATE TABLE gerencia (cpf_admin Texto(1), cod_anun Texto(1),
-FOREIGN KEY(cpf_admin) REFERENCES administradores (cpf_admin),
-FOREIGN KEY(cod_anun) REFERENCES espacos (cod_anun)
-)*/
 
 create table admin_espacos (
 cpf_admin char(11),
@@ -176,12 +139,6 @@ foreign key(cod_anun) references espacos (cod_anun)
 
 select*from admin_espacos;
 
-/*CREATE TABLE aluga (
-cpf_user Texto(1),
-num_sala Texto(1),
-FOREIGN KEY(cpf_user) REFERENCES usuarios (cpf_user),
-FOREIGN KEY(cod_sala) REFERENCES sala (cod_sala)
-)*/
 create table aluguel (
 cpf_admin char(11),
 cod_sala int,
@@ -191,10 +148,6 @@ foreign key(cod_sala) references sala (cod_sala)
 
 select*from aluguel;
 
-/*CREATE TABLE recebe (
-cpf_user Texto(1),
-cod_avalia Texto(1),
-FOREIGN KEY(cpf_user) REFERENCES usuarios (cpf_user)/*falha: chave estrangeira*/
 create table usuario_avalia (
 cpf_user char(11),
 cod_avalia int,
@@ -204,9 +157,26 @@ foreign key(cod_avalia) references avaliacao (cod_avalia)
 
 select*from usuario_avalia;
 
+insert into usuarios (nome_user, cpf_user, dt_nasc_user, telefone_user, celular_user, email_user, senha_user,
+genero_user, rg_user, orgao_expedidor, end_user, sobre_mim, perfil_profissional, preferencias_homeoffincing, 
+preferencias_coworking, data_cadastro, profissao) values ('Aline dos Santos Ribeiro Luna', 12345678900, 
+'2000-01-01', '+5511999999999', '+5511989999999', 'aline@gmail.com', '123@5678', 'Feminino', '1234567P', 
+'Secretária de Segurança Pública de SP', 'Rua do Paço, nº 157 - Engenho Novo - Barueri/SP - 06212-121',
+'Oi, meu nome é Aline e trabalho como web design desde 2021, quando  terminei o curso de Design 
+na USP.', 'Sou nômade digital e possuo uma rotina de trabalho intensa com  viagens. 
+Fico inspirada em locais arbóreos e procuro por ambientes agradáveis.', 2, 5, '2020-02-20', 'Web Design');
+
+insert into espacos (status_anun, tipo_ambiente_anun, categoria_anun, subcategoria_anun, titulo_anun, 
+descricao_anun, localizacao, favoritado, data_cadastro_anun, cpf_user) 
+values ('Ativo', 'Ambiente adaptado', 'Apartamento', 'Apartamento comum', 'Escritório Lape', 'Lorem ipsum dolor sit amet, 
+consectetur adipiscing elit. \nAenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo', 
+'Rio das Flores, Rio de Janeiro - Brasil', 'Sim', '2019-03-06 07:45', '12345678900');
 
 
-
-
+INSERT INTO sala (modelo_trabalho, tipo_sala, quant_pessoas_sala, acesso_banheiros_sala, tamanho_sala, qualid_wifi_sala, qualid_computador_sala, 
+qte_computadores_sala, qte_tomadas_sala, qte_mesas_sala, qte_assentos_sala, ar_condicionado_sala, qte_janelas_sala,
+ capacidade_pessoas, data_reserva, horario_reservado, preco_sala, status_reserva, cod_anun, compartilhamento_sala) values 
+ ('Privado', '', '3', '3', '10 m²', 'Alta', 'Alta', '3', '10', '3', '3', 'Sim', '5', '6', '2020-03-03', '22:00', '150,00', 
+ 'Andamento', '1', 'Compartilhada');
 
 

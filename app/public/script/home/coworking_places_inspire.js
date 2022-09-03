@@ -7,6 +7,7 @@ $('.slider').slick({
   arrows: true,
   prevArrow:"<button class='arrows'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
   nextArrow:"<button class='arrows arrow-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+  draggable:false,
   dots: true,
   responsive: [
     {
@@ -15,7 +16,8 @@ $('.slider').slick({
         arrows: false,
         infinite:false,
         slidesToShow: 3.44,
-        slidesToScroll: 3
+        slidesToScroll: 3,
+        draggable:true,
         // slidesToShow: 4.72,
         // slidesToScroll: 4,
       }
@@ -36,7 +38,8 @@ $('.slider').slick({
         arrows: false,
         infinite:false,
         slidesToShow:2.5,
-        slidesToScroll:2
+        slidesToScroll:2,
+        draggable:true
         // centerMode: true,
         // centerPadding: '20px',
         // slidesToShow: 2.63,
@@ -51,6 +54,7 @@ $('.slider').slick({
         infinite:false,
         slidesToShow: 2.3,
         slidesToScroll: 1,
+        draggable:true
         // centerMode: true,
         // centerPadding: '40px',
       }
@@ -63,6 +67,7 @@ $('.slider').slick({
         infinite:false,
         slidesToShow: 1.5,
         slidesToScroll: 1,
+        draggable:true
       }
     },
   ]

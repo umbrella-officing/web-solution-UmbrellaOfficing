@@ -173,3 +173,6 @@ function initButtons() {
 initButtons();
 load();
 
+$(document).ready(function () {
+  $(".eventTitleInput ").mask("00:00");
+});
