@@ -1,6 +1,11 @@
 body{    
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
     background-repeat: no-repeat;
+    font-family: var(--font-primary);
+}
+
+.container_search{
+    display: none;
 }
 
 #photos_section{
@@ -78,3 +83,14 @@ input[type="submit"]{
     font-weight: 600;
     margin: 30px 0 0 323px;
 }
+
+input[type="file"]{
+    display: none;
+}
+
+label{
+    border: 1px solid var(--gray-border);
+    width: 244px;
+    height: 159px;
+}
+
