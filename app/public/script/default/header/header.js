@@ -7,17 +7,18 @@ const openInputsearchCoworkingSpaces = ()=> {
     const box_black = document.querySelector('#box_black')
     const type_office = document.querySelector('#type_office')
 
-    search.addEventListener('click',(e)=>{
-        header.classList.add('header_expanded')
-        type_office.style.display = 'flex'
-        search_txt.style.display = 'none'
-        search.classList.add("expanded")
-        container_informations_find_coworking.style.display = 'flex'
-        box_black.style.display = 'block'
+    if(search !== null){
+        search.addEventListener('click',(e)=>{
+            header.classList.add('header_expanded')
+            type_office.style.display = 'flex'
+            search_txt.style.display = 'none'
+            search.classList.add("expanded")
+            container_informations_find_coworking.style.display = 'flex'
+            box_black.style.display = 'block'
     })
-    
-    select_type_office()
     closeInputsearchCoworkingSpaces(box_black,header,search,search_txt,container_informations_find_coworking)
+}
+    select_type_office()
 }
 
 const select_type_office = () => {
@@ -55,9 +56,6 @@ const closeInputsearchCoworkingSpaces = (box_black,header,search,search_txt,cont
         })
 }
 
-openInputsearchCoworkingSpaces()
-
-
 const menuHamburguer  = () =>{
     const menu_sign_in_up = document.querySelector('#menu_sign-in-up')
     const menu_open = document.querySelector('.menu_open')
@@ -69,7 +67,7 @@ const menuHamburguer  = () =>{
             return
         }
 
-        if(menu_open.contains(e.target) == false){
+        if(menu_open.contains(e.target) == false || e.target.tagName == 'LI'){
             menu_open.classList.remove('menu_open_checked')
         }
     })
@@ -100,7 +98,7 @@ const popUp_login_signUp = () => {
 
     function closePopUP() {
        containerPopUp.addEventListener('click',e=>{
-
+        console.log(e.target)
         if(e.target.classList == 'close_popup' || e.target == containerPopUp){
         containerPopUp.style.display = 'none'
         AllPopUp.forEach(popUp => popUp.classList.remove('popUpChecked'))
@@ -111,4 +109,5 @@ const popUp_login_signUp = () => {
 
 }
 
+openInputsearchCoworkingSpaces()
 menuHamburguer ()

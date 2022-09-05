@@ -1,17 +1,8 @@
-body {
-    font-family: var(--font-primary);
-    line-height: var(--bs-body-line-height);
-}
-
-.container_search {
-    display: none;
-}
-
-#personal-date_section1 {
+#personal-date {
     position: relative;
 }
 
-#personal-date_section1>div {
+#personal-date>div {
     padding: 220px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
@@ -19,36 +10,37 @@ body {
 }
 
 
-#personal-date_section1::before {
+#personal-date::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    width: calc(50% - 290px);
+    width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
 }
 
 
 /*Menu lateral*/
-#personal-date_section1>div nav {
+#personal-date>div nav {
     position: relative;
     overflow: auto;
 }
 
-#personal-date_section1>div nav ul {
+#personal-date>div nav ul {
     list-style: none;
 }
 
-#personal-date_section1>div nav ul li {
+#personal-date>div nav ul li {
     display: flex;
     height: 40px;
     margin: 25px 0;
     align-items: center;
 }
 
-#personal-date_section1>div nav ul li a {
-    text-decoration: none
+#personal-date>div nav ul li a {
+    text-decoration: none;
+    align-items: center;
 }
 
 .profile,
@@ -67,11 +59,11 @@ body {
     color: var(--scale-13-blue);
 }
 
-.option a {
+/* .option a {
     font-size: 16px;
     font-weight: 400;
     color: var(--text-1-black);
-}
+} */
 
 .wallet {
     margin: 0 10px 0 18px;
@@ -86,35 +78,35 @@ body {
 }
 
 /*Conteúdo*/
-#personal-date_section1>div>nav~div {
-    width: 784px;
+#personal-date_section1 {
+    width: 744px;
     margin-bottom: 80px;
 }
 
-#personal-date_section1>div>div h1 {
+#personal-date_section1 h1 {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: -10px;
 }
 
-#personal-date_section1>div>div form h2 {
+#personal-date_section1 form h2 {
     font-size: 18px;
     font-weight: 600;
     margin-top: 40px;
 }
 
-#personal-date_section1 form>div>div label {
+#personal-date_section1 form>div label {
     display: flex;
     flex-direction: column;
     margin: 30px 0 10px 0;
 }
 
-#personal-date_section1 form>div>div label {
+#personal-date_section1 form>div label {
     font-size: 16px;
     font-weight: 500;
 }
 
-#personal-date_section1 form>div>div input {
+#personal-date_section1 form>div input {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 10px;
@@ -128,16 +120,19 @@ body {
     font-size: 14px;
 }
 
-.personal-date_section1_form-colum2 {
+.personal-date-grid2{
     display: grid;
-    grid-template-columns: 379.5px 379.5px;
+    grid-template-columns: 359.5px 359.5px;
     grid-column-gap: 25px;
+    position: relative;
 }
 
 .select-box {
     display: flex;
-    width: 379.5px;
+    width: 359.5px;
     flex-direction: column;
+    position: absolute;
+    right: 0;
 }
 
 .select-box .options-container {
@@ -147,35 +142,30 @@ body {
     transition: all 0.4s;
     border: 1px solid var(--gray-border);
     border-radius: 5px;
-    overflow: hidden;
     order: 1;
 }
 
 .selected {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     position: relative;
     order: 0;
 }
 
-.selected::after {
-    content: "";
-    background-image: url("../images/my-account/arrow.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+.selected img {
     position: absolute;
     height: 100%;
-    width: 32px;
+    width: 12px;
     right: 10px;
-    top: 5px;
+    top: 0px;
     transition: all 0.4s;
 }
 
 .select-box .options-container.active {
     max-height: 100px;
     opacity: 1;
-    overflow-y: scroll;
+    background-color: white;
 }
 
 .option label {
@@ -204,7 +194,7 @@ body {
 }
 
 .select-box .option:hover {
-    background: var(--scale-9-blue);
+    background: #f1f6ff;
 }
 
 .select-box label {
@@ -222,14 +212,19 @@ body {
 
 .personal-date_section1_form-colum2-dif1 {
     display: grid;
-    grid-template-columns: 505px 253px;
+    grid-template-columns: 440px 279px;
     grid-column-gap: 25px;
 }
 
-.personal-date_section1_form-colum2-dif2 {
+.personal-date-grid2-dif {
     display: grid;
-    grid-template-columns: 667px 91px;
+    grid-template-columns: 628px 91px;
     grid-column-gap: 25px;
+}
+
+#justify {
+    display: flex;
+    justify-content: end;
 }
 
 #edit_ad {
@@ -245,5 +240,5 @@ body {
     font-size: 14px;
     font-family: var(--font-primary);
     font-weight: 500;
-    margin: 40px 0 0 558px;
+    margin: 40px 0 0 0;
 }

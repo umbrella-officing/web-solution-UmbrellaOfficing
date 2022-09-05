@@ -1,47 +1,43 @@
-.container_search{
-    display: none;
-}
-
-#my-reservations_section1 {
+#my-reservations {
     position: relative;
 }
 
-#my-reservations_section1>div {
+#my-reservations>div {
     padding: 220px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
 }
 
-#my-reservations_section1::before {
+#my-reservations::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    width: calc(50% - 290px);
+    width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
 }
 
 
 /*Menu lateral*/
-#my-reservations_section1>div nav {
+#my-reservations>div nav {
     position: relative;
     overflow: auto;
 }
 
-#my-reservations_section1>div nav ul {
+#my-reservations>div nav ul {
     list-style: none;
 }
 
-#my-reservations_section1>div nav ul li {
+#my-reservations>div nav ul li {
     display: flex;
     height: 40px;
     margin: 25px 0;
     align-items: center;
 }
 
-#my-reservations_section1>div nav ul li a {
+#my-reservations>div nav ul li a {
     text-decoration: none
 }
 
@@ -61,13 +57,13 @@
     color: var(--scale-13-blue);
 }
 
-.option a {
+/* .option a {
     font-size: 16px;
     font-weight: 400;
     color: var(--text-1-black);
-}
+} */
 
-.reserve{
+.reserve {
     margin: 0 10px 0 18px;
 }
 
@@ -80,56 +76,60 @@
 }
 
 /*Conteúdo*/
-#my-reservations_section1>div>nav~div {
-    width: 784px;
+#my-reservations>div>nav~div {
+    width: 744px;
 }
 
-#my-reservations_section1>div>div h1 {
+#my-reservations>div h1 {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-#my-reservations_section1-space {
+#my-reservations_section1 ul li {
     display: flex;
     margin-bottom: 40px;
 }
 
-#my-reservations_section1-space>div {
+#my-reservations_section1 ul li > div{
     padding: 20px;
     border-radius: 0px 10px 10px 0px;
     box-shadow: 5px 5px 5px 5px rgb(128 128 128 / 35%);
-    width: 100%;
-    height: 197px;
+    width: 542px;
     box-sizing: border-box;
 }
 
-#my-reservations_section1-space>div p:nth-child(1) {
+#my-reservations_section1 ul li>div p:nth-child(1) {
     font-size: 12px;
     font-weight: 600;
     color: var(--scale-12-red);
-    margin-left: 80%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-#my-reservations_section1-space>div h2 {
+#my-reservations_section1 ul li>div h2 {
     font-size: 18px;
     font-weight: bold;
     margin: -5px 0 5px 0;
 }
 
-#my-reservations_section1-space>div p {
+#my-reservations_section1 ul li>div p {
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 5px;
 }
 
-.reservations_section1-space-div-flex {
+#my-reservations_section1 ul li .space-flex {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
 }
 
-.reservations_section1-space-div-flex>div button {
+#my-reservations_section1 ul li .space-flex h3{
+    font-size: 22px;
+}
+
+#my-reservations_section1 ul li .space-flex div button {
     border: none;
     width: 130px;
     height: 26px;
@@ -137,7 +137,7 @@
     border-radius: 40px;
 }
 
-.reservations_section1-space-div-flex>div button {
+#my-reservations_section1 ul li .space-flex div button {
     font-size: 12px;
     font-family: var(--font-primary);
     font-weight: 500;
@@ -148,35 +148,26 @@
     margin-right: 10px;
 }
 
-#cancel {
+.cancel {
     background-color: var(--scale-12-red);
 }
 
-
-
-#home_section5{
+/* #my-reservations_section2 {
     overflow: hidden;
+} */
+
+#my-reservations_section2 h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 80px 0 40px;
 }
 
-#home_section5 > div{
-    position: relative;
-    width: 100%;
-    max-width: 1160px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 105px;
-}
-
-#home_section5 > div h2{
-    margin-bottom: 40px;
-}
-
-#home_section5 .slider{
+#my-reservations_section2 .slider {
     list-style: none;
-    width:calc(107% - 2px);
+    width: calc(106% - 5px);
 }
 
-.arrows{
+.arrows {
     position: absolute;
     top: 148px;
     z-index: 599;
@@ -185,64 +176,66 @@
     cursor: pointer;
 }
 
-.slider > button:first-child{
+.slider>button:first-child {
     left: -40px;
 }
 
-.arrow-right{
-    right: calc(5% - 22px);
+.arrow-right {
+    right: calc(3.5% - 22px);
 }
 
-.slider .fa{
+.slider .fa {
     font-size: 30px;
     color: #333;
 }
 
-.arrows:hover{
+.arrows:hover {
     background: rgba(82, 82, 82, 0.2);
     transition: .3s;
 }
 
-#home_section5 .slick-slide{
+#my-reservations_section2 .slick-slide {
     border-radius: 20px 20px 10px 10px;
     padding-bottom: 16px;
 }
 
-#home_section5 .slick-dots{
+#my-reservations_section2 .slick-dots {
     list-style: none;
     bottom: -40px;
-    max-width: 1160px;
+    max-width: 744px;
 }
 
-.slider li > div{
-    width: 74%;
-    max-width: 231px;
-    min-width: 180px;
+.slider li>div {
+    width: 84%;
+    max-width: 234px;
 }
 
 .slider li img {
     width: 100%;
 }
 
-.description_coworking{
-    padding: 10px 10px 27px 10px;
-    font-size: 13.4px;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 5px 5px 5px 0px rgb(128 128 128 / 35%);
+.description {
+    padding: 20px 20px 60px 20px;
+    background-color: var(--scale-1-gray);
     width: 100%;
-    height: 95px;
+    height: 177px;
     box-sizing: border-box;
 }
 
-.description_coworking h4{
-    font-size: 1.1em;
-    margin:11px 0 7px 0;
+.description h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
+.description p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
 
-/*Pop-up*/
-#popUp-cancel::before {
-    content: "";
+#container_popUp_cancel {
+    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -252,94 +245,124 @@
     z-index: 9999;
 }
 
-#popUp-cancel form::before {
+.popUp_cancel {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    width: 814px;
-    height: 246px;
-    
-} 
-
-#modal-cancel > div form {
-    position: relative;
+    border-radius: 16px ;
+    box-sizing: border-box;
+    background: white;
+    padding: 20px;
+    width: 950px;
+    padding: 30px 45px 15px 45px;
+    animation: fadeIn ease .27s;
 }
 
-#modal-cancel_state1 label{
-    font-size: 18px;
+#popUp-cancel_state1 label {
+    font-size: 22px;
     font-weight: bold;
-    color: white;
 }
 
-#modal-cancel > div form textarea {
+.popUp_cancel textarea {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
+    font-size: 15px;
     padding: 15px;
     box-sizing: border-box;
     resize: none;
     width: -webkit-fill-available;
     outline: none;
     margin-top: 15px;
+    font-family: var(--font-primary);
+    font-size: 16px;
 }
 
-#modal-cancel_state1 > div {
+.popUp_go {
     display: flex;
-    justify-content: space-around;
-    margin-top: 5px;
-    align-items: self-end;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 8px;
 }
 
-#modal-cancel_state1, #modal-cancel_state2 > div p{
-    font-size: 14px;
-    font-weight: 500;
+#popUp-cancel_state1>div p,
+#popUp-cancel_state2>div p,
+#popUp-cancel_state3>div p  {
+    font-size: 14.5px;
+    font-weight: bold;
     color: var(--scale-2-purple);
 }
 
-#go {
+.go, #submit {
     background-color: var(--scale-2-purple);
     border: none;
-    width: 124px;
-    height: 27px;
+    width: 134px;
+    height: 30px;
     color: var(--white);
     border-radius: 30px;
 }
 
-#go {
-    font-size: 14px;
+.go, #submit {
+    font-size: 14.5px;
     font-family: var(--font-primary);
     font-weight: 500;
 }
 
-
-.arrow-left {
-    font-size: 28px;
-    color: var(--scale-2-purple);
+.popUp_cancel > div > div > div:first-child{
+    width: fit-content;
+    position: relative;
+    z-index: 99;
     margin: -5px 0 0 -20px;
 }
 
-#modal-cancel_state2:nth-child(1) div {
+.arrow-left {
+    font-size: 26px;
+    color: var(--scale-2-purple);
+    cursor: pointer;
+}
+
+.popUp_flex {
     display: flex;
-    justify-content: flex-start;
+    top: 0;
 }
 
-#modal-cancel_state2 > div img{
+.avaliation-img {
     width: 200px;
-    margin: -20px 60px 0 -10px
+    margin: -20px 50px 0 -10px
 }
 
-#modal-cancel_state2 > div label{
-    font-size: 20px;
+.popUp_flex>div {
+    width: 100%;
+}
+
+#popUp-cancel_state2>div label,
+#popUp-cancel_state3>div label {
+    font-size: 24px;
     font-weight: bold;
-    color: white;
 }
 
-#modal-cancel_state2 div > button::after {
+.rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    width: 15%;
+    list-style: none;
+}
+
+.rating li{
+    width: 50px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.rating img {
+    width: 30px;
+}
+
+#popUp-cancel_state2 div>button::after {
     margin-top: -30px;
 }
 
-
-
-#become-advertiser_section2 > div{
-    position: relative;
-    padding-top: 181px;
-    padding-bottom: 105px;
-    justify-content: space-between;
+#popUp-cancel_state2,
+#popUp-cancel_state3 {
+    display: none;
 }

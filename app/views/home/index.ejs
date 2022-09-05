@@ -26,18 +26,24 @@
                     <li class="option_office checked">Espaço adaptado</li>
                     <li class="option_office">Espaço corporativo</li>
                 </ul>
-                    <div class="container_search_input">
-                        <span id="search_txt">Busque locais para trabalho</span>
-                        <div id='container_informations_find_coworking'>
+                <div class="container_search_input">
+                    <span id="search_txt">Pesquise locais para trabalhar</span>
+                    <div id='container_informations_find_coworking'>
+                        <div>
                             <input id="localization" type="text" placeholder="Localização:">
+                            <div class="popUp_input"></div>
+                        </div>
+                        <div>
                             <input type="date" id="check_in">
+                            <div class="popUp_input"></div>
+                        </div>
                         </div>
                         <a href="#">
                             <div>
                                 <img src="images/default/search.svg" alt="pesquisa">
                             </div>
                         </a>  
-                    </div>
+                </div>
             </div>
 
             <div id="menu">
@@ -45,10 +51,10 @@
                         <img src="images/default/user.svg" alt="usuário">
                         <img src="images/default/menu_hamburguer.svg" alt="menu">
                 </div>
-                <div class="menu_open">
+               <div class="menu_open">
                     <div>
-                        <img src="images/default/perfil.svg" alt="foto de perfil">
-                        <h3>Luana Almeida <span>Coworker</span></h3>
+                        <img src="images/default/perfil.png" alt="foto de perfil">
+                       <h3>Usuário <span>Cliente</span></h3>
                     </div>
                     <div>
                         <nav>
@@ -58,19 +64,16 @@
                                     Login
                                 </li>
                                 <li class="popUp-login-signUp">
-                                    <img src="images/default/sign_up.png" alt="favoritos">
+                                    <img src="images/default/sign_up.png" alt="cadastre-se">
                                     Cadastre-se
                                 </li>
-                                <li>
-                                    <img src="images/default/favorite.png" alt="suporte">
-                                    Favoritos
-                                </li>
+                                
                             </ul>
                         </nav>
                     </div>
                     <div>
-                        <img src="images/default/question.png" alt="sair da conta">
-                        Help & Support
+                        <a href="/central-de-ajuda"><img src="images/default/question.png" alt="sair da conta">
+                       Central de ajuda</a>
                     </div>
                 </div>
             </div>
@@ -163,8 +166,8 @@
 
                 <div>
                     <div class="home_section1_call_action">
-                        <p>Quero anunciar facilmente um espaço na plataforma</p>
-                        <button>Anuncie</button>
+                        <p>Quero anunciar facilmente um espaço na plataforma</p></a>
+                        <a href="/torne-se-um-anunciante"><button>Anuncie</button></a>
                     </div>
 
                     <img src="images/home/client.png" alt="Cliente utilizando o serviço">
@@ -382,7 +385,7 @@
                 <img src="images/home/host.png" alt="anfitrião">
 
                 <div>
-                    <h3>Esclareça suas dúvidas <br>conosco ou com outros anfitriões</h3>
+                    <h3>Esclareça suas dúvidas <br> conosco</h3>
                     <p>Tire instantaneamente suas dúvidas através do nosso canal de atendimento no WhatsApp</p>
                    <a href="#"><button>Entrar em contato</button></a>
                 </div>
@@ -441,8 +444,6 @@
             </div>
 
         </div>
-
-        
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

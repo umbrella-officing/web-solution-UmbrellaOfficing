@@ -14,11 +14,9 @@ optionsList.forEach(o => {
   });
 });
 
-
-
 $(document).ready(function () {
-    $("#cpf").mask("000.000.000-00");
-    $("#rg").mask("999.999.999-W", {
+    $("#cpf_date").mask("000.000.000-00");
+    $("#rg_date").mask("999.999.999-W", {
 
         translation: {
 
@@ -32,9 +30,9 @@ $(document).ready(function () {
 
         reverse: true
     });
-    $("#phone").mask("(00) 0000-0000");
-    $("#cell").mask("(00) 0000-00009");
-    $("#cell").blur(function (event) {
+    $("#phone_date").mask("(00) 0000-0000");
+    $("#cell_date").mask("(00) 0000-00009");
+    $("#cell_date").blur(function (event) {
 
         if ($(this).val().length == 15) {
 
@@ -47,6 +45,5 @@ $(document).ready(function () {
         }
 
     })
-    $("#cep").mask("00.000-000");
-    $("#cnpj").mask("00.000.000/0000-00");
+    $("#cep_date").mask("00.000-000");
 });

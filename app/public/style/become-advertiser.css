@@ -1,3 +1,244 @@
+header{
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    position: absolute;
+}
+
+header a img {
+    width: 130px;
+    height: 60px;
+}
+
+header a {
+    background-color: white;
+    border-radius: 45px;
+    padding: 14px;
+}
 
 
-  
+
+#become-advertiser_section2 > div{
+    justify-content: space-between;
+
+
+}
+
+#become-advertiser_section2 > div > :first-child{
+    flex-direction: column;
+    max-width: 450px;
+}
+
+#become-advertiser_section2 > div > div > h2{
+    font-weight: 800;
+    font-size: 28px;
+}
+
+#become-advertiser_section2 > div > div > p{
+    font-size: 22px;
+    font-weight: 500;
+    margin: 25px 0 35px 0;
+}
+
+
+.container_search-localization {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--gray-border);
+    width: 440px;
+    position: relative;
+    border-radius: 38px;
+    height: 38px;
+    transform: initial;
+    transition: 250ms ease;
+}
+
+#search-localization_txt {
+    width: inherit;
+    background: inherit;
+    border: none;
+    border-radius: inherit;
+    font-family: var(--font-primary);
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    outline: none;
+    padding-left: 20px;
+}
+
+.container_search-localization div {
+    display: flex;
+    padding: 9px 12px;
+    background-color: var(--scale-2-purple);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+iframe{
+    border: 1px solid;
+    border-radius: 7px;
+}
+
+#become-advertiser_section3{
+    position: relative;
+    border-right: none;
+}
+
+#bg_sec3{
+    background-color: var(--scale-3-blue);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 48%;
+    height: 100%;
+}
+
+#become-advertiser_section3 > div > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#become-advertiser_section3 > div > :nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 0;
+}
+
+#become-advertiser_section3 > div > div > h2{
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 700;
+    max-width: 340px;
+}
+
+#section3-slide{
+    position: relative;
+    width: 500px;
+    right: 0;
+}
+
+#adaptable-icon{
+    width: 33px;
+    height: 33px;
+}
+
+#section3-slide > p{
+    font-weight: 700;
+    font-size: 18px;
+    max-width: 225px;
+    color: var(--scale-3-blue);
+}
+
+.check{
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+
+
+
+/* #check1{
+    left: 0;
+    top: 4px;
+}
+#check2{
+    left: 0;
+    margin-top: 50px;
+}  */
+
+#section3-slide > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 110px;
+    margin-top: 15px;
+}
+
+#section3-slide > ul > div{
+    display: flex;
+}
+
+#section3-slide > ul > li{
+    max-width: 235px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 18px;
+}
+
+#become-advertiser_section4{
+    padding: 100px 0;
+}
+
+#become-advertiser_section4 > div{
+    display: flex;
+    justify-content: center;
+}
+
+#become-advertiser_section4 > div > div{
+    width: 960px;
+    height: 515px; 
+    background-image: url("../images/become-advertiser/community-img.jpg");
+    background-size: cover;
+    background-position: 0;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+#become-advertiser_section4 > div > div > h2{
+    text-align: center;
+    max-width: 750px;
+    font-size: 40px;
+    color: var(--white);
+    /* color: var(--white); */
+        
+}
+
+#our{
+    font-weight: 800;
+    color: var(--scale-3-blue);
+}
+
+#today{
+    font-weight: bolder;
+}
+
+#become-advertiser_section4 > div > div {
+    border-radius: 40px;
+    border: 0;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#button_section4{
+    width: 275px;
+    height: 55px;
+    background-color: var(--scale-2-purple);
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    border: none;
+    margin-top: 30px;
+}
+
+#contrast{
+    background-color: rgba(0,0,0, 0.3);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    z-index: -1;
+}

@@ -10,7 +10,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: calc(50% - 290px);
+    width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
 }
 
@@ -100,7 +100,7 @@
 .my-profile-public_section1-right {
     display: flex;
     justify-content: space-between;
-    width: 784px;
+    width: 744px;
 }
 
 .my-profile-public_section1-right>div:nth-child(2) {
