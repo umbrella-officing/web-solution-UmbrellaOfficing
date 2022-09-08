@@ -1,12 +1,11 @@
-
 body{
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
-    background-repeat: no-repeat;
 }
 
 #photos_section{
     padding-top: 105px;
     height: calc(100vh - 105px);
+    max-height: 1050px;
 }
 
 #photos_section > div{
@@ -21,7 +20,10 @@ body{
 
 #space-photos{
     width: calc(50% - 40px);
-    height: calc(100vh - 205px)
+    height: 500px;
+    padding-top: 205px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #space-photos > h2{
@@ -31,7 +33,7 @@ body{
 }
 
 #slideshow{
-    width: 540px;
+    width: 500px;
     height: 303px;
     border: 1px solid var(--gray-border);
     border-radius: 20px;

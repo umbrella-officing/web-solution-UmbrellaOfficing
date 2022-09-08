@@ -27,7 +27,11 @@ ul{
 }
 
 .margin_filter{
-    padding:0 18px;
+    padding: 0 16px;
+}
+
+#filter > div:first-child > h3{
+  margin: auto 0;
 }
 
 .gap{
@@ -36,8 +40,8 @@ ul{
 
 #filter > div:first-child{
     height: 27px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     margin-bottom: 20px;
     background: #748fe0;
     border-radius: 10px 10px 0 0;
