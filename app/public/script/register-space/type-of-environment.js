@@ -1,24 +1,24 @@
-// function hint(x){
-//     if (x === 1){
-//         document.getElementById("hint-adaptable").style.display="flex";
-//     }
-//     else if (x === 2){
-//         document.getElementById("hint-corporate").style.display="flex";
-//     }
-//     else if (x === 3){
-//         document.getElementById("hint-adaptable").style.display="none";
-//     }
-//     else{
-//         document.getElementById("hint-corporate").style.display="none";
-//     }
+ function hint(x){
+     if (x === 1){
+         document.getElementById("hint-adaptable").style.display="flex";
+     }
+     else if (x === 2){
+         document.getElementById("hint-corporate").style.display="flex";
+     }
+     else if (x === 3){
+         document.getElementById("hint-adaptable").style.display="none";
+     }
+     else{
+         document.getElementById("hint-corporate").style.display="none";
+     }
+ }
+
+
+// function openHint(){
+//     const button = document.query.SelectorAll(".hint")
+    
 // }
 
-
-function openHint(){
-    const button = document.query.SelectorAll(".hint")
-    
-}
-
-function closeHint(){
-    const hintIcon = document.()
-}
+// function closeHint(){
+//     const hintIcon = document.()
+// }

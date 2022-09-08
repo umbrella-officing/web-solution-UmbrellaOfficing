@@ -21,7 +21,7 @@
                     <li class="option_office">Espaço corporativo</li>
                 </ul>
                     <div class="container_search_input">
-                        <span id="search_txt">Busque locais para trabalho</span>
+                        <span id="search_txt">Pesquise locais para trabalhar</span>
                         <div id='container_informations_find_coworking'>
                             <input id="localization" type="text" placeholder="Localização:">
                             <input type="date" id="check_in">
@@ -41,8 +41,8 @@
                 </div>
                 <div class="menu_open">
                     <div>
-                        <img src="images/default/perfil.svg" alt="foto de perfil">
-                        <h3>Luana Almeida <span>Coworker</span></h3>
+                        <img src="images/default/perfil.png" alt="foto de perfil">
+                       <h3>Usuário <span>Cliente</span></h3>
                     </div>
                     <div>
                         <nav>
@@ -55,16 +55,13 @@
                                     <img src="images/default/sign_up.png" alt="favoritos">
                                     Cadastre-se
                                 </li>
-                                <li>
-                                    <img src="images/default/favorite.png" alt="suporte">
-                                    Favoritos
-                                </li>
+                                
                             </ul>
                         </nav>
                     </div>
                     <div>
-                        <img src="images/default/question.png" alt="sair da conta">
-                        Help & Support
+                        <a href="/central-de-ajuda"></a><img src="images/default/question.png" alt="sair da conta">
+                       Central de ajuda</a>
                     </div>
                 </div>
             </div>

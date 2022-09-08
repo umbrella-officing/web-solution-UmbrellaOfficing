@@ -1,0 +1,71 @@
+#ads-control_section1 {
+    width: 744px;
+    flex-direction: column;
+}
+
+#ads-control_section1 h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#ads-control_section1 ul li {
+    list-style: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgb(128 128 128 / 35%);
+    width: 744px;
+    box-sizing: border-box;
+}
+
+#ads-control_section1 ul li {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 290px 300px 100px;
+    grid-column-gap: 10px;
+}
+
+#ads-control_section1 ul li div h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#ads-control_section1 ul li div h4 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#ads-control_section1 ul li div p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#ads-control_section1 ul li div p strong {
+    font-weight: 500;
+}
+
+#ads-control_section1 ul li div:nth-child(3) button {
+    width: 100px;
+    height: 28px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#ads-control_section1 ul li div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+}
+
+#view-photos {
+    background-color: var(--scale-13-blue);
+    margin-right: 10px;
+}
+
+#delete-user {
+    background-color: var(--scale-12-red);
+}

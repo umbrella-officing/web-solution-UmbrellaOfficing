@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +8,52 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
-    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/search-spaces/search.css">
 </head>
+
 <body>
     <header id="header" class="container_margin_default">
         <div class="default_margin">
             <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
+            <div id="container_search">
+                <ul id="type_office">
+                    <li class="option_office checked">Espaço adaptado</li>
+                    <li class="option_office">Espaço corporativo</li>
+                </ul>
+                <div class="container_search_input">
+                    <span id="search_txt">Pesquise locais para trabalhar</span>
+                    <div id='container_informations_find_coworking'>
+                        <input id="localization" type="text" placeholder="Localização:">
+                        <input type="date" id="check_in">
+                        </div>
+                        <a href="#">
+                            <div>
+                                <img src="images/default/search.svg" alt="pesquisa">
+                            </div>
+                        </a>  
+                </div>
+            </div>
+
             <div id="menu">
                 <div id='menu_sign-in-up'>
                         <img src="images/default/user.svg" alt="usuário">
                         <img src="images/default/menu_hamburguer.svg" alt="menu">
                 </div>
-                <div class="menu_open">
+               <div class="menu_open">
                     <div>
-                        <img src="images/default/perfil.svg" alt="foto de perfil">
-                        <h3>Luana Almeida <span>Coworker</span></h3>
+                        <img src="images/default/perfil.png" alt="foto de perfil">
+                       <h3>Usuário <span>Cliente</span></h3>
                     </div>
                     <div>
                         <nav>
@@ -39,19 +63,16 @@
                                     Login
                                 </li>
                                 <li class="popUp-login-signUp">
-                                    <img src="images/default/sign_up.png" alt="favoritos">
+                                    <img src="images/default/sign_up.png" alt="cadastre-se">
                                     Cadastre-se
                                 </li>
-                                <li>
-                                    <img src="images/default/favorite.png" alt="suporte">
-                                    Favoritos
-                                </li>
+                                
                             </ul>
                         </nav>
                     </div>
                     <div>
-                        <img src="images/default/question.png" alt="sair da conta">
-                        Help & Support
+                        <a href="/central-de-ajuda"></a><img src="images/default/question.png" alt="sair da conta">
+                       Central de ajuda</a>
                     </div>
                 </div>
             </div>
@@ -126,7 +147,7 @@
 
                         <button type="submit">CADASTRAR</button>
                     </form>
-            </div>
+            </div>        
             </div>
         </div>
     </header>
@@ -138,7 +159,7 @@
             <div class="default_margin">
                 <div id="search_section1_container">
                     <div id="box"></div>
-                    <div id="filter"> 
+                    <div id="filter">
                         <div class="margin_filter">
                             <h3>Filtros</h3>
                         </div>
@@ -148,34 +169,38 @@
                                 <div>
                                     <label for="min" class="price-input">
                                         Mínimo
-                                        <input type="number" id="min" class="input-min" value="25" onkeypress="return event.charCode >= 48" min="1">
+                                        <input type="number" id="min" class="input-min" value="10"
+                                            onkeypress="return event.charCode >= 48" min="1">
                                     </label>
                                     <label for="max" class="price-input">
                                         Máximo
-                                        <input type="number" id="max" class="input-max" value="450" onkeypress="return event.charCode >= 48" min="1">
+                                        <input type="number" id="max" class="input-max" value="50"
+                                            onkeypress="return event.charCode >= 48" min="1">
                                     </label>
-                                </div>    
-                                  <div class="slider">
+                                </div>
+                                <div class="slider">
                                     <div class="progress"></div>
-                                  </div>
-                                  <div class="range-input">
-                                    <input type="range" class="range-min" min="0" max="1000" value="25">
-                                    <input type="range" class="range-max" min="0" max="1000" value="175">
-                                  </div>
+                                </div>
+                                <div class="range-input">
+                                    <input type="range" class="range-min" min="0" max="100" value="10">
+                                    <input type="range" class="range-max" min="0" max="100" value="50">
+                                </div>
                             </div>
                             <div id="amount-people" class="gap">
                                 <h5>N° de pessoas</h5>
                                 <div class="specification">
                                     <button>
-                                        <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
-                                    </button> 
+                                        <img class="subtract" src="images/search-spaces/search/subtract.png"
+                                            alt="subtrair">
+                                    </button>
                                     <input type="number" min="0" value="4" name="people" disabled>
-                                     <button>
-                                        <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
+                                    <button>
+                                        <img class="addition" src="images//search-spaces/search/button-add.png"
+                                            name="addition" alt="adicionar">
                                     </button>
                                 </div>
                             </div>
-                        <div>
+                        <div id="more_specifications">
                             <h5>Especificações</h5>
                             <ul>
                                 <li class="specifications">
@@ -183,15 +208,28 @@
                                         <img src="images/search-spaces/search/wi-fi.svg" alt="wi-fi">
                                     </div>
                                         <label for="wi-fi">Wi-fi</label>
-                                        <div class="specification">
-                                            <button>
-                                                <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
-                                            </button> 
-                                            <input type="number" min="0" value="4" name="people" disabled>
-                                             <button>
-                                                <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
-                                            </button>
-                                        </div>
+                                            <div class="select-box">
+                                                <div class="options-container">
+                                        
+                                                <div class="option">
+                                                    <input type="radio" class="radio" id="art" name="category" />
+                                                    <label for="art">Baixa qualidade</label>
+                                                </div>
+                                        
+                                                <div class="option">
+                                                    <input type="radio" class="radio" id="music" name="category" />
+                                                    <label for="music">Média qualidade</label>
+                                                </div>
+                                        
+                                                <div class="option">
+                                                    <input type="radio" class="radio" id="travel" name="category" />
+                                                    <label for="travel">Alta qualidade</label>
+                                                </div>                                               
+                                                </div>
+                                                <div class="selected">
+                                                Sinal do wi-fi
+                                                </div>
+                                            </div>
                                 </li>
                                 <li class="specifications">
                                     <div>
@@ -224,25 +262,197 @@
                                         </div>
                                 </li>
                             </ul>
-                            <button>Mais...</button>
+                            <button id="openList">Mais...</button>
+                            <div id="additional-specifications">
+                                <div>
+                                    <div>
+                                        <h2>Especificações</h2>
+                                        <ul id="list-add-specifications"></ul>
+                                        <button id="close_popUp">Concluir</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         </div>
                             <div class="margin_filter gap">
-                                <ul class="avaliation">
-                                    <li class="star-icon active" data-avaliacao="1"></li>
-                                    <li class="star-icon" data-avaliacao="2"></li>
-                                    <li class="star-icon" data-avaliacao="3"></li>
-                                    <li class="star-icon" data-avaliacao="4"></li>
-                                    <li class="star-icon" data-avaliacao="5"></li>
+                                <h5>Classificação</h5>
+                                <ul class="rating">
+                                    <li><img class="star" src="images/search-spaces/search/star.png" alt="estrela"></li>
+                                    <li><img class="star" src="images/search-spaces/search/star.png" alt="estrela"></li>
+                                    <li><img class="star" src="images/search-spaces/search/star.png" alt="estrela"></li>
+                                    <li><img class="star" src="images/search-spaces/search/star.png" alt="estrela"></li>
+                                    <li><img class="star" src="images/search-spaces/search/star.png" alt="estrela"></li>
                                   </ul>
                             </div>
                             <div class="margin_filter gap">
-                                <ul>
+                                <ul id="adapted-environments">
                                     <h5>Ambientes Adaptados</h5>
-                                    <li>Casas</li>
-                                    <li>Apartamentos</li>
-                                    <li>Unidades à parte</li>
+                                    <li>
+                                        <div class="select-box">
+                                            <div class="options-container">
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="automobiles" name="category"
+                                                />
+                                                <label for="automobiles">Automobiles</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="film" name="category" />
+                                                <label for="film">Film & Animation</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="science" name="category" />
+                                                <label for="science">Science & Technology</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="art" name="category" />
+                                                <label for="art">Art</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="music" name="category" />
+                                                <label for="music">Music</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="travel" name="category" />
+                                                <label for="travel">Travel & Events</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="sports" name="category" />
+                                                <label for="sports">Sports</label>
+                                            </div>
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="news" name="category" />
+                                                <label for="news">News & Politics</label>
+                                            </div>
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="tutorials" name="category" />
+                                                <label for="tutorials">Tutorials</label>
+                                            </div>
+                                            </div>
+                                            <div class="selected">
+                                            Casas
+                                            </div>
+                                        </div>
+                                    </li>      
+                                    <li>
+                                        <div class="select-box">
+                                            <div class="options-container">
+                                            <div class="option">
+                                                <input
+                                                type="radio"
+                                                class="radio"
+                                                id="automobiles"
+                                                name="category"
+                                                />
+                                                <label for="automobiles">Automobiles</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="film" name="category" />
+                                                <label for="film">Film & Animation</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="science" name="category" />
+                                                <label for="science">Science & Technology</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="art" name="category" />
+                                                <label for="art">Art</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="music" name="category" />
+                                                <label for="music">Music</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="travel" name="category" />
+                                                <label for="travel">Travel & Events</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="sports" name="category" />
+                                                <label for="sports">Sports</label>
+                                            </div>
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="news" name="category" />
+                                                <label for="news">News & Politics</label>
+                                            </div>
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="tutorials" name="category" />
+                                                <label for="tutorials">Tutorials</label>
+                                            </div>
+                                            </div>
+                                            <div class="selected">
+                                                Apartamentos
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="select-box">
+                                            <div class="options-container">
+                                            <div class="option">
+                                                <input
+                                                type="radio"
+                                                class="radio"
+                                                id="automobiles"
+                                                name="category"
+                                                />
+                                                <label for="automobiles">Automobiles</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="film" name="category" />
+                                                <label for="film">Film & Animation</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="science" name="category" />
+                                                <label for="science">Science & Technology</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="art" name="category" />
+                                                <label for="art">Art</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="music" name="category" />
+                                                <label for="music">Music</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="travel" name="category" />
+                                                <label for="travel">Travel & Events</label>
+                                            </div>
+                                    
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="sports" name="category" />
+                                                <label for="sports">Sports</label>
+                                            </div>
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="news" name="category" />
+                                                <label for="news">News & Politics</label>
+                                            </div>
+                                            <div class="option">
+                                                <input type="radio" class="radio" id="tutorials" name="category" />
+                                                <label for="tutorials">Tutorials</label>
+                                            </div>
+                                            </div>
+                                            <div class="selected">
+                                                Unidades à parte
+                                            </div>
+                                        </div>
+                                    </li>                             
                                 </ul>
+                                        </div>
                                
                                 <ul>
                                     <h5>Ambientes corporativos</h5>
@@ -260,52 +470,82 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                </div>
+                <div id="spaces-avaliable">
+                    <ul>
+                        <li>
+                            <div class="rooms-available-container">
+                                <div>
+                                    <img src="/images/my-account/reservations/officer_aqua.png"
+                                        alt="ilustração do local">
+                                </div>
+                                <div class="officing-description">
+                                    <span id="t">
+                                        Escritório compartilhado
+                                    </span>
+                                    <div id="description">
+                                        <h4>Sala 01</h4>
+                                        <span>6-8 pessoas | 2 Salas | 1 banheiro</span>
+                                        <span id="d">Descrição: Com ar condicionado e caixa de som. Ideal para equipes pequenas...</span>
+                                    </div>
+                                    <div id="price-space">
+                                        <span><strong>R$:15/hora</strong></span>
+                                        <div>
+                                            <span><img src="images/search-spaces/officing-description/background-star.png" alt="estrela">4.8
+                                                | <img src="images/search-spaces/officing-description/baloes-de-fala.png" alt="chat">12
+                                                </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>        
+                </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
- <footer class="container_margin_default">
+    <footer class="container_margin_default">
 
         <div class="default_margin">
             <div id="margin2">
-            <div id="logo">
-                <img src="images/default/logo_footer.svg" alt="logo">
-                <h4>Escritorizando <span><br>espaços </span></h4>
-                <span>Umbrella Officing&copy 2022</span>
+                <div id="logo">
+                    <img src="images/default/logo_footer.svg" alt="logo">
+                    <h4>Escritorizando <span><br>espaços </span></h4>
+                    <span>Umbrella Officing&copy 2022</span>
+                </div>
+
+                <ul>
+                    <h5>Junte-se a nós</h5>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Cadastre-se</a></li>
+                    <li><a href="#">Sua conta</a></li>
+                    <li><a href="#">Faça sua reserva</a></li>
+                    <li><a href="#">Anuncie seu espaço</a></li>
+                </ul>
+
+                <ul>
+                    <h5>Atendimento</h5>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Fórum</a></li>
+                    <li><a href="#">Central de ajuda</a></li>
+                </ul>
+
+                <ul>
+                    <h5>Sobre nós</h5>
+                    <li><a href="#">Quem somos?</a></li>
+                    <li><a href="#">Missão, valores e visão</a></li>
+                    <li><a href="#">Por que Umbrella Officing</a></li>
+                    <li><a href="#">Desenvolvedores</a></li>
+                </ul>
+
             </div>
 
-            <ul>
-                <h5>Junte-se a nós</h5>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Cadastre-se</a></li>
-                <li><a href="#">Sua conta</a></li>
-                <li><a href="#">Faça sua reserva</a></li>
-                <li><a href="#">Anuncie seu espaço</a></li>
-            </ul>
-
-            <ul>
-                <h5>Atendimento</h5>
-                <li><a href="#">Chat</a></li>
-                <li><a href="#">Fórum</a></li>
-                <li><a href="#">Central de ajuda</a></li>
-            </ul>
-
-            <ul>
-                <h5>Sobre nós</h5>
-                <li><a href="#">Quem somos?</a></li>
-                <li><a href="#">Missão, valores e visão</a></li>
-                <li><a href="#">Por que Umbrella Officing</a></li>
-                <li><a href="#">Desenvolvedores</a></li>
-            </ul>
-
-            </div>
-            
             <div id="bottom_footer">
                 <div>
-                    <div id="network_div"> 
+                    <div id="network_div">
                         <img src="images/default/icon_intagram.svg" alt="ícone do instagram">
                         <img src="images/default/icon_facebook.svg" alt="ícone do facebook">
                     </div>
@@ -313,15 +553,19 @@
                     <div id="scroll_up">
                         <img src="images/default/arrow_up.svg" alt="ícone de flecha">
                     </div>
+                </div>
+
             </div>
 
-        </div>
 
-        
     </footer>
 
+    <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
     <script src="script/default/header/header.js"></script>
     <script src="script/search-spaces/search/range.js"></script>
-    <script src="script/search-spaces/search/specification-values.js"></script>
+    <script src="script/search-spaces/search/specification-value.js"></script>
+    <script src="script/search-spaces/search/rating.js"></script>
+    <script src="script/search-spaces/search/select-options.js"></script>
 </body>
+
 </html>

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style/default/default.css">
+    <link rel="stylesheet" href="style/my-account/my-account.css">
     <link rel="stylesheet" href="style/my-account/notifications.css">
 </head>
 
@@ -18,60 +19,112 @@
     <header id="header" class="container_margin_default">
         <div class="default_margin">
             <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
-            <div>
-                <ul id="type_office">
-                    <li class="option_office checked">Espaço adaptado</li>
-                    <li class="option_office">Espaço corporativo</li>
-                </ul>
-                <div class="container_search">
-                    <span id="search_txt">Busque locais para trabalho</span>
-                    <div id='container_informations_find_coworking'>
-                        <input id="localization" type="text" placeholder="Localização:">
-                        <input type="date" id="check_in">
+            <div id="container_menu">
+                <a href="/tipo-de-ambiente"><button id="advertiser">Quero anunciar</button></a>
+                <div id="menu">
+                    <div id='menu_sign-in-up'>
+                        <img src="images/default/user.svg" alt="usuário">
+                        <img src="images/default/menu_hamburguer.svg" alt="menu">
                     </div>
-                    <a href="#">
-                        <div>
-                            <img src="images/default/search.svg" alt="pesquisa">
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div id="menu">
-                <div id='menu_sign-in-up'>
-                    <img src="images/default/user.svg" alt="usuário">
-                    <img src="images/default/menu_hamburguer.svg" alt="menu">
                 </div>
                 <div class="menu_open">
                     <div>
-                        <img src="images/default/perfil.svg" alt="foto de perfil">
-                        <h3>Luana Almeida <span>Coworker</span></h3>
+                        <img src="images/default/perfil.png" alt="foto de perfil">
+                        <h3>Usuário <span>Cliente</span></h3>
                     </div>
                     <div>
                         <nav>
                             <ul>
-                                <li>
+                                <li class="popUp-login-signUp">
                                     <img src="images/default/my-perfil.png" alt="meu perfil">
-                                    My profile
+                                    Login
                                 </li>
-                                <li>
-                                    <img src="images/default/favorite.png" alt="favoritos">
-                                    Favoritos
+                                <li class="popUp-login-signUp">
+                                    <img src="images/default/sign_up.png" alt="cadastre-se">
+                                    Cadastre-se
                                 </li>
-                                <li>
-                                    <img src="images/default/question.png" alt="suporte">
-                                    Help & Support
-                                </li>
+
                             </ul>
                         </nav>
                     </div>
                     <div>
-                        <img src="images/default/log-out.png" alt="sair da conta">
-                        Logout
+                        <a href="/central-de-ajuda"></a><img src="images/default/question.png" alt="sair da conta">
+                        Central de ajuda</a>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div id="container_popUp_login-signUp">
+                    <div class="popUp">
+                        <img class="close_popup" src="images/default/close_icon.svg" alt="close">
+                        <h2>Umbrella Officing</h2>
+                        <h3>Seja bem-vindo</h3>
+                        <div>
+                            <span>Faça seu login para continuar</span>
+                            <form>
+                                <label for="cpf-email">
+                                    CPF ou E-mail :
+                                    <input type="text" id="cpf-email">
+                                </label>
+
+                                <label for="password-login">
+                                    Senha:
+                                    <input type="password" id="password-login">
+                                </label>
+
+                                <div>
+                                    <a href="#">Esqueceu a senha?</a>
+                                </div>
+
+                                <button type="submit">LOGIN</button>
+                            </form>
+                            <div id="alternatives">
+                                <div><span>OR</span></div>
+                                <div>
+                                    <span>Faça login com suas Redes Sociais</span>
+                                    <img src="images/default/icon-google.png" alt="ícone do google">
+                                    <img src="images/default/icon-facebok.svg" alt="ícone do facebbok">
+                                    <img src="images/default/icon-apple.png" alt="ícone do facebbok">
+                                    <span>Ainda não possui conta? <a href="#">Cadastre-se</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popUp">
+                        <img class="close_popup" src="images/default/close_icon.svg" alt="close">
+                        <h2>Umbrella Officing</h2>
+                        <h3>Seja bem-vindo</h3>
+                        <div>
+                            <span>Cadastre-se e faça parte da nossa comunidade</span>
+                            <form>
+                                <label for="name">
+                                    Nome:
+                                    <input type="text" id="name">
+                                </label>
+
+                                <label for="middlename">
+                                    Sobrenome:
+                                    <input type="text" id="middlename">
+                                </label>
+
+                                <label for="cpf">
+                                    CPF:
+                                    <input type="number" id="cpf">
+                                </label>
+
+                                <label for="birth_date">
+                                    Data de nascimento
+                                    <input type="date" id="birth_date">
+                                </label>
+
+                                <label for="phone">
+                                    Telefone:
+                                    <input type="number" id="phone">
+                                </label>
+
+                                <button type="submit">CADASTRAR</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
     </header>
 
     <body>
@@ -81,7 +134,7 @@
 
                 <h1>Notificações</h1>
 
-                <!-- <nav>
+                <nav>
                     <ul>
                         <a href="javascript:notificacoes(1);" autofocus>
                             <li id="li-lastN">Últimas notificações</li>
@@ -94,31 +147,56 @@
                         </a>
                     </ul>
                 </nav>
-                <hr> -->
-
-                <nav>
-                    <ul>
-                        <li class="options-notifications option-active">Últimas notificações</li>
-                        <li class="options-notifications">Não lidas</li>
-                        <li class="options-notifications">Lidas</li>
-                    </ul>
-                </nav>
+                <hr>
 
                 <article id="last-notifications">
-                    <select name="orderBy" id="orderBy_select">
-                        <option value="">Ordenar por</option>
-                        <option value="Mais recentes">Mais recentes</option>
-                        <option value="Mais antigas">Mais antigas</option>
-                    </select>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="most-recents" name="category" />
+                                <label for="most-recents">Mais recentes</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="oldest" name="category" />
+                                <label for="oldest">Mais antigas</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                                <label for="alphabetical-order">De A-Z</label>
+                            </div>
+                        </div>
+
+                        <div class="selected">
+                            Ordernar por
+                        </div>
+                    </div>
                 </article>
 
                 <article id="unread-notifications">
-                    <select name="orderBy" id="orderBy_select">
-                        <option value="">Ordenar por</option>
-                        <option value="Mais recentes">Mais recentes</option>
-                        <option value="Mais antigas">Mais antigas</option>
-                    </select>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="most-recents" name="category" />
+                                <label for="most-recents">Mais recentes</label>
+                            </div>
 
+                            <div class="option">
+                                <input type="radio" class="radio" id="oldest" name="category" />
+                                <label for="oldest">Mais antigas</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                                <label for="alphabetical-order">De A-Z</label>
+                            </div>
+                        </div>
+
+                        <div class="selected">
+                            Ordernar por
+                        </div>
+                    </div>
                     <div class="notification">
                         <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
 
@@ -145,11 +223,28 @@
                 </article>
 
                 <article id="read-notifications">
-                    <select name="orderBy" id="orderBy_select">
-                        <option value="">Ordenar por</option>
-                        <option value="Mais recentes">Mais recentes</option>
-                        <option value="Mais antigas">Mais antigas</option>
-                    </select>
+                    <div class="select-box">
+                        <div class="options-container">
+                            <div class="option">
+                                <input type="radio" class="radio" id="most-recents" name="category" />
+                                <label for="most-recents">Mais recentes</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="oldest" name="category" />
+                                <label for="oldest">Mais antigas</label>
+                            </div>
+
+                            <div class="option">
+                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                                <label for="alphabetical-order">De A-Z</label>
+                            </div>
+                        </div>
+
+                        <div class="selected">
+                            Ordernar por
+                        </div>
+                    </div>
 
                     <div class="notification">
                         <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
@@ -203,11 +298,62 @@
             </div>
             </div>
         </section>
+
+        <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
         <script src="script/default/header/header.js"></script>
         <script src="script/my-account/notifications.js"></script>
 
-    </body>
+        </main>
 
-</body>
+        <footer class="container_margin_default">
+
+            <div class="default_margin">
+                <div id="margin2">
+                    <div id="logo">
+                        <img src="images/default/logo_footer.svg" alt="logo">
+                        <h4>Escritorizando <span><br>espaços </span></h4>
+                        <span>Umbrella Officing&copy 2022</span>
+                    </div>
+
+                    <ul>
+                        <h5>Junte-se a nós</h5>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">Cadastre-se</a></li>
+                        <li><a href="#">Sua conta</a></li>
+                        <li><a href="#">Faça sua reserva</a></li>
+                        <li><a href="#">Anuncie seu espaço</a></li>
+                    </ul>
+
+                    <ul>
+                        <h5>Atendimento</h5>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">Fórum</a></li>
+                        <li><a href="#">Central de ajuda</a></li>
+                    </ul>
+
+                    <ul>
+                        <h5>Sobre nós</h5>
+                        <li><a href="#">Quem somos?</a></li>
+                        <li><a href="#">Missão, valores e visão</a></li>
+                        <li><a href="#">Por que Umbrella Officing</a></li>
+                        <li><a href="#">Desenvolvedores</a></li>
+                    </ul>
+
+                </div>
+                <div id="bottom_footer">
+                    <div>
+                        <div id="network_div">
+                            <img src="images/default/icon_intagram_footer.svg" alt="ícone do instagram">
+                            <img src="images/default/icon_facebook_footer.svg" alt="ícone do facebook">
+                        </div>
+
+                        <div id="scroll_up">
+                            <img src="images/default/arrow_up.svg" alt="ícone de flecha">
+                        </div>
+                    </div>
+
+                </div>
+        </footer>
+    </body>
 
 </html>
