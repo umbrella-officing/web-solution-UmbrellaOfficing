@@ -1,3 +1,4 @@
+/*Script para selecionar o sexo: feminino ou masculino*/
 const selected = document.querySelector(".selected");
 const optionsContainer = document.querySelector(".options-container");
 
@@ -14,6 +15,7 @@ optionsList.forEach(o => {
   });
 });
 
+/*Script Jquery adicionando as máscaras no formulário*/
 $(document).ready(function () {
     $("#cpf_date").mask("000.000.000-00");
     $("#rg_date").mask("999.999.999-W", {
