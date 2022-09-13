@@ -15,6 +15,18 @@ header a {
     padding: 14px;
 }
 
+#become-advertiser_section1 > div:first-child{
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 491px;
+    /* width: 100%; */
+}
+
+#become-advertiser_section1 > div > h1{
+    color: #fff;
+    font-size: 35px;
+    max-width: 475px;
+    font-weight: 600;
+}
 
 
 #become-advertiser_section2 > div{

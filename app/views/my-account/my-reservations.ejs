@@ -184,7 +184,7 @@
                                         <h3>R$ 7,90/h</h3>
 
                                         <div>
-                                            <button type="submit" id="visits">Próximas visitas</button>
+                                            <button type="submit" class="visits">Próximas visitas</button>
                                             <button type="submit" class="cancel">Cancelar reserva</button>
                                         </div>
                                     </div>
@@ -203,7 +203,7 @@
                                         <h3>R$ 7,90/h</h3>
 
                                         <div>
-                                            <button type="submit" id="visits">Próximas visitas</button>
+                                            <button type="submit" class="visits">Próximas visitas</button>
                                             <button type="submit" class="cancel">Cancelar reserva</button>
                                         </div>
                                     </div>
@@ -278,11 +278,45 @@
             </div>
         </div>
 
+        <div id="container_popUp_calendar">
+            <div class="popUp_calendar">
+                <div class="calendar-header">
+                    <span class="month-picker" id="month-picker">February</span>
+                    <div class="year-picker">
+                        <span class="year-change" id="prev-year">
+                            <i class="fa-solid fa-chevron-left chevron-left"></i>
+                        </span>
+                        <span id="year">2022</span>
+                        <span class="year-change" id="next-year">
+                            <i class="fa-solid fa-chevron-right chevron-right"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="calendar-body">
+                    <div class="calendar-week-day">
+                        <div>Dom</div>
+                        <div>Seg</div>
+                        <div>Ter</div>
+                        <div>Qua</div>
+                        <div>Qui</div>
+                        <div>Sex</div>
+                        <div>Sab</div>
+                    </div>
+                    <div class="calendar-days"></div>
+                </div>
+                <div class="month-list"></div>
+            </div>
+        </div>
+
         <div id="container_popUp_cancel">
             <div class="popUp_cancel">
                 <div>
                     <div id="popUp-cancel_state1">
-                        <label for="reason_cancellation">Diga o motivo pelo qual você deseja cancelar</label>
+                        <div>
+                            <label for="reason_cancellation">Diga o motivo pelo qual você deseja cancelar</label>
+                            <img id="close_popUp_cancel" src="images/default/close_icon.svg" alt="close">
+                        </div>
+                        
                         <textarea name="reason_cancellation" id="reason_cancellation" rows="4"
                             class="form-control"></textarea>
                         <div class="popUp_go">

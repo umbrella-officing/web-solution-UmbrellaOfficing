@@ -15,6 +15,7 @@
     color: var(--text-1-black);
 }
 
+/*Meu perfil: menu lateral*/
 #my-profile::before {
     content: "";
     position: absolute;
@@ -25,7 +26,6 @@
     background-color: var(--scale-9-blue);
 }
 
-/*Menu lateral*/
 #my-profile>div nav {
     position: relative;
 }
@@ -74,7 +74,7 @@
     margin: 0 10px 0 21px;
 }
 
-/*Conteúdo*/
+/*Meu perfil: conteúdo*/
 #my-profile_section1 {
     width: 744px;
 }
@@ -114,62 +114,28 @@
     margin: 10px 0 40px 0;
 }
 
-.my-profile_section1-form-flex {
+.form-flex {
     display: flex;
     justify-content: space-between;
 }
 
-.my-profile_section1-form-flex>div:nth-child(1) {
+.form-flex>div:nth-child(1) {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 35px;
 }
 
-.my-profile_section1-form-flex>div:nth-child(1) p {
+.form-flex>div:nth-child(1) p {
     font-size: 16px;
     font-weight: 400;
 }
 
-.my-profile_section1-form-flex>div:nth-child(1) h4 {
+.form-flex>div:nth-child(1) h4 {
     font-size: 16px;
     font-weight: 600;
     font-family: var(--font-primary);
     margin: 28px 0 14px 0;
 }
-
-/* .rating {
-    display: flex;
-}
-
-.rating input {
-    display: none;
-}
-
-.rating label {
-    display: block;
-    cursor: pointer;
-    margin-right: 15px;
-    width: 25px;
-}
-
-.rating-level:before {
-    content: "";
-    width: 35px;
-    height: 9px;
-    border-radius: 10px;
-    border: 2px solid var(--gray-border);
-    margin-right: 5px;
-    position: absolute;
-    display: block;
-    font-size: 25px;
-    background-color: white;
-    text-shadow: 0 2px 2px rgb(128 128 128 / 10%);
-    transition: .38s ease;
-}
-
-.checked_classification.rating-level::before{
-    background: var(--scale-2-purple);
-} */
 
 .rating {
     display: flex;
@@ -254,7 +220,7 @@
     margin-right: 10px;
 }
 
-.my-profile_section1-form-flex ~ div {
+.form-flex ~ div {
     display: flex;
     justify-content: flex-end;
 }

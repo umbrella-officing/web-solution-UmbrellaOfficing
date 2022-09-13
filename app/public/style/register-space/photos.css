@@ -1,153 +1,75 @@
-
-body{    
+body{
     background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
-    background-repeat: no-repeat;
 }
 
-main{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h2{
+    font-size: 18px;
+    color: var(--text-1-black);
 }
 
 #photos_section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 105px;
+    height: calc(100vh - 105px);
+    max-height: 1050px;
 }
 
 #photos_section > div{
     justify-content: space-between;
-    align-items: center;
 }
 
-#photos_section > div > div{
-    display: flex;
-}
-
-#photos_section > div > div > div h1{
+#photos_section > div > h1{
     font-size: 40px;
-    max-width: 310px;
-    color: var(--white);
-    margin-top: 30px;
+    color: white;
+    max-width: 420px;
 }
 
-#photos_section > div > div > form{
-    width: 506px;
-}
-
-#photos_section > div > div > form ul{
-    list-style: none;
-    width: 100%;
-}
-
-#photos_section > div > div{
+#space-photos{
+    width: calc(50% - 40px);    
+    overflow: auto;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 105px);
+    margin-top: 98px;
+}
+
+#space-photos > :first-child{
+    padding-bottom: 20px;
+}
+
+#space-photos > div > ul{
+    display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: calc(100% - 20px);
+    list-style: none;
+    flex-wrap: wrap;
 }
 
-#align-items{
-    position: relative;
-}
-
-/* #grid_imgUp{
-    max-width: 510px;
-    margin: 0 auto;
-    grid-template: "photo1 photo2" 478px "photo3 photo3" 478px;
-} */
-
-.item{
-    border: 1px solid var(--gray-border);
-    border-radius: 10px;
-    height: 158px;
-}
-
-#item1{
-    grid-area: photo1;
-}
-
-#item2{
-    grid-area: photo2;
-}
-
-#item3{
-    grid-area: photo3;
-}
-
-.uploadImage {
-    border: 1px solid var(--gray-border);
-    width: 100%;
-    height: 159px;
-    margin: 15px 15px 0 0;
-    border-radius: 10px;
-}
-
-input[type="submit"]{
-    background-color: var(--scale-2-purple);
-    width: 186px;
-    height: 36px;
-    border: none;
-    border-radius: 20px;
-    color: var(--white);
-    font-family: var(--font-primary);
-    font-size: 20px;
-    font-weight: 600;
-    margin: 30px 0 0 323px;
-}
-
-.divImg{
-    height: 250px;
+#slideshow{
+    width: 500px;
+    height: 303px;
     border: 1px solid var(--gray-border);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-#addImg-icon{
-    width: 65px;
-    height: 65px;
+#slideshow > img{
+    margin-bottom: 12px;
 }
 
-/* #addImg-icon :after{
-    content: "Adicionar imagem +"
-} */
-
-input[type="file"]{
-    display: none;
+#slideshow > p{
+    color: rgba(51, 51, 51, 0.7);
 }
 
-.picture-image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    aspect-ratio: 16 / 9;
-    cursor: pointer;
-    color: rgb(90, 90, 90);
+.room-img{
     border: 1px solid var(--gray-border);
-    transition: color 100ms ease-in-out;
-    background-image: url(../images/register-space/icon-photos.svg);
-    background-size: cover;
-    background-position: 0;
-    background-repeat: no-repeat;
-    margin-bottom: 30px;
+    border-radius: 20px;
+    width: 220px;
+    height: 130px;
 }
 
-.picture-image:hover{
-    color: var(--scale-1-blue);
-}
-
-.picture-image:active{
-    color: var(--scale-8-blue);
-    border: 1.5px solid currentColor;
-    font-weight: 400;
-}
-
-.upImg{
-    max-width: 100%;
+#rooms-photos{
+    margin-top: 98px;
 }
