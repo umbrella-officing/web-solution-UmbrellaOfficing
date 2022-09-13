@@ -26,6 +26,8 @@
 
 #my-account_navigation ul {
     list-style: none;
+    
+    position: fixed;
 }
 
 #my-account_navigation ul li {
