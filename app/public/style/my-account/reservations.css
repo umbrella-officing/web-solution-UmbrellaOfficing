@@ -28,6 +28,7 @@
 
 #my-reservations>div nav ul {
     list-style: none;
+    position: fixed;
 }
 
 #my-reservations>div nav ul li {
