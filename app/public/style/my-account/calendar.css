@@ -96,6 +96,7 @@ button {
     width: 180px;
     flex-direction: column;
     right: 0;
+    cursor: pointer;
 }
  
 .select-box .options-container {
@@ -133,7 +134,7 @@ button {
     border: 1px solid var(--gray-border);
     opacity: 1;
     overflow-y: scroll;
-    z-index: 5000;
+    z-index: 40;
     margin-top: 8px;
 }
  
