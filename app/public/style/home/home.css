@@ -450,6 +450,7 @@
 
 #home_section6 > div img{
     width: 408px;
+    margin-right: 40px;
 }
 
 #home_section6 > div > div{
@@ -474,3 +475,108 @@
     font-weight: 600;
     color: var(--white);
 }
+
+
+@media(max-width: 480px){
+    #header {
+        display: none;
+    }
+
+    main #home_section1 > div {
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
+    main #home_section1 > div > div h1 {
+        font-size: 42px;
+        margin: 0 0 24px 0;
+        text-align: center;
+    }
+
+    main #home_section1 > div > div:first-child p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    main #home_section1 > div > div:nth-child(2) {
+        width: 448px;
+    }
+
+    main #home_section1 > div > div:nth-child(2) img {
+        width: 274px; 
+    }
+
+    .home_section1_call_action {
+        padding: 16px 16px;
+    }
+
+    .home_section1_call_action p {
+        max-width: 144px; 
+        font-size: 13px;
+    }
+
+    .home_section1_call_action button { 
+        padding: 7px 45px;
+    }
+
+    main #home_section2 > div {
+        flex-direction: column; 
+        padding-bottom: 80px;
+    }
+
+    main #home_section2 ul li {
+        margin: 10px 0 10px 0;
+        width: 207px;
+    }
+
+    main #home_section2 > div ul li img {
+        padding: 10px 14px;
+    }
+
+    main #home_section2 > div ul li p {
+        max-width: 194px;
+    }
+
+    main #home_section3 {
+        padding-bottom: 48px;
+    }
+
+    main #home_section4 { 
+        margin: 80px 0;
+    }
+
+    main #home_section4_background { 
+        width: 90%;
+        padding: 0;
+        border-radius: 0 25px 25px 0;
+    }
+
+    main #home_section5 > div h2 {
+        font-size: 24px;
+    }
+
+    main #home_section6 > div {
+        flex-direction: column;
+    } 
+
+    main #home_section6 > div img {
+        width: 273px;
+        padding-bottom: 40px;
+        align-self: flex-start;
+    }
+
+    main #home_section6 > div > div h3 {
+        font-size: 24px;
+    }
+
+    footer h5, 
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+ }
+
+ 
