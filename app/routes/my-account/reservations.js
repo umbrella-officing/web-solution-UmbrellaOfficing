@@ -1,5 +1,5 @@
 module.exports = (app) => {
     app.get('/minhas-reservas', (req, res)=>{
-        res.render('my-account/my-reservations')
+        res.render('pages/my-account/my-reservations')
     });
 }

@@ -1,5 +1,5 @@
 module.exports = (app) => {
     app.get('/meu-perfil', (req, res)=>{
-        res.render('my-account/my-profile')
+        res.render('pages/my-account/my-profile')
     });
 }
