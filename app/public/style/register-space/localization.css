@@ -4,11 +4,9 @@ body{
 }
 
 main{
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 1050px;
 }
 
 .default_margin{
@@ -18,6 +16,15 @@ main{
 
 #localization_section{
     margin-top: 105px;
+    height: calc(100vh - 105px);
+    max-height: 1050px;
+}
+
+#localization_section > div > div > p{
+    color: #fff;
+    font-size: 14px;
+    max-width: 370px;
+    margin-top: 20px;
 }
 
 h1{
@@ -33,4 +40,13 @@ h1{
     height: 100vh;
     max-height: calc(1000px - 105px);
     position: fixed;
+}
+
+iframe{
+    width: 100vh;
+    height: 100%; /*Por que ele não toma o total das telas maiores?*/
+    max-height: 1050px;
+    position: fixed;
+    left: 50%;
+    top: 99px;
 }
