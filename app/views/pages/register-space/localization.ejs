@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/register-space/localization.css">
-    
-</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
     <header id="header" class="container_margin_default">
@@ -139,8 +138,11 @@
         <section id="localization_section" class="container_margin_default">
             <div class="default_margin" id="margin-space">
                 <div>
-                        <h1>Especifique a localização do espaço</h1> 
-                        <p>Obs: sua localização só será totalmente compartilhada após a confirmação da reserva</p>   
+                    <div id="align-hint">
+                        <h1>Especifique a localização do espaço <img id="hint-icon" src="images/default/hint-icon.png" alt="Dica"></h1> 
+                        
+                    </div>
+                        <p id="hint">Obs: sua localização só será totalmente compartilhada após a confirmação da reserva</p>   
                 </div>
    
                 <!-- <div id="map">
@@ -150,6 +152,54 @@
                 </div> -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14779.987994078145!2d-43.59438856024356!3d-22.164186294150525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x98d913ebf99553%3A0xa4247e08942606a9!2sRio%20das%20Flores%2C%20RJ%2C%2027660-000!5e0!3m2!1spt-PT!2sbr!4v1663240586012!5m2!1spt-PT!2sbr" 
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div id="encompass-form">
+                    <form action="">
+                        <div id="first-step">
+                        <div id="search-container">
+                            <input type="text" name="search-localization" id="search-localization" class="outline-focus" placeholder="Encontre seu endereço">
+                            <div><img src="images/default/search.svg" alt="Pesquisar"></div>
+                        </div>
+
+                        <button id="current-location">Ou use sua localização atual</button>
+
+                        <div id="location-data">
+                            <input type="text" name="CEP" id="cep" class="outline-focus" placeholder="CEP">
+                            <input type="text" name="street" id="street" class="outline-focus" placeholder="Rua">
+
+                            <div class="half-inputs">
+                            <select name="state" id="state" class="outline-focus">
+                                <option value="al">AL</option>
+                            </select>
+                            <input type="text" name="city" id="city" class="outline-focus" placeholder="Cidade">
+                        </div>
+
+                        <div class="half-inputs">
+                            <input type="text" name="district" id="district" class="outline-focus" placeholder="Bairro">
+                            <input type="text" name="house" id="house" class="outline-focus" placeholder="Casa/Apto">
+                        </div>
+                        <input type="text" name="country" id="country" class="outline-focus" placeholder="País">
+
+                        <h3>Estou anunciando um ambiente</h3>
+
+                        <div id="type-of-environment">
+                            <div>
+                                <input type="radio" name="exclusive" id="exclusive">
+                                <label for="exclusive">Exclusivo</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="exclusive" id="exclusive">
+                                <label for="exclusive">Compartilhado/habitado</label>
+                            </div>
+                        </div>
+
+                        <button id="continue">Continuar</button>
+                        </div>
+                        
+                    </div>
+                    </form>
+                </div>
 
 
             </div>
