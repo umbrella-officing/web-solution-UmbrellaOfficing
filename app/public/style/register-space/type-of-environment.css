@@ -3,16 +3,15 @@
 }
 
 #type-of-environment_section{
-    height: 100vh;
-    min-height: 840px;
-    max-height: 840px;
+    height: calc(100vh - 105px);
+    min-height: 720px;
+    max-height: 1050px;
 }
 
 #type-of-environment_section > div{
-    justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
 }
 
 #type-of-environment_section > div h1{
@@ -24,7 +23,6 @@
 #align-elements{
     display: flex;
     align-items: center;
-    margin-top: 180px;
     justify-content: space-between;
     width: 100%;
 }

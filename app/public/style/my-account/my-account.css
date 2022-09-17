@@ -29,10 +29,26 @@
     align-items: center;
 }
 
- .option a {
+.option a {
     display: flex;
     align-items: center;
     font-size: 16px;
     font-weight: 400;
     color: var(--text-1-black);
 }
+
+@media(max-width: 1000px) {
+    main #my-profile_section1 {
+        width: 75%;
+    }
+    
+    #logo { 
+        max-width: 275px;
+    }
+
+    footer ul h5 {
+        font-size: 17px; 
+    }
+} 
+
+
