@@ -38,7 +38,7 @@
 #my-profile>div nav ul li {
     display: flex;
     height: 40px;
-    margin: 25px 0;
+    margin-bottom: 25px;
     align-items: center;
 }
 
@@ -240,3 +240,119 @@
     font-weight: 500;
     margin-top: 40px;
 }
+
+@media(min-width: 300px) and (max-width: 480px){
+    #header {
+        display: none;
+    }
+
+    .default_margin {
+        margin: 0 8px;
+    } 
+
+    main #my-profile::before { 
+        width: 15%; 
+    }
+
+    main #my-profile>div {
+        padding-top: 80px; 
+    }
+
+    main #my-profile>div nav ul li span {
+        display: none;
+    } 
+    
+    main #my-profile_section1 {
+        width: 78%;
+    }
+
+    main #my-profile_section1 h1 {
+        font-size: 23px; 
+    }
+
+    main #my-profile_section1 h1~p {
+        font-size: 14px; 
+    }
+
+    main #my-profile_section1 form>div label {
+        font-size: 16px; 
+    }
+
+    form .form-flex {
+        flex-direction: column; 
+    }
+
+    form .form-flex>div:nth-child(1) { 
+        padding: 35px 25px; 
+    }
+
+    form .social-medias {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    form .social-medias_flex div input { 
+        font-size: 13.5px;
+    }
+
+    form .social-medias p {
+        font-size: 11.5px; 
+    }
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+}
+
+@media(min-width: 481px) and (max-width: 841px) {
+    #header {
+        display: none;
+    } 
+
+    main #my-profile::before { 
+        width: 15%; 
+    }
+
+    main #my-profile>div {
+        padding-top: 80px; 
+    }
+
+    main #my-profile>div nav ul li span {
+        display: none;
+    } 
+
+    form .form-flex {
+        flex-direction: column; 
+    }
+
+    form .social-medias {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    form .social-medias_flex div input { 
+        font-size: 14px;
+    } 
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+}
+
+@media(min-width: 841px) and (max-width: 1000px) { 
+    main #my-profile::before {  
+        width: 22%;
+    }
+
+    #logo { 
+        max-width: 275px;
+    }
+
+    footer ul h5 {
+        font-size: 17px; 
+    }
+} 

@@ -236,3 +236,111 @@
     font-weight: 500;
     margin: 40px 0 0 0;
 }
+
+
+@media(min-width: 300px) and (max-width: 480px){
+    #header {
+        display: none;
+    }
+
+    .default_margin {
+        margin: 0 8px;
+    } 
+
+    main #personal-date::before { 
+        width: 15%; 
+    }
+
+    main #personal-date>div {
+        padding-top: 80px; 
+    }
+
+    main #personal-date>div nav ul li span {
+        display: none;
+    } 
+    
+    main #personal-date_section1 {
+        width: 74%;
+    }
+
+    main #personal-date_section1 h1 {
+        font-size: 23px; 
+    }
+
+    form .personal-date-grid2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .select-box {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        position: relative; 
+    }
+
+    .personal-date-grid2-dif {
+        display: grid;
+        grid-template-columns: 20% 20%;
+        grid-column-gap: 15%;
+    }
+
+   
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+}
+
+@media(min-width: 481px) and (max-width: 841px) {
+    #header {
+        display: none;
+    } 
+
+    main #my-profile::before { 
+        width: 15%; 
+    }
+
+    main #my-profile>div {
+        padding-top: 80px; 
+    }
+
+    main #my-profile>div nav ul li span {
+        display: none;
+    } 
+
+    form .form-flex {
+        flex-direction: column; 
+    }
+
+    form .social-medias {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    form .social-medias_flex div input { 
+        font-size: 14px;
+    } 
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+}
+
+@media(min-width: 841px) and (max-width: 1000px) { 
+    main #my-profile::before {  
+        width: 22%;
+    }
+
+    #logo { 
+        max-width: 275px;
+    }
+
+    footer ul h5 {
+        font-size: 17px; 
+    }
+} 
