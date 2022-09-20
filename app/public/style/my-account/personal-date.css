@@ -237,8 +237,7 @@
     margin: 40px 0 0 0;
 }
 
-
-@media(min-width: 300px) and (max-width: 480px){
+@media(min-width: 300px) and (max-width: 501px){
     #header {
         display: none;
     }
@@ -249,7 +248,7 @@
 
     main #personal-date::before { 
         width: 15%; 
-    }
+    } 
 
     main #personal-date>div {
         padding-top: 80px; 
@@ -281,12 +280,10 @@
 
     .personal-date-grid2-dif {
         display: grid;
-        grid-template-columns: 20% 20%;
-        grid-column-gap: 15%;
+        grid-template-columns: 74% 21%;
+        grid-column-gap: 5%;
     }
-
    
-
     footer h5,
     footer ul li,
     #scroll_up {
@@ -294,36 +291,53 @@
     }
 }
 
-@media(min-width: 481px) and (max-width: 841px) {
+@media(min-width: 501px) and (max-width: 841px) {
     #header {
         display: none;
-    } 
-
-    main #my-profile::before { 
-        width: 15%; 
     }
 
-    main #my-profile>div {
+    main #personal-date {
+        position: relative;
+        width: 100%;
+    }
+
+    main #personal-date::before { 
+        width: 15%; 
+    } 
+
+    main #personal-date>div {
         padding-top: 80px; 
     }
 
-    main #my-profile>div nav ul li span {
+    main #personal-date>div nav ul li span {
         display: none;
     } 
-
-    form .form-flex {
-        flex-direction: column; 
+    
+    main #personal-date_section1 {
+        width: 74%;
     }
 
-    form .social-medias {
-        width: 100%;
-        margin-top: 40px;
+    main #personal-date_section1 h1 {
+        font-size: 23px; 
     }
 
-    form .social-medias_flex div input { 
-        font-size: 14px;
-    } 
+    form .personal-date-grid2 {
+        grid-template-columns: 47.5% 47.5%;
+        grid-column-gap: 5%;
+    }
 
+    .select-box { 
+        width: 47.5%; 
+        right: 0;
+        position: absolute;
+    }
+
+    .personal-date-grid2-dif {
+        display: grid;
+        grid-template-columns: 74% 21%;
+        grid-column-gap: 5%;
+    }
+   
     footer h5,
     footer ul li,
     #scroll_up {
@@ -332,15 +346,53 @@
 }
 
 @media(min-width: 841px) and (max-width: 1000px) { 
-    main #my-profile::before {  
-        width: 22%;
+    main #personal-date {
+        position: relative;
+        width: 100%;
     }
 
-    #logo { 
-        max-width: 275px;
+    main #personal-date::before { 
+        width: 25%; 
+    }  
+
+    .option a { 
+        font-size: 14px; 
+    }
+    
+    .option_active a { 
+        font-size: 14px; 
+    }
+    
+    main #personal-date_section1 {
+        width: 68%;
     }
 
-    footer ul h5 {
-        font-size: 17px; 
+    main #personal-date_section1 h1 {
+        font-size: 23px; 
     }
-} 
+
+    form .personal-date-grid2 {
+        grid-template-columns: 47.5% 47.5%;
+        grid-column-gap: 5%;
+    }
+
+    .select-box { 
+        width: 47.5%; 
+        right: 0;
+        position: absolute;
+    }
+
+    .personal-date-grid2-dif {
+        display: grid;
+        grid-template-columns: 74% 21%;
+        grid-column-gap: 5%;
+    }
+   
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+}
+
+

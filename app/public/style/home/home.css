@@ -134,7 +134,7 @@
     justify-content: center;
 }
 
-#home_section3>div img {
+#home_section3 {
     width: 100%;
     position: relative;
     top: -14px;
@@ -458,7 +458,7 @@
     color: var(--white);
 }
 
-@media(max-width: 481px) {
+@media(min-width: 300px) and (max-width: 480px) {
     #header {
         display: none;
     }
@@ -489,7 +489,7 @@
     }
 
     main #home_section1>div>div:nth-child(2) {
-        width: 320px;
+        width: 330px;
     }
 
     main #home_section1>div>div:nth-child(2)::before {
@@ -609,7 +609,7 @@
     }
 }
 
-@media(max-width: 841px) {
+@media(min-width: 481px) and (max-width: 841px)  {
     #header {
         display: none;
     }
@@ -741,7 +741,7 @@
     }
 } 
 
-@media(max-width: 900px) {
+@media(min-width: 841px) and (max-width: 1000px) {
     main #home_section1>div>div:first-child {
         max-width: 340px;
     }
