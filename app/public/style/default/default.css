@@ -236,7 +236,6 @@ header > div {
 
 .menu_open{
     opacity: 0;
-    visibility: hidden;
     position: absolute;
     right: 0;
     top: 55px;
@@ -251,7 +250,7 @@ header > div {
 .menu_open_checked{
     top: 65px;
     opacity: 1;
-    visibility: visible;
+    z-index: 999;
 }
 
 .menu_open::before{
