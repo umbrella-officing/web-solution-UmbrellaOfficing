@@ -14,6 +14,5 @@ $(document).ready(function(){
     $( "iframe").hover(function(){
         $("#encompass-form").fadeTo("slow", 0.5);
       });
-
 })
 
