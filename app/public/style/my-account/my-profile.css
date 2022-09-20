@@ -251,7 +251,15 @@
     } 
 
     main #my-profile::before { 
-        width: 15%; 
+        width: 20%; 
+    }
+
+    .profile,
+    .wallet,
+    .reserve,
+    .ads,
+    .calendar {
+        font-size: 20px;
     }
 
     main #my-profile>div {
@@ -263,7 +271,7 @@
     } 
     
     main #my-profile_section1 {
-        width: 78%;
+        width: 75%;
     }
 
     main #my-profile_section1 h1 {
@@ -312,7 +320,15 @@
     } 
 
     main #my-profile::before { 
-        width: 15%; 
+        width: 20%; 
+    }
+
+    .profile,
+    .wallet,
+    .reserve,
+    .ads,
+    .calendar {
+        font-size: 22px;
     }
 
     main #my-profile>div {
@@ -322,6 +338,10 @@
     main #my-profile>div nav ul li span {
         display: none;
     } 
+
+    main #my-profile_section1 {
+        width: 75%;
+    }
 
     form .form-flex {
         flex-direction: column; 
@@ -345,7 +365,11 @@
 
 @media(min-width: 841px) and (max-width: 1000px) { 
     main #my-profile::before {  
-        width: 22%;
+        width: 25%;
+    }
+
+    main #my-profile_section1 {
+        width: 70%;
     }
 
     #logo { 

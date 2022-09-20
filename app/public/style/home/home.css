@@ -134,7 +134,7 @@
     justify-content: center;
 }
 
-#home_section3 {
+#home_section3>div> picture img {
     width: 100%;
     position: relative;
     top: -14px;
@@ -540,7 +540,11 @@
     }
 
     main #home_section3 {
-        padding-bottom: 48px;
+        padding-bottom: 10px;
+    }
+
+    main #home_section3>div>div {
+        margin-top: 0px;
     }
 
     main #home_section3>div>div p {
@@ -677,6 +681,10 @@
 
     main #home_section3 {
         padding-bottom: 48px;
+    }
+
+    main #home_section3>div>div{
+        margin-top: -40px;
     }
 
     main #home_section3>div>div p {
