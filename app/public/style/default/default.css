@@ -250,7 +250,6 @@ header > div {
 .menu_open_checked{
     top: 65px;
     opacity: 1;
-    z-index: 999;
 }
 
 .menu_open::before{
