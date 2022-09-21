@@ -1,23 +1,66 @@
+/*MOBILE*/
+@media(min-width: 300px) and (max-width: 480px){
+
+}
+
+/*TABLET*/
+@media(min-width: 481px) and (max-width: 840px){
+    #flex-direction > div{
+        flex-direction: column;
+    }
+
+    h1{
+        text-align: center; 
+        padding-bottom: 15px;
+    }
+
+    #second > p{
+        text-align: center;
+    }
+
+    #buttons-div{
+        flex-direction: row;
+}
+
 .container_search{
     display: none;
 }
 
 #type-of-environment_section{
-    height: calc(100vh - 105px);
+    height: 100vh;
     min-height: 720px;
     max-height: 1050px;
+    align-items: center;
 }
 
 #type-of-environment_section > div{
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 100%;
+    
 }
 
-#type-of-environment_section > div h1{
+#flex-direction{
+    width: 100%;
+}
+
+#flex-direction > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
     font-size: 40px;
-    max-width: 306px;
+    max-width: 460px;
     color: var(--text-1-black);
+}
+
+#second > p{
+    font-size: 22px;
+    max-width: 545px;
+    font-weight: 400;
+    margin-bottom: 25px;
 }
 
 #align-elements{
@@ -34,19 +77,23 @@
     justify-content: flex-end;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
-#second > div > p{
-    font-size: 20px;
-    max-width: 568px;
-    font-weight: 400;
-    margin-bottom: 25px;
+.space-box{
+    cursor: pointer;
+}
+
+.space-box:focus{
+    border-color: #08bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, .25);
+    transition: 0.3s ease-in-out;
 }
 
 #second > div > div{
     display: flex;
     justify-content: space-between;
+    width: 565px;
 }
 
 #second > div > div > div{
@@ -87,6 +134,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-top: 25px;
 }
 
 #buttons-div > a > button{
