@@ -604,3 +604,73 @@ footer a {
     background: var(--scale-2-purple);
     border-radius: 5px;
 }
+
+/* Mobile */
+#search-mobile {
+    width: 45px;
+    height: 45px;
+    background: var(--scale-2-purple);
+    border-radius: 50px;
+    position: fixed;
+    bottom: 24px;
+    z-index: 10000;
+    left: 42%;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+#menu-mobile {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    background: #fff;
+    z-index: 9000;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: rgb(0 0 0 / 8%) 1px 0 0;
+}
+ 
+#menu-mobile nav ul {
+    display: flex; 
+    width: 300px;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#menu-mobile nav ul span {
+    display: flex; 
+    width: 125px;
+    justify-content: space-around;
+}
+
+#menu-mobile nav .icon{
+    font-size: 30px;
+    border: 1px;
+    color: #9f9f9f;
+}
+
+.icon-help {
+    font-size: 14px; 
+    color: #9f9f9f;
+    width: 27px;
+    height: 27px;
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 3px solid #9f9f9f;
+    border-radius: 20px;
+}
+
+.icon-active {
+    font-size: 30px;
+    color: var(--scale-2-purple);
+}
+
+.icon-help focus { 
+    color: #fff; 
+    cursor: pointer;
+    background-color: var(--scale-3-purple);
+}

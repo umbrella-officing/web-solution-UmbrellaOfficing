@@ -581,4 +581,150 @@
     display: none;
 }
 
+@media(min-width: 300px) and (max-width: 480px){
+    #header {
+        display: none;
+    }
+
+    .default_margin {
+        margin: 0 50px;
+    } 
+
+    #my-reservations div nav {
+        display: none;
+    }
+
+    main #my-reservations>div {
+        padding: 40px 0 80px 0; 
+    }
+ 
+    main #my-reservations>div h1 {
+        font-size: 22px; 
+    }
+
+    main #my-reservations>div>nav~div {
+        width: 100%;
+        position: relative;
+    }
+
+    main #my-reservations_section1{
+        width: 100%;
+    }
+
+    main #my-reservations_section1 ul li { 
+        width: 100%;
+        flex-direction: column;
+    }
+
+    main #my-reservations_section1 ul li img {
+        width: 100%;
+        height: 220px;
+    }
+
+    main #my-reservations_section1 ul li > div {
+        width: 100%; 
+        padding: 15px; 
+    } 
+
+    main #my-reservations_section1 ul li>div p:nth-child(1) { 
+        justify-content: flex-start;
+    }
+
+    main #my-reservations_section1 ul li>div h2 {
+        font-size: 16px; 
+        margin: 15px 0 10px 0;
+    }
+
+    .space-flex { 
+        flex-direction: column;
+        padding-top: -25px;
+        align-content: flex-end;
+    } 
+
+    .space-flex div {  
+        flex-direction: row;
+    }
+
+    #my-reservations_section1 ul li .space-flex div:first-child {
+        margin: 0 0 10px 0;
+    }
+
+    main #my-reservations_section2 {
+        width: 334px;
+    }
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+}
+
+@media(min-width: 481px) and (max-width: 841px) {
+    #header {
+        display: none;
+    }
+
+    main #my-profile-public_section1::before { 
+        width: calc(50% - 65px); 
+    }
+
+    main #my-profile-public_section1>div {
+        padding-top: 40px; 
+        align-items: flex-start;
+    } 
+
+    .my-profile-public_section1-left {
+        width: 30%;
+    } 
+
+    .my-profile-public_section1-left img {
+        width: 50px;
+    }
+
+    .my-profile-public_section1-left>div h3 { 
+        font-size: 16px; 
+    }
+
+    .my-profile-public_section1-left h4 {
+        font-size: 14px; 
+    }
+
+    .my-profile-public_section1-left-verification>div p { 
+        margin: 10px 0 8px 10px;
+    }
+
+    .my-profile-public_section1-right { 
+        width: 55%;
+        flex-direction: column;
+    }
+
+    .my-profile-public_section1-right h1 {
+        font-size: 23px; 
+    }
+
+    .my-profile-public_section1-right p {
+        font-size: 14px;
+        max-width: 98%;
+        margin: 10px 0 30px;
+    }
+
+    .my-profile-public_section1-right>div:nth-child(2) {
+        width: 218px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 841px) and (max-width: 1000px) { 
+    #my-profile-public_section1::before { 
+        width: calc(50% - 175px); 
+    }
+
+    .my-profile-public_section1-right p { 
+        max-width: 97%; 
+    }
+} 
+
+
 

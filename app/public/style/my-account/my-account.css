@@ -37,6 +37,36 @@
     color: var(--text-1-black);
 }
 
+/*Menu - Mobile*/
+#my-account_menu-mobile {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    background: var(--scale-9-blue);
+    z-index: 9000;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: rgb(0 0 0 / 8%) 1px 0 0;
+}
+ 
+#my-account_menu-mobile nav ul {
+    display: flex; 
+    width: 300px;
+    justify-content: space-around;
+    list-style: none;
+} 
+
+#my-account_menu-mobile nav .icon{
+    font-size: 30px;
+    border: 1px;
+    color: #9f9f9f;
+}
+
+#my-account_menu-mobile nav .icon-active{ 
+    color: var(--scale-13-blue);
+}
+ 
+
 @media(max-width: 1000px) {
     main #my-profile_section1 {
         width: 75%;

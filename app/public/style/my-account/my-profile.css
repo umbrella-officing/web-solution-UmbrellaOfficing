@@ -244,34 +244,23 @@
 @media(min-width: 300px) and (max-width: 480px){
     #header {
         display: none;
-    }
-
-    .default_margin {
-        margin: 0 8px;
     } 
 
     main #my-profile::before { 
-        width: 20%; 
+        display: none; 
     }
 
-    .profile,
-    .wallet,
-    .reserve,
-    .ads,
-    .calendar {
-        font-size: 20px;
+    main #my-profile nav {
+        display: none;
     }
 
     main #my-profile>div {
-        padding-top: 80px; 
+        padding-top: 40px; 
+        margin: 0 8px;
     }
-
-    main #my-profile>div nav ul li span {
-        display: none;
-    } 
     
     main #my-profile_section1 {
-        width: 75%;
+        width: 100%;
     }
 
     main #my-profile_section1 h1 {
@@ -320,36 +309,25 @@
     } 
 
     main #my-profile::before { 
-        width: 20%; 
+        display: none; 
     }
 
-    .profile,
-    .wallet,
-    .reserve,
-    .ads,
-    .calendar {
-        font-size: 22px;
-    }
-
-    main #my-profile>div {
-        padding-top: 80px; 
-    }
-
-    main #my-profile>div nav ul li span {
+    main #my-profile nav {
         display: none;
     } 
 
+    main #my-profile>div {
+        padding-top: 40px; 
+    }
+
     main #my-profile_section1 {
-        width: 75%;
-    }
-
-    form .form-flex {
-        flex-direction: column; 
-    }
-
-    form .social-medias {
         width: 100%;
-        margin-top: 40px;
+    } 
+
+    form .form-flex>div:nth-child(1) { 
+        width: 45%;
+        box-sizing: border-box;
+        padding: 22px;
     }
 
     form .social-medias_flex div input { 

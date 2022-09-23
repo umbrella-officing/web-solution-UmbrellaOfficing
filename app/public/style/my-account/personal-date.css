@@ -9,7 +9,6 @@
     color: var(--text-1-black);
 }
 
-
 #personal-date::before {
     content: "";
     position: absolute;
@@ -73,8 +72,7 @@
 
 /*Dados pessoais: conteúdo*/
 #personal-date_section1 {
-    width: 744px;
-    margin-bottom: 80px;
+    width: 744px; 
 }
 
 #personal-date_section1 h1 {
@@ -237,29 +235,28 @@
     margin: 40px 0 0 0;
 }
 
-@media(min-width: 300px) and (max-width: 501px){
+@media(min-width: 300px) and (max-width: 480px){
     #header {
         display: none;
     }
-
-    .default_margin {
-        margin: 0 8px;
-    } 
+ 
 
     main #personal-date::before { 
-        width: 15%; 
+        display: none;
+    } 
+
+    main #personal-date nav { 
+        display: none;
     } 
 
     main #personal-date>div {
-        padding-top: 80px; 
-    }
-
-    main #personal-date>div nav ul li span {
-        display: none;
+        padding-top: 40px; 
+        margin: 0 8px;
+        width: 96.3%;
     } 
     
     main #personal-date_section1 {
-        width: 74%;
+        width: 100%;
     }
 
     main #personal-date_section1 h1 {
@@ -291,7 +288,7 @@
     }
 }
 
-@media(min-width: 501px) and (max-width: 841px) {
+@media(min-width: 481px) and (max-width: 841px) {
     #header {
         display: none;
     }
@@ -302,19 +299,19 @@
     }
 
     main #personal-date::before { 
-        width: 15%; 
+        display: none;
+    } 
+
+    main #personal-date nav { 
+        display: none;
     } 
 
     main #personal-date>div {
-        padding-top: 80px; 
+        padding-top: 40px; 
     }
-
-    main #personal-date>div nav ul li span {
-        display: none;
-    } 
     
     main #personal-date_section1 {
-        width: 74%;
+        width: 100%;
     }
 
     main #personal-date_section1 h1 {

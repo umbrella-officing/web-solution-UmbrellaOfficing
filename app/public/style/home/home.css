@@ -1,3 +1,7 @@
+#container-sidebar_mobile {
+    display: none;
+}
+
 #home_section1>div {
     position: relative;
     padding-top: 181px;
@@ -134,7 +138,7 @@
     justify-content: center;
 }
 
-#home_section3>div> picture img {
+#home_section3>div>picture img {
     width: 100%;
     position: relative;
     top: -14px;
@@ -173,7 +177,7 @@
     padding: 7px 45px;
     background: var(--scale-2-purple);
     border: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #home_section4 {
@@ -463,8 +467,13 @@
         display: none;
     }
 
+    #container-sidebar_mobile {
+        display: block;
+    }
+
     .default_margin {
         margin: 0 8px;
+        width: 100%;
     }
 
     main #home_section1>div {
@@ -547,9 +556,13 @@
         margin-top: 0px;
     }
 
+    main #home_section3>div>div h3 {
+        font-size: 24px;
+    }
+
     main #home_section3>div>div p {
-        font-size: 14px;
-        max-width: 280px;
+        font-size: 13px;
+        max-width: 65%;
     }
 
     main #home_section3>div>div a button {
@@ -613,7 +626,7 @@
     }
 }
 
-@media(min-width: 481px) and (max-width: 841px)  {
+@media(min-width: 481px) and (max-width: 841px) {
     #header {
         display: none;
     }
@@ -622,6 +635,10 @@
         flex-direction: column;
         padding-top: 40px;
         padding-bottom: 80px;
+    }
+
+    #container-sidebar_mobile {
+        display: block;
     }
 
     main #home_section1>div>div h1 {
@@ -680,16 +697,16 @@
     }
 
     main #home_section3 {
-        padding-bottom: 48px;
+        padding-bottom: 24px;
     }
 
-    main #home_section3>div>div{
-        margin-top: -40px;
+    main #home_section3>div>div {
+        margin-top: 4%;
     }
 
     main #home_section3>div>div p {
         font-size: 15px;
-        max-width: 300px;
+        max-width: 52%;
     }
 
     main #home_section3>div>div a button {
@@ -747,7 +764,7 @@
     #scroll_up {
         display: none;
     }
-} 
+}
 
 @media(min-width: 841px) and (max-width: 1000px) {
     main #home_section1>div>div:first-child {
@@ -758,13 +775,13 @@
         width: 455px;
     }
 
-    main #home_section1>div>div:nth-child(2)::before { 
+    main #home_section1>div>div:nth-child(2)::before {
         height: 350px;
-        width: 350px; 
+        width: 350px;
     }
 
     main #home_section1>div>div:nth-child(2) img {
-        width: 260px; 
+        width: 260px;
     }
 
     .home_section1_call_action p {
@@ -773,22 +790,36 @@
     }
 
     main .home_section1_call_action {
-        padding: 14px 17px; 
+        padding: 14px 17px;
     }
 
     main .home_section1_call_action button {
-        padding: 7px 47px; 
+        padding: 7px 47px;
+    }
+
+    main #home_section3>div>div {
+        margin-top: 4%;
+    }
+
+    main #home_section3>div>div p {
+        font-size: 15px;
+        max-width: 65%;
+    }
+
+    main #home_section3>div>div a button {
+        padding: 7px 38px;
+        font-size: 14px;
     }
 
     main #home_section6>div img {
-        width: 308px; 
+        width: 308px;
     }
-    
-    #logo { 
+
+    #logo {
         max-width: 275px;
     }
 
     footer ul h5 {
-        font-size: 17px; 
+        font-size: 17px;
     }
-} 
+}
