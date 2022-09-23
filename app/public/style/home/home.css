@@ -463,9 +463,14 @@
 }
 
 @media(min-width: 300px) and (max-width: 480px) {
-    #header {
-        display: none;
+    #header>div a img {
+        width: 80%;
     }
+
+    #container_search, 
+    #menu {
+        display: none;
+    } 
 
     #container-sidebar_mobile {
         display: block;
@@ -478,7 +483,7 @@
 
     main #home_section1>div {
         flex-direction: column;
-        padding-top: 40px;
+        padding-top: 120px;
         padding-bottom: 80px;
     }
 
@@ -627,13 +632,18 @@
 }
 
 @media(min-width: 481px) and (max-width: 841px) {
-    #header {
+    #header>div a img {
+        width: 80%;
+    }
+    
+    #container_search, 
+    #menu {
         display: none;
     }
 
     main #home_section1>div {
         flex-direction: column;
-        padding-top: 40px;
+        padding-top: 120px;
         padding-bottom: 80px;
     }
 
