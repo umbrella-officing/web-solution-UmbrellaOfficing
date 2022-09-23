@@ -9,12 +9,13 @@ NoticiasDAO.prototype.getNoticia = function (id_noticia, callback) {
     this._connection.query(`select * from sala`, callback);
 }
 
-// NoticiasDAO.prototype.salvarNoticia = function (noticia, callback) {
-//     this._connection.query('insert into noticias set ?', noticia, callback);
-// }
+NoticiasDAO.prototype.registerUser = function (noticia, callback) {
+    this._connection.query('INSERT INTO teste SET  ?',noticia,callback)
+    
+}
 
 NoticiasDAO.prototype.get5UltimasNoticias = function (noticia, callback) {
-    this._connection.query('select * from sala', noticia, callback);
+    this._connection.query('select * from teste', noticia, callback);
 }
 
 module.exports = function () {

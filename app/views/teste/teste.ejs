@@ -5,8 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button{
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Teste</h1>
+    
+    <% if(validacao){ %>
+        <%console.log(validacao)%> 
+        <% } %>
+
+        <%console.log(sala)%>
+
+        <% if(validacao){ %>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-danger">
+                        <strong>Atenção!</strong>
+                        <ul>
+                            <!--Loop-->
+                            <% for(let i = 0; i < validacao.length; i++){ %>
+                            <li><%= validacao[i].msg %></li>
+                            <% } %>
+    
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+
+        <h1>Teste</h1>
+
+        <form class="register-form" method="post" action="/cadastro">
+            <h2>Cadastro</h2>
+            <input type="text" placeholder="Nome" name="nome_user" value="<%= valores.nome_user%>" /> <br>
+            <button>Cadastrar</button><br>
+        </form>
 </body>
 </html>
