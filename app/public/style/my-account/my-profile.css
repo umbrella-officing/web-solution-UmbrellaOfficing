@@ -1,3 +1,7 @@
+#my-account-sidebar_mobile {
+    display: none;
+}
+
 #my-profile {
     position: relative;
 }
@@ -9,13 +13,12 @@
 }
 
 #my-profile>div {
-    padding: 220px 0 80px 0;
+    padding: 180px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
-}
+} 
 
-/*Meu perfil: menu lateral*/
 #my-profile::before {
     content: "";
     position: absolute;
@@ -24,54 +27,6 @@
     height: 100%;
     width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
-}
-
-#my-profile>div nav {
-    position: relative;
-}
-
-#my-profile>div nav ul {
-    list-style: none;
-    position: fixed;
-}
-
-#my-profile>div nav ul li {
-    display: flex;
-    height: 40px;
-    margin-bottom: 25px;
-    align-items: center;
-}
-
-#my-profile>div nav ul li a {
-    text-decoration: none
-}
-
-.profile,
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    font-size: 26px;
-}
-
-
-.option_active a {
-    border-left: 3px solid #5B61C4;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--scale-13-blue);
-}
-
-.profile {
-    margin: 0 10px 0 18px;
-}
-
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    color: var(--gray-border);
-    margin: 0 10px 0 21px;
 }
 
 /*Meu perfil: conteúdo*/
@@ -168,7 +123,6 @@
     font-family: var(--font-primary);
 }
 
-
 .social-medias p {
     font-size: 12px;
     margin-top: 5px;
@@ -241,10 +195,26 @@
     margin-top: 40px;
 }
 
-@media(min-width: 300px) and (max-width: 480px){
-    #header {
+@media(min-width: 300px) and (max-width: 620px){
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
         display: none;
-    } 
+    }  
+
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    #my-account-sidebar_mobile {
+        display: block;
+    }
 
     main #my-profile::before { 
         display: none; 
@@ -255,7 +225,7 @@
     }
 
     main #my-profile>div {
-        padding-top: 40px; 
+        padding-top: 130px; 
         margin: 0 8px;
     }
     
@@ -304,9 +274,24 @@
 }
 
 @media(min-width: 481px) and (max-width: 841px) {
-    #header {
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
         display: none;
     } 
+
+    #container_menu > a > button {  
+        height: 36px;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    #my-account-sidebar_mobile {
+        display: block;
+    }
 
     main #my-profile::before { 
         display: none; 
@@ -317,7 +302,7 @@
     } 
 
     main #my-profile>div {
-        padding-top: 40px; 
+        padding-top: 130px; 
     }
 
     main #my-profile_section1 {
@@ -343,11 +328,11 @@
 
 @media(min-width: 841px) and (max-width: 1000px) { 
     main #my-profile::before {  
-        width: 25%;
+        width: 28%;
     }
 
     main #my-profile_section1 {
-        width: 70%;
+        width: 68%;
     }
 
     #logo { 

@@ -21,7 +21,7 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/my-account.css">
-    <link rel="stylesheet" href="style/my-account/reservations.css">
+    <link rel="stylesheet" href="style/my-account/my-reservations.css">
 </head>
 
 <body>
@@ -136,70 +136,79 @@
         </div>
     </header>
 
-    <div id="my-account_menu-mobile" class="container_margin_default">
-        <div class="default_margin">
-            <nav>
+    <nav id="my-account-sidebar_mobile" class="container_margin_default">
+        <div class="default_margin"> 
                 <ul>
                         <li>
-                            <a href="#">
+                            <a href="/meu-perfil">
                                 <i class='bx bx-user icon'></i>
                             </a>
                         </li>
-                        <li class="menu-option">
+                        <li>
                             <a href="/dados-pessoais">
                                 <i class='bx bx-wallet icon'></i> 
                             </a>
                         </li>
-                        <li class="menu-option">
+                        <li>
                             <a href="/minhas-reservas">
-                                <i class='bx bxs-calendar-check icon-active' ></i>
+                                <i class='bx bxs-calendar-check icon-active'></i>
                             </a>
                         </li>
-                        <li class="menu-option">
-                            <a href="/meus-anuncios">
-                                <i class='bx bx-calendar-check icon' ></i> 
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-bullhorn icon-ads"></i>
                             </a>
                         </li>
-                        <li class="menu-option">
+                        <li>
                             <a href="/calendario">
-                                <i class='bx bx-calendar icon' ></i> 
+                                <i class='bx bx-calendar icon'></i> 
                             </a>
                         </li> 
-                </ul>
-            </nav>
+                </ul> 
         </div>
-    </div>
+    </nav>
+
 
     <div id='box_black'></div>
 
     <main>
         <div id="my-reservations" class="container_margin_default">
             <div class="default_margin">
-                <nav>
+                <nav id="my-account-menu">
                     <ul>
                         <li class="option">
-                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
-                                Meu perfil</a>
+                            <a href="/meu-perfil">
+                                <i class='bx bxs-user icon'></i>
+                                <span>Meu perfil</span>
+                            </a>
                         </li>
                         <li class="option">
                             <a href="/dados-pessoais">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                Dados pessoais</a>
+                                <i class='bx bx-wallet icon'></i> 
+                                <span>Dados pessoais</span>
+                            </a>
                         </li>
                         <li class="option_active">
-                            <a href="#"><i class="fa-solid fa-calendar-check reserve"></i>
-                                Minhas reservas</a>
+                            <a href="#">
+                                <i class='bx bxs-calendar-check icon'></i>
+                                <span>Minhas reservas</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
-                                Meus anúncios</a>
+                            <a href="/meus-anuncios">
+                                <i class="fa-solid fa-bullhorn icon_ads"></i>
+                                <span>Meus anúncios</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/calendario"><i class="fa-solid fa-calendar-days calendar"></i>
-                                Calendário</a>
+                            <a href="/calendario">
+                                <i class='bx bx-calendar icon'></i> 
+                                <span>Calendário</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>
+        
 
                 <div>
                     <h1>Minhas reservas</h1>

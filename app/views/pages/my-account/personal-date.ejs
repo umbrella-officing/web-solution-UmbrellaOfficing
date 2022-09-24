@@ -128,67 +128,74 @@
         </div>
     </header>
 
-    <div id="my-account_menu-mobile" class="container_margin_default">
-        <div class="default_margin">
-            <nav>
+    <nav id="my-account-sidebar_mobile" class="container_margin_default">
+        <div class="default_margin"> 
                 <ul>
                         <li>
                             <a href="/meu-perfil">
                                 <i class='bx bx-user icon'></i>
                             </a>
                         </li>
-                        <li class="menu-option">
-                            <a href="/dados-pessoais">
-                                <i class='bx bxs-wallet icon-active' ></i>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxs-wallet icon-active'></i>
                             </a>
                         </li>
-                        <li class="menu-option">
+                        <li>
                             <a href="/minhas-reservas">
-                                <i class='bx bx-calendar-check icon' ></i> 
+                                <i class='bx bx-calendar-check icon'></i> 
                             </a>
                         </li>
-                        <li class="menu-option">
+                        <li>
                             <a href="/meus-anuncios">
-                                <i class='bx bx-calendar-check icon' ></i> 
+                                <i class="fa-solid fa-bullhorn icon-ads"></i>
                             </a>
                         </li>
-                        <li class="menu-option">
+                        <li>
                             <a href="/calendario">
-                                <i class='bx bx-calendar icon' ></i> 
+                                <i class='bx bx-calendar icon'></i> 
                             </a>
                         </li> 
-                </ul>
-            </nav>
+                </ul> 
         </div>
-    </div>
+    </nav>
 
     <div id='box_black'></div>
 
     <main>
         <div id="personal-date" class="container_margin_default">
             <div class="default_margin">
-                <nav>
+                <nav id="my-account-menu">
                     <ul>
                         <li class="option">
-                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
-                                <span>Meu perfil</span></a>
+                            <a href="/meu-perfil">
+                                <i class='bx bxs-user icon'></i>
+                                <span>Meu perfil</span>
+                            </a>
                         </li>
                         <li class="option_active">
                             <a href="#">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                <span>Dados pessoais</span></a>
+                                <i class='bx bxs-wallet icon'></i>
+                                <span>Dados pessoais</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/minhas-reservas"><i class="fa-solid fa-calendar-check reserve"></i>
-                                <span>Minhas reservas</span></a>
+                            <a href="/minhas-reservas">
+                                <i class='bx bx-calendar-check icon'></i> 
+                                <span>Minhas reservas</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
-                                <span>Meus anúncios</span></a>
+                            <a href="/meus-anuncios">
+                                <i class="fa-solid fa-bullhorn icon_ads"></i>
+                                <span>Meus anúncios</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/calendario"><i class="fa-solid fa-calendar-days calendar"></i>
-                                <span>Calendário</span></a>
+                            <a href="/calendario">
+                                <i class='bx bx-calendar icon'></i> 
+                                <span>Calendário</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -301,9 +308,9 @@
                                 <button type="submit" id="edit_ad">Editar informações</button>
                             </div>
                     </form>
+                </section>
             </div>
-        </div>
-        </div>
+        </div> 
     </main>
 
     <footer class="container_margin_default">

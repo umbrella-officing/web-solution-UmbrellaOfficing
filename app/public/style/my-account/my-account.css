@@ -24,21 +24,71 @@
     color: white;
 }
 
-.option_active{
+/*Menu lateral */ 
+#my-account-menu {
+    position: relative;
+}
+
+#my-account-menu ul {
+    list-style: none;
+    position: fixed;
+}
+
+#my-account-menu ul li {
     display: flex;
+    height: 40px;
+    margin-bottom: 25px;
     align-items: center;
 }
 
-.option a {
+#my-account-menu ul li a {
     display: flex;
     align-items: center;
+    text-decoration: none;
+}
+
+.option span {
     font-size: 16px;
-    font-weight: 400;
     color: var(--text-1-black);
 }
 
+.option .icon {
+    font-size: 30px;
+    color: var(--gray-border);
+    margin: 0 10px 0 20px;
+}
+
+.icon_ads {
+    font-size: 25px;
+    color: var(--gray-border);
+    margin: 0 10px 0 20px;
+}
+
+.option_active {
+    border-left: 3px solid #5B61C4;  
+}  
+
+.option_active a .icon {
+    font-size: 30px;
+    color: var(--scale-13-blue); 
+    margin: 0 10px 0 20px;
+}
+
+.option_active a .icon_ads {
+    font-size: 25px;
+    color: var(--scale-13-blue); 
+    margin: 0 10px 0 20px;
+
+}
+
+.option_active a span { 
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--scale-13-blue); 
+}  
+
 /*Menu - Mobile*/
-#my-account_menu-mobile {
+#my-account-sidebar_mobile {
     position: fixed;
     display: flex;
     bottom: 0;
@@ -49,36 +99,34 @@
     box-shadow: rgb(0 0 0 / 8%) 1px 0 0;
 }
  
-#my-account_menu-mobile nav ul {
+#my-account-sidebar_mobile ul {
     display: flex; 
     width: 300px;
     justify-content: space-around;
     list-style: none;
+}
+
+#my-account-sidebar_mobile .icon { 
+    width: 30px; 
 } 
 
-#my-account_menu-mobile nav .icon{
-    font-size: 30px;
-    border: 1px;
+#my-account-sidebar_mobile .icon{
+    font-size: 30px; 
     color: #9f9f9f;
 }
 
-#my-account_menu-mobile nav .icon-active{ 
+#my-account-sidebar_mobile .icon-ads{
+    font-size: 25px; 
+    color: #9f9f9f;
+}
+
+#my-account-sidebar_mobile .icon-ads-active{
     color: var(--scale-13-blue);
 }
- 
 
-@media(max-width: 1000px) {
-    main #my-profile_section1 {
-        width: 75%;
-    }
-    
-    #logo { 
-        max-width: 275px;
-    }
-
-    footer ul h5 {
-        font-size: 17px; 
-    }
-} 
+#my-account-sidebar_mobile .icon-active{ 
+    color: var(--scale-13-blue);
+}
+  
 
 

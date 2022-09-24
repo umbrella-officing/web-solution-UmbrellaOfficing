@@ -1,9 +1,13 @@
+#my-account-sidebar_mobile {
+    display: none;
+}
+
 #personal-date {
     position: relative;
 }
 
 #personal-date>div {
-    padding: 220px 0 80px 0;
+    padding: 180px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
@@ -17,57 +21,6 @@
     height: 100%;
     width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
-}
-
-/*Dados pessoais: menu lateral*/
-#personal-date>div nav {
-    position: relative;
-    overflow: auto;
-}
-
-#personal-date>div nav ul {
-    list-style: none;
-    position: fixed;
-}
-
-#personal-date>div nav ul li {
-    display: flex;
-    height: 40px;
-    margin: 25px 0;
-    align-items: center;
-}
-
-#personal-date>div nav ul li a {
-    text-decoration: none;
-    align-items: center;
-}
-
-.profile,
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    font-size: 26px;
-}
-
-
-.option_active a {
-    border-left: 3px solid #5B61C4;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--scale-13-blue);
-}
-
-.wallet {
-    margin: 0 10px 0 18px;
-}
-
-.profile,
-.reserve,
-.ads,
-.calendar {
-    color: var(--gray-border);
-    margin: 0 10px 0 21px;
 }
 
 /*Dados pessoais: conteúdo*/
@@ -236,11 +189,25 @@
 }
 
 @media(min-width: 300px) and (max-width: 480px){
-    #header {
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
         display: none;
+    } 
+
+    #container_menu > a > button {  
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    #my-account-sidebar_mobile {
+        display: block;
     }
  
-
     main #personal-date::before { 
         display: none;
     } 
@@ -250,7 +217,7 @@
     } 
 
     main #personal-date>div {
-        padding-top: 40px; 
+        padding-top: 130px; 
         margin: 0 8px;
         width: 96.3%;
     } 
@@ -289,8 +256,23 @@
 }
 
 @media(min-width: 481px) and (max-width: 841px) {
-    #header {
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
         display: none;
+    } 
+
+    #container_menu > a > button {  
+        height: 36px;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    #my-account-sidebar_mobile {
+        display: block;
     }
 
     main #personal-date {
@@ -307,7 +289,7 @@
     } 
 
     main #personal-date>div {
-        padding-top: 40px; 
+        padding-top: 130px; 
     }
     
     main #personal-date_section1 {
@@ -349,7 +331,7 @@
     }
 
     main #personal-date::before { 
-        width: 25%; 
+        width: 28%; 
     }  
 
     .option a { 
@@ -385,10 +367,12 @@
         grid-column-gap: 5%;
     }
    
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
+    #logo { 
+        max-width: 275px;
+    }
+
+    footer ul h5 {
+        font-size: 17px; 
     }
 }
 

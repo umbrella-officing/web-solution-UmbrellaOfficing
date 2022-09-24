@@ -1,13 +1,17 @@
+#my-account-sidebar_mobile {
+    display: none;
+}
+
 #my-reservations {
     position: relative;
 }
 
 #my-reservations>div {
-    padding: 220px 0 80px 0;
+    padding: 180px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
-}
+} 
 
 #my-reservations::before {
     content: "";
@@ -17,58 +21,7 @@
     height: 100%;
     width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
-}
-
-
-/*Minhas reservas: menu lateral*/
-#my-reservations>div nav {
-    position: relative;
-    overflow: auto;
-}
-
-#my-reservations>div nav ul {
-    list-style: none;
-    position: fixed;
-}
-
-#my-reservations>div nav ul li {
-    display: flex;
-    height: 40px;
-    margin: 25px 0;
-    align-items: center;
-}
-
-#my-reservations>div nav ul li a {
-    text-decoration: none
-}
-
-.profile,
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    font-size: 26px;
-}
-
-
-.option_active a {
-    border-left: 3px solid #5B61C4;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--scale-13-blue);
-}
-
-.reserve {
-    margin: 0 10px 0 18px;
-}
-
-.profile,
-.wallet,
-.ads,
-.calendar {
-    color: var(--gray-border);
-    margin: 0 10px 0 21px;
-}
+} 
 
 /*Minhas reservas: conteúdo*/
 #my-reservations>div>nav~div {
@@ -260,7 +213,7 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     font-weight: 500;
-}
+} 
 
 .calendar-week-day div {
     display: grid;
@@ -579,152 +532,138 @@
 #popUp-cancel_state2,
 #popUp-cancel_state3 {
     display: none;
-}
+} 
 
-@media(min-width: 300px) and (max-width: 480px){
-    #header {
-        display: none;
+
+@media(min-width: 300px) and (max-width: 620px){
+    #header>div a img {
+        width: 80%;
     }
 
-    .default_margin {
-        margin: 0 50px;
-    } 
+    #container_search, 
+    #menu {
+        display: none;
+    }  
 
-    #my-reservations div nav {
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    #my-account-sidebar_mobile {
+        display: block;
+    }
+
+    main #my-reservations::before { 
+        display: none; 
+    }
+
+    #my-account-menu {
         display: none;
     }
 
     main #my-reservations>div {
-        padding: 40px 0 80px 0; 
-    }
- 
-    main #my-reservations>div h1 {
-        font-size: 22px; 
+        padding: 130px 0 80px 0;
+        margin: 0 54px;
+        width: 100%;
+        display: flex;
+        align-items: center;
     }
 
     main #my-reservations>div>nav~div {
         width: 100%;
-        position: relative;
     }
 
-    main #my-reservations_section1{
-        width: 100%;
-    }
-
-    main #my-reservations_section1 ul li { 
-        width: 100%;
+    #my-reservations_section1 ul li {
         flex-direction: column;
     }
 
-    main #my-reservations_section1 ul li img {
+    #my-reservations_section1 ul li > div {
         width: 100%;
-        height: 220px;
-    }
-
-    main #my-reservations_section1 ul li > div {
-        width: 100%; 
-        padding: 15px; 
-    } 
-
-    main #my-reservations_section1 ul li>div p:nth-child(1) { 
-        justify-content: flex-start;
-    }
-
-    main #my-reservations_section1 ul li>div h2 {
-        font-size: 16px; 
-        margin: 15px 0 10px 0;
-    }
-
-    .space-flex { 
-        flex-direction: column;
-        padding-top: -25px;
-        align-content: flex-end;
-    } 
-
-    .space-flex div {  
-        flex-direction: row;
-    }
-
-    #my-reservations_section1 ul li .space-flex div:first-child {
-        margin: 0 0 10px 0;
-    }
-
-    main #my-reservations_section2 {
-        width: 334px;
     }
 
     footer h5,
     footer ul li,
     #scroll_up {
         display: none;
-    }
+    } 
 }
 
-@media(min-width: 481px) and (max-width: 841px) {
-    #header {
+@media(min-width: 621px) and (max-width: 841px)  { 
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
+        display: none;
+    }  
+
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    #my-account-sidebar_mobile {
+        display: block;
+    }
+
+    main #my-reservations::before { 
+        display: none; 
+    }
+
+    #my-account-menu {
         display: none;
     }
 
-    main #my-profile-public_section1::before { 
-        width: calc(50% - 65px); 
+    main #my-reservations>div {
+        padding-top: 130px;  
+        width: 100%;
     }
 
-    main #my-profile-public_section1>div {
-        padding-top: 40px; 
-        align-items: flex-start;
+    main #my-reservations>div>nav~div {
+        width: 100%;
+    }
+
+    #my-reservations_section1,
+    #my-reservations_section2 .slider {
+        position: relative;
+        width: 100%;
+    }
+
+    #my-reservations_section1 ul li > div { 
+        width: 100%; 
+    }
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
     } 
-
-    .my-profile-public_section1-left {
-        width: 30%;
-    } 
-
-    .my-profile-public_section1-left img {
-        width: 50px;
-    }
-
-    .my-profile-public_section1-left>div h3 { 
-        font-size: 16px; 
-    }
-
-    .my-profile-public_section1-left h4 {
-        font-size: 14px; 
-    }
-
-    .my-profile-public_section1-left-verification>div p { 
-        margin: 10px 0 8px 10px;
-    }
-
-    .my-profile-public_section1-right { 
-        width: 55%;
-        flex-direction: column;
-    }
-
-    .my-profile-public_section1-right h1 {
-        font-size: 23px; 
-    }
-
-    .my-profile-public_section1-right p {
-        font-size: 14px;
-        max-width: 98%;
-        margin: 10px 0 30px;
-    }
-
-    .my-profile-public_section1-right>div:nth-child(2) {
-        width: 218px;
-        display: flex;
-        justify-content: space-between;
-    }
-}
+}  
 
 @media(min-width: 841px) and (max-width: 1000px) { 
-    #my-profile-public_section1::before { 
-        width: calc(50% - 175px); 
+    main #my-reservations::before {  
+        width: 28%;
+    } 
+
+    main #my-reservations>div>nav~div {
+        width: 68%;
     }
 
-    .my-profile-public_section1-right p { 
-        max-width: 97%; 
+    #my-reservations_section1 ul li > div {
+        width: 100%;
     }
-} 
 
+    #logo { 
+        max-width: 275px;
+    }
 
-
+    footer ul h5 {
+        font-size: 17px; 
+    }
+}
