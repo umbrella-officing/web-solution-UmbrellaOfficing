@@ -279,4 +279,38 @@ section::after {
     font-weight: 500;
 }
 
+@media(min-width: 300px) and (max-width: 620px){
+    #header>div a img {
+        width: 80%;
+    }
 
+    #container_search, 
+    #menu {
+        display: none;
+    }  
+
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    main #booking-requests>div { 
+        padding-top: 130px; 
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .option-checked {
+        border-left: 0;
+        border-bottom: 3px solid var(--scale-13-blue); 
+    }
+    
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+}

@@ -195,7 +195,7 @@
     margin-top: 40px;
 }
 
-@media(min-width: 300px) and (max-width: 620px){
+@media(min-width: 300px) and (max-width: 480px){
     #header>div a img {
         width: 80%;
     }
