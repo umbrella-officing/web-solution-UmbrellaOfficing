@@ -193,7 +193,6 @@ a {
     box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 9%);
     padding: 20px;
     width: 800px;
-    height: 180px;
     animation: fadeIn ease .27s;
 }
 
@@ -309,6 +308,21 @@ a {
     #scroll_up {
         display: none;
     } 
+
+    
+    /*Pop-up - Cancelar reserva*/
+    .popUp_delete {
+        width: 70%;
+        margin: 0 16px;
+    }
+
+    .popUp_delete div {
+        flex-direction: column-reverse;
+    }
+
+    #no {
+        margin-right: 0;
+    }
 }
 
 @media(min-width: 621px) and (max-width: 841px)  { 
@@ -362,6 +376,14 @@ a {
     #scroll_up {
         display: none;
     } 
+
+    
+    /*Pop-up - Cancelar reserva*/
+    .popUp_delete {
+        width: 70%;
+        height: 20%;
+        margin: 0 16px;
+    }
 } 
 
 @media(min-width: 841px) and (max-width: 900px) {
