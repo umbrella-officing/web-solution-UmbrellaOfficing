@@ -26,15 +26,18 @@
         max-width: 350px;
     }
 
-
-    main #buttons-div{
-        flex-direction: row;
-        margin-top: 30px;
+    main #flex-direction > a{
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
-    main #buttons-div :nth-child(2) > button{
-        width: 100vw;
-        height: 40px;
+    main #flex-direction > a > button{
+       width: 100%;
+       max-width: 545px;
+       height: 42px;
+       border-radius: 25px;
     }
 }
 
@@ -58,11 +61,18 @@
         margin-top: 30px;
     }
 
-    main #buttons-div :nth-child(2) > button{
-        max-width: 545px;
+    main #flex-direction > a{
+        align-self: center;
+        display: flex;
+        justify-content: center;
         width: 100%;
-        height: 45px;
-        margin-bottom: 28px;
+    }
+
+    main #flex-direction > a > button{
+       width: 100%;
+       max-width: 545px;
+       height: 42px;
+       border-radius: 25px;
     }
 }
 
@@ -71,10 +81,11 @@
 }
 
 #type-of-environment_section{
-    height: 100vh;
+    height: calc(100vh - 105px);
     min-height: 720px;
     /* max-height: 1050px; */
     align-items: center;
+    padding-top: 105px;
 }
 
 #type-of-environment_section > div{
@@ -86,6 +97,8 @@
 
 #flex-direction{
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #flex-direction > div{
@@ -93,6 +106,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 
 h1{
     font-size: 40px;
@@ -171,27 +185,12 @@ h1{
     height: 118px;
 }
 
-#buttons-div{
-    /* margin-top: 80px; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 25px;
+#flex-direction > a{
+    align-self: flex-end;
+    margin-top: 50px;
 }
 
-#buttons-div > a > button{
-    max-width: 340px;
-    font-size: 15px;
-    font-weight: 700;
-    border-radius: 20px;
-    padding: 20px;
-    border: none;
-    background-color: var(--scale-1-blue);
-    color: var(--white);
-}
-
-#buttons-div :nth-child(2) > button{
+#flex-direction > a > button{
     width: 186px;
     height: 36px;
     border: none;
@@ -201,6 +200,7 @@ h1{
     font-weight: 600;
     font-size: 20px;
     padding: 0;
+    /* align-self: flex-end; */
 }
 
 article{
