@@ -37,14 +37,14 @@
 #my-reservations_section1 ul li {
     display: flex;
     margin-bottom: 40px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px 5px rgb(128 128 128 / 35%);
 }
 
 #my-reservations_section1 ul li > div{
     padding: 20px;
     width: 542px;
     box-sizing: border-box;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid var(--gray-border);
 }
 
 #my-reservations_section1 ul li>div p:nth-child(1) {
@@ -582,13 +582,14 @@
 
     #my-reservations_section1 ul li > div {
         width: 100%;
+        border-radius: 0 0 10px 10px;
     }
 
     footer h5,
     footer ul li,
     #scroll_up {
         display: none;
-    } 
+    }
 }
 
 @media(min-width: 621px) and (max-width: 841px)  { 
