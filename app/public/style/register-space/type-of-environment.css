@@ -274,3 +274,30 @@ article > div > :nth-child(2) > :nth-child(2) > p{
     font-weight: 500;
     font-size: 20px;
 }
+
+
+/*PERTENCENTE AO PARTIAL*/
+
+#header-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+}
+
+#header-buttons > a  button:focus{
+    background-color: #bdbdbd;
+    transition: .2s ease;
+}
+
+
+#header-buttons button{
+    width: 95px;
+    height: 40px;
+    background-color: var(--scale-3-gray);
+    border: none;
+    border-radius: 20px;
+    color: var(--text-1-black);
+    font-weight: 600;
+}
+
+/* #header-buttons */
