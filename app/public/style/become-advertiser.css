@@ -132,9 +132,9 @@ iframe{
     right: 0;
 }
 
-#adaptable-icon{
-    width: 33px;
-    height: 33px;
+.bx{
+    color: var(--scale-3-blue);
+    font-size: 40px;
 }
 
 #step-indication{
@@ -177,6 +177,8 @@ iframe{
     max-width: 225px;
     color: var(--scale-3-blue);
 }
+
+
 
 .check{
     width: 11px;

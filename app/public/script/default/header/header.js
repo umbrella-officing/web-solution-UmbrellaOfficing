@@ -111,3 +111,35 @@ const popUp_login_signUp = () => {
 
 openInputsearchCoworkingSpaces()
 menuHamburguer ()
+
+
+const openPop_profilePicture = () => {
+    const pictureProfile = document.querySelectorAll(".pictureProfile");
+    const container_popUp_profilePicture = document.getElementById("container_popUp_profilePicture");
+
+    console.log({pictureProfile})
+
+    pictureProfile.forEach(element=> {
+        element.addEventListener('click', () => {
+        container_popUp_profilePicture.style.display = 'flex'
+    })
+    })
+
+
+    closePop_profilePicture(container_popUp_profilePicture)
+    
+}
+
+function closePop_profilePicture(container_popUp_profilePicture) {
+    container_popUp_profilePicture.addEventListener('click', p => {
+
+        console.log(p.target)
+
+        if (p.target.id == 'close' || e.target == container_popUp_profilePicture) {
+            container_popUp_profilePicture.style.display = 'none'
+        }
+    })
+}
+
+openPop_profilePicture()
+

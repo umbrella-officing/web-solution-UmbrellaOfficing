@@ -1,9 +1,13 @@
+#my-account-sidebar_mobile {
+    display: none;
+}
+
 #calendar {
     position: relative;
 }
 
 #calendar>div {
-    padding: 220px 0 80px 0;
+    padding: 180px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
@@ -17,64 +21,6 @@
     height: 100%;
     width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
-}
-
-
-/*Menu lateral*/
-#calendar>div nav {
-    position: relative;
-    overflow: auto;
-}
-
-#calendar>div nav ul {
-    list-style: none;
-    position: fixed;
-}
-
-#calendar>div nav ul li {
-    display: flex;
-    height: 40px;
-    margin: 25px 0;
-    align-items: center;
-}
-
-#calendar>div nav ul li a {
-    text-decoration: none
-}
-
-.profile,
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    font-size: 26px;
-}
-
-.option_active a {
-    border-left: 3px solid #5B61C4;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--scale-13-blue);
-}
-
-.calendar {
-    margin: 0 10px 0 18px;
-}
-
-.profile,
-.wallet,
-.ads,
-.reserve {
-    color: var(--gray-border);
-    margin: 0 10px 0 21px;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 5px;
-    color: white;
 }
 
 /*Calendar: Conteúdo*/
@@ -184,9 +130,11 @@ button {
 #calendar_section1_container-header button {
     width: 30px;
     height: 29px;
+    border: none;
     border-radius: 50%;
     background-color: var(--scale-13-blue);
 }
+
 .chevron-left, .chevron-right {
     font-size: 14px;
     display: flex;
@@ -196,7 +144,7 @@ button {
 
 #calendar_section1_container {
     width: 744px;
-    border: 1px solid var(--scale-16-gray);
+    border: 1px solid var(--gray-border);
     padding: 25px;
     border-radius: 10px;
 }
@@ -219,23 +167,24 @@ button {
 }
 
 .day {
-    width: 106px;
+    width: 96px;
+    height: 96px;
     padding: 10px;
-    height: 100px;
     cursor: pointer;
     box-sizing: border-box;
     background-color: white;
-    box-shadow: 0px 0px 3px #cbd4c2;
+    margin: 5px; 
+    border: 1px solid var(--gray-border);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  
+    justify-content: space-between;
 }
 
 .day:hover {
     background-color: #f1f6ff;
 }
 
-.event {
+.shedules {
     font-size: 12px;
     padding: 5px;
     background-color: var(--scale-6-blue);
@@ -249,10 +198,11 @@ button {
 .padding {
     cursor: default !important;
     background-color: #FFFCFF !important;
-    box-shadow: none !important;
+    border: none !important;
 }
 
-#modalBackDrop {
+#container_popUp_addSchedule,
+#container_popUp_schedule {
     display: none;
     align-items: center;
     justify-content: center;
@@ -262,34 +212,35 @@ button {
     z-index: 8000;
     top: 0px;
     left: 0px;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.25); 
 }
 
-#newEventModal,
-#deleteEventModal {
+#popUp_addSchedule,
+#popUp_schedule {
     display: none;
-    z-index: 8500;
-    padding: 35px;
+    flex-direction: column; 
+    padding: 35px 30px 45px 30px;
     background-color: white;
-    border-radius: 5px;
-    width: 350px;
-    top: 100px;
-    left: calc(50% - 175px);
-    position: absolute;
+    box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%); 
+    border-radius: 16px;
+    width: 260px;
+    top: 100px;  
+    position: relative;  
+} 
+
+#popUp_addSchedule h2,
+#popUp_schedule h2 {
+   font-size: 22px;
+   text-align: center;
+   margin: 20px 0 25px 0;
 }
 
-#newEventModal h2,
-#deleteEventModal h2 {
-   font-weight: 25px;
-   margin-bottom: 25px;
+#popUp_addSchedule p,
+#popUp_schedule p {
+   margin-bottom: 10px;
 }
 
-#newEventModal p,
-#deleteEventModal p {
-   margin-bottom: 20px;
-}
-
-.eventTitleInput {
+.timeComplete {
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
@@ -300,15 +251,13 @@ button {
     font-size: 16px;
 }
 
-.eventTitleInput.error {
+.timeComplete.error {
     border: 1px solid var(--scale-12-red);
     background-color: #fff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(201, 4, 4, 0.25);
     transition: 0.3s ease-in-out;
 }
-
-
 
 .frequency-box {
     display: flex;
@@ -394,15 +343,16 @@ button {
 
 #cancelButton,
 #deleteButton,
-#saveButton,
-#closeButton {
-    width: 90px;
+#saveButton {
+    width: 100px;
+    padding: 6px;
+    border: none;
     border-radius: 20px;
     font-weight: 500;
+    color: #fff;
 }
 
-#saveButton,
-#closeButton {
+#saveButton {
     background-color: var(--scale-13-blue);
 }
 
@@ -411,8 +361,7 @@ button {
     background-color: var(--scale-12-red);
 }
 
-#saveButton,
-#closeButton {
+#saveButton {
     background-color: var(--scale-13-blue);
 }
 
@@ -421,8 +370,107 @@ button {
     margin-top: 15px;
 }
 
-.eventText {
+.shedules {
     font-size: 14px;
     margin-bottom: 15px;
 }
 
+@media(min-width: 300px) and (max-width: 620px){
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
+        display: none;
+    }  
+
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    #my-account-sidebar_mobile {
+        display: block;
+    }
+
+    main #my-ads::before { 
+        display: none; 
+    }
+
+    #my-account-menu {
+        display: none;
+    }
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    } 
+}
+
+@media(min-width: 621px) and (max-width: 841px)  { 
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
+        display: none;
+    }  
+
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    #my-account-sidebar_mobile {
+        display: block;
+    }
+
+    main #my-ads::before { 
+        display: none; 
+    }
+
+    #my-account-menu {
+        display: none;
+    }
+
+    main #my-ads>div {
+        padding-top: 130px;  
+    }
+   
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    } 
+
+}  
+
+@media(min-width: 841px) and (max-width: 1000px) { 
+    main #my-ads::before {  
+        width: 28%;
+    }
+
+    main #my-ads > div > div {
+        width: 68%;
+    }
+
+    #actives_space, 
+    #inactives_space {
+        width: 100%;
+    } 
+
+    #logo { 
+        max-width: 275px;
+    }
+
+    footer ul h5 {
+        font-size: 17px; 
+    }
+}

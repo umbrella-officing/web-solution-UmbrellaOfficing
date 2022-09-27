@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,21 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
-    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/home/home.css">
 </head>
+
 <body>
     <header id="header" class="container_margin_default">
         <div class="default_margin">
@@ -37,24 +43,24 @@
                             <input type="date" id="check_in">
                             <div class="popUp_input"></div>
                         </div>
+                    </div>
+                    <a href="#">
+                        <div>
+                            <img src="images/default/search.svg" alt="pesquisa">
                         </div>
-                        <a href="#">
-                            <div>
-                                <img src="images/default/search.svg" alt="pesquisa">
-                            </div>
-                        </a>  
+                    </a>
                 </div>
             </div>
 
             <div id="menu">
                 <div id='menu_sign-in-up'>
-                        <img src="images/default/user.svg" alt="usuário">
-                        <img src="images/default/menu_hamburguer.svg" alt="menu">
+                    <img src="images/default/user.svg" alt="usuário">
+                    <img src="images/default/menu_hamburguer.svg" alt="menu">
                 </div>
-               <div class="menu_open">
+                <div class="menu_open">
                     <div>
-                        <img src="images/default/perfil.png" alt="foto de perfil">
-                       <h3>Usuário <span>Cliente</span></h3>
+                        <img class="pictureProfile" src="images/default/perfil.png" alt="foto de perfil" >
+                        <h3>Usuário <span>Cliente</span></h3>
                     </div>
                     <div>
                         <nav>
@@ -67,13 +73,13 @@
                                     <img src="images/default/sign_up.png" alt="cadastre-se">
                                     Cadastre-se
                                 </li>
-                                
+
                             </ul>
                         </nav>
                     </div>
                     <div>
                         <a href="/central-de-ajuda"><img src="images/default/question.png" alt="sair da conta">
-                       Central de ajuda</a>
+                            Central de ajuda</a>
                     </div>
                 </div>
             </div>
@@ -85,12 +91,12 @@
                 <h3>Seja bem-vindo</h3>
                 <div>
                     <span>Faça seu login para continuar</span>
-                    <form>       
+                    <form>
                         <label for="cpf-email">
                             CPF ou E-mail :
                             <input type="text" id="cpf-email">
                         </label>
-                        
+
                         <label for="password-login">
                             Senha:
                             <input type="password" id="password-login">
@@ -99,7 +105,7 @@
                         <div>
                             <a href="#">Esqueceu a senha?</a>
                         </div>
-                        
+
                         <button type="submit">LOGIN</button>
                     </form>
                     <div id="alternatives">
@@ -112,7 +118,7 @@
                             <span>Ainda não possui conta? <a href="#">Cadastre-se</a></span>
                         </div>
                     </div>
-            </div>     
+                </div>
             </div>
             <div class="popUp">
                 <img class="close_popup" src="images/default/close_icon.svg" alt="close">
@@ -140,7 +146,7 @@
                             Data de nascimento
                             <input type="date" id="birth_date">
                         </label>
-                        
+
                         <label for="phone">
                             Telefone:
                             <input type="number" id="phone">
@@ -148,10 +154,72 @@
 
                         <button type="submit">CADASTRAR</button>
                     </form>
-            </div>        
+                </div>
+            </div>
+        </div>
+        <div id="container_popUp_profilePicture">
+            <div class="popUp_profilePicture">
+                <h2>Adicionar imagem de perfil</h2>
+        
+                <div>
+                    <div class="actionPicture">                    
+                        <img src="images/default/perfil.png" alt="Foto de perfil">
+                        <div>
+                            <button id="close">Fechar</button>
+                            <button id="salve">Guardar</button>
+                        </div>
+                    </div>
+        
+                    <div>
+                        <div class="uploadPicture">
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                            <p>Carregar imagem</p>
+                        </div>
+                        <div class="deletePicture">
+                            <i class="fa-solid fa-trash"></i>
+                            <p>Remover imagem</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
+
+    <div id="container-sidebar_mobile">
+        <div id="search-mobile">
+            <i class='bx bx-search icon'></i>
+        </div>
+
+        <div id="menu-mobile" class="container_margin_default">
+            <div class="default_margin">
+                <nav>
+                    <ul>
+                        <span>
+                            <div>
+                                <a href="#">
+                                    <i class='bx bx-home icon'></i></a>
+                                    <!-- <i class='bx bxs-home icon-active' ></i> -->
+                            </div>
+                            <li class="popUp-login-signUp">
+                                <i class='bx bx-user-circle icon'></i>
+                                <!-- <i class='bx bxs-user-circle icon-active'></i> -->
+                            </li>
+                        </span>
+
+                        <span>
+                            <li class="popUp-login-signUp">
+                                <i class='bx bx-user-plus icon'></i>
+                                <!-- <i class='bx bxs-user-plus icon-active'></i> -->
+                            </li>
+                            <div>
+                                <a href="/central-de-ajuda"><i class="fa-solid fa-question icon-help focus"></i></a>
+                            </div>
+                        </span>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
 
     <div id='box_black'></div>
 
@@ -187,7 +255,8 @@
                     <li>
                         <img id="geolocation" src="images/home/geolocation.svg" alt="Geolocalização">
                         <h4>Geolocalização</h4>
-                        <p>Trabalhe em várias localidades e pontos de referência. Em outras palavras... onde você quiser!</p>
+                        <p>Trabalhe em várias localidades e pontos de referência. Em outras palavras... onde você
+                            quiser!</p>
                     </li>
                     <li>
                         <img src="images/home/cost-benefit.png" alt="Custo benefício">
@@ -221,12 +290,16 @@
 
         <section id="home_section3" class="container_margin_default">
             <div class="default_margin">
-                <img src="images/home/community.png" alt="comunidade de anfitriões">
+                <picture>
+                    <source media="(max-width:841px)" srcset="images/home/community-tablet.png">
+                    <source media="(max-width:480px)" srcset="images/home/community-mobile.png">
+                    <img src="images/home/community-desktop.png" alt="Comunidade de proprietários">
+                </picture>
                 <div>
                     <h3>Excelência</h3>
                     <p>A nossa comunidade de proprietários garante a você as
-                    melhores reservas de espaços</p>
-                       <a href="#"><button>Reserve já</button></a>
+                        melhores reservas de espaços</p>
+                    <a href="#"><button>Reserve já</button></a>
                 </div>
             </div>
         </section>
@@ -387,7 +460,7 @@
                 <div>
                     <h3>Esclareça suas dúvidas <br> conosco</h3>
                     <p>Tire instantaneamente suas dúvidas através do nosso canal de atendimento no WhatsApp</p>
-                   <a href="#"><button>Entrar em contato</button></a>
+                    <a href="#"><button>Entrar em contato</button></a>
                 </div>
 
             </div>
@@ -400,40 +473,40 @@
 
         <div class="default_margin">
             <div id="margin2">
-            <div id="logo">
-                <img src="images/default/logo_footer.svg" alt="logo">
-                <h4>Escritorizando <span><br>espaços </span></h4>
-                <span>Umbrella Officing&copy 2022</span>
-            </div>
+                <div id="logo">
+                    <img src="images/default/logo_footer.svg" alt="logo">
+                    <h4>Escritorizando <span><br>espaços </span></h4>
+                    <span>Umbrella Officing&copy 2022</span>
+                </div>
 
-            <ul>
-                <h5>Junte-se a nós</h5>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Cadastre-se</a></li>
-                <li><a href="#">Sua conta</a></li>
-                <li><a href="#">Faça sua reserva</a></li>
-                <li><a href="#">Anuncie seu espaço</a></li>
-            </ul>
+                <ul>
+                    <h5>Junte-se a nós</h5>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Cadastre-se</a></li>
+                    <li><a href="#">Sua conta</a></li>
+                    <li><a href="#">Faça sua reserva</a></li>
+                    <li><a href="#">Anuncie seu espaço</a></li>
+                </ul>
 
-            <ul>
-                <h5>Atendimento</h5>
-                <li><a href="#">Chat</a></li>
-                <li><a href="#">Fórum</a></li>
-                <li><a href="#">Central de ajuda</a></li>
-            </ul>
+                <ul>
+                    <h5>Atendimento</h5>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Fórum</a></li>
+                    <li><a href="#">Central de ajuda</a></li>
+                </ul>
 
-            <ul>
-                <h5>Sobre nós</h5>
-                <li><a href="#">Quem somos?</a></li>
-                <li><a href="#">Missão, valores e visão</a></li>
-                <li><a href="#">Por que Umbrella Officing</a></li>
-                <li><a href="#">Desenvolvedores</a></li>
-            </ul>
+                <ul>
+                    <h5>Sobre nós</h5>
+                    <li><a href="#">Quem somos?</a></li>
+                    <li><a href="#">Missão, valores e visão</a></li>
+                    <li><a href="#">Por que Umbrella Officing</a></li>
+                    <li><a href="#">Desenvolvedores</a></li>
+                </ul>
 
             </div>
             <div id="bottom_footer">
                 <div>
-                    <div id="network_div"> 
+                    <div id="network_div">
                         <img src="images/default/icon_intagram_footer.svg" alt="ícone do instagram">
                         <img src="images/default/icon_facebook_footer.svg" alt="ícone do facebook">
                     </div>
@@ -441,9 +514,9 @@
                     <div id="scroll_up">
                         <img src="images/default/arrow_up.svg" alt="ícone de flecha">
                     </div>
-            </div>
+                </div>
 
-        </div>
+            </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -453,5 +526,7 @@
     <script src="script/default/header/header.js"></script>
     <script src="script/home/reports.js"></script>
     <script src="script/home/coworking_places_inspire.js"></script>
+
 </body>
+
 </html>

@@ -1,6 +1,5 @@
 const rating = () => {
 
-    const listStars = document.querySelector('.rating')
     const stars = document.querySelectorAll(".star")
 
 

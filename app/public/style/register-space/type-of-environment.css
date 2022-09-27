@@ -1,3 +1,81 @@
+/*MOBILE*/
+@media(min-width: 300px) and (max-width: 480px){
+    main #flex-direction > div{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main h1{
+        text-align: center; 
+        padding-bottom: 15px;
+        font-size: 30px;
+    }
+
+    main #second{
+        align-items: center;
+        width: 100%;
+    }
+
+    main #second > div{
+        width: 100%;
+    }
+
+    main #second > p{
+        text-align: center;
+        font-size: 16px;
+        max-width: 350px;
+    }
+
+    main #flex-direction > a{
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    main #flex-direction > a > button{
+       width: 100%;
+       max-width: 545px;
+       height: 42px;
+       border-radius: 25px;
+    }
+}
+
+/*TABLET*/
+@media(min-width: 481px) and (max-width: 840px){
+    #flex-direction > div{
+        flex-direction: column;
+    }
+
+    h1{
+        text-align: center; 
+        padding-bottom: 15px;
+    }
+
+    #second > p{
+        text-align: center;
+    }
+
+    main #buttons-div{
+        flex-direction:  column-reverse;
+        margin-top: 30px;
+    }
+
+    main #flex-direction > a{
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    main #flex-direction > a > button{
+       width: 100%;
+       max-width: 545px;
+       height: 42px;
+       border-radius: 25px;
+    }
+}
+
 .container_search{
     display: none;
 }
@@ -5,19 +83,42 @@
 #type-of-environment_section{
     height: calc(100vh - 105px);
     min-height: 720px;
-    max-height: 1050px;
+    /* max-height: 1050px; */
+    align-items: center;
+    padding-top: 105px;
 }
 
 #type-of-environment_section > div{
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 100%;
+    
 }
 
-#type-of-environment_section > div h1{
+#flex-direction{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#flex-direction > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+h1{
     font-size: 40px;
-    max-width: 306px;
+    max-width: 460px;
     color: var(--text-1-black);
+}
+
+#second > p{
+    font-size: 22px;
+    max-width: 545px;
+    font-weight: 400;
+    margin-bottom: 25px;
 }
 
 #align-elements{
@@ -34,14 +135,6 @@
     justify-content: flex-end;
     flex-direction: column;
     justify-content: space-between;
-
-}
-
-#second > div > p{
-    font-size: 20px;
-    max-width: 568px;
-    font-weight: 400;
-    margin-bottom: 25px;
 }
 
 #second > div > div{
@@ -58,8 +151,19 @@
     border: 1px solid var(--gray-border);
     border-radius: 15px;
     box-sizing: border-box;
-    width: 100%;
+    width: calc(50% - 3%);
     padding: 25px 10px 30px 10px;
+}
+
+.space-box{
+    cursor: pointer;
+}
+
+.space-box:focus{
+    border-color: #08bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, .25);
+    transition: 0.3s ease-in-out;
 }
 
 .hint{
@@ -81,26 +185,12 @@
     height: 118px;
 }
 
-#buttons-div{
-    /* margin-top: 80px; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+#flex-direction > a{
+    align-self: flex-end;
+    margin-top: 50px;
 }
 
-#buttons-div > a > button{
-    max-width: 340px;
-    font-size: 15px;
-    font-weight: 700;
-    border-radius: 20px;
-    padding: 20px;
-    border: none;
-    background-color: var(--scale-1-blue);
-    color: var(--white);
-}
-
-#buttons-div :nth-child(2) > button{
+#flex-direction > a > button{
     width: 186px;
     height: 36px;
     border: none;
@@ -110,6 +200,7 @@
     font-weight: 600;
     font-size: 20px;
     padding: 0;
+    /* align-self: flex-end; */
 }
 
 article{
@@ -183,3 +274,30 @@ article > div > :nth-child(2) > :nth-child(2) > p{
     font-weight: 500;
     font-size: 20px;
 }
+
+
+/*PERTENCENTE AO PARTIAL*/
+
+#header-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+}
+
+#header-buttons > a  button:focus{
+    background-color: #bdbdbd;
+    transition: .2s ease;
+}
+
+
+#header-buttons button{
+    width: 95px;
+    height: 40px;
+    background-color: var(--scale-3-gray);
+    border: none;
+    border-radius: 20px;
+    color: var(--text-1-black);
+    font-weight: 600;
+}
+
+/* #header-buttons */

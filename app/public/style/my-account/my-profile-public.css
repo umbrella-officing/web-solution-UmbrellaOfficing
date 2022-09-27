@@ -16,12 +16,12 @@
 
 .my-profile-public_section1-left {
     position: relative;
+    width: 35%;
 }
-
 
 .my-profile-public_section1-left>div:nth-of-type(1) {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -61,7 +61,6 @@
     border-radius: 16px;
 }
 
-
 .my-profile-public_section1-left-verification>div {
     display: flex;
 }
@@ -100,7 +99,7 @@
 .my-profile-public_section1-right {
     display: flex;
     justify-content: space-between;
-    width: 744px;
+    width: 65%;
 }
 
 .my-profile-public_section1-right>div:nth-child(2) {
@@ -131,3 +130,143 @@
     color: #0c87c1;
     margin-right: 10px;
 }
+
+@media(min-width: 300px) and (max-width: 480px){
+    #header {
+        display: none;
+    } 
+
+    main #my-profile-public_section1::before { 
+        height: calc(100% - 430px);
+        width: 100%; 
+    }
+
+    main #my-profile-public_section1>div {
+        padding-top: 20px;  
+        flex-direction: column;
+    }
+
+    main .my-profile-public_section1-left {
+        width: 100%;
+    }
+
+    main .my-profile-public_section1-left img {
+        width: 50px;
+    }
+
+    .my-profile-public_section1-left h4 {
+        font-size: 14px; 
+    } 
+
+    .my-profile-public_section1-right {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 50px;
+        flex-direction: column;
+    } 
+
+    .my-profile-public_section1-right h1 {
+        font-size: 23px; 
+    }
+
+    .my-profile-public_section1-right p {
+        font-size: 14px;
+        max-width: 98%;
+        margin: 10px 0 30px;
+    }
+
+    .my-profile-public_section1-right>div:nth-child(2) {
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .my-profile-public_section1-right>div:nth-child(2) img {
+        width: 16%; 
+    }
+
+    .whats,
+    .face,
+    .linkedin {
+        font-size: 2.3rem;
+        margin-bottom: 44px
+    }
+}
+
+@media(min-width: 481px) and (max-width: 841px) {
+    #header {
+        display: none;
+    }
+
+    main #my-profile-public_section1::before { 
+        width: calc(50% - 65px); 
+    }
+
+    main #my-profile-public_section1>div {
+        padding-top: 40px; 
+        align-items: flex-start;
+    } 
+
+    .my-profile-public_section1-left {
+        width: 30%;
+    } 
+
+    .my-profile-public_section1-left img {
+        width: 50px;
+    }
+
+    .my-profile-public_section1-left>div h3 { 
+        font-size: 16px; 
+    }
+
+    .my-profile-public_section1-left h4 {
+        font-size: 14px; 
+    }
+
+    .my-profile-public_section1-left-verification>div p { 
+        margin: 10px 0 8px 10px;
+    }
+
+    .my-profile-public_section1-right { 
+        width: 55%;
+        flex-direction: column;
+    }
+
+    .my-profile-public_section1-right h1 {
+        font-size: 23px; 
+    }
+
+    .my-profile-public_section1-right p {
+        font-size: 14px;
+        max-width: 98%;
+        margin: 10px 0 30px;
+    }
+
+    .my-profile-public_section1-right>div:nth-child(2) {
+        width: 218px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .my-profile-public_section1-right>div:nth-child(2) img {
+        width: 16%; 
+    }
+
+    .whats,
+    .face,
+    .linkedin {
+        font-size: 2.4rem;
+        margin-bottom: 44px
+    }
+}
+
+@media(min-width: 841px) and (max-width: 1000px) { 
+    #my-profile-public_section1::before { 
+        width: calc(50% - 175px); 
+    }
+
+    .my-profile-public_section1-right p { 
+        max-width: 97%; 
+    }
+} 

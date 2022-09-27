@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/my-account.css">
     <link rel="stylesheet" href="style/my-account/personal-date.css">
@@ -127,34 +128,74 @@
         </div>
     </header>
 
+    <nav id="my-account-sidebar_mobile" class="container_margin_default">
+        <div class="default_margin"> 
+                <ul>
+                        <li>
+                            <a href="/meu-perfil">
+                                <i class='bx bx-user icon'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bxs-wallet icon-active'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/minhas-reservas">
+                                <i class='bx bx-calendar-check icon'></i> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/meus-anuncios">
+                                <i class="fa-solid fa-bullhorn icon-ads"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/calendario">
+                                <i class='bx bx-calendar icon'></i> 
+                            </a>
+                        </li> 
+                </ul> 
+        </div>
+    </nav>
 
     <div id='box_black'></div>
 
     <main>
         <div id="personal-date" class="container_margin_default">
             <div class="default_margin">
-                <nav>
+                <nav id="my-account-menu">
                     <ul>
                         <li class="option">
-                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
-                                Meu perfil</a>
+                            <a href="/meu-perfil">
+                                <i class='bx bxs-user icon'></i>
+                                <span>Meu perfil</span>
+                            </a>
                         </li>
                         <li class="option_active">
                             <a href="#">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                Dados pessoais</a>
+                                <i class='bx bxs-wallet icon'></i>
+                                <span>Dados pessoais</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/minhas-reservas"><i class="fa-solid fa-calendar-check reserve"></i>
-                                Minhas reservas</a>
+                            <a href="/minhas-reservas">
+                                <i class='bx bx-calendar-check icon'></i> 
+                                <span>Minhas reservas</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
-                                Meus anúncios</a>
+                            <a href="/meus-anuncios">
+                                <i class="fa-solid fa-bullhorn icon_ads"></i>
+                                <span>Meus anúncios</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/calendario"><i class="fa-solid fa-calendar-days calendar"></i>
-                                Calendário</a>
+                            <a href="/calendario">
+                                <i class='bx bx-calendar icon'></i> 
+                                <span>Calendário</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -267,9 +308,9 @@
                                 <button type="submit" id="edit_ad">Editar informações</button>
                             </div>
                     </form>
+                </section>
             </div>
-        </div>
-        </div>
+        </div> 
     </main>
 
     <footer class="container_margin_default">

@@ -1,3 +1,7 @@
+#my-account-sidebar_mobile {
+    display: none;
+}
+
 #my-ads {
     position: relative;
 }
@@ -18,62 +22,6 @@
     width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
 }
-
-/*Meus anúncios: menu lateral*/
-#my-account_navigation {
-    position: relative;
-}
-
-#my-account_navigation ul {
-    list-style: none;
-    
-    position: fixed;
-}
-
-#my-account_navigation ul li {
-    height: 40px;
-    margin: 25px 0;
-    align-items: center;
-}
-
-#my-account_navigation ul li a {
-    text-decoration: none
-}
-
-.profile,
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    font-size: 26px;
-}
-
-
-.option_active a {
-    border-left: 3px solid #5B61C4;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--scale-13-blue);
-}
-
-.option a {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--text-1-black);
-}
-
-.ads {
-    margin: 0 10px 0 18px;
-}
-
-.profile,
-.wallet,
-.reserve,
-.calendar {
-    color: var(--gray-border);
-    margin: 0 10px 0 21px;
-}
-
 
 /*Meus anúncios: conteúdo*/
 #actives_space,
@@ -118,9 +66,7 @@ a {
 #actives_space ul li,
 #inactives_space ul li {
     display: flex;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px 5px rgb(128 128 128 / 35%);
+    margin-bottom: 40px; 
 }
 
 #actives_space ul li>div,
@@ -128,6 +74,8 @@ a {
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 0 10px 10px 0; 
+    border: 1px solid var(--gray-border); 
 }
 
 #actives_space ul li h2,
@@ -198,8 +146,7 @@ a {
     color: #fff;
     text-align: center;
     padding: 2px;
-}
-
+} 
 
 #solicitation_res {
     font-size: 14px;
@@ -245,7 +192,6 @@ a {
     box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 9%);
     padding: 20px;
     width: 800px;
-    height: 180px;
     animation: fadeIn ease .27s;
 }
 
@@ -281,15 +227,203 @@ a {
     margin: 30px 0;
 }
 
-#no {
-    background-color: var(--scale-14-blue);
-    border: none;
-    color: white;
-    margin-right: 30px;
-}
-
 #yes {
     background-color: white;
     border: 3px solid var(--scale-12-red);
     color: var(--scale-12-red);
+    margin-right: 30px;
+}
+
+#no {
+    background-color: var(--scale-14-blue);
+    border: none;
+    color: white;
+}
+
+@media(min-width: 300px) and (max-width: 620px){
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
+        display: none;
+    }  
+
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    #my-account-sidebar_mobile {
+        display: block;
+    }
+
+    main #my-ads::before { 
+        display: none; 
+    }
+
+    #my-account-menu {
+        display: none;
+    }
+
+    main #my-ads>div {
+        padding-top: 130px; 
+        margin: 0 54px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #actives_space, 
+    #inactives_space {
+        width: 100%;
+    }
+    
+    #actives_space ul li, 
+    #inactives_space ul li {
+        flex-direction: column;
+    }
+
+    #actives_space ul li>div,
+    #inactives_space ul li>div {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .my-ads_space-div-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+
+    .my-ads_space-div-flex button {
+        margin-top: 15px;
+    }
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    } 
+
+    /*Pop up - Deletar espaço*/  
+    .popUp_delete {
+        width: 70%;
+        margin: 0 16px;
+    }
+
+    .popUp_delete p { 
+        font-size: 15px; 
+    }
+
+    .popUp_delete>div button {
+        width: 110px;
+        height: 29px; 
+        font-size: 15px; 
+    }
+
+    #yes {
+        margin-right: 15px;
+    } 
+}
+
+@media(min-width: 621px) and (max-width: 841px)  { 
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
+        display: none;
+    }  
+
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    #my-account-sidebar_mobile {
+        display: block;
+    }
+
+    main #my-ads::before { 
+        display: none; 
+    }
+
+    #my-account-menu {
+        display: none;
+    }
+
+    main #my-ads>div {
+        padding-top: 130px;  
+    }
+
+    main #my-ads>div>div {
+        width: 100%;
+    }
+
+    #actives_space, 
+    #inactives_space {
+        width: 100%;
+    }  
+
+    .my-ads_space-div-flex { 
+        align-items: flex-start; 
+    } 
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    } 
+
+    /*Pop up - Deletar espaço*/
+    .popUp_delete {
+        width: 90%; 
+        margin: 0 16px;
+    }
+} 
+
+@media(min-width: 841px) and (max-width: 900px) {
+    .my-ads_space-div-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .my-ads_space-div-flex button {
+        margin-top: 10px;
+    }
+}
+
+@media(min-width: 841px) and (max-width: 1000px) { 
+    main #my-ads::before {  
+        width: 28%;
+    }
+
+    #my-ads #my-ads_spaces {
+        width: 68%;
+    }
+
+    #actives_space, 
+    #inactives_space {
+        width: 100%;
+    }
+
+    #logo { 
+        max-width: 275px;
+    }
+
+    footer ul h5 {
+        font-size: 17px; 
+    }
+
+    /*Pop up - Deletar espaço*/
+    .popUp_delete { 
+        width: 766px; 
+    }
 }
