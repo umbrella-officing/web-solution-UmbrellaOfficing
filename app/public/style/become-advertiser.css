@@ -28,11 +28,12 @@ header a {
     font-weight: 600;
 }
 
+#become-advertiser_section2{
+    padding: 98px 0;
+}
 
 #become-advertiser_section2 > div{
     justify-content: space-between;
-
-
 }
 
 #become-advertiser_section2 > div > :first-child{
@@ -131,17 +132,24 @@ iframe{
     right: 0;
 }
 
-#adaptable-icon{
-    width: 33px;
-    height: 33px;
+.bx{
+    color: var(--scale-3-blue);
+    font-size: 40px;
 }
 
-#section3-slide > p{
+.align-top-slide{
+    display: flex;
+    justify-content: space-between;
+}
+
+.align-top-slide p{
     font-weight: 700;
     font-size: 18px;
     max-width: 225px;
     color: var(--scale-3-blue);
 }
+
+
 
 .check{
     width: 11px;
@@ -254,4 +262,3 @@ iframe{
     position: absolute;
     z-index: -1;
 }
-
