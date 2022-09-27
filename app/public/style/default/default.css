@@ -685,7 +685,7 @@ footer a {
     background-color: var(--scale-3-purple);
 }
 
-@media(min-width: 300px) and (max-width: 620px) {
+@media(min-width: 300px) and (max-width: 481px) {
     .default_margin {
         width: 100%;
         margin: 0 8px;

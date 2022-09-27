@@ -31,7 +31,7 @@ frequencyList.forEach(f => {
 });
 
 $(document).ready(function () {
-  $("#eventTitleInput").inputmask("h:s",{ "placeholder": "hh/mm" });
+  $("timeComplete").inputmask("h:s",{ "placeholder": "hh/mm" });
 });
 
 let nav = 0;
@@ -39,8 +39,8 @@ let clicked = null;
 let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
 
 const calendar = document.getElementById('calendar-data');
-const newEventModal = document.getElementById('newEventModal');
-const deleteEventModal = document.getElementById('deleteEventModal');
+const newEventModal = document.getElementById('container_popUp_addSchedule');
+const deleteEventModal = document.getElementById('popUp_schedule');
 const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.querySelectorAll('.timeComplete');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
