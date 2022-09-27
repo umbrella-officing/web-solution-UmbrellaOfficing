@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/my-account.css">
     <link rel="stylesheet" href="style/my-account/calendar.css">
@@ -57,7 +58,7 @@
                     </div>
                     <div>
                         <a href="/central-de-ajuda"></a><img src="images/default/question.png" alt="sair da conta">
-                       Central de ajuda</a>
+                        Central de ajuda</a>
                     </div>
                 </div>
                 <div id="container_popUp_login-signUp">
@@ -135,33 +136,74 @@
                 </div>
     </header>
 
+    <nav id="my-account-sidebar_mobile" class="container_margin_default">
+        <div class="default_margin">
+            <ul>
+                <li>
+                    <a href="/meu-perfil">
+                        <i class='bx bx-user icon'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dados-pessoais">
+                        <i class='bx bx-wallet icon'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/minhas-reservas">
+                        <i class='bx bx-calendar-check icon'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="/meus-anuncios">
+                        <i class="fa-solid fa-bullhorn icon-ads"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-calendar icon-active'></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div id='box_black'></div>
 
     <main>
         <div id="calendar" class="container_margin_default">
             <div class="default_margin">
-                <nav>
+                <nav id="my-account-menu">
                     <ul>
                         <li class="option">
-                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
-                                Meu perfil</a>
+                            <a href="/meu-perfil">
+                                <i class='bx bxs-user icon'></i>
+                                <span>Meu perfil</span>
+                            </a>
                         </li>
                         <li class="option">
                             <a href="/dados-pessoais">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                Dados pessoais</a>
+                                <i class='bx bx-wallet icon'></i>
+                                <span>Dados pessoais</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/minhas-reservas"><i class="fa-solid fa-calendar-check reserve"></i>
-                                Minhas reservas</a>
+                            <a href="/minhas-reservas">
+                                <i class='bx bx-calendar-check icon'></i>
+                                <span>Minhas reservas</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
-                                Meus anúncios</a>
+                            <a href="/meus-anuncios">
+                                <i class="fa-solid fa-bullhorn icon_ads"></i>
+                                <span>Meus anúncios</span>
+                            </a>
                         </li>
                         <li class="option_active">
-                            <a href="#"><i class="fa-solid fa-calendar-days calendar"></i>
-                                Calendário</a>
+                            <a href="#">
+                                <i class='bx bxs-calendar icon'></i>
+                                <span>Calendário</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -221,14 +263,17 @@
 
         </div>
 
-        <div id="newEventModal">
+        <div id="container_popUp_addSchedule">
+            <div id="popUp_addSchedule">
+                <img class="close_popup" src="images/default/close_icon.svg" alt="close">
+                
                 <h2>Adicionar horário</h2>
-            
+
                 <p>Abertura</p>
-                <input class="eventTitleInput outline-focus" placeholder="00:00" />
+                <input class="timeComplete outline-focus" placeholder="00:00" />
 
                 <p>Fechamento</p>
-                <input class="eventTitleInput outline-focus" placeholder="00:00" />
+                <input class="timeComplete outline-focus" placeholder="00:00" />
 
                 <div class="frequency-box">
                     <div class="frequency-container">
@@ -246,7 +291,7 @@
                             <input type="radio" class="radio1" id="week" name="category" />
                             <option for="week">Essa semana</option>
                         </div>
-                        
+
                         <div class="frequency">
                             <input type="radio" class="radio1" id="year" name="category" />
                             <option for="year">Apenas esse dia</option>
@@ -258,20 +303,24 @@
                     </div>
                 </div>
 
-                <button id="saveButton">Salvar</button>
-                <button id="cancelButton">Cancelar</button>
+                <div>
+                    <button id="saveButton">Salvar</button>
+                    <button id="cancelButton">Cancelar</button>
+                </div>
+
+                
             </div>
         </div>
-        <div id="deleteEventModal">
-            <h2>Horário de abertura e fechamento</h2>
-            <p class="eventText"></p>
-            <p></p>
+        <div id="container_popUp_schedule">
+            <div id="popUp_schedule">
+                <img class="close_popup" src="images/default/close_icon.svg" alt="close">
 
-            <button id="deleteButton">Deletar</button>
-            <button id="closeButton">Fechar</button>
+                <h2>Horário de abertura e fechamento</h2>
+                <p class="shedules"></p> 
+ 
+                <button id="deleteButton">Deletar</button>  
+            </div>
         </div>
-
-        <div id="modalBackDrop"></div>
 
     </main>
 
@@ -328,9 +377,9 @@
 
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script/default/header/header.js"></script>

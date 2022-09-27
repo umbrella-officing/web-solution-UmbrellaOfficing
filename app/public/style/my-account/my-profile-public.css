@@ -61,7 +61,6 @@
     border-radius: 16px;
 }
 
-
 .my-profile-public_section1-left-verification>div {
     display: flex;
 }
@@ -135,10 +134,6 @@
 @media(min-width: 300px) and (max-width: 480px){
     #header {
         display: none;
-    }
-
-    .default_margin {
-        margin: 0 8px;
     } 
 
     main #my-profile-public_section1::before { 
@@ -182,9 +177,20 @@
     }
 
     .my-profile-public_section1-right>div:nth-child(2) {
-        width: 210px;
+        width: 200px;
         display: flex;
         justify-content: space-between;
+    }
+
+    .my-profile-public_section1-right>div:nth-child(2) img {
+        width: 16%; 
+    }
+
+    .whats,
+    .face,
+    .linkedin {
+        font-size: 2.3rem;
+        margin-bottom: 44px
     }
 }
 
@@ -241,6 +247,17 @@
         width: 218px;
         display: flex;
         justify-content: space-between;
+    }
+
+    .my-profile-public_section1-right>div:nth-child(2) img {
+        width: 16%; 
+    }
+
+    .whats,
+    .face,
+    .linkedin {
+        font-size: 2.4rem;
+        margin-bottom: 44px
     }
 }
 

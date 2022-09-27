@@ -42,7 +42,7 @@ const calendar = document.getElementById('calendar-data');
 const newEventModal = document.getElementById('newEventModal');
 const deleteEventModal = document.getElementById('deleteEventModal');
 const backDrop = document.getElementById('modalBackDrop');
-const eventTitleInput = document.querySelectorAll('.eventTitleInput');
+const eventTitleInput = document.querySelectorAll('.timeComplete');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 function openModal(date) {
@@ -165,8 +165,7 @@ function initButtons() {
   });
 
   document.getElementById('saveButton').addEventListener('click', saveEvent);
-  document.getElementById('cancelButton').addEventListener('click', closeModal);
-  document.getElementById('deleteButton').addEventListener('click', deleteEvent);
+  document.getElementById('cancelButton').addEventListener('click', closeModal); 
   document.getElementById('closeButton').addEventListener('click', closeModal);
 }
 

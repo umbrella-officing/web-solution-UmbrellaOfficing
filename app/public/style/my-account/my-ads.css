@@ -146,8 +146,7 @@ a {
     color: #fff;
     text-align: center;
     padding: 2px;
-}
-
+} 
 
 #solicitation_res {
     font-size: 14px;
@@ -228,17 +227,17 @@ a {
     margin: 30px 0;
 }
 
-#no {
-    background-color: var(--scale-14-blue);
-    border: none;
-    color: white;
-    margin-right: 30px;
-}
-
 #yes {
     background-color: white;
     border: 3px solid var(--scale-12-red);
     color: var(--scale-12-red);
+    margin-right: 30px;
+}
+
+#no {
+    background-color: var(--scale-14-blue);
+    border: none;
+    color: white;
 }
 
 @media(min-width: 300px) and (max-width: 620px){
@@ -309,20 +308,25 @@ a {
         display: none;
     } 
 
-    
-    /*Pop-up - Cancelar reserva*/
+    /*Pop up - Deletar espaço*/  
     .popUp_delete {
         width: 70%;
         margin: 0 16px;
     }
 
-    .popUp_delete div {
-        flex-direction: column-reverse;
+    .popUp_delete p { 
+        font-size: 15px; 
     }
 
-    #no {
-        margin-right: 0;
+    .popUp_delete>div button {
+        width: 110px;
+        height: 29px; 
+        font-size: 15px; 
     }
+
+    #yes {
+        margin-right: 15px;
+    } 
 }
 
 @media(min-width: 621px) and (max-width: 841px)  { 
@@ -377,11 +381,9 @@ a {
         display: none;
     } 
 
-    
-    /*Pop-up - Cancelar reserva*/
+    /*Pop up - Deletar espaço*/
     .popUp_delete {
-        width: 70%;
-        height: 20%;
+        width: 90%; 
         margin: 0 16px;
     }
 } 
@@ -403,14 +405,14 @@ a {
         width: 28%;
     }
 
-    main #my-ads > div > div {
+    #my-ads #my-ads_spaces {
         width: 68%;
     }
 
     #actives_space, 
     #inactives_space {
         width: 100%;
-    } 
+    }
 
     #logo { 
         max-width: 275px;
@@ -418,5 +420,10 @@ a {
 
     footer ul h5 {
         font-size: 17px; 
+    }
+
+    /*Pop up - Deletar espaço*/
+    .popUp_delete { 
+        width: 766px; 
     }
 }
