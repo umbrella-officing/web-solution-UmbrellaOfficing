@@ -7,7 +7,8 @@
     <title>Document</title>
     <style>
         button{
-            margin-top: 10px;
+            margin: 10px 0;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -36,13 +37,13 @@
             </div>
             <% } %>
 
-        <h1>Teste</h1>
-
         <form class="register-form" method="post" action="/cadastro">
             <h2>Cadastro</h2>
             <input type="text" placeholder="Nome:" name="name" value="<%= valores.nome_user%>" /> <br>
+            <input type="text" placeholder="E-mail" name="email_user"/><br>
             <input type="password" placeholder="Senha:" name="senha" value="<%= valores.senha%>" /> <br>
             <button>Cadastrar</button><br>
         </form>
+        <p class="message">Já é cadastrado? <a href="/login">Faça seu Login</a></p>
 </body>
 </html>

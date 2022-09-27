@@ -21,11 +21,12 @@ app.use(bodyParser.urlencoded({
 app.use(expressValidator());
 
 // Configurar o express-session midlleware
-app.use(session({
-    secret: 'keyboard cat', // palavra-secreta garante que a sessão seja única
-    resave: false
-    // saveUninitialized: false
-}));
+app.use(
+    session({
+      secret: "keyboard cat",
+      resave: false,
+      saveUninitialized: false,
+  }));
 
 // Chamando função 
 consig()
