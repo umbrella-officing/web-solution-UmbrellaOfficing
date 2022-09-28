@@ -118,6 +118,21 @@
         flex-direction: row;
         justify-content: space-between;
     }
-    
+}
+
+@media(min-width: 841px) and (max-width: 1159px) {
+    #admin::before {
+        width: 28%;
+    }
+
+    #ads-control_section1 {
+        width: 68%;
+    }
+
+    #ads-control_section1 ul li {
+        display: flex;
+        width: 100%; 
+        justify-content: space-between;
+    }
 }
 

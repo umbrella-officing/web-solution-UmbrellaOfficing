@@ -266,3 +266,25 @@
     }  
 
 }  
+
+@media(min-width: 841px) and (max-width:1160px)  { 
+    #users-control_section1 h1~div,
+    #ads-control_section1 h1~div {
+        display: flex;
+    }
+
+    .container_search-admin_input {
+        width: 60%;
+        margin-bottom: 25px;
+    }
+
+    .container_search-admin_input div {
+        position: absolute;
+        right: 0;
+    }
+
+    .select-box {
+        width: 35%;
+    }  
+
+}  

@@ -26,6 +26,8 @@ ul {
 }
 
 #users-control_section1 ul li div img {
+    width: 55px;
+    height: 65px;
     margin-right: 10px;
 }
 
@@ -146,4 +148,87 @@ ul {
 
 .linkedin {
     color: #0c87c1;
+}
+
+@media(min-width: 300px) and (max-width: 500px)  { 
+    #admin nav {
+        display: none;
+    }
+
+    #admin::before {
+        display: none;
+    }
+
+    #users-control_section1 {
+        width: 100%;
+    }
+
+    #users-control_section1 ul li {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    #users-control_section1 ul li div:nth-child(1) {
+        display: flex;
+        padding-bottom: 20px;
+    }
+
+    #users-control_section1 ul li div:nth-child(3) {
+        display: flex;
+        width: 270px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+} 
+
+@media(min-width: 500px) and (max-width: 841px) {
+    #admin nav {
+        display: none;
+    }
+
+    #admin::before {
+        display: none;
+    }
+
+    #users-control_section1 {
+        width: 100%;
+    }
+
+    #users-control_section1 ul li {
+        width: 100%;
+        display: flex; 
+        text-align: left;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    #users-control_section1 ul li div:nth-child(1) {
+        display: flex;
+        padding-bottom: 20px;
+    }
+
+    #users-control_section1 ul li div:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 841px) and (max-width: 1159px) {
+    #admin::before {
+        width: 28%;
+    }
+
+    #users-control_section1 {
+        width: 68%;
+    }
+
+    #users-control_section1 ul li {
+        display: flex;
+        width: 100%; 
+        justify-content: space-between;
+    }
 }
