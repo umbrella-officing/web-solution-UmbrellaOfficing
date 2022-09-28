@@ -1,10 +1,12 @@
 var bcrypt = require("bcryptjs");
 var salt = bcrypt.genSaltSync(12);
 
+
 module.exports.index = (application, req, res) => {
     const connection = application.config.dbConnection;
     const noticiasDao = new application.app.models.UsersDAO(connection);
     noticiasDao.get5UltimasNoticias((error, result) => {
+      console.log(result)
       res.render("teste/register",
       {
        sala:result,
@@ -27,21 +29,21 @@ module.exports.registerUser = (application, req, res) =>{
     email_usuario: req.body.email_usu,
     };
 
-  // req.assert('nome_user', 'Mínimo 3 caracters')
+  req.assert('nome_usu', 'Mínimo 3 caracters').len(3, 100);
 
-  // const erros = req.validationErrors()
-// 
-//   if (erros) {
-//     noticiasDao.get5UltimasNoticias((error, result) => {
-//       res.render("teste/register", 
-//       {
-//        sala:null,
-//        validacao:erros,
-//        "valores":req.body
-//       })
-//     })
-//     return;
-// }
+  const erros = req.validationErrors()
+
+  if (erros) {
+    noticiasDao.get5UltimasNoticias((error, result) => {
+      res.render("teste/register", 
+      {
+       sala:null,
+       validacao:erros,
+       "valores":req.body
+      })
+    })
+    return;
+}
 
   noticiasDao.registerUser(dadosForm, (error, result) => {
       res.redirect('/cadastro');
@@ -64,16 +66,16 @@ module.exports.formLogin = (application, req, res) =>{
     const connection = application.config.dbConnection;
     const usersDao = new application.app.models.UsersDAO(connection);
 
-    usersDao.login(dadosForm, function(error, results){
+    usersDao.login(dadosForm, (error, results) =>{
 
       if (error) throw error;
         var total = Object.keys(results).length;
         
         if (total == 1) {
           if (bcrypt.compareSync(dadosForm.senha_usuario,results[0].senha_usuario)) {
-                res.redirect("/login");
+              return res.redirect("/login");
           }
         }
-        console.log('teste 2')
+        res.redirect("/cadastro");
     }
     )}
