@@ -8,7 +8,8 @@
     main h1{
         text-align: center; 
         padding-bottom: 15px;
-        font-size: 30px;
+        font-size: 20px;
+        max-width: 330px;;
     }
 
     main #second{
@@ -16,21 +17,45 @@
         width: 100%;
     }
 
-    main #second > div{
+    /* main #second > div{
         width: 100%;
+    } */
+
+    main #second > div > div{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main #second .space-box{
+        width: 100%;
+        justify-content: center;
+    }
+
+    main #second .space-box:first-child{
+        margin-bottom: 25px;
+    }
+
+    main #second .space-box > p{
+        font-size: 16px;
+    }
+
+    main .space-drawing{
+        width: 95px;
+        height: 82px;
     }
 
     main #second > p{
         text-align: center;
-        font-size: 16px;
-        max-width: 350px;
+        font-size: 14px;
+        max-width: 250px;
     }
-
+    
     main #flex-direction > a{
         align-self: center;
         display: flex;
         justify-content: center;
         width: 100%;
+        text-decoration: none;
     }
 
     main #flex-direction > a > button{
@@ -39,10 +64,19 @@
        height: 42px;
        border-radius: 25px;
     }
+
+    main article > div{
+        width: 80%;
+        height: fit-content;
+    }
+
+    main article > div p{
+        font-size: 17px;
+    }
 }
 
 /*TABLET*/
-@media(min-width: 481px) and (max-width: 840px){
+@media(min-width: 481px) and (max-width: 1000px){
     #flex-direction > div{
         flex-direction: column;
     }
@@ -66,6 +100,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        text-decoration: none;
     }
 
     main #flex-direction > a > button{
@@ -142,9 +177,8 @@ h1{
     justify-content: space-between;
 }
 
-#second > div > div > div{
+#second .space-box{
     max-width: 273px;
-    height: 293px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -152,7 +186,7 @@ h1{
     border-radius: 15px;
     box-sizing: border-box;
     width: calc(50% - 3%);
-    padding: 25px 10px 30px 10px;
+    padding: 35px 10px 45px 10px;
 }
 
 .space-box{
@@ -180,7 +214,7 @@ h1{
     margin-top: 20px
 }
 
-#typeOf1, #typeOf2{
+.space-drawing{
     width: 136px;
     height: 118px;
 }
@@ -188,6 +222,7 @@ h1{
 #flex-direction > a{
     align-self: flex-end;
     margin-top: 50px;
+    text-decoration: none;
 }
 
 #flex-direction > a > button{
@@ -256,41 +291,35 @@ article > div > div > :nth-child(2) > div{
     flex-direction: column;
 }
 
-article > div > :nth-child(2) > div  > img{
-    width: 136px;
-    height: 118px;  
-    margin-bottom: 13px; 
-}
-
-article > div > :nth-child(2) > :first-child > p{
+article > div h3{
     max-width: 140px;
     text-align: center;
     font-size: 22px;
     font-weight: 600;
+    margin-top: 10px;
 }
 
-article > div > :nth-child(2) > :nth-child(2) > p{
-    max-width: 245px;
-    font-weight: 500;
+article > div p{
     font-size: 20px;
+    margin-left: 16px;
 }
 
 
 /*PERTENCENTE AO PARTIAL*/
 
-#header-buttons{
+.header-buttons{
     display: flex;
     justify-content: space-between;
     width: 210px;
 }
 
-#header-buttons > a  button:focus{
+.header-buttons > a  button:hover{
     background-color: #bdbdbd;
-    transition: .2s ease;
 }
 
 
-#header-buttons button{
+.header-buttons button{
+    transition: .3s ease;
     width: 95px;
     height: 40px;
     background-color: var(--scale-3-gray);
