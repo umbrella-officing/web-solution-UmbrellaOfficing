@@ -21,26 +21,27 @@ module.exports.registerUser = (application, req, res) =>{
   const noticiasDao = new application.app.models.UsersDAO(connection);
 
   var dadosForm = {
-      name: req.body.name,
-      email_user:req.body.email_user,
-      senha:bcrypt.hashSync(req.body.senha, salt)
+    user_usuario: req.body.nomeusu_usu,
+    senha_usuario: bcrypt.hashSync(req.body.senha_usu, salt),
+    nome_usuario: req.body.nome_usu,
+    email_usuario: req.body.email_usu,
     };
 
-  req.assert('nome_user', 'Mínimo 3 caracters')
+  // req.assert('nome_user', 'Mínimo 3 caracters')
 
-  const erros = req.validationErrors()
-
-  if (erros) {
-    noticiasDao.get5UltimasNoticias((error, result) => {
-      res.render("teste/register", 
-      {
-       sala:null,
-       validacao:erros,
-       "valores":req.body
-      })
-    })
-    return;
-}
+  // const erros = req.validationErrors()
+// 
+//   if (erros) {
+//     noticiasDao.get5UltimasNoticias((error, result) => {
+//       res.render("teste/register", 
+//       {
+//        sala:null,
+//        validacao:erros,
+//        "valores":req.body
+//       })
+//     })
+//     return;
+// }
 
   noticiasDao.registerUser(dadosForm, (error, result) => {
       res.redirect('/cadastro');
@@ -55,23 +56,24 @@ module.exports.login = (application, req, res) =>{
 
 module.exports.formLogin = (application, req, res) =>{
   
-    const dadosForm = req.body
+  var dadosForm = {
+    user_usuario: req.body.nome_usu,
+    senha_usuario: req.body.senha_usu,
+  };
+
     const connection = application.config.dbConnection;
     const usersDao = new application.app.models.UsersDAO(connection);
 
-    usersDao.login(dadosForm,(error, result)=>{
-      if(error) throw error
-      var total = Object.keys(result).length;
-        
-      if (total == 1) {
-        if (bcrypt.compareSync(dadosForm.senha,result[0].senha)) {
-            console.log(result)
-        }
-        
-      }
-      res.redirect("/");
-    })
-    
+    usersDao.login(dadosForm, function(error, results){
 
-    res.redirect('/login')
-}
+      if (error) throw error;
+        var total = Object.keys(results).length;
+        
+        if (total == 1) {
+          if (bcrypt.compareSync(dadosForm.senha_usuario,results[0].senha_usuario)) {
+                res.redirect("/login");
+          }
+        }
+        console.log('teste 2')
+    }
+    )}
