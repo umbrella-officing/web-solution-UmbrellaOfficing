@@ -54,13 +54,13 @@ const rating = () => {
           
           if(index == index){
               for (let i = 0; i <= index; i++) {
-                arr[i].querySelectorAll('.rating-bar-active')
+                arr[i].classList.add('rating-bar-active')
               }
           }
 
           if(current_bar_level < lengthBars){
           for (let i = index+1; i < lengthBars; i++) {
-              arr[i].querySelectorAll('.rating-bar')
+              arr[i].classList.remove('rating-bar-active')
             }
           }
 
