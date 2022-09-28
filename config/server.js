@@ -6,8 +6,6 @@ const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 const session = require('express-session');
 
- // exemplo de como trabalhar com módulos pessoais
-
 const app = express();
 /*Declaração da utilização do EJS. 
 A tecnologia de renderização, máquina será o EJS*/
@@ -21,12 +19,11 @@ app.use(bodyParser.urlencoded({
 app.use(expressValidator());
 
 // Configurar o express-session midlleware
-app.use(
-    session({
-      secret: "keyboard cat",
-      resave: false,
-      saveUninitialized: false,
-  }));
+app.use(session({
+    secret: 'keyboard cat', // palavra-secreta garante que a sessão seja única
+    resave: false
+    // saveUninitialized: false
+}));
 
 // Chamando função 
 consig()

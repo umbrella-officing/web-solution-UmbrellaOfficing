@@ -37,13 +37,19 @@
             </div>
             <% } %>
 
-        <form class="register-form" method="post" action="/cadastro">
-            <h2>Cadastro</h2>
-            <input type="text" placeholder="Nome:" name="name" value="<%= valores.nome_user%>" /> <br>
-            <input type="text" placeholder="E-mail" name="email_user"/><br>
-            <input type="password" placeholder="Senha:" name="senha" value="<%= valores.senha%>" /> <br>
-            <button>Cadastrar</button><br>
-        </form>
-        <p class="message">Já é cadastrado? <a href="/login">Faça seu Login</a></p>
+            <div class="login-page">
+
+                <div class="form-cadastro">
+                    <form class="register-form" method="post" action="/cadastro">
+                        <h2>Cadastro</h2>
+                        <input type="text" placeholder="Nome" name="nome_usu" /> <br>
+                        <input type="text" placeholder="Nome de usuário" name="nomeusu_usu"/><br>
+                        <input type="text" placeholder="e-mail " name="email_usu"/><br>
+                        <input type="password" placeholder="senha" name="senha_usu"/><br>
+                        <button>Cadastrar</button><br>
+                        <p class="message">Já é cadastrado? <a href="/login">Entre</a></p>
+                    </form>
+                </div>
+            </div>
 </body>
 </html>

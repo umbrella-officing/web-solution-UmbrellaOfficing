@@ -18,7 +18,7 @@ UsersDAO.prototype.get5UltimasNoticias = function (noticia, callback) {
 }
 
 UsersDAO.prototype.login = function (user, callback) {
-    this._connection.query(`select * from teste where name = ? or email_user = ?`,[`${user.dadosuser}, ${user.dadosuser}`], callback);
+    this._connection.query(`SELECT * FROM teste WHERE user_usuario = ? or email_usuario = ?`, [user.user_usuario, user.user_usuario], callback);
 }
 
 module.exports = function () {
