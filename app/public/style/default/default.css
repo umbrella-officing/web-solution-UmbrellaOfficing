@@ -276,9 +276,25 @@ header > div {
     width: 62%;
 }
 
-.menu_open > div:first-child img{
+.picture_edit {
+    display: flex;
+    width: 71px;
+    align-items: center;
+    position: relative;
+}
+
+.picture_edit img{
     margin-right: 21px;
     width: 70px;
+}
+
+.picture_edit i { 
+    margin: 0 37px -65px;
+    color: #FFE;
+    background: var(--scale-2-purple);
+    padding: 11px;
+    position: absolute;
+    border-radius: 30px;
 }
 
 .menu_open > div:first-child h3{

@@ -503,7 +503,7 @@
     }
 
     main #home_section1>div>div:nth-child(2) {
-        width: 330px;
+        width: 320px;
     }
 
     main #home_section1>div>div:nth-child(2)::before {
@@ -516,7 +516,7 @@
     }
 
     .home_section1_call_action {
-        padding: 14px;
+        padding: 12px;
     }
 
     .home_section1_call_action p {
