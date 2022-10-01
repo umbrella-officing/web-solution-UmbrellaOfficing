@@ -36,11 +36,22 @@
                     <span id="search_txt">Pesquise locais para trabalhar</span>
                     <div id='container_informations_find_coworking'>
                         <div>
-                            <input id="localization" type="text" placeholder="Localização:">
+                            <input id="localization" class="search-information" type="text" placeholder="Localização:">
                             <div class="popUp_input"></div>
                         </div>
                         <div>
-                            <input type="date" id="check_in">
+                            <input type="date" id="check_in" class="search-information">
+                            <div class="popUp_input"></div>
+                        </div>
+                        <div>
+                            <select name="period" id="period" class="search-information" placeholder="Período">
+                                <option value="morning">Manhã</option>
+                                <option value="afternoon">Tarde</option>
+                                <option value="evening">Noite</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="text" id="people" class="search-information" placeholder="Pessoas">
                             <div class="popUp_input"></div>
                         </div>
                     </div>
