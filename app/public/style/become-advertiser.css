@@ -75,14 +75,15 @@
         display: none;
     }
 
-    main #become-advertiser_section3 h2{
-        max-width: 550px;
+    main #become-advertiser_section3 span{
         position: relative;
         top: 18px;
         width: 100%;
         background-color: var(--scale-3-blue);
         padding: 15px;
         text-align: center;
+        display: flex;
+        justify-content: center;
     }
 
     main #section3-slide{
@@ -233,7 +234,6 @@
     }
 
     main #become-advertiser_section3 h2{
-        max-width: 550px;
         position: relative;
         top: 18px;
         width: 100%;
