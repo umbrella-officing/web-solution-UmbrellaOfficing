@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <!-- <meta charset="UTF-8"> -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -14,6 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
     integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/home/home.css">
 </head>
@@ -106,7 +110,7 @@
                             <a href="#">Esqueceu a senha?</a>
                         </div>
                         
-                        <button type="submit">LOGIN</button>
+                        <button class="form_button" type="submit">LOGIN</button>
                     </form>
                     <div id="alternatives">
                         <div><span>OR</span></div>
@@ -126,33 +130,50 @@
                 <h3>Seja bem-vindo</h3>
                 <div>
                     <span>Cadastre-se e faça parte da nossa comunidade</span>
-                    <form>
-                        <label for="name">
-                            Nome:
-                            <input type="text" id="name">
-                        </label>
+                    <form id="myform">
+                        <fieldset id="test1" class="test">
+                            <label for="user_name">
+                                Nome:
+                                <input type="text" id="user_name" name="user_name">
+                            </label>
+    
+                            <label for="email">
+                                E-mail:
+                                <input type="email" id="email" name="email">
+                            </label>
+    
+                            <label for="cpf">
+                                CPF:
+                                <input type="number" id="cpf" name="cpf">
+                            </label>
 
-                        <label for="middlename">
-                            Sobrenome:
-                            <input type="text" id="middlename">
-                        </label>
+                            <label for="password">
+                                Senha:
+                                <input type="password" id="password" name="password">
+                            </label>
 
-                        <label for="cpf">
-                            CPF:
-                            <input type="number" id="cpf">
-                        </label>
-
-                        <label for="birth_date">
-                            Data de nascimento
-                            <input type="date" id="birth_date">
-                        </label>
-                        
-                        <label for="phone">
-                            Telefone:
-                            <input type="number" id="phone">
-                        </label>
-
-                        <button type="submit">CADASTRAR</button>
+                            <label for="conf_password">
+                                Confirmar senha:
+                                <input type="password" class="form-control" id="conf_password" name="conf_password">
+                            </label>
+                            <!-- <label for="birth_date">
+                                Data de nascimento
+                                <input type="date" id="birth_date">
+                            </label>
+                            
+                            <label for="phone">
+                                Telefone:
+                                <input type="number" id="phone">
+                            </label> -->
+                            <input type="button" class="form_button next" value="Próximo">
+                        </fieldset>
+                        <fieldset id="test2" class="test campos">
+                            <label for="genero">
+                                Gênero:
+                                <input type="text" id="genero" name="genero">
+                            </label>
+                            <button class="form_button" type="submit">CADASTRAR</button>
+                        </fieldset>
                     </form>
             </div>        
             </div>
@@ -452,11 +473,10 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script/default/header/header.js"></script>
+    <script src="script/default/register/register.js"></script>
     <script src="script/home/reports.js"></script>
     <script src="script/home/coworking_places_inspire.js"></script>
 </body>
