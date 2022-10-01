@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $.validator.addMethod("usernameRegex", function(value, element) {
         return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(value);
-    }, "Escreva no formato de e-mail. Exemplo: fulano@gmail.com");
+    }, "Escreva no formato de e-mail. Ex: fulano@gmail.com");
 
     $.validator.addMethod("cpfRegex", function(value, element) {
         return /(\d{3})[.]?(\d{3})[.]?(\d{3})[-]?(\d{2})/.test(value);
@@ -38,6 +38,7 @@ $(document).ready(function(){
                 },
                 password : {
                     required: true,
+                    minlength:8
                 },
                 conf_password : {
                     required: true,
@@ -46,7 +47,8 @@ $(document).ready(function(){
             },
             messages: {
                 user_name:{
-                    required:"Mínimo 3 caracteres",
+                    required:"Preencha esse campo",
+                    minlength:"Mínimo 3 caracteres",
                     maxlength:"Não ultrapasse 100 caracteres"
                 },
                 email: {
@@ -57,6 +59,7 @@ $(document).ready(function(){
                 },
                 password : {
                     required: "Preencha esse campo",
+                    minlength:"Mínimo 8 dígitos"
                 },
                 conf_password : {
                     required: "Preencha esse campo",
