@@ -3,16 +3,17 @@ use umbrella_officing;
 
 create table usuarios (
 nome_user varchar(100) not null,
-cpf_user char(14) primary key not null,
-dt_nasc_user date not null,
-telefone_user varchar(14),
-celular_user varchar(14),
 email_user varchar(30) not null,
-senha_user char(8) not null,
+cpf_user char(14) primary key not null,
+senha_user char(60) not null,
+dt_nasc_user date not null,
+celular_user varchar(14),
+profissao varchar(30),
+end_user varchar(60),
+telefone_user varchar(14),
 genero_user varchar(9),
 rg_user varchar(20),
 orgao_expedidor varchar(60),
-end_user varchar(60),
 link_instagram longtext,
 link_whats_user longtext ,
 link_facebook longtext,
@@ -22,8 +23,7 @@ perfil_profissional text,
 preferencias_homeoffincing char(5),
 preferencias_coworking char(5),
 fotos_user longblob,
-data_cadastro datetime,
-profissao varchar(30)
+data_cadastro datetime
 );
 
 select*from usuarios;

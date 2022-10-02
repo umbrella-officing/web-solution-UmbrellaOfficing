@@ -130,13 +130,12 @@
                 <h3>Seja bem-vindo</h3>
                 <div>
                     <span>Cadastre-se e faça parte da nossa comunidade</span>
-                    <form id="myform">
+                    <form id="myform" method="post" action="/cadastro">
                         <fieldset id="test1" class="test">
-                            <label for="user_name">
+                            <label for="name">
                                 Nome:
-                                <input type="text" id="user_name" name="user_name">
+                                <input type="text" id="name" name="name">
                             </label>
-    
                             <label for="email">
                                 E-mail:
                                 <input type="email" id="email" name="email">
@@ -156,21 +155,24 @@
                                 Confirmar senha:
                                 <input type="password" class="form-control" id="conf_password" name="conf_password">
                             </label>
-                            <!-- <label for="birth_date">
-                                Data de nascimento
-                                <input type="date" id="birth_date">
-                            </label>
-                            
-                            <label for="phone">
-                                Telefone:
-                                <input type="number" id="phone">
-                            </label> -->
                             <input type="button" class="form_button next" value="Próximo">
                         </fieldset>
                         <fieldset id="test2" class="test campos">
-                            <label for="genero">
-                                Gênero:
-                                <input type="text" id="genero" name="genero">
+                            <label for="birth_date">
+                                Data de nascimento
+                                <input type="date" id="birth_date">
+                            </label>
+                            <label for="phone">
+                                Telefone:
+                                <input type="number" id="phone" name="phone">
+                            </label>
+                            <label for="profession">
+                                Profissão:
+                                <input type="text" id="profession" name="profession">
+                            </label>
+                            <label for="address">
+                                Endereço:
+                                <input type="text" id="address" name="address">
                             </label>
                             <button class="form_button" type="submit">CADASTRAR</button>
                         </fieldset>

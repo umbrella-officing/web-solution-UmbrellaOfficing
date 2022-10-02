@@ -7,6 +7,10 @@ $(document).ready(function(){
         return /(\d{3})[.]?(\d{3})[.]?(\d{3})[-]?(\d{2})/.test(value);
     }, "CPF inválido");
 
+    $.validator.addMethod("phoneRegex", function(value, element) {
+        return /^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$/.test(value);
+    }, "Número inválido");
+
     $(".next").click(function(){
         var form = $("#myform");
         form.validate({
@@ -19,7 +23,7 @@ $(document).ready(function(){
                 $(element).closest('.form-group').removeClass("has-error");
             },
             rules: {
-                user_name:{
+                name:{
                     required:true,
                     minlength:3,
                     maxlength:100
@@ -32,10 +36,6 @@ $(document).ready(function(){
                     required:true,
                     cpfRegex:true,
                 },
-                genero:{
-                    required: true,
-                    usernameRegex: true
-                },
                 password : {
                     required: true,
                     minlength:8
@@ -44,9 +44,13 @@ $(document).ready(function(){
                     required: true,
                     equalTo: '#password',
                 },
+                phone:{
+                    required:true,
+                    phoneRegex: true
+                },
             },
             messages: {
-                user_name:{
+                name:{
                     required:"Preencha esse campo",
                     minlength:"Mínimo 3 caracteres",
                     maxlength:"Não ultrapasse 100 caracteres"
@@ -65,8 +69,8 @@ $(document).ready(function(){
                     required: "Preencha esse campo",
                     equalTo: "As senhas não são compatíveis",
                 },
-                genero:{
-                    required: "Escreva um gênero"
+                phone:{
+                    required: "Preencha esse campo"
                 }
             }
         });

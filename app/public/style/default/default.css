@@ -438,12 +438,22 @@ fieldset{
     display: block;
     border: none;
     border-bottom: 1px solid #c4c4c4;
-    background: transparent;
-    outline-color: #5b61c4;
     margin-top: 5px;
+    background: transparent;
+    outline: none;
     width: 100%;
     font-size: 13px;
     color: #000;
+}
+
+#container_popUp_login-signUp fieldset input:focus{
+    border-bottom:1.5px solid #060aff ;
+    transition: .5s;
+}
+
+#container_popUp_login-signUp input[type="number"]::-webkit-outer-spin-button,
+#container_popUp_login-signUp input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 #container_popUp_login-signUp form > div{

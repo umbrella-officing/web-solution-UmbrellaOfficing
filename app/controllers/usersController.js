@@ -35,31 +35,31 @@ module.exports.registerUser = (application, req, res) =>{
   const noticiasDao = new application.app.models.UsersDAO(connection);
 
   var dadosForm = {
-    user_usuario: req.body.nomeusu_usu,
-    senha_usuario: bcrypt.hashSync(req.body.senha_usu, salt),
-    nome_usuario: req.body.nome_usu,
-    email_usuario: req.body.email_usu,
-    data_escolhida:req.body.data_escolhida
+    user_usuario: req.body.user_name,
+    email_usuario: req.body.email,
+    senha_usuario: bcrypt.hashSync(req.body.password, salt)
+    // nome_usuario: req.body.nome_usu,
+    // data_escolhida:req.body.data_escolhida
     };
 
-  req.assert('nome_usu', 'Mínimo 3 caracters').len(3, 100);
-  req.assert('data_escolhida', 'Formato da data está inadequado').isDate({
-    format: 'YYYY-MM-DD'
-});
+//   req.assert('nome_usu', 'Mínimo 3 caracters').len(3, 100);
+//   req.assert('data_escolhida', 'Formato da data está inadequado').isDate({
+//     format: 'YYYY-MM-DD'
+// });
 
-  const erros = req.validationErrors()
+//   const erros = req.validationErrors()
 
-  if (erros) {
-    noticiasDao.get5UltimasNoticias((error, result) => {
-      res.render("teste/register", 
-      {
-       sala:null,
-       validacao:erros,
-       "valores":req.body
-      })
-    })
-    return;
-}
+//   if (erros) {
+//     noticiasDao.get5UltimasNoticias((error, result) => {
+//       res.render("teste/register", 
+//       {
+//        sala:null,
+//        validacao:erros,
+//        "valores":req.body
+//       })
+//     })
+//     return;
+// }
 
   noticiasDao.registerUser(dadosForm, (error, result) => {
       res.redirect('/cadastro');
