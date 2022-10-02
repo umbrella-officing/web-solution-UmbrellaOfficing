@@ -202,12 +202,7 @@
     margin-bottom: 40px;
 }
 
-@media(min-width: 300px) and (max-width: 480px){
-    #container_search, 
-    #menu {
-        display: none;
-    }  
-
+@media(min-width: 320px) and (max-width: 480px){ 
     #help-center_section1 {
         padding-top: 130px;
     }
@@ -237,7 +232,7 @@
 
     #align-options > button { 
         width: 40%;
-        font-size: 18px; 
+        font-size: 16px; 
     }
 
     #align-list {
@@ -284,28 +279,9 @@
     #become-advertiser_section4 > div > :nth-child(3) {
         margin-top: 20px;
     }
-
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    } 
 }
 
-@media(min-width: 481px) and (max-width: 840px)  { 
-    #header>div a img {
-        width: 80%;
-    }
-
-    #container_search, 
-    #menu {
-        display: none;
-    }  
-
-    #my-account-sidebar_mobile {
-        display: block;
-    }
-
+@media(min-width: 481px) and (max-width: 840px)  {  
     #help-center_section1 {
         padding-top: 130px;
     }
@@ -364,12 +340,6 @@
     #become-advertiser_section4 > div > :nth-child(3) {
         margin-top: 20px;
     }
-
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    } 
 } 
 
 @media(min-width: 841px) and (max-width: 1160px) { 
@@ -388,14 +358,6 @@
 
     #align-mainArticles > div > h3 { 
         margin: 26px 16px;
-    }
-
-    #logo { 
-        max-width: 275px;
-    }
-
-    footer ul h5 {
-        font-size: 17px; 
     }
 
     /*Pop up - Deletar espaço*/

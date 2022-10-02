@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/home/home.css">
 </head>
@@ -60,8 +60,8 @@
                 <div class="menu_open">
                     <div>
                         <div class="picture_edit">
-                            <img src="images/default/perfil.png" alt="foto de perfil" > 
-                            <i class="fa-solid fa-pen pictureProfile list"></i> 
+                            <img src="images/default/perfil.png" alt="foto de perfil">
+                            <i class="fa-solid fa-pen pictureProfile list"></i>
                         </div>
                         <h3>Usuário <span>Cliente</span></h3>
                     </div>
@@ -163,16 +163,16 @@
         <div id="container_popUp_profilePicture">
             <div class="popUp_profilePicture">
                 <h2>Adicionar imagem de perfil</h2>
-        
+
                 <div>
-                    <div class="actionPicture">                    
+                    <div class="actionPicture">
                         <img src="images/default/perfil.png" alt="Foto de perfil">
                         <div>
                             <button id="close">Fechar</button>
                             <button id="salve">Guardar</button>
                         </div>
                     </div>
-        
+
                     <div>
                         <div class="uploadPicture">
                             <i class="fa-solid fa-arrow-up-from-bracket"></i>
@@ -188,46 +188,29 @@
         </div>
     </header>
 
-    <div id="container-sidebar_mobile">
-        <div id="search-mobile">
-            <i class='bx bx-search icon'></i>
-        </div>
-
-        <div id="menu-mobile" class="container_margin_default">
-            <div class="default_margin">
-                <nav>
-                    <ul>
-                        <span>
-                            <div>
-                                <a href="#">
-                                    <i class='bx bx-home icon'></i></a>
-                                    <!-- <i class='bx bxs-home icon-active' ></i> -->
-                            </div>
-                            <li class="popUp-login-signUp">
-                                <i class='bx bx-user-circle icon'></i>
-                                <!-- <i class='bx bxs-user-circle icon-active'></i> -->
-                            </li>
-                        </span>
-
-                        <span>
-                            <li class="popUp-login-signUp">
-                                <i class='bx bx-user-plus icon'></i>
-                                <!-- <i class='bx bxs-user-plus icon-active'></i> -->
-                            </li>
-                            <div>
-                                <a href="/central-de-ajuda"><i class="fa-solid fa-question icon-help focus"></i></a>
-                            </div>
-                        </span>
-                    </ul>
-                </nav>
+    <nav id="bottom-bar_mobile">
+        <ul>
+            <li class="active">
+                <a href="/"><i class="fa-solid fa-house icon"></i></a>
+            </li>
+            <li class="inactive popUp-login-signUp list">
+                <i class="fa-solid fa-user icon"></i>
+            </li>
+            <li class="inactive">
+                <i class='bx bx-search search'></i>
+            </li>
+            <li class="inactive list popUp-login-signUp">
+                <i class="fa-solid fa-user-plus icon"></i>
+            </li>
+            <div class="inactive">
+                <a href="/central-de-ajuda"><i class="fa-solid fa-circle-info icon"></i></a>
             </div>
-        </div>
-    </div>
+        </ul>
+    </nav>
 
     <div id='box_black'></div>
 
     <main>
-
         <section id="home_section1" class="container_margin_default">
             <div class="default_margin">
                 <div>
@@ -485,25 +468,21 @@
                 <ul>
                     <h5>Junte-se a nós</h5>
                     <li><a href="/">Home</a></li>
-                    <li><a href="#">Cadastre-se</a></li>
-                    <li><a href="#">Sua conta</a></li>
+                    <li class="list popUp-login-signUp"><a href="#">Cadastre-se</a></li>
+                    <li class="popUp-login-signUp list"><a href="#">Acesse sua conta</a></li>
                     <li><a href="#">Faça sua reserva</a></li>
                     <li><a href="#">Anuncie seu espaço</a></li>
                 </ul>
 
                 <ul>
-                    <h5>Atendimento</h5>
-                    <li><a href="#">Chat</a></li>
-                    <li><a href="#">Fórum</a></li>
-                    <li><a href="#">Central de ajuda</a></li>
+                    <h5>Nossos serviços</h5>
+                    <li><a href="/encontrar-espacos">Faça sua reserva</a></li>
+                    <li><a href="#">Anuncie seu espaço</a></li> 
                 </ul>
 
                 <ul>
-                    <h5>Sobre nós</h5>
-                    <li><a href="#">Quem somos?</a></li>
-                    <li><a href="#">Missão, valores e visão</a></li>
-                    <li><a href="#">Por que Umbrella Officing</a></li>
-                    <li><a href="#">Desenvolvedores</a></li>
+                    <h5>Atendimento</h5>  
+                    <li><a href="/central-de-ajuda">Central de ajuda</a></li>
                 </ul>
 
             </div>

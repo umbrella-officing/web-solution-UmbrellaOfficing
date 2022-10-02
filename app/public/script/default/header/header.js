@@ -143,3 +143,14 @@ function closePop_profilePicture(container_popUp_profilePicture) {
 
 openPop_profilePicture()
 
+const changeBottom_bar = (item) => {
+    const buttonInactive = document.querySelectorAll('.inactive')
+    const buttonActive = document.querySelectorAll('.active');
+
+    buttonInactive.forEach(e=> {
+        e.addEventListener('click', () => {
+            item.classList.add("active");
+    })
+    })
+    
+}

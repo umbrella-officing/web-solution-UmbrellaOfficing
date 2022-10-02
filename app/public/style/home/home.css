@@ -1,4 +1,4 @@
-#container-sidebar_mobile {
+#bottom-bar_mobile {
     display: none;
 }
 
@@ -462,24 +462,10 @@
     color: var(--white);
 }
 
-@media(min-width: 300px) and (max-width: 480px) {
-    #header>div a img {
-        width: 80%;
-    }
-
-    #container_search, 
-    #menu {
-        display: none;
-    } 
-
-    #container-sidebar_mobile {
+@media(min-width: 320px) and (max-width: 480px) {  
+    #bottom-bar_mobile {
         display: block;
-    }
-
-    .default_margin {
-        margin: 0 8px;
-        width: 100%;
-    }
+    } 
 
     main #home_section1>div {
         flex-direction: column;
@@ -562,7 +548,7 @@
     }
 
     main #home_section3>div>div h3 {
-        font-size: 24px;
+        font-size: 21px;
     }
 
     main #home_section3>div>div p {
@@ -607,7 +593,7 @@
     }
 
     main #home_section5>div h2 {
-        font-size: 24px;
+        font-size: 21px;
     }
 
     main #home_section6>div {
@@ -621,34 +607,19 @@
     }
 
     main #home_section6>div>div h3 {
-        font-size: 24px;
-    }
-
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
+        font-size: 20px;
     }
 }
 
 @media(min-width: 481px) and (max-width: 841px) {
-    #header>div a img {
-        width: 80%;
-    }
-    
-    #container_search, 
-    #menu {
-        display: none;
-    }
+    #bottom-bar_mobile {
+        display: block;
+    } 
 
     main #home_section1>div {
         flex-direction: column;
         padding-top: 130px;
         padding-bottom: 80px;
-    }
-
-    #container-sidebar_mobile {
-        display: block;
     }
 
     main #home_section1>div>div h1 {
@@ -671,12 +642,12 @@
     }
 
     main #home_section1>div>div:nth-child(2)::before {
-        height: 350px;
-        width: 350px;
+        height: 260px;
+        width: 260px;
     }
 
     main #home_section1>div>div:nth-child(2) img {
-        width: 280px;
+        width: 200px;
     }
 
     .home_section1_call_action {
@@ -757,7 +728,7 @@
 
 
     main #home_section5>div h2 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     main #home_section6>div img {
@@ -766,7 +737,7 @@
     }
 
     main #home_section6>div>div h3 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     footer h5,
@@ -776,7 +747,7 @@
     }
 }
 
-@media(min-width: 841px) and (max-width: 1000px) {
+@media(min-width: 841px) and (max-width: 1159px) {
     main #home_section1>div>div:first-child {
         max-width: 340px;
     }
@@ -823,13 +794,5 @@
 
     main #home_section6>div img {
         width: 308px;
-    }
-
-    #logo {
-        max-width: 275px;
-    }
-
-    footer ul h5 {
-        font-size: 17px;
     }
 }
