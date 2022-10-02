@@ -131,27 +131,39 @@
     margin-right: 10px;
 }
 
-@media(min-width: 300px) and (max-width: 480px){
-    #header {
-        display: none;
-    } 
+@media(min-width: 320px) and (max-width: 480px){ 
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
 
     main #my-profile-public_section1::before { 
-        height: calc(100% - 430px);
+        height: 96%;
         width: 100%; 
     }
 
     main #my-profile-public_section1>div {
-        padding-top: 20px;  
+        padding-top: 130px;  
         flex-direction: column;
     }
 
-    main .my-profile-public_section1-left {
+    .my-profile-public_section1-left {
         width: 100%;
     }
 
-    main .my-profile-public_section1-left img {
-        width: 50px;
+    .my-profile-public_section1-left>div:nth-of-type(1) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .my-profile-public_section1-left img {
+        width: 70px;
+    }
+
+    .my-profile-public_section1-left>div h3 {
+        margin: 12px 0 0 0;
     }
 
     .my-profile-public_section1-left h4 {
@@ -162,12 +174,16 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        margin-top: 50px;
+        margin: 75px 0 35px 0;
         flex-direction: column;
     } 
 
     .my-profile-public_section1-right h1 {
-        font-size: 23px; 
+        font-size: 22px; 
+    }
+
+    .my-profile-public_section1-right h2 {
+        font-size: 16px; 
     }
 
     .my-profile-public_section1-right p {
@@ -177,7 +193,7 @@
     }
 
     .my-profile-public_section1-right>div:nth-child(2) {
-        width: 200px;
+        width: 180px;
         display: flex;
         justify-content: space-between;
     }
@@ -189,22 +205,25 @@
     .whats,
     .face,
     .linkedin {
-        font-size: 2.3rem;
+        font-size: 2.1rem;
         margin-bottom: 44px
     }
 }
 
-@media(min-width: 481px) and (max-width: 841px) {
-    #header {
-        display: none;
+@media(min-width: 481px) and (max-width: 841px) { 
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
     }
 
     main #my-profile-public_section1::before { 
-        width: calc(50% - 65px); 
+        width: 35%; 
     }
 
     main #my-profile-public_section1>div {
-        padding-top: 40px; 
+        padding-top: 160px; 
         align-items: flex-start;
     } 
 
@@ -229,7 +248,7 @@
     }
 
     .my-profile-public_section1-right { 
-        width: 55%;
+        width: 58%;
         flex-direction: column;
     }
 
@@ -261,7 +280,7 @@
     }
 }
 
-@media(min-width: 841px) and (max-width: 1000px) { 
+@media(min-width: 841px) and (max-width: 1159px) { 
     #my-profile-public_section1::before { 
         width: calc(50% - 175px); 
     }
