@@ -295,16 +295,17 @@ header > div {
 
 .picture_edit img{
     margin-right: 21px;
-    width: 70px;
+    width: 65px;
 }
 
 .picture_edit i { 
-    margin: 0 37px -65px;
+    margin: 0 37px -50px;
     color: #FFE;
     background: var(--scale-2-purple);
-    padding: 11px;
+    padding: 10px;
     position: absolute;
     border-radius: 30px;
+    font-size: 12px;
 }
 
 .menu_open > div:first-child h3{
@@ -344,18 +345,24 @@ header > div {
 
 .menu_open ul li, .menu_open > div:last-child{
     font-size: 14.5px;
-    font-weight: 400;
+    font-weight: 400; 
 }
 
-.menu_open ul li img, .menu_open > div:last-child img{
-    width: 24px;
-    margin-right: 10px;
+.menu_open ul li i,
+.menu_open > div:last-child i {
+    font-size: 14px;
+    width: 14px;
+    margin-right: 12px;
+    color: rgb(0 0 0 / 80%);
 }
 
-.menu_open > div:last-child{
+.menu_open > div:last-child a {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: var(--text-1-black);
 }
+
 
 #container_popUp_login-signUp{
     display: none;
