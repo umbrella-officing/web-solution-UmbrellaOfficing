@@ -548,11 +548,11 @@
     }
 
     main #home_section3>div>div h3 {
-        font-size: 21px;
+        font-size: 20px;
     }
 
     main #home_section3>div>div p {
-        font-size: 13px;
+        font-size: 14px;
         max-width: 65%;
     }
 
@@ -593,7 +593,8 @@
     }
 
     main #home_section5>div h2 {
-        font-size: 21px;
+        font-size: 20px;
+        max-width: 80%;
     }
 
     main #home_section6>div {
@@ -618,7 +619,7 @@
 
     main #home_section1>div {
         flex-direction: column;
-        padding-top: 130px;
+        padding-top: 160px;
         padding-bottom: 80px;
     }
 
@@ -747,7 +748,7 @@
     }
 }
 
-@media(min-width: 841px) and (max-width: 1159px) {
+@media(min-width: 841px) and (max-width: 1159px) { 
     main #home_section1>div>div:first-child {
         max-width: 340px;
     }

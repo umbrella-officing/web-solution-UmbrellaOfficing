@@ -232,7 +232,7 @@
 
     #align-options > button { 
         width: 40%;
-        font-size: 16px; 
+        font-size: 18px; 
     }
 
     #align-list {
@@ -264,7 +264,7 @@
 
     #become-advertiser_section4 > div > ul {
         flex-direction: column;
-        height: 316.8px;
+        height: 242px;
     }
 
     #become-advertiser_section4 > div > ul > li {
@@ -283,7 +283,7 @@
 
 @media(min-width: 481px) and (max-width: 840px)  {  
     #help-center_section1 {
-        padding-top: 130px;
+        padding-top: 160px;
     }
 
     #help-center_section1 > div > div > h1 {
@@ -303,6 +303,11 @@
     #search-help_txt {
         font-size: 14px;
         padding-left: 15px;
+    }
+
+    #align-options > button { 
+        width: 40%;
+        font-size: 18px; 
     }
 
     #align-list > ol {
