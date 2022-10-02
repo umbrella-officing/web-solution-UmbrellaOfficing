@@ -768,11 +768,16 @@ footer a {
     margin-bottom: 5px;
 }
 
+/*Mobile*/
+#bottom-bar_mobile {
+    display: none;
+} 
+
 @media(min-width: 320px) and (max-width: 481px) {
     h1 {
         font-size: 35px;
     }
-    
+
     h2, h3 {
         font-size: 20px;
     }
@@ -795,6 +800,10 @@ footer a {
         display: flex;
         align-items: center;
     }
+
+    #bottom-bar_mobile {
+        display: block;
+    } 
 
     header > div { 
         padding: 20px 0 10px 0; 
@@ -836,6 +845,10 @@ footer a {
     button {
         font-size: 14px;
     }
+
+    #bottom-bar_mobile {
+        display: block;
+    } 
 
     header > div { 
         padding: 20px 0 10px 0; 
