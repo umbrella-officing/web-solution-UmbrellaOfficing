@@ -195,16 +195,7 @@
     margin-top: 40px;
 }
 
-@media(min-width: 300px) and (max-width: 480px){
-    #header>div a img {
-        width: 80%;
-    }
-
-    #container_search, 
-    #menu {
-        display: none;
-    }  
-
+@media(min-width: 320px) and (max-width: 480px){
     #container_menu > a > button { 
         width: 136px;
         height: 36px;
@@ -212,8 +203,8 @@
         font-size: 13.5px;
     }
 
-    #my-account-sidebar_mobile {
-        display: block;
+    #my-account-bottom-bar_mobile {
+        display: flex;
     }
 
     main #my-profile::before { 
@@ -273,23 +264,15 @@
 }
 
 @media(min-width: 481px) and (max-width: 841px) {
-    #header>div a img {
-        width: 80%;
-    }
-
-    #container_search, 
-    #menu {
-        display: none;
-    } 
-
-    #container_menu > a > button {  
+    #container_menu > a > button { 
+        width: 136px;
         height: 36px;
         margin: 0;
-        font-size: 14px;
+        font-size: 13.5px;
     }
-
-    #my-account-sidebar_mobile {
-        display: block;
+    
+    #my-account-bottom-bar_mobile {
+        display: flex;
     }
 
     main #my-profile::before { 
@@ -332,13 +315,5 @@
 
     main #my-profile_section1 {
         width: 68%;
-    }
-
-    #logo { 
-        max-width: 275px;
-    }
-
-    footer ul h5 {
-        font-size: 17px; 
-    }
+    } 
 } 

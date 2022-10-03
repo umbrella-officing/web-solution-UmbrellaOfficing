@@ -92,46 +92,42 @@
     color: var(--scale-13-blue); 
 }  
 
-/*Menu - Mobile*/
-#my-account-sidebar_mobile {
-    position: fixed;
-    display: flex;
+/* Menu - Mobile */
+#my-account-bottom-bar_mobile {
+    display: none;
+    position: fixed; 
     bottom: 0;
-    background: var(--scale-9-blue);
+    background: #fff;
     z-index: 9000;
-    padding: 10px 0;
+    padding: 5px 0;
     width: 100%;
-    box-shadow: rgb(0 0 0 / 8%) 1px 0 0;
-}
- 
-#my-account-sidebar_mobile ul {
-    display: flex; 
-    width: 300px;
     justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgb(0 0 0 / 11%);
+    box-shadow: rgb(0 0 0 / 8%) 0 1px 0;
+    min-height: 41px;
+}
+
+#my-account-bottom-bar_mobile ul {
+    display: flex;
     list-style: none;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
 }
 
-#my-account-sidebar_mobile .icon { 
-    width: 30px; 
-} 
-
-#my-account-sidebar_mobile .icon{
-    font-size: 30px; 
-    color: #9f9f9f;
+.icon {
+    font-size: 20px;
+    border-radius: 100%; 
+    color: rgb(0 0 0 / 80%);
 }
 
-#my-account-sidebar_mobile .icon-ads{
-    font-size: 25px; 
-    color: #9f9f9f;
+.active {
+    border-bottom: 2.2px solid var(--scale-2-purple);
+    border-radius: 1px;
 }
 
-#my-account-sidebar_mobile .icon-ads-active{
-    color: var(--scale-13-blue);
+.active i {
+    color: var(--scale-2-purple);
+    margin-bottom: 5px;
 }
-
-#my-account-sidebar_mobile .icon-active{ 
-    color: var(--scale-13-blue);
-}
-  
-
-

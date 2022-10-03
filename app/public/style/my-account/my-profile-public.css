@@ -282,7 +282,7 @@
 
 @media(min-width: 841px) and (max-width: 1159px) { 
     #my-profile-public_section1::before { 
-        width: calc(50% - 175px); 
+        width: 30%; 
     }
 
     .my-profile-public_section1-right p { 
