@@ -48,6 +48,12 @@ $(document).ready(function(){
                     required:true,
                     phoneRegex: true
                 },
+                profession:{
+                    required:true
+                },
+                address:{
+                    required:true
+                }
             },
             messages: {
                 name:{
@@ -71,6 +77,12 @@ $(document).ready(function(){
                 },
                 phone:{
                     required: "Preencha esse campo"
+                },
+                profession:{
+                    required:"Preencha esse campo"
+                },
+                address:{
+                    required:"Preencha esse campo"
                 }
             }
         });

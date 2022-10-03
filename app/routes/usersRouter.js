@@ -1,7 +1,7 @@
 module.exports = (application) => {
 
-  application.get('/central', (req, res) => {
-    application.app.controllers.usersController.central(application, req, res);
+  application.get('/', (req, res) => {
+    application.app.controllers.usersController.home(application, req, res);
   });
 
     application.get('/cadastro', (req, res) => {

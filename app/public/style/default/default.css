@@ -269,7 +269,11 @@ header > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 62%;
+    width: 81%;
+}
+
+#user_informations{
+    width: 120px;
 }
 
 .menu_open > div:first-child img{
@@ -279,7 +283,7 @@ header > div {
 
 .menu_open > div:first-child h3{
     color: var(--text-2-black);
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     max-width: 200px;
 }
@@ -287,7 +291,7 @@ header > div {
 .menu_open > div:first-child span{
     display: block;
     margin-top: 2px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: normal;
     color: var(--text-3-black);
 }
