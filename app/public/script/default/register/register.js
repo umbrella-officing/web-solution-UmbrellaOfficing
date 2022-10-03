@@ -35,6 +35,7 @@ $(document).ready(function(){
                 cpf:{
                     required:true,
                     cpfRegex:true,
+                    maxlength:11
                 },
                 password : {
                     required: true,
@@ -59,7 +60,8 @@ $(document).ready(function(){
                     required: "Preencha esse campo",
                 },
                 cpf:{
-                    required:"Preencha esse campo"
+                    required:"Preencha esse campo",
+                    maxlength:"Máximo 11 caracteres"
                 },
                 password : {
                     required: "Preencha esse campo",
