@@ -9,7 +9,6 @@
     color: var(--text-1-black);
 }
 
-
 #personal-date::before {
     content: "";
     position: absolute;
@@ -131,7 +130,7 @@
 
 .select-box .options-container {
     max-height: 0;
-    width: 100%;
+    width: 99.2%;
     opacity: 0;
     transition: all 0.4s;
     border: 1px solid var(--gray-border);
@@ -236,3 +235,4 @@
     font-weight: 500;
     margin: 40px 0 0 0;
 }
+

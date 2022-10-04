@@ -144,7 +144,6 @@ openPopCancel();
 
 const switchContent = () => {
     const popUpCancel = document.querySelectorAll(".popUp_cancel > div > div");
-    console.log(popUpCancel);
 
     popUpCancel.forEach((content, index, arr)=>{
         content.addEventListener('click', (e) => {
@@ -163,9 +162,6 @@ const switchContent = () => {
         var lengthArray = arr.length-=1
 
                 if(index == index && index < lengthArray){
-                    console.log(arr)
-                    const teste = index*-1
-                    console.log(teste)
                         var i = index
                         arr[i].style.display = 'none'
                         arr[i+=1].style.display = 'block'

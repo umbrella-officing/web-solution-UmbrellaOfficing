@@ -30,7 +30,6 @@
                             <% for(let i = 0; i < validacao.length; i++){ %>
                             <li><%= validacao[i].msg %></li>
                             <% } %>
-    
                         </ul>
                     </div>
                 </div>
@@ -46,6 +45,7 @@
                         <input type="text" placeholder="Nome de usuário" name="nomeusu_usu"/><br>
                         <input type="text" placeholder="e-mail " name="email_usu"/><br>
                         <input type="password" placeholder="senha" name="senha_usu"/><br>
+                        <input type="date" class="form-control" id="data_escolhida" name="data_escolhida">
                         <button>Cadastrar</button><br>
                         <p class="message">Já é cadastrado? <a href="/login">Entre</a></p>
                     </form>

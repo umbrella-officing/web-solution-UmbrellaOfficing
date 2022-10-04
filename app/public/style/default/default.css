@@ -46,7 +46,7 @@ html, button, input{
     transition: 0.3s ease-in-out;
 }
 
-body, ul, li, nav, h1, h2, h3, h4, h5, h6, p{
+body, ul, li, nav, h1, h2, h3, h4, h5, h6, p, fieldset{
     margin:0;
     padding: 0;
 }
@@ -63,7 +63,7 @@ p{
     font-weight: 500;
 }
 
-button{
+button, input[type="button"]{
     cursor: pointer;
 }
 
@@ -269,7 +269,11 @@ header > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 62%;
+    width: 81%;
+}
+
+#user_informations{
+    width: 120px;
 }
 
 .menu_open > div:first-child img{
@@ -279,7 +283,7 @@ header > div {
 
 .menu_open > div:first-child h3{
     color: var(--text-2-black);
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     max-width: 200px;
 }
@@ -287,7 +291,7 @@ header > div {
 .menu_open > div:first-child span{
     display: block;
     margin-top: 2px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: normal;
     color: var(--text-3-black);
 }
@@ -350,6 +354,18 @@ header > div {
     padding: 54px 0 20px 0;
 }
 
+fieldset{
+    width: 100%;
+    height: fit-content;
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.campos{
+    display: none;
+}
+
 @keyframes fadeIn{
     from{
         transform: translateY(-10px);
@@ -399,6 +415,13 @@ header > div {
     color: #555;
 }
 
+#container_popUp_login-signUp .help-block{
+    font-size: 10px;
+    color: red;
+    position: absolute;
+    transform: translateY(-0.5px);
+}
+
 #container_popUp_login-signUp form{
     display: flex;
     flex-direction: column;
@@ -407,6 +430,7 @@ header > div {
 }
 
 #container_popUp_login-signUp label{
+    position: relative;
     margin: 15px 0;
     font-size: 13px;
     font-weight: 500;
@@ -414,16 +438,26 @@ header > div {
     width: 100%;
 }
 
-#container_popUp_login-signUp input{
+#container_popUp_login-signUp label > input{
     display: block;
     border: none;
     border-bottom: 1px solid #c4c4c4;
-    background: transparent;
-    outline-color: #5b61c4;
     margin-top: 5px;
+    background: transparent;
+    outline: none;
     width: 100%;
     font-size: 13px;
     color: #000;
+}
+
+#container_popUp_login-signUp fieldset input:focus{
+    border-bottom:1.5px solid #060aff ;
+    transition: .5s;
+}
+
+#container_popUp_login-signUp input[type="number"]::-webkit-outer-spin-button,
+#container_popUp_login-signUp input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 #container_popUp_login-signUp form > div{
@@ -443,7 +477,7 @@ header > div {
     color: red !important;
 }
 
-#container_popUp_login-signUp form button{
+.form_button{
     margin: 15px auto 0 auto;
     border-radius: 24px;
     border: none;

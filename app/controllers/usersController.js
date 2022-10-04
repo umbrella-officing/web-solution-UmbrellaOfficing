@@ -1,12 +1,21 @@
 var bcrypt = require("bcryptjs");
+const { application } = require("express");
 var salt = bcrypt.genSaltSync(12);
 
+module.exports.home = (application, req, res) => {
+    if (req.session.autenticado) {
+      autenticado = { name: req.session.usu_name_autenticado,
+                      profession: req.session.profession};
+    } else {
+      autenticado = { autenticado: null};
+    }
+    res.render("pages/home/index",autenticado);
+}
 
 module.exports.index = (application, req, res) => {
     const connection = application.config.dbConnection;
     const noticiasDao = new application.app.models.UsersDAO(connection);
     noticiasDao.get5UltimasNoticias((error, result) => {
-      console.log(result)
       res.render("teste/register",
       {
        sala:result,
@@ -16,6 +25,10 @@ module.exports.index = (application, req, res) => {
     });
   }
 
+  module.exports.sair = (application, req, res) =>{
+    req.session.destroy();
+    res.redirect("/central");
+  }
 
 module.exports.registerUser = (application, req, res) =>{
 
@@ -23,32 +36,21 @@ module.exports.registerUser = (application, req, res) =>{
   const noticiasDao = new application.app.models.UsersDAO(connection);
 
   var dadosForm = {
-    user_usuario: req.body.nomeusu_usu,
-    senha_usuario: bcrypt.hashSync(req.body.senha_usu, salt),
-    nome_usuario: req.body.nome_usu,
-    email_usuario: req.body.email_usu,
+    nome_user: req.body.name,
+    email_user: req.body.email,
+    cpf_user: req.body.cpf,
+    senha_user: bcrypt.hashSync(req.body.password, salt),
+    dt_nasc_user:req.body.birth_date,
+    celular_user:req.body.phone,
+    profissao:req.body.profession,
+    end_user:req.body.address
     };
 
-  req.assert('nome_usu', 'Mínimo 3 caracters').len(3, 100);
-
-  const erros = req.validationErrors()
-
-  if (erros) {
-    noticiasDao.get5UltimasNoticias((error, result) => {
-      res.render("teste/register", 
-      {
-       sala:null,
-       validacao:erros,
-       "valores":req.body
-      })
-    })
-    return;
-}
-
   noticiasDao.registerUser(dadosForm, (error, result) => {
-      res.redirect('/cadastro');
-      if(error) throw error
-      
+      if(error) {
+        throw error
+      }
+      res.redirect('/');
   });
 }
 
@@ -59,9 +61,22 @@ module.exports.login = (application, req, res) =>{
 module.exports.formLogin = (application, req, res) =>{
   
   var dadosForm = {
-    user_usuario: req.body.nome_usu,
-    senha_usuario: req.body.senha_usu,
+    userId: req.body.cpfEmail,
+    senha_user: req.body.password
   };
+
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0,no_words).join(" ");
+}
+
+function capital_letter(str) {
+    str = str.split(" ");
+
+    for (var i = 0, x = str.length; i < x; i++) {
+            str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+        }
+            return str.join(" ");
+    }
 
     const connection = application.config.dbConnection;
     const usersDao = new application.app.models.UsersDAO(connection);
@@ -72,10 +87,14 @@ module.exports.formLogin = (application, req, res) =>{
         var total = Object.keys(results).length;
         
         if (total == 1) {
-          if (bcrypt.compareSync(dadosForm.senha_usuario,results[0].senha_usuario)) {
-              return res.redirect("/login");
+          if (bcrypt.compareSync(dadosForm.senha_user,results[0].senha_user)) {
+            var truncate_name = truncate(results[0].nome_user,2)
+            var name_user = capital_letter(truncate_name)
+            req.session.autenticado = true;
+            req.session.usu_name_autenticado = name_user;
+            req.session.profession = results[0].profissao
+            return res.redirect("/");
           }
         }
-        res.redirect("/cadastro");
     }
     )}
