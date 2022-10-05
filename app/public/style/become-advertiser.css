@@ -563,6 +563,7 @@ iframe{
     position: relative;
     width: 500px;
     right: 0;
+    overflow: hidden;
 }
 
 .bx{
@@ -611,7 +612,7 @@ iframe{
     color: var(--scale-3-blue);
 }
 
-#slide-step1{
+#slide-step1, #slide-step2{
     display: none;
 }
 
