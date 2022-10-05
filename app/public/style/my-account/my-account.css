@@ -25,18 +25,18 @@
 }
 
 /*Menu lateral */ 
-#my-account-menu {
+/* #my-account-menu {
     position: relative;
     position: -webkit-sticky;
     position: sticky;
     width: auto;
     top: 130px;
     max-height: 100vh;
-}
+} */
 
 #my-account-menu ul {
     list-style: none;
-    position: fixed;
+    position: relative;
 }
 
 #my-account-menu ul li {

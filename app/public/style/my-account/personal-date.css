@@ -82,7 +82,7 @@
 
 .select-box .options-container {
     max-height: 0;
-    width: 100%;
+    width: 99.6%;
     opacity: 0;
     transition: all 0.4s;
     border: 1px solid var(--gray-border);
@@ -188,24 +188,11 @@
     margin: 40px 0 0 0;
 }
 
-@media(min-width: 300px) and (max-width: 480px){
-    #header>div a img {
-        width: 80%;
-    }
-
-    #container_search, 
-    #menu {
-        display: none;
-    } 
-
+@media(min-width: 320px) and (max-width: 480px){
     #container_menu > a > button {  
         height: 36px;
         margin: 0;
         font-size: 13.5px;
-    }
-
-    #my-account-sidebar_mobile {
-        display: block;
     }
  
     main #personal-date::before { 
@@ -246,11 +233,10 @@
         grid-template-columns: 74% 21%;
         grid-column-gap: 5%;
     }
-   
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
+
+    .select-box .options-container.active {
+        top: 110px;
+        position: absolute;
     }
 }
 
