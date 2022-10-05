@@ -1,6 +1,6 @@
 @media(min-width: 300px) and (max-width: 480px){
     header > div > a{
-        padding: 9px 12px;
+        padding: 5px;
     }
 
     header > div > a img{
@@ -18,17 +18,18 @@
     }
 
     main #become-advertiser_section1 h1{
-        font-size: 28px;
+        font-size: 22px;
+        line-height: 36px;
         text-align: center;
     }
 
     main #cta-div{
-        padding: 26px;
+        padding: 24px 26px;
         margin: 20px 0 0 0;
     }
 
     main #cta-div h3{
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 14px;
     }
 
@@ -45,16 +46,18 @@
         max-width: 1000px;
         width: 100%;
         display: flex;
+        margin: 0;
     }
 
     main #become-advertiser_section2 > div > div > h2{
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
     }
 
     main #become-advertiser_section2 > div > div > p{
         text-align: center;
         margin: 25px 0 0 0;
+        font-size: 16px;
     }
 
     main .container_search-localization{
@@ -69,17 +72,23 @@
         width: 100%;
     }
 
-    main #become-advertiser_section3:before{
-        /* width: 100%;
-        height: 70px; */
+    #become-advertiser_section3:before{
         display: none;
+    }
+
+    main #become-advertiser_section3 h2{
+        width: 100vw;
+        font-size: 26px;
+        padding: 13px 0;
+        text-align: center;
+        background-color: var(--scale-3-blue);
+        max-width: none;
     }
 
     main #become-advertiser_section3 span{
         position: relative;
         top: 18px;
-        width: 100%;
-        background-color: var(--scale-3-blue);
+        width: 100%;    
         padding: 15px;
         text-align: center;
         display: flex;
@@ -92,12 +101,16 @@
         margin-top: 60px;
         width: 100%;
         align-items: center;
-        padding: 40px 0;
+        padding: 20px 0 20px 0;
     }
 
     main #section3-slide > div > ul li{
         font-size: 18px;
         max-width: 290px;
+    }
+
+    main #section3-slide > div > ul:nth-child(3){
+        max-width: 210px;
     }
 
     main .slide{
@@ -139,8 +152,11 @@
     }
 
     main #step-indication{
-        margin: 0 100px 0 0;
-        align-self: flex-end;
+        margin: 0;
+    }
+
+    main #become-advertiser_section4 > div > div{
+        margin: 0;
     }
 
     main #become-advertiser_section4 h2{
@@ -171,8 +187,8 @@
     }
 
     main #become-advertiser_section1 > div > div{
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
     }
 
     main #become-advertiser_section1 h1{
@@ -227,16 +243,16 @@
         width: 100%;
     }
 
-    main #become-advertiser_section3:before{
-        /* width: 100%;
-        height: 70px; */
+    #become-advertiser_section3:before{
         display: none;
     }
 
     main #become-advertiser_section3 h2{
         position: relative;
         top: 18px;
+        left: 0;
         width: 100%;
+        max-width: none;
         background-color: var(--scale-3-blue);
         padding: 15px;
         text-align: center;
@@ -248,7 +264,7 @@
         margin-top: 60px;
         width: 100%;
         align-items: center;
-        padding: 40px 0;
+        padding: 40px 0 40px 0;
     }
 
     main #section3-slide > div > ul li{
@@ -299,6 +315,10 @@
         align-self: flex-end;
     }
 
+    #become-advertiser_section4 > div > div{
+        margin-top: 0;
+    }
+
     main #become-advertiser_section4 h2{
         max-width: 550px;
         font-size: 28px;
@@ -310,6 +330,35 @@
         font-size: 18px;
     }
 
+}
+
+@media(min-width: 861px) and (max-width: 1060px){
+    main #become-advertiser_section3 h2{
+        font-size: 28px;
+        max-width: 310px;
+    }
+
+    main #become-advertiser_section3:before{
+        width: 45%
+    }
+
+    main #section3-slide > div > ul{
+        max-height: none;
+    }
+
+    main #section3-slide > div > ul li{ 
+        max-width: 290px;
+    }
+
+    main #section3-slide ul:nth-child(3){
+        max-width: 210px;
+    }
+
+    main .slide{
+        position: relative;
+        left: 20%;
+        width: fit-content;
+    }
 }
 
 #header{
@@ -514,6 +563,7 @@ iframe{
     position: relative;
     width: 500px;
     right: 0;
+    overflow: hidden;
 }
 
 .bx{
@@ -562,7 +612,7 @@ iframe{
     color: var(--scale-3-blue);
 }
 
-#slide-step1{
+#slide-step1, #slide-step2{
     display: none;
 }
 
