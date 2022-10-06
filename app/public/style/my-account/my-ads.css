@@ -71,18 +71,17 @@ a {
 
 #actives_space ul li>div,
 #inactives_space ul li>div {
-    padding: 20px;
+    padding-left: 15px;
     width: 100%;
-    box-sizing: border-box;
-    border-radius: 0 10px 10px 0; 
-    border: 1px solid var(--gray-border); 
+    box-sizing: border-box; 
 }
 
 #actives_space ul li h2,
 #inactives_space ul li>div h2 {
     font-size: 18px;
     font-weight: bold;
-    margin-top: 10px;
+    margin: 10px;
+    margin: 10px 0 20px 0;
 }
 
 #actives_space ul li>div p,
@@ -102,7 +101,7 @@ a {
 .my-ads_space-div-flex {
     display: flex;
     justify-content: space-between;
-    margin-top: 38px;
+    margin-top: 63px;
     align-items: self-end;
 }
 
@@ -130,19 +129,19 @@ a {
 
 #eyes {
     background-color: var(--scale-1-blue);
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 #edit {
     background-color: var(--scale-2-purple);
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .eyes,
 .edit,
 .check,
 .trash {
-    font-size: 18px;
+    font-size: 15px;
     color: #fff;
     text-align: center;
     padding: 2px;
@@ -157,10 +156,9 @@ a {
 #solicitation_res {
     background-color: var(--scale-2-purple);
     border: none;
-    width: 198px;
-    height: 34px;
+    padding: 10px;
     color: var(--white);
-    border-radius: 40px;
+    border-radius: 12px;
 }
 
 #inactives_space {
@@ -240,25 +238,12 @@ a {
     color: white;
 }
 
-@media(min-width: 300px) and (max-width: 620px){
-    #header>div a img {
-        width: 80%;
-    }
-
-    #container_search, 
-    #menu {
-        display: none;
-    }  
-
+@media(min-width: 320px) and (max-width: 540px){
     #container_menu > a > button { 
         width: 136px;
         height: 36px;
         margin: 0;
         font-size: 13.5px;
-    }
-
-    #my-account-sidebar_mobile {
-        display: block;
     }
 
     main #my-ads::before { 
@@ -290,23 +275,17 @@ a {
     #actives_space ul li>div,
     #inactives_space ul li>div {
         border-radius: 0 0 10px 10px;
+        padding: 0;
     }
 
-    .my-ads_space-div-flex {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 30px;
+    #actives_space ul li h2, 
+    #inactives_space ul li>div h2 { 
+        margin: 15px 0 20px 0;
     }
 
-    .my-ads_space-div-flex button {
-        margin-top: 15px;
+    #solicitation_res {
+        font-size: 13px;
     }
-
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    } 
 
     /*Pop up - Deletar espaço*/  
     .popUp_delete {
@@ -329,25 +308,31 @@ a {
     } 
 }
 
-@media(min-width: 621px) and (max-width: 841px)  { 
-    #header>div a img {
-        width: 80%;
+@media(min-width: 320px) and (max-width: 420px){
+    .my-ads_space-div-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 15px;
     }
 
-    #container_search, 
-    #menu {
-        display: none;
-    }  
+    .my-ads_space-div-flex button {
+        margin-top: 15px;
+    }
+}
 
+@media(min-width: 420px) and (max-width: 540px){
+    .my-ads_space-div-flex {
+        align-items: flex-start;
+        margin-top: 25px;
+    }
+}
+
+@media(min-width: 541px) and (max-width: 841px)  { 
     #container_menu > a > button { 
         width: 136px;
         height: 36px;
         margin: 0;
         font-size: 13.5px;
-    }
-
-    #my-account-sidebar_mobile {
-        display: block;
     }
 
     main #my-ads::before { 
@@ -375,11 +360,14 @@ a {
         align-items: flex-start; 
     } 
 
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    } 
+    .my-ads_space-div-flex>div button { 
+        width: 34px;
+        height: 34px; 
+    }
+
+    #solicitation_res {
+        font-size: 13px;
+    }
 
     /*Pop up - Deletar espaço*/
     .popUp_delete {
@@ -388,7 +376,7 @@ a {
     }
 } 
 
-@media(min-width: 841px) and (max-width: 900px) {
+/* @media(min-width: 841px) and (max-width: 900px) {
     .my-ads_space-div-flex {
         flex-direction: column;
         align-items: flex-start;
@@ -398,9 +386,9 @@ a {
     .my-ads_space-div-flex button {
         margin-top: 10px;
     }
-}
+} */
 
-@media(min-width: 841px) and (max-width: 1000px) { 
+@media(min-width: 841px) and (max-width: 1159px) { 
     main #my-ads::before {  
         width: 28%;
     }
@@ -414,12 +402,11 @@ a {
         width: 100%;
     }
 
-    #logo { 
-        max-width: 275px;
-    }
-
-    footer ul h5 {
-        font-size: 17px; 
+    .my-ads_space-div-flex {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 46px;
+        align-items: self-end;
     }
 
     /*Pop up - Deletar espaço*/

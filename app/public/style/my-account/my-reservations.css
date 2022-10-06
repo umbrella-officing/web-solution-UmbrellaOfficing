@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
-} 
+}
 
 #my-reservations::before {
     content: "";
@@ -17,7 +17,7 @@
     height: 100%;
     width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
-} 
+}
 
 /*Minhas reservas: conteúdo*/
 #my-reservations>div>nav~div {
@@ -35,8 +35,8 @@
     margin-bottom: 40px;
 }
 
-#my-reservations_section1 ul li > div{
-    padding-left: 24px;
+#my-reservations_section1 ul li>div {
+    padding-left: 15px;
     width: 542px;
     box-sizing: border-box;
     border-radius: 0 10px 10px 0;
@@ -49,6 +49,7 @@
     font-style: initial;
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 20px;
 }
 
 #my-reservations_section1 ul li>div h2 {
@@ -66,10 +67,11 @@
 #my-reservations_section1 ul li .space-flex {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     margin-top: 80px;
 }
 
-#my-reservations_section1 ul li .space-flex h3{
+#my-reservations_section1 ul li .space-flex h3 {
     font-size: 22px;
 }
 
@@ -210,7 +212,7 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     font-weight: 500;
-} 
+}
 
 .calendar-week-day div {
     display: grid;
@@ -374,19 +376,19 @@
     transition: all 0.2s ease-in-out;
 }
 
-.month-list > div {
+.month-list>div {
     display: grid;
     place-items: center;
 }
 
-.month-list > div > div {
+.month-list>div>div {
     padding: 5px 20px;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
 }
 
-.month-list > div > div:hover {
+.month-list>div>div:hover {
     font-weight: 600;
 }
 
@@ -395,18 +397,19 @@
         transform: translateY(100%);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
     }
-} 
+}
 
 /*Minhas reservas: Pop up de cancelamento de reserva*/
 .popUp_cancel {
     display: flex;
     flex-direction: column;
     position: relative;
-    border-radius: 16px ;
+    border-radius: 16px;
     box-sizing: border-box;
     background: white;
     padding: 20px;
@@ -449,13 +452,14 @@
 
 #popUp-cancel_state1>div p,
 #popUp-cancel_state2>div p,
-#popUp-cancel_state3>div p  {
+#popUp-cancel_state3>div p {
     font-size: 14.5px;
     font-weight: bold;
     color: var(--scale-2-purple);
 }
 
-.go, #submit {
+.go,
+#submit {
     background-color: var(--scale-2-purple);
     border: none;
     width: 134px;
@@ -464,7 +468,8 @@
     border-radius: 30px;
 }
 
-.go, #submit {
+.go,
+#submit {
     font-size: 14.5px;
     font-family: var(--font-primary);
     font-weight: 500;
@@ -512,7 +517,7 @@
     list-style: none;
 }
 
-.rating li{
+.rating li {
     width: 50px;
     margin-right: 12px;
     cursor: pointer;
@@ -529,19 +534,19 @@
 #popUp-cancel_state2,
 #popUp-cancel_state3 {
     display: none;
-} 
+}
 
 
-@media(min-width: 320px) and (max-width: 540px){
-    #container_menu > a > button { 
+@media(min-width: 320px) and (max-width: 540px) {
+    #container_menu>a>button {
         width: 136px;
         height: 36px;
         margin: 0;
         font-size: 13.5px;
     }
 
-    main #my-reservations::before { 
-        display: none; 
+    main #my-reservations::before {
+        display: none;
     }
 
     #my-account-menu {
@@ -564,24 +569,29 @@
         flex-direction: column;
     }
 
-    #my-reservations_section1 ul li > div {
+    #my-reservations_section1 ul li>div {
         width: 100%;
         padding: 10px 0 0 0;
     }
 
-    #my-reservations_section1 ul li>div p { 
+    #my-reservations_section1 ul li>div p {
         margin-bottom: 10px;
     }
 
     #my-reservations_section1 ul li .space-flex {
-        margin-top: 40px;
-        align-items: center;
+        margin-top: 40px; 
     }
 
-    .space-flex > div {
+    .space-flex>div {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+    }
+
+    #my-reservations_section1 ul li .space-flex div button {
+        font-size: 12px;
+        width: 126px;
+        height: 32px;
     }
 
     .visits {
@@ -590,9 +600,9 @@
         margin: 0 0 5px 0;
     }
 
-    #container_popUp_calendar, 
+    #container_popUp_calendar,
     #container_popUp_cancel {
-        width: 100%; 
+        width: 100%;
     }
 
     .popUp_calendar {
@@ -621,7 +631,7 @@
     }
 
     #popUp-cancel_state1 label {
-        font-size: 18px; 
+        font-size: 18px;
     }
 
     .popUp_cancel textarea {
@@ -629,13 +639,16 @@
         margin-top: 60px;
     }
 
-    #popUp-cancel_state1>div p, #popUp-cancel_state2>div p, #popUp-cancel_state3>div p {
-        font-size: 12.5px; 
+    #popUp-cancel_state1>div p,
+    #popUp-cancel_state2>div p,
+    #popUp-cancel_state3>div p {
+        font-size: 12.5px;
     }
 
-    .go, #submit {
+    .go,
+    #submit {
         font-size: 13.5px;
-        width: 120px; 
+        width: 120px;
     }
 
     .popUp_flex {
@@ -646,11 +659,13 @@
         display: none;
     }
 
-    #popUp-cancel_state2>div label, #popUp-cancel_state3>div label {
+    #popUp-cancel_state2>div label,
+    #popUp-cancel_state3>div label {
         font-size: 20px;
     }
 
-    #comment1, #comment2 {
+    #comment1,
+    #comment2 {
         margin-top: 20px;
     }
 
@@ -664,16 +679,16 @@
 
 }
 
-@media(min-width: 540px) and (max-width: 841px){
-    #container_menu > a > button { 
+@media(min-width: 541px) and (max-width: 841px) {
+    #container_menu>a>button {
         width: 136px;
         height: 36px;
         margin: 0;
         font-size: 13.5px;
     }
 
-    main #my-reservations::before { 
-        display: none; 
+    main #my-reservations::before {
+        display: none;
     }
 
     #my-account-menu {
@@ -681,7 +696,7 @@
     }
 
     main #my-reservations>div {
-        padding: 130px 0 80px 0; 
+        padding: 130px 0 80px 0;
         width: 100%;
         display: flex;
         align-items: center;
@@ -689,26 +704,31 @@
 
     main #my-reservations>div>nav~div {
         width: 100%;
-    } 
+    }
 
-    #my-reservations_section1 ul li > div {
+    #my-reservations_section1 ul li>div {
         width: 100%;
         padding: 0 0 0 20px;
     }
 
-    #my-reservations_section1 ul li>div p { 
+    #my-reservations_section1 ul li>div p {
         margin-bottom: 12px;
     }
 
     #my-reservations_section1 ul li .space-flex {
-        margin-top: 40px;
-        align-items: center;
+        margin-top: 40px; 
     }
 
-    .space-flex > div {
+    .space-flex>div {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+    }
+
+    #my-reservations_section1 ul li .space-flex div button {
+        font-size: 12px;
+        width: 126px;
+        height: 32px;
     }
 
     .visits {
@@ -717,15 +737,15 @@
         margin: 0 0 5px 0;
     }
 
-    #container_popUp_calendar, 
+    #container_popUp_calendar,
     #container_popUp_cancel {
-        width: 100%; 
+        width: 100%;
     }
 
-    .popUp_calendar { 
-        padding: 30px; 
+    .popUp_calendar {
+        padding: 30px;
     }
-    
+
     .calendar-header {
         margin: 0;
         font-size: 18px;
@@ -743,11 +763,11 @@
 
     .popUp_cancel {
         margin: 0 16px;
-        padding: 30px 30px 15px 30px; 
+        padding: 30px 30px 15px 30px;
     }
 
     #popUp-cancel_state1 label {
-        font-size: 18px; 
+        font-size: 18px;
     }
 
     .popUp_cancel textarea {
@@ -755,25 +775,30 @@
         margin-top: 20px;
     }
 
-    #popUp-cancel_state1>div p, #popUp-cancel_state2>div p, #popUp-cancel_state3>div p {
-        font-size: 12.5px; 
+    #popUp-cancel_state1>div p,
+    #popUp-cancel_state2>div p,
+    #popUp-cancel_state3>div p {
+        font-size: 12.5px;
     }
 
-    .go, #submit {
+    .go,
+    #submit {
         font-size: 13.5px;
-        width: 120px; 
+        width: 120px;
     }
 
     .avaliation-img {
-        width: 165px; 
+        width: 165px;
         margin: -20px 0 0 -18px;
     }
 
-    #popUp-cancel_state2>div label, #popUp-cancel_state3>div label {
+    #popUp-cancel_state2>div label,
+    #popUp-cancel_state3>div label {
         font-size: 20px;
     }
 
-    #comment1, #comment2 {
+    #comment1,
+    #comment2 {
         margin-top: 20px;
     }
 
@@ -787,88 +812,28 @@
 
 }
 
-
-@media(min-width: 621px) and (max-width: 841px)  { 
-    #header>div a img {
-        width: 80%;
-    }
-
-    #container_search, 
-    #menu {
-        display: none;
-    }  
-
-    #container_menu > a > button { 
-        width: 136px;
-        height: 36px;
-        margin: 0;
-        font-size: 13.5px;
-    }
-
-    #my-account-sidebar_mobile {
-        display: block;
-    }
-
-    main #my-reservations::before { 
-        display: none; 
-    }
-
-    #my-account-menu {
-        display: none;
-    }
-
-    main #my-reservations>div {
-        padding-top: 130px;  
-        width: 100%;
-    }
-
-    main #my-reservations>div>nav~div {
-        width: 100%;
-    }
-
-    #my-reservations_section1,
-    #my-reservations_section2 .slider {
-        position: relative;
-        width: 100%;
-    }
-
-    #my-reservations_section1 ul li > div { 
-        width: 100%; 
-    }
-
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    } 
-}  
-
-@media(min-width: 841px) and (max-width: 1159px) { 
+@media(min-width: 841px) and (max-width: 1159px) {
     #my-reservations>div {
-        width: 100%; 
+        width: 100%;
     }
 
-    main #my-reservations::before {  
+    main #my-reservations::before {
         width: 28%;
-    } 
+    }
 
     main #my-reservations>div>nav~div {
         width: 68%;
     }
 
-    #my-reservations_section1 ul li > div {
+    #my-reservations_section1 ul li>div {
         width: 100%;
     }
 
-    #my-reservations_section1 ul li>div p:nth-child(1) { 
-        margin-bottom: 12px;
-    }
-
-    #my-reservations_section1 ul li .space-flex { 
+    #my-reservations_section1 ul li .space-flex {
         margin-top: 40px;
     }
 
-    #my-reservations_section1 ul li .space-flex > div { 
+    #my-reservations_section1 ul li .space-flex>div {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -884,6 +849,6 @@
 
     .popUp_cancel {
         width: 100%;
-        margin: 0 16px; 
+        margin: 0 16px;
     }
 }
