@@ -67,8 +67,8 @@ const menuHamburguer  = () =>{
             return
         }
 
-        if(menu_open.contains(e.target) == false || e.target.tagName == 'LI'){
-            menu_open.classList.remove('menu_open_checked')
+        if(menu_open.contains(e.target) == false || menu_open.contains(e.target) == true && e.target.tagName == 'LI' || menu_open.contains(e.target) == true && e.target.tagName == 'IMG'){
+           return menu_open.classList.remove('menu_open_checked')
         }
     })
     
@@ -98,6 +98,7 @@ const popUp_login_signUp = () => {
 
     function closePopUP() {
        containerPopUp.addEventListener('click',e=>{
+        console.log(e.target)
         if(e.target.classList == 'close_popup' || e.target == containerPopUp){
         containerPopUp.style.display = 'none'
         AllPopUp.forEach(popUp => popUp.classList.remove('popUpChecked'))
@@ -110,3 +111,46 @@ const popUp_login_signUp = () => {
 
 openInputsearchCoworkingSpaces()
 menuHamburguer ()
+
+
+const openPop_profilePicture = () => {
+    const pictureProfile = document.querySelectorAll(".pictureProfile");
+    const container_popUp_profilePicture = document.getElementById("container_popUp_profilePicture");
+
+    console.log({pictureProfile})
+
+    pictureProfile.forEach(element=> {
+        element.addEventListener('click', () => {
+        container_popUp_profilePicture.style.display = 'flex'
+    })
+    })
+
+
+    closePop_profilePicture(container_popUp_profilePicture)
+    
+}
+
+function closePop_profilePicture(container_popUp_profilePicture) {
+    container_popUp_profilePicture.addEventListener('click', p => {
+
+        console.log(p.target)
+
+        if (p.target.id == 'close' || e.target == container_popUp_profilePicture) {
+            container_popUp_profilePicture.style.display = 'none'
+        }
+    })
+}
+
+openPop_profilePicture()
+
+const changeBottom_bar = (item) => {
+    const buttonInactive = document.querySelectorAll('.inactive')
+    const buttonActive = document.querySelectorAll('.active');
+
+    buttonInactive.forEach(e=> {
+        e.addEventListener('click', () => {
+            item.classList.add("active");
+    })
+    })
+    
+}
