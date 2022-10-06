@@ -109,6 +109,7 @@
     width: 30px;
     height: 10px;
     margin-right: 5px;
+    border: 1px solid var(--scale-2-purple);
     background-color: var(--scale-2-purple);
     border-radius: 10px;
 }
@@ -153,25 +154,26 @@
 .whats,
 .face,
 .linkedin {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     justify-content: space-between;
 }
 
 
 .social-medias_flex img,
 .whats {
+    width: 30px;
     color: #15cc3a;
-    margin-right: 10px;
+    margin: 5px;
 }
 
 .face {
     color: #1749b3;
-    margin-right: 5.5px;
+    margin: 4px;
 }
 
 .linkedin {
     color: #0c87c1;
-    margin-right: 10px;
+    margin: 5px;
 }
 
 .form-flex ~ div {
@@ -185,13 +187,13 @@
     width: 226px;
     height: 36px;
     color: var(--white);
-    border-radius: 40px;
+    border-radius: 30px;
 }
 
 #edit_ad {
     font-size: 14px;
     font-family: var(--font-primary);
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 40px;
 }
 
@@ -201,10 +203,6 @@
         height: 36px;
         margin: 0;
         font-size: 13.5px;
-    }
-
-    #my-account-bottom-bar_mobile {
-        display: flex;
     }
 
     main #my-profile::before { 
@@ -255,12 +253,6 @@
     form .social-medias p {
         font-size: 11.5px; 
     }
-
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    }
 }
 
 @media(min-width: 481px) and (max-width: 841px) {
@@ -271,10 +263,6 @@
         font-size: 13.5px;
     }
     
-    #my-account-bottom-bar_mobile {
-        display: flex;
-    }
-
     main #my-profile::before { 
         display: none; 
     }
@@ -300,12 +288,6 @@
     form .social-medias_flex div input { 
         font-size: 14px;
     } 
-
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    }
 }
 
 @media(min-width: 841px) and (max-width: 1000px) { 
