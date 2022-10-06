@@ -67,7 +67,7 @@ const menuHamburguer  = () =>{
             return
         }
 
-        if(menu_open.contains(e.target) == false || menu_open.contains(e.target) == true && e.target.tagName == 'LI' || menu_open.contains(e.target) == true && e.target.tagName == 'IMG'){
+        if(menu_open.contains(e.target) == false || menu_open.contains(e.target) == true && e.target.tagName == 'LI' || menu_open.contains(e.target) == true && e.target.tagName == 'I'){
            return menu_open.classList.remove('menu_open_checked')
         }
     })

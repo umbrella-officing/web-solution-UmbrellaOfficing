@@ -34,69 +34,78 @@
                     <span id="search_txt">Pesquise locais para trabalhar</span>
                     <div id='container_informations_find_coworking'>
                         <div>
-                            <input id="localization" type="text" placeholder="Localização:">
+                            <input id="localization" class="search-information" type="text" placeholder="Localização:">
                             <div class="popUp_input"></div>
                         </div>
                         <div>
-                            <input type="date" id="check_in">
+                            <input type="date" id="check_in" class="search-information">
                             <div class="popUp_input"></div>
                         </div>
+                        <div>
+                            <select name="period" id="period" class="search-information" placeholder="Período">
+                                <option value="morning">Manhã</option>
+                                <option value="afternoon">Tarde</option>
+                                <option value="evening">Noite</option>
+                            </select>
                         </div>
-                        <a href="#">
-                            <div>
-                                <img src="images/default/search.svg" alt="pesquisa">
-                            </div>
-                        </a>  
+                        <div>
+                            <input type="text" id="people" class="search-information" placeholder="Pessoas">
+                            <div class="popUp_input"></div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div>
+                            <img src="images/default/search.svg" alt="pesquisa">
+                        </div>
+                    </a>
                 </div>
             </div>
 
             <div id="menu">
                 <div id='menu_sign-in-up'>
-                        <img src="images/default/user.svg" alt="usuário">
-                        <img src="images/default/menu_hamburguer.svg" alt="menu">
+                    <img src="images/default/user.svg" alt="usuário">
+                    <img src="images/default/menu_hamburguer.svg" alt="menu">
                 </div>
-                <div>
-                    <div class="menu_open">
-                        <div>
-                            <div class="picture_edit">
-                                <img src="images/default/perfil.png" alt="foto de perfil">
-                                <i class="fa-solid fa-pen pictureProfile list"></i>
-                            </div>
-                            <div id="user_informations">
-                                    <%
-                                        if(autenticado){
-                                    %>
-                                        <h3><%=autenticado.name%></h3>
-                                        <span><%=autenticado.profession%></span>
-                                    <%       
-                                    }else{
-                                    %>
-                                    <h3>Usuários</h3>
-                                    <span>Cliente</span>
-                                    <%
-                                    } 
-                                    %>
-                            </div>
+                <div class="menu_open">
+                    <div>
+                        <div class="picture_edit">
+                            <img src="images/default/perfil.png" alt="foto de perfil">
+                            <i class="fa-solid fa-pen pictureProfile list"></i>
                         </div>
-                        <div>
-                            <nav>
-                                <ul>
-                                    <li class="popUp-login-signUp">
-                                        <img src="images/default/my-perfil.png" alt="meu perfil">
-                                        Login
-                                    </li>
-                                    <li class="popUp-login-signUp">
-                                        <img src="images/default/sign_up.png" alt="cadastre-se">
-                                        Cadastre-se
-                                    </li>
-                    
-                                </ul>
-                            </nav>
+                        <div id="user_informations">
+                            <%
+                            if(autenticado){
+                        %>
+                            <h3><%=autenticado.name%></h3>
+                            <span><%=autenticado.profession%></span>
+                        <%       
+                        }else{
+                        %>
+                        <h3>Usuários</h3>
+                        <span>Cliente</span>
+                        <%
+                        } 
+                        %>
                         </div>
-                        <div>
-                            <a href="/central-de-ajuda"></a><img src="images/default/question.png" alt="sair da conta">
+                    </div>
+                    <div>
+                        <nav>
+                            <ul>
+                                <li class="popUp-login-signUp list">
+                                    <i class="fa-solid fa-user"></i>
+                                    Login
+                                </li>
+                                <li class="list popUp-login-signUp">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                    Cadastre-se
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        <a href="/central-de-ajuda"><i class="fa-solid fa-circle-info"></i>
                             Central de ajuda</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -192,29 +201,32 @@
                     </form>
             </div>        
             </div>
-            <div id="container_popUp_profilePicture">
-                <div class="popUp_profilePicture">
-                    <h2>Adicionar imagem de perfil</h2>
-                    <div>
-                        <div class="actionPicture">
-                            <img src="images/default/perfil.png" alt="Foto de perfil">
-                            <div>
-                                <button id="close">Fechar</button>
-                                <button id="salve">Guardar</button>
-                            </div>
-                        </div>
-    
+        </div>
+        <div id="container_popUp_profilePicture">
+            <div class="popUp_profilePicture">
+                <h2>Adicionar imagem de perfil</h2>
+                   
+                <div>
+                     <form action="">
+                    <div class="actionPicture">
+                        <img src="images/default/perfil.png" alt="Foto de perfil">
                         <div>
-                            <div class="uploadPicture">
-                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                                <p>Carregar imagem</p>
-                            </div>
-                            <div class="deletePicture">
-                                <i class="fa-solid fa-trash"></i>
-                                <p>Remover imagem</p>
-                            </div>
+                            <input id="close" type="button" value="Fechar">
+                            <button id="salve">Guardar</button>
                         </div>
                     </div>
+
+                    <div>
+                        <div class="uploadPicture">
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                            <p>Carregar imagem</p>
+                        </div>
+                        <div class="deletePicture">
+                            <i class="fa-solid fa-trash"></i>
+                            <p>Remover imagem</p>
+                        </div>
+                    </div>
+                    </form>
                 </div>
             </div>
         </div>

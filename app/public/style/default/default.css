@@ -312,6 +312,24 @@ header > div {
     font-size: 15px;
 }
 
+.picture_edit i{
+    cursor: pointer;
+}
+
+.menu_open ul li i, .menu_open > div:last-child i {
+    font-size: 14px;
+    width: 14px;
+    margin-right: 12px;
+    color: rgb(0 0 0 / 80%);
+}
+
+.menu_open > div:last-child a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-1-black);
+}
+
 .menu_open ul li, .menu_open > div:last-child{
     cursor: pointer;
 }
@@ -508,7 +526,7 @@ fieldset{
     width: 100%;
 }
 
-.popUp_profilePicture h2~div {
+.popUp_profilePicture div > form {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -553,10 +571,11 @@ fieldset{
 
 .actionPicture img {
     width: 120px;
+    height: 120px;
     margin: 0 0 25px 50px;
 }
 
-.actionPicture button {
+.actionPicture button, .actionPicture input[type="button"]{
     width: 100px;
     padding: 6px;
     border-radius: 15px;
