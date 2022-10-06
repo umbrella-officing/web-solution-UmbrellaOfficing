@@ -515,6 +515,23 @@ fieldset{
     margin-top: 25px;
 }
 
+.picture_edit {
+    display: flex;
+    width: 71px;
+    align-items: center;
+    position: relative;
+}
+
+.picture_edit i {
+    margin: 0 37px -50px;
+    color: #FFE;
+    background: var(--scale-2-purple);
+    padding: 10px;
+    position: absolute;
+    border-radius: 30px;
+    font-size: 12px;
+}
+
 .actionPicture {
     display: flex;
     flex-direction: column;
