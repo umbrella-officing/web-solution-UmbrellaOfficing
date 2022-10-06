@@ -10,7 +10,6 @@ ul {
   list-style: none;
 }
 
-<<<<<<< HEAD
 #map {
   width: 265px;
   height: 116px;
@@ -21,7 +20,8 @@ ul {
   margin-bottom: 36px;
   padding: 0 50px;
   box-sizing: border-box;
-=======
+}
+
 #box{
     width: 100px;
     height: 40px;
@@ -61,7 +61,6 @@ ul {
     z-index: 3;
     color: #fff;
     font-weight: 600;
->>>>>>> 0fc885564c56cd8ad920a1619b6697af78454234
 }
 
 #map button {
@@ -145,7 +144,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background: #17A2B8;
 }
 
-<<<<<<< HEAD
+
 #price_input>div label input {
   width: 51px;
   margin-top: 7px;
@@ -157,7 +156,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 5px;
   box-shadow: 0px 2px 6px 1px rgb(1 1 1 / 10%);
 }
-=======
+
 .slider{
     height: 7px;
     position: relative;
@@ -499,7 +498,6 @@ input[type="number"]::-webkit-inner-spin-button {
   /* #rooms-available{
     /* margin-top: 40px; 
 } */
->>>>>>> 0fc885564c56cd8ad920a1619b6697af78454234
 
 .slider {
   height: 7px;
@@ -867,9 +865,9 @@ ul .specifications:last-child {
   width: 100%;
 }
 
-#rooms-available {
-  /* margin-top: 40px; */
-}
+/* #rooms-available {
+  margin-top: 40px; 
+} */
 
 .rooms-available-container div:first-child img {
   border-radius: inherit;
@@ -929,14 +927,14 @@ ul .specifications:last-child {
   color: #222;
 }
 
-<<<<<<< HEAD
+
 .officing-description div span b {
   color: var(--scale-5-purple);
   font-weight: 500;
 }
 
-.officing-description img {
-=======
+/* .officing-description img { */
+
 .rooms-available-container{
     width: 780px;
     display: flex;
@@ -972,11 +970,11 @@ ul .specifications:last-child {
 }
 
 /* #description h4{
+
 } */
 
 
 .officing-description img{
->>>>>>> 0fc885564c56cd8ad920a1619b6697af78454234
   width: 15px;
 }
 
@@ -1001,7 +999,6 @@ ul .specifications:last-child {
   font-weight: 500;
 }
 
-<<<<<<< HEAD
 #price-space {
   width: 91%;
   align-items: flex-end;
@@ -1018,7 +1015,8 @@ ul .specifications:last-child {
 #price-space span strong {
   color: 222;
   font-size: 22px;
-=======
+}
+
 #align-price{
     text-align: start;
     display: flex;
@@ -1059,7 +1057,6 @@ ul .specifications:last-child {
 .officing-description > div span strong{
   color: var(--scale-2-purple);
   font-size: 14px;
->>>>>>> 0fc885564c56cd8ad920a1619b6697af78454234
 }
 
 #price-space>div>span {
