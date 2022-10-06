@@ -477,6 +477,82 @@ fieldset{
     color: red !important;
 }
 
+#container_popUp_profilePicture {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    padding: 0;
+}
+
+.popUp_profilePicture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
+    padding: 30px 42px 52px 42px;
+}
+
+.popUp_profilePicture h2 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.popUp_profilePicture h2~div {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-top: 25px;
+}
+
+.actionPicture {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.uploadPicture, .deletePicture {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.popUp_profilePicture div > div p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10px;
+    max-width: 150px;
+}
+
+.actionPicture img {
+    width: 120px;
+    margin: 0 0 25px 50px;
+}
+
+.actionPicture button {
+    width: 100px;
+    padding: 6px;
+    border-radius: 15px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#salve {
+    background-color: var(--scale-2-purple);
+    color: #fff;
+}
+
 .form_button{
     margin: 15px auto 0 auto;
     border-radius: 24px;
