@@ -14,8 +14,41 @@ ul{
     width: 100px;
     height: 40px;
     border-radius: 20px;
-    background: rgb(182, 11, 182);
     margin-bottom: 36px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    padding: 22px 0;
+}
+
+#box:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba( 0, 0, 0, 0.25);
+  position: absolute;
+  z-index: 2;
+}
+
+#box iframe{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+#box button{
+    width: 145px;
+    height: 33px;
+    background-color: var(--scale-6-blue);
+    border: 0;
+    border-radius: 45px;
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    font-weight: 600;
 }
 
 #filter{
@@ -438,9 +471,9 @@ input[type="number"]::-webkit-inner-spin-button {
     display: none;
   }
   
-  #rooms-available{
-    /* margin-top: 40px; */
-}
+  /* #rooms-available{
+    /* margin-top: 40px; 
+} */
 
 .rooms-available-container div:first-child img{
     border-radius: inherit;
@@ -457,7 +490,7 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 780px;
     display: flex;
     justify-content: space-between;
-    margin: 0px 0 15px 0;
+    margin: 0px 0 26px 0;
     border-radius: 10px;
     background-color: #ffffff;
     box-sizing: border-box;
@@ -487,9 +520,9 @@ input[type="number"]::-webkit-inner-spin-button {
     color: #222;
 }
 
-#description h4{
+/* #description h4{
 
-}
+} */
 
 
 .officing-description img{
@@ -515,6 +548,19 @@ input[type="number"]::-webkit-inner-spin-button {
     max-width: 348px;
 }
 
+#align-price{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    color: #333333;
+    width: fit-content;
+    align-items: baseline;
+}
+
+#align-price strong{
+    font-size: 20px;
+}
+
 #price-space{
     width: 91%;
     align-items: center;
@@ -522,14 +568,34 @@ input[type="number"]::-webkit-inner-spin-button {
     justify-content: space-between;
 }
 
+#likeIt{
+  width: 32px;
+  height: 32px;
+  background-color: var(--scale-2-purple);
+  border-radius: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  position: absolute;
+}
+
+#likeIt img{
+  width: 18px;
+  height: 18px;
+}
+
 .officing-description > div span strong{
-  color: 222;
-  font-size: 22px;
+  color: var(--scale-2-purple);
+  font-size: 14px;
 }
 
 #price-space > div > span{
   display: flex;
   align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
 }
 
 img[alt="estrela"]{
