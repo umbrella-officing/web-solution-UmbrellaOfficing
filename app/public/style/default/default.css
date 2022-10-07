@@ -782,11 +782,15 @@ footer a {
 
 @media(min-width: 320px) and (max-width: 481px) {
     h1 {
-        font-size: 35px;
+        font-size: 25px;
     }
 
-    h2, h3 {
+    h2 {
         font-size: 20px;
+    } 
+    
+    h3 {
+        font-size: 18px;
     }
 
     h4 {
@@ -834,15 +838,19 @@ footer a {
 
 @media(min-width: 481px) and (max-width: 841px) { 
     h1 {
-        font-size: 45px;
+        font-size: 28px;
     }
 
-    h2, h3 {
+    h2 {
         font-size: 22px;
+    }
+    
+    h3 {
+        font-size: 20px;
     }
 
     h4 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     p {
