@@ -12,18 +12,18 @@ module.exports.home = (application, req, res) => {
     res.render("pages/home/index",autenticado);
 }
 
-module.exports.index = (application, req, res) => {
-    const connection = application.config.dbConnection;
-    const noticiasDao = new application.app.models.UsersDAO(connection);
-    noticiasDao.get5UltimasNoticias((error, result) => {
-      res.render("teste/register",
-      {
-       sala:result,
-       validacao:null,
-       valores:""
-      })
-    });
-  }
+// module.exports.index = (application, req, res) => {
+//     const connection = application.config.dbConnection;
+//     const userDao = new application.app.models.UsersDAO(connection);
+//     userDao.get5UltimasNoticias((error, result) => {
+//       res.render("teste/register",
+//       {
+//        sala:result,
+//        validacao:null,
+//        valores:""
+//       })
+//     });
+//   }
 
   module.exports.sair = (application, req, res) =>{
     req.session.destroy();
@@ -33,7 +33,7 @@ module.exports.index = (application, req, res) => {
 module.exports.registerUser = (application, req, res) =>{
 
   const connection = application.config.dbConnection;
-  const noticiasDao = new application.app.models.UsersDAO(connection);
+  const userDao = new application.app.models.UsersDAO(connection);
 
   var dadosForm = {
     nome_user: req.body.name,
@@ -46,16 +46,12 @@ module.exports.registerUser = (application, req, res) =>{
     end_user:req.body.address
     };
 
-  noticiasDao.registerUser(dadosForm, (error, result) => {
+  userDao.registerUser(dadosForm, (error, result) => {
       if(error) {
         throw error
       }
       res.redirect('/');
   });
-}
-
-module.exports.login = (application, req, res) =>{
-  res.render('teste/login')
 }
 
 module.exports.formLogin = (application, req, res) =>{

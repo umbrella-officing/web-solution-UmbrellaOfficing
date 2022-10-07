@@ -12,10 +12,6 @@ module.exports = (application) => {
       application.app.controllers.usersController.registerUser(application, req, res);
     });
 
-    application.get('/login', (req, res) => {
-      application.app.controllers.usersController.login(application, req, res);
-    });
-
     application.post('/login', (req, res) => {
       application.app.controllers.usersController.formLogin(application, req, res);
     });
