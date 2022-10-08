@@ -563,7 +563,14 @@ fieldset{
     margin-bottom: 10px;
 }
 
-.popUp_profilePicture div > div p {
+.uploadPicture input[type="file"]{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+}
+
+.popUp_profilePicture div > div span, .uploadPicture label {
     font-size: 14px;
     font-weight: 400;
     margin-left: 10px;

@@ -1,6 +1,8 @@
 var bcrypt = require("bcryptjs");
 const { application } = require("express");
 var salt = bcrypt.genSaltSync(12);
+const multer = require('multer'); //para instalar --> npm install --save multer
+const path = require('path')
 
 module.exports.home = (application, req, res) => {
     if (req.session.autenticado) {
@@ -94,3 +96,28 @@ function capital_letter(str) {
         }
     }
     )}
+
+    module.exports.uploadImageProfile = (application,req, res) => {
+
+      var storage = multer.diskStorage({
+        destination: (req, file, callBack) => {
+          callBack(null, './app/public/imagem/temp/') // diretório de destino  
+        },
+        filename: (req, file, callBack) => {
+          callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname)) //renomeando o arquivo para evitar duplicidade de nomes
+        }
+      })
+
+      var upload = multer({
+        storage: storage,
+        fileFilter: (req, file, cb) => {
+          if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
+            cb(null, true);
+          } else {
+            cb(null, false);
+            return cb(new Error('Only .png, .jpg and .jpeg format allowed!'));
+          }
+        }
+      });
+
+    }

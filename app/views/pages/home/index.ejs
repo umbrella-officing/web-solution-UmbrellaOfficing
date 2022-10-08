@@ -207,25 +207,29 @@
                 <h2>Adicionar imagem de perfil</h2>
                    
                 <div>
-                     <form action="">
+                     <form action="/adicionar-imagem-perfil" method="post">
                     <div class="actionPicture">
                         <div>
                             <img src="images/default/perfil.png" alt="Foto de perfil">
                         </div>
                         <div>
                             <input id="close" type="button" value="Fechar">
-                            <button id="salve">Guardar</button>
+                            <button id="salve" type="submit">Guardar</button>
                         </div>
                     </div>
 
                     <div>
                         <div class="uploadPicture">
                             <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                            <p>Carregar imagem</p>
+                            <label for="ImagemPerfil">
+                                Carregar imagem
+                            </label>
+                            <input accept="image/" class="form-control" id="ImagemPerfil" name="ImagemPerfil"
+                            onchange="loadImg()" type="file" value=""/>
                         </div>
                         <div class="deletePicture">
                             <i class="fa-solid fa-trash"></i>
-                            <p>Remover imagem</p>
+                            <span>Remover imagem</span>
                         </div>
                     </div>
                     </form>
