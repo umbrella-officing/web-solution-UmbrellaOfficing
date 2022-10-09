@@ -1,12 +1,26 @@
 var bcrypt = require("bcryptjs");
 const { application } = require("express");
 var salt = bcrypt.genSaltSync(12);
-const multer = require('multer'); //para instalar --> npm install --save multer
-const path = require('path')
+
+const multer = require('multer'); 
+
+const armazenamentoMemoria = multer.memoryStorage()
+
+const upload2 = multer({ 
+  storage: armazenamentoMemoria,
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
+      cb(null, true);
+    } else {
+      cb(null, false);
+      return cb(new Error('Only .png, .jpg and .jpeg format allowed!'));
+    }
+} })
 
 module.exports.home = (application, req, res) => {
     if (req.session.autenticado) {
       autenticado = { name: req.session.usu_name_autenticado,
+                      id_user:req.session.id_user,
                       profession: req.session.profession};
     } else {
       autenticado = { autenticado: null};
@@ -56,6 +70,51 @@ module.exports.registerUser = (application, req, res) =>{
   });
 }
 
+/*
+  var storage = multer.diskStorage({
+        filename: (req, file, callBack) => {
+          callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname)) //renomeando o arquivo para evitar duplicidade de nomes
+        }
+      })
+
+      var upload = multer({
+        storage: storage,
+        fileFilter: (req, file, cb) => {
+          if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
+            cb(null, true);
+          } else {
+            cb(null, false);
+            return cb(new Error('Only .png, .jpg and .jpeg format allowed!'));
+          }
+        }
+      });
+
+      const armazenamentoMemoria = multer.memoryStorage()
+      //adiciona este espaço ao método de upload
+      const upload2 = multer({ 
+        storage: armazenamentoMemoria,
+        fileFilter: (req, file, cb) => {
+          if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
+            cb(null, true);
+          } else {
+            cb(null, false);
+            return cb(new Error('Only .png, .jpg and .jpeg format allowed!'));
+          }
+      } })
+
+      upload2.single('ImagemPerfil')  
+      
+        if (!req.file) {
+           return console.log("Falha no carregamento");
+        }
+
+          let fileContent = req.file.buffer.toString('base64');
+
+          var dadosForm = {
+            fotos_user:fileContent,
+          };
+*/
+
 module.exports.formLogin = (application, req, res) =>{
   
   var dadosForm = {
@@ -90,34 +149,45 @@ function capital_letter(str) {
             var name_user = capital_letter(truncate_name)
             req.session.autenticado = true;
             req.session.usu_name_autenticado = name_user;
+            req.session.id_user = results[0].cpf_user
             req.session.profession = results[0].profissao
             return res.redirect("/");
           }
         }
     }
+    
     )}
 
-    module.exports.uploadImageProfile = (application,req, res) => {
 
-      var storage = multer.diskStorage({
-        destination: (req, file, callBack) => {
-          callBack(null, './app/public/imagem/temp/') // diretório de destino  
-        },
-        filename: (req, file, callBack) => {
-          callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname)) //renomeando o arquivo para evitar duplicidade de nomes
+    module.exports.uploadImagePerfil = (application, req, res) =>{
+  
+      
+      if (!req.file) {
+        console.log("Falha no carregamento");
+      } else {
+        console.log('teste2')
+      }
+         
+
+  
+        // if (!req.file) {
+        //    return console.log("Falha no carregamento");
+        // }
+          
+        //   var dadosForm = {
+        //     cpf_user:autenticado.id_user,
+        //     fotos_user:fileContent,
+        //   };
+
+        //   console.log(dadosForm)
+
+        //   res.redirect('/')
+
+        //   const connection = application.config.dbConnection;
+        //   const usersDao = new application.app.models.UsersDAO(connection);
+      
+          // usersDao.uploadImage(dadosForm,(error, results)=>{
+
+          // })
+
         }
-      })
-
-      var upload = multer({
-        storage: storage,
-        fileFilter: (req, file, cb) => {
-          if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
-            cb(null, true);
-          } else {
-            cb(null, false);
-            return cb(new Error('Only .png, .jpg and .jpeg format allowed!'));
-          }
-        }
-      });
-
-    }

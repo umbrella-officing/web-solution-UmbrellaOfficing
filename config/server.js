@@ -25,6 +25,7 @@ app.use(session({
     // saveUninitialized: false
 }));
 
+
 // Chamando função 
 consig()
     .include('app/routes') // incluindo rotas e as carregando automaticamente
