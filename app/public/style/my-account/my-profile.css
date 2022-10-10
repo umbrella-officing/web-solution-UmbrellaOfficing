@@ -1,3 +1,7 @@
+#my-account-sidebar_mobile {
+    display: none;
+}
+
 #my-profile {
     position: relative;
 }
@@ -9,13 +13,12 @@
 }
 
 #my-profile>div {
-    padding: 220px 0 80px 0;
+    padding: 180px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
-}
+} 
 
-/*Meu perfil: menu lateral*/
 #my-profile::before {
     content: "";
     position: absolute;
@@ -24,54 +27,6 @@
     height: 100%;
     width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
-}
-
-#my-profile>div nav {
-    position: relative;
-}
-
-#my-profile>div nav ul {
-    list-style: none;
-    position: fixed;
-}
-
-#my-profile>div nav ul li {
-    display: flex;
-    height: 40px;
-    margin-bottom: 25px;
-    align-items: center;
-}
-
-#my-profile>div nav ul li a {
-    text-decoration: none
-}
-
-.profile,
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    font-size: 26px;
-}
-
-
-.option_active a {
-    border-left: 3px solid #5B61C4;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--scale-13-blue);
-}
-
-.profile {
-    margin: 0 10px 0 18px;
-}
-
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    color: var(--gray-border);
-    margin: 0 10px 0 21px;
 }
 
 /*Meu perfil: conteúdo*/
@@ -154,6 +109,7 @@
     width: 30px;
     height: 10px;
     margin-right: 5px;
+    border: 1px solid var(--scale-2-purple);
     background-color: var(--scale-2-purple);
     border-radius: 10px;
 }
@@ -167,7 +123,6 @@
     font-weight: 600;
     font-family: var(--font-primary);
 }
-
 
 .social-medias p {
     font-size: 12px;
@@ -199,25 +154,26 @@
 .whats,
 .face,
 .linkedin {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     justify-content: space-between;
 }
 
 
 .social-medias_flex img,
 .whats {
+    width: 30px;
     color: #15cc3a;
-    margin-right: 10px;
+    margin: 5px;
 }
 
 .face {
     color: #1749b3;
-    margin-right: 5.5px;
+    margin: 4px;
 }
 
 .linkedin {
     color: #0c87c1;
-    margin-right: 10px;
+    margin: 5px;
 }
 
 .form-flex ~ div {
@@ -231,47 +187,38 @@
     width: 226px;
     height: 36px;
     color: var(--white);
-    border-radius: 40px;
+    border-radius: 30px;
 }
 
 #edit_ad {
     font-size: 14px;
     font-family: var(--font-primary);
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 40px;
 }
 
-@media(min-width: 300px) and (max-width: 480px){
-    #header {
-        display: none;
+@media(min-width: 320px) and (max-width: 480px){
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
     }
-
-    .default_margin {
-        margin: 0 8px;
-    } 
 
     main #my-profile::before { 
-        width: 20%; 
+        display: none; 
     }
 
-    .profile,
-    .wallet,
-    .reserve,
-    .ads,
-    .calendar {
-        font-size: 20px;
+    main #my-profile nav {
+        display: none;
     }
 
     main #my-profile>div {
-        padding-top: 80px; 
+        padding-top: 130px;  
     }
-
-    main #my-profile>div nav ul li span {
-        display: none;
-    } 
     
     main #my-profile_section1 {
-        width: 75%;
+        width: 100%;
     }
 
     main #my-profile_section1 h1 {
@@ -306,77 +253,49 @@
     form .social-medias p {
         font-size: 11.5px; 
     }
-
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    }
 }
 
 @media(min-width: 481px) and (max-width: 841px) {
-    #header {
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+    
+    main #my-profile::before { 
+        display: none; 
+    }
+
+    main #my-profile nav {
         display: none;
     } 
-
-    main #my-profile::before { 
-        width: 20%; 
-    }
-
-    .profile,
-    .wallet,
-    .reserve,
-    .ads,
-    .calendar {
-        font-size: 22px;
-    }
 
     main #my-profile>div {
-        padding-top: 80px; 
+        padding-top: 130px; 
     }
-
-    main #my-profile>div nav ul li span {
-        display: none;
-    } 
 
     main #my-profile_section1 {
-        width: 75%;
-    }
-
-    form .form-flex {
-        flex-direction: column; 
-    }
-
-    form .social-medias {
         width: 100%;
-        margin-top: 40px;
+    } 
+
+    form .form-flex>div:nth-child(1) { 
+        width: 45%;
+        box-sizing: border-box;
+        padding: 22px;
     }
 
     form .social-medias_flex div input { 
         font-size: 14px;
     } 
-
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    }
 }
 
 @media(min-width: 841px) and (max-width: 1000px) { 
     main #my-profile::before {  
-        width: 25%;
+        width: 28%;
     }
 
     main #my-profile_section1 {
-        width: 70%;
-    }
-
-    #logo { 
-        max-width: 275px;
-    }
-
-    footer ul h5 {
-        font-size: 17px; 
-    }
+        width: 68%;
+    } 
 } 

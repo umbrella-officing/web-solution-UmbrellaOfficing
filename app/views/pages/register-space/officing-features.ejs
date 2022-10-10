@@ -134,15 +134,13 @@
 
         <section id="officing_features_section" class="container_margin_default">
             <div class="default_margin">
-                <div id="align-items">
-                    <div>
-                        <a href=""><img src="images/default/return_arrow-white.svg" alt="Ícone de seta - Voltar"></a>
+               
+                        
                         <h1>Adicione as características<br> do seu Officing</h1>
-                    </div>
 
 
                     <form class="formSteps" action="" method="" data-js='form'>
-                        <div id="first-step">
+                        <div id="first-step" class="step" class="step">
                             <ul>
                                 <li class="liAlign1">
                                     <label>
@@ -191,11 +189,10 @@
 
                                     <input type="text" class="outline-focus" name="roomSize" id="roomSize" placeholder="Ex: 10">
                                 </li>
-                                <button class="button">Avançar</button>
                             </ul>
                         </div> 
 
-                        <div id="second-step">
+                        <div id="second-step" class="step">
                             <div>
                                 <img class="feature-icon" src="images/register-space/wi-fi.png" alt="Ícone - Wifi">
                                 <h2>Wifi</h2>   
@@ -206,6 +203,7 @@
                                     <h3>Qualidade alta</h3>
                                     <p>Eficaz no download, upload e carregamento de
                                         arquivos pesados</p>
+                                    <p><b>Mais de 25 MB por usuário</b></p>
                                 </li>
                                 <li>
                                     <h3>Qualidade média</h3>
@@ -223,10 +221,19 @@
                             </ul>
                         </div> 
 
-                        <div id="third-step">
-                            <div>
-                                <img class="feature-icon" src="images/register-space/pc.png" alt="Ícone - Computador">
-                                <h2>Computador</h2>
+                        <div id="third-step" class="step">
+                            <div id="align-pc">
+                                <div>
+                                    <img class="feature-icon" src="images/register-space/pc.png" alt="Ícone - Computador">
+                                    <h2>Computador</h2>
+                                </div>
+                                <span>Adicionados 
+                                    <select name="pcs" id="">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </span>
                             </div>
 
                             <ul>
@@ -249,7 +256,7 @@
                             
                         </div> 
 
-                        <div id="fourth-step">
+                        <div id="fourth-step" class="step">
                             <ul>
                                 <li>
                                     <div>
@@ -306,11 +313,15 @@
                                         <button><i class="fa-solid fa-plus addition"></i></button>
                                     </div>
                                 </li>
-                                <button class="button">Avançar</button>
+                                
                             </ul>
                         </div>
                     </form>
-                </div>
+
+                    <div id="buttons">
+                        <button id="return">Voltar</button>
+                        <button id="advance">Avançar</button>
+                    </div>
             </div>
         </section>
     </main>

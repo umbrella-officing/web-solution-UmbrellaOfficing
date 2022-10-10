@@ -10,7 +10,7 @@ body {
     justify-content: space-between;
 }
 
-/*Menu lateral*/
+/*Menu lateral - Desktop*/
 #come_back {
     display: flex;
     width: 64px;
@@ -37,11 +37,11 @@ a {
     color: var(--text-1-black);
 }
 
-#booking-requests>div nav ul {
+#bottom-bar_booking-requests-desktop ul {
     list-style: none;
 }
 
-#booking-requests>div nav ul li {
+#bottom-bar_booking-requests-desktop ul li {
     display: flex;
     padding: 10px;
     height: 40px;
@@ -71,13 +71,49 @@ a {
     top: 0.4rem;
 }
 
+
+/*Menu - Mobile*/
+#bottom-bar_booking-requests-mobile {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    background: #fff;
+    z-index: 9000;
+    padding: 5px 0;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgb(0 0 0 / 11%);
+    box-shadow: rgb(0 0 0 / 8%) 0 1px 0;
+}
+
+#bottom-bar_booking-requests-mobile ul {
+    display: flex;
+    list-style: none;
+}
+
+#bottom-bar_booking-requests-mobile ul li{
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+#bottom-bar_booking-requests-mobile ul 
+.option-checked {
+    border-left: none;
+    border-bottom: 3px solid var(--scale-13-blue);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--scale-13-blue);
+}
+
+
 #booking-requests>div h1 {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 35px;
 }
 
-#booking-requests>div article ul {
+/* #booking-requests>div article ul {
     list-style: none;
     display: grid;
     grid-template-columns: 158px 158px 158px 158px 158px;
@@ -173,7 +209,7 @@ section::after {
     content: "";
     border: 2px;
     color: aqua;
-}
+} */
 
 #confirmed,
 #canceled,
@@ -280,3 +316,265 @@ section::after {
 }
 
 
+#booking-requests>div article {
+    width: 880px;
+}
+
+#booking-requests>div article ul li {
+    display: flex;
+    padding: 15px 10px; 
+    justify-content: space-between;
+}
+
+#booking-requests>div article ul li:nth-child(2) {
+    background: rgb(241 241 241 / 45%);
+}
+
+ul li .profile {
+    display: flex;
+}
+
+.profile img {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+}
+
+#booking-requests>div article ul li div h3 {
+    font-size: 14px;
+    font-weight: 600;  
+}
+
+#booking-requests>div article ul li div h3 span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 256px;
+}
+
+.actions button {
+    border: none; 
+    width: 36px;
+    height: 36px;
+    border-radius: 30px;
+    color: #fff; 
+}
+
+.actions button a { 
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600; 
+}
+
+#calendar{
+    width: 161px; 
+    background-color: var(--scale-13-blue);
+}
+
+.calendar {
+    margin-right: 5px;
+}
+
+#check,
+#delete,
+#renovation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #DADAF5;
+}
+
+.check, 
+.delete {
+    font-size: 16px;
+}
+
+#client-avaliation .actions {
+    width: 161px;
+}
+
+#client-avaliation .avaliation {
+    font-size: 15px;
+    font-weight: 600;
+    width: 161px; 
+    background-color: var(--scale-13-blue);
+}
+
+#confirmed .actions {
+    width: 226px;
+}
+
+@media(min-width: 320px) and (max-width: 550px){
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
+        display: none;
+    }  
+
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    main #booking-requests>div { 
+        padding-top: 130px; 
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #booking-requests_articles { 
+        width: 100%;
+    }
+
+    #come_back img {
+        width: 20px;
+    }
+
+    #come_back {
+        font-size: 13px;
+    }
+
+    main #bottom-bar_booking-requests-desktop ul { 
+        display: none;
+    }
+
+    #booking-requests>div article {
+        width: 100%;
+    }
+
+    #booking-requests>div h1 { 
+        margin-bottom: 20px;
+    }
+
+    #booking-requests_articles article ul li {
+        height: 200px;
+        flex-direction: column;
+    }
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+}
+
+
+@media(min-width: 550px) and (max-width: 841px){
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
+        display: none;
+    }  
+
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    main #booking-requests>div { 
+        padding-top: 130px; 
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #booking-requests_articles { 
+        width: 100%;
+    }
+
+    #come_back img {
+        width: 20px;
+    }
+
+    #come_back {
+        font-size: 13px;
+    }
+
+    main #bottom-bar_booking-requests-desktop ul { 
+        display: none;
+    }
+
+    ul li .profile {
+        width: 120px;
+    }
+
+    #booking-requests>div article {
+        width: 100%;
+    }
+
+    #booking-requests>div h1 { 
+        margin-bottom: 20px;
+    }
+
+    .actions { 
+        width: 120px;
+    }
+
+    .actions button { 
+        width: 35px;
+        height: 35px; 
+    }
+
+    #calendar {
+        width: 35px; 
+    }
+
+    .actions button a span {
+        display: none;
+    }
+
+    .calendar {
+        margin: 0;
+    }
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+}
+
+@media(min-width: 841px) and (max-width: 1159px){
+    .options_menu {
+        font-size: 14.5px;
+    }
+
+    #booking-requests_articles { 
+        width: 78%;
+    }
+
+    #booking-requests>div article {
+        width: 100%;
+    }
+
+    .actions { 
+        width: 140px;
+    }
+
+    .actions button a span {
+        display: none;
+    }
+
+    #calendar {
+        width: 36px; 
+    }
+
+    .calendar {
+        margin: 0;
+    }
+}
