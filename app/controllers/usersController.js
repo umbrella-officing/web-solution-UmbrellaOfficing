@@ -165,10 +165,24 @@ function capital_letter(str) {
       if (!req.file) {
         console.log("Falha no carregamento");
       } else {
-        console.log('teste2')
-      }
-         
 
+        let fileContent = req.file.buffer.toString('base64');
+
+        var dadosForm = {
+          fotos_user: fileContent,
+          cpf_user:autenticado.id_user
+        };
+      }
+       
+      const connection = application.config.dbConnection;
+      const usersDao = new application.app.models.UsersDAO(connection);
+
+      usersDao.uploadImage(dadosForm,(error, results)=>{
+        if (error) throw error;
+        console.log(results[0])
+        res.redirect('/')
+      })
+       
   
         // if (!req.file) {
         //    return console.log("Falha no carregamento");

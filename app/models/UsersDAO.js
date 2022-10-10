@@ -22,7 +22,7 @@ UsersDAO.prototype.login = function (user, callback) {
 }
 
 UsersDAO.prototype.uploadImage = function(user, callBack){
-    this._connection.query(`UPDATE usuarios SET fotos_user = ${user.fotos_user}  where cpf_user = ` + user.fotos_user)
+    this._connection.query(`UPDATE usuarios SET fotos_user = ?  where cpf_user = ?`, [user.fotos_user, user.cpf_user], callBack)
 }
 
 module.exports = function () {
