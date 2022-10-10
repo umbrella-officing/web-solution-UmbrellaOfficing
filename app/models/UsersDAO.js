@@ -21,6 +21,10 @@ UsersDAO.prototype.login = function (user, callback) {
     this._connection.query(`SELECT * FROM usuarios WHERE email_user = ? or cpf_user = ?`, [user.userId, user.userId], callback);
 }
 
+UsersDAO.prototype.findUserInformations = function (user, callback) {
+    this._connection.query(`SELECT * FROM usuarios where cpf_user = ` + user, callback);
+}
+
 UsersDAO.prototype.uploadImage = function(user, callBack){
     this._connection.query(`UPDATE usuarios SET fotos_user = ?  where cpf_user = ?`, [user.fotos_user, user.cpf_user], callBack)
 }

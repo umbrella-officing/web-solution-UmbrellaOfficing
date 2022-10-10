@@ -201,8 +201,19 @@
                 <div>
                      <form action="/perfil2" method="post" enctype="multipart/form-data">
                     <div class="actionPicture">
-                        <div>
-                            <img src="images/default/perfil.png" alt="Foto de perfil">
+                        <div>      
+                            <%
+                            if(autenticado){
+                        %>
+                        <img src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">
+                        <%       
+                        }else{
+                        %>
+                        <img src="images/default/perfil.png" alt="Foto de perfil">
+                            
+                        <%
+                        } 
+                        %>       
                         </div>
                         <div>
                             <input id="close" type="button" value="Fechar">

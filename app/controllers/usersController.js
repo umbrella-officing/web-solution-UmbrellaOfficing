@@ -18,14 +18,31 @@ const upload2 = multer({
 } })
 
 module.exports.home = (application, req, res) => {
-    if (req.session.autenticado) {
-      autenticado = { name: req.session.usu_name_autenticado,
-                      id_user:req.session.id_user,
-                      profession: req.session.profession};
-    } else {
-      autenticado = { autenticado: null};
-    }
+  
+  if (req.session.autenticado) {
+    
+    const connection = application.config.dbConnection;
+    const userDao = new application.app.models.UsersDAO(connection);
+
+    var id_user = Number(req.session.id_user)
+
+    userDao.findUserInformations(id_user, (error, result) => {
+      if(error) throw error  
+  
+        autenticado = {
+          name: req.session.usu_name_autenticado,
+          profession: result[0].profissao,
+          profile_picture: result[0].fotos_user
+      };
+
+        res.render("pages/home/index",autenticado);
+
+  });
+   
+  } else {
+    autenticado = { autenticado: null};
     res.render("pages/home/index",autenticado);
+  }
 }
 
 // module.exports.index = (application, req, res) => {
@@ -70,51 +87,6 @@ module.exports.registerUser = (application, req, res) =>{
   });
 }
 
-/*
-  var storage = multer.diskStorage({
-        filename: (req, file, callBack) => {
-          callBack(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname)) //renomeando o arquivo para evitar duplicidade de nomes
-        }
-      })
-
-      var upload = multer({
-        storage: storage,
-        fileFilter: (req, file, cb) => {
-          if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
-            cb(null, true);
-          } else {
-            cb(null, false);
-            return cb(new Error('Only .png, .jpg and .jpeg format allowed!'));
-          }
-        }
-      });
-
-      const armazenamentoMemoria = multer.memoryStorage()
-      //adiciona este espaço ao método de upload
-      const upload2 = multer({ 
-        storage: armazenamentoMemoria,
-        fileFilter: (req, file, cb) => {
-          if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
-            cb(null, true);
-          } else {
-            cb(null, false);
-            return cb(new Error('Only .png, .jpg and .jpeg format allowed!'));
-          }
-      } })
-
-      upload2.single('ImagemPerfil')  
-      
-        if (!req.file) {
-           return console.log("Falha no carregamento");
-        }
-
-          let fileContent = req.file.buffer.toString('base64');
-
-          var dadosForm = {
-            fotos_user:fileContent,
-          };
-*/
-
 module.exports.formLogin = (application, req, res) =>{
   
   var dadosForm = {
@@ -155,7 +127,6 @@ function capital_letter(str) {
           }
         }
     }
-    
     )}
 
 
@@ -179,29 +150,6 @@ function capital_letter(str) {
 
       usersDao.uploadImage(dadosForm,(error, results)=>{
         if (error) throw error;
-        console.log(results[0])
         res.redirect('/')
       })
-       
-  
-        // if (!req.file) {
-        //    return console.log("Falha no carregamento");
-        // }
-          
-        //   var dadosForm = {
-        //     cpf_user:autenticado.id_user,
-        //     fotos_user:fileContent,
-        //   };
-
-        //   console.log(dadosForm)
-
-        //   res.redirect('/')
-
-        //   const connection = application.config.dbConnection;
-        //   const usersDao = new application.app.models.UsersDAO(connection);
-      
-          // usersDao.uploadImage(dadosForm,(error, results)=>{
-
-          // })
-
         }
