@@ -59,36 +59,6 @@ module.exports = (application) => {
       application.app.controllers.usersController.sair(application, req, res);
     });
 
-    application.post("/perfil2", 
-    upload2.single('ImagemPerfil'), 
-
-    async function (req, res) {
-      if (!req.file) {
-        console.log("Falha no carregamento");
-      } else {
-
-        let fileContent = req.file.buffer.toString('base64');
-      
-        var dadosForm = {
-          nome_usuario:req.body.Nome,
-          user_usuario:req.body.NomeUsuario,
-          senha_usuario:req.body.Senha,
-          email_usuario:req.body.Email,
-          fone_usuario:req.body.Telefone,
-          tipo_usuario: 1, 
-          imagemperfil_usuario:fileContent,
-          caminho_imagemperfil_usuario:null,
-        };
-
-        try {
-        results = await usuarioDAO.Create(dadosForm); 
-        } catch (e) {
-          console.log(e); // console log the error so we can see it in the console
-          res.json({ erro: "Falha ao acessar dados" });
-        }
-
-      }
-      res.redirect('/')
-});
-
-  }
+    application.post("/perfil2", upload2.single('ImagemPerfil'),(req,res)=>{
+      application.app.controllers.usersController.uploadImagePerfil(application, req, res);
+    })}
