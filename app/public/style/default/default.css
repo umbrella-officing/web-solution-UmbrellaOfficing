@@ -124,7 +124,7 @@ header > div {
     content: '';
     position: absolute;
     width: 50%;
-    height: 2px;
+    height: 1.48px;
     bottom: -6px;
     transition: all 0.3s ease;
     left: 25%;
@@ -169,7 +169,7 @@ header > div {
     border: none;
     border-radius: inherit;
     font-family: var(--font-primary);
-    font-size: 16.5px;
+    font-size: 15.5px;
     font-weight: 500;
     color: #666;
     outline: none;
@@ -179,30 +179,61 @@ header > div {
 #container_informations_find_coworking{
     display: none;
     border-radius: inherit;
+    width: 97%;
 }
 
 #container_informations_find_coworking > div{
+    display: flex;
+    align-items: center;
+    position: relative;
     border-radius: inherit;
+    margin-right: 17px;
 }
 
-#check_in, #localization{
-    border: none;
-    box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
+.gap_input_checked::after{
+    content: '';
+    position: absolute;
+    height: 18px;
+    right: -9px;
+    width: 1px;
+    background: #222;
+}
+
+.booking_informations{
+    border:2px solid transparent;
     border-radius: inherit;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    height: 58px;
+    outline: none;
+    box-shadow: none;
+    background: none;
+}
+
+.booking_informations_user{
+    width: 121px;
+    color: #777;
+    justify-content: center;
+}
+
+.input_checked.booking_informations_user{
+    color: #111;
+}
+
+.booking_informations.input_checked{
+    background: white;
+    box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%);
+    border:2px solid var(--scale-3-blue);
 }
 
  #localization{
-    height: 58px;
-    font-size: 17px;
+    width: 210px;
+    font-size: 15px;
     padding-left: 14px;
-    outline-color: #5b61c4;
-    margin-right: 40px;
 }
 
 #check_in{
-    border: none;
-    outline-color: #5b61c4;
-    height: 58px;
     padding: 0 19px;
 }
 
@@ -291,7 +322,7 @@ header > div {
 .menu_open > div:first-child span{
     display: block;
     margin-top: 2px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: normal;
     color: var(--text-3-black);
 }

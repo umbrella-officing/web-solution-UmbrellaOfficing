@@ -30,7 +30,22 @@ const select_type_office = () => {
         optionsOffice.forEach(option => option.classList.remove('checked'))
         this.classList.add('checked')
     }
+
+    optionsBooking()
+
 }
+
+const optionsBooking = () =>{
+    const booking_informations = document.querySelectorAll('.booking_informations')
+    booking_informations.forEach(information=> information.addEventListener('click',checked_information))
+
+    function checked_information(){
+        booking_informations.forEach(information => information.classList.remove('input_checked'))
+        this.classList.add('input_checked')
+    }
+}
+
+
 
 const closeInputsearchCoworkingSpaces = (box_black,header,search,search_txt,container_informations_find_coworking)=> {
 
