@@ -32,6 +32,7 @@ module.exports.home = (application, req, res) => {
         autenticado = {
           name: req.session.usu_name_autenticado,
           profession: result[0].profissao,
+          id_user: req.session.id_user,
           profile_picture: result[0].fotos_user
       };
 

@@ -62,7 +62,25 @@
                 <div class="menu_open">
                     <div>
                         <div class="picture_edit">
-                            <img src="images/default/perfil.png" alt="foto de perfil">
+                            <%
+                            if(autenticado){
+                        %>
+                            <%if(autenticado.profile_picture != null){%>
+                                <img src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">                                   
+                            <%}%>
+
+                            <%if(autenticado.profile_picture == null){%>
+                                <img src="images/default/perfil.png" alt="Foto de perfil">
+                                                                
+                            <%}%>
+                            
+                        <%       
+                        }else{
+                        %>
+                            <img src="images/default/perfil.png" alt="Foto de perfil">
+                        <%
+                        } 
+                        %>   
                             <i class="fa-solid fa-pen pictureProfile list"></i>
                         </div>
                         <div id="user_informations">
