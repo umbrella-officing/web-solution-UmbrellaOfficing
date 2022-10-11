@@ -62,25 +62,26 @@
                 <div class="menu_open">
                     <div>
                         <div class="picture_edit">
+                            <div id="mask_image_profile">
                             <%
                             if(autenticado){
                         %>
                             <%if(autenticado.profile_picture != null){%>
-                                <img src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">                                   
+                                <img class="image_profile" src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">                                   
                             <%}%>
 
                             <%if(autenticado.profile_picture == null){%>
-                                <img src="images/default/perfil.png" alt="Foto de perfil">
-                                                                
+                                <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">                               
                             <%}%>
                             
                         <%       
                         }else{
                         %>
-                            <img src="images/default/perfil.png" alt="Foto de perfil">
+                            <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">
                         <%
                         } 
-                        %>   
+                        %>
+                            </div>   
                             <i class="fa-solid fa-pen pictureProfile list"></i>
                         </div>
                         <div id="user_informations">
@@ -223,15 +224,21 @@
                             <%
                             if(autenticado){
                         %>
-                        <img src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">
+                            <%if(autenticado.profile_picture != null){%>
+                                <img class="image_profile" src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">                                   
+                            <%}%>
+
+                            <%if(autenticado.profile_picture == null){%>
+                                <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">                               
+                            <%}%>
+                            
                         <%       
                         }else{
                         %>
-                        <img src="images/default/perfil.png" alt="Foto de perfil">
-                            
+                            <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">
                         <%
                         } 
-                        %>       
+                        %>
                         </div>
                         <div>
                             <input id="close" type="button" value="Fechar">

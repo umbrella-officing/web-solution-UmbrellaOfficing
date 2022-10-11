@@ -139,6 +139,8 @@ const openPop_profilePicture = () => {
 
 
     closePop_profilePicture(container_popUp_profilePicture)
+
+    changeImageProfile()
     
 }
 
@@ -149,6 +151,28 @@ function closePop_profilePicture(container_popUp_profilePicture) {
             container_popUp_profilePicture.style.display = 'none'
         }
     })
+}
+
+const changeImageProfile = ()=> {
+
+    const imageProfile = document.querySelectorAll('.image_profile')
+
+    // const uploadPicture = document.querySelector('.uploadPicture')
+    
+    // uploadPicture.addEventListener('click',()=>{
+    //     imageProfile.forEach(img=>{
+    //         img.setAttribute('src','images/default/perfil.png')
+    //     })
+    // })
+
+    const deletePicture = document.querySelector('.deletePicture')
+    deletePicture.addEventListener('click',()=>{
+        console.log('teste')
+        imageProfile.forEach(img=>{
+            img.setAttribute('src','images/default/perfil.png')
+        })
+    })
+
 }
 
 openPop_profilePicture()

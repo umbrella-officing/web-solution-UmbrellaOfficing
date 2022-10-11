@@ -132,11 +132,26 @@ function capital_letter(str) {
 
 
     module.exports.uploadImagePerfil = (application, req, res) =>{
-  
-      
-      if (!req.file) {
-        console.log("Falha no carregamento");
-      } else {
+
+      if(!req.file){
+
+        var dadosForm = {
+          fotos_user: null,
+          cpf_user:autenticado.id_user
+        };
+    
+        const connection = application.config.dbConnection;
+        const usersDao = new application.app.models.UsersDAO(connection);
+
+
+        return usersDao.uploadImage(dadosForm,(error, results)=>{
+          if (error) throw error;
+          res.redirect('/')
+        })
+
+      }
+
+      else{
 
         let fileContent = req.file.buffer.toString('base64');
 
@@ -144,7 +159,7 @@ function capital_letter(str) {
           fotos_user: fileContent,
           cpf_user:autenticado.id_user
         };
-      }
+      
        
       const connection = application.config.dbConnection;
       const usersDao = new application.app.models.UsersDAO(connection);
@@ -153,4 +168,5 @@ function capital_letter(str) {
         if (error) throw error;
         res.redirect('/')
       })
+    }
         }

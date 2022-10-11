@@ -307,9 +307,19 @@ header > div {
     width: 120px;
 }
 
-.menu_open > div:first-child img{
-    margin-right: 21px;
+#mask_image_profile{
     width: 70px;
+    border-radius: 50%;
+    height: 70px;
+}
+
+.menu_open > div:first-child img{
+    width: 100%;
+    border-radius: inherit;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    margin-right: 21px;
 }
 
 .menu_open > div:first-child h3{
@@ -619,6 +629,7 @@ fieldset{
 .actionPicture img {
     width: 100%;
     height: 100%;
+    object-position: center;
     object-fit: cover;
     border-radius: inherit;
 }
