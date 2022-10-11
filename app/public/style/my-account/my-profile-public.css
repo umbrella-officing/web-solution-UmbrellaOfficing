@@ -139,12 +139,12 @@
         font-size: 13.5px;
     }
 
-    main #my-profile-public_section1::before { 
+    #my-profile-public_section1::before { 
         height: 96%;
         width: 100%; 
     }
 
-    main #my-profile-public_section1>div {
+    #my-profile-public_section1>div {
         padding-top: 130px;  
         flex-direction: column;
     }
@@ -218,11 +218,11 @@
         font-size: 13.5px;
     }
 
-    main #my-profile-public_section1::before { 
+    #my-profile-public_section1::before { 
         width: 35%; 
     }
 
-    main #my-profile-public_section1>div {
+    #my-profile-public_section1>div {
         padding-top: 160px; 
         align-items: flex-start;
     } 

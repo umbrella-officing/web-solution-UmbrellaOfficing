@@ -1,7 +1,3 @@
-#my-account-sidebar_mobile {
-    display: none;
-}
-
 #my-profile {
     position: relative;
 }
@@ -205,31 +201,31 @@
         font-size: 13.5px;
     }
 
-    main #my-profile::before { 
+    #my-profile::before { 
         display: none; 
     }
 
-    main #my-profile nav {
+    #my-profile nav {
         display: none;
     }
 
-    main #my-profile>div {
-        padding-top: 130px;  
+    #my-profile>div {
+        padding-top: 140px;  
     }
     
-    main #my-profile_section1 {
+    #my-profile_section1 {
         width: 100%;
     }
 
-    main #my-profile_section1 h1 {
-        font-size: 23px; 
+    #my-profile_section1 h1 {
+        font-size: 25px; 
     }
 
-    main #my-profile_section1 h1~p {
+    #my-profile_section1 h1~p {
         font-size: 14px; 
     }
 
-    main #my-profile_section1 form>div label {
+    #my-profile_section1 form>div label {
         font-size: 16px; 
     }
 
@@ -263,21 +259,26 @@
         font-size: 13.5px;
     }
     
-    main #my-profile::before { 
+    #my-profile::before { 
         display: none; 
     }
 
-    main #my-profile nav {
+    #my-profile nav {
         display: none;
     } 
 
-    main #my-profile>div {
-        padding-top: 130px; 
+    #my-profile>div {
+        padding-top: 150px; 
     }
 
-    main #my-profile_section1 {
+    #my-profile_section1 {
         width: 100%;
     } 
+
+    #my-profile_section1 h1 {
+        font-size: 25px;
+        font-weight: bold;
+    }
 
     form .form-flex>div:nth-child(1) { 
         width: 45%;
