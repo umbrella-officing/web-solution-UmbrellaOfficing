@@ -3,7 +3,7 @@
         flex-direction: column;
     }
 
-    main #adaptables-categories_section h1{
+    main #corporates-categories_section h1{
         font-size: 25px;
         margin-bottom: 30px;
     }
@@ -50,7 +50,7 @@
 }
 
 @media(min-width: 481px) and (max-width: 586px){
-    main #adaptables-categories_section h1{
+    main #corporates-categories_section h1{
         max-width: none;
         text-align: center;
         font-size: 32px;
@@ -99,7 +99,7 @@
 }
 
 @media(min-width: 587px) and (max-width: 840px){
-    #adaptables-categories_section > div{
+    #corporates-categories_section > div{
         height: calc(100vh - 89px)
     }
 
@@ -117,7 +117,7 @@
         margin-top: 30px;
     } */
 
-    main #adaptables-categories_section h1{
+    main #corporates-categories_section h1{
         max-width: none;
         margin-bottom: 60px;
         font-size: 35px;
@@ -138,6 +138,11 @@
     font-family: 'Montserrat';
 }
 
+body{
+    background: linear-gradient(to left, #fff 50%, var(--scale-4-blue)50%);
+    height: 100%;
+}
+
 ul{
     list-style: none;
     display: flex;
@@ -145,6 +150,7 @@ ul{
 
 nav{
     align-self: flex-start;
+    color: #fff;
 }
 
 a{
@@ -205,11 +211,11 @@ a{
 }
 
 
-#adaptables-categories_section{
+#corporates-categories_section{
     height: 100vh;
 }
 
-#adaptables-categories_section > div{
+#corporates-categories_section > div{
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
@@ -233,7 +239,7 @@ a{
 }
 
 
-#adaptables-categories_section > div > :first-child > img{
+#corporates-categories_section > div > :first-child > img{
     width: 50px;
     height: 50px;
 }
@@ -258,35 +264,21 @@ a{
     height: 172px;
 }
 
+.align-elements > ul{
+    flex-direction: column;
+    width: calc(50% - 20px);
+}
+
 .align-elements > ul > li{
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 0 10px;
-}
-
-.align-elements > ul > li:after{
-    content: '';
-    padding: 25px 0 25px 25px;
-    max-width: 139px;
-    width: 100%;
-    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px 0;
     border: 1px solid var(--gray-border);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    font-weight: 800;
-}
-
-.align-elements > ul > li:first-child:after{
-    content: 'Casa'
-}
-
-.align-elements > ul > li:nth-child(2):after{
-    content: 'Apartamento'
-}
-
-.align-elements > ul > li:last-child:after{
-    content: 'Unidade à parte';
+    border-radius: 20px;
+    
 }
 
 #advanceButton{
@@ -298,27 +290,21 @@ a{
     border-radius: 20px;
     width: 160px;
     height: 32px;
+    margin-left: auto;
 }
 
-#adaptables-categories_section h1{
+#corporates-categories_section h1{
     font-size: 40px;
     max-width: 280px;
     font-weight: bolder;
     margin-right: 20px;
+    color: #fff;
 }
 
 #align-buttons{
     padding-top: 65px;
 }
 
-#align-buttons > :first-child{
-    background-color: transparent;
-    border: none;
-    font-weight: 800;
-    font-size: 16px;
-    color: var(--scale-1-blue);
-    padding: 0;
-}
 
 
 
