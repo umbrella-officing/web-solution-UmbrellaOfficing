@@ -18,6 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtJGza4SniYHefeNwCdE4gU3sg1AU4fiU&&libraries=places"></script>
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/home/home.css">
 </head>
@@ -34,7 +35,7 @@
                     <span id="search_txt">Pesquise locais para trabalhar</span>
                     <div id='container_informations_find_coworking'>
                         <div class="gap_input_checked">
-                            <input id="localization" class="booking_informations input_checked" type="text" placeholder="Localização:">
+                            <input id="search_input" class="booking_informations input_checked" type="text" placeholder="Localização:">
                             <div class="popUp_input"></div>
                         </div>
                         <div class="gap_input_checked">
@@ -565,5 +566,6 @@
     <script src="script/default/register/register.js"></script>
     <script src="script/home/reports.js"></script>
     <script src="script/home/coworking_places_inspire.js"></script>
+    <script src="script/default/header/autocomplete_api.js"></script>
 </body>
 </html>

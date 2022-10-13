@@ -196,7 +196,7 @@ header > div {
     height: 18px;
     right: -9px;
     width: 1px;
-    background: #222;
+    background: rgb(183, 183, 183);
 }
 
 .booking_informations{
@@ -227,7 +227,7 @@ header > div {
     border:2px solid var(--scale-3-blue);
 }
 
- #localization{
+ #search_input{
     width: 210px;
     font-size: 15px;
     padding-left: 14px;

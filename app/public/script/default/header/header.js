@@ -167,7 +167,6 @@ const changeImageProfile = ()=> {
 
     const deletePicture = document.querySelector('.deletePicture')
     deletePicture.addEventListener('click',()=>{
-        console.log('teste')
         imageProfile.forEach(img=>{
             img.setAttribute('src','images/default/perfil.png')
         })
