@@ -80,16 +80,15 @@ const popUp_login_signUp = () => {
     const optionsMenu = document.querySelectorAll('.popUp-login-signUp')
     const containerPopUp = document.querySelector('#container_popUp_login-signUp')
     const AllPopUp = document.querySelectorAll(".popUp")
-
     optionsMenu.forEach(option=>option.addEventListener('click',openPopUp))
 
     function openPopUp (){
         containerPopUp.style.display = 'flex'
-        if(this == optionsMenu[0]){
+        if(this == optionsMenu[0] || this == optionsMenu[2]){
             AllPopUp[0].classList.add('popUpChecked')
         }
 
-        else{
+        if(this == optionsMenu[1] || this == optionsMenu[3]){
             AllPopUp[1].classList.add('popUpChecked')
         }
 
@@ -154,3 +153,19 @@ const changeBottom_bar = (item) => {
     })
     
 }
+
+const colorIcon = document.querySelectorAll(".icon");
+console.log({colorIcon})
+colorIcon.forEach((color, index, arr)=>{
+    color.addEventListener('click',()=>{
+        if(arr[index].classList.contains('icon-color')){
+            return arr[index].classList.remove('icon-color')
+        }
+
+        for(let i = 0; i < arr.length; i++){
+            arr[i].classList.remove('icon-color')
+        }
+
+        arr[index].classList.add('icon-color')
+    })
+})

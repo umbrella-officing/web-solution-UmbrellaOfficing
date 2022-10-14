@@ -25,15 +25,6 @@
 }
 
 /*Menu lateral */ 
-/* #my-account-menu {
-    position: relative;
-    position: -webkit-sticky;
-    position: sticky;
-    width: auto;
-    top: 130px;
-    max-height: 100vh;
-} */
-
 #my-account-menu ul {
     list-style: none;
     position: relative;
@@ -57,11 +48,7 @@
     color: var(--text-1-black);
 }
 
-.option .icon { 
-    font-size: 24px;
-    text-align: center;
-    color: var(--text-3-black);
-    margin-right: 10px;
+.option a div {
     width: 25px;
     height: 25px;
     padding: 10px;
@@ -69,13 +56,28 @@
     border-radius: 5px;
     display: flex;
     align-items: center; 
+    margin-right: 5px;
 }
 
-.on a .icon {
+.option .icon { 
+    font-size: 24px;
+    text-align: center;
+    color: var(--text-3-black);
+    margin-right: 10px;
+}
+
+.on a div {
+    background-color: var(--scale-5-blue); 
+}
+
+.on a .icon,
+.on .announcer {
     color: #fff; 
-    width: 25px;
-    height: 25px;
-    padding: 10px;
-    background-color: var(--scale-13-blue); 
+}
+
+.announcer {
+    font-size: 20px;
+    color: var(--text-3-black);
+    padding-left: 2px;
 }
  

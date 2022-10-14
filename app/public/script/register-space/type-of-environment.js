@@ -1,17 +1,17 @@
-//  function hint(x){
-//      if (x === 1){
-//          document.getElementById("hint-adaptable").style.display="flex";
-//      }
-//      else if (x === 2){
-//          document.getElementById("hint-corporate").style.display="flex";
-//      }
-//      else if (x === 3){
-//          document.getElementById("hint-adaptable").style.display="none";
-//      }
-//      else{
-//          document.getElementById("hint-corporate").style.display="none";
-//      }
-//  }
+ function hint(x){
+     if (x === 1){
+         document.getElementById("hint-adaptable").style.display="flex";
+     }
+     else if (x === 2){
+         document.getElementById("hint-corporate").style.display="flex";
+     }
+     else if (x === 3){
+         document.getElementById("hint-adaptable").style.display="none";
+     }
+     else{
+         document.getElementById("hint-corporate").style.display="none";
+     }
+ }
 
 
 // function openHint(){
@@ -44,23 +44,16 @@ var place = document.querySelectorAll(".space-box");
 const selectTypeOF = () => {
 
     const optionsOffice = document.querySelectorAll('.space-box')
-    optionsOffice.forEach(option=> option.addEventListener('click',checked))
+    optionsOffice.forEach(option => option.addEventListener('click',checked))
 
     function checked(){  
-        optionsOffice.forEach(option => option.classList.remove('border-select'))
-        this.classList.add('border-select')
+        optionsOffice.forEach(option => option.classList.remove('border-select'));
+        this.classList.add('border-select');
     }
-
-    var btnAdvance = documet.getElementById("advance");
-
-    if((optionsOffice[0]).classList.add('border-select')){
-        btnAdvance.href = "/categorias-de-espacos-adaptaveis"
-    }
-
-
 }
 
-
-
-
 selectTypeOF();
+
+
+var button = document.getElementById("avancar");
+    button.href = "/categorias-de-espacos-adaptaveis";

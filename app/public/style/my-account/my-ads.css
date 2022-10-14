@@ -1,3 +1,6 @@
+ul {
+    list-style: none;
+}
 
 #my-ads {
     position: relative;
@@ -38,6 +41,7 @@
 #my-ads_navigation ul {
     display: flex;
     margin: 30px 0 7px;
+    border-bottom: 1px solid var(--gray-border);
     list-style: none;
 }
 
@@ -60,55 +64,77 @@ a {
     cursor: pointer;
 }
 
-#actives_space ul li,
-#inactives_space ul li {
+#actives_space ul li .ads-space,
+#inactives_space ul li .ads-space { 
     display: flex;
-    margin-bottom: 40px; 
+    width: 744px;
+    margin-bottom: 35px; 
 }
 
-#actives_space ul li>div,
-#inactives_space ul li>div {
-    padding-left: 15px;
+#actives_space ul li .ads-space .space-img,
+#inactives_space ul li .ads-space .space-img { 
+    width: 200px;
+    height: 209px;
+    position: relative;
+}
+
+#actives_space ul li .ads-space .space-img img,
+#inactives_space ul li .ads-space .space-img img { 
     width: 100%;
-    box-sizing: border-box; 
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    object-position: center;
+    object-fit: cover;
+    vertical-align: bottom;
 }
 
-#actives_space ul li h2,
-#inactives_space ul li>div h2 {
-    font-size: 18px;
+
+#actives_space ul li .ads-space .space-description,
+#inactives_space ul li .ads-space .space-description {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    width: 542px;
+    height: 209px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+#actives_space ul li div .space-description .description-text h2,
+#inactives_space ul li div .space-description .description-text h2{
+    font-size: 22px;
     font-weight: bold;
     margin: 10px;
-    margin: 10px 0 20px 0;
+    margin: 25px 0 20px 0;
 }
 
-#actives_space ul li>div p,
-#inactives_space ul li>div p {
-    font-size: 14px;
-    font-weight: 400;
+#actives_space ul li div .space-description .description-text p,
+#inactives_space ul li div .space-description .description-text p {
+    font-size: 16px;
+    font-weight: 500;
     margin-top: 5px;
 }
 
-#actives_space ul li>div h3,
-#inactives_space ul li>div h3 {
-    font-size: 14px;
-    font-weight: 500;
+#actives_space ul li div .space-description .description-text h3,
+#inactives_space ul li div .space-description .description-text h3 {
+    font-size: 15px;
+    font-weight: 600;
     margin-top: 10px;
 }
 
-.my-ads_space-div-flex {
+.space-actions {
     display: flex;
-    justify-content: space-between;
-    margin-top: 63px;
+    justify-content: space-between; 
     align-items: self-end;
 }
 
-.my-ads_space-div-flex h3 {
+.space-actions h3 {
     font-size: 14px;
     font-weight: 500;
     margin-top: 24px;
 }
 
-.my-ads_space-div-flex>div button {
+.space-actions>div button {
     border: none;
     width: 38px;
     height: 38px;
@@ -235,7 +261,7 @@ a {
     color: white;
 }
 
-@media(min-width: 320px) and (max-width: 540px){
+@media(min-width: 320px) and (max-width: 550px){
     #container_menu > a > button { 
         width: 136px;
         height: 36px;
@@ -243,7 +269,7 @@ a {
         font-size: 13.5px;
     }
 
-    main #my-ads::before { 
+    #my-ads::before { 
         display: none; 
     }
 
@@ -251,36 +277,84 @@ a {
         display: none;
     }
 
-    main #my-ads>div {
-        padding-top: 130px; 
-        margin: 0 54px;
-        width: 100%;
+    #my-ads>div {
+        padding-top: 140px;  
+        width: 96%;
         display: flex;
         justify-content: center;
     }
 
-    #actives_space, 
+    #my-ads_spaces {
+        width: 86%;
+    }
+
+    .option-checked { 
+        margin-bottom: -1px;
+    }
+
+    #my-ads_navigation ul li {
+        font-size: 16px;
+        margin-right: 20px; 
+    }
+
+    #actives_space,
     #inactives_space {
         width: 100%;
     }
-    
-    #actives_space ul li, 
-    #inactives_space ul li {
+
+    #actives_space ul li .ads-space, 
+    #inactives_space ul li .ads-space { 
+        width: 100%; 
         flex-direction: column;
     }
 
-    #actives_space ul li>div,
-    #inactives_space ul li>div {
-        border-radius: 0 0 10px 10px;
-        padding: 0;
+    #actives_space ul li .ads-space .space-img, 
+    #inactives_space ul li .ads-space .space-img {
+        width: 100%; 
     }
 
-    #actives_space ul li h2, 
-    #inactives_space ul li>div h2 { 
-        margin: 15px 0 20px 0;
+    #actives_space ul li .ads-space .space-description, 
+    #inactives_space ul li .ads-space .space-description {
+        width: 100%;
+        height: 220px;
+        padding: 20px 0 0 0;
+    }
+
+    #actives_space ul li div .space-description .description-text h2, 
+    #inactives_space ul li div .space-description .description-text h2 {
+        font-size: 18px; 
+        margin: 0;
+    }
+
+    #actives_space ul li div .space-description .description-text p, 
+    #inactives_space ul li div .space-description .description-text p {
+        font-size: 13px; 
+        margin-top: 15px;
+    }
+
+    #actives_space ul li div .space-description .description-text h3, 
+    #inctives_space ul li div .space-description .description-text h3 {
+        font-size: 14px; 
+    }
+
+    .space-actions { 
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     #solicitation_res {
+        font-size: 13px;
+       margin-bottom: 10px;
+    }
+
+    .space-actions>div button {
+        border: none;
+        width: 34px;
+        height: 34px;
+        border-radius: 38px;
+    }
+
+    .space-actions>div button i {
         font-size: 13px;
     }
 
@@ -305,26 +379,7 @@ a {
     } 
 }
 
-@media(min-width: 320px) and (max-width: 420px){
-    .my-ads_space-div-flex {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 15px;
-    }
-
-    .my-ads_space-div-flex button {
-        margin-top: 15px;
-    }
-}
-
-@media(min-width: 420px) and (max-width: 540px){
-    .my-ads_space-div-flex {
-        align-items: flex-start;
-        margin-top: 25px;
-    }
-}
-
-@media(min-width: 541px) and (max-width: 841px)  { 
+@media(min-width: 550px) and (max-width: 841px)  { 
     #container_menu > a > button { 
         width: 136px;
         height: 36px;
@@ -332,7 +387,7 @@ a {
         font-size: 13.5px;
     }
 
-    main #my-ads::before { 
+    #my-ads::before { 
         display: none; 
     }
 
@@ -340,54 +395,79 @@ a {
         display: none;
     }
 
-    main #my-ads>div {
-        padding-top: 130px;  
+    #my-ads>div {
+        padding-top: 150px;  
+        width: 96%;
     }
 
-    main #my-ads>div>div {
+    #my-ads_spaces {
         width: 100%;
     }
 
-    #actives_space, 
-    #inactives_space {
+    .option-checked { 
+        margin-bottom: -1px;
+    }
+
+    #actives_space, #inactives_space {
         width: 100%;
-    }  
+    }
 
-    .my-ads_space-div-flex { 
-        align-items: flex-start; 
-    } 
+    #actives_space ul li .ads-space, 
+    #inactives_space ul li .ads-space {
+        width: 100%;
+    }
 
-    .my-ads_space-div-flex>div button { 
-        width: 34px;
-        height: 34px; 
+    #actives_space ul li .ads-space .space-img, 
+    #inactives_space ul li .ads-space .space-img {
+        width: 45%;
+    }
+
+    #actives_space ul li .ads-space .space-description, 
+    #inactives_space ul li .ads-space .space-description {
+        width: 70%; 
+    }
+
+    #actives_space ul li div .space-description .description-text h2, 
+    #inactives_space ul li div .space-description .description-text h2 {
+        font-size: 18px;
+        margin: 18px 0 20px 0;
+    }
+
+    #actives_space ul li div .space-description .description-text p, 
+    #inactives_space ul li div .space-description .description-text p {
+        font-size: 14px; 
     }
 
     #solicitation_res {
+        font-size: 13px; 
+    }
+
+    .space-actions>div button {
+        border: none;
+        width: 34px;
+        height: 34px;
+        border-radius: 38px;
+    }
+
+    .space-actions>div button i {
         font-size: 13px;
     }
 
-    /*Pop up - Deletar espaço*/
+    /*Pop-up - Excluir de anúncio*/
     .popUp_delete {
-        width: 90%; 
         margin: 0 16px;
     }
+
+    
 } 
-
-/* @media(min-width: 841px) and (max-width: 900px) {
-    .my-ads_space-div-flex {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 20px;
-    }
-
-    .my-ads_space-div-flex button {
-        margin-top: 10px;
-    }
-} */
 
 @media(min-width: 841px) and (max-width: 1159px) { 
     main #my-ads::before {  
         width: 28%;
+    }
+
+    #my-ads>div {
+        width: 100%;
     }
 
     #my-ads #my-ads_spaces {
@@ -399,11 +479,19 @@ a {
         width: 100%;
     }
 
-    .my-ads_space-div-flex {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 46px;
-        align-items: self-end;
+    #actives_space ul li .ads-space, 
+    #inactives_space ul li .ads-space { 
+        width: 100%; 
+    }
+
+    #actives_space ul li .ads-space .space-img, 
+    #inactives_space ul li .ads-space .space-img {
+        width: 45%; 
+    }
+
+    #actives_space ul li .ads-space .space-description, 
+    #inactives_space ul li .ads-space .space-description { 
+        width: 80%; 
     }
 
     /*Pop up - Deletar espaço*/

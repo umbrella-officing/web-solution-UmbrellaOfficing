@@ -1,4 +1,3 @@
-
 #personal-date {
     position: relative;
 }
@@ -192,25 +191,31 @@
         font-size: 13.5px;
     }
  
-    main #personal-date::before { 
+    #personal-date::before { 
         display: none;
     } 
 
-    main #personal-date nav { 
+    #personal-date nav { 
         display: none;
     } 
 
-    main #personal-date>div {
-        padding-top: 130px;  
+    #personal-date>div {
+        padding-top: 140px;  
         width: 96.3%;
     } 
     
-    main #personal-date_section1 {
+    #personal-date_section1 {
         width: 100%;
     }
 
-    main #personal-date_section1 h1 {
-        font-size: 23px; 
+    #personal-date_section1 h1 {
+        font-size: 25px; 
+    }
+
+    #personal-date_section1 form h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 40px;
     }
 
     form .personal-date-grid2 {
@@ -237,16 +242,7 @@
     }
 }
 
-@media(min-width: 481px) and (max-width: 841px) {
-    #header>div a img {
-        width: 80%;
-    }
-
-    #container_search, 
-    #menu {
-        display: none;
-    } 
-
+@media(min-width: 481px) and (max-width: 841px) { 
     #container_menu > a > button {  
         height: 36px;
         margin: 0;
@@ -257,29 +253,29 @@
         display: block;
     }
 
-    main #personal-date {
+    #personal-date {
         position: relative;
         width: 100%;
     }
 
-    main #personal-date::before { 
+    #personal-date::before { 
         display: none;
     } 
 
-    main #personal-date nav { 
+    #personal-date nav { 
         display: none;
     } 
 
-    main #personal-date>div {
-        padding-top: 130px; 
+    #personal-date>div {
+        padding-top: 150px; 
     }
     
-    main #personal-date_section1 {
+    #personal-date_section1 {
         width: 100%;
     }
 
     main #personal-date_section1 h1 {
-        font-size: 23px; 
+        font-size: 25px; 
     }
 
     form .personal-date-grid2 {
@@ -298,21 +294,15 @@
         grid-template-columns: 74% 21%;
         grid-column-gap: 5%;
     }
-   
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    }
 }
 
-@media(min-width: 841px) and (max-width: 1000px) { 
-    main #personal-date {
+@media(min-width: 841px) and (max-width: 1159px) { 
+    #personal-date {
         position: relative;
         width: 100%;
     }
 
-    main #personal-date::before { 
+    #personal-date::before { 
         width: 28%; 
     }  
 
@@ -324,11 +314,11 @@
         font-size: 14px; 
     }
     
-    main #personal-date_section1 {
+    #personal-date_section1 {
         width: 68%;
     }
 
-    main #personal-date_section1 h1 {
+    #personal-date_section1 h1 {
         font-size: 23px; 
     }
 
@@ -347,14 +337,6 @@
         display: grid;
         grid-template-columns: 74% 21%;
         grid-column-gap: 5%;
-    }
-   
-    #logo { 
-        max-width: 275px;
-    }
-
-    footer ul h5 {
-        font-size: 17px; 
     }
 }
 

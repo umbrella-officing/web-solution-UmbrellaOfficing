@@ -1,3 +1,5 @@
+
+
 /*Script: Pop up de calendário (próximas visitas)*/
 const openPopCalendar = () => {
     const buttonCalendar = document.querySelectorAll(".visits");
@@ -152,7 +154,7 @@ const switchContent = () => {
                 nextContent(index, arr)
             }
 
-            if(e.target.className == 'fa-solid fa-circle-chevron-left arrow-left'){
+            if(e.target.className == 'fa-solid fa-chevron-left arrow-left'){
                 previousContent(index, arr)
             }
 
