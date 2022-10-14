@@ -22,9 +22,7 @@
 // function closeHint(){
 //     const hintIcon = document.()
 // }
-var corporate = document.getElementById("corporate");
 
-var place = document.querySelectorAll(".space-box");
 
 
 
@@ -41,19 +39,36 @@ var place = document.querySelectorAll(".space-box");
 //  })
 
 
+var corporate = document.getElementById("corporate");
+var button = document.getElementById("avancar");
+
+
 const selectTypeOF = () => {
-
     const optionsOffice = document.querySelectorAll('.space-box')
-    optionsOffice.forEach(option => option.addEventListener('click',checked))
+    optionsOffice.forEach((option, index, arr) => option.addEventListener('click',()=>{
 
-    function checked(){  
-        optionsOffice.forEach(option => option.classList.remove('border-select'));
-        this.classList.add('border-select');
-    }
+        if(index == 0){
+            button.setAttribute('href','/categorias-de-espacos-adaptaveis')
+        }
+
+        if(index == 1){
+            button.setAttribute('href','/categorias-corporativo')
+        }
+
+
+        for(let i = 0; i < arr.length; i++){
+            arr[i].classList.remove('border-select')
+        }
+
+        arr[index].classList.add('border-select')
+        button.firstElementChild.style.background = "var(--scale-2-purple)";
+     
+    }))
+
+    // function checked(){  
+    //     optionsOffice.forEach(option => option.classList.remove('border-select'));
+    //     this.classList.add('border-select');
+    // }
 }
 
 selectTypeOF();
-
-
-var button = document.getElementById("avancar");
-    button.href = "/categorias-de-espacos-adaptaveis";

@@ -231,7 +231,7 @@ h1{
     height: 36px;
     border: none;
     border-radius: 20px;
-    background-color: var(--scale-2-purple);
+    background-color: var(--gray-border);
     color: var(--white);
     font-weight: 600;
     font-size: 20px;
@@ -328,6 +328,13 @@ article > div p{
     border-radius: 20px;
     color: var(--text-1-black);
     font-weight: 600;
+}
+
+.border-select{
+    border-color: #08bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, .25);
+    transition: 0.3s ease-in-out;
 }
 
 /* #header-buttons */
