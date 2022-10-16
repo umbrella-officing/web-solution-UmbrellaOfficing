@@ -160,33 +160,31 @@ document.querySelector('#next-year').onclick = () => {
 }
 
 /*Pop-up - Avaliar o cliente*/
-const openPopAvaliation = () => {
-    const buttonAvaliation= document.querySelectorAll(".avaliation");
-    const avaliationOwner = document.getElementById("container_popUp_avaliation-owner");
+const openPopUp_avaliation = () => {
+    const buttonAvaliation = document.querySelectorAll(".avaliation");
+    const containerPopUp_avaliation = document.getElementById("container_popUp_avaliation-owner"); 
 
     buttonAvaliation.forEach(element=> {
         element.addEventListener('click', () => {
-        avaliationOwner.style.display = 'flex'
+        containerPopUp_avaliation.style.display = 'flex'
     })
     })
 
 
-    closePopAvaliation(avaliationOwner)
+    closePopUp_avaliation(containerPopUp_avaliation)
     
 }
 
-function closePopAvaliation(avaliationOwner) {
-    avaliationOwner.addEventListener('click', e => {
+function closePopUp_avaliation(containerPopUp_avaliation) {
+    containerPopUp_avaliation.addEventListener('click',  a => { 
 
-        console.log(e.target)
-
-        if (e.target == avaliationOwner) {
-            avaliationOwner.style.display = 'none'
+        if (a.target.id == 'close_popUp_avaliation' || a.target == containerPopUp_avaliation) {
+            containerPopUp_avaliation.style.display = 'none'
         }
     })
 }
 
-openPopAvaliation()
+openPopUp_avaliation()
 
 /*Pop-up - Avaliar o cliente: Avaliações*/
 const rating = () => {
@@ -219,46 +217,29 @@ const rating = () => {
 
 rating()
 
-const openPop_viewDate = () => {
-    const buttonOpen = document.querySelectorAll(".calendar");
-    const container_popUpViewDate = document.getElementById("container_popUp-viewDate");
-
-    buttonCancel.forEach(element=> {
-        element.addEventListener('click', () => {
-        container_popUp_cancel.style.display = 'flex'
-    })
-    })
-
-
-    closePopCancel(container_popUp_cancel)
-    
-}
-
 /*Pop-up - Não confirmar solicitação*/
-const openPopUp_cancelRequest = () => {
-    const buttonCancel = document.querySelectorAll(".cancel");
-    const containerPopUp_cancelRequest = document.getElementById("container_popUp-cancelRequest"); 
+const openPopUp_canceled = () => {
+    const buttonCanceled = document.querySelectorAll(".definitely_cancel");
+    const containerPopUp_canceled = document.getElementById("container_popUp-cancelRequest"); 
 
-    buttonCancel.forEach(element=> {
+    buttonCanceled.forEach(element=> {
         element.addEventListener('click', () => {
-        container_popUp_cancelRequest.style.display = 'flex'
+        containerPopUp_canceled.style.display = 'flex'
     })
     })
 
 
-    closePopDelete(container_popUp-cancelRequest)
+    closePopUp_canceled(containerPopUp_canceled)
     
 }
 
-function closePopDelete(container_popUp_delete) {
-    container_popUp_delete.addEventListener('click', e => {
+function closePopUp_canceled(containerPopUp_canceled) {
+    containerPopUp_canceled.addEventListener('click',  c => { 
 
-        console.log(e.target)
-
-        if (e.target.id == 'close_pop' || e.target == container_popUp_delete || e.target.id == 'no') {
-            container_popUp_delete.style.display = 'none'
+        if (c.target.id == 'close_popUp_cancelRequest' || c.target.id == 'no' || c.target == containerPopUp_canceled) {
+            containerPopUp_canceled.style.display = 'none'
         }
     })
 }
 
-openPopUp_cancelRequest()
+openPopUp_canceled()

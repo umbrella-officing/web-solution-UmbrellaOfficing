@@ -36,7 +36,7 @@
     color: var(--scale-13-blue);
 }
 
-#come_back img {
+#come_back i {
     margin-right: 5px;
 }
 
@@ -140,7 +140,7 @@
 }
 
 .select-box .options-container::-webkit-scrollbar-thumb {
-    background: var(--scale-13-blue);
+    background: #333;
     border-radius: 0 8px 8px 0;
 }
 
@@ -157,7 +157,7 @@
 }
 
 .select-box .option:hover {
-    background: #f1f6ff;
+    background: #74a7e6;
 }
 
 .select-box label {
@@ -310,19 +310,12 @@
 }
 
 #edit_photos {
-    background-color: var(--scale-2-purple);
-    border: none;
-    width: 112px;
-    height: 24px;
-    color: var(--white);
-    border-radius: 40px;
-    margin-top: 40px;
-}
-
-#edit_photos {
-    font-size: 14px;
+    font-size: 18px;
     font-family: var(--font-primary);
-    font-weight: 500;
+    font-weight: 600;
+    color: var(--scale-2-purple);
+    border: none;
+    background: none;
 }
 
 .photos {
@@ -336,7 +329,9 @@
     border-radius: 5px;
     padding: 10px;
     width: 162px;
-    height: 131px;
+    height: 131px; 
+    display: flex;
+    justify-content: space-around; 
 } 
 
 #edit-ad_basics-information input,
@@ -620,16 +615,7 @@
     margin: 40px 0 0 558px;
 }
 
-@media(min-width: 300px) and (max-width: 700px) {
-    #header>div a img {
-        width: 80%;
-    }
-
-    #container_search,
-    #menu {
-        display: none;
-    }
-
+@media(min-width: 320px) and (max-width: 700px) {
     #container_menu>a>button {
         width: 136px;
         height: 36px;
@@ -637,12 +623,8 @@
         font-size: 13.5px;
     }
 
-    #my-account-sidebar_mobile {
-        display: block;
-    }
-
     #edit-ad>div {
-        padding: 130px 0 80px 0;
+        padding: 140px 0 80px 0;
         width: 95%;
         margin: 0 8px;
         flex-direction: column;
@@ -701,11 +683,6 @@
         width: 100%;
     }
 
-    #edit_photos {
-        font-size: 13px;
-        width: 78px;
-    }
-
     .flex {
         display: grid;
         grid-template-columns: 75% 20%;
@@ -745,24 +722,21 @@
     .resources img {
         margin-right: 10px;
     }
-
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    }
 }
 
-@media(min-width: 700px) and (max-width: 841px) {
-    #header>div a img {
-        width: 80%;
+@media(min-width: 320px) and (max-width: 510px) {
+    #photo1, 
+    #photo2, 
+    #photo3 { 
+        width: 40%; 
     }
 
-    #container_search,
-    #menu {
+    #photo2 {
         display: none;
-    }
+    } 
+}
 
+@media(min-width: 700px) and (max-width: 840px) {
     #container_menu>a>button {
         width: 136px;
         height: 36px;
@@ -831,12 +805,7 @@
   
     #edit-ad_localization span div {
         width: 100%;
-    }
-
-    #edit_photos {
-        font-size: 13px;
-        width: 78px;
-    }
+    } 
 
     .flex {
         display: grid;
@@ -877,12 +846,6 @@
     .resources-wifi img,
     .resources img {
         margin-right: 10px;
-    }
-
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
     }
 }
  
@@ -943,13 +906,5 @@
     .resources img,
     .resources-wifi img {
         margin-right: 8px;
-    }
-
-    #logo {
-        max-width: 275px;
-    }
-
-    footer ul h5 {
-        font-size: 17px;
     }
 }

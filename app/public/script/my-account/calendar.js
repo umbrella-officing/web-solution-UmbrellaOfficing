@@ -14,47 +14,43 @@ optionsList.forEach(o => {
   });
 });
 
-const selectedFrequency = document.querySelector(".selected-frequency");
-const frequencyContainer = document.querySelector(".frequency-container");
+// const selectedFrequency = document.querySelector(".selected-frequency");
+// const frequencyContainer = document.querySelector(".frequency-container");
 
-const frequencyList = document.querySelectorAll(".frequency");
+// const frequencyList = document.querySelectorAll(".frequency");
 
-selectedFrequency.addEventListener("click", () => {
-  frequencyContainer.classList.toggle("active1");
-});
+// selectedFrequency.addEventListener("click", () => {
+//   frequencyContainer.classList.toggle("active1");
+// });
 
-frequencyList.forEach(f => {
-  f.addEventListener("click", () => {
-    selectedFrequency.innerHTML = f.querySelector("option").innerHTML;
-    frequencyContainer.classList.remove("active1");
-  });
-});
+// frequencyList.forEach(f => {
+//   f.addEventListener("click", () => {
+//     selectedFrequency.innerHTML = f.querySelector("option").innerHTML;
+//     frequencyContainer.classList.remove("active1");
+//   });
+// });
 
-$(document).ready(function () {
-  $("timeComplete").inputmask("h:s",{ "placeholder": "hh/mm" });
-});
 
 let nav = 0;
 let clicked = null;
 let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
 
 const calendar = document.getElementById('calendar-data');
-const newEventModal = document.getElementById('container_popUp_addSchedule');
-const deleteEventModal = document.getElementById('popUp_schedule');
-const backDrop = document.getElementById('modalBackDrop');
+const popUp_addSchedule = document.getElementById('popUp_addSchedule');
+const popUp_schedule = document.getElementById('popUp_schedule');
+const backDrop = document.getElementById('containerPopUp_data');
 const eventTitleInput = document.querySelectorAll('.timeComplete');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-function openModal(date) {
+function openContainer_data(date) {
   clicked = date;
 
-  const eventForDay = events.find(e => e.date === clicked);
-  if (eventForDay) {
-    document.querySelector('.eventText').innerText = eventForDay.title;
-    deleteEventModal.style.display = 'block';
-    console.log(eventForDay.title)
+  const schedules = events.find(e => e.date === clicked);
+  if (schedules) {
+    document.querySelector('.schedules').innerText = schedules.title;
+    popUp_schedule.style.display = 'block'; 
   } else {
-    newEventModal.style.display = 'block';
+    popUp_addSchedule.style.display = 'block';
   }
 
   backDrop.style.display = 'flex';
@@ -95,20 +91,20 @@ function load() {
 
       if (i > paddingDays) {
       daySquare.innerText = i - paddingDays;
-      const eventForDay = events.find(e => e.date === dayString);
+      const schedules = events.find(e => e.date === dayString);
 
       if (i - paddingDays === day && nav === 0) {
         daySquare.id = 'currentDay';
       }
 
-      if (eventForDay) {
-        const eventDiv = document.createElement('div');
-        eventDiv.classList.add('event');
-        eventDiv.innerText = eventForDay.title;
-        daySquare.appendChild(eventDiv);
+      if (schedules) {
+        const eventTime = document.createElement('div');
+        eventTime.classList.add('time');
+        eventTime.innerText = schedules.title;
+        daySquare.appendChild(eventTime);
       }
 
-      daySquare.addEventListener('click', () => openModal(dayString));
+      daySquare.addEventListener('click', () => openContainer_data(dayString));
     } else {
       daySquare.classList.add('padding');
     }
@@ -120,8 +116,8 @@ function load() {
 function closeModal() {
   eventTitleInput[0].classList.remove('error')
   eventTitleInput[1].classList.remove('error');
-  newEventModal.style.display = 'none';
-  deleteEventModal.style.display = 'none';
+  popUp_addSchedule.style.display = 'none';
+  popUp_schedule.style.display = 'none';
   backDrop.style.display = 'none';
   eventTitleInput[0].value = '';
   eventTitleInput[1].value = '';
@@ -147,8 +143,7 @@ function saveEvent() {
 }
 
 function deleteEvent() {
-  events = events.filter(e => e.date !== clicked);
-  console.log(events)
+  events = events.filter(e => e.date !== clicked); 
   localStorage.setItem('events', JSON.stringify(events));
   closeModal();
 }
@@ -165,6 +160,8 @@ function initButtons() {
   });
 
   document.getElementById('saveButton').addEventListener('click', saveEvent);
+  document.getElementById('deleteButton').addEventListener('click', deleteEvent); 
+  document.getElementById('cancelButton-close').addEventListener('click', closeModal); 
   document.getElementById('cancelButton').addEventListener('click', closeModal); 
   document.getElementById('closeButton').addEventListener('click', closeModal);
 }
@@ -172,6 +169,16 @@ function initButtons() {
 initButtons();
 load();
 
-$(document).ready(function () {
-  $(".eventTitleInput ").mask("00:00");
-});
+var mask = "HH:MM",
+    pattern = {
+        'translation': {
+            'H': {
+                pattern: /[0-23]/
+            },
+            'M': {
+                pattern: /[0-59]/
+            }
+        }
+    };
+
+$(".timeComplete").mask(mask, pattern);

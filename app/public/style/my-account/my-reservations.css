@@ -137,7 +137,7 @@ ul {
 
 #my-reservations_section2 .slider {
     list-style: none;
-    width: calc(106% - 5px);
+    width: 100%
 }
 
 .arrows {
@@ -150,11 +150,11 @@ ul {
 }
 
 .slider>button:first-child {
-    left: -40px;
+    left: -35px;
 }
 
 .arrow-right {
-    right: calc(3.5% - 22px);
+    right: calc(3.5% - 35px);
 }
 
 .slider .fa {
@@ -191,7 +191,7 @@ ul {
     padding: 20px 20px 60px 20px;
     background-color: var(--scale-1-gray);
     width: 100%;
-    height: 177px;
+    height: 14rem;
     box-sizing: border-box;
 }
 
@@ -661,22 +661,12 @@ ul {
     }
     
     #my-reservations_section2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #my-reservations_section2 h2 { 
-        width: 86%; 
-    }
-
-    #my-reservations_section2 div { 
-        width: 86%; 
+        width: 100%; 
     }
 
     #my-reservations_section2 .slider { 
         width: 100%;
-    }
+    } 
 
     #container_popUp_calendar,
     #container_popUp_cancel {
@@ -700,6 +690,11 @@ ul {
 
     .calendar-week-day {
         font-size: 14px;
+    }
+
+    .month-list>div>div {
+        padding: 5px 10px; 
+        font-size: 13px;
     }
 
     .popUp_cancel {
@@ -852,6 +847,10 @@ ul {
         margin: 0;
     }
 
+    #my-reservations_section2 {
+        width: 100%;
+    }
+
     #my-reservations_section2 .slider { 
         width: 100%;
     }
@@ -878,6 +877,11 @@ ul {
 
     .calendar-week-day {
         font-size: 16px;
+    }
+
+    .month-list>div>div {
+        padding: 5px 10px; 
+        font-size: 13px;
     }
 
     .popUp_cancel {
@@ -985,11 +989,7 @@ ul {
     .visits {
         margin: 0 0 10px 0;
     }
-
-    #my-reservations_section2 .slider { 
-        width: 100%;
-    }
-   
+    
     .popUp_cancel {
         width: 100%;
         margin: 0 16px;

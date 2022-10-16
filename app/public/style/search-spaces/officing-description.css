@@ -8,7 +8,7 @@ h6 {
 }
 
 #officing_description_section1 {
-    padding: 180px 0 80px 0;
+    padding: 180px 0 80px 0; 
 }
 
 #officing_description_section1>div {
@@ -461,14 +461,27 @@ h6 {
     display: flex;
 }
 
+#officing_description_section2 {
+    overflow: hidden;
+}
+
+#near_officing {
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 105px;
+}
+
 #near_officing .slider {
     list-style: none;
-    width: calc(106% - 5px);
+    width: calc(100% - 5px);
 }
 
 .arrows {
     position: absolute;
-    top: 148px;
+    top: inherit;
     z-index: 599;
     border: none;
     background: transparent;
@@ -499,7 +512,7 @@ h6 {
 }
 
 .slider li>div {
-    width: 84%;
+    width: 72%;
     max-width: 234px;
 }
 
@@ -844,15 +857,26 @@ h6 {
     margin-top: 25px;
 }
 
+#room-description form label { 
+    font-size: 13px;
+    font-weight: 500;
+}
+
 #room-description form input {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 8px;
-    margin: 10px 0;
+    margin: 10px 0 20px 0;
     resize: none;
     width: -webkit-fill-available;
     outline: none;
     font-size: 13px;
+}
+
+#room-description form .schedules {
+    display: grid; 
+    grid-template-columns: 47.5% 47.5%;
+    grid-column-gap: 5%;
 }
 
 .select-box {
@@ -861,7 +885,7 @@ h6 {
     font-size: 13px;
     font-weight: 500;
     width: 100%;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 .select-box .options-container {
@@ -884,6 +908,7 @@ h6 {
     color: #333;
     position: relative;
     order: 0;
+    margin: 10px 0;
 }
 
 .selected::after {
@@ -914,10 +939,11 @@ h6 {
     width: 8px;
     background: inherit;
     border-radius: 0 8px 8px 0;
+    background: #333;
 }
 
 .select-box .options-container::-webkit-scrollbar-thumb {
-    background: #646a72;
+    background: #333;
     border-radius: 0 8px 8px 0;
 }
 
@@ -986,6 +1012,12 @@ h6 {
     left: 0;
 }
 
+#slider-container .arrows { 
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
 #slider-container .arrow-right {
     right: 0;
 }
@@ -1029,11 +1061,16 @@ h6 {
     height: 100%;
     object-position: center;
     object-fit: cover;
+    border-radius: 5px; 
+}
+
+#slider-container .slick-dots {
+    bottom: -20px;
 }
 
 @media(min-width: 320px) and (max-width: 480px) {
     .default_margin {
-        width: 95%;
+        width: 96%;
     }
 
     #grid-container {
@@ -1045,7 +1082,7 @@ h6 {
     }
 
     #slider-container .slider-imgs li div { 
-        height: 420px;
+        height: 390px;
     }
 
     #price,
@@ -1194,6 +1231,14 @@ h6 {
 
     #grid-container {
         display: none;
+    }
+
+    #slider-container {
+        display: flex;
+    }
+
+    #slider-container .slider-imgs li div { 
+        height: 530px;
     }
 
     #price,

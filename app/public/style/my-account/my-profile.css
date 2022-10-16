@@ -292,11 +292,11 @@
 }
 
 @media(min-width: 841px) and (max-width: 1000px) { 
-    main #my-profile::before {  
+    #my-profile::before {  
         width: 28%;
     }
 
-    main #my-profile_section1 {
+    #my-profile_section1 {
         width: 68%;
     } 
 } 

@@ -367,7 +367,7 @@
                                     <button type="submit" class="renew">
                                         <a href=""><i class="fa-solid fa-rotate"></i></i></a></i>
                                     </button>
-                                    <button type="submit" class="cancel">
+                                    <button type="submit" class="definitely_cancel">
                                         <i class="fa-solid fa-xmark"></i>
                                     </button>
                                 </div>
@@ -407,7 +407,7 @@
                                     <button type="submit" class="renew">
                                         <a href=""><i class="fa-solid fa-rotate"></i></i></a></i>
                                     </button>
-                                    <button type="submit" class="cancel">
+                                    <button type="submit" class="definitely_cancel">
                                         <i class="fa-solid fa-xmark"></i>
                                     </button>
                                 </div>
@@ -447,7 +447,7 @@
                                     <button type="submit" class="renew">
                                         <a href=""><i class="fa-solid fa-rotate"></i></i></a></i>
                                     </button>
-                                    <button type="submit" class="cancel">
+                                    <button type="submit" class="definitely_cancel">
                                         <i class="fa-solid fa-xmark"></i>
                                     </button>
                                 </div>
@@ -656,13 +656,14 @@
         </div>
     </div>
 
-
     <div id="container_popUp_avaliation-owner">
         <div class="popUp_avaliation-owner">
             <form action="" method="">
+                <img id="close_popUp_avaliation" src="images/default/close_icon.svg" alt="close">
                 <div class="popUp_flex">
-                    <img src="images/my-account/reservations/cancel_reservations2.png">
+                    <img id="ilustration" src="images/my-account/reservations/cancel_reservations2.png">
                     <div>
+
                         <label for="comment1">Avalie o espaço</label>
 
                         <ul class="rating">
@@ -681,6 +682,20 @@
                     <button id="submit">Enviar</button>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <div id="container_popUp-cancelRequest">
+        <div class="popUp-cancelRequest">
+            <img id="close_popUp_cancelRequest" src="images/default/close_icon.svg" alt="close">
+            <p>Tem certeza que deseja <span>cancelar</span> de vez essa solicitação de reserva?
+                <br>Esta ação não poderá ser desfeita
+            </p>
+
+            <div>
+                <button type="submit" id="yes">Sim</button>
+                <button id="no">Não</button>
+            </div>
         </div>
     </div>
 

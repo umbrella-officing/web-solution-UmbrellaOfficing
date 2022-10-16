@@ -152,6 +152,7 @@ ul li .profile {
 
 .confirm,
 .cancel,
+.definitely_cancel,
 .renew {
     display: flex;
     justify-content: space-around;
@@ -161,6 +162,7 @@ ul li .profile {
 
 .confirm:hover,
 .cancel:hover,
+.definitely_cancel:hover,
 .renew:hover {
     background-color: var(--scale-13-blue);
 }
@@ -174,7 +176,7 @@ ul li .profile {
 }
 
 #client-avaliation .avaliation {
-    font-size: 15px;
+    font-size: 13.5px;
     font-weight: 600;
     width: 161px;
     background-color: var(--scale-13-blue);
@@ -537,8 +539,12 @@ ul li .profile {
     animation: fadeIn ease .27s;
 }
 
+#close_popUp_avaliation {
+    margin: -10px -20px 10px;
+}
+
 .popUp_flex {
-    display: flex;
+    display: flex; 
     top: 0;
 }
 
@@ -622,10 +628,6 @@ ul li .profile {
     z-index: 9999;
 }
 
-.popUpChecked {
-    display: flex;
-}
-
 .popUp-cancelRequest {
     display: flex;
     flex-direction: column;
@@ -639,7 +641,7 @@ ul li .profile {
     animation: fadeIn ease .27s;
 }
 
-#close_pop {
+#close_popUp_cancelRequest {
     width: 18px;
     cursor: pointer;
     align-self: end;
@@ -673,15 +675,20 @@ ul li .profile {
 
 #yes {
     background-color: white;
-    border: 3px solid var(--scale-12-red);
-    color: var(--scale-12-red);
+    background-color: var(--scale-12-red);
+    color: #fff;
+    border: none;
     margin-right: 30px;
 }
 
-#no {
-    background-color: var(--scale-14-blue);
+#no { 
     border: none;
-    color: white;
+    color: #333;
+}
+
+#no:hover {
+    background-color: var(--scale-11-blue);
+    color: #fff;
 }
 
 @media(min-width: 320px) and (max-width: 480px) {
@@ -780,10 +787,6 @@ ul li .profile {
         font-size: 14px; 
     }
 
-    #confirmed ul li .actions {
-        width: 179px;
-    }
-
     #client-avaliation .avaliation {
         font-size: 13px;
         font-weight: 600;
@@ -791,9 +794,59 @@ ul li .profile {
         background-color: var(--scale-13-blue);
     }
 
-    /*Pop-up - Consultar datas*/
+    .popUp_avaliation-owner {
+        margin: 0 8px;
+        padding: 30px 30px 15px 30px;
+        width: 95%;
+    }
 
+    #ilustration {
+        display: none;
+    }
 
+    #close_popUp_avaliation {
+        width: 16px;
+        height: 16px;
+        margin: -10px -10px 10px;
+    }
+
+    .rating li img {
+        width: 28px;
+    }
+
+    .popUp_avaliation-owner div div label {
+        font-size: 20px;
+    }
+
+    .popUp_avaliation-owner div div textarea {
+        font-size: 14px;
+        margin: 20px 0 10px 0;
+    }
+
+    #submit {
+        font-size: 13.5px;
+        width: 120px;
+    }
+
+    /*Pop up - Cancelar solicitação de reserva definitivamente*/  
+    .popUp-cancelRequest {
+        width: 70%;
+        margin: 0 16px;
+    }
+
+    .popUp-cancelRequest p { 
+        font-size: 14px; 
+    }
+
+    .popUp-cancelRequest>div button {
+        width: 110px;
+        height: 29px; 
+        font-size: 15px; 
+    }
+
+    #yes {
+        margin-right: 15px;
+    } 
 }
 
 @media(min-width: 480px) and (max-width: 841px) {
@@ -886,12 +939,16 @@ ul li .profile {
     }
 
     .actions {
-        width: 116px;
+        max-width: 120px;
     }
 
     .actions button {
         width: 35px;
         height: 35px;
+    }
+
+    #confirmed ul li .actions {
+        width: 90px;
     }
 
     .actions .viewDates {
@@ -904,7 +961,41 @@ ul li .profile {
 
     .calendar {
         margin: 0;
+    } 
+    
+    .popUp_avaliation-owner {
+        width: 100%; 
+        margin: 0 16px;
+        padding: 30px 30px 15px 30px;
     }
+
+    #close_popUp_avaliation {
+        width: 16px;
+        height: 16px;
+        margin: -10px -10px 10px;
+    }
+
+    #ilustration {
+        width: 165px; 
+    }
+
+    .rating img {
+        width: 28px;
+    }
+
+    .popUp_avaliation-owner label {
+        font-size: 20px;
+    }
+
+    .popUp_avaliation-owner textarea {
+        font-size: 14px;
+        margin: 20px 0 10px 0;
+    }
+
+    /*Pop-up - Cancelar solicitação de reserva defitivamente*/
+    .popUp-cancelRequest {
+        margin: 0 16px;
+    }   
 }
 
 @media(min-width: 841px) and (max-width: 1159px) {
@@ -924,6 +1015,10 @@ ul li .profile {
         width: 140px;
     }
 
+    #confirmed ul li .actions {
+        width: 90px;
+    }
+
     .actions .viewDates {
         width: 36px;
         background-color: var(--scale-13-blue);
@@ -935,5 +1030,10 @@ ul li .profile {
 
     .calendar {
         margin: 0;
+    }
+
+    /*Pop up - Cancelar solicitação de reserva*/
+    .popUp-cancelRequest { 
+        width: 766px; 
     }
 }

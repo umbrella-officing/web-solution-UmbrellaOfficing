@@ -250,16 +250,22 @@ a {
 
 #yes {
     background-color: white;
-    border: 3px solid var(--scale-12-red);
-    color: var(--scale-12-red);
+    background-color: var(--scale-12-red);
+    color: #fff;
     margin-right: 30px;
+    border: none;
 }
 
 #no {
-    background-color: var(--scale-14-blue);
     border: none;
-    color: white;
+    color: #333;
 }
+
+#no:hover {
+    background-color: var(--scale-11-blue);
+    color: #fff;
+}
+
 
 @media(min-width: 320px) and (max-width: 550px){
     #container_menu > a > button { 
@@ -456,9 +462,7 @@ a {
     /*Pop-up - Excluir de anúncio*/
     .popUp_delete {
         margin: 0 16px;
-    }
-
-    
+    }   
 } 
 
 @media(min-width: 841px) and (max-width: 1159px) { 

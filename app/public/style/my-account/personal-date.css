@@ -135,7 +135,9 @@
 }
 
 .select-box .option:hover {
-    background: #f1f6ff;
+    font-weight: 600;
+    background: #74a7e6;
+    transition: 5s;
 }
 
 .select-box label {

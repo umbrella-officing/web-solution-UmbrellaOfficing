@@ -18,6 +18,7 @@ optionsList.forEach(o => {
 /*Script Jquery adicionando as máscaras no formulário*/
 $(document).ready(function () {
     $("#cpf_date").mask("000.000.000-00");
+    $("#birth-date").mask("99/99/9999");
     $("#rg_date").mask("999.999.999-W", {
 
         translation: {

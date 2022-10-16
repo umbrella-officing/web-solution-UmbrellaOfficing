@@ -6,7 +6,7 @@
 #calendar>div {
     padding: 180px 0 80px 0;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start; 
     color: var(--text-1-black);
 }
 
@@ -21,6 +21,10 @@
 }
 
 /*Calendar: Conteúdo*/
+#calendar_section1 {
+    width: 744px;
+}
+
 .calendar_section1-header {
     display: flex;
     align-items: baseline;
@@ -88,7 +92,7 @@
 }
  
 .select-box .options-container::-webkit-scrollbar-thumb {
-    background: var(--scale-13-blue);
+    background: #333;
     border-radius: 0 8px 8px 0;
 }
  
@@ -105,7 +109,7 @@
 }
  
 .select-box .option:hover {
-    background: #f1f6ff;
+    background: #74a7e6;
 }
  
 .select-box label {
@@ -116,42 +120,39 @@
     display: none;
 }
 
-#calendar_section1_container-header {
-    font-size: 22px;
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-    justify-content: space-between;
-}
-
-#calendar_section1_container-header button {
-    width: 30px;
-    height: 29px;
-    border: none;
-    border-radius: 50%;
-    background-color: var(--scale-13-blue);
-}
-
-.chevron-left, .chevron-right {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-#calendar_section1_container {
-    width: 744px;
+#calendar_section1_container { 
     border: 1px solid var(--gray-border);
     padding: 25px;
     border-radius: 10px;
 }
 
-#calendar_section1_weekdays {
+#calendar_section1_container-header {
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between; 
+}
+
+#calendar_section1_container-header button {
+    width: 30px;
+    height: 30px;
+    border: none; 
+    background-color: #fff;
+}
+
+#calendar_section1_container-header button i {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+
+#calendar_section1_container #weekdays {
     width: 100%;
     display: flex;
 }
 
-#calendar_section1_weekdays div {
+#calendar_section1_container #weekdays div {
     width: 110px;
     margin: 25px 0 20px 0;
 }
@@ -164,8 +165,8 @@
 }
 
 .day {
-    width: 96px;
-    height: 96px;
+    width: 88px;
+    height: 84px;
     padding: 10px;
     cursor: pointer;
     box-sizing: border-box;
@@ -178,37 +179,23 @@
 }
 
 .day:hover {
-    background-color: #f1f6ff;
-}
-
-.shedules {
-    font-size: 12px;
-    padding: 5px;
-    background-color: var(--scale-6-blue);
-    font-weight: 500;
-    color: white;
-    border-radius: 5px;
-    max-height: 55px;
-    overflow: hidden;
+    background-color: #74a7e6;
 }
 
 .padding {
     cursor: default !important;
-    background-color: #FFFCFF !important;
+    background-color: #fff !important;
     border: none !important;
 }
 
-#container_popUp_addSchedule,
-#container_popUp_schedule {
+#containerPopUp_data {
     display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
     inset: 0;
     height: 100vh;
-    z-index: 8000;
-    top: 0px;
-    left: 0px;
+    z-index: 8000; 
     background-color: rgba(0, 0, 0, 0.25); 
 }
 
@@ -220,20 +207,18 @@
     background-color: white;
     box-shadow: 0px 0px 6px 5px rgb(1 1 1 / 10%); 
     border-radius: 16px;
-    width: 260px;
-    top: 100px;  
+    width: 260px; 
     position: relative;  
+    z-index: 9000;
 } 
 
 #popUp_addSchedule h2,
 #popUp_schedule h2 {
-   font-size: 22px;
-   text-align: center;
+   font-size: 22px; 
    margin: 20px 0 25px 0;
 }
 
-#popUp_addSchedule p,
-#popUp_schedule p {
+#popUp_addSchedule p {
    margin-bottom: 10px;
 }
 
@@ -255,7 +240,7 @@
     box-shadow: 0 0 0 0.2rem rgba(201, 4, 4, 0.25);
     transition: 0.3s ease-in-out;
 }
-
+/* 
 .frequency-box {
     display: flex;
     flex-direction: column;
@@ -332,10 +317,16 @@
 
 .frequency-box label{
     cursor: pointer;
+} */
+
+.schedules {
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
-.frequency-box .frequency .radio1 {
-    display: none;
+#cancelButton-close,
+#closeButton {
+    width: 15px;
 }
 
 #cancelButton,
@@ -367,21 +358,17 @@
     margin-top: 15px;
 }
 
-.shedules {
+.time { 
     font-size: 14px;
-    margin-bottom: 15px;
-}
+    padding: 5px; 
+    font-weight: 500;
+    color: #000;
+    border-radius: 5px; 
+    max-height: 55px;
+    overflow: hidden;
+} 
 
-@media(min-width: 300px) and (max-width: 620px){
-    #header>div a img {
-        width: 80%;
-    }
-
-    #container_search, 
-    #menu {
-        display: none;
-    }  
-
+@media(min-width: 320px) and (max-width: 480px){
     #container_menu > a > button { 
         width: 136px;
         height: 36px;
@@ -389,85 +376,148 @@
         font-size: 13.5px;
     }
 
-    #my-account-sidebar_mobile {
-        display: block;
-    }
-
-    main #my-ads::before { 
+    #calendar::before { 
         display: none; 
     }
 
-    #my-account-menu {
+    #calendar nav {
         display: none;
     }
 
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
-    } 
+    #calendar>div {
+        padding-top: 140px;  
+    }
+    
+    #my-profile_section1 {
+        width: 100%;
+    }
+
+    #my-profile_section1 h1 {
+        font-size: 25px; 
+    }
+
+    #my-profile_section1 h1~p {
+        font-size: 14px; 
+    }
+
+    #my-profile_section1 form>div label {
+        font-size: 16px; 
+    }
+
+    form .form-flex {
+        flex-direction: column; 
+    }
+
+    form .form-flex>div:nth-child(1) { 
+        padding: 35px 25px; 
+    }
+
+    form .social-medias {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    form .social-medias_flex div input { 
+        font-size: 13.5px;
+    }
+
+    form .social-medias p {
+        font-size: 11.5px; 
+    }
 }
 
-@media(min-width: 621px) and (max-width: 841px)  { 
-    #header>div a img {
-        width: 80%;
-    }
-
-    #container_search, 
-    #menu {
-        display: none;
-    }  
-
+@media(min-width: 481px) and (max-width: 841px) {
     #container_menu > a > button { 
         width: 136px;
         height: 36px;
         margin: 0;
         font-size: 13.5px;
     }
-
-    #my-account-sidebar_mobile {
-        display: block;
-    }
-
-    main #my-ads::before { 
+    
+    #calendar::before { 
         display: none; 
     }
 
     #my-account-menu {
         display: none;
-    }
-
-    main #my-ads>div {
-        padding-top: 130px;  
-    }
-   
-    footer h5,
-    footer ul li,
-    #scroll_up {
-        display: none;
     } 
 
-}  
-
-@media(min-width: 841px) and (max-width: 1000px) { 
-    main #my-ads::before {  
-        width: 28%;
+    #calendar>div {
+        padding-top: 150px; 
     }
 
-    main #my-ads > div > div {
-        width: 68%;
-    }
-
-    #actives_space, 
-    #inactives_space {
+    #calendar_section1 {
         width: 100%;
     } 
 
-    #logo { 
-        max-width: 275px;
+    #my-profile_section1 h1 {
+        font-size: 25px;
+        font-weight: bold;
     }
 
-    footer ul h5 {
-        font-size: 17px; 
+    form .form-flex>div:nth-child(1) { 
+        width: 45%;
+        box-sizing: border-box;
+        padding: 22px;
     }
+
+    form .social-medias_flex div input { 
+        font-size: 14px;
+    } 
 }
+
+@media(min-width: 841px) and (max-width: 960px) { 
+    #calendar>div {
+        position: relative;
+        width: 96%;
+    }
+
+    #calendar::before {  
+        width: 28%;
+    }
+
+    #calendar_section1 {
+        width: 560px;
+    } 
+
+    .day {
+        width: 62px;
+        height: 62px;
+    }
+
+    #calendar_section1_container-header {
+        font-size: 19px;
+    }
+
+    #calendar_section1_container #weekdays div {
+        font-size: 15px; 
+    }
+} 
+
+@media(min-width: 961px) and (max-width: 1000px) { 
+    #calendar>div {
+        position: relative;
+        width: 96%;
+    }
+
+    #calendar::before {  
+        width: 28%;
+    }
+
+    #calendar_section1 {
+        width: 600px;
+    } 
+
+    .day {
+        width: 68px;
+        height: 68px;
+    }
+
+    #calendar_section1_container-header {
+        font-size: 19px;
+    }
+
+    #calendar_section1_container #weekdays div {
+        font-size: 15px; 
+    }
+} 

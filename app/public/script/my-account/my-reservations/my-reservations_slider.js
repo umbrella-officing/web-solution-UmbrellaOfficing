@@ -1,6 +1,6 @@
 $('.slider').slick({
-    autoplay: true,
-    autoplaySpeed: 3500,
+    // autoplay: true,
+    // autoplaySpeed: 3500,
     infinite: true,
     slidesToScroll: 4,
     slidesToShow: 4,
