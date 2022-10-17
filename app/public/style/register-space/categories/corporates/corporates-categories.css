@@ -278,10 +278,11 @@ a{
     padding: 20px 0;
     border: 1px solid var(--gray-border);
     border-radius: 20px;
-    
+    cursor: pointer;
 }
 
-#advanceButton{
+
+#advance > :first-child{
     background-color: var(--scale-2-purple);
     color: var(--white);
     font-size: 18px;
@@ -290,7 +291,6 @@ a{
     border-radius: 20px;
     width: 160px;
     height: 32px;
-    margin-left: auto;
 }
 
 #corporates-categories_section h1{
@@ -303,8 +303,15 @@ a{
 
 #align-buttons{
     padding-top: 65px;
+    justify-content: flex-end;
 }
 
+.space-box:focus{
+    border-color: #08bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, .25);
+    transition: 0.3s ease-in-out;
+}
 
 
 
