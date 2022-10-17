@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/my-account.css">
     <link rel="stylesheet" href="style/my-account/my-profile.css">
@@ -132,28 +133,47 @@
     <main>
         <div id="my-profile" class="container_margin_default">
             <div class="default_margin">
-                <nav>
+                <nav id="my-account-menu">
                     <ul>
-                        <li class="option_active">
-                            <a href="#"><i class="fa-solid fa-user-large profile"></i>
-                                Meu perfil</a>
+                        <li class="option on">
+                            <a href="#">
+                                <div>
+                                    <i class='bx bxs-user icon'></i>
+                                </div>
+                                <span>Meu perfil</span>
+                            </a>
                         </li>
                         <li class="option">
                             <a href="/dados-pessoais">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                Dados pessoais</a>
+                                <div>
+                                    <i class='bx bx-wallet icon'></i>
+                                </div>
+                                <span>Dados pessoais</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/minhas-reservas"><i class="fa-solid fa-calendar-check reserve"></i>
-                                Minhas reservas</a>
+                            <a href="/minhas-reservas">
+                                <div>
+                                    <i class='bx bx-calendar-check icon'></i>
+                                </div>
+                                <span>Minhas reservas</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
-                                Meus anúncios</a>
+                            <a href="/meus-anuncios">
+                                <div>
+                                    <i class="fa-solid fa-bullhorn announcer"></i>
+                                </div>
+                                <span>Meus anúncios</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/calendario"><i class="fa-solid fa-calendar-days calendar"></i>
-                                Calendário</a>
+                            <a href="/calendario">
+                                <div>
+                                    <i class='bx bx-calendar icon'></i>
+                                </div>
+                                <span>Calendário</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>

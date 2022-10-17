@@ -215,13 +215,13 @@
 
                     <div id="calendar_section1_container">
                         <div id="calendar_section1_container-header">
-                          <div id="monthDisplay"></div>
-                          <div>
-                            <button id="backButton"><i class="fa-solid fa-chevron-left"></i></button>
-                            <button id="nextButton"><i class="fa-solid fa-chevron-right"></i></button>
-                          </div>
+                            <div id="monthDisplay"></div>
+                            <div>
+                                <button id="backButton"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button id="nextButton"><i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
                         </div>
-                  
+
                         <div id="weekdays">
                             <div>Dom</div>
                             <div>Seg</div>
@@ -231,66 +231,72 @@
                             <div>Sex</div>
                             <div>Sab</div>
                         </div>
-                  
+
                         <div id="calendar-data"></div>
-                      </div>
-                  
-                      <div id="containerPopUp_data"><div id="popUp_addSchedule">
-                        <img id="cancelButton-close" src="images/default/close_icon.svg" alt="close">
-
-                        <h2>Adicionar horário</h2>
-                        
-                        <p>Abertura</p>
-                        <input class="timeComplete outline-focus" placeholder="00:00" />
-                        <p>Fechamento</p>
-                        <input class="timeComplete outline-focus" placeholder="00:00" /> 
-
-                        <!-- <div class="frequency-box">
-                            <div class="frequency-container">
-                                <div class="frequency">
-                                    <input type="radio" class="radio1" id="year" name="category" />
-                                    <option for="year">Durante um ano</option>
-                                </div>
-            
-                                <div class="frequency">
-                                    <input type="radio" class="radio1" id="month" name="category" />
-                                    <option for="month">Durante um mês</option>
-                                </div>
-            
-                                <div class="frequency">
-                                    <input type="radio" class="radio1" id="week" name="category" />
-                                    <option for="week">Essa semana</option>
-                                </div>
-            
-                                <div class="frequency">
-                                    <input type="radio" class="radio1" id="year" name="category" />
-                                    <option for="year">Apenas esse dia</option>
-                                </div>
-                            </div>
-            
-                            <div class="selected-frequency">
-                                Apenas esse dia
-                            </div>
-                        </div>
-                   -->
-                        <div>
-                            <button id="saveButton">Salvar inf.</button>
-                            <button id="cancelButton">Cancelar</button>
-                        </div>
-                      </div></div>
-                  
-                      <div id="containerPopUp_data"><div id="popUp_schedule"> 
-                        <img id="closeButton" src="images/default/close_icon.svg" alt="close">
-
-                        <h2>Horário de abertura e fechamento</h2>
-                        <p class="schedules"></p> 
-            
-                        <button id="deleteButton">Delete</button> 
-                      </div></div>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
+
+    <div id="containerPopUp_data">
+        <div>
+            <div id="popUp_addSchedule">
+                <img id="cancelButton-close" src="images/default/close_icon.svg" alt="close">
+
+                <h2>Adicionar horário</h2>
+
+                <p>Abertura</p>
+                <input class="timeComplete outline-focus" placeholder="00:00" />
+                <p>Fechamento</p>
+                <input class="timeComplete outline-focus" placeholder="00:00" />
+
+                <!-- <div class="frequency-box">
+            <div class="frequency-container">
+                <div class="frequency">
+                    <input type="radio" class="radio1" id="year" name="category" />
+                    <option for="year">Durante um ano</option>
+                </div>
+
+                <div class="frequency">
+                    <input type="radio" class="radio1" id="month" name="category" />
+                    <option for="month">Durante um mês</option>
+                </div>
+
+                <div class="frequency">
+                    <input type="radio" class="radio1" id="week" name="category" />
+                    <option for="week">Essa semana</option>
+                </div>
+
+                <div class="frequency">
+                    <input type="radio" class="radio1" id="year" name="category" />
+                    <option for="year">Apenas esse dia</option>
+                </div>
+            </div>
+
+            <div class="selected-frequency">
+                Apenas esse dia
+            </div>
+        </div>
+   -->
+                <div>
+                    <button id="saveButton">Salvar inf.</button>
+                    <button id="cancelButton">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id="popUp_schedule">
+                <img id="closeButton" src="images/default/close_icon.svg" alt="close">
+
+                <h2>Horário de abertura e fechamento</h2>
+                <p class="schedules"></p>
+
+                <button id="deleteButton">Delete</button>
+            </div>
+        </div>
+    </div>
 
     <footer class="container_margin_default">
 

@@ -388,85 +388,179 @@
         padding-top: 140px;  
     }
     
-    #my-profile_section1 {
+    #calendar_section1 {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    #my-profile_section1 h1 {
-        font-size: 25px; 
+    .calendar_section1-header {
+        width: 300px; 
+        flex-direction: column;
     }
 
-    #my-profile_section1 h1~p {
-        font-size: 14px; 
+    .select-box {
+        position: relative;
+        margin-top: 25px;
     }
 
-    #my-profile_section1 form>div label {
-        font-size: 16px; 
+    #calendar_section1_container {
+        width: 300px; 
+        padding: 20px 10px;
+        box-sizing: border-box;
     }
 
-    form .form-flex {
-        flex-direction: column; 
+    #calendar_section1_container-header {
+        font-size: 18px; 
     }
 
-    form .form-flex>div:nth-child(1) { 
-        padding: 35px 25px; 
+    #calendar_section1_container #weekdays { 
+        font-size: 14px;
+    }   
+
+    .day {
+        width: 29px;
+        height: 39px;
+        padding: 5px;
+        font-size: 13px;
     }
 
-    form .social-medias {
-        width: 100%;
-        margin-top: 40px;
+    .time {
+        background-color: var(--scale-6-blue);
+        color: #fff; 
+        padding: 4px;
+        font-size: 0;
+        position: relative;
     }
 
-    form .social-medias_flex div input { 
-        font-size: 13.5px;
-    }
-
-    form .social-medias p {
-        font-size: 11.5px; 
+    #popUp_addSchedule, #popUp_schedule { 
+        width: 240px; 
     }
 }
 
-@media(min-width: 481px) and (max-width: 841px) {
+@media(min-width: 481px) and (max-width: 720px){
     #container_menu > a > button { 
         width: 136px;
         height: 36px;
         margin: 0;
         font-size: 13.5px;
     }
-    
+
     #calendar::before { 
         display: none; 
     }
 
-    #my-account-menu {
+    #calendar nav {
         display: none;
-    } 
-
-    #calendar>div {
-        padding-top: 150px; 
     }
 
+    #calendar>div {
+        padding-top: 150px;  
+    }
+    
     #calendar_section1 {
         width: 100%;
-    } 
-
-    #my-profile_section1 h1 {
-        font-size: 25px;
-        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    form .form-flex>div:nth-child(1) { 
-        width: 45%;
+    .calendar_section1-header {
+        width: 400px; 
+        flex-direction: column;
+    }
+
+    .select-box {
+        position: relative;
+        margin-top: 25px;
+    }
+
+    #calendar_section1_container {
+        width: 400px; 
+        padding: 20px 10px;
         box-sizing: border-box;
-        padding: 22px;
     }
 
-    form .social-medias_flex div input { 
+    #calendar_section1_container-header {
+        font-size: 18px; 
+    }
+
+    #calendar_section1_container #weekdays { 
+        font-size: 15px;
+    }   
+
+    .day {
+        width: 44px;
+        height: 48px;
+        padding: 5px;
         font-size: 14px;
-    } 
+    }
+
+    .time {
+        background-color: var(--scale-6-blue);
+        color: #fff; 
+        padding: 4px;
+        font-size: 0;
+        position: relative;
+    }
 }
 
-@media(min-width: 841px) and (max-width: 960px) { 
+@media(min-width: 721px) and (max-width: 840px){
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+
+    #calendar::before { 
+        display: none; 
+    }
+
+    #calendar nav {
+        display: none;
+    }
+
+    #calendar>div {
+        padding-top: 150px;  
+    }
+    
+    #calendar_section1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calendar_section1-header {
+        width: 700px; 
+        flex-direction: column;
+    }
+
+    .select-box {
+        position: relative;
+        margin-top: 25px;
+    }
+
+    #calendar_section1_container {
+        width: 700px; 
+        padding: 20px 10px;
+        box-sizing: border-box;
+    }
+
+    #calendar_section1_container-header {
+        font-size: 20px; 
+    }
+
+    .day {
+        width: 86px;
+        height: 80px;
+        padding: 10px; 
+    }
+}
+
+@media(min-width: 841px) and (max-width: 1040px) { 
     #calendar>div {
         position: relative;
         width: 96%;
@@ -477,12 +571,12 @@
     }
 
     #calendar_section1 {
-        width: 560px;
-    } 
+        width: 565px;
+    }  
 
     .day {
-        width: 62px;
-        height: 62px;
+        width: 63.2px;
+        height: 66px;
     }
 
     #calendar_section1_container-header {
@@ -492,32 +586,11 @@
     #calendar_section1_container #weekdays div {
         font-size: 15px; 
     }
-} 
 
-@media(min-width: 961px) and (max-width: 1000px) { 
-    #calendar>div {
-        position: relative;
-        width: 96%;
-    }
-
-    #calendar::before {  
-        width: 28%;
-    }
-
-    #calendar_section1 {
-        width: 600px;
-    } 
-
-    .day {
-        width: 68px;
-        height: 68px;
-    }
-
-    #calendar_section1_container-header {
-        font-size: 19px;
-    }
-
-    #calendar_section1_container #weekdays div {
-        font-size: 15px; 
+    .time {
+        font-size: 11px;
+        padding: 2px; 
     }
 } 
+ 
+ 
