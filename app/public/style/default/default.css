@@ -176,6 +176,23 @@ header > div {
     padding-left: 19px;
 }
 
+.pac-container{
+    top: 165px !important;
+    width: 270px !important;
+    border-radius: 19px;
+    font-family: var(--font-primary);
+}
+
+.pac-item{
+    border-top: none;
+    padding: 14px 20px 8px 20px;
+}
+
+/* .pac-container::after{
+    content: '';
+    background: transparent;
+} */
+
 #container_informations_find_coworking{
     display: none;
     border-radius: inherit;
