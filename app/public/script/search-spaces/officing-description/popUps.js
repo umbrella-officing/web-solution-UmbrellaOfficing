@@ -1,6 +1,6 @@
 /*Pop-up - Visualizar fotos*/
 const openPopUp_seePictures = () => {
-    const buttonSee = document.querySelectorAll(".footer");
+    const buttonSee = document.querySelectorAll(".viewPhotos");
     console.log(buttonSee)
     const containerPopUp_seePictures = document.getElementById("container_popUp-seePictures"); 
 
