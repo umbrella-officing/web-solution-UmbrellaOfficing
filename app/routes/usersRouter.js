@@ -33,4 +33,13 @@ module.exports = (application) => {
 
     application.post("/perfil2", upload2.single('ImagemPerfil'),(req,res)=>{
       application.app.controllers.usersController.uploadImagePerfil(application, req, res);
-    })}
+    })
+
+    application.get("/meu-perfil", (req, res) =>{
+      application.app.controllers.usersController.renderProfile(application, req, res);
+    });
+
+    application.post("/meu-perfil", (req, res) =>{
+      application.app.controllers.usersController.registerProfile(application, req, res);
+    });
+  }
