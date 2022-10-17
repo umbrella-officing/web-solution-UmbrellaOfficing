@@ -39,10 +39,25 @@ main{
     max-height: 1050px;
 }
 
+a{
+    text-decoration: none;
+}
+
 #add-room_section > div{
     justify-content: space-between;
     position: relative;
     height: 100%;
+}
+
+#add-room_section > div > div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 46%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #add-room_section > div > h1{
@@ -66,17 +81,34 @@ main{
     transition: 500ms ease-in-out;
     border: 1px solid var(--gray-border);
     border-radius: 20px;
+    padding: 24px;
+    flex-direction: column;
 }
 
 #add-room img{
     width: 250px;
     height: 250px;
+    margin-left: 20px;
 }
 
-/* #add-room > h2{
-    margin: auto;
-} */
+#add-room img:after{
+    content: '';
+    height: 6px;
+    width: 100%;
+    background-color: red;
+    display: block;
+}
 
+#add-room > button{
+    color: white;
+    font-weight: 700;
+    background: var(--scale-2-purple);
+    border: 1px solid;
+    border-radius: 10px;
+    /* padding: 5px 20px; */
+    width: 100%;
+    padding: 5px 0;
+}
 
 #add-room:hover{
     background: #ededff;

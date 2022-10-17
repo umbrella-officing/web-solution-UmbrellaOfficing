@@ -42,6 +42,7 @@ ul{
 #officing_features_section > div{
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 #officing_features_section > .step {
@@ -257,6 +258,7 @@ input[type="radio"]{
     left: 50%;
     display: flex;
     justify-content: space-around;
+    padding-bottom: 40px;
 }
 
 #return{
