@@ -10,8 +10,7 @@ $(document).ready(function(){
     $.validator.addMethod("phoneRegex", function(value, element) {
         return /^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$/.test(value);
     }, "Número inválido");
-
-    console.log(cpfRegex)
+   
 
     $(".next").click(function(){
         var form = $("#myform");
