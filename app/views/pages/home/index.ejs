@@ -60,17 +60,7 @@
                     <img src="images/default/user.svg" alt="usuário">
                     <img src="images/default/menu_hamburguer.svg" alt="menu">
                 </div>
-                <%
-                if(autenticado){
-            %>
-                <%- include('../../partial/header/menu_autenticado.ejs'); %>
-            <%       
-            }else{
-            %>
-                 <%- include('../../partial/header/menu.ejs'); %>
-            <%
-            } 
-            %>
+            
             </div>
         </div>
         <div id="container_popUp_login-signUp">
@@ -172,24 +162,7 @@
                      <form action="/perfil2" method="post" enctype="multipart/form-data">
                     <div class="actionPicture">
                         <div>      
-                            <%
-                            if(autenticado){
-                        %>
-                            <%if(autenticado.profile_picture != null){%>
-                                <img class="image_profile" src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">                                   
-                            <%}%>
-
-                            <%if(autenticado.profile_picture == null){%>
-                                <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">                               
-                            <%}%>
-                            
-                        <%       
-                        }else{
-                        %>
-                            <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">
-                        <%
-                        } 
-                        %>
+                          
                         </div>
                         <div>
                             <input id="close" type="button" value="Fechar">
@@ -492,9 +465,9 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script/default/header/header.js"></script>
-    <script src="script/default/register/register.js"></script>
+    <!-- <script src="script/default/register/register.js"></script> -->
     <script src="script/home/reports.js"></script>
     <script src="script/home/coworking_places_inspire.js"></script>
-    <script src="script/default/header/autocomplete_api.js"></script>
+    <!-- <script src="script/default/header/autocomplete_api.js"></script> -->
 </body>
 </html>
