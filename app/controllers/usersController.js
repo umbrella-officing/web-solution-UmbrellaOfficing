@@ -159,126 +159,126 @@ module.exports.uploadImagePerfil = (application, req, res) => {
   }
 }
 
-module.exports.renderProfile = (application, req, res) => {  
+// module.exports.renderProfile = (application, req, res) => {  
 
-  if (req.session.autenticado) {
+//   if (req.session.autenticado) {
 
-    const connection = application.config.dbConnection;
-    const userDao = new application.app.models.UsersDAO(connection);
+//     const connection = application.config.dbConnection;
+//     const userDao = new application.app.models.UsersDAO(connection);
 
-    var id_user = Number(req.session.id_user)
+//     var id_user = Number(req.session.id_user)
 
-    userDao.findUserInformations(id_user, (error, result) => {
-      if (error) throw error
+//     userDao.findUserInformations(id_user, (error, result) => {
+//       if (error) throw error
 
-      autenticado = { 
-        about_me: result[0].sobre_mim,
-        profession_profile: result[0].perfil_profissional,
-        id_user: req.session.id_user
-      };
+//       autenticado = { 
+//         about_me: result[0].sobre_mim,
+//         profession_profile: result[0].perfil_profissional,
+//         id_user: req.session.id_user
+//       };
 
-      res.render("pages/my-account/my-profile", autenticado);
+//       res.render("pages/my-account/my-profile", autenticado);
 
-    });
+//     });
 
-  } else {
-    autenticado = { autenticado: null };
-    res.render('pages/my-account/my-profile')
-  }    
-}
+//   } else {
+//     autenticado = { autenticado: null };
+//     res.render('pages/my-account/my-profile')
+//   }    
+// }
 
-module.exports.registerProfile = (application, req, res) => {
+// module.exports.registerProfile = (application, req, res) => {
 
-  const connection = application.config.dbConnection;
-  const userDao = new application.app.models.UsersDAO(connection);
+//   const connection = application.config.dbConnection;
+//   const userDao = new application.app.models.UsersDAO(connection);
 
-  var dadosForm = {
-    sobre_mim: req.body.about_me,
-    perfil_profissional: req.body.profession_profile,
-    id_user: req.session.id_user
-  };
+//   var dadosForm = {
+//     sobre_mim: req.body.about_me,
+//     perfil_profissional: req.body.profession_profile,
+//     id_user: req.session.id_user
+//   };
 
-  console.log(dadosForm);
+//   console.log(dadosForm);
 
-  userDao.registerProfile(dadosForm, (error, result) => {
-    if (error) {
-      throw error
-    }
-    console.log(result)
-    res.redirect('/meu-perfil');
-  });
-}
+//   userDao.registerProfile(dadosForm, (error, result) => {
+//     if (error) {
+//       throw error
+//     }
+//     console.log(result)
+//     res.redirect('/meu-perfil');
+//   });
+// }
 
-module.exports.renderPersonalDates = (application, req, res) => {
+// module.exports.renderPersonalDates = (application, req, res) => {
 
-  if (req.session.autenticado) {
+//   if (req.session.autenticado) {
 
-    const connection = application.config.dbConnection;
-    const userDao = new application.app.models.UsersDAO(connection);
+//     const connection = application.config.dbConnection;
+//     const userDao = new application.app.models.UsersDAO(connection);
 
-    var id_user = Number(req.session.id_user)
+//     var id_user = Number(req.session.id_user)
 
-    userDao.findUserInformations(id_user, (error, result) => {
-      if (error) throw error
+//     userDao.findUserInformations(id_user, (error, result) => {
+//       if (error) throw error
 
-      autenticado = { 
-        name: result[0].nome_user,
-        birth: result[0].dt_nasc_user,
-        gender: result[0].genero_user,
-        profession: result[0].profissao,
-        cpf: result[0].cpf_user,
-        rg: result[0].rg_user,
-        orgao_exp: result[0].orgao_expedidor,
-        phone: result[0].telefone_user,
-        cell: result[0].celular_user,
-        cep: result[0].end_cep,
-        road: result[0].end_rua,
-        number: result[0].end_rua_num,
-        neighborhood: result[0].end_bairro,
-        city_state: result[0].end_cidade_estado,
-        email: result[0].email_user,
-        // senha_user: bcrypt.hashSync(req.body.password, salt),
-        id_user: req.session.id_user
-      };
+//       autenticado = { 
+//         name: result[0].nome_user,
+//         birth: result[0].dt_nasc_user,
+//         gender: result[0].genero_user,
+//         profession: result[0].profissao,
+//         cpf: result[0].cpf_user,
+//         rg: result[0].rg_user,
+//         orgao_exp: result[0].orgao_expedidor,
+//         phone: result[0].telefone_user,
+//         cell: result[0].celular_user,
+//         cep: result[0].end_cep,
+//         road: result[0].end_rua,
+//         number: result[0].end_rua_num,
+//         neighborhood: result[0].end_bairro,
+//         city_state: result[0].end_cidade_estado,
+//         email: result[0].email_user,
+//         // senha_user: bcrypt.hashSync(req.body.password, salt),
+//         id_user: req.session.id_user
+//       };
 
-      res.render("pages/my-account/personal-date", autenticado);
+//       res.render("pages/my-account/personal-date", autenticado);
 
-    }); 
+//     }); 
 
-  } else {
-    autenticado = { autenticado: null };
-    res.render('pages/my-account/personal-date')
-  }    
-}
+//   } else {
+//     autenticado = { autenticado: null };
+//     res.render('pages/my-account/personal-date')
+//   }    
+// }
 
-module.exports.registerPersonalDates = (application, req, res) => {
+// module.exports.registerPersonalDates = (application, req, res) => {
 
-  const connection = application.config.dbConnection;
-  const userDao = new application.app.models.UsersDAO(connection);
+//   const connection = application.config.dbConnection;
+//   const userDao = new application.app.models.UsersDAO(connection);
 
-  var dadosForm = {
-    rg_user: req.body.rg,
-    genero_user: req.body.gender,
-    orgao_exp: req.body.orgao_expedidor,
-    telefone_user: req.body.phone,
-    end_cep: req.body.cep,
-    end_rua: req.body.road,
-    end_rua_num: req.body.number,
-    end_bairro: req.body.neighborhood,
-    end_cidade_estado: req.body.city_state,
-    senha_user: bcrypt.hashSync(req.body.password, salt),
-    id_user: req.session.id_user
-  };
+//   var dadosForm = {
+//     rg_user: req.body.rg,
+//     genero_user: req.body.gender,
+//     orgao_exp: req.body.orgao_expedidor,
+//     telefone_user: req.body.phone,
+//     end_cep: req.body.cep,
+//     end_rua: req.body.road,
+//     end_rua_num: req.body.number,
+//     end_bairro: req.body.neighborhood,
+//     end_cidade_estado: req.body.city_state,
+//     senha_user: bcrypt.hashSync(req.body.password, salt),
+//     id_user: req.session.id_user
+//   };
 
-  console.log(dadosForm);
+//   console.log(dadosForm);
 
-  userDao.registerPersonalDates(dadosForm, (error, result) => {
-    if (error) {
-      throw error
-    }
-    console.log(result)
-    res.redirect('/dados-pessoais');
-  });
+//   userDao.registerPersonalDates(dadosForm, (error, result) => {
+//     if (error) {
+//       throw error
+//     }
+//     console.log(result)
+//     res.redirect('/dados-pessoais');
+//   });
 
   
-}
+// }
