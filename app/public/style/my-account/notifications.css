@@ -10,6 +10,7 @@ nav {
 nav ul{
     list-style: none;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     max-width: 40%;
     margin: 20px 0 0 0;
@@ -205,3 +206,112 @@ nav ul li {
 .select-box .option .radio {
     display: none;
 }
+
+
+@media(min-width: 300px) and (max-width: 570px){
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
+        display: none;
+    }  
+
+    #container_menu > a > button { 
+        width: 136px;
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    } 
+
+    main #notifications_section1 {
+        padding-top: 130px;
+    }
+
+    article .notification div:nth-child(2) {
+        flex-direction: column;
+    }
+
+    article .notification > div > div h2 {
+        font-size: 16px; 
+    }
+
+    article .notification > div > div > div h3 {
+        font-size: 12.5px; 
+    }
+
+    article .notification > div > div h2 ~ div {
+        width: 60px; 
+    }
+
+    article .notification > div > div p {
+        font-size: 14px;  
+        max-width: 95%;
+    }
+
+    article .notification > div > div h4 { 
+        margin-top: 20px;
+    }
+
+    article .select-box { 
+        width: 180px; 
+    }
+
+    .select-box .option, .selected {
+        height: 36px; 
+    }
+   
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+}
+
+@media(min-width: 571px) and (max-width: 841px) {
+    #header>div a img {
+        width: 80%;
+    }
+
+    #container_search, 
+    #menu {
+        display: none;
+    } 
+
+    #container_menu > a > button {  
+        height: 36px;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    main #notifications_section1 {
+        padding-top: 130px;
+    }
+
+    article .notification > div > div p {
+        font-size: 14px;  
+        max-width: 80%;
+    }
+
+    footer h5,
+    footer ul li,
+    #scroll_up {
+        display: none;
+    }
+}
+
+@media(min-width: 841px) and (max-width: 1000px) {  
+    article .notification > div > div p {
+        font-size: 14px;  
+        max-width: 80%;
+    }
+
+    #logo { 
+        max-width: 275px;
+    }
+
+    footer ul h5 {
+        font-size: 17px; 
+    }
+} 

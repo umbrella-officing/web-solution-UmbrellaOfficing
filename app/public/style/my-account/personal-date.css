@@ -3,7 +3,7 @@
 }
 
 #personal-date>div {
-    padding: 220px 0 80px 0;
+    padding: 180px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
@@ -19,61 +19,9 @@
     background-color: var(--scale-9-blue);
 }
 
-/*Dados pessoais: menu lateral*/
-#personal-date>div nav {
-    position: relative;
-    overflow: auto;
-}
-
-#personal-date>div nav ul {
-    list-style: none;
-    position: fixed;
-}
-
-#personal-date>div nav ul li {
-    display: flex;
-    height: 40px;
-    margin: 25px 0;
-    align-items: center;
-}
-
-#personal-date>div nav ul li a {
-    text-decoration: none;
-    align-items: center;
-}
-
-.profile,
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    font-size: 26px;
-}
-
-
-.option_active a {
-    border-left: 3px solid #5B61C4;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--scale-13-blue);
-}
-
-.wallet {
-    margin: 0 10px 0 18px;
-}
-
-.profile,
-.reserve,
-.ads,
-.calendar {
-    color: var(--gray-border);
-    margin: 0 10px 0 21px;
-}
-
 /*Dados pessoais: conteúdo*/
 #personal-date_section1 {
-    width: 744px;
-    margin-bottom: 80px;
+    width: 744px; 
 }
 
 #personal-date_section1 h1 {
@@ -130,7 +78,11 @@
 
 .select-box .options-container {
     max-height: 0;
+<<<<<<< HEAD
     width: 99.2%;
+=======
+    width: 99.6%;
+>>>>>>> main
     opacity: 0;
     transition: all 0.4s;
     border: 1px solid var(--gray-border);
@@ -187,7 +139,9 @@
 }
 
 .select-box .option:hover {
-    background: #f1f6ff;
+    font-weight: 600;
+    background: #74a7e6;
+    transition: 5s;
 }
 
 .select-box label {
@@ -236,3 +190,163 @@
     margin: 40px 0 0 0;
 }
 
+<<<<<<< HEAD
+=======
+@media(min-width: 320px) and (max-width: 480px){
+    #container_menu > a > button {  
+        height: 36px;
+        margin: 0;
+        font-size: 13.5px;
+    }
+ 
+    #personal-date::before { 
+        display: none;
+    } 
+
+    #personal-date nav { 
+        display: none;
+    } 
+
+    #personal-date>div {
+        padding-top: 140px;  
+        width: 96.3%;
+    } 
+    
+    #personal-date_section1 {
+        width: 100%;
+    }
+
+    #personal-date_section1 h1 {
+        font-size: 25px; 
+    }
+
+    #personal-date_section1 form h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 40px;
+    }
+
+    form .personal-date-grid2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .select-box {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        position: relative; 
+    }
+
+    .personal-date-grid2-dif {
+        display: grid;
+        grid-template-columns: 74% 21%;
+        grid-column-gap: 5%;
+    }
+
+    .select-box .options-container.active {
+        top: 110px;
+        position: absolute;
+    }
+}
+
+@media(min-width: 481px) and (max-width: 841px) { 
+    #container_menu > a > button {  
+        height: 36px;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    #my-account-sidebar_mobile {
+        display: block;
+    }
+
+    #personal-date {
+        position: relative;
+        width: 100%;
+    }
+
+    #personal-date::before { 
+        display: none;
+    } 
+
+    #personal-date nav { 
+        display: none;
+    } 
+
+    #personal-date>div {
+        padding-top: 150px; 
+    }
+    
+    #personal-date_section1 {
+        width: 100%;
+    }
+
+    main #personal-date_section1 h1 {
+        font-size: 25px; 
+    }
+
+    form .personal-date-grid2 {
+        grid-template-columns: 47.5% 47.5%;
+        grid-column-gap: 5%;
+    }
+
+    .select-box { 
+        width: 47.5%; 
+        right: 0;
+        position: absolute;
+    }
+
+    .personal-date-grid2-dif {
+        display: grid;
+        grid-template-columns: 74% 21%;
+        grid-column-gap: 5%;
+    }
+}
+
+@media(min-width: 841px) and (max-width: 1159px) { 
+    #personal-date {
+        position: relative;
+        width: 100%;
+    }
+
+    #personal-date::before { 
+        width: 28%; 
+    }  
+
+    .option a { 
+        font-size: 14px; 
+    }
+    
+    .option_active a { 
+        font-size: 14px; 
+    }
+    
+    #personal-date_section1 {
+        width: 68%;
+    }
+
+    #personal-date_section1 h1 {
+        font-size: 23px; 
+    }
+
+    form .personal-date-grid2 {
+        grid-template-columns: 47.5% 47.5%;
+        grid-column-gap: 5%;
+    }
+
+    .select-box { 
+        width: 47.5%; 
+        right: 0;
+        position: absolute;
+    }
+
+    .personal-date-grid2-dif {
+        display: grid;
+        grid-template-columns: 74% 21%;
+        grid-column-gap: 5%;
+    }
+}
+
+
+>>>>>>> main

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/my-account.css">
     <link rel="stylesheet" href="style/my-account/calendar.css">
@@ -57,7 +58,7 @@
                     </div>
                     <div>
                         <a href="/central-de-ajuda"></a><img src="images/default/question.png" alt="sair da conta">
-                       Central de ajuda</a>
+                        Central de ajuda</a>
                     </div>
                 </div>
                 <div id="container_popUp_login-signUp">
@@ -140,32 +141,50 @@
     <main>
         <div id="calendar" class="container_margin_default">
             <div class="default_margin">
-                <nav>
+                <nav id="my-account-menu">
                     <ul>
                         <li class="option">
-                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
-                                Meu perfil</a>
+                            <a href="/meu-perfil">
+                                <div>
+                                    <i class='bx bxs-user icon'></i>
+                                </div>
+                                <span>Meu perfil</span>
+                            </a>
                         </li>
                         <li class="option">
                             <a href="/dados-pessoais">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                Dados pessoais</a>
+                                <div>
+                                    <i class='bx bx-wallet icon'></i>
+                                </div>
+                                <span>Dados pessoais</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/minhas-reservas"><i class="fa-solid fa-calendar-check reserve"></i>
-                                Minhas reservas</a>
+                            <a href="/minhas-reservas">
+                                <div>
+                                    <i class='bx bx-calendar-check icon'></i>
+                                </div>
+                                <span>Minhas reservas</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
-                                Meus anúncios</a>
+                            <a href="/meus-anuncios">
+                                <div>
+                                    <i class="fa-solid fa-bullhorn announcer"></i>
+                                </div>
+                                <span>Meus anúncios</span>
+                            </a>
                         </li>
-                        <li class="option_active">
-                            <a href="#"><i class="fa-solid fa-calendar-days calendar"></i>
-                                Calendário</a>
+                        <li class="option on">
+                            <a href="o">
+                                <div>
+                                    <i class='bx bx-calendar icon'></i>
+                                </div>
+                                <span>Calendário</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>
-
                 <section id="calendar_section1">
                     <div class="calendar_section1-header">
                         <h1>Escritório Lape</h1>
@@ -196,83 +215,81 @@
 
                     <div id="calendar_section1_container">
                         <div id="calendar_section1_container-header">
-                            <div id="monthDisplay"></div>
-                            <div>
-                                <button id="backButton"><i class="fa-solid fa-chevron-left chevron-left"></i></button>
-                                <button id="nextButton"><i class="fa-solid fa-chevron-right chevron-right"></i></button>
+                          <div id="monthDisplay"></div>
+                          <div>
+                            <button id="backButton"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button id="nextButton"><i class="fa-solid fa-chevron-right"></i></button>
+                          </div>
+                        </div>
+                  
+                        <div id="weekdays">
+                            <div>Dom</div>
+                            <div>Seg</div>
+                            <div>Ter</div>
+                            <div>Qua</div>
+                            <div>Qui</div>
+                            <div>Sex</div>
+                            <div>Sab</div>
+                        </div>
+                  
+                        <div id="calendar-data"></div>
+                      </div>
+                  
+                      <div id="containerPopUp_data"><div id="popUp_addSchedule">
+                        <img id="cancelButton-close" src="images/default/close_icon.svg" alt="close">
+
+                        <h2>Adicionar horário</h2>
+                        
+                        <p>Abertura</p>
+                        <input class="timeComplete outline-focus" placeholder="00:00" />
+                        <p>Fechamento</p>
+                        <input class="timeComplete outline-focus" placeholder="00:00" /> 
+
+                        <!-- <div class="frequency-box">
+                            <div class="frequency-container">
+                                <div class="frequency">
+                                    <input type="radio" class="radio1" id="year" name="category" />
+                                    <option for="year">Durante um ano</option>
+                                </div>
+            
+                                <div class="frequency">
+                                    <input type="radio" class="radio1" id="month" name="category" />
+                                    <option for="month">Durante um mês</option>
+                                </div>
+            
+                                <div class="frequency">
+                                    <input type="radio" class="radio1" id="week" name="category" />
+                                    <option for="week">Essa semana</option>
+                                </div>
+            
+                                <div class="frequency">
+                                    <input type="radio" class="radio1" id="year" name="category" />
+                                    <option for="year">Apenas esse dia</option>
+                                </div>
+                            </div>
+            
+                            <div class="selected-frequency">
+                                Apenas esse dia
                             </div>
                         </div>
-
-                        <div id="calendar_section1_weekdays">
-                            <div>Domingo</div>
-                            <div>Segunda</div>
-                            <div>Terça</div>
-                            <div>Quarta</div>
-                            <div>Quinta</div>
-                            <div>Sexta</div>
-                            <div>Sábado</div>
+                   -->
+                        <div>
+                            <button id="saveButton">Salvar inf.</button>
+                            <button id="cancelButton">Cancelar</button>
                         </div>
+                      </div></div>
+                  
+                      <div id="containerPopUp_data"><div id="popUp_schedule"> 
+                        <img id="closeButton" src="images/default/close_icon.svg" alt="close">
 
-                        <div id="calendar-data"></div>
-                    </div>
-                </section>
-
-            </div>
-
-        </div>
-
-        <div id="newEventModal">
-                <h2>Adicionar horário</h2>
+                        <h2>Horário de abertura e fechamento</h2>
+                        <p class="schedules"></p> 
             
-                <p>Abertura</p>
-                <input class="eventTitleInput outline-focus" placeholder="00:00" />
-
-                <p>Fechamento</p>
-                <input class="eventTitleInput outline-focus" placeholder="00:00" />
-
-                <div class="frequency-box">
-                    <div class="frequency-container">
-                        <div class="frequency">
-                            <input type="radio" class="radio1" id="year" name="category" />
-                            <option for="year">Durante um ano</option>
-                        </div>
-
-                        <div class="frequency">
-                            <input type="radio" class="radio1" id="month" name="category" />
-                            <option for="month">Durante um mês</option>
-                        </div>
-
-                        <div class="frequency">
-                            <input type="radio" class="radio1" id="week" name="category" />
-                            <option for="week">Essa semana</option>
-                        </div>
-                        
-                        <div class="frequency">
-                            <input type="radio" class="radio1" id="year" name="category" />
-                            <option for="year">Apenas esse dia</option>
-                        </div>
-                    </div>
-
-                    <div class="selected-frequency">
-                        Apenas esse dia
-                    </div>
-                </div>
-
-                <button id="saveButton">Salvar</button>
-                <button id="cancelButton">Cancelar</button>
+                        <button id="deleteButton">Delete</button> 
+                      </div></div>
+                </section>
             </div>
         </div>
-        <div id="deleteEventModal">
-            <h2>Horário de abertura e fechamento</h2>
-            <p class="eventText"></p>
-            <p></p>
-
-            <button id="deleteButton">Deletar</button>
-            <button id="closeButton">Fechar</button>
-        </div>
-
-        <div id="modalBackDrop"></div>
-
     </main>
 
     <footer class="container_margin_default">
@@ -328,9 +345,9 @@
 
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script/default/header/header.js"></script>

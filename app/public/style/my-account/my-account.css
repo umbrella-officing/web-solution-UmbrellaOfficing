@@ -24,30 +24,63 @@
     color: white;
 }
 
-.option_active{
+/*Menu lateral */ 
+#my-account-menu ul {
+    list-style: none;
+    position: relative;
+}
+
+#my-account-menu ul li {
     display: flex;
+    height: 40px;
+    margin-bottom: 25px;
     align-items: center;
 }
 
-.option a {
+#my-account-menu ul li a {
     display: flex;
     align-items: center;
+    text-decoration: none;
+}
+
+.option span {
     font-size: 16px;
-    font-weight: 400;
     color: var(--text-1-black);
 }
 
-@media(max-width: 1000px) {
-    main #my-profile_section1 {
-        width: 75%;
-    }
-    
-    #logo { 
-        max-width: 275px;
-    }
+.option a div {
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    background-color: var(--scale-16-gray);
+    border-radius: 5px;
+    display: flex;
+    align-items: center; 
+    margin-right: 5px;
+}
 
-    footer ul h5 {
-        font-size: 17px; 
-    }
-} 
+.option .icon { 
+    font-size: 24px;
+    text-align: center;
+    color: var(--text-3-black);
+    margin-right: 10px;
+}
 
+.on a div {
+    background-color: var(--scale-5-blue); 
+}
+
+<<<<<<< HEAD
+=======
+.on a .icon,
+.on .announcer {
+    color: #fff; 
+}
+
+.announcer {
+    font-size: 20px;
+    color: var(--text-3-black);
+    padding-left: 2px;
+}
+ 
+>>>>>>> main

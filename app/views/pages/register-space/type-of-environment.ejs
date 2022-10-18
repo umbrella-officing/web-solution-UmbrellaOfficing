@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -21,109 +21,9 @@
         <div class="default_margin">
             <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
 
-            <div id="menu">
-                <div id='menu_sign-in-up'>
-                    <img src="images/default/user.svg" alt="usuário">
-                    <img src="images/default/menu_hamburguer.svg" alt="menu">
-                </div>
-                <div class="menu_open">
-                    <div>
-                        <img src="images/default/perfil.png" alt="foto de perfil">
-                        <h3>Usuário <span>Cliente</span></h3>
-                    </div>
-                    <div>
-                        <nav>
-                            <ul>
-                                <li class="popUp-login-signUp">
-                                    <img src="images/default/my-perfil.png" alt="meu perfil">
-                                    Login
-                                </li>
-                                <li class="popUp-login-signUp">
-                                    <img src="images/default/sign_up.png" alt="cadastre-se">
-                                    Cadastre-se
-                                </li>
-
-                            </ul>
-                        </nav>
-                    </div>
-                    <div>
-                        <a href="/central-de-ajuda"></a><img src="images/default/question.png" alt="sair da conta">
-                       Central de ajuda</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="container_popUp_login-signUp">
-            <div class="popUp">
-                <img class="close_popup" src="images/default/close_icon.svg" alt="close">
-                <h2>Umbrella Officing</h2>
-                <h3>Seja bem-vindo</h3>
-                <div>
-                    <span>Faça seu login para continuar</span>
-                    <form>
-                        <label for="cpf-email">
-                            CPF ou E-mail :
-                            <input type="text" id="cpf-email">
-                        </label>
-
-                        <label for="password-login">
-                            Senha:
-                            <input type="password" id="password-login">
-                        </label>
-
-                        <div>
-                            <a href="#">Esqueceu a senha?</a>
-                        </div>
-
-                        <button type="submit">LOGIN</button>
-                    </form>
-                    <div id="alternatives">
-                        <div><span>OR</span></div>
-                        <div>
-                            <span>Faça login com suas Redes Sociais</span>
-                            <img src="images/default/icon-google.png" alt="ícone do google">
-                            <img src="images/default/icon-facebok.svg" alt="ícone do facebbok">
-                            <img src="images/default/icon-apple.png" alt="ícone do facebbok">
-                            <span>Ainda não possui conta? <a href="#">Cadastre-se</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="popUp">
-                <img class="close_popup" src="images/default/close_icon.svg" alt="close">
-                <h2>Umbrella Officing</h2>
-                <h3>Seja bem-vindo</h3>
-                <div>
-                    <span>Cadastre-se e faça parte da nossa comunidade</span>
-                    <form>
-                        <label for="name">
-                            Nome:
-                            <input type="text" id="name">
-                        </label>
-
-                        <label for="middlename">
-                            Sobrenome:
-                            <input type="text" id="middlename">
-                        </label>
-
-                        <label for="cpf">
-                            CPF:
-                            <input type="number" id="cpf">
-                        </label>
-
-                        <label for="birth_date">
-                            Data de nascimento
-                            <input type="date" id="birth_date">
-                        </label>
-
-                        <label for="phone">
-                            Telefone:
-                            <input type="number" id="phone">
-                        </label>
-
-                        <button type="submit">CADASTRAR</button>
-                    </form>
-                </div>
+            <div class="header-buttons">
+                <a href="/central-de-ajuda"><button>Ajuda</button></a>
+                <a href="/"><button>Sair</button></a>
             </div>
         </div>
     </header>
@@ -131,51 +31,48 @@
     <main>
         <section id="type-of-environment_section" class="container_margin_default">
             <div class="default_margin">
-                <div id="align-elements">
+         
+                <div id="flex-direction">
                 <div>
                     <h1>Cadastre seu espaço em poucos passos</h1>
-                </div>
+                    <div id="second">
 
-                <div id="second">
-                    <!--Inclui o botão no contexto da segunda parte da página-->
-                    <div>
-                        <!--Engloba os elementos antes do botão para que não se dispersem com o flex-direction: colunm, usado por causa do botão -->
-                        <p>Para começar, escolha o tipo do ambiente em que seu espaço está:</p>
-
+                            <p>Para começar, escolha o tipo do ambiente em que seu espaço está:</p>
+                        <!--Inclui o botão no contexto da segunda parte da página-->
                         <div>
-                            <!--Alinha as duas divs com margem que contém as imagens ilustrativas-->
+                            <!--Engloba os elementos antes do botão para que não se dispersem com o flex-direction: colunm, usado por causa do botão -->
+                            
+    
                             <div>
-                                <div class="hint">
-                                    <a href="javascript:hint(1);">
-                                        <img class="hint" src="images/default/hint-icon.png" alt="Dica">
-                                    </a>
-                                </div>
-                                <img id="typeOf1" src="images/register-space/type-of-environment/adaptable.png"
-                                    alt="Espaços adaptáveis">
-                                <p>Ambiente adaptado</p>
-                            </div>
-                            <div>
-                                <div class="hint">
-                                    <a href="javascript:hint(2);">
-                                        <img class="hint" src="images/default/hint-icon.png" alt="Dica">
-                                    </a>
+                                <!--Alinha as duas divs com margem que contém as imagens ilustrativas-->
+                                <div class="space-box outline-focus" id="adaptable">
+                                    <div class="hint">
+                                        <a href="javascript:hint(1);">
+                                            <img class="hint" src="images/default/hint-icon.png" alt="Dica">
+                                        </a>
+                                    </div>
+                                    <img class="space-drawing" id="typeOf1" src="images/register-space/type-of-environment/adaptable.png"
+                                        alt="Espaços adaptáveis">
+                                    <p>Ambiente adaptado</p>
                                 </div>
 
-                                <img id="typeOf2" src="images/register-space/type-of-environment/corporate.png"
-                                    alt="Espaços corporativos">
-                                <p>Ambiente corporativo</p>
+                                <div class="space-box outline-focus" id="corporate">
+                                    <div class="hint">
+                                        <a href="javascript:hint(2);">
+                                            <img class="hint" src="images/default/hint-icon.png" alt="Dica">
+                                        </a>
+                                    </div>
+    
+                                    <img class="space-drawing" src="images/register-space/type-of-environment/corporate.png"
+                                        alt="Espaços corporativos">
+                                    <p>Ambiente corporativo</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                    
-                </div>
-
-                <div id="buttons-div">
-                    <a href="/central-de-ajuda"><button>Dúvidas? Acesse a central de ajuda para fazer um anúncio de excelência!</button></a>
-                    <a href="/categorias-de-espacos-adaptaveis"><button>Avançar</button></a>
-                </div>
-
+                    <a id="avancar" href=""><button>Avançar</button></a>
+            </div>
                 <article id="hint-adaptable">
                     <div>
                         <div>
@@ -186,14 +83,11 @@
     
                         <div>
                             <div>
-                                <img src="images/register-space/type-of-environment/adaptable.png" alt="">
-                                <p>Ambiente adaptado</p>
+                                <img class="space-drawing" src="images/register-space/type-of-environment/adaptable.png" alt="Espaço corporativo">
+                                <h3>Ambiente adaptado</h3>
                             </div>
-    
-                            <div>
                                 <p>Seja sua casa ou até mesmo um trailer. São espaços que podem ser adaptados ao
                                     trabalho.</p>
-                            </div>
                         </div>
     
                     </div>
@@ -209,14 +103,11 @@
     
                         <div>
                             <div>
-                                <img src="images/register-space/type-of-environment/corporate.png" alt="">
-                                <p>Ambiente corporativo</p>
+                                <img class="space-drawing" src="images/register-space/type-of-environment/corporate.png" alt="">
+                                <h3>Ambiente corporativo</h3>
                             </div>
-    
-                            <div>
                                 <p>Locais essencialmente destinados ao trabalho, como coworkings
                                     e escritórios tradicionais.</p>
-                            </div>
                         </div>
     
                     </div>

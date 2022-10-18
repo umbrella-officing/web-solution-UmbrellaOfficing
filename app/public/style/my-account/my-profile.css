@@ -9,13 +9,12 @@
 }
 
 #my-profile>div {
-    padding: 220px 0 80px 0;
+    padding: 180px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
-}
+} 
 
-/*Meu perfil: menu lateral*/
 #my-profile::before {
     content: "";
     position: absolute;
@@ -24,54 +23,6 @@
     height: 100%;
     width: calc(50% - 280px);
     background-color: var(--scale-9-blue);
-}
-
-#my-profile>div nav {
-    position: relative;
-}
-
-#my-profile>div nav ul {
-    list-style: none;
-    position: fixed;
-}
-
-#my-profile>div nav ul li {
-    display: flex;
-    height: 40px;
-    margin: 25px 0;
-    align-items: center;
-}
-
-#my-profile>div nav ul li a {
-    text-decoration: none
-}
-
-.profile,
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    font-size: 26px;
-}
-
-
-.option_active a {
-    border-left: 3px solid #5B61C4;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--scale-13-blue);
-}
-
-.profile {
-    margin: 0 10px 0 18px;
-}
-
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    color: var(--gray-border);
-    margin: 0 10px 0 21px;
 }
 
 /*Meu perfil: conteúdo*/
@@ -154,6 +105,7 @@
     width: 30px;
     height: 10px;
     margin-right: 5px;
+    border: 1px solid var(--scale-2-purple);
     background-color: var(--scale-2-purple);
     border-radius: 10px;
 }
@@ -167,7 +119,6 @@
     font-weight: 600;
     font-family: var(--font-primary);
 }
-
 
 .social-medias p {
     font-size: 12px;
@@ -199,25 +150,26 @@
 .whats,
 .face,
 .linkedin {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     justify-content: space-between;
 }
 
 
 .social-medias_flex img,
 .whats {
+    width: 30px;
     color: #15cc3a;
-    margin-right: 10px;
+    margin: 5px;
 }
 
 .face {
     color: #1749b3;
-    margin-right: 5.5px;
+    margin: 4px;
 }
 
 .linkedin {
     color: #0c87c1;
-    margin-right: 10px;
+    margin: 5px;
 }
 
 .form-flex ~ div {
@@ -231,13 +183,13 @@
     width: 226px;
     height: 36px;
     color: var(--white);
-    border-radius: 40px;
+    border-radius: 30px;
 }
 
 #edit_ad {
     font-size: 14px;
     font-family: var(--font-primary);
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 40px;
 }
 
@@ -249,6 +201,7 @@
         font-size: 13.5px;
     }
 
+<<<<<<< HEAD
     #my-account-bottom-bar_mobile {
         display: flex;
     }
@@ -278,6 +231,33 @@
     }
 
     main #my-profile_section1 form>div label {
+=======
+    #my-profile::before { 
+        display: none; 
+    }
+
+    #my-profile nav {
+        display: none;
+    }
+
+    #my-profile>div {
+        padding-top: 140px;  
+    }
+    
+    #my-profile_section1 {
+        width: 100%;
+    }
+
+    #my-profile_section1 h1 {
+        font-size: 25px; 
+    }
+
+    #my-profile_section1 h1~p {
+        font-size: 14px; 
+    }
+
+    #my-profile_section1 form>div label {
+>>>>>>> main
         font-size: 16px; 
     }
 
@@ -311,6 +291,7 @@
         font-size: 13.5px;
     }
     
+<<<<<<< HEAD
     #my-account-bottom-bar_mobile {
         display: flex;
     }
@@ -331,6 +312,29 @@
         width: 100%;
     } 
 
+=======
+    #my-profile::before { 
+        display: none; 
+    }
+
+    #my-profile nav {
+        display: none;
+    } 
+
+    #my-profile>div {
+        padding-top: 150px; 
+    }
+
+    #my-profile_section1 {
+        width: 100%;
+    } 
+
+    #my-profile_section1 h1 {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+>>>>>>> main
     form .form-flex>div:nth-child(1) { 
         width: 45%;
         box-sizing: border-box;
@@ -343,6 +347,7 @@
 }
 
 @media(min-width: 841px) and (max-width: 1000px) { 
+<<<<<<< HEAD
     main #my-profile::before {  
         width: 28%;
     }
@@ -352,3 +357,13 @@
     } 
 } 
 
+=======
+    #my-profile::before {  
+        width: 28%;
+    }
+
+    #my-profile_section1 {
+        width: 68%;
+    } 
+} 
+>>>>>>> main

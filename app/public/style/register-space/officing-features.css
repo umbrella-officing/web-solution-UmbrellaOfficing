@@ -4,12 +4,10 @@ body{
 }
 
 main{
-    height: 100vh;
     max-height: 1050px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10%;
 }
 
 ul{
@@ -19,31 +17,66 @@ ul{
 
 #officing_features_section{
     display: flex;
-    justify-content: center;
+    padding-top: 105px;
+    height: calc(100vh - 105px);
+}
+
+#first-step, #second-step, #third-step{
+    display: none
+}
+
+#second-step, #third-step{
+    width: 80%;
+}
+
+#fourth-step{
+    width: 75%;
+}
+
+#align-pc{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #officing_features_section > div{
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
-#officing_features_section > div > div {
+#officing_features_section > .step {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-#officing_features_section > div > div > div h1{
-    color: var(--white);
+#officing_features_section h1{
+    color: #fff;
     font-size: 40px;
     font-weight: 700;
     max-width: 435px;
     margin-top: 30px;
 }
 
-#officing_features_section > div > div form{
-    width: 450px;
+#officing_features_section form{
+    max-height: 395px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background: #d4d3ff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3c199c;
+    border-radius: 10px;
 }
 
 .liAlign1 {
@@ -184,8 +217,8 @@ input[type="radio"]{
 #second-step ul li h3, 
 #third-step ul li h3{
     font-size: 16px;
-    font-weight: 500;
-    color: var(--scale-13-blue);
+    font-weight: 700;
+    color: var(--scale-16-blue);
 }
 
 #second-step ul li p, 
@@ -218,4 +251,32 @@ input[type="radio"]{
     font-weight: 500;
 }
 
+#buttons{
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+}
 
+#return{
+    background-color: transparent;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-1-black);
+    border: none;
+}
+
+#advance{
+    width: 165px;
+    height: 36px;
+    background-color: var(--scale-2-purple);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+}

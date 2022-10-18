@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/my-account.css">
     <link rel="stylesheet" href="style/my-account/personal-date.css">
@@ -261,35 +262,57 @@
     </header>
 <<<<<<< Updated upstream
 
+<<<<<<< HEAD
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> main
     <div id='box_black'></div>
 
     <main>
         <div id="personal-date" class="container_margin_default">
             <div class="default_margin">
-                <nav>
+                <nav id="my-account-menu">
                     <ul>
                         <li class="option">
-                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
-                                Meu perfil</a>
+                            <a href="/meu-perfil">
+                                <div>
+                                    <i class='bx bxs-user icon'></i>
+                                </div>
+                                <span>Meu perfil</span>
+                            </a>
                         </li>
-                        <li class="option_active">
+                        <li class="option on">
                             <a href="#">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                Dados pessoais</a>
+                                <div>
+                                    <i class='bx bx-wallet icon'></i>
+                                </div>
+                                <span>Dados pessoais</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/minhas-reservas"><i class="fa-solid fa-calendar-check reserve"></i>
-                                Minhas reservas</a>
+                            <a href="/minhas-reservas">
+                                <div>
+                                    <i class='bx bx-calendar-check icon'></i>
+                                </div>
+                                <span>Minhas reservas</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
-                                Meus anúncios</a>
+                            <a href="/meus-anuncios">
+                                <div>
+                                    <i class="fa-solid fa-bullhorn announcer"></i>
+                                </div>
+                                <span>Meus anúncios</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/calendario"><i class="fa-solid fa-calendar-days calendar"></i>
-                                Calendário</a>
+                            <a href="/calendario">
+                                <div>
+                                    <i class='bx bx-calendar icon'></i>
+                                </div>
+                                <span>Calendário</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -306,7 +329,7 @@
                             <div class="personal-date-grid2">
                                 <div>
                                     <label for="birth-date">Data de nascimento</label>
-                                    <input type="date" class="outline-focus" name="birth-date" id="birth-date">
+                                    <input type="text" class="outline-focus" name="birth-date" id="birth-date">
                                 </div>
                                 <div class="select-box">
                                     <label for="gender">Sexo</label>
@@ -402,9 +425,9 @@
                                 <button type="submit" id="edit_ad">Editar informações</button>
                             </div>
                     </form>
+                </section>
             </div>
-        </div>
-        </div>
+        </div> 
     </main>
 
     <footer class="container_margin_default">
