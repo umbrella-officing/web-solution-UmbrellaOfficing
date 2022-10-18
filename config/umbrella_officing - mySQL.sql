@@ -10,7 +10,12 @@ senha_user char(60) not null,
 dt_nasc_user date not null,
 celular_user varchar(14),
 profissao varchar(30),
-end_user varchar(60),
+end_cep varchar(11),
+end_rua varchar(150),
+end_rua_num varchar(10),
+end_bairro varchar(50),
+end_cidade varchar(50),
+end_estado varchar(50),
 telefone_user varchar(14),
 genero_user varchar(9),
 rg_user varchar(20),
@@ -25,7 +30,7 @@ preferencias_homeoffincing char(5),
 preferencias_coworking char(5),
 fotos_user longblob,
 data_cadastro datetime
-);
+); 
 
 select*from usuarios;
 
