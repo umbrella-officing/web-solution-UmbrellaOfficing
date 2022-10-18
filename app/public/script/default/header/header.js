@@ -82,7 +82,7 @@ const menuHamburguer  = () =>{
             return
         }
 
-        if(menu_open.contains(e.target) == false || menu_open.contains(e.target) == true && e.target.tagName == 'LI' || menu_open.contains(e.target) == true && e.target.tagName == 'I'){
+        if(menu_open.contains(e.target) == false || menu_open.contains(e.target) == true && e.target.tagName == 'LI' || menu_open.contains(e.target) == true && e.target.tagName == 'IMG'){
            return menu_open.classList.remove('menu_open_checked')
         }
     })
@@ -95,16 +95,15 @@ const popUp_login_signUp = () => {
     const optionsMenu = document.querySelectorAll('.popUp-login-signUp')
     const containerPopUp = document.querySelector('#container_popUp_login-signUp')
     const AllPopUp = document.querySelectorAll(".popUp")
-
     optionsMenu.forEach(option=>option.addEventListener('click',openPopUp))
 
     function openPopUp (){
         containerPopUp.style.display = 'flex'
-        if(this == optionsMenu[0]){
+        if(this == optionsMenu[0] || this == optionsMenu[2]){
             AllPopUp[0].classList.add('popUpChecked')
         }
 
-        else{
+        if(this == optionsMenu[1] || this == optionsMenu[3]){
             AllPopUp[1].classList.add('popUpChecked')
         }
 
@@ -131,6 +130,8 @@ const openPop_profilePicture = () => {
     const pictureProfile = document.querySelectorAll(".pictureProfile");
     const container_popUp_profilePicture = document.getElementById("container_popUp_profilePicture");
 
+    console.log({pictureProfile})
+
     pictureProfile.forEach(element=> {
         element.addEventListener('click', () => {
         container_popUp_profilePicture.style.display = 'flex'
@@ -139,39 +140,18 @@ const openPop_profilePicture = () => {
 
 
     closePop_profilePicture(container_popUp_profilePicture)
-
-    changeImageProfile()
     
 }
 
 function closePop_profilePicture(container_popUp_profilePicture) {
     container_popUp_profilePicture.addEventListener('click', p => {
 
-        if (p.target.id == 'close' || p.target == container_popUp_profilePicture) {
+        console.log(p.target)
+
+        if (p.target.id == 'close' || e.target == container_popUp_profilePicture) {
             container_popUp_profilePicture.style.display = 'none'
         }
     })
-}
-
-const changeImageProfile = ()=> {
-
-    const imageProfile = document.querySelectorAll('.image_profile')
-
-    // const uploadPicture = document.querySelector('.uploadPicture')
-    
-    // uploadPicture.addEventListener('click',()=>{
-    //     imageProfile.forEach(img=>{
-    //         img.setAttribute('src','images/default/perfil.png')
-    //     })
-    // })
-
-    const deletePicture = document.querySelector('.deletePicture')
-    deletePicture.addEventListener('click',()=>{
-        imageProfile.forEach(img=>{
-            img.setAttribute('src','images/default/perfil.png')
-        })
-    })
-
 }
 
 openPop_profilePicture()
@@ -188,3 +168,18 @@ const changeBottom_bar = (item) => {
     
 }
 
+const colorIcon = document.querySelectorAll(".icon");
+console.log({colorIcon})
+colorIcon.forEach((color, index, arr)=>{
+    color.addEventListener('click',()=>{
+        if(arr[index].classList.contains('icon-color')){
+            return arr[index].classList.remove('icon-color')
+        }
+
+        for(let i = 0; i < arr.length; i++){
+            arr[i].classList.remove('icon-color')
+        }
+
+        arr[index].classList.add('icon-color')
+    })
+})

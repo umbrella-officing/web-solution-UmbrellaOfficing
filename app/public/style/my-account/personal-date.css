@@ -3,7 +3,7 @@
 }
 
 #personal-date>div {
-    padding: 220px 0 80px 0;
+    padding: 180px 0 80px 0;
     justify-content: space-between;
     align-items: flex-start;
     color: var(--text-1-black);
@@ -19,61 +19,9 @@
     background-color: var(--scale-9-blue);
 }
 
-/*Dados pessoais: menu lateral*/
-#personal-date>div nav {
-    position: relative;
-    overflow: auto;
-}
-
-#personal-date>div nav ul {
-    list-style: none;
-    position: fixed;
-}
-
-#personal-date>div nav ul li {
-    display: flex;
-    height: 40px;
-    margin: 25px 0;
-    align-items: center;
-}
-
-#personal-date>div nav ul li a {
-    text-decoration: none;
-    align-items: center;
-}
-
-.profile,
-.wallet,
-.reserve,
-.ads,
-.calendar {
-    font-size: 26px;
-}
-
-
-.option_active a {
-    border-left: 3px solid #5B61C4;
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--scale-13-blue);
-}
-
-.wallet {
-    margin: 0 10px 0 18px;
-}
-
-.profile,
-.reserve,
-.ads,
-.calendar {
-    color: var(--gray-border);
-    margin: 0 10px 0 21px;
-}
-
 /*Dados pessoais: conteúdo*/
 #personal-date_section1 {
-    width: 744px;
-    margin-bottom: 80px;
+    width: 744px; 
 }
 
 #personal-date_section1 h1 {
@@ -187,7 +135,9 @@
 }
 
 .select-box .option:hover {
-    background: #f1f6ff;
+    font-weight: 600;
+    background: #74a7e6;
+    transition: 5s;
 }
 
 .select-box label {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -18,13 +18,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
         integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style/default/default.css">
     <link rel="stylesheet" href="style/my-account/my-account.css">
-    <link rel="stylesheet" href="style/my-account/reservations.css">
+    <link rel="stylesheet" href="style/my-account/my-reservations.css">
 </head>
 
 <body>
-   <header id="header" class="container_margin_default">
+    <header id="header" class="container_margin_default">
         <div class="default_margin">
             <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
             <div id="container_search">
@@ -35,8 +36,13 @@
                 <div class="container_search_input">
                     <span id="search_txt">Pesquise locais para trabalhar</span>
                     <div id='container_informations_find_coworking'>
+<<<<<<< HEAD
                         <div class="gap_input_checked">
                             <input id="search_input" class="booking_informations input_checked" type="text" placeholder="Localização:">
+=======
+                        <div>
+                            <input id="localization" class="search-information" type="text" placeholder="Localização:">
+>>>>>>> main
                             <div class="popUp_input"></div>
                         </div>
                         <div class="gap_input_checked">
@@ -50,8 +56,30 @@
                     </div>
                     <a href="#">
                         <div>
+<<<<<<< HEAD
                             <img src="images/default/search.svg" alt="pesquisa">
                         </div>
+=======
+                            <input type="date" id="check_in" class="search-information">
+                            <div class="popUp_input"></div>
+                        </div>
+                        <div>
+                            <select name="period" id="period" class="search-information" placeholder="Período">
+                                <option value="morning">Manhã</option>
+                                <option value="afternoon">Tarde</option>
+                                <option value="evening">Noite</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="text" id="people" class="search-information" placeholder="Pessoas">
+                            <div class="popUp_input"></div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div>
+                            <img src="images/default/search.svg" alt="pesquisa">
+                        </div>
+>>>>>>> main
                     </a>
                 </div>
             </div>
@@ -64,6 +92,7 @@
                 <div class="menu_open">
                     <div>
                         <div class="picture_edit">
+<<<<<<< HEAD
                             <div id="mask_image_profile">
                             <%
                             if(autenticado){
@@ -101,6 +130,12 @@
                         } 
                         %>
                         </div>
+=======
+                            <img src="images/default/perfil.png" alt="foto de perfil">
+                            <i class="fa-solid fa-pen pictureProfile list"></i>
+                        </div>
+                        <h3>Usuário <span>Cliente</span></h3>
+>>>>>>> main
                     </div>
                     <div>
                         <nav>
@@ -131,12 +166,16 @@
                 <h3>Seja bem-vindo</h3>
                 <div>
                     <span>Faça seu login para continuar</span>
+<<<<<<< HEAD
                     <form method="post" action="/login">       
+=======
+                    <form>
+>>>>>>> main
                         <label for="cpf-email">
                             CPF ou E-mail :
                             <input type="text" id="cpf-email" name="cpfEmail">
                         </label>
-                        
+
                         <label for="password-login">
                             Senha:
                             <input type="password" id="password-login" name="password">
@@ -145,8 +184,13 @@
                         <div>
                             <a href="#">Esqueceu a senha?</a>
                         </div>
+<<<<<<< HEAD
                         
                         <button class="form_button" type="submit">LOGIN</button>
+=======
+
+                        <button type="submit">LOGIN</button>
+>>>>>>> main
                     </form>
                     <div id="alternatives">
                         <div><span>OR</span></div>
@@ -158,7 +202,7 @@
                             <span>Ainda não possui conta? <a href="#">Cadastre-se</a></span>
                         </div>
                     </div>
-            </div>     
+                </div>
             </div>
             <div class="popUp">
                 <img class="close_popup" src="images/default/close_icon.svg" alt="close">
@@ -187,6 +231,7 @@
                                 <input type="password" id="password" name="password">
                             </label>
 
+<<<<<<< HEAD
                             <label for="conf_password">
                                 Confirmar senha:
                                 <input type="password" class="form-control" id="conf_password" name="conf_password">
@@ -212,8 +257,52 @@
                             </label>
                             <button class="form_button" type="submit">CADASTRAR</button>
                         </fieldset>
+=======
+                        <label for="cpf">
+                            CPF:
+                            <input type="number" id="cpf">
+                        </label>
+
+                        <label for="birth_date">
+                            Data de nascimento
+                            <input type="date" id="birth_date">
+                        </label>
+
+                        <label for="phone">
+                            Telefone:
+                            <input type="number" id="phone">
+                        </label>
+
+                        <button type="submit">CADASTRAR</button>
+>>>>>>> main
                     </form>
-            </div>        
+                </div>
+            </div>
+        </div>
+        <div id="container_popUp_profilePicture">
+            <div class="popUp_profilePicture">
+                <h2>Adicionar imagem de perfil</h2>
+
+                <div>
+                    <div class="actionPicture">
+                        <img src="images/default/perfil.png" alt="Foto de perfil">
+                        <div>
+                            <button id="close">Fechar</button>
+                            <button id="salve">Guardar</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="uploadPicture">
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                            <p>Carregar imagem</p>
+                        </div>
+                        <div class="deletePicture">
+                            <i class="fa-solid fa-trash"></i>
+                            <p>Remover imagem</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div id="container_popUp_profilePicture">
@@ -267,80 +356,113 @@
             </div>
         </div>
     </header>
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
+    
     <div id='box_black'></div>
 
     <main>
         <div id="my-reservations" class="container_margin_default">
             <div class="default_margin">
-                <nav>
+                <nav id="my-account-menu">
                     <ul>
                         <li class="option">
-                            <a href="/meu-perfil"><i class="fa-solid fa-user-large profile"></i>
-                                Meu perfil</a>
+                            <a href="/meu-perfil">
+                                <div>
+                                    <i class='bx bxs-user icon'></i>
+                                </div>
+                                <span>Meu perfil</span>
+                            </a>
                         </li>
                         <li class="option">
                             <a href="/dados-pessoais">
-                                <i class="fa-solid fa-wallet wallet"></i>
-                                Dados pessoais</a>
+                                <div>
+                                    <i class='bx bx-wallet icon'></i>
+                                </div>
+                                <span>Dados pessoais</span>
+                            </a>
                         </li>
-                        <li class="option_active">
-                            <a href="#"><i class="fa-solid fa-calendar-check reserve"></i>
-                                Minhas reservas</a>
+                        <li class="option on">
+                            <a href="#">
+                                <div>
+                                    <i class='bx bx-calendar-check icon'></i>
+                                </div>
+                                <span>Minhas reservas</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/meus-anuncios"><i class="fa-solid fa-bullhorn ads"></i>
-                                Meus anúncios</a>
+                            <a href="/meus-anuncios">
+                                <div>
+                                    <i class="fa-solid fa-bullhorn announcer"></i>
+                                </div>
+                                <span>Meus anúncios</span>
+                            </a>
                         </li>
                         <li class="option">
-                            <a href="/calendario"><i class="fa-solid fa-calendar-days calendar"></i>
-                                Calendário</a>
+                            <a href="/calendario">
+                                <div>
+                                    <i class='bx bx-calendar icon'></i>
+                                </div>
+                                <span>Calendário</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>
-
                 <div>
-                    <h1>Minhas reservas</h1>
-
                     <section id="my-reservations_section1">
+                        <h1>Minhas reservas</h1>
+
                         <ul>
                             <li>
-                                <img src="images/my-account/favorites/apartament.png" alt="apartamento">
+                                <div class="reservations-space">
+                                    <div class="space-img">
+                                        <img src="images/my-account/favorites/apartament.png" alt="apartamento">
+                                    </div>
 
-                                <div>
-                                    <p>Amanhã, às 19:00</p>
-                                    <h2>Água Branca (Apartamento)</h2>
-                                    <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
-                                    <p>7m² | Modelo privado | 2 banheiros</p>
+                                    <div class="space-description">
+                                        <div class="description-text">
+                                            <span class="p">
+                                                <p>Amanhã, às 19:00</p>
+                                            </span>
 
-                                    <div class="space-flex">
-                                        <h3>R$ 7,90/h</h3>
+                                            <h2>Água Branca (Apartamento)</h2>
+                                            <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
+                                            <p>7m² | Modelo privado | 2 banheiros</p>
+                                        </div>
 
-                                        <div>
-                                            <button type="submit" class="visits">Próximas visitas</button>
-                                            <button type="submit" class="cancel">Cancelar reserva</button>
+                                        <div class="price-space">
+                                            <h3>R$ 7,90/h</h3>
+
+                                            <div>
+                                                <button type="submit" class="visits">Próximas visitas</button>
+                                                <button type="submit" class="cancel">Cancelar reserva</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <img src="images/my-account/favorites/apartament.png" alt="apartamento">
+                                <div class="reservations-space">
+                                    <div class="space-img">
+                                        <img src="images/my-account/favorites/apartament.png" alt="apartamento">
+                                    </div>
 
-                                <div>
-                                    <p>Amanhã, às 19:00</p>
-                                    <h2>Água Branca (Apartamento)</h2>
-                                    <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
-                                    <p>7m² | Modelo privado | 2 banheiros</p>
+                                    <div class="space-description">
+                                        <div class="description-text">
+                                            <span class="p">
+                                                <p>Amanhã, às 19:00</p>
+                                            </span>
 
-                                    <div class="space-flex">
-                                        <h3>R$ 7,90/h</h3>
+                                            <h2>Água Branca (Apartamento)</h2>
+                                            <p>Rua Largo João Batista 596, Jd. Ramalho, São Paulo/SP</p>
+                                            <p>7m² | Modelo privado | 2 banheiros</p>
+                                        </div>
 
-                                        <div>
-                                            <button type="submit" class="visits">Próximas visitas</button>
-                                            <button type="submit" class="cancel">Cancelar reserva</button>
+                                        <div class="price-space">
+                                            <h3>R$ 7,90/h</h3>
+
+                                            <div>
+                                                <button type="submit" class="visits">Próximas visitas</button>
+                                                <button type="submit" class="cancel">Cancelar reserva</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -354,7 +476,8 @@
                             <ul class="slider">
                                 <li>
                                     <div>
-                                        <img src="/images/my-account/reservations/officer_aqua.png" alt="Escritório Aqua">
+                                        <img src="/images/my-account/reservations/officer_aqua.png"
+                                            alt="Escritório Aqua">
                                         <div class="description">
                                             <h3>Escritório Aqua</h3>
                                             <p>R. Brigadeiro Manuel
@@ -365,7 +488,8 @@
                                 </li>
                                 <li>
                                     <div>
-                                        <img src="/images/my-account/reservations/officer_aqua.png" alt="Escritório Aqua">
+                                        <img src="/images/my-account/reservations/officer_aqua.png"
+                                            alt="Escritório Aqua">
                                         <div class="description">
                                             <h3>Escritório Aqua</h3>
                                             <p>R. Brigadeiro Manuel
@@ -376,7 +500,8 @@
                                 </li>
                                 <li>
                                     <div>
-                                        <img src="/images/my-account/reservations/officer_aqua.png" alt="Escritório Aqua">
+                                        <img src="/images/my-account/reservations/officer_aqua.png"
+                                            alt="Escritório Aqua">
                                         <div class="description">
                                             <h3>Escritório Aqua</h3>
                                             <p>R. Brigadeiro Manuel
@@ -387,7 +512,8 @@
                                 </li>
                                 <li>
                                     <div>
-                                        <img src="/images/my-account/reservations/officer_aqua.png" alt="Escritório Aqua">
+                                        <img src="/images/my-account/reservations/officer_aqua.png"
+                                            alt="Escritório Aqua">
                                         <div class="description">
                                             <h3>Escritório Aqua</h3>
                                             <p>R. Brigadeiro Manuel
@@ -398,7 +524,8 @@
                                 </li>
                                 <li>
                                     <div>
-                                        <img src="/images/my-account/reservations/officer_aqua.png" alt="Escritório Aqua">
+                                        <img src="/images/my-account/reservations/officer_aqua.png"
+                                            alt="Escritório Aqua">
                                         <div class="description">
                                             <h3>Escritório Aqua</h3>
                                             <p>R. Brigadeiro Manuel
@@ -408,7 +535,7 @@
                                     </div>
                                 </li>
                             </ul>
-                        </div>        
+                        </div>
                     </section>
                 </div>
             </div>
@@ -452,7 +579,7 @@
                             <label for="reason_cancellation">Diga o motivo pelo qual você deseja cancelar</label>
                             <img id="close_popUp_cancel" src="images/default/close_icon.svg" alt="close">
                         </div>
-                        
+
                         <textarea name="reason_cancellation" id="reason_cancellation" rows="4"
                             class="form-control"></textarea>
                         <div class="popUp_go">
@@ -463,7 +590,7 @@
 
                     <div id="popUp-cancel_state2">
                         <div>
-                            <i class="fa-solid fa-circle-chevron-left arrow-left"></i>
+                            <i class="fa-solid fa-chevron-left arrow-left"></i>
                         </div>
                         <div class="popUp_flex">
                             <img class="avaliation-img" src="images/my-account/reservations/cancel_reservations1.png">
@@ -490,10 +617,10 @@
 
                     <div id="popUp-cancel_state3">
                         <div>
-                            <i class="fa-solid fa-circle-chevron-left arrow-left"></i>
+                            <i class="fa-solid fa-chevron-left arrow-left"></i>
                         </div>
                         <div class="popUp_flex">
-                            <img class="avaliation-img"src="images/my-account/reservations/cancel_reservations2.png">
+                            <img class="avaliation-img" src="images/my-account/reservations/cancel_reservations2.png">
                             <div>
                                 <label for="comment2">Avalie o proprietário</label>
 
@@ -523,40 +650,40 @@
 
         <div class="default_margin">
             <div id="margin2">
-            <div id="logo">
-                <img src="images/default/logo_footer.svg" alt="logo">
-                <h4>Escritorizando <span><br>espaços </span></h4>
-                <span>Umbrella Officing&copy 2022</span>
-            </div>
+                <div id="logo">
+                    <img src="images/default/logo_footer.svg" alt="logo">
+                    <h4>Escritorizando <span><br>espaços </span></h4>
+                    <span>Umbrella Officing&copy 2022</span>
+                </div>
 
-            <ul>
-                <h5>Junte-se a nós</h5>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Cadastre-se</a></li>
-                <li><a href="#">Sua conta</a></li>
-                <li><a href="#">Faça sua reserva</a></li>
-                <li><a href="#">Anuncie seu espaço</a></li>
-            </ul>
+                <ul>
+                    <h5>Junte-se a nós</h5>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Cadastre-se</a></li>
+                    <li><a href="#">Sua conta</a></li>
+                    <li><a href="#">Faça sua reserva</a></li>
+                    <li><a href="#">Anuncie seu espaço</a></li>
+                </ul>
 
-            <ul>
-                <h5>Atendimento</h5>
-                <li><a href="#">Chat</a></li>
-                <li><a href="#">Fórum</a></li>
-                <li><a href="#">Central de ajuda</a></li>
-            </ul>
+                <ul>
+                    <h5>Atendimento</h5>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Fórum</a></li>
+                    <li><a href="#">Central de ajuda</a></li>
+                </ul>
 
-            <ul>
-                <h5>Sobre nós</h5>
-                <li><a href="#">Quem somos?</a></li>
-                <li><a href="#">Missão, valores e visão</a></li>
-                <li><a href="#">Por que Umbrella Officing</a></li>
-                <li><a href="#">Desenvolvedores</a></li>
-            </ul>
+                <ul>
+                    <h5>Sobre nós</h5>
+                    <li><a href="#">Quem somos?</a></li>
+                    <li><a href="#">Missão, valores e visão</a></li>
+                    <li><a href="#">Por que Umbrella Officing</a></li>
+                    <li><a href="#">Desenvolvedores</a></li>
+                </ul>
 
             </div>
             <div id="bottom_footer">
                 <div>
-                    <div id="network_div"> 
+                    <div id="network_div">
                         <img src="images/default/icon_intagram_footer.svg" alt="ícone do instagram">
                         <img src="images/default/icon_facebook_footer.svg" alt="ícone do facebook">
                     </div>
@@ -564,18 +691,18 @@
                     <div id="scroll_up">
                         <img src="images/default/arrow_up.svg" alt="ícone de flecha">
                     </div>
-            </div>
+                </div>
 
-        </div>
+            </div>
     </footer>
-    
 
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script/default/header/header.js"></script>
-    <script src="script/my-account/reservations.js"></script>
+    <script src="script/my-account/my-reservations/my-reservations_popUp.js"></script>
+    <script src="script/my-account/my-reservations/my-reservations_slider.js"></script>
     <script src="script/my-account/last-reservations.js"></script>
 </body>
 

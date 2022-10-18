@@ -50,13 +50,12 @@ h1{
 }
 
 iframe{
-    width: 100vh;
+    width: 100vw;
     height: 100%; /*Por que ele não toma o total das telas maiores?*/
     max-height: 1050px;
     position: fixed;
     left: 50%;
     top: 99px;
-    z-index: -1;
 }
 
 /*FORM, INPUTS E CIA*/
@@ -87,10 +86,22 @@ iframe{
 
 #encompass-form{
     width: 50%;
-    height: calc(100vh - 105px);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+#encompass-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer
+}
+
+iframe:hover #encompass-form > form{
+    opacity: 0;
 }
 
 #encompass-form > form{
@@ -98,6 +109,10 @@ iframe{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
+    z-index: 2;
+    transition: 500ms ease-in-out;
+    opacity: 1;
 }
 
 #first-step{
@@ -207,4 +222,5 @@ iframe{
     font-weight: 600;
     color: #4E4AFF;
     height: 30px;
+    width: 100%;
 }

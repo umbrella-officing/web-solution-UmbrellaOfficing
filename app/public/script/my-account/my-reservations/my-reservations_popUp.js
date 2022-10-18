@@ -1,3 +1,5 @@
+
+
 /*Script: Pop up de calendário (próximas visitas)*/
 const openPopCalendar = () => {
     const buttonCalendar = document.querySelectorAll(".visits");
@@ -64,10 +66,10 @@ generateCalendar = (month, year) => {
         if (i >= first_day.getDay()) {
             day.classList.add('calendar-day-hover')
             day.innerHTML = i - first_day.getDay() + 1
-            day.innerHTML += `<span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>`
+            day.innerHTML += `<span>
+                            <span>
+                            <span>
+                            <span>`
             if (i - first_day.getDay() + 1 === currDate.getDate() && year === currDate.getFullYear() && month === currDate.getMonth()) {
                 day.classList.add('curr-date')
             }
@@ -151,7 +153,7 @@ const switchContent = () => {
                 nextContent(index, arr)
             }
 
-            if(e.target.className == 'fa-solid fa-circle-chevron-left arrow-left'){
+            if(e.target.className == 'fa-solid fa-chevron-left arrow-left'){
                 previousContent(index, arr)
             }
 

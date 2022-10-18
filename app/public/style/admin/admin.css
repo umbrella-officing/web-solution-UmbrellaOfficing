@@ -226,3 +226,65 @@
 .select-box .option .radio {
     display: none;
 }
+
+@media(min-width: 300px) and (max-width: 500px)  { 
+    #users-control_section1 h1~div,
+    #ads-control_section1 h1~div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container_search-admin_input {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .select-box {
+        width: 60%;
+        position: relative;
+    }  
+} 
+
+@media(min-width: 501px) and (max-width: 841px)  { 
+    #users-control_section1 h1~div,
+    #ads-control_section1 h1~div {
+        display: flex;
+    }
+
+    .container_search-admin_input {
+        width: 60%;
+        margin-bottom: 25px;
+    }
+
+    .container_search-admin_input div {
+        position: absolute;
+        right: 0;
+    }
+
+    .select-box {
+        width: 35%;
+    }  
+
+}  
+
+@media(min-width: 841px) and (max-width:1160px)  { 
+    #users-control_section1 h1~div,
+    #ads-control_section1 h1~div {
+        display: flex;
+    }
+
+    .container_search-admin_input {
+        width: 60%;
+        margin-bottom: 25px;
+    }
+
+    .container_search-admin_input div {
+        position: absolute;
+        right: 0;
+    }
+
+    .select-box {
+        width: 35%;
+    }  
+
+}  

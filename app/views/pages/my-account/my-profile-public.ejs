@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style/default/default.css">
@@ -257,6 +261,27 @@
             </div>
         </div>
     </header>
+    
+    <nav id="bottom-bar_mobile"> 
+            <ul>
+                <li class="active">
+                    <a href="/"><i class="fa-solid fa-house icon"></i></a>
+                </li>
+                <li class="inactive popUp-login-signUp list">
+                    <i class="fa-solid fa-user icon"></i>
+                </li>
+                <li class="inactive">
+                    <i class='bx bx-search search'></i>
+                </li>
+                <li class="inactive list popUp-login-signUp">
+                    <i class="fa-solid fa-user-plus icon"></i>
+                </li>
+                <div class="inactive">
+                    <a href="/central-de-ajuda"><i class="fa-solid fa-circle-info icon"></i></a>
+                </div>
+            </ul>
+    </nav>
+    
     <div id='box_black'></div>
 
     <main>
@@ -329,9 +354,8 @@
                 </div>
             </div>
         </section>
-    </main>
-
-    <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
+    </main> 
+    
     <script src="script/default/header/header.js"></script>
 
 </body>
