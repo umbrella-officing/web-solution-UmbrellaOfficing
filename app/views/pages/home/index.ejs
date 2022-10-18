@@ -60,67 +60,17 @@
                     <img src="images/default/user.svg" alt="usuário">
                     <img src="images/default/menu_hamburguer.svg" alt="menu">
                 </div>
-                <div class="menu_open">
-                    <div>
-                        <div class="picture_edit">
-                            <div id="mask_image_profile">
-                            <%
-                            if(autenticado){
-                        %>
-                            <%if(autenticado.profile_picture != null){%>
-                                <img class="image_profile" src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">                                   
-                            <%}%>
-
-                            <%if(autenticado.profile_picture == null){%>
-                                <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">                               
-                            <%}%>
-                            
-                        <%       
-                        }else{
-                        %>
-                            <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">
-                        <%
-                        } 
-                        %>
-                            </div>   
-                            <i class="fa-solid fa-pen pictureProfile list"></i>
-                        </div>
-                        <div id="user_informations">
-                            <%
-                            if(autenticado){
-                        %>
-                            <h3><%=autenticado.name%></h3>
-                            <span><%=autenticado.profession%></span>
-                        <%       
-                        }else{
-                        %>
-                        <h3>Usuários</h3>
-                        <span>Cliente</span>
-                        <%
-                        } 
-                        %>
-                        </div>
-                    </div>
-                    <div>
-                        <nav>
-                            <ul>
-                                <li class="popUp-login-signUp list">
-                                    <i class="fa-solid fa-user"></i>
-                                    Login
-                                </li>
-                                <li class="list popUp-login-signUp">
-                                    <i class="fa-solid fa-user-plus"></i>
-                                    Cadastre-se
-                                </li>
-
-                            </ul>
-                        </nav>
-                    </div>
-                    <div>
-                        <a href="/central-de-ajuda"><i class="fa-solid fa-circle-info"></i>
-                            Central de ajuda</a>
-                    </div>
-                </div>
+                <%
+                if(autenticado){
+            %>
+                <%- include('../../partial/header/menu_autenticado.ejs'); %>
+            <%       
+            }else{
+            %>
+                 <%- include('../../partial/header/menu.ejs'); %>
+            <%
+            } 
+            %>
             </div>
         </div>
         <div id="container_popUp_login-signUp">
@@ -511,55 +461,10 @@
     </main>
 
     <footer class="container_margin_default">
-
-        <div class="default_margin">
-            <div id="margin2">
-            <div id="logo">
-                <img src="images/default/logo_footer.svg" alt="logo">
-                <h4>Escritorizando <span><br>espaços </span></h4>
-                <span>Umbrella Officing&copy 2022</span>
-            </div>
-
-            <ul>
-                <h5>Junte-se a nós</h5>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Cadastre-se</a></li>
-                <li><a href="#">Sua conta</a></li>
-                <li><a href="#">Faça sua reserva</a></li>
-                <li><a href="#">Anuncie seu espaço</a></li>
-            </ul>
-
-            <ul>
-                <h5>Atendimento</h5>
-                <li><a href="#">Chat</a></li>
-                <li><a href="#">Fórum</a></li>
-                <li><a href="#">Central de ajuda</a></li>
-            </ul>
-
-            <ul>
-                <h5>Sobre nós</h5>
-                <li><a href="#">Quem somos?</a></li>
-                <li><a href="#">Missão, valores e visão</a></li>
-                <li><a href="#">Por que Umbrella Officing</a></li>
-                <li><a href="#">Desenvolvedores</a></li>
-            </ul>
-
-            </div>
-            <div id="bottom_footer">
-                <div>
-                    <div id="network_div"> 
-                        <img src="images/default/icon_intagram_footer.svg" alt="ícone do instagram">
-                        <img src="images/default/icon_facebook_footer.svg" alt="ícone do facebook">
-                    </div>
-
-                    <div id="scroll_up">
-                        <img src="images/default/arrow_up.svg" alt="ícone de flecha">
-                    </div>
-            </div>
-
-        </div>
+        <%- include('../../partial/footer.ejs')%>
     </footer>
 
+    
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script/default/header/header.js"></script>

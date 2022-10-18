@@ -188,10 +188,10 @@ header > div {
     padding: 14px 20px 8px 20px;
 }
 
-/* .pac-container::after{
+.pac-container::after{
     content: '';
     background: transparent;
-} */
+}
 
 #container_informations_find_coworking{
     display: none;
@@ -368,6 +368,11 @@ header > div {
     margin: 17px 0;
     color: #000;
     font-size: 15px;
+}
+
+.menu_open ul li a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .picture_edit i{

@@ -1,0 +1,34 @@
+<div class="menu_open">
+    <div>
+        <div class="picture_edit">
+            <div id="mask_image_profile">
+            <%if(autenticado.profile_picture != null){%>
+                <img class="image_profile" src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">                                   
+            <%}%>
+
+            <%if(autenticado.profile_picture == null){%>
+                <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">                               
+            <%}%>
+            </div>   
+            <i class="fa-solid fa-pen pictureProfile list"></i>
+        </div>
+        <div id="user_informations">
+            <h3><%=autenticado.name%></h3>
+            <span><%=autenticado.profession%></span>
+        </div>
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <li class="list">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <a href="/sair">Sair</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <a href="/central-de-ajuda"><i class="fa-solid fa-circle-info"></i>
+            Central de ajuda</a>
+    </div>
+</div>
