@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use(expressValidator());
+// app.use(expressValidator()); 
 
 // Configurar o express-session midlleware
 app.use(session({
