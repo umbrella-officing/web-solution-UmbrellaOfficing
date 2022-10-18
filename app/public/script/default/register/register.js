@@ -11,8 +11,11 @@ $(document).ready(function(){
         return /^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$/.test(value);
     }, "Número inválido");
 
+    console.log(cpfRegex)
+
     $(".next").click(function(){
         var form = $("#myform");
+        console.log(form)
         form.validate({
             errorElement: 'span',
             errorClass: 'help-block',
@@ -97,5 +100,7 @@ $(document).ready(function(){
             current_fs.hide();
         }
     });
+
+    
     
 });

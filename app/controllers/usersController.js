@@ -49,7 +49,7 @@ module.exports.home = (application, req, res) => {
 
 module.exports.sair = (application, req, res) => {
   req.session.destroy();
-  res.redirect("/central");
+  res.redirect("/");
 }
 
 module.exports.registerUser = (application, req, res) => {
