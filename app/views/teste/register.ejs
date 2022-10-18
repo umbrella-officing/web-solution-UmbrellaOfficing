@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin: 10px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <% if(validacao){ %>
+        <%console.log(validacao)%> 
+        <% } %>
+
+        <%console.log(sala)%>
+
+        <% if(validacao){ %>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-danger">
+                        <strong>Atenção!</strong>
+                        <ul>
+                            <!--Loop-->
+                            <% for(let i = 0; i < validacao.length; i++){ %>
+                            <li><%= validacao[i].msg %></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+
+            <div class="login-page">
+
+                <div class="form-cadastro">
+                    <form class="register-form" method="post" action="/cadastro">
+                        <h2>Cadastro</h2>
+                        <input type="text" placeholder="Nome" name="nome_usu" value="<%=valores.nome_usu%>"/> <br>
+                        <input type="text" placeholder="Nome de usuário" name="nomeusu_usu"/><br>
+                        <input type="text" placeholder="e-mail " name="email_usu"/><br>
+                        <input type="password" placeholder="senha" name="senha_usu"/><br>
+                        <input type="date" class="form-control" id="data_escolhida" name="data_escolhida">
+                        <button>Cadastrar</button><br>
+                        <p class="message">Já é cadastrado? <a href="/login">Entre</a></p>
+                    </form>
+                </div>
+            </div>
+</body>
+</html>

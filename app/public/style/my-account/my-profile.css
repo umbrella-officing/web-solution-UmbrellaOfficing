@@ -201,6 +201,7 @@
         font-size: 13.5px;
     }
 
+
     #my-profile::before { 
         display: none; 
     }
@@ -226,6 +227,37 @@
     }
 
     #my-profile_section1 form>div label {
+
+    #my-account-bottom-bar_mobile {
+        display: flex;
+    }
+
+    main #my-profile::before { 
+        display: none; 
+    }
+
+    main #my-profile nav {
+        display: none;
+    }
+
+    main #my-profile>div {
+        padding-top: 130px;  
+    }
+    
+    main #my-profile_section1 {
+        width: 100%;
+    }
+
+    main #my-profile_section1 h1 {
+        font-size: 23px; 
+    }
+
+    main #my-profile_section1 h1~p {
+        font-size: 14px; 
+    }
+
+    main #my-profile_section1 form>div label {
+
         font-size: 16px; 
     }
 
@@ -259,6 +291,7 @@
         font-size: 13.5px;
     }
     
+
     #my-profile::before { 
         display: none; 
     }
@@ -280,6 +313,28 @@
         font-weight: bold;
     }
 
+
+    #my-account-bottom-bar_mobile {
+        display: flex;
+    }
+
+    main #my-profile::before { 
+        display: none; 
+    }
+
+    main #my-profile nav {
+        display: none;
+    } 
+
+    main #my-profile>div {
+        padding-top: 130px; 
+    }
+
+    main #my-profile_section1 {
+        width: 100%;
+    } 
+
+
     form .form-flex>div:nth-child(1) { 
         width: 45%;
         box-sizing: border-box;
@@ -292,6 +347,7 @@
 }
 
 @media(min-width: 841px) and (max-width: 1000px) { 
+
     #my-profile::before {  
         width: 28%;
     }
@@ -300,3 +356,14 @@
         width: 68%;
     } 
 } 
+
+    main #my-profile::before {  
+        width: 28%;
+    }
+
+    main #my-profile_section1 {
+        width: 68%;
+    } 
+} 
+
+

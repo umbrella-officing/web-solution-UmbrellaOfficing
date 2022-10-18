@@ -3,16 +3,17 @@ use umbrella_officing;
 
 create table usuarios (
 nome_user varchar(100) not null,
-cpf_user char(14) primary key not null,
-dt_nasc_user date not null,
-telefone_user varchar(14),
-celular_user varchar(14),
 email_user varchar(30) not null,
-senha_user char(8) not null,
+cpf_user char(14) primary key not null,
+senha_user char(60) not null,
+dt_nasc_user date not null,
+celular_user varchar(14),
+profissao varchar(30),
+end_user varchar(60),
+telefone_user varchar(14),
 genero_user varchar(9),
 rg_user varchar(20),
 orgao_expedidor varchar(60),
-end_user varchar(60),
 link_instagram longtext,
 link_whats_user longtext ,
 link_facebook longtext,
@@ -22,8 +23,7 @@ perfil_profissional text,
 preferencias_homeoffincing char(5),
 preferencias_coworking char(5),
 fotos_user longblob,
-data_cadastro datetime,
-profissao varchar(30)
+data_cadastro datetime
 );
 
 select*from usuarios;
@@ -52,6 +52,9 @@ data_cadastro_anun datetime,
 cpf_user char(11),
 foreign key (cpf_user) references usuarios (cpf_user)
 );
+
+ALTER TABLE espacos
+modify subcategoria_anun varchar(100);
 
 select*from espacos;
 
@@ -155,7 +158,21 @@ foreign key(cpf_user) references usuarios (cpf_user),
 foreign key(cod_avalia) references avaliacao (cod_avalia)
 );
 
-select*from usuario_avalia;
+create table teste (
+  id_usuario int NOT NULL AUTO_INCREMENT,
+  nome_usuario varchar(45) DEFAULT NULL,
+  user_usuario varchar(45) DEFAULT NULL,
+  senha_usuario char(60) DEFAULT NULL,
+  email_usuario varchar(45) DEFAULT NULL,
+  fone_usuario varchar(11) DEFAULT NULL,
+  imagemperfil_usuario longblob,
+  tipo_usuario int DEFAULT '0',
+  PRIMARY KEY (`id_usuario`)
+);
+
+select*from teste;
+
+INSERT INTO teste VALUES (1,'Helvética','helvinha','$2a$12$/YjwhOmCrHVM.st6RBNc4OodyTOXGITgYAxx5Bysad0MaDzhapk6i','helvinh@gmail.com','11941549878',null,1);
 
 insert into usuarios (nome_user, cpf_user, dt_nasc_user, telefone_user, celular_user, email_user, senha_user,
 genero_user, rg_user, orgao_expedidor, end_user, sobre_mim, perfil_profissional, preferencias_homeoffincing, 
@@ -176,7 +193,8 @@ consectetur adipiscing elit. \nAenean euismod bibendum laoreet. Proin gravida do
 INSERT INTO sala (modelo_trabalho, tipo_sala, quant_pessoas_sala, acesso_banheiros_sala, tamanho_sala, qualid_wifi_sala, qualid_computador_sala, 
 qte_computadores_sala, qte_tomadas_sala, qte_mesas_sala, qte_assentos_sala, ar_condicionado_sala, qte_janelas_sala,
  capacidade_pessoas, data_reserva, horario_reservado, preco_sala, status_reserva, cod_anun, compartilhamento_sala) values 
- ('Privado', '', '3', '3', '10 m²', 'Alta', 'Alta', '3', '10', '3', '3', 'Sim', '5', '6', '2020-03-03', '22:00', '150,00', 
- 'Andamento', '1', 'Compartilhada');
+ ('Privado', '', '3', '3', '10 m²', 'Alta', 'Alta', '3', '10', '3', '3', 'Sim', '5', '6', '2020-03-03', '22:00', '150.00', 
+ 'a', '1', 'c');
 
+select * from sala;
 

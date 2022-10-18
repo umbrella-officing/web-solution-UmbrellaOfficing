@@ -30,7 +30,22 @@ const select_type_office = () => {
         optionsOffice.forEach(option => option.classList.remove('checked'))
         this.classList.add('checked')
     }
+
+    optionsBooking()
+
 }
+
+const optionsBooking = () =>{
+    const booking_informations = document.querySelectorAll('.booking_informations')
+    booking_informations.forEach(information=> information.addEventListener('click',checked_information))
+
+    function checked_information(){
+        booking_informations.forEach(information => information.classList.remove('input_checked'))
+        this.classList.add('input_checked')
+    }
+}
+
+
 
 const closeInputsearchCoworkingSpaces = (box_black,header,search,search_txt,container_informations_find_coworking)=> {
 
@@ -67,6 +82,7 @@ const menuHamburguer  = () =>{
             return
         }
 
+
         if(menu_open.contains(e.target) == false || menu_open.contains(e.target) == true && e.target.tagName == 'LI' || menu_open.contains(e.target) == true && e.target.tagName == 'IMG'){
            return menu_open.classList.remove('menu_open_checked')
         }
@@ -97,7 +113,6 @@ const popUp_login_signUp = () => {
 
     function closePopUP() {
        containerPopUp.addEventListener('click',e=>{
-        console.log(e.target)
         if(e.target.classList == 'close_popup' || e.target == containerPopUp){
         containerPopUp.style.display = 'none'
         AllPopUp.forEach(popUp => popUp.classList.remove('popUpChecked'))
@@ -116,7 +131,10 @@ const openPop_profilePicture = () => {
     const pictureProfile = document.querySelectorAll(".pictureProfile");
     const container_popUp_profilePicture = document.getElementById("container_popUp_profilePicture");
 
+
     console.log({pictureProfile})
+
+
 
     pictureProfile.forEach(element=> {
         element.addEventListener('click', () => {
@@ -126,19 +144,50 @@ const openPop_profilePicture = () => {
 
 
     closePop_profilePicture(container_popUp_profilePicture)
+
+
+
+    changeImageProfile()
+
     
 }
 
 function closePop_profilePicture(container_popUp_profilePicture) {
     container_popUp_profilePicture.addEventListener('click', p => {
 
+
         console.log(p.target)
 
-        if (p.target.id == 'close' || e.target == container_popUp_profilePicture) {
+        if (p.target.id == 'close' || p.target == container_popUp_profilePicture) {
+
             container_popUp_profilePicture.style.display = 'none'
         }
     })
 }
+
+
+
+const changeImageProfile = ()=> {
+
+    const imageProfile = document.querySelectorAll('.image_profile')
+
+    // const uploadPicture = document.querySelector('.uploadPicture')
+    
+    // uploadPicture.addEventListener('click',()=>{
+    //     imageProfile.forEach(img=>{
+    //         img.setAttribute('src','images/default/perfil.png')
+    //     })
+    // })
+
+    const deletePicture = document.querySelector('.deletePicture')
+    deletePicture.addEventListener('click',()=>{
+        imageProfile.forEach(img=>{
+            img.setAttribute('src','images/default/perfil.png')
+        })
+    })
+
+}
+
 
 openPop_profilePicture()
 
@@ -153,6 +202,7 @@ const changeBottom_bar = (item) => {
     })
     
 }
+
 
 const colorIcon = document.querySelectorAll(".icon");
 console.log({colorIcon})
@@ -169,3 +219,5 @@ colorIcon.forEach((color, index, arr)=>{
         arr[index].classList.add('icon-color')
     })
 })
+
+
