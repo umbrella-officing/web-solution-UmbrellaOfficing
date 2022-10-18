@@ -6,6 +6,6 @@ module.exports = function(){
         user: "root",
         password: "",
         database: "umbrella_officing",
-        port: 3000
+        port: 3306
     });
 }
