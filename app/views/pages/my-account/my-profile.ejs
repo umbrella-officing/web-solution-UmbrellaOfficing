@@ -184,18 +184,26 @@
                     <p>As pessoas que acessarem o seu perfil verão essas informações</p>
 
                     <form action="/meu-perfil" method="post">
+                        <% 
+                        if {        
+                        %> 
                         <div> 
                             <div>
                                 <label for="about-me">Sobre mim</label>
                                 <textarea class="outline-focus" id="about_me" name="about_me" rows="6"> 
+                                    <%=autenticado.about_me%>
                                 </textarea>
                             </div>
                             <div>
                                 <label for="profissional-perfil">Perfil profissional</label>
                                 <textarea class="outline-focus" id="professional_profile" name="profession_profile"rows="3"> 
+                                    <%=autenticado.profession_profile%>
                                 </textarea>
                             </div> 
                         </div>
+                        <%
+                        }
+                        %>
                         <div class="form-flex">
                             <div>
                                 <p>Insira suas preferências</p>
