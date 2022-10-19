@@ -2,21 +2,20 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/my-account/my-account.css">
-    <link rel="stylesheet" href="style/my-account/notifications.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/default/default.css">
+  <link rel="stylesheet" href="style/my-account/my-account.css">
+  <link rel="stylesheet" href="style/my-account/notifications.css">
 </head>
 
 <body>
-    <header id="header" class="container_margin_default">
+  <header id="header" class="container_margin_default">
     <div class="default_margin">
       <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
       <div id="container_search">
@@ -255,235 +254,190 @@
     </div>
   </header>
 
-    <body>
+  <body>
 
-        <main>
+    <main>
 
-        <section id="notifications_section1" class="container_margin_default">
-            <div class="default_margin">
+      <section id="notifications_section1" class="container_margin_default">
+        <div class="default_margin">
 
-                <h1>Notificações</h1>
+          <h1>Notificações</h1>
 
-                <nav>
-                    <ul>
-                        <a href="javascript:notificacoes(1);" autofocus>
-                            <li id="li-lastN">Últimas notificações</li>
-                        </a>
-                        <a href="javascript:notificacoes(2);">
-                            <li id="li-unreadN">Não lidas</li>
-                        </a>
-                        <a href="javascript:notificacoes(3);">
-                            <li id="li-readN">Lidas</li>
-                        </a>
-                    </ul>
-                </nav>
-                <hr>
+          <nav>
+            <ul>
+              <a href="javascript:notificacoes(1);" autofocus>
+                <li id="li-lastN">Últimas notificações</li>
+              </a>
+              <a href="javascript:notificacoes(2);">
+                <li id="li-unreadN">Não lidas</li>
+              </a>
+              <a href="javascript:notificacoes(3);">
+                <li id="li-readN">Lidas</li>
+              </a>
+            </ul>
+          </nav>
+          <hr>
 
-                <article id="last-notifications">
-                    <div class="select-box">
-                        <div class="options-container">
-                            <div class="option">
-                                <input type="radio" class="radio" id="most-recents" name="category" />
-                                <label for="most-recents">Mais recentes</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="oldest" name="category" />
-                                <label for="oldest">Mais antigas</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
-                                <label for="alphabetical-order">De A-Z</label>
-                            </div>
-                        </div>
-
-                        <div class="selected">
-                            Ordernar por
-                        </div>
-                    </div>
-                </article>
-
-                <article id="unread-notifications">
-                    <div class="select-box">
-                        <div class="options-container">
-                            <div class="option">
-                                <input type="radio" class="radio" id="most-recents" name="category" />
-                                <label for="most-recents">Mais recentes</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="oldest" name="category" />
-                                <label for="oldest">Mais antigas</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
-                                <label for="alphabetical-order">De A-Z</label>
-                            </div>
-                        </div>
-
-                        <div class="selected">
-                            Ordernar por
-                        </div>
-                    </div>
-                    <div class="notification">
-                        <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
-
-                        <div>
-                            <div>
-                                <h2>Lorem Ipsum dolor sit</h2>
-
-                                <div>
-                                    <h3>Novo</h3>
-                                </div>
-                            </div>
-
-                            <div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
-                                    laoreet.
-                                    Proin gravida dolor sit amet lacus </p>
-
-                                <h4>22/03/2022</h4>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </article>
-
-                <article id="read-notifications">
-                    <div class="select-box">
-                        <div class="options-container">
-                            <div class="option">
-                                <input type="radio" class="radio" id="most-recents" name="category" />
-                                <label for="most-recents">Mais recentes</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="oldest" name="category" />
-                                <label for="oldest">Mais antigas</label>
-                            </div>
-
-                            <div class="option">
-                                <input type="radio" class="radio" id="alphabetical-order" name="category" />
-                                <label for="alphabetical-order">De A-Z</label>
-                            </div>
-                        </div>
-
-                        <div class="selected">
-                            Ordernar por
-                        </div>
-                    </div>
-
-                    <div class="notification">
-                        <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
-
-                        <div>
-                            <div>
-                                <h2>Lorem Ipsum dolor sit</h2>
-
-                                <div>
-                                    <h3>Novo</h3>
-                                </div>
-                            </div>
-
-                            <div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
-                                    laoreet.
-                                    Proin gravida dolor sit amet lacus </p>
-
-                                <h4>22/03/2022</h4>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="notification">
-                        <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
-
-                        <div>
-                            <div>
-                                <h2>Lorem Ipsum dolor sit</h2>
-
-                                <div>
-                                    <h3>Novo</h3>
-                                </div>
-                            </div>
-
-                            <div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
-                                    laoreet.
-                                    Proin gravida dolor sit amet lacus </p>
-
-                                <h4>22/03/2022</h4>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </article>
-            </div>
-            </div>
-        </section>
-
-        <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
-        <script src="script/default/header/header.js"></script>
-        <script src="script/my-account/notifications.js"></script>
-
-        </main>
-
-        <footer class="container_margin_default">
-
-            <div class="default_margin">
-                <div id="margin2">
-                    <div id="logo">
-                        <img src="images/default/logo_footer.svg" alt="logo">
-                        <h4>Escritorizando <span><br>espaços </span></h4>
-                        <span>Umbrella Officing&copy 2022</span>
-                    </div>
-
-                    <ul>
-                        <h5>Junte-se a nós</h5>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="#">Cadastre-se</a></li>
-                        <li><a href="#">Sua conta</a></li>
-                        <li><a href="#">Faça sua reserva</a></li>
-                        <li><a href="#">Anuncie seu espaço</a></li>
-                    </ul>
-
-                    <ul>
-                        <h5>Atendimento</h5>
-                        <li><a href="#">Chat</a></li>
-                        <li><a href="#">Fórum</a></li>
-                        <li><a href="#">Central de ajuda</a></li>
-                    </ul>
-
-                    <ul>
-                        <h5>Sobre nós</h5>
-                        <li><a href="#">Quem somos?</a></li>
-                        <li><a href="#">Missão, valores e visão</a></li>
-                        <li><a href="#">Por que Umbrella Officing</a></li>
-                        <li><a href="#">Desenvolvedores</a></li>
-                    </ul>
-
+          <article id="last-notifications">
+            <div class="select-box">
+              <div class="options-container">
+                <div class="option">
+                  <input type="radio" class="radio" id="most-recents" name="category" />
+                  <label for="most-recents">Mais recentes</label>
                 </div>
-                <div id="bottom_footer">
-                    <div>
-                        <div id="network_div">
-                            <img src="images/default/icon_intagram_footer.svg" alt="ícone do instagram">
-                            <img src="images/default/icon_facebook_footer.svg" alt="ícone do facebook">
-                        </div>
 
-                        <div id="scroll_up">
-                            <img src="images/default/arrow_up.svg" alt="ícone de flecha">
-                        </div>
-                    </div>
-
+                <div class="option">
+                  <input type="radio" class="radio" id="oldest" name="category" />
+                  <label for="oldest">Mais antigas</label>
                 </div>
-        </footer>
-    </body>
+
+                <div class="option">
+                  <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                  <label for="alphabetical-order">De A-Z</label>
+                </div>
+              </div>
+
+              <div class="selected">
+                Ordernar por
+              </div>
+            </div>
+          </article>
+
+          <article id="unread-notifications">
+            <div class="select-box">
+              <div class="options-container">
+                <div class="option">
+                  <input type="radio" class="radio" id="most-recents" name="category" />
+                  <label for="most-recents">Mais recentes</label>
+                </div>
+
+                <div class="option">
+                  <input type="radio" class="radio" id="oldest" name="category" />
+                  <label for="oldest">Mais antigas</label>
+                </div>
+
+                <div class="option">
+                  <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                  <label for="alphabetical-order">De A-Z</label>
+                </div>
+              </div>
+
+              <div class="selected">
+                Ordernar por
+              </div>
+            </div>
+            <div class="notification">
+              <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
+
+              <div>
+                <div>
+                  <h2>Lorem Ipsum dolor sit</h2>
+
+                  <div>
+                    <h3>Novo</h3>
+                  </div>
+                </div>
+
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                    laoreet.
+                    Proin gravida dolor sit amet lacus </p>
+
+                  <h4>22/03/2022</h4>
+                </div>
+
+              </div>
+
+            </div>
+          </article>
+
+          <article id="read-notifications">
+            <div class="select-box">
+              <div class="options-container">
+                <div class="option">
+                  <input type="radio" class="radio" id="most-recents" name="category" />
+                  <label for="most-recents">Mais recentes</label>
+                </div>
+
+                <div class="option">
+                  <input type="radio" class="radio" id="oldest" name="category" />
+                  <label for="oldest">Mais antigas</label>
+                </div>
+
+                <div class="option">
+                  <input type="radio" class="radio" id="alphabetical-order" name="category" />
+                  <label for="alphabetical-order">De A-Z</label>
+                </div>
+              </div>
+
+              <div class="selected">
+                Ordernar por
+              </div>
+            </div>
+
+            <div class="notification">
+              <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
+
+              <div>
+                <div>
+                  <h2>Lorem Ipsum dolor sit</h2>
+
+                  <div>
+                    <h3>Novo</h3>
+                  </div>
+                </div>
+
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                    laoreet.
+                    Proin gravida dolor sit amet lacus </p>
+
+                  <h4>22/03/2022</h4>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="notification">
+              <img src="images/my-account/dolar.svg" alt="Ícone de dinheiro">
+
+              <div>
+                <div>
+                  <h2>Lorem Ipsum dolor sit</h2>
+
+                  <div>
+                    <h3>Novo</h3>
+                  </div>
+                </div>
+
+                <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
+                    laoreet.
+                    Proin gravida dolor sit amet lacus </p>
+
+                  <h4>22/03/2022</h4>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+        </div>
+        </div>
+      </section>
+
+      <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
+      <script src="script/default/header/header.js"></script>
+      <script src="script/my-account/notifications.js"></script>
+
+    </main>
+
+    <footer class="container_margin_default">
+      <%- include('../../partial/footer.ejs')%>
+    </footer>
+
+  </body>
 
 </html>
