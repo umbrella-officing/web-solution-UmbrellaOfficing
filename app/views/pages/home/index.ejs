@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtJGza4SniYHefeNwCdE4gU3sg1AU4fiU&&libraries=places"></script>
@@ -40,19 +39,31 @@
           <span id="search_txt">Pesquise locais para trabalhar</span>
           <div id='container_informations_find_coworking'>
             <div class="gap_input_checked">
-              <input id="search_input" class="booking_informations input_checked" type="text" placeholder="Localização:">
-              <div class="popUp_input"></div>
+              <input id="search_input" class="booking_informations" type="text" placeholder="Localização:">
             </div>
-            <div class="gap_input_checked">
-              <div class="booking_informations booking_informations_user" id="reservation">
-                <input type="text" placeholder="Check-in" id="dateFrom" disabled value="">
-                <hr>
-                <input type="text" placeholder="Check-out" id="dateTo" disabled value="">
+            <div class="gap_input_checked" id="container_reservation">
+              <div class="booking_informations booking_informations_user input_checked" id="reservation">
+                <div>
+                  <input type="text" placeholder="Check-in" id="dateFrom" disabled value="">
+                  <hr>
+                  <input type="text" placeholder="Check-out" id="dateTo" disabled value="">
+                </div>  
               </div>
-              <div class="popUp_input"></div>
+              <div class="popUp_input teste5">
+                <div>
+                  <div id="from"></div>
+                  <div id="to"></div>
+                </div>
+                <span>
+                  Dias reservados:
+                  <input type="number" value="" name="reserved_days" id="reserved-days" disabled>
+                </span>
+              </div>
             </div>
             <div class="gap_input_checked">
               <span class="booking_informations booking_informations_user">N° de Pessoas</span>
+              <div class="popUp_input">
+              </div>
             </div>
           </div>
           <a href="#">
@@ -503,6 +514,7 @@
   <script src="script/home/reports.js"></script>
   <script src="script/home/coworking_places_inspire.js"></script>
   <script src="script/default/header/autocomplete_api.js"></script>
+  <script src="script/default/header/date-picker.js"></script>
 </body>
 
 </html>
