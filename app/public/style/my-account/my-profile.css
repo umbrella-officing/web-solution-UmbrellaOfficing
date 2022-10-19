@@ -56,12 +56,14 @@
 #my-profile_section1 form>div textarea {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
-    padding: 11px;
+    padding: 4px;
     resize: none;
     font-size: 14.5px;
-    font-family: var(--font-primary);
-    width: -webkit-fill-available;
-    color: var(--text-1-black); 
+    font-family: var(--font-primary); 
+    width: 96%; 
+    height: 150px;
+    overflow: hidden;
+    color: var(--text-1-black);
     margin: 10px 0 40px 0;
 }
 
@@ -191,6 +193,13 @@
     font-family: var(--font-primary);
     font-weight: 600;
     margin-top: 40px;
+}
+
+#my-profile_section1 form .help-block {
+    font-size: 12px;
+    color: red;
+    position: absolute;
+    transform: translateY(-0.5px);
 }
 
 @media(min-width: 320px) and (max-width: 480px){
