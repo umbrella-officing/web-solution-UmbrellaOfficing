@@ -83,4 +83,33 @@ const officingFeatures = () => {
      
 }
 
-officingFeatures()
+officingFeatures();
+
+// DO XAVIER
+
+$(document).ready(function(){
+    $("#add").click(function(){
+        $("#added").css({display: "flex"});
+        $(this).removeClass("beforeAdd");
+        $("#spanzito").css({display: "none"});
+        $("#quality2").css({display: "flex"});
+        $("#segundo").css({display: "flex"})
+    })
+})
+
+// $(document).ready(function(){
+//     $("#advance").click(function(){
+//         $("#first-step").css({display: "none"});
+//         $("#second-step").css({display: "flex"});
+//     })
+
+//     $("#advance").click(function(){
+//         $("#second-step").css({display: "none"});
+//         $("#third-step").css({display: "flex"});
+//     })
+
+//     $("#advance").click(function(){
+//         $("#third-step").css({display: "none"});
+//         $("#fourth-step").css({display: "flex"});
+//     })
+// })

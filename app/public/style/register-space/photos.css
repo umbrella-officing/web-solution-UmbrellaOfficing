@@ -7,7 +7,27 @@ h2{
     color: var(--text-1-black);
 }
 
+.header-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+}
 
+.header-buttons > a  button:hover{
+    background-color: #bdbdbd;
+}
+
+
+.header-buttons button{
+    transition: .3s ease;
+    width: 95px;
+    height: 40px;
+    background-color: var(--scale-3-gray);
+    border: none;
+    border-radius: 20px;
+    color: var(--text-1-black);
+    font-weight: 600;
+}
 
 #photos_section{
     padding-top: 105px;
