@@ -244,31 +244,20 @@
       </div>
     </div>
   </header>
-
-  <nav id="bottom-bar_mobile">
-    <ul>
-      <li>
-        <a href="/">
-          <i class='bx bx-home icon icon-color'></i>
-        </a>
-      </li>
-      <li class="list popUp-login-signUp">
-        <div class="login icon">
-          <i class='bx bx-user'></i>
-          <i class='bx bx-plus'></i>
-        </div>
-      </li>
-      <li>
-        <i class='bx bx-search search'></i>
-      </li>
-      <li class="popUp-login-signUp list">
-        <i class='bx bx-user icon'></i>
-      </li>
-      <div>
-        <a href="/central-de-ajuda"><i class='bx bx-info-circle icon'></i></a>
-      </div>
-    </ul>
-  </nav>
+    
+  <div id="bottom_bar-mobile">
+    <%
+              if(autenticado){
+            %>
+                <%- include('../../partial/header/bottom_bar-mobile_autenticado.ejs'); %>
+            <%       
+            }else{
+            %>
+                 <%- include('../../partial/header/bottom_bar-mobile.ejs'); %>
+            <%
+            } 
+          %>
+  </div>
 
   <div id='box_black'></div>
 
