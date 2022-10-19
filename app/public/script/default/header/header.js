@@ -340,16 +340,15 @@ const popUp_login_signUp = () => {
     const optionsMenu = document.querySelectorAll('.popUp-login-signUp')
     const containerPopUp = document.querySelector('#container_popUp_login-signUp')
     const AllPopUp = document.querySelectorAll(".popUp")
-
     optionsMenu.forEach(option=>option.addEventListener('click',openPopUp))
 
     function openPopUp (){
         containerPopUp.style.display = 'flex'
-        if(this == optionsMenu[0]){
+        if(this == optionsMenu[0] || this == optionsMenu[2]){
             AllPopUp[0].classList.add('popUpChecked')
         }
 
-        else{
+        if(this == optionsMenu[1] || this == optionsMenu[3]){
             AllPopUp[1].classList.add('popUpChecked')
         }
 
@@ -358,6 +357,7 @@ const popUp_login_signUp = () => {
 
     function closePopUP() {
        containerPopUp.addEventListener('click',e=>{
+        console.log(e.target)
         if(e.target.classList == 'close_popup' || e.target == containerPopUp){
         containerPopUp.style.display = 'none'
         AllPopUp.forEach(popUp => popUp.classList.remove('popUpChecked'))
@@ -421,14 +421,47 @@ const changeImageProfile = ()=> {
 
 openPop_profilePicture()
 
-const changeBottom_bar = (item) => {
-    const buttonInactive = document.querySelectorAll('.inactive')
-    const buttonActive = document.querySelectorAll('.active');
+const colorIcon = document.querySelectorAll(".icon");
+console.log({colorIcon})
+colorIcon.forEach((color, index, arr)=>{
+    color.addEventListener('click',()=>{
+        if(arr[index].classList.contains('icon-color')){
+            return arr[index].classList.remove('icon-color')
+        }
 
-    buttonInactive.forEach(e=> {
-        e.addEventListener('click', () => {
-            item.classList.add("active");
+        for(let i = 0; i < arr.length; i++){
+            arr[i].classList.remove('icon-color')
+        }
+
+        arr[index].classList.add('icon-color')
+    })
+})
+
+
+const openMenuMobile = () => {
+    const bars = document.querySelectorAll(".bars");
+    const menuMobile = document.getElementById("menu_mobile");
+
+    console.log({bars})
+
+    bars.forEach(element=> {
+        element.addEventListener('click', () => {
+        menuMobile.style.display = 'flex'
     })
     })
+
+
+    closeMenuMobile(menuMobile)
     
 }
+
+function closeMenuMobile(menuMobile) {
+    menuMobile.addEventListener('click', m => { 
+
+        if (m.target.id == 'close_pop' || m.target.classList == 'fa-solid fa-pen pictureProfile list' || m.target.classList == 'bars') {
+            menuMobile.style.display = 'none'
+        }
+    })
+}
+
+openMenuMobile()
