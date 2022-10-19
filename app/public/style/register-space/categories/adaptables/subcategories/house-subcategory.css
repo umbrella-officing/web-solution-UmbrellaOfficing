@@ -293,6 +293,10 @@ a{
     max-width: 165px;
 }
 
+.align-elements > ul > li:nth-child(2) {
+    margin: 0 0 0 10px;  
+}
+
 .align-elements > ul > li > div img{
     width: 100%;
 }
