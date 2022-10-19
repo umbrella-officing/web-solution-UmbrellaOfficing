@@ -174,6 +174,10 @@ module.exports.renderProfile = (application, req, res) => {
       autenticado = { 
         about_me: result[0].sobre_mim,
         profession_profile: result[0].perfil_profissional,
+        link_insta: result[0].link_instagram,
+        link_whats: result[0].link_whats_user,
+        link_face: result[0].link_facebook,
+        link_linkedin: result[0].link_linkedin,
         id_user: req.session.id_user
       };
 
@@ -195,6 +199,12 @@ module.exports.registerProfile = (application, req, res) => {
   var dadosForm = {
     sobre_mim: req.body.about_me,
     perfil_profissional: req.body.profession_profile,
+    link_instagram: req.body.link_insta,
+    link_whats_user: req.body.link_whats,
+    link_facebook: req.body.link_face,
+    link_linkedin: req.body.link_linkedin,
+    home_officing: req.body.preferencias_homeoffincing,
+    coworking: req.body.preferencias_coworking,
     id_user: req.session.id_user
   };
 
@@ -223,7 +233,7 @@ module.exports.renderPersonalDates = (application, req, res) => {
 
       autenticado = { 
         name: result[0].nome_user,
-        birth: result[0].dt_nasc_user,
+        birth_date: result[0].dt_nasc_user,
         gender: result[0].genero_user,
         profession: result[0].profissao,
         cpf: result[0].cpf_user,
@@ -234,8 +244,8 @@ module.exports.renderPersonalDates = (application, req, res) => {
         cep: result[0].end_cep,
         road: result[0].end_rua,
         number: result[0].end_rua_num,
-        neighborhood: result[0].end_bairro,
-        city_state: result[0].end_cidade_estado,
+        neighborhood: result[0].end_bairro, 
+        city_state: result[0].end_cidade,
         email: result[0].email_user,
         // senha_user: bcrypt.hashSync(req.body.password, salt),
         id_user: req.session.id_user
@@ -265,8 +275,7 @@ module.exports.registerPersonalDates = (application, req, res) => {
     end_rua: req.body.road,
     end_rua_num: req.body.number,
     end_bairro: req.body.neighborhood,
-    end_cidade_estado: req.body.city_state,
-    senha_user: bcrypt.hashSync(req.body.password, salt),
+    end_cidade_estado: req.body.city_state, 
     id_user: req.session.id_user
   };
 

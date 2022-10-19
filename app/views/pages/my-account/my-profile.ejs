@@ -311,38 +311,35 @@
                     <h1>Meu perfil</h1>
                     <p>As pessoas que acessarem o seu perfil verão essas informações</p>
 
-                    <form action="/meu-perfil" method="post">
+                    <form action="/meu-perfil" method="post" id="#myformProfile">
                         <%  
                             if(autenticado){  
                         %> 
                         <div> 
                             <div>
-                                <label for="about-me">Sobre mim</label>
-                                <textarea class="outline-focus" id="about_me" name="about_me" rows="6"> 
+                                <label for="about_me">Sobre mim</label>
+                                <textarea class="outline-focus" id="about_me" name="about_me"> 
                                     <%=autenticado.about_me%>
                                 </textarea>
                             </div>
                             <div>
-                                <label for="profissional-perfil">Perfil profissional</label>
-                                <textarea class="outline-focus" id="professional_profile" name="profession_profile"rows="3"> 
+                                <label for="profissional_perfil">Perfil profissional</label>
+                                <textarea class="outline-focus" id="professional_profile" name="profession_profile"> 
                                     <%=autenticado.profession_profile%>
                                 </textarea>
                             </div> 
                         </div>
-                        <%
-                        }
-                        %>
                         <div class="form-flex">
                             <div>
                                 <p>Insira suas preferências</p>
                                 <h4>Home Oficce</h4>
 
                                 <ul class="rating">
-                                    <li class="rating-bar"></li>
-                                    <li class="rating-bar"></li>
-                                    <li class="rating-bar"></li>
-                                    <li class="rating-bar"></li>
-                                    <li class="rating-bar"></li>
+                                    <li class="rating-bar"><input type="radio" name="home_office" id="bar1" checked></li>
+                                    <li class="rating-bar"><input type="radio" name="home_office" id="bar2"></li>
+                                    <li class="rating-bar"><input type="radio" name="home_office" id="bar3"></li>
+                                    <li class="rating-bar"><input type="radio" name="home_office" id="bar4"></li>
+                                    <li class="rating-bar"><input type="radio" name="home_office" id="bar5"></li>
                                 </ul>
 
                                 <h4>Coworking</h4>
@@ -362,7 +359,7 @@
                                 <div class="social-medias_flex">
                                     <img src="images/my-account/my-profile/insta.svg" alt="Ícone do Instagram">
                                     <div>
-                                        <input class="outline-focus" type="text" placeholder="Adicionar Instagram">
+                                        <input class="outline-focus" type="text" placeholder="Adicionar Instagram" name="link_insta" id="link_insta" value="<%=autenticado.link_insta%>">
                                         <p>Cole a URL do seu perfil aqui</p>
                                     </div>
                                 </div>
@@ -370,7 +367,7 @@
                                 <div class="social-medias_flex">
                                     <i class="fa-brands fa-whatsapp whats"></i>
                                     <div>
-                                        <input class="outline-focus" type="text" placeholder="Adicionar WhatsApp">
+                                        <input class="outline-focus" type="text" placeholder="Adicionar WhatsApp" name="link_whats" id="link_whats" value="<%=autenticado.link_whats%>">
                                         <p>Cole a URL aqui</p>
                                     </div>
 
@@ -379,7 +376,7 @@
                                 <div class="social-medias_flex">
                                     <i class="fa-brands fa-facebook face"></i>
                                     <div>
-                                        <input class="outline-focus" type="text" placeholder="Adicionar Facebook">
+                                        <input class="outline-focus" type="text" placeholder="Adicionar Facebook" name="link_face" id="link_face" value="<%=autenticado.link_face%>">
                                         <p>Cole a URL do seu perfil aqui</p>
                                     </div>
 
@@ -388,15 +385,18 @@
                                 <div class="social-medias_flex">
                                     <i class="fa-brands fa-linkedin linkedin"></i>
                                     <div>
-                                        <input class="outline-focus" type="text" placeholder="Adicionar Linkedin">
+                                        <input class="outline-focus" type="text" placeholder="Adicionar Linkedin" name="link_linkedin" id="link_linkedin" value="<%=autenticado.link_linkedin%>">
                                         <p>Cole a URL do seu perfil aqui</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>   
+                        <%
+                        }
+                        %>
                         <div>
-                            <button type="submit" id="edit_ad">Editar informações</button>
-                        </div> 
+                            <button type="submit" id="edit_ad">Salvar informações</button>
+                        </div>  
                     </form>
                 </div>
             </div>
@@ -453,7 +453,8 @@
     </footer>
     <script src="https://kit.fontawesome.com/e4e1096c30.js" crossorigin="anonymous"></script>
     <script src="script/default/header/header.js"></script>
-    <script src="script/my-account/my-profile.js"></script>
+    <script src="script/my-account/my-profile/my-profile.js"></script>
+    <script src="script/my-account/my-profile/registerInformations.js"></script>
 
 </body>
 

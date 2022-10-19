@@ -297,9 +297,13 @@ a{
     border-radius: 10px
 }
 
+.align-elements > ul > li:nth-child(3){
+   margin: 0 0 0 10px;
+}
+
 .align-elements > ul > li:after{
     content: '';
-    padding: 25px 0 25px 25px;
+    padding: 25px 10px 25px 15px;
     max-width: 139px;
     width: 100%;
     display: block;
@@ -329,7 +333,7 @@ a{
     background-color: var(--gray-border);
     color: var(--white);
     font-weight: 600;
-    font-size: 20px;
+    font-size: 17.5px;
     padding: 0;
 }
 

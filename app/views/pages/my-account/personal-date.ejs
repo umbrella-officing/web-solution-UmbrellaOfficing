@@ -182,15 +182,18 @@
                     <h1>Meus dados pessoais</h1>
 
                     <form action="" method="post">
+                        <% 
+                             if(autenticado){  
+                        %> 
                             <h2>Informações pessoais</h2>
                             <div>
                                 <label for="name">Nome</label>
-                                <input type="text" class="outline-focus" name="name" id="name">
+                                <input type="text" class="outline-focus" name="name" id="name" value="<%=autenticado.name%>">
                             </div>
                             <div class="personal-date-grid2">
                                 <div>
                                     <label for="birth-date">Data de nascimento</label>
-                                    <input type="text" class="outline-focus" name="birth-date" id="birth-date">
+                                    <input type="text" class="outline-focus" name="birth-date" id="birth-date" value="<%=autenticado.birth_date%>">
                                 </div>
                                 <div class="select-box">
                                     <label for="gender">Sexo</label>
@@ -215,22 +218,22 @@
                             </div>
                             <div>
                                 <label for="profession">Profissão</label>
-                                <input type="text" class="outline-focus" name="profession" id="profession_date" />
+                                <input type="text" class="outline-focus" name="profession" id="profession_date" value="<%=autenticado.profession%>"/>
                             </div>
 
                             <h2>Identificação</h2>
                             <div>
                                 <label for="cpf">CPF</label>
-                                <input type="text" class="outline-focus" name="cpf" id="cpf_date" />
+                                <input type="text" class="outline-focus" name="cpf" id="cpf_date" value="<%=autenticado.cpf%>"/>
                             </div>
                             <div class="personal-date-grid2">
                                 <div>
                                     <label for="rg">RG</label>
-                                    <input type="text" class="outline-focus" name="rg" id="rg_date" />
+                                    <input type="text" class="outline-focus" name="rg" id="rg_date" value="<%=autenticado.rg%>"/>
                                 </div>
                                 <div>
                                     <label for="orgao-exp">Orgão Expedidor</label>
-                                    <input type="text" class="outline-focus" name="orgao-exp" id="orgao-exp_date" />
+                                    <input type="text" class="outline-focus" name="orgao-exp" id="orgao-exp_date" value="<%=autenticado.orgao_exp%>"/>
                                 </div>
                             </div>
 
@@ -238,44 +241,44 @@
                             <div class="personal-date-grid2">
                                 <div>
                                     <label for="phone">Telefone</label>
-                                    <input type="text" class="outline-focus" name="phone" id="phone_date" />
+                                    <input type="text" class="outline-focus" name="phone" id="phone_date" value="<%=autenticado.phone%>"/>
                                 </div>
                                 <div>
                                     <label for="cell">Celular</label>
-                                    <input type="text" class="outline-focus" name="cell" id="cell_date" />
+                                    <input type="text" class="outline-focus" name="cell" id="cell_date" value="<%=autenticado.cell%>"/>
                                 </div>
                             </div>
 
                             <h2>Endereço</h2>
                             <div>
                                 <label for="cep">CEP</label>
-                                <input type="text" class="outline-focus" name="cep" id="cep_date" />
+                                <input type="text" class="outline-focus" name="cep" id="cep_date" value="<%=autenticado.cep%>"/>
                             </div>
                             <div class="personal-date-grid2-dif">
                                 <div>
-                                    <label for="rua">Rua</label>
-                                    <input type="text" class="outline-focus" name="rua" id="rua_date" />
+                                    <label for="road">Rua</label>
+                                    <input type="text" class="outline-focus" name="road" id="road_date" value="<%=autenticado.road%>"/>
                                 </div>
                                 <div>
                                     <label for="number">Nº</label>
-                                    <input type="text" class="outline-focus" name="number" id="number_date" />
+                                    <input type="text" class="outline-focus" name="number" id="number_date" value="<%=autenticado.number%>"/>
                                 </div>
                             </div>
                             <div class="personal-date_section1_form-colum2">
                                 <div>
-                                    <label for="bairro">Bairro</label>
-                                    <input type="text" class="outline-focus" name="bairro" id="bairro_date" />
+                                    <label for="neighborhood">Bairro</label>
+                                    <input type="text" class="outline-focus" name="neighborhood" id="bairro_date" value="<%=autenticado.neighborhood%>"/>
                                 </div>
                                 <div>
-                                    <label for="cidade">Cidade | Estado</label>
-                                    <input type="text" class="outline-focus" name="cidade_estado" id="cidade_estado_date" />
+                                    <label for=" city_state">Cidade | Estado</label>
+                                    <input type="text" class="outline-focus" name=" city_state" id="cidade_estado_date" value="<%=autenticado.city_state%>"/>
                                 </div>
                             </div>
 
                             <h2>Informações para login</h2>
                             <div>
                                 <label for="email">Email</label>
-                                <input class="outline-focus" type="email" name="email" id="email" />
+                                <input class="outline-focus" type="email" name="email" id="email" value="<%=autenticado.email%>"/>
                             </div>
                             <div>
                                 <label for="password">Senha</label>
@@ -285,6 +288,9 @@
                             <div id="justify">
                                 <button type="submit" id="edit_ad">Editar informações</button>
                             </div>
+                        <% 
+                           }  
+                        %>
                     </form>
                 </section>
             </div>
