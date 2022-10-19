@@ -163,6 +163,12 @@ ul {
     border: 1px solid #d1d1d1;
     background-color: #ffffff;
     box-sizing: border-box;
+    cursor: pointer;
+    transition: .08s ease;
+}
+
+.selectRoom{
+    border: 2px solid #1E98D7;
 }
 
 .rooms-available-container div:first-child {
