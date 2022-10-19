@@ -29,6 +29,30 @@ h2{
     font-weight: 600;
 }
 
+nav{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+nav a, nav li{
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav a:first-child:hover{
+    text-decoration: underline;
+}
+
+.breadcrumb{
+    display: flex;
+    list-style: none;
+    width: 105%;
+    justify-content: space-between;
+}
+
 #photos_section{
     padding-top: 105px;
     height: calc(100vh - 105px);
@@ -37,6 +61,7 @@ h2{
 
 #photos_section > div{
     justify-content: space-between;
+    position: relative;
 }
 
 #photos_section > div > h1{
@@ -104,8 +129,9 @@ form{
     "photo2 photo3";
     gap: 20px;
     overflow-y: scroll;
-    width: 100%;
+    width: 97%;
     position: relative;
+    padding-right: 3%;
 }
 
 .hide{
@@ -159,7 +185,7 @@ form{
     width: 160px;
     height: 32px;
     position: absolute;
-    right: 0;
+    right: 3%;
     bottom: -120px;
 }
 
