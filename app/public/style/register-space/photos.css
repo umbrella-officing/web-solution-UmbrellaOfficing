@@ -7,6 +7,8 @@ h2{
     color: var(--text-1-black);
 }
 
+
+
 #photos_section{
     padding-top: 105px;
     height: calc(100vh - 105px);
@@ -25,15 +27,26 @@ h2{
 
 #space-photos{
     width: calc(50% - 40px);    
-    overflow: auto;
+    overflow-x: hidden;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    height: calc(100vh - 105px);
-    margin-top: 98px;
+    position: relative;
+    height: 480px;
 }
 
 #space-photos > :first-child{
     padding-bottom: 20px;
+    display:  flex;
+    align-items: center;
+}
+
+#space-photos > :first-child img{
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 #space-photos > div > ul{
@@ -63,14 +76,82 @@ h2{
     color: rgba(51, 51, 51, 0.7);
 }
 
-.room-img{
+form{
+    display: grid;
+    grid-template-areas: 
+    "photo1 photo1"
+    "photo2 photo3";
+    gap: 20px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.hide{
+    display: none;
+}
+
+.imgArea{
     border: 1px solid var(--gray-border);
+    border-radius: 15px;
+    transition: .2s ease-in-out;
+}
+
+.imgArea:hover{
+    border: 2px dashed #888;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+#first{
+    grid-area: photo1;
+    height: 300px;
+}
+
+#second{
+    grid-area: photo2;
+    height: 150px;
+}
+
+#third{
+    grid-area: photo3;
+    height: 150px;
+}
+
+#bottomBtns{
+    border-top: 1px solid var(--gray-border);
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    left: 50%;
+    width: 100%;
+    bottom: 0;
+}
+
+#advance-return{
+    background-color: #FFF;
+    width: 580px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#advance-return > :first-child{
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 500;
+    background-color: transparent;
+    border: 0;
+    width: 160px;
+    height: 32px;
+}
+
+#advanceButton{
+    background-color: var(--scale-2-purple);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+    border: 0;
     border-radius: 20px;
-    width: 220px;
-    height: 130px;
+    width: 160px;
+    height: 32px;
+    align-self: flex-end;
 }
-
-#rooms-photos{
-    margin-top: 98px;
-}
-
