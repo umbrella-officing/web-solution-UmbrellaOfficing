@@ -219,7 +219,7 @@ const optionsBooking = () =>{
     
         if(this == booking_informations[0]){
             popUp_input[0].style.display = 'none'
-            popUp_input[1].style.display = 'flex'
+            popUp_input[1].style.display = 'none'
             return
         }
 
@@ -233,8 +233,52 @@ const optionsBooking = () =>{
             popUp_input[1].style.display = 'flex'
         }
     }
+        operationsValues()
+
 }
 
+const operationsValues = () =>{
+    const specifications = document.querySelectorAll(".specification")
+
+    specifications.forEach((specification,index)=>{
+        specification.addEventListener('click',(e)=>{
+            if(e.target.classList == "subtract"){
+                subtractionInput(specification,index)
+            }
+
+            if(e.target.classList == "addition"){
+                additionInput(specification,index)
+            }
+        })
+    })
+
+
+        function subtractionInput(specification,index){
+
+            if(index == index){
+                var amountInput = specification.children[1]
+                var i = amountInput.value
+
+                if (i > 0) {
+                    i--
+                    amountInput.setAttribute('value', i)
+                }
+            }
+        }
+
+        function additionInput(specification,index){
+
+            if(index == index){
+                var amountInput = specification.children[1]
+                var i = amountInput.value
+                i++
+                amountInput.setAttribute('value', i)
+                console.log(`${i}`)
+            }
+        }
+        
+
+}
 
 
 const closeInputsearchCoworkingSpaces = (box_black,header,search,search_txt,container_informations_find_coworking)=> {
@@ -264,16 +308,27 @@ const closeInputsearchCoworkingSpaces = (box_black,header,search,search_txt,cont
 const menuHamburguer  = () =>{
     const menu_sign_in_up = document.querySelector('#menu_sign-in-up')
     const menu_open = document.querySelector('.menu_open')
+    const container_menu_open = document.querySelector(".container_menu_open")
 
     window.addEventListener('click',(e)=>{
 
         if(menu_sign_in_up.contains(e.target) == true){
             menu_open.classList.toggle('menu_open_checked')
-            return
+
+            if(container_menu_open.style.overflow == 'unset'){
+                console.log('teste')
+                container_menu_open.style.overflow = 'hidden'
+                return
+            }
+
+           return container_menu_open.style.overflow = 'unset'
+            
         }
 
         if(menu_open.contains(e.target) == false || menu_open.contains(e.target) == true && e.target.tagName == 'LI' || menu_open.contains(e.target) == true && e.target.tagName == 'I'){
-           return menu_open.classList.remove('menu_open_checked')
+            menu_open.classList.remove('menu_open_checked')
+            container_menu_open.style.overflow = 'hidden' 
+            return
         }
     })
     
