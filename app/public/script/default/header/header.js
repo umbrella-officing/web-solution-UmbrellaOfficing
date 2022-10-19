@@ -377,4 +377,3 @@ const changeBottom_bar = (item) => {
     })
     
 }
-

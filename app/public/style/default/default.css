@@ -321,6 +321,42 @@ header > div {
     background: none;
 }
 
+#container-guests{
+    display: flex;
+    align-items: center;
+    padding: 21px;
+    width: 244px;
+}
+
+#guests{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.specification{
+    display: flex;
+    align-items: center;
+}
+
+#guests input{
+    width: 19px;
+    text-align: center;
+    border: none;
+}
+
+#guests button{
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+#guests img{
+    width: 19px;
+}
+
 #ui-datepicker-div{
     top: 200px !important;
     left: 35% !important;
