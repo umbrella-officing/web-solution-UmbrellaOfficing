@@ -105,15 +105,25 @@
 }
 
 #home_section2 #geolocation {
-    width: 20px;
+    width: 17px;
 }
 
-#home_section2>div ul li img {
+#home_section2>div ul li div {
     padding: 10px 20px;
     border-radius: 20px;
     background: #4e4afe;
-    width: 27px;
+    width: 65px;
+    height: 47px;
+    box-sizing: border-box;
+    display: flex;
     margin: 12px 0 7px 0;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#home_section2>div ul li div img {
+    width: 100%;
+    align-self: center;
 }
 
 #home_section2>div ul li p {
