@@ -217,13 +217,18 @@ const optionsBooking = () =>{
         booking_informations.forEach(information => information.classList.remove('input_checked'))
         this.classList.add('input_checked')
     
+        if(this == booking_informations[0]){
+            popUp_input[0].style.display = 'none'
+            popUp_input[1].style.display = 'block'
+            return
+        }
+
         if(this == booking_informations[1]){
             popUp_input[1].style.display = 'none'
             popUp_input[0].style.display = 'block'
         }
 
         if(this == booking_informations[2]){
-            console.log('teste')
             popUp_input[0].style.display = 'none'
             popUp_input[1].style.display = 'block'
         }
