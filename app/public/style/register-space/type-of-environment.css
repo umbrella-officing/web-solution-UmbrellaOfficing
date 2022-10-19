@@ -323,7 +323,7 @@ article > div p{
     transition: .3s ease;
     width: 95px;
     height: 40px;
-    background-color: var(--scale-3-gray);
+    background-color: var(--scale-2-gray);
     border: none;
     border-radius: 20px;
     color: var(--text-1-black);
