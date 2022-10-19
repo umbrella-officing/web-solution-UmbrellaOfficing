@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/register-space/categories/adaptables/adaptables-categories.css">
+    <link rel="stylesheet" href="style/register-space/categories/adaptables/subcategories/house-subcategory.css">
     </head>
 <body>
     <header id="header" class="container_margin_default">
@@ -133,32 +133,32 @@
             <div class="default_margin">
             
                         <nav>
-                                <ul class="breadcrumb">
-                                  <li><a href="/tipo-de-ambiente">Tipo de ambiente</a></li>
-                                  <li>></li>
-                                  <a href=""><li aria-current="page">Categoria do ambiente</li></a>
-                                </ul>
+                            <ul class="breadcrumb">
+                                <li><a class="hoverU" href="/tipo-de-ambiente">Tipo de ambiente</a></li>
+                                <li class="divisor">></li>
+                                <a class="hoverU" href=""><li>Categoria do ambiente</li></a>
+                                <li class="divisor">></li>
+                                <a href=""><li aria-current="page">Subcategoria do ambiente</li></a>
+                              </ul>
                         </nav>
 
                 <div class="align-elements center">
                     <h1>Escolha a categoria</h1>
                     <ul>
-                        <li>
+                        <li class="space-box">
                             <img class="space-photo" src="images/register-space/adaptables/house-category.png" alt="">
+                            <div><span>Casa comum</span></div>
                         </li>
                         
-                        <li>
-                            <img class="space-photo" src="images/register-space/adaptables/apartment-category.png" alt="">
-                        </li>
-
-                        <li>
-                            <img class="space-photo" src="images/register-space/adaptables/unity-category.png" alt="">
+                        <li class="space-box">
+                            <img class="space-photo" src="images/register-space/adaptables/kitnet.png" alt="">
+                            <div><span>Microcasa</span></div>
                         </li>
                     </ul>
                 </div>
                 <div class="align-elements" id="align-buttons">
                     <button>Nenhuma das opções</button>
-                        <button id="advanceButton">Avançar</button>
+                        <a id="advance" href="/localizacao"><button id="advanceButton">Avançar</button></a>
                 </div>
 
                 <!-- <div>
@@ -200,9 +200,10 @@
                 </div> -->
 
             </div>
-        </section>
+        </  section>
     </main>
 
     <script src="script/default/header/header.js"></script>
+    <script src="script/register-space/adaptables-categories/generic-sub.js"></script>
 </body>
 </html>

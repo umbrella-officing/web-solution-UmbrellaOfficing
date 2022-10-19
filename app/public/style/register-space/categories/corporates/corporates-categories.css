@@ -163,10 +163,10 @@ a{
     justify-content: space-between;
 }
 
-.breadcrumb > li{
+.breadcrumb > li, a{
     font-size: 12px;
     cursor: pointer;
-    color:#6C757D;
+    color:#fff;
     width: fit-content;
 }
 
@@ -278,11 +278,10 @@ a{
     padding: 20px 0;
     border: 1px solid var(--gray-border);
     border-radius: 20px;
-    cursor: pointer;
+    
 }
 
-
-#advance > :first-child{
+#advanceButton{
     background-color: var(--scale-2-purple);
     color: var(--white);
     font-size: 18px;
@@ -291,6 +290,7 @@ a{
     border-radius: 20px;
     width: 160px;
     height: 32px;
+    margin-left: auto;
 }
 
 #corporates-categories_section h1{
@@ -303,17 +303,8 @@ a{
 
 #align-buttons{
     padding-top: 65px;
-    justify-content: flex-end;
 }
 
-.space-box:focus{
-    border-color: #08bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, .25);
-    transition: 0.3s ease-in-out;
+.space-box{
+    cursor: pointer;
 }
-
-
-
-
-

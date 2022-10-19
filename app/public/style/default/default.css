@@ -46,6 +46,13 @@ html, button, input{
     transition: 0.3s ease-in-out;
 }
 
+.border-select{
+    border-color: #08bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, .25);
+    transition: 0.3s ease-in-out;
+}
+
 body, ul, li, nav, h1, h2, h3, h4, h5, h6, p, fieldset{
     margin:0;
     padding: 0;
@@ -536,10 +543,10 @@ fieldset{
     transition: .5s;
 }
 
-#container_popUp_login-signUp input[type="number"]::-webkit-outer-spin-button,
+/* #container_popUp_login-signUp input[type="number"]::-webkit-outer-spin-button,
 #container_popUp_login-signUp input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
-}
+} */
 
 #container_popUp_login-signUp form > div{
     width: 100%;
