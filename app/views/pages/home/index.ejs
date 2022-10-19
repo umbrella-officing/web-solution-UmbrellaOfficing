@@ -42,19 +42,44 @@
           <span id="search_txt">Pesquise locais para trabalhar</span>
           <div id='container_informations_find_coworking'>
             <div class="gap_input_checked">
-              <input id="search_input" class="booking_informations input_checked" type="text" placeholder="Localização:">
-              <div class="popUp_input"></div>
+              <input id="search_input" class="booking_informations" type="text" placeholder="Localização:">
             </div>
-            <div class="gap_input_checked">
-              <div class="booking_informations booking_informations_user" id="reservation">
-                <input type="text" placeholder="Check-in" id="dateFrom" disabled value="">
-                <hr>
-                <input type="text" placeholder="Check-out" id="dateTo" disabled value="">
+            <div class="gap_input_checked" id="container_reservation">
+              <div class="booking_informations booking_informations_user input_checked" id="reservation">
+                <div>
+                  <input type="text" placeholder="Check-in" id="dateFrom" disabled value="">
+                  <hr>
+                  <input type="text" placeholder="Check-out" id="dateTo" disabled value="">
+                </div>  
               </div>
-              <div class="popUp_input"></div>
+              <div class="popUp_input teste5">
+                <div>
+                  <div id="from"></div>
+                  <div id="to"></div>
+                </div>
+                <span>
+                  Dias reservados:
+                  <input type="number" value="" name="reserved_days" id="reserved-days" disabled>
+                </span>
+              </div>
             </div>
             <div class="gap_input_checked">
               <span class="booking_informations booking_informations_user">N° de Pessoas</span>
+              <div id="container-guests" class="popUp_input">
+                <div id="guests">
+                  <h5>N° de pessoas</h5>
+                  <div class="specification">
+                    <button>
+                      <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
+                    </button>
+                    <input type="number" min="0" value="4" name="people" disabled>
+                    <button>
+                      <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
+                    </button>
+        
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <a href="#">
@@ -506,6 +531,7 @@
   <script src="script/home/reports.js"></script>
   <script src="script/home/coworking_places_inspire.js"></script>
   <script src="script/default/header/autocomplete_api.js"></script>
+  <script src="script/default/header/date-picker.js"></script>
 </body>
 
 </html>

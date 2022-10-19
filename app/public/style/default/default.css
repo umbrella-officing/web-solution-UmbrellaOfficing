@@ -214,6 +214,12 @@ header > div {
     margin-right: 17px;
 }
 
+#container_reservation{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .gap_input_checked::after{
     content: '';
     position: absolute;
@@ -243,11 +249,19 @@ header > div {
 }
 
 #reservation{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 183px;
     padding: 0 14px;
+}
+
+#reservation > div:first-child{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 #reservation hr{
@@ -257,7 +271,7 @@ header > div {
 }
 
 #dateFrom{
-    width: 64px;
+    width: 70px;
     border: none;
     outline: none;
     background: none;
@@ -268,6 +282,250 @@ header > div {
     border: none;
     outline: none;
     background: none;
+}
+
+.popUp_input{
+    display: none;
+    position: absolute;
+    background: white;
+    top: 77px;
+    border-radius: 33px;
+    border: 2px solid #E5E5E7;
+}
+
+#container_reservation .popUp_input{
+    height: fit-content;
+    padding: 44px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow-y: scroll; */
+    width: 818px;
+    background: white;
+}
+
+#container_reservation .popUp_input > div:first-child{
+    display: flex;
+    width: 100%;
+}
+
+#container_reservation .popUp_input > span:last-child{
+    font-size: 14px;
+}
+
+#container_reservation .popUp_input > span:last-child input[type="number"]{
+    width: 30px;
+    font-weight: 600;
+    color: black;
+    border: none;
+    background: none;
+}
+
+#container-guests{
+    display: flex;
+    align-items: center;
+    padding: 21px;
+    width: 244px;
+}
+
+#guests{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.specification{
+    display: flex;
+    align-items: center;
+}
+
+#guests input{
+    width: 19px;
+    text-align: center;
+    border: none;
+}
+
+#guests button{
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+}
+
+#guests img{
+    width: 19px;
+}
+
+#ui-datepicker-div{
+    top: 200px !important;
+    left: 35% !important;
+  }
+
+  #ui-datepicker-div .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: none;
+    background: none;
+    font-weight: normal;
+    color: black;
+}
+
+  .ui-datepicker td{
+    padding: 13px !important;
+  }
+
+  #ui-datepicker-div .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: none;
+    background: none;
+    color: black;
+}
+
+.ui-widget.ui-widget-content{
+  border: none !important;
+}
+
+#ui-datepicker-div .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative !important;
+}
+
+.ui-datepicker th{
+  color: rgb(113, 113, 113) !important;
+  font-weight: 500 !important;
+}
+
+.ui-state-active{
+  color: white !important;
+}
+
+.ui-state-active::before{
+  content: '';
+  position: absolute;
+  background: #5B61C4;
+  border-radius: 50%;
+  padding: 18px;
+  z-index: -1;
+}
+
+.ui-widget-header {
+  border: none !important;
+  background: none !important;;
+  color: black !important;
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year{
+  width: fit-content !important;
+  border: none;
+}
+
+#teste select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#teste{
+  width: fit-content;
+  background: orangered;
+}
+
+.teste2{
+  height: 40px;
+  width: 40px;
+  background: blueviolet;
+}
+
+#from_data,#to_data{
+  width: 80px;
+  margin-top: 10px;
+  border: 2px solid;
+}
+
+#to{
+    margin-left: auto;
+    position: relative;
+    right: 60px;
+}
+
+.ui-datepicker .ui-datepicker-title{
+    font-family: var(--font-primary) !important;
+    color: #222 !important;
+}
+
+/* #container_reservation .popUp_input::-webkit-scrollbar {
+    background: #999;
+    width: 10px;
+    border-radius: 33px;
+  }
+
+  #container_reservation::-webkit-scrollbar-thumb {
+    background: #646a72;
+    position: absolute;
+    right: 0;
+    object-fit: cover;
+    border-radius: 0 8px 8px 0;
+  } */
+  
+
+  /* 
+   .ui-widget-header {
+    border: 1px solid #ddd;
+    background: #e9e9e9;
+    color: #333;
+    font-weight: bold;
+}
+   */
+  
+   /* 
+    .ui-widget-content {
+    border: none; 
+    background: #fff;
+    color: #333;
+}
+    */
+
+  /* 
+    .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px solid #003eff;
+    background: #007fff;
+    font-weight: normal;
+    color: #fff;
+}
+   */
+
+  /* .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus{
+        border: 1px solid #ccc;
+        background: #c30b0b;
+        font-weight: normal;
+        color: #2b2b2b;
+  } */
+
+ body .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+    border: none !important;
+    background: none !important;
+    font-weight: normal !important;
+    color: #444 !important;
+  }
+
+body  .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    border: none !important;
+    font-weight: normal !important;
+    background: none !important;
+    z-index: 99 !important;
+    color: #fff !important;
+    position: relative !important;
+  }
+
+body .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    border: none !important;
+    background: none !important;
+    color: black;
+}
+
+#box-test{
+    width: 100%;
+    background-color: blueviolet;
+    height: 292px;
 }
 
 .input_checked.booking_informations_user{

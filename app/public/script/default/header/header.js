@@ -209,11 +209,29 @@ const select_type_office = () => {
 
 const optionsBooking = () =>{
     const booking_informations = document.querySelectorAll('.booking_informations')
-    booking_informations.forEach(information=> information.addEventListener('click',checked_information))
+    const popUp_input = document.querySelectorAll('.popUp_input')
+
+    booking_informations.forEach((information, index, arr)=> information.addEventListener('click',checked_information))
 
     function checked_information(){
         booking_informations.forEach(information => information.classList.remove('input_checked'))
         this.classList.add('input_checked')
+    
+        if(this == booking_informations[0]){
+            popUp_input[0].style.display = 'none'
+            popUp_input[1].style.display = 'flex'
+            return
+        }
+
+        if(this == booking_informations[1]){
+            popUp_input[1].style.display = 'none'
+            popUp_input[0].style.display = 'flex'
+        }
+
+        if(this == booking_informations[2]){
+            popUp_input[0].style.display = 'none'
+            popUp_input[1].style.display = 'flex'
+        }
     }
 }
 
