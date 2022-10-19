@@ -219,18 +219,18 @@ const optionsBooking = () =>{
     
         if(this == booking_informations[0]){
             popUp_input[0].style.display = 'none'
-            popUp_input[1].style.display = 'block'
+            popUp_input[1].style.display = 'flex'
             return
         }
 
         if(this == booking_informations[1]){
             popUp_input[1].style.display = 'none'
-            popUp_input[0].style.display = 'block'
+            popUp_input[0].style.display = 'flex'
         }
 
         if(this == booking_informations[2]){
             popUp_input[0].style.display = 'none'
-            popUp_input[1].style.display = 'block'
+            popUp_input[1].style.display = 'flex'
         }
     }
 }

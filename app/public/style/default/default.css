@@ -292,10 +292,6 @@ header > div {
     border: 2px solid #E5E5E7;
 }
 
-.teste5.popUp_input{
-    display: flex;
-}
-
 #container_reservation .popUp_input{
     height: fit-content;
     padding: 44px 20px;
