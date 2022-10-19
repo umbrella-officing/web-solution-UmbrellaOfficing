@@ -49,6 +49,30 @@ a{
     height: 100%;
 }
 
+nav{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+nav a, nav li{
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav a:first-child:hover{
+    text-decoration: underline;
+}
+
+.breadcrumb{
+    display: flex;
+    list-style: none;
+    width: 105%;
+    justify-content: space-between;
+}
+
 #add-room_section > div > div{
     position: absolute;
     top: 0;

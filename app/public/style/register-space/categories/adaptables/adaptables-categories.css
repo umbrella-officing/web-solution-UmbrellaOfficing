@@ -44,8 +44,12 @@
     }
 
     main #align-buttons > :last-child{
-        width: 60%;
         height: 36px;
+        width: 60%;
+    }
+
+    main #advanceButton{
+        width: 100%;
     }
 }
 
@@ -95,6 +99,10 @@
     main #align-buttons > :last-child{
         width: 60%;
         height: 36px;
+    }
+
+    main #advanceButton{
+        width: 100%;
     }
 }
 
@@ -150,6 +158,28 @@ nav{
 a{
     text-decoration: none;
     font-size: 12px;
+}
+
+.header-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+}
+
+.header-buttons > a  button:hover{
+    background-color: #bdbdbd;
+}
+
+
+.header-buttons button{
+    transition: .3s ease;
+    width: 95px;
+    height: 40px;
+    background-color: var(--scale-2-gray);
+    border: none;
+    border-radius: 20px;
+    color: var(--text-1-black);
+    font-weight: 600;
 }
 
 .breadcrumb{
@@ -263,6 +293,8 @@ a{
     flex-direction: column;
     position: relative;
     margin: 0 10px;
+    cursor: pointer;
+    border-radius: 10px
 }
 
 .align-elements > ul > li:after{
@@ -290,14 +322,15 @@ a{
 }
 
 #advanceButton{
-    background-color: var(--scale-2-purple);
-    color: var(--white);
-    font-size: 18px;
-    font-weight: 600;
-    border: 0;
+    width: 186px;
+    height: 36px;
+    border: none;
     border-radius: 20px;
-    width: 160px;
-    height: 32px;
+    background-color: var(--gray-border);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0;
 }
 
 #adaptables-categories_section h1{

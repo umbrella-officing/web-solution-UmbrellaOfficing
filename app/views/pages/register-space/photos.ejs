@@ -21,109 +21,9 @@
         <div class="default_margin">
             <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
 
-            <div id="menu">
-                <div id='menu_sign-in-up'>
-                    <img src="images/default/user.svg" alt="usuário">
-                    <img src="images/default/menu_hamburguer.svg" alt="menu">
-                </div>
-                <div class="menu_open">
-                    <div>
-                        <img src="images/default/perfil.png" alt="foto de perfil">
-                        <h3>Usuário <span>Cliente</span></h3>
-                    </div>
-                    <div>
-                        <nav>
-                            <ul>
-                                <li class="popUp-login-signUp">
-                                    <img src="images/default/my-perfil.png" alt="meu perfil">
-                                    Login
-                                </li>
-                                <li class="popUp-login-signUp">
-                                    <img src="images/default/sign_up.png" alt="cadastre-se">
-                                    Cadastre-se
-                                </li>
-
-                            </ul>
-                        </nav>
-                    </div>
-                    <div>
-                        <a href="/central-de-ajuda"></a><img src="images/default/question.png" alt="sair da conta">
-                       Central de ajuda</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="container_popUp_login-signUp">
-            <div class="popUp">
-                <img class="close_popup" src="images/default/close_icon.svg" alt="close">
-                <h2>Umbrella Officing</h2>
-                <h3>Seja bem-vindo</h3>
-                <div>
-                    <span>Faça seu login para continuar</span>
-                    <form>
-                        <label for="cpf-email">
-                            CPF ou E-mail :
-                            <input type="text" id="cpf-email">
-                        </label>
-
-                        <label for="password-login">
-                            Senha:
-                            <input type="password" id="password-login">
-                        </label>
-
-                        <div>
-                            <a href="#">Esqueceu a senha?</a>
-                        </div>
-
-                        <button type="submit">LOGIN</button>
-                    </form>
-                    <div id="alternatives">
-                        <div><span>OR</span></div>
-                        <div>
-                            <span>Faça login com suas Redes Sociais</span>
-                            <img src="images/default/icon-google.png" alt="ícone do google">
-                            <img src="images/default/icon-facebok.svg" alt="ícone do facebbok">
-                            <img src="images/default/icon-apple.png" alt="ícone do facebbok">
-                            <span>Ainda não possui conta? <a href="#">Cadastre-se</a></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="popUp">
-                <img class="close_popup" src="images/default/close_icon.svg" alt="close">
-                <h2>Umbrella Officing</h2>
-                <h3>Seja bem-vindo</h3>
-                <div>
-                    <span>Cadastre-se e faça parte da nossa comunidade</span>
-                    <form>
-                        <label for="name">
-                            Nome:
-                            <input type="text" id="name">
-                        </label>
-
-                        <label for="middlename">
-                            Sobrenome:
-                            <input type="text" id="middlename">
-                        </label>
-
-                        <label for="cpf">
-                            CPF:
-                            <input type="number" id="cpf">
-                        </label>
-
-                        <label for="birth_date">
-                            Data de nascimento
-                            <input type="date" id="birth_date">
-                        </label>
-
-                        <label for="phone">
-                            Telefone:
-                            <input type="number" id="phone">
-                        </label>
-
-                        <button type="submit">CADASTRAR</button>
-                    </form>
-                </div>
+            <div class="header-buttons">
+                <a href="/central-de-ajuda"><button>Ajuda</button></a>
+                <a href="/"><button>Sair</button></a>
             </div>
         </div>
     </header>
@@ -136,31 +36,35 @@
                 <h1>Adicione algumas fotos do seu espaço</h1>
 
                 <div id="space-photos">
-                    <h2>Visão geral do ambiente</h2>
-                    <div id="slideshow">
-                        <img src="images/register-space/photos/addPhoto-icon.png" alt="">
-                        <p>Adicione uma foto do espaço</p>
+                    <div>
+                        <h2>Visão geral do ambiente</h2> 
+                        <img src="images/default/hint-icon.png" alt="Botão de dica">
                     </div>
+                    
+                    <form id="general-photos">
+                        <label for="photo1" id="first" class="imgArea">
+                            
+                            <span class="renderElement"></span>
+                            <input type="file" accept="image/png, jpg, jpeg, svg" name="photo1" id="photo1" class="hide">
+                        </label>
 
-                    <div id="rooms-photos">
-                    <h2>Sala 01</h2>
-                    <ul>
-                        <li>
-                            <div class="room-img"></div>
-                        </li>
-                        <li>
-                            <div class="room-img"></div>
-                        </li>
-                        <li>
-                            <div class="room-img"></div>
-                        </li>
                         
-                    </ul>
+                        <label for="photo2" id="second" class="imgArea">
+                            
+                            <span class="renderElement"></span>
+                            <input type="file" accept="image/png, jpg, jpeg, svg" name="photo2" id="photo2" class="hide">
+                        </label>
+
+                        <label for="photo3" id="third" class="imgArea">
+                            
+                            <span class="renderElement"></span>
+                            <input type="file" accept="image/png, jpg, jpeg, svg" name="photo3" id="photo3" class="hide">
+                        </label>
+
+                        <button id="advanceButton">Avançar</button>
+                    </form>
+
                 </div>
-
-
-                </div>
-
 
             </div>
         </section>

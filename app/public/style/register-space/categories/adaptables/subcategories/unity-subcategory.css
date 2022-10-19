@@ -193,9 +193,8 @@ a{
 }
 
 .breadcrumb{
-    width: 100%;
+    width: 103%;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .breadcrumb > li{
@@ -218,6 +217,12 @@ a{
 } */
 
 .divisor{
+    margin: 0 8px;
+    text-decoration: none;
+    cursor: default;
+}
+
+.breadcrumb > li:nth-child(2){
     margin: 0 8px;
     text-decoration: none;
     cursor: default;
@@ -303,6 +308,10 @@ a{
 
 .center > ul{
     justify-content: center;
+    width: 555px;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    padding-bottom: 20px;
 }
 
 .space-photo{

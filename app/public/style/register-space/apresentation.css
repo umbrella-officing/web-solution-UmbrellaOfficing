@@ -13,6 +13,7 @@ main{
     align-items: center;
 }
 
+
 #apresentation_section {
     display: flex;
     justify-content: center;
@@ -23,6 +24,31 @@ main{
 #apresentation_section > div {
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+nav{
+    position: absolute;
+    left: 0;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+nav a, nav li{
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav a:first-child:hover{
+    text-decoration: underline;
+}
+
+.breadcrumb{
+    display: flex;
+    list-style: none;
+    width: 105%;
+    justify-content: space-between;
 }
 
 #apresentation_section > div > div {

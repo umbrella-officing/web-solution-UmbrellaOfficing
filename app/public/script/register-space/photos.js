@@ -1,28 +1,57 @@
-const pictureInput = document.querySelector("#picture-input");
-const pictureImage = document.querySelector(".picture-image");
-const pictureImageTxt = "Escolha uma imagem";
-// pictureImage.innerHTML = pictureImageTxt;
+const firstPicture = document.querySelector('#photo1');
+const renderElement = document.querySelector('.renderElement');
+const areaTxt = 'Adicionar foto +';
+const advance = document.getElementById("#advanceButton");
+// renderElement.innerHTML = areaTxt;
 
-pictureInput.addEventListener("change", function(e){
-    const inputTarget = e.target;
-    const file = inputTarget.files[0];
+firstPicture.addEventListener('change', function(e){
+    const pictureTarget = e.target;
+    const file = pictureTarget.files[0];
 
-    if (file){
+    if(file){
         const reader = new FileReader();
+        reader.addEventListener('load', function(e){
+            const thisReader = e.target;
 
-        reader.addEventListener("load", function(e){
-            const readerTarget = e.target;
+            const img = document.createElement('img');
+            img.src = thisReader.result;
+            img.classList.add('pictureImg');
 
-            const img = document.createElement("img");
-            img.scr = readerTarget.result;
-            img.classList.add("upImg");
-            pictureImage.innerHTML = "";
+            renderElement.appendChild(img)
 
-            pictureImage.appendChild(img)
-        });
-
-        reader.readAsDataURL(file); 
-    } else{
-        // pictureImage.innerHTML = pictureImageTxt;
+            advance.style.background = "var(scale-2-purple)";
+        })
+        reader.readAsDataURL(file)
+    } 
+    
+    else{
+        renderElement.innerHTML = areaTxt;
     }
 })
+
+// const secondPicture = document.querySelector('#photo2');
+// const renderElement = document.querySelector('.renderElement');
+// renderElement.innerHTML = areaTxt;
+
+// secondPicture.addEventListener('change', function(e){
+//     const pictureTarget = e.target;
+//     const file = pictureTarget.files[0];
+
+//     if(file){
+//         const reader = new FileReader();
+//         reader.addEventListener('load', function(e){
+//             const thisReader = e.target;
+
+//             const img = document.createElement('img');
+//             img.src = thisReader.result;
+//             img.classList.add('pictureImg');
+
+//             renderElement.appendChild(img)
+//         })
+//         reader.readAsDataURL(file)
+//     } 
+    
+//     else{
+//         renderElement.innerHTML = areaTxt;
+//     }
+// })
