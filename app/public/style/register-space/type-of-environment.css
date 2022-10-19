@@ -187,7 +187,7 @@ h1{
     border-radius: 15px;
     box-sizing: border-box;
     width: calc(50% - 3%);
-    padding: 35px 10px 45px 10px;
+    padding: 22px 10px 45px 10px;
 }
 
 .space-box{
@@ -205,6 +205,8 @@ h1{
     width: 95%;
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 15px;
+    
 }
 
 #second > div > div > div p{
@@ -234,7 +236,7 @@ h1{
     background-color: var(--gray-border);
     color: var(--white);
     font-weight: 600;
-    font-size: 20px;
+    font-size: 17.5px;
     padding: 0;
     /* align-self: flex-end; */
 }
@@ -323,7 +325,7 @@ article > div p{
     transition: .3s ease;
     width: 95px;
     height: 40px;
-    background-color: var(--scale-3-gray);
+    background-color: var(--scale-2-gray);
     border: none;
     border-radius: 20px;
     color: var(--text-1-black);

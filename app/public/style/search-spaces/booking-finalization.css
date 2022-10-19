@@ -1,0 +1,153 @@
+main{
+    padding-top: 145px;
+    color: var(--text-1-black);
+
+}
+
+#booking-finalization_section{
+    flex-direction: column;
+    align-items: center;
+}
+
+#booking-finalization_section > div{
+    justify-content: space-between;
+}
+
+#portionOfpage{
+    width: 58%;
+}
+
+#booking-finalization_section > div  h1{
+    font-size: 25px;
+    color: var(--text-1-black);
+    margin-top: 25px;
+}
+
+#pay-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+#booking-finalization_section > div  h2{
+    font-size: 18px;
+    margin: 25px 0 20px 0;
+}
+
+.field{
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+    height: 40px;
+    padding-left: 20px;
+}
+
+#months{
+    font-family: 'Montserrat';
+}
+
+#holder-div{
+    display: grid;
+    gap: 16px;
+}
+
+#adress-grid{
+    display: grid;
+    gap: 16px;
+}
+
+#adress-part{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 39px;
+}
+
+#price,
+#room-description {
+    display: flex;
+    flex-direction: column;
+    width: 262px;
+    height: fit-content;
+    border: 1px solid #d1d1d1;
+    border-bottom: none;
+    border-radius: 10px;
+}
+
+#price>div,
+#room-description>div {
+    width: 77%;
+    align-self: center;
+}
+
+#price h5,
+#room-description h5 {
+    font-weight: 400;
+    margin: 23px 0 10px 0;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+}
+
+#price h5 span {
+    font-size: 22px;
+    margin: 0;
+    font-weight: 600;
+}
+
+#price>div ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+#price ul li:nth-child(2) span {
+    margin: 0;
+}
+
+#price ul li:last-child {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+#result {
+    display: flex;
+    justify-content: space-between;
+}
+
+#result span {
+    font-size: 13px;
+}
+
+#price>button {
+    background: linear-gradient(180deg, #83019d, #650c85);
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    border-radius: 0 0 10px 10px;
+    font-weight: 600;
+}
+
+#clear-data {
+    margin: 20px 0 25px 0;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid var(--scale-12-red);
+    background: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--scale-12-red);
+}
+
+footer{
+    width: 100%;
+}
+
+footer:nth-child(2){
+    margin-top: 105px;
+}
