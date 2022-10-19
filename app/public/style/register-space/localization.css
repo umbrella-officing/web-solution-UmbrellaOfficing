@@ -12,6 +12,7 @@ main{
 .default_margin{
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 #localization_section{
@@ -98,10 +99,6 @@ iframe{
     height: 100%;
     z-index: 1;
     cursor: pointer
-}
-
-iframe:hover #encompass-form > form{
-    opacity: 0;
 }
 
 #encompass-form > form{
@@ -223,4 +220,94 @@ iframe:hover #encompass-form > form{
     color: #4E4AFF;
     height: 30px;
     width: 100%;
+}
+
+#second-step{
+    background: #FFF;
+    padding: 32px 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+#second-step h2{
+    font-size: 18px;
+    color: var(--scale-2-purple);
+    margin-bottom: 15px;
+}
+
+.inputDiv{
+    width: 100%;
+    position: relative;
+}
+
+.inputDiv:nth-child(2), .inputDiv:nth-child(3){
+    display: none;
+}
+
+.inputDiv:nth-child(2){
+    margin-top: 15px;
+}
+
+.inputDiv > input{
+    width: calc(100% - 18px);
+    border-radius: 10px;
+    border: 1px solid var(--gray-border);
+    padding: 9px 9px 9px 12px;
+}
+
+.inputDiv img{
+    position: absolute;
+    top: 6px;
+    right: 12px;
+}
+
+#addMore{
+    margin-top: 20px;
+    background-color: transparent;
+    font-weight: 600;
+    border: none;
+    font-size: 12px;
+    text-decoration: underline;
+    color:#4E4AFF;
+    transition: .2s ease;
+}
+
+#addMore:hover{
+    color:rgb(49, 47, 190)
+    
+}
+
+#return{
+    width: 100%;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 10px;
+    color: #4E4AFF;
+    font-weight: 600;
+    padding: 5px 0;
+    margin-top: 20px;
+}
+
+#advance{
+    width: 186px;
+    height: 36px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--gray-border);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 25px;
+    z-index: 3;
+    box-shadow: 6px 6px 10px rgba(44, 44, 44, 0.37);
+}
+
+#btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
 }
