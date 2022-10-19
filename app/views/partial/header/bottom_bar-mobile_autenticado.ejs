@@ -1,0 +1,94 @@
+<div id="bottom_bar-mobile">
+    <nav>
+      <ul>
+        <li>
+            <a href="/">
+              <i class='bx bx-home icon icon-color'></i>
+            </a>
+        </li>
+        <li> 
+            <a href="/favoritos">
+                <i class='bx bx-heart icon'></i>
+            </a>
+        </li>
+        <li>
+          <i class='bx bx-search search'></i>
+        </li>
+        <div>
+            <a href="/central-de-ajuda"><i class='bx bx-info-circle icon'></i></a>
+        </div>
+        <li class="bars"> 
+            <i class='bx bx-menu icon'></i> 
+        </li> 
+      </ul>
+    </nav>
+
+    <div id="menu_mobile">
+        <div class="user">
+            <div class="picture_edit">
+                <div id="mask_image_profile">
+                <%if(autenticado.profile_picture != null){%>
+                    <img class="image_profile" src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">                                   
+                <%}%>
+    
+                <%if(autenticado.profile_picture == null){%>
+                    <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">                               
+                <%}%>
+                </div>   
+                <i class="fa-solid fa-pen pictureProfile list"></i>
+            </div>
+            <div id="user_informations">
+                <h3><%=autenticado.name%></h3>
+                <span><%=autenticado.profession%></span>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="/meu-perfil">
+                        <i class="bx bx-user icon"></i>
+                        Meu perfil 
+                    </a>
+                </li>
+                <li>
+                    <a href="/dados-pessoais">
+                        <i class='bx bx-wallet icon-dif' ></i>
+                        Dados pessoais
+                    </a>
+                </li>
+                <li>
+                    <a href="/minhas-reservas">
+                        <i class='bx bx-calendar-check icon-dif' ></i>
+                        Minhas reservas 
+                    </a>
+                </li>
+                <li>
+                    <a href="/meus-anuncios">
+                        <i class="fa-solid fa-bullhorn icon-dif announcer"></i>
+                        Meus anúncios
+                    </a>
+                </li>
+                <li>
+                    <a href="/calendario">
+                        <i class="bx bx-calendar icon-dif"></i>
+                        Calendário
+                    </a>
+                </li>
+                <li>
+                    <a href="/calendario">
+                        <i class='bx bx-bell icon-dif' ></i>
+                        Notificações
+                    </a>
+                </li> 
+            </ul>
+
+            <button id="log_out">
+                <a href="/sair">
+                Sair
+                <i class='bx bx-log-out bx-rotate-180 icon'></i>
+                </a>
+            </button>
+
+        </div>
+    </div>
+</div>
