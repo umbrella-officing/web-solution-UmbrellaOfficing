@@ -60,6 +60,7 @@ h2{
     padding-bottom: 20px;
     display:  flex;
     align-items: center;
+    width: 100%;
 }
 
 #space-photos > :first-child img{
