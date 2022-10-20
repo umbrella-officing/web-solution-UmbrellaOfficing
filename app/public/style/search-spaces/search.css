@@ -1146,11 +1146,12 @@ img[alt="chat"] {
 
   /*Filtro*/
   #box-mobile {
-    display: block;
+    display: flex;
+    margin-bottom: 25px;
     width: 86%;
   }
 
-  #box-mobile div button {
+  #box-mobile button {
     padding: 7px 30px;
     border: 0;
     border-radius: 45px;
@@ -1162,8 +1163,8 @@ img[alt="chat"] {
     font-size: 13px;
     font-weight: 600;
     color: #fff;
+    margin-right: 20px;
     align-self: flex-start;
-    margin-bottom: 25px;
     background-color: #748fe0ad;
   }
 
@@ -1178,10 +1179,8 @@ img[alt="chat"] {
     justify-content: center;
   }
 
-  .filter-mobile {
-    position: fixed;
-    bottom: 40px;
-    z-index: 8888;
+  .filter-mobile { 
+    bottom: 40px; 
     background-color: var(--scale-2-purple);
     font-size: 13px;
     font-weight: 600;
@@ -1276,7 +1275,7 @@ img[alt="chat"] {
     width: 100%;
   }
 
-  #box-mobile div button {
+  #box-mobile button {
     padding: 7px 34px;
     border: 0;
     border-radius: 45px;
@@ -1288,8 +1287,8 @@ img[alt="chat"] {
     font-size: 14px;
     font-weight: 600;
     color: #fff;
-    align-self: flex-start;
-    margin-bottom: 25px;
+    align-self: flex-start; 
+    margin-right: 20px;
     background-color: #748fe0ad;
   }
 
@@ -1298,16 +1297,15 @@ img[alt="chat"] {
     background: var(--scale-6-blue);
   }
 
-  #box-mobile div:nth-child(2) {
+  #box-mobile {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: flex; 
+    align-items: center;
+    margin-bottom: 25px;
   }
 
-  .filter-mobile {
-    position: fixed;
-    bottom: 40px;
-    z-index: 8888;
+  .filter-mobile { 
+    bottom: 40px; 
     background-color: var(--scale-2-purple);
     font-size: 14px;
     font-weight: 600;
