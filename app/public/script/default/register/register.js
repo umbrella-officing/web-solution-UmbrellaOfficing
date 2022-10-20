@@ -98,10 +98,7 @@ $(document).ready(function(){
             next_fs.show(); 
             current_fs.hide();
         }
-    });
-
-    
-    
+    }); 
 });
 
 

@@ -96,14 +96,14 @@ $(document).ready(function() {
                     else {
                         //CEP pesquisado não foi encontrado.
                         limpa_formulário_cep();
-                        alert("CEP não encontrado.");
+                        message("CEP não encontrado.");
                     }
                 });
             } //end if.
             else {
                 //cep é inválido.
                 limpa_formulário_cep();
-                alert("Formato de CEP inválido.");
+                message("Formato de CEP inválido.");
             }
         } //end if.
         else {
@@ -111,4 +111,96 @@ $(document).ready(function() {
             limpa_formulário_cep();
         }
     });
+});
+
+
+$(document).ready(function(){
+    $.validator.addMethod("phoneRegex", function(value, element) {
+        return /^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$/.test(value);
+    }, "Número inválido");
+
+    // $validator.addMethod("rgRegex", function RgFormat(v0,errChar='?'){
+    //     var v = v0.toUpperCase().replace(/[^\dX]/g,'');
+    //     return (v.length==8 || v.length==9)?
+    //        v.replace(/^(\d{1,2})(\d{3})(\d{3})([\dX])$/,'$1.$2.$3-$4'):
+    //        (errChar+v0)
+    //     ;
+    // } 
+
+    $("#edit_ad").click(function(){
+        var form = $("#personal_date");
+        console.log(form)
+        form.validate({
+            errorElement: 'span',
+            errorClass: 'help-block',
+            highlight: function(element, errorClass, validClass) {
+                $(element).closest('.form-group').addClass("has-error");
+            },
+            unhighlight: function(element, errorClass, validClass) {
+                $(element).closest('.form-group').removeClass("has-error");
+            },
+            rules: {
+                gender_date:{
+                    required: true
+                },
+                profession_date:{
+                    required: true
+                },
+                rg_date:{
+                    required: true
+                },
+                orgao_exp_date:{
+                    required: true
+                },
+                phone_date:{
+                    required: true,
+                    phoneRegex: true
+                },
+                cell_date:{
+                    required: true,
+                    phoneRegex: true
+                },
+                cep_date:{ 
+                    required: true
+                },
+                number_date:{
+                    required: true
+                }
+            },
+            messages: {
+                gender_date:{
+                    required: "Escolha uma opção"
+                },
+                profession_date:{
+                    required:"Preencha esse campo"
+                },
+                rg_date:{
+                    required:"Preencha esse campo"
+                },
+                orgao_exp_date:{
+                    required:"Preencha esse campo"
+                },
+                phone_date: {
+                    required: "Preencha esse campo"
+                },
+                cell_date: {
+                    required: "Preencha esse campo"
+                },
+                cep_date:{ 
+                    required: "Preencha esse campo"
+                },
+                number_date: {
+                    required: "Preencha esse campo"
+                }
+            }
+        });
+        if (form.valid() === true){
+            if ($('#test1').is(":visible")){
+                current_fs = $('#test1');
+                next_fs = $('#test2');
+            }
+            next_fs.show(); 
+            current_fs.hide();
+        }
+    }); 
 });
