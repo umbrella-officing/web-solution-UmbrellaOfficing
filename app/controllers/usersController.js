@@ -245,7 +245,8 @@ module.exports.renderPersonalDates = (application, req, res) => {
         road: result[0].end_rua,
         number: result[0].end_rua_num,
         neighborhood: result[0].end_bairro, 
-        city_state: result[0].end_cidade,
+        city: result[0].end_cidade, 
+        state: result[0].end_estado, 
         email: result[0].email_user,
         // senha_user: bcrypt.hashSync(req.body.password, salt),
         id_user: req.session.id_user
@@ -275,7 +276,8 @@ module.exports.registerPersonalDates = (application, req, res) => {
     end_rua: req.body.road,
     end_rua_num: req.body.number,
     end_bairro: req.body.neighborhood,
-    end_cidade_estado: req.body.city_state, 
+    end_cidade: req.body.city, 
+    end_estado: req.body.state,
     id_user: req.session.id_user
   };
 
