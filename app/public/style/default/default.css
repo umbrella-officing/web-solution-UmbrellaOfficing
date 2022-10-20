@@ -186,6 +186,7 @@ header > div {
 .pac-container{
     top: 165px !important;
     width: 270px !important;
+    position: fixed !important;
     border-radius: 19px;
     font-family: var(--font-primary);
 }
@@ -196,8 +197,7 @@ header > div {
 }
 
 .pac-container::after{
-    content: '';
-    background: transparent;
+    background: transparent !important;
 }
 
 .container_search_input form{
