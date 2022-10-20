@@ -58,7 +58,7 @@
 
 #personal-date_section1 form input:disabled {
     cursor: default;
-    background-color: #f0ffff66;
+    background-color: #f6f5fa6e;
     color: #333;
     border-color: var(--gray-border);
 }

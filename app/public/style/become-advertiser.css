@@ -538,7 +538,7 @@ iframe{
     height: 100%;
 } */
 
-#become-advertiser_section3 > div > div{
+/* #become-advertiser_section3 > div > div{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -644,6 +644,107 @@ iframe{
     margin-bottom: 10px;
     position: relative;
     padding-left: 18px;
+} */
+
+#become-advertiser_section3 {
+    position: relative;
+    margin: 105px 0;
+}
+
+#become-advertiser_section3>div {
+    width: calc(100% - 16px);
+    max-width: 1160px;
+    justify-content: space-between;
+}
+
+#become-advertiser_section3>div h2{
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    max-width: 300px;
+}
+
+#section3-slide {
+    padding: 106.5px 0;
+    width: 50%;
+    max-width: 738px; 
+}
+
+#section3-slide .slider {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    list-style: none;
+}
+
+.slider-cont div .cv{ 
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--scale-3-blue);
+}
+
+.slider-cont div h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.slider-cont ul {
+    list-style: none;
+}
+
+.check {
+    font-size: 18px; 
+    color: var(--scale-3-blue);
+}
+
+.slider-cont ul div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    display: flex !important;
+    width: fit-content;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    height: fit-content;
+    right: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: var(--scale-3-blue);
+} 
+
+.arrows .slick-arrow {
+    display: none;
+}
+
+#section3-slide .slider li { 
+    width: 100%; 
 }
 
 #become-advertiser_section4{
@@ -674,8 +775,7 @@ iframe{
     text-align: center;
     max-width: 750px;
     font-size: 40px;
-    color: #Fff;
-    /* color: var(--white); */
+    color: #Fff; 
         
 }
 

@@ -45,7 +45,7 @@ $to.datepicker( "option", "dayNamesMin", [ "Dom", "Seg", "Ter", "Qua", "Qui", "S
 function setDate(element) {
   var date;
   try {
-    date = $.datepicker.parseDate("DD-MM-YYYY", element.value);
+    $(".teste").datepicker("option","dateFormat","dd-mm-yy")
   } catch (error) {
     date = null;
   }

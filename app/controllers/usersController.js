@@ -232,25 +232,25 @@ module.exports.renderPersonalDates = (application, req, res) => {
       if (error) throw error
 
       autenticado = { 
-        name: result[0].nome_user,
-        birth_date: result[0].dt_nasc_user,
-        gender: result[0].genero_user,
-        profession: result[0].profissao,
-        cpf: result[0].cpf_user,
-        rg: result[0].rg_user,
+        name_date: result[0].nome_user,
+        birth: result[0].dt_nasc_user,
+        // gender: result[0].genero_user,
+        profession_date: result[0].profissao,
+        cpf_date: result[0].cpf_user,
+        rg_date: result[0].rg_user,
         orgao_exp: result[0].orgao_expedidor,
-        phone: result[0].telefone_user,
-        cell: result[0].celular_user,
-        cep: result[0].end_cep,
-        road: result[0].end_rua,
-        number: result[0].end_rua_num,
-        neighborhood: result[0].end_bairro, 
-        city: result[0].end_cidade, 
-        state: result[0].end_estado, 
-        email: result[0].email_user,
-        // senha_user: bcrypt.hashSync(req.body.password, salt),
-        id_user: req.session.id_user
+        phone_date: result[0].telefone_user,
+        cell_date: result[0].celular_user,
+        cep_date: result[0].end_cep,
+        road_date: result[0].end_rua,
+        number_date: result[0].end_rua_num,
+        neighborhood_date: result[0].end_bairro, 
+        city_date: result[0].end_cidade, 
+        state_date: result[0].end_estado, 
+        email_date: result[0].email_user
       };
+
+      console.log(autenticado)
 
       res.render("pages/my-account/personal-date", autenticado);
 
@@ -268,17 +268,18 @@ module.exports.registerPersonalDates = (application, req, res) => {
   const userDao = new application.app.models.UsersDAO(connection);
 
   var dadosForm = {
-    rg_user: req.body.rg,
-    genero_user: req.body.gender,
-    orgao_exp: req.body.orgao_expedidor,
-    telefone_user: req.body.phone,
-    end_cep: req.body.cep,
-    end_rua: req.body.road,
-    end_rua_num: req.body.number,
-    end_bairro: req.body.neighborhood,
-    end_cidade: req.body.city, 
-    end_estado: req.body.state,
-    id_user: req.session.id_user
+    // genero_user: req.body.gender,
+    email_user: req.body.email_date,
+    profissao: req.body.profession_date,
+    rg_user: req.body.rg_date,
+    orgao_exp: req.body.orgao_exp,
+    telefone_user: req.body.phone_date,
+    end_cep: req.body.cep_date,
+    end_rua: req.body.road_date,
+    end_rua_num: req.body.number_date,
+    end_bairro: req.body.neighborhood_date,
+    end_cidade: req.body.city_date, 
+    end_estado: req.body.state_date
   };
 
   console.log(dadosForm);

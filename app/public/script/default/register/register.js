@@ -102,8 +102,8 @@ $(document).ready(function(){
 });
 
 
-$(document).ready(function () {  
-    $("#birth_date").mask("99/99/9999");
+$(document).ready(function () {   
+    // $("#cpf").mask("000.000.000-00"); 
     $("#phone").mask("(00) 0000-0009"); 
     $("#phone").blur(function (event) {
 

@@ -121,7 +121,7 @@
 
                 <label for="birth_date">
                   Data de nascimento
-                  <input type="date" id="birth_date">
+                  <input type="text" id="birth_date">
                 </label>
 
                 <label for="phone">
@@ -195,13 +195,13 @@
                         %>
             <h2>Informações pessoais</h2>
             <div>
-              <label for="name">Nome</label>
-              <input type="text" class="outline-focus" name="name" id="name" value="<%=autenticado.name%>">
+              <label for="name_date">Nome</label>
+              <input type="text" class="outline-focus" name="name_date" id="name" value="<%=autenticado.name_date%>" disabled>
             </div>
             <div class="personal-date-grid2">
               <div>
-                <label for="birth-date">Data de nascimento</label>
-                <input type="text" class="outline-focus" name="birth-date" id="birth-date" value="<%=autenticado.birth_date%>">
+                <label for="birth">Data de nascimento</label>
+                <input type="text" class="outline-focus" name="birth" id="birth" value="<%=autenticado.birth%>" disabled>
               </div>
               <div class="select-box">
                 <label for="gender">Sexo</label>
@@ -224,80 +224,75 @@
               </div>
             </div>
             <div>
-              <label for="profession">Profissão</label>
-              <input type="text" class="outline-focus" name="profession" id="profession_date" value="<%=autenticado.profession%>" />
+              <label for="profession_date">Profissão</label>
+              <input type="text" class="outline-focus" name="profession_date" id="profession_date" value="<%=autenticado.profession_date%>" />
             </div>
 
             <h2>Identificação</h2>
             <div>
-              <label for="cpf">CPF</label>
-              <input type="text" class="outline-focus" name="cpf" id="cpf_date" value="<%=autenticado.cpf%>" />
+              <label for="cpf_date">CPF</label>
+              <input type="text" class="outline-focus" name="cpf_date" id="cpf_date" value="<%=autenticado.cpf_date%>" disabled />
             </div>
             <div class="personal-date-grid2">
               <div>
-                <label for="rg">RG</label>
-                <input type="text" class="outline-focus" name="rg" id="rg_date" value="<%=autenticado.rg%>" />
+                <label for="rg_date">RG</label>
+                <input type="text" class="outline-focus" name="rg_date" id="rg_date" value="<%=autenticado.rg_date%>" />
               </div>
               <div>
-                <label for="orgao-exp">Orgão Expedidor</label>
-                <input type="text" class="outline-focus" name="orgao-exp" id="orgao-exp_date" value="<%=autenticado.orgao_exp%>" />
+                <label for="orgao_exp">Orgão Expedidor</label>
+                <input type="text" class="outline-focus" name="orgao_exp" id="orgao-exp_date" value="<%=autenticado.orgao_exp%>" />
               </div>
             </div>
 
             <h2>Contato</h2>
             <div class="personal-date-grid2">
               <div>
-                <label for="phone">Telefone</label>
-                <input type="text" class="outline-focus" name="phone" id="phone_date" value="<%=autenticado.phone%>" />
+                <label for="phone_date">Telefone</label>
+                <input type="text" class="outline-focus" name="phone_date" id="phone_date" value="<%=autenticado.phone_date%>" />
               </div>
               <div>
-                <label for="cell">Celular</label>
-                <input type="text" class="outline-focus" name="cell" id="cell_date" value="<%=autenticado.cell%>" />
+                <label for="cell_date">Celular</label>
+                <input type="text" class="outline-focus" name="cell_date" id="cell_date" value="<%=autenticado.cell_date%>" />
               </div>
             </div>
 
             <h2>Endereço</h2>
             <div>
-              <label for="cep">CEP</label>
-              <input type="text" class="outline-focus" name="cep" id="cep_date" value="<%=autenticado.cep%>" maxlength="8" minlength="8" required />
+              <label for="cep_date">CEP</label>
+              <input type="text" class="outline-focus" name="cep_date" id="cep_date" value="<%=autenticado.cep_date%>" maxlength="8" minlength="8" required />
             </div>
             <div class="personal-date-grid2-dif">
               <div>
-                <label for="road">Rua</label>
-                <input type="text" class="outline-focus" name="road" id="road_date" value="<%=autenticado.road%>" />
+                <label for="road_date">Rua</label>
+                <input type="text" class="outline-focus" name="road_date" id="road_date" value="<%=autenticado.road_date%>" />
               </div>
               <div>
-                <label for="number">Nº</label>
-                <input type="text" class="outline-focus" name="number" id="number_date" value="<%=autenticado.number%>" />
+                <label for="number_date">Nº</label>
+                <input type="text" class="outline-focus" name="number_date" id="number_date" value="<%=autenticado.number_date%>" />
               </div>
             </div>
             <div class="personal-date_section1_form-colum2">
               <div>
-                <label for="neighborhood">Bairro</label>
-                <input type="text" class="outline-focus" name="neighborhood" id="neighborhood_date" value="<%=autenticado.neighborhood%>" />
+                <label for="neighborhood_date">Bairro</label>
+                <input type="text" class="outline-focus" name="neighborhood_date" id="neighborhood_date" value="<%=autenticado.neighborhood_date%>" />
               </div>
               <div class="personal-date-grid2">
                 <div>
-                  <label for="phone">Cidade</label>
-                  <input type="text" class="outline-focus" name="city" id="city_date" value="<%=autenticado.city%>" />
+                  <label for="city_date">Cidade</label>
+                  <input type="text" class="outline-focus" name="city_date" id="city_date" value="<%=autenticado.city_date%>" />
                 </div>
                 <div>
-                  <label for="cell">Estado</label>
-                  <input type="text" class="outline-focus" name="state" id="state_date" value="<%=autenticado.state%>" />
+                  <label for="state_date">Estado</label>
+                  <input type="text" class="outline-focus" name="state_date" id="state_date" value="<%=autenticado.state_date%>" />
                 </div>
               </div>
             </div>
 
             <h2>Informações para login</h2>
             <div>
-              <label for="email">Email</label>
-              <input class="outline-focus" type="email" name="email" id="email" value="<%=autenticado.email%>" />
-            </div>
-            <div>
-              <label for="password">Senha</label>
-              <input class="outline-focus" type="password" name="password" id="password" />
-            </div>
-
+              <label for="email_date">Email</label>
+              <input class="outline-focus" type="email" name="email_date" id="email" value="<%=autenticado.email_date%>" />
+            </div> 
             <div id="justify">
               <button type="submit" id="edit_ad">Editar informações</button>
             </div>

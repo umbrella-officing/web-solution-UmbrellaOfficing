@@ -2,220 +2,189 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style/default/default.css">
-    <link rel="stylesheet" href="style/become-advertiser.css">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="script/become-advertiser.js"></script>
-    </head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style/default/default.css">
+  <link rel="stylesheet" href="style/become-advertiser.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="script/become-advertiser.js"></script>
+</head>
 
 <body>
-    <header id="header" class="container_margin_default">
-        <div class="default_margin">
-            <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
+  <header id="header" class="container_margin_default">
+    <div class="default_margin">
+      <a href="/"> <img src="images/default/logo.svg" alt="logo"> </a>
+    </div>
+  </header>
+
+  <nav id="bottom-bar_mobile">
+    <ul>
+      <li>
+        <a href="/">
+          <i class='bx bx-home icon icon-color'></i>
+        </a>
+      </li>
+      <li class="list popUp-login-signUp">
+        <div class="login icon">
+          <i class='bx bx-user'></i>
+          <i class='bx bx-plus'></i>
         </div>
-    </header>
+      </li>
+      <li>
+        <i class='bx bx-search search'></i>
+      </li>
+      <li class="popUp-login-signUp list">
+        <i class='bx bx-user icon'></i>
+      </li>
+      <div>
+        <a href="/central-de-ajuda"><i class='bx bx-info-circle icon'></i></a>
+      </div>
+    </ul>
+  </nav>
 
-    <nav id="bottom-bar_mobile">
-        <ul>
-            <li>
-                <a href="/">
-                    <i class='bx bx-home icon icon-color'></i>
-                </a>
-            </li>
-            <li class="list popUp-login-signUp">
-                <div class="login icon">
-                    <i class='bx bx-user'></i>
-                    <i class='bx bx-plus'></i>
-                </div>
-            </li>
-            <li>
-                <i class='bx bx-search search'></i>
-            </li>
-            <li class="popUp-login-signUp list">
-                <i class='bx bx-user icon'></i>
-            </li>
+  <div id='box_black'></div>
+
+  <main>
+    <section class="container_margin_default" id="become-advertiser_section1">
+      <div>
+        <img src="images/become-advertiser/bg-section1.jpg" alt="Espaço adaptado">
+        <div class="default_margin">
+          <div>
+            <h1>Veja como é <strong>simples</strong> anunciar um espaço adaptado!</h1>
+          </div>
+          <div id="cta-div">
+            <h3>Anuncie seu officing</h3>
+            <button>Começar agora</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container_margin_default" id="become-advertiser_section2">
+      <div class="default_margin">
+        <div>
+          <h2>Se una à comunidade. <br> Nós unimos a comunidade a você.</h2>
+          <p>Confira alguns clientes próximos a sua localização</p>
+
+          <div class="container_search-localization">
+            <input id="search-localization_txt" placeholder="Digite seu endereço"></input>
             <div>
-                <a href="/central-de-ajuda"><i class='bx bx-info-circle icon'></i></a>
+              <img src="images/default/search.svg" alt="Pesquisa">
             </div>
-        </ul>
-    </nav>
+          </div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29559.980312021034!2d-43.603143443787175!3d-22.164165720622375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x98d913ebf99553%3A0xa4247e08942606a9!2sRio%20das%20Flores%2C%20RJ%2C%2027660-000!5e0!3m2!1spt-BR!2sbr!4v1661111619523!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
 
-    <div id='box_black'></div>
-
-    <main>
-        <section class="container_margin_default" id="become-advertiser_section1">
-            <div>
-                 <img src="images/become-advertiser/bg-section1.jpg" alt="Espaço adaptado">
-                <div class="default_margin">
-                    <div>
-                        <h1>Veja como é <strong>simples</strong> anunciar um espaço adaptado!</h1>
-                    </div>    
-                    <div id="cta-div">
-                        <h3>Anuncie seu officing</h3>
-                        <button>Começar agora</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="container_margin_default" id="become-advertiser_section2">
-            <div class="default_margin">
+    <section class="container_margin_default" id="become-advertiser_section3">
+      <div class="default_margin">
+        <h2>Entenda o que você pode anunciar</h2>
+        <div id="section3-slide">
+          <ul class="slider">
+            <li>
+              <div class="slider-cont">
                 <div>
-                    <h2>Se una à comunidade. <br> Nós unimos a comunidade a você.</h2>
-                    <p>Confira alguns clientes próximos a sua localização</p>
-                    
-                    <div class="container_search-localization">
-                        <input id="search-localization_txt" placeholder="Digite seu endereço"></input>
-                        <div>
-                            <img src="images/default/search.svg" alt="Pesquisa">
-                        </div>
-                    </div>
+                  <i class="fa-solid fa-house cv"></i>
+                  <h3>Espaços informais ou adaptáveis</h3>
                 </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29559.980312021034!2d-43.603143443787175!3d-22.164165720622375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x98d913ebf99553%3A0xa4247e08942606a9!2sRio%20das%20Flores%2C%20RJ%2C%2027660-000!5e0!3m2!1spt-BR!2sbr!4v1661111619523!5m2!1spt-BR!2sbr"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
 
-        <section class="container_margin_default" id="become-advertiser_section3">
-            <div class="default_margin">
-               
+                <ul>
                 <div>
-                    <h2>Entenda o que você pode anunciar</h2>
-                    <div id="section3-slide">
-                        <div id="step-indication">
-                            <span>1 de 2</span>
-                            <div id="align-balls">
-                                <div class="slide-ball"></div>
-                                <div class="slide-ball"></div>
-                            </div>
-                        </div>
+                  <li>
+                    <i class="fa-solid fa-check check"></i>
+                    Confira espaço e recursos para trabalhadores que necessitam
+                  </li>
 
-                        <div id="slide-step1" class="slide">
-                        <div class="align-slideTitle">
-                        <i class='bx bx-building-house' undefined ></i>
-                        <h3>Espaços informais ou adaptáveis</h3>
-                        </div>
-
-                        <ul>
-                            <li>
-                                <img class="check" id="check1" src="images/become-advertiser/ok.png" alt="Check">
-                                Confira espaço e recursos para trabalhadores que necessitam
-                            </li>
-
-                            <li>
-                                <img class="check" id="check1" src="images/become-advertiser/ok.png" alt="Check">
-                                Abra as portas para uma nova fonte de renda
-                            </li>
-
-                            <li>
-                                <img class="check" id="check1" src="images/become-advertiser/ok.png" alt="Check">
-                                Adapte um espaço desocupado em uma sala de trabalho
-                            </li>
-
-                            <li>
-                                <img class="check" id="check1" src="images/become-advertiser/ok.png" alt="Check">
-                                Conheça novos profissionais, amplie sua rede de contatos
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div id="slide-step2" class="slide">
-                        <div class="align-slideTitle">
-                        <i class='bx bx-buildings'></i>
-                        <h3>Espaços corporativos</h3>
-                    </div>
-                        <ul>
-                    
-                            <li>
-                                <img class="check" id="check1" src="images/become-advertiser/ok.png" alt="Check">
-                                Confira espaço e recursos para outras empresas
-                            </li>
-
-                            <li>
-                                <img class="check" id="check1" src="images/become-advertiser/ok.png" alt="Check">
-                                Embarque na nova tendência do mundo do trabalho
-                            </li>
-                         
-                            <li>
-                                <img class="check" id="check1" src="images/become-advertiser/ok.png" alt="Check">
-                                Faça seu espaço ocioso gerar dinheiro
-                            </li>
-
-                            
-                        </ul>
-                    </div>
-
-                    <!-- <div id="section3-slide">
-                        <i class='bx bx-buildings' ></i>
-                        <p>Espaços informais ou adaptáveis</p>
-<<<<<<< HEAD
-=======
-
->>>>>>> 09bb149cbd1a174bcf0baaf8bf7e304708ea5f23
-                        <ul>
-                            <li>
-                                <img class="check" id="check1" src="images/become-advertiser/ok.png" alt="Check">
-                                Confira espaço e recursos para trabalhadores que necessitam
-                            </li>
-<<<<<<< HEAD
-=======
-
->>>>>>> 09bb149cbd1a174bcf0baaf8bf7e304708ea5f23
-                            <li>
-                                <img class="check" id="check1" src="images/become-advertiser/ok.png" alt="Check">
-                                Abra as portas para uma nova fonte de renda
-                            </li>
-<<<<<<< HEAD
-=======
-
->>>>>>> 09bb149cbd1a174bcf0baaf8bf7e304708ea5f23
-                            <li>
-                                <img class="check" id="check1" src="images/become-advertiser/ok.png" alt="Check">
-                                Adapte um espaço desocupado em uma sala de trabalho
-                            </li>
-<<<<<<< HEAD
-=======
-
->>>>>>> 09bb149cbd1a174bcf0baaf8bf7e304708ea5f23
-                            <li>
-                                <img class="check" id="check1" src="images/become-advertiser/ok.png" alt="Check">
-                                Conheça novos profissionais, amplie sua rede de contatos
-                            </li>
-                        </ul>
-                    </div> -->
+                  <li>
+                    <i class="fa-solid fa-check check"></i>
+                    Abra as portas para uma nova fonte de renda
+                  </li>
                 </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="container_margin_default" id="become-advertiser_section4">
-            <div class="default_margin">
                 <div>
-                    <div id="contrast"></div>
-                    <h2>Faça parte da <strong id="our">nossa</strong> comunidade <strong id="today">hoje</strong> mesmo!
-                    </h2>
-                    <button id="button_section4">Eu quero fazer parte</button>
-                </div>
-            </div>
-        </section>
+                  <li>
+                    <i class="fa-solid fa-check check"></i>
+                    Adapte um espaço desocupado em uma sala de trabalho
+                  </li>
 
-    </main> 
-    
-    <footer class="container_margin_default">
-        <%- include('../partial/footer.ejs')%>
-    </footer>
+                  <li>
+                    <i class="fa-solid fa-check check"></i>
+                    Conheça novos profissionais, amplie sua rede de contatos
+                  </li>
+                </div>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div class="slider-cont">
+                <div>
+                  <div>
+                    <i class="fa-solid fa-building cv"></i>
+                    <h3>Espaços Corporativos</h3>
+                  </div>
+                </div>
+
+                <ul>
+                  <div>
+                  <li>
+                    <i class="fa-solid fa-check check"></i>
+                    Confira espaço e recursos para outras empresas
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-check check"></i>
+                    Embarque na nova tendência do mundo do trabalho
+                  </li>
+                </div>
+
+                  <li>
+                    <i class="fa-solid fa-check check"></i>
+                    Faça seu espaço ocioso gerar dinheiro
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container_margin_default" id="become-advertiser_section4">
+      <div class="default_margin">
+        <div>
+          <div id="contrast"></div>
+          <h2>Faça parte da <strong id="our">nossa</strong> comunidade <strong id="today">hoje</strong> mesmo!
+          </h2>
+          <button id="button_section4">Eu quero fazer parte</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container_margin_default">
+    <%- include('../partial/footer.ejs')%>
+  </footer>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="script/default/header/header.js"></script>
+  <script src="script/default/register/register.js"></script>
+  <script src="script/default/header/autocomplete_api.js"></script>
+  <script src="script/default/header/date-picker.js"></script>
+  <script src="script/become-advertiser.js"></script> 
 
 </body>
 

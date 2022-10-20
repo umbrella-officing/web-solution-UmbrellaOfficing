@@ -18,7 +18,7 @@ optionsList.forEach(o => {
 /*Script Jquery adicionando as máscaras no formulário*/
 $(document).ready(function () {
     $("#cpf_date").mask("000.000.000-00");
-    $("#birth-date").mask("99/99/9999");
+    $("#birth").mask("99/99/9999");
     $("#rg_date").mask("999.999.999-W", {
 
         translation: {
@@ -119,13 +119,13 @@ $(document).ready(function(){
         return /^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$/.test(value);
     }, "Número inválido");
 
-    // $validator.addMethod("rgRegex", function RgFormat(v0,errChar='?'){
-    //     var v = v0.toUpperCase().replace(/[^\dX]/g,'');
-    //     return (v.length==8 || v.length==9)?
-    //        v.replace(/^(\d{1,2})(\d{3})(\d{3})([\dX])$/,'$1.$2.$3-$4'):
-    //        (errChar+v0)
-    //     ;
-    // } 
+    $validator.addMethod("rgRegex", function RgFormat(v0,errChar='?'){
+        var v = v0.toUpperCase().replace(/[^\dX]/g,'');
+        return (v.length==8 || v.length==9)?
+           v.replace(/^(\d{1,2})(\d{3})(\d{3})([\dX])$/,'$1.$2.$3-$4'):
+           (errChar+v0)
+        ;
+    });
 
     $("#edit_ad").click(function(){
         var form = $("#personal_date");
@@ -147,7 +147,8 @@ $(document).ready(function(){
                     required: true
                 },
                 rg_date:{
-                    required: true
+                    required: true,
+                    
                 },
                 orgao_exp_date:{
                     required: true
