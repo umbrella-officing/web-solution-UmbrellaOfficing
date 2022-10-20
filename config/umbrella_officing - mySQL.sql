@@ -32,7 +32,9 @@ fotos_user longblob,
 data_cadastro datetime
 ); 
 
-select*from usuarios;
+select*from usuarios; 
+
+delete from usuarios where id_user = 10;
 
 create table administradores (
 foto_admin longblob,
@@ -53,7 +55,12 @@ subcategoria_anun varchar(15),
 titulo_anun varchar(30),
 descricao_anun text,
 fotos_anun longblob,
-localizacao varchar(60),
+loc_cep varchar(11),
+loc_rua varchar(150),
+loc_rua_num varchar(10),
+loc_bairro varchar(50),
+loc_cidade varchar(50),
+loc_estado varchar(50),
 favoritado char(3),
 data_cadastro_anun datetime,
 id_user int,
