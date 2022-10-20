@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
@@ -189,7 +189,7 @@
         <section id="personal-date_section1">
           <h1>Meus dados pessoais</h1>
 
-          <form action="" method="post">
+          <form action="" method="post" id="personal_date">
             <% 
                              if(autenticado){  
                         %>
@@ -259,7 +259,7 @@
             <h2>Endereço</h2>
             <div>
               <label for="cep">CEP</label>
-              <input type="text" class="outline-focus" name="cep" id="cep_date" value="<%=autenticado.cep%>" />
+              <input type="text" class="outline-focus" name="cep" id="cep_date" value="<%=autenticado.cep%>" maxlength="8" minlength="8" required />
             </div>
             <div class="personal-date-grid2-dif">
               <div>
@@ -274,11 +274,17 @@
             <div class="personal-date_section1_form-colum2">
               <div>
                 <label for="neighborhood">Bairro</label>
-                <input type="text" class="outline-focus" name="neighborhood" id="bairro_date" value="<%=autenticado.neighborhood%>" />
+                <input type="text" class="outline-focus" name="neighborhood" id="neighborhood_date" value="<%=autenticado.neighborhood%>" />
               </div>
-              <div>
-                <label for=" city_state">Cidade | Estado</label>
-                <input type="text" class="outline-focus" name=" city_state" id="cidade_estado_date" value="<%=autenticado.city_state%>" />
+              <div class="personal-date-grid2">
+                <div>
+                  <label for="phone">Cidade</label>
+                  <input type="text" class="outline-focus" name="city" id="city_date" value="<%=autenticado.city%>" />
+                </div>
+                <div>
+                  <label for="cell">Estado</label>
+                  <input type="text" class="outline-focus" name="state" id="state_date" value="<%=autenticado.state%>" />
+                </div>
               </div>
             </div>
 
@@ -315,7 +321,7 @@
   <script src="script/my-account/personal-date.js"></script>
   <script src="script/default/header/autocomplete_api.js"></script>
   <script src="script/default/header/date-picker.js"></script>
-  
+
 </body>
 
 </html>
