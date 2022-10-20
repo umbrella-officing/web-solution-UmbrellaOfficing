@@ -884,7 +884,7 @@ ul .specifications:last-child {
 .officing-description span button {
   border: 0;
   background: var(--scale-5-purple);
-  padding: 10px 12px 10px 12px;
+  padding: 8px 10px 8px 10px;
   border-radius: 50%;
   font-size: 16px;
   color: #fff;
