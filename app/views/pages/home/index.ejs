@@ -38,54 +38,54 @@
           <li class="option_office">Espaço corporativo</li>
         </ul>
         <div class="container_search_input">
-          <span id="search_txt">Pesquise locais para trabalhar</span>
-          <div id='container_informations_find_coworking'>
-            <div class="gap_input_checked">
-              <input id="search_input" class="booking_informations" type="text" placeholder="Localização:">
-            </div>
-            <div class="gap_input_checked" id="container_reservation">
-              <div class="booking_informations booking_informations_user input_checked" id="reservation">
-                <div>
-                  <input type="text" placeholder="Check-in" id="dateFrom" disabled value="">
-                  <hr>
-                  <input type="text" placeholder="Check-out" id="dateTo" disabled value="">
-                </div>  
-              </div>
-              <div class="popUp_input teste5">
-                <div>
-                  <div id="from"></div>
-                  <div id="to"></div>
+          <form action="search-informations" method="post">
+            <span id="search_txt">Pesquise locais para trabalhar</span>
+            <div id='container_informations_find_coworking'>
+                <div class="gap_input_checked">
+                  <input id="search_input" class="booking_informations" type="text" placeholder="Localização:">
                 </div>
-                <span>
-                  Dias reservados:
-                  <input type="number" value="" name="reserved_days" id="reserved-days" disabled>
-                </span>
-              </div>
-            </div>
-            <div class="gap_input_checked">
-              <span class="booking_informations booking_informations_user">N° de Pessoas</span>
-              <div id="container-guests" class="popUp_input">
-                <div id="guests">
-                  <h5>N° de pessoas</h5>
-                  <div class="specification">
-                    <button>
-                      <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
-                    </button>
-                    <input type="number" min="0" value="4" name="people" disabled>
-                    <button>
-                      <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
-                    </button>
-        
+                <div class="gap_input_checked" id="container_reservation">
+                  <div class="booking_informations booking_informations_user input_checked" id="reservation">
+                    <div>
+                      <input type="text" placeholder="Check-in" id="dateFrom" disabled value="">
+                      <hr>
+                      <input type="text" placeholder="Check-out" id="dateTo" disabled value="">
+                    </div>  
+                  </div>
+                  <div class="popUp_input teste5">
+                    <div>
+                      <div id="from"></div>
+                      <div id="to"></div>
+                    </div>
+                    <span>
+                      Dias reservados:
+                      <input type="number" value="" name="reserved_days" id="reserved-days" disabled>
+                    </span>
                   </div>
                 </div>
-              </div>
+                <div class="gap_input_checked">
+                  <span class="booking_informations booking_informations_user">N° de Pessoas</span>
+                  <div id="container-guests" class="popUp_input">
+                    <div id="guests">
+                      <h5>N° de pessoas</h5>
+                      <div class="specification">
+                        <button>
+                          <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
+                        </button>
+                        <input type="number" min="0" value="4" name="people" disabled>
+                        <button>
+                          <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
+                        </button>
+            
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
-          </div>
-          <a href="#">
-            <div>
-              <img src="images/default/search.svg" alt="pesquisa">
-            </div>
-          </a>
+              <button type="submit">
+                <img src="images/default/search.svg" alt="pesquisa">
+              </button>
+          </form>
         </div>
       </div>
 

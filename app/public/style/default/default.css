@@ -200,10 +200,18 @@ header > div {
     background: transparent;
 }
 
+.container_search_input form{
+    display: flex;
+    align-items: center;
+    border-radius: inherit;
+    width: 100%;
+}
+
+
 #container_informations_find_coworking{
     display: none;
-    border-radius: inherit;
     width: 97%;
+    border-radius: inherit;
 }
 
 #container_informations_find_coworking > div{
@@ -553,9 +561,10 @@ body .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-hea
     padding: 0 19px;
 }
 
-.container_search_input > a > div {
+.container_search_input button:last-child {
     display: flex;
     z-index: 99;
+    border: none;
     padding: 9px 12px;
     background: var(--scale-2-purple);
     border-radius: 50%;
@@ -585,10 +594,6 @@ body .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-hea
     position: relative;
     overflow: hidden;
 }
-
-/* .container_menu_open_hidden.container_menu_open{
-    overflow: unset !important;
-} */
 
 .menu_open{
     opacity: 0;
@@ -722,14 +727,6 @@ body .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-hea
     display: flex;
     align-items: center;
 }
-
-/* .menu_open ul .list-autenticado:first-child {
-    margin: 0 0 17px 0;
-}
-
-.menu_open ul .list-autenticado:last-child {
-    margin: 17px 0 0 0;
-} */
 
 #container_popUp_login-signUp{
     display: none;
