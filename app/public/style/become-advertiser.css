@@ -1,14 +1,14 @@
-@media(min-width: 300px) and (max-width: 480px){
-    header > div > a{
+@media(min-width: 320px) and (max-width: 480px){
+    body header > div > a{
         padding: 5px;
     }
 
-    header > div > a img{
+    body #header > div > a img {
         width: 100px;
         height: 46px;
     }
 
-    header > div a img{
+    body header > div a img{
         width: 100%;
     }
 
@@ -29,7 +29,7 @@
     }
 
     main #cta-div h3{
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 14px;
     }
 
@@ -63,7 +63,7 @@
     main .container_search-localization{
         align-self: center;
         bottom: -100px;
-        max-width: 530px;
+        width: 96%;
         background-color: #fff;
         height: 42px;
     }
@@ -72,91 +72,59 @@
         width: 100%;
     }
 
-    #become-advertiser_section3:before{
+    main #become-advertiser_section3 {
+        position: relative;
+        margin: 0;
+    }
+
+    main #become-advertiser_section3>div {
+        display: flex;
+        flex-direction: column; 
+        margin: 0 8px;
+        align-items: flex-start;
+    }
+
+    main #become-advertiser_section3:before {
         display: none;
     }
 
-    main #become-advertiser_section3 h2{
-        width: 100vw;
-        font-size: 26px;
-        padding: 13px 0;
-        text-align: center;
-        background-color: var(--scale-3-blue);
-        max-width: none;
+    main #become-advertiser_section3>div h2 {
+        font-size: 20px; 
+        color: var(--text-1-black); 
     }
 
-    main #become-advertiser_section3 span{
-        position: relative;
-        top: 18px;
-        width: 100%;    
-        padding: 15px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    main #section3-slide{
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: 60px;
+    main #section3-slide {
+        padding: 40px 0;
         width: 100%;
-        align-items: center;
-        padding: 20px 0 20px 0;
+        max-width: 100%;
     }
 
-    main #section3-slide > div > ul li{
-        font-size: 18px;
-        max-width: 290px;
+    main #section3-slide .slider li {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 15px;
     }
 
-    main #section3-slide > div > ul:nth-child(3){
-        max-width: 210px;
+    ul li .slider-cont div h3 {
+        font-size: 18px; 
     }
 
-    main .slide{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: fit-content;
-        width: 80%;
-        justify-content: space-between;
-    }
-
-    main .slide ul{
-        width: fit-content;
-        max-height: 700px;
-    }
-
-    .align-slideTitle{
-        display: flex;
-        align-items: center;
-    }
-
-    main .bx{
-        font-size: 60px;
-        margin-right: 10px;
-    }
-
-    main #section3-slide h3{
-        max-width: 170px;
-        font-size: 22px;
-    }
-
-    main #become-advertiser_section3 > div > div{
+    .slider li .slider-cont ul div {
         flex-direction: column;
     }
 
-    main #become-advertiser_section3 > div > :nth-child(2) {
-        flex-direction: column;
-        height: fit-content;
+    .slider li .slider-cont ul div {
+        margin-bottom: 0;
     }
 
-    main #step-indication{
-        margin: 0;
+    main #become-advertiser_section4 {
+        padding: 0 0 80px;
     }
 
     main #become-advertiser_section4 > div > div{
         margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     main #become-advertiser_section4 h2{
@@ -165,14 +133,17 @@
     }
 
     main #button_section4{
-        width: 250px;
-        height: 45px;
-        font-size: 18px;
+        width: 200px;
+        height: 38px;
+        font-size: 16px;
     }
-
 }
 
-@media(min-width: 481px) and (max-width: 860px){
+@media(min-width: 481px) and (max-width: 840px){
+    default_margin {
+        width: 100%;
+    } 
+
     header > div > a{
         padding: 9px 12px;
     }
@@ -234,7 +205,8 @@
     main .container_search-localization{
         align-self: center;
         bottom: -100px;
-        max-width: 530px;
+        margin-left: 20px;
+        max-width: 86%;
         background-color: #fff;
         height: 42px;
     }
@@ -243,123 +215,86 @@
         width: 100%;
     }
 
-    #become-advertiser_section3:before{
+    main #become-advertiser_section3 {
+        position: relative;
+        margin: 0;
+    }
+
+    main #become-advertiser_section3>div {
+        display: flex;
+        flex-direction: column; 
+        width: 85%;
+        margin: 0 8px;
+        align-items: flex-start;
+    }
+
+    main #become-advertiser_section3:before {
         display: none;
     }
 
-    main #become-advertiser_section3 h2{
-        position: relative;
-        top: 18px;
-        left: 0;
+    main #become-advertiser_section3>div h2 {
+        font-size: 25px; 
+        color: var(--text-1-black); 
+    }
+
+    main #section3-slide {
+        padding: 40px 0;
         width: 100%;
-        max-width: none;
-        background-color: var(--scale-3-blue);
-        padding: 15px;
-        text-align: center;
+        max-width: 100%;
     }
 
-    main #section3-slide{
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: 60px;
+    main #section3-slide .slider li {
         width: 100%;
-        align-items: center;
-        padding: 40px 0 40px 0;
+        margin-bottom: 20px;
+        font-size: 16px;
     }
 
-    main #section3-slide > div > ul li{
-        font-size: 18px;
-        max-width: 290px;
+    ul li .slider-cont div h3 {
+        font-size: 22px; 
     }
 
-    main .slide{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: fit-content;
-        width: 80%;
-        justify-content: space-between;
-    }
-
-    main .slide ul{
-        width: fit-content;
-        max-height: 700px;
-    }
-
-    .align-slideTitle{
-        display: flex;
-        align-items: center;
-    }
-
-    main .bx{
-        font-size: 60px;
-        margin-right: 10px;
-    }
-
-    main #section3-slide h3{
-        max-width: 170px;
-        font-size: 22px;
-    }
-
-    main #become-advertiser_section3 > div > div{
+    .slider li .slider-cont ul div {
         flex-direction: column;
     }
 
-    main #become-advertiser_section3 > div > :nth-child(2) {
-        flex-direction: column;
-        height: fit-content;
+    .slider li .slider-cont ul div {
+        margin-bottom: 0;
     }
 
-    main #step-indication{
-        margin: 0 100px 0 0;
-        align-self: flex-end;
+    main #become-advertiser_section4 {
+        padding: 0 0 80px;
     }
 
-    #become-advertiser_section4 > div > div{
-        margin-top: 0;
+    main #become-advertiser_section4 > div > div{
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     main #become-advertiser_section4 h2{
         max-width: 550px;
-        font-size: 28px;
+        font-size: 26px;
     }
 
     main #button_section4{
+        width: 220px;
+        height: 42px;
+        font-size: 17px;
+    }
+}
+
+@media(min-width: 841px) and (max-width: 1160px){
+    main #become-advertiser_section4 h2 { 
+        max-width: 600px;
+        font-size: 30px; 
+    }
+
+    #become-advertiser_section4 #button_section4 {
         width: 250px;
-        height: 45px;
-        font-size: 18px;
+        height: 46px; 
+        font-size: 17px; 
     }
-
-}
-
-@media(min-width: 861px) and (max-width: 1060px){
-    main #become-advertiser_section3 h2{
-        font-size: 28px;
-        max-width: 310px;
-    }
-
-    main #become-advertiser_section3:before{
-        width: 45%
-    }
-
-    main #section3-slide > div > ul{
-        max-height: none;
-    }
-
-    main #section3-slide > div > ul li{ 
-        max-width: 290px;
-    }
-
-    main #section3-slide ul:nth-child(3){
-        max-width: 210px;
-    }
-
-    main .slide{
-        position: relative;
-        left: 20%;
-        width: fit-content;
-    }
-}
+} 
 
 #header{
     background-color: rgba(0, 0, 0, 0);
@@ -429,7 +364,9 @@
     color: var(--text-1-black);
     font-size: 25px;
     font-weight: 700;
+    width: 270px;
     margin-bottom: 18px;
+    text-align: center;
 }
 
 #cta-div button{
@@ -497,6 +434,8 @@
     color: #666;
     outline: none;
     padding-left: 20px;
+    width: 100%;
+    height: 100%;
 }
 
 .container_search-localization div {
@@ -505,6 +444,8 @@
     background-color: var(--scale-2-purple);
     border-radius: 50%;
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
 
@@ -528,123 +469,6 @@ iframe{
     width: 48%;
     height: 100%;
 }
-
-/* #bg_sec3{
-    background-color: var(--scale-3-blue);
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    width: 48%;
-    height: 100%;
-} */
-
-/* #become-advertiser_section3 > div > div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-#become-advertiser_section3 > div > :nth-child(2){
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 40px 0;
-}
-
-#become-advertiser_section3 h2{
-    color: var(--white);
-    font-size: 30px;
-    font-weight: 700;
-    max-width: 340px;
-}
-
-#section3-slide{
-    position: relative;
-    width: 500px;
-    right: 0;
-    overflow: hidden;
-}
-
-.bx{
-    color: var(--scale-3-blue);
-    font-size: 40px;
-}
-
-#step-indication{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    margin-left: auto;
-}
-
-#step-indication > span{
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--scale-3-blue);
-}
-
-#align-balls{
-    display: flex;
-    width: 35px;
-    justify-content: space-between;
-    margin-top: 3px;
-}
-
-.slide-ball{
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--scale-3-blue);
-    border: 2px solid var(--scale-3-blue);
-}
-
-.slide-ball:nth-child(2){
-    background-color: #fff;
-}
-
-#section3-slide h3{
-    font-weight: 700;
-    font-size: 18px;
-    max-width: 225px;
-    color: var(--scale-3-blue);
-}
-
-#slide-step1, #slide-step2{
-    display: none;
-}
-
-.check{
-    width: 11px;
-    height: 11px;
-    position: absolute;
-    top: 4px;
-    left: 0;
-}
-
-.slide ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 110px;
-    margin-top: 15px;
-}
-
-#section3-slide > div > ul > div{
-    display: flex;
-    width: 500px;
-}
-
-#section3-slide > div > ul li{
-    max-width: 235px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 18px;
-} */
 
 #become-advertiser_section3 {
     position: relative;
@@ -695,6 +519,7 @@ iframe{
 
 .check {
     font-size: 18px; 
+    margin-right: 5px;
     color: var(--scale-3-blue);
 }
 
@@ -704,47 +529,32 @@ iframe{
     margin-bottom: 25px;
 }
 
-.slick-dots {
-    position: absolute;
-    bottom: -25px;
-    display: block;
+#section3-slide .slider .slick-dots {
+    position: absolute; 
     display: flex !important;
     width: fit-content;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    height: fit-content;
+    padding: 0; 
+    top: 0; 
     right: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
+    height: fit-content; 
 }
 
-.slick-dots li button {
-    font-size: 0;
-    line-height: 0;
-    display: block;
-    width: 20px;
-    height: 20px;
-    padding: 5px;
-    cursor: pointer;
-    color: transparent;
-    border: 0;
-    outline: none;
-    background: transparent;
-}
-
-.slick-dots li.slick-active button:before {
+.slider .slick-dots li.slick-active button:before {
     opacity: .75;
     color: var(--scale-3-blue);
+    font-size: 10px;
 } 
 
-.arrows .slick-arrow {
-    display: none;
+.slider .slick-dots li button:before {
+    font-size: 10px; 
+}
+
+#section3-slide .slider li .arrows {
+   display: none;
 }
 
 #section3-slide .slider li { 
-    width: 100%; 
+    width: 45%; 
 }
 
 #become-advertiser_section4{
@@ -774,7 +584,7 @@ iframe{
 #become-advertiser_section4 h2{
     text-align: center;
     max-width: 750px;
-    font-size: 40px;
+    font-size: 35px;
     color: #Fff; 
         
 }
@@ -789,7 +599,7 @@ iframe{
 }
 
 #become-advertiser_section4 > div > div {
-    border-radius: 40px;
+    border-radius: 15px;
     border: 0;
     color: var(--white);
     font-weight: 600;
@@ -798,13 +608,13 @@ iframe{
 }
 
 #button_section4{
-    width: 275px;
-    height: 55px;
+    width: 265px;
+    height: 45px;
     background-color: var(--scale-2-purple);
-    border-radius: 40px;
+    border-radius: 15px;
     color: #fff;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
     margin-top: 30px;
 }
@@ -813,7 +623,7 @@ iframe{
     background-color: rgba(0,0,0, 0.3);
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
     position: absolute;
     z-index: -1;
 }
