@@ -140,7 +140,6 @@
 
 body{
     background: linear-gradient(to left, #fff 50%, var(--scale-4-blue)50%);
-    height: 100%;
 }
 
 ul{
@@ -219,7 +218,6 @@ a{
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     padding-top: 105px;
 }
 
@@ -266,7 +264,7 @@ a{
 
 .align-elements > ul{
     flex-direction: column;
-    width: calc(50% - 20px);
+    width: calc(50% - 40px);
 }
 
 .align-elements > ul > li{
@@ -282,7 +280,7 @@ a{
 }
 
 #advanceButton{
-    background-color: var(--scale-2-purple);
+    background-color: var(--gray-border);
     color: var(--white);
     font-size: 18px;
     font-weight: 600;
@@ -290,7 +288,6 @@ a{
     border-radius: 20px;
     width: 160px;
     height: 32px;
-    margin-left: auto;
 }
 
 #corporates-categories_section h1{
@@ -303,6 +300,10 @@ a{
 
 #align-buttons{
     padding-top: 65px;
+}
+
+#align-buttons a{
+    margin-left: auto;
 }
 
 .space-box{
