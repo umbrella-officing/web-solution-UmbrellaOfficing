@@ -159,22 +159,6 @@ module.exports.uploadImagePerfil = (application, req, res) => {
   }
 }
 
-module.exports.renderSpaces = (application,req,res)=>{
-  // const connection = application.config.dbConnection;
-  // const userDao = new application.app.models.UsersDAO(connection);
-
-  // var dadosForm = {
-  //   cidade: 'Barra da Tijuca'
-  // }
-
-  // userDao.renderSpaces(dadosForm,(error, result) => {
-  //   console.log(result)
-  //   var teste20 = result
-    res.render('pages/cadastro')
-  //  });
-
-}
-
 module.exports.renderProfile = (application, req, res) => {  
 
   if (req.session.autenticado) {
@@ -311,32 +295,52 @@ module.exports.registerPersonalDates = (application, req, res) => {
   }); 
 }
 
+module.exports.renderSpaces = (application,req,res)=>{
+  const connection = application.config.dbConnection;
+  const userDao = new application.app.models.UsersDAO(connection);
+
+  var dadosForm = {
+    loc_cidade: 'Rio das Flores'
+  }
+
+  userDao.renderSpaces(dadosForm,(error, result) => {
+    console.log(result)
+    res.render('pages/cadastro')
+   });
+
+}
 
 
 module.exports.uploadImageCadastro = (application,req,res)=>{
 
   var fileInfo = req.files
 
+  var foto1 = fileInfo[0]
+  var foto2 = fileInfo[1]
+  var foto3 = fileInfo[2]
+  var foto4 = fileInfo[3]
+
   var dadosForm = {
     status_anun: req.body.status_anun,
     tipo_ambiente_anun: req.body.tipo_ambiente_anun,
+    categoria_anun:req.body.categoria_anun,
     titulo_anun:req.body.titulo_anun,
+    // quant_sala:req.body.quant_sala,
     descricao_anun: req.body.descricao_anun,
-    localizacao:req.body.localizacao,
-    data_cadastro_anun:req.body.data_cadastro_anun,
-    cidade: req.body.cidade,
-    teste: req.body.teste,
-    fotos_anun: {fileInfo}
+    foto1_anun:foto1,
+    foto2_anun:foto2,
+    foto3_anun:foto3,
+    foto4_anun:foto4,
+    loc_cidade: req.body.loc_cidade,
+    loc_estado: req.body.loc_estado,
+    data_cadastro_anun: req.body.data_cadastro_anun,
   };
 
-  console.log(dadosForm)
-  res.redirect('/espacos')
+  const connection = application.config.dbConnection;
+  const usersDao = new application.app.models.UsersDAO(connection);
 
-  // const connection = application.config.dbConnection;
-  // const usersDao = new application.app.models.UsersDAO(connection);
-
-  // usersDao.uploadImageCadastro(dadosForm, (error, results) => {
-  //   if (error) throw error;
-  //   res.redirect('/cadastrar-espaco')
-  // })
+  usersDao.uploadImageCadastro(dadosForm, (error, results) => {
+    if (error) throw error;
+    res.redirect('/cadastrar-espaco')
+  })
 }
