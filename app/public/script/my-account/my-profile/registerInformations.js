@@ -17,7 +17,7 @@ $(document).ready(function(){
                     minlength:3,
                     maxlength:150
                 },
-                professional_profile: {
+                professional_profile:{
                     required: true,
                     minlength:3,
                     maxlength:150 

@@ -112,6 +112,12 @@
     border-radius: 10px;
 }
 
+.rating-bar input {
+    display: none;
+    margin: -1px 0 10px 8px;
+    position: absolute;
+}
+
 .social-medias {
     width: 50%;
 }

@@ -189,7 +189,7 @@
         <section id="personal-date_section1">
           <h1>Meus dados pessoais</h1>
 
-          <form action="" method="post" id="personal_date">
+          <form action="/dados-pessoais" method="post" id="personal_date">
             <% 
                              if(autenticado){  
                         %>
@@ -203,25 +203,14 @@
                 <label for="birth">Data de nascimento</label>
                 <input type="text" class="outline-focus" name="birth" id="birth" value="<%=autenticado.birth%>" disabled>
               </div>
-              <div class="select-box">
-                <label for="gender">Sexo</label>
-                <div class="options-container">
-                  <div class="option">
-                    <input type="radio" class="radio" id="gender" name="category" class="outline-focus" />
-                    <option for="feminino">Feminino</option>
-                  </div>
-
-                  <div class="option">
-                    <input type="radio" class="radio" id="masc" name="category" />
-                    <option for="masc">Masculino</option>
-                  </div>
-                </div>
-
-                <div class="selected">
-                  Feminino
-                  <img src="../images/my-account/arrow-down.svg" alt="Seta">
-                </div>
+              <div>
+                <label for="gender_date">Sexo</label>
+                <select name="gender_date">
+                  <option value="fem" <%= autenticado.gender_date == 'Feminino' ? 'selected' : ''%> selected>Feminino</option>
+                  <option value="mas" <%= autenticado.gender_date == 'Masculino' ? 'selected' : ''%>>Masculino</option> 
+                </select>
               </div>
+
             </div>
             <div>
               <label for="profession_date">Profissão</label>
@@ -240,7 +229,7 @@
               </div>
               <div>
                 <label for="orgao_exp">Orgão Expedidor</label>
-                <input type="text" class="outline-focus" name="orgao_exp" id="orgao-exp_date" value="<%=autenticado.orgao_exp%>" />
+                <input type="text" class="outline-focus" name="orgao_exp" id="orgao-exp" value="<%=autenticado.orgao_exp%>" />
               </div>
             </div>
 
@@ -292,7 +281,7 @@
             <div>
               <label for="email_date">Email</label>
               <input class="outline-focus" type="email" name="email_date" id="email" value="<%=autenticado.email_date%>" />
-            </div> 
+            </div>
             <div id="justify">
               <button type="submit" id="edit_ad">Editar informações</button>
             </div>
@@ -312,8 +301,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="script/default/header/header.js"></script>
   <script src="script/default/register/register.js"></script>
-  <script src="script/default/header/header.js"></script>
-  <script src="script/my-account/personal-date.js"></script>
+  <script src="script/my-account/personal-date.js"></script> 
   <script src="script/default/header/autocomplete_api.js"></script>
   <script src="script/default/header/date-picker.js"></script>
 
