@@ -323,6 +323,7 @@ header > div {
 
 #container_reservation .popUp_input > span:last-child{
     font-size: 14px;
+    display: none;
 }
 
 #container_reservation .popUp_input > span:last-child input[type="number"]{

@@ -15,6 +15,7 @@ $from
   .datepicker({
     numberOfMonths: 1,
     minDate: 0,
+    dateFormat:'dd/mm/yy',
     monthNames: [ "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" ]
   })
   .on("change", function() {
@@ -28,6 +29,7 @@ $from.datepicker( "option", "dayNamesMin", [ "Dom", "Seg", "Ter", "Qua", "Qui", 
 $to
   .datepicker({
     defaultDate: "+1w",
+    dateFormat:'dd/mm/yy',
     minDate:0,
     numberOfMonths: 1,
     monthNames: [ "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" ]
@@ -36,11 +38,15 @@ $to
   .on("change", function() {
     map_dates = [];
     toData.setAttribute('value',$to.val())
-    setSelectedreserved_days();
+    // setSelectedreserved_days();
   });
 
 $to.datepicker( "option", "dayNamesMin", [ "Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb" ] );
 
+// function teste(){
+//   var dataTo =  $( "#to" ).datepicker( "option", "dateFormat", "dd/mm/yy" );
+//   var test7 = toData.setAttribute('value',dataTo[0].value)
+// }
 
 function setDate(element) {
   var date;
@@ -123,7 +129,10 @@ function getNextWeek() {
 }
 
 function setSelectedreserved_days() {
+  
   var diff = new Date(new Date($to.val()) - new Date($from.val()));
-  var test = diff / 1000 / 60 / 60 / 24
+  // var test = diff / 1000 / 60 / 60 / 24
+  console.log(diff)
   reserved_days.setAttribute('value',test)
+  console.log(test)
 }
