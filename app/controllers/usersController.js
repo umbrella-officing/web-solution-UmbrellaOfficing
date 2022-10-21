@@ -194,6 +194,8 @@ module.exports.renderProfile = (application, req, res) => {
         link_whats: result[0].link_whats_user,
         link_face: result[0].link_facebook,
         link_linkedin: result[0].link_linkedin,
+        preferencias_homeoffincing: result[0].pref_homeOfficing,
+        preferencias_coworking: result[0].pref_coworking,
         id_user: req.session.id_user
       };
 
@@ -219,8 +221,8 @@ module.exports.registerProfile = (application, req, res) => {
     link_whats_user: req.body.link_whats,
     link_facebook: req.body.link_face,
     link_linkedin: req.body.link_linkedin,
-    home_officing: req.body.preferencias_homeoffincing,
-    coworking: req.body.preferencias_coworking,
+    pref_homeOfficing: req.body.preferencias_homeoffincing,
+    pref_coworking: req.body.preferencias_coworking,
     id_user: req.session.id_user
   };
 
