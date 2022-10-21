@@ -1,24 +1,6 @@
-/*Script para selecionar o sexo: feminino ou masculino*/
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
-
-const optionsList = document.querySelectorAll(".option");
-
-selected.addEventListener("click", () => {
-  optionsContainer.classList.toggle("active");
-});
-
-optionsList.forEach(o => {
-  o.addEventListener("click", () => {
-    selected.innerHTML = o.querySelector("option").innerHTML;
-    optionsContainer.classList.remove("active");
-  });
-});
-
 /*Script Jquery adicionando as máscaras no formulário*/
 $(document).ready(function () {
-    $("#cpf_date").mask("000.000.000-00");
-    $("#birth").mask("99/99/9999");
+    $("#cpf_date").mask("000.000.000-00"); 
     $("#rg_date").mask("999.999.999-W", {
 
         translation: {
@@ -115,6 +97,10 @@ $(document).ready(function() {
 
 
 $(document).ready(function(){
+    $.validator.addMethod("usernameRegex", function(value, element) {
+        return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(value);
+    }, "Escreva no formato de e-mail. Ex: fulano@gmail.com");
+
     $.validator.addMethod("phoneRegex", function(value, element) {
         return /^\(?\d{2}\)?[\s-]?[\s9]?\d{4}-?\d{4}$/.test(value);
     }, "Número inválido");
@@ -140,6 +126,10 @@ $(document).ready(function(){
                 $(element).closest('.form-group').removeClass("has-error");
             },
             rules: {
+                email: {
+                    required: true,
+                    usernameRegex: true
+                },
                 gender_date:{
                     required: true
                 },
@@ -169,6 +159,9 @@ $(document).ready(function(){
                 }
             },
             messages: {
+                email_date: {
+                    required: "Preencha esse campo",
+                },
                 gender_date:{
                     required: "Escolha uma opção"
                 },
