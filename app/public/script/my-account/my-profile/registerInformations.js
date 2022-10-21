@@ -1,6 +1,7 @@
-$(document).ready(function(){ 
-    $("#edit_ad").click(function(){
-        var form = $("#myformProfile"); 
+$(document).ready(function(){
+    $("#save").click(function(){
+        var form = $("#myformProfile");
+        console.log(form)
         form.validate({
             errorElement: 'span',
             errorClass: 'help-block',
@@ -16,11 +17,12 @@ $(document).ready(function(){
                     minlength:3,
                     maxlength:150
                 },
-                profession_profile: {
-                    required:true,
+                professional_profile: {
+                    required: true,
                     minlength:3,
-                    maxlength:150
+                    maxlength:150 
                 },
+               
             },
             messages: {
                 about_me:{
@@ -28,15 +30,21 @@ $(document).ready(function(){
                     minlength:"Mínimo 3 caracteres",
                     maxlength:"Não ultrapasse 150 caracteres"
                 },
-                profession_profile:{
+                professional_profile: {
                     required:"Preencha esse campo",
                     minlength:"Mínimo 3 caracteres",
                     maxlength:"Não ultrapasse 150 caracteres"
-                }     
+                }
             }
-        }); 
-    });
-
-    
-    
+        });
+        if (form.valid() === true){
+            if ($('#test1').is(":visible")){
+                current_fs = $('#test1');
+                next_fs = $('#test2');
+            }
+            next_fs.show(); 
+            current_fs.hide();
+        }
+    }); 
 });
+

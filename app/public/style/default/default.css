@@ -1192,7 +1192,7 @@ footer a {
 .popUp_profilePicture div > div i {
     font-size: 15px; 
     align-items: center;
-    color: var(--gray-border);
+    color: #000;
 }
 
 .popUp_profilePicture div > div p {
@@ -1200,14 +1200,7 @@ footer a {
     font-weight: 400;
     margin-left: 10px;
     max-width: 150px;
-}
-
-.uploadPicture,
-.deletePicture {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
+} 
 
 .actionPicture {
     display: flex;
@@ -1219,13 +1212,15 @@ footer a {
     width: 120px; 
 }
 
-.actionPicture button {
+#close,
+#salve {
     width: 100px;
     padding: 6px;
     border-radius: 15px;
     border: none;
     font-size: 14px;
     font-weight: 500;
+    margin-top: 35px;
 }
 
 #salve {
@@ -1451,6 +1446,30 @@ footer a {
     footer ul li,
     #scroll_up {
         display: none;
+    }
+
+    .popUp_profilePicture {
+        margin: 0 8px; 
+        padding: 30px 42px 52px 42px;
+    }
+
+    .popUp_profilePicture h2~div { 
+        margin: 0;
+    }
+
+    .popUp_profilePicture div > form { 
+        align-items: center;
+        flex-direction: column;
+        margin-top: 26px;
+    }
+
+    .popUp_profilePicture div > form { 
+        flex-direction: column;
+        margin-top: 26px;
+    }
+
+    .actionPicture > div:first-child { 
+        margin: 0 0 40px; 
     }
 }
 
