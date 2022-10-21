@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
   <!-- <meta charset="UTF-8"> -->
@@ -23,16 +22,8 @@
   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtJGza4SniYHefeNwCdE4gU3sg1AU4fiU&&libraries=places"></script>
   <link rel="stylesheet" href="style/default/default.css">
-  <link rel="stylesheet" href="style/home/home.css">
+  <link rel="stylesheet" href="style/search-spaces/officing-description.css">
 </head>
-
-<nav id="bottom-bar_mobile">
-  <div>
-    <h5><span>R$ 15</span>/hora, por pessoa</h5>
-
-    <button class="reserve">Reservar</button>
-  </div>
-</nav>
 
 <div id='box_black'></div>
 
@@ -103,16 +94,16 @@
           <img src="images/default/menu_hamburguer.svg" alt="menu">
         </div>
         <%
-                  if(autenticado){
-              %>
+                if(autenticado){
+            %>
         <%- include('../../partial/header/menu_autenticado.ejs'); %>
         <%       
-              }else{
-              %>
+            }else{
+            %>
         <%- include('../../partial/header/menu.ejs'); %>
         <%
-              } 
-            %>
+            } 
+          %>
       </div>
     </div>
     <div id="container_popUp_login-signUp">
@@ -211,23 +202,23 @@
             <div class="actionPicture">
               <div>
                 <%
-                                  if(autenticado){
-                              %>
+                                if(autenticado){
+                            %>
                 <%if(autenticado.profile_picture != null){%>
                 <img class="image_profile" src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">
                 <%}%>
-      
-                                  <%if(autenticado.profile_picture == null){%>
+    
+                                <%if(autenticado.profile_picture == null){%>
                 <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">
                 <%}%>
-                                  
-                              <%       
-                              }else{
-                              %>
+                                
+                            <%       
+                            }else{
+                            %>
                 <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">
                 <%
-                              } 
-                              %>
+                            } 
+                            %>
               </div>
             </div>
 
@@ -254,68 +245,14 @@
     </div>
   </header>
 
-  <div id="bottom_bar-mobile">
-    <%
-                if(autenticado){
-              %>
-    <%- include('../partial/header/bottom_bar-mobile_autenticado.ejs'); %>
-    <%       
-              }else{
-              %>
-    <%- include('../partial/header/bottom_bar-mobile.ejs'); %>
-    <%
-              } 
-            %>
+  <nav id="bottom-bar_mobile">
+    <div>
+      <h5><span>R$ 15</span>/hora, por pessoa</h5>
 
-    <div id="container_search-mobile">
-
-      <img class="close_search" src="images/default/close_icon.svg" alt="close">
-
-      <ul id="type_office_mobile">
-        <li class="option_office checked">Espaço adaptado</li>
-        <li class="option_office">Espaço corporativo</li>
-      </ul>
-
-      <form action="search-informations" method="post">
-        <div id='container_adaptable'>
-          <div class="box">
-            <label name="search_input">Localização</label>
-            <input type="text">
-          </div>
-          <div class="box">
-            <label name="search_input">Selecione datas</label>
-
-            <div class="box_check">
-              <div>
-                <label name="box_check-in">Check in</label>
-                <input type="date" name="box_check-in">
-              </div>
-              <div>
-                <label name="box_check-out">Check-out</label>
-                <input type="date" name="box_check-out">
-              </div>
-            </div>
-          </div>
-          <div class="box">
-            <label name="search_input">Número de pessoas</label>
-            <div id="guests">
-              <div class="specification">
-                <button>
-                  <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
-                </button>
-                <input type="number" min="0" value="4" name="people" class="input_checked" disabled>
-                <button>
-                  <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <button class="search_mobile">Pesquisar</button>
-        </div>
-      </form>
+      <button class="reserve">Reservar</button>
     </div>
-  </div>
+  </nav>
+
   <div id='box_black'></div>
 
   <main>
@@ -846,17 +783,14 @@
   <footer class="container_margin_default">
     <%- include('../../partial/footer.ejs')%>
   </footer>
-
-
-
+ 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="script/default/header/header.js"></script>
-  <script src="script/default/register/register.js"></script>
-  <script src="script/home/reports.js"></script>
-  <script src="script/home/coworking_places_inspire.js"></script>
+  <script src="script/default/register/register.js"></script> 
   <script src="script/default/header/autocomplete_api.js"></script>
   <script src="script/default/header/date-picker.js"></script>
-  <script src="script/search-spaces/officing-description/more-officing.js"></script>
+  <script src="script/search-spaces/officing-description/more-officing.js"></script> 
   <script src="script/search-spaces/officing-description/slider.js"></script>
   <script src="script/search-spaces/officing-description/popUps.js"></script>
   <script src="script/search-spaces/officing-description/rooms-interactions.js"></script>

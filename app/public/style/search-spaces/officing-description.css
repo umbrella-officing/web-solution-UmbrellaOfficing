@@ -26,10 +26,14 @@ ul {
 
 .default_margin>div span {
     display: flex;
-    align-items: center;
-    margin: 10px 0 13px 0;
+    align-items: center; 
     font-weight: 500;
     color: #222;
+}  
+
+#price span,
+.officing-description span{
+ margin: 10px 0 13px 0;
 }
 
 .default_margin>div span img {
