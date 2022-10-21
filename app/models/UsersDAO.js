@@ -41,9 +41,23 @@ UsersDAO.prototype.registerPersonalDates= function (user, callback) {
     [user.email_user, user.profissao, user.genero_user, user.rg_user, user.orgao_expedidor, user.celular_user, user.telefone_user, user.end_cep, user.end_rua, user.end_rua_num, user.end_bairro, user.end_cidade, user.end_estado, user.id_user], callback)
 }
 
-// SpacesDAO.prototype.renderFavoritos= function (user, callback) {
-//     this._connection.query(`SELECT * FROM espacos WHERE cod_anun = ?`, [user.cod_anun], callback)
+// <<<<<<< HEAD
+// UsersDAO.prototype.searchInformations = function (user, callback) {
+//     this._connection.query(`SELECT * FROM espacos where localizacao like '%${user.localizacao}%'`, callback)
 // }
+
+// UsersDAO.prototype.uploadImageCadastro = function(user, callBack){
+//     this._connection.query('INSERT INTO espacos SET  ?',user,callBack)
+// }
+
+// UsersDAO.prototype.renderSpaces = function(users, callBack){
+//     this._connection.query(`select * from espacos where cidade = '${users.cidade}'`,callBack)
+// }
+// =======
+// // SpacesDAO.prototype.renderFavoritos= function (user, callback) {
+// //     this._connection.query(`SELECT * FROM espacos WHERE cod_anun = ?`, [user.cod_anun], callback)
+// // }
+// >>>>>>> 4ab87c01849dd188afb43ddd9d5dbda1cdb9d0c9
 
 module.exports = function () {
     return UsersDAO;

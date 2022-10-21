@@ -363,7 +363,7 @@ header > div {
     border: none;
 }
 
-#guests button{
+#guests input[type="button"]{
     border: none;
     background: none;
     display: flex;
