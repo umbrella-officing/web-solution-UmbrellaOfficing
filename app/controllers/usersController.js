@@ -159,6 +159,22 @@ module.exports.uploadImagePerfil = (application, req, res) => {
   }
 }
 
+module.exports.renderSpaces = (application,req,res)=>{
+  // const connection = application.config.dbConnection;
+  // const userDao = new application.app.models.UsersDAO(connection);
+
+  // var dadosForm = {
+  //   cidade: 'Barra da Tijuca'
+  // }
+
+  // userDao.renderSpaces(dadosForm,(error, result) => {
+  //   console.log(result)
+  //   var teste20 = result
+    res.render('pages/cadastro')
+  //  });
+
+}
+
 module.exports.renderProfile = (application, req, res) => {  
 
   if (req.session.autenticado) {
@@ -290,7 +306,35 @@ module.exports.registerPersonalDates = (application, req, res) => {
     }
     console.log(result)
     res.redirect('/dados-pessoais');
-  });
+  }); 
+}
 
-  
+
+
+module.exports.uploadImageCadastro = (application,req,res)=>{
+
+  var fileInfo = req.files
+
+  var dadosForm = {
+    status_anun: req.body.status_anun,
+    tipo_ambiente_anun: req.body.tipo_ambiente_anun,
+    titulo_anun:req.body.titulo_anun,
+    descricao_anun: req.body.descricao_anun,
+    localizacao:req.body.localizacao,
+    data_cadastro_anun:req.body.data_cadastro_anun,
+    cidade: req.body.cidade,
+    teste: req.body.teste,
+    fotos_anun: {fileInfo}
+  };
+
+  console.log(dadosForm)
+  res.redirect('/espacos')
+
+  // const connection = application.config.dbConnection;
+  // const usersDao = new application.app.models.UsersDAO(connection);
+
+  // usersDao.uploadImageCadastro(dadosForm, (error, results) => {
+  //   if (error) throw error;
+  //   res.redirect('/cadastrar-espaco')
+  // })
 }
