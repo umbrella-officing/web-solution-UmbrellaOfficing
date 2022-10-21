@@ -1554,7 +1554,40 @@ footer a {
 
     #bottom_bar-mobile {
         display: block;
-    } 
+    }  
+
+    #container_search-mobile form {
+        width: 280px; 
+    }
+
+    #type_office li { 
+        font-size: 16px; 
+        text-align: center;
+    }
+
+    .box label {
+        font-size: 16px; 
+    }
+
+    .box input {
+        height: 36px; 
+    }
+
+    .box_check { 
+        flex-direction: column;
+    }
+
+    .box_check div { 
+        width: 100%; 
+    }
+
+    .box_check label {
+        font-size: 13px; 
+    }
+
+    .box:nth-child(3) #guests {
+        width: 28%;
+    }
 
     header > div { 
         padding: 20px 0 10px 0; 
