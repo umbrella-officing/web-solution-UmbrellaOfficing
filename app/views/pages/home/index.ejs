@@ -38,79 +38,53 @@
           <li class="option_office">Espaço corporativo</li>
         </ul>
         <div class="container_search_input">
-          <form action="/search-informations" method="post">
+          <form action="search-informations" method="post">
             <span id="search_txt">Pesquise locais para trabalhar</span>
             <div id='container_informations_find_coworking'>
-<<<<<<< HEAD
                 <div class="gap_input_checked">
-                  <input id="search_input" name="localizacao" class="booking_informations" type="text" placeholder="Localização:">
+                  <input id="search_input" class="booking_informations" type="text" placeholder="Localização:">
                 </div>
                 <div class="gap_input_checked" id="container_reservation">
                   <div class="booking_informations booking_informations_user input_checked" id="reservation">
                     <div>
-                      <input type="text" name="checkIn" placeholder="Check-in" id="dateFrom" value="">
+                      <input type="text" placeholder="Check-in" id="dateFrom" disabled value="">
                       <hr>
-                      <input type="text" name="checkOut" placeholder="Check-out" id="dateTo" value="">
+                      <input type="text" placeholder="Check-out" id="dateTo" disabled value="">
                     </div>  
-=======
-              <div class="gap">
-                <input id="search_input" class="booking_informations" type="text" placeholder="Localização:">
-              </div>
-              <div class="gap_input_checked" id="container_reservation">
-                <div class="booking_informations booking_informations_user input_checked" id="reservation">
-                  <div>
-                    <input type="text" placeholder="Check-in" id="dateFrom" disabled value="">
-                    <hr>
-                    <input type="text" placeholder="Check-out" id="dateTo" disabled value="">
->>>>>>> 4ab87c01849dd188afb43ddd9d5dbda1cdb9d0c9
+                  </div>
+                  <div class="popUp_input teste5">
+                    <div>
+                      <div id="from" class="teste"></div>
+                      <div id="to" class="teste"></div>
+                    </div>
+                    <span>
+                      Dias reservados:
+                      <input type="number" value="" name="reserved_days" id="reserved-days" disabled>
+                    </span>
                   </div>
                 </div>
-                <div class="popUp_input teste5">
-                  <div>
-                    <div id="from" class="teste"></div>
-                    <div id="to" class="teste"></div>
-                  </div>
-                  <span>
-                    Dias reservados:
-                    <input type="number" value="" name="reserved_days" id="reserved-days" disabled>
-                  </span>
-                </div>
-<<<<<<< HEAD
                 <div class="gap_input_checked">
                   <span class="booking_informations booking_informations_user">N° de Pessoas</span>
                   <div id="container-guests" class="popUp_input">
                     <div id="guests">
                       <h5>N° de pessoas</h5>
                       <div class="specification">
+                        <button>
                           <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
-                        <input type="number" min="0" value="4" name="people" >
+                        </button>
+                        <input type="number" min="0" value="4" name="people" disabled>
+                        <button>
                           <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
+                        </button>
+            
                       </div>
-=======
-              </div>
-              <div class="gap_input_checked">
-                <span class="booking_informations booking_informations_user">N° de Pessoas</span>
-                <div id="container-guests" class="popUp_input">
-                  <div id="guests">
-                    <h5>N° de pessoas</h5>
-                    <div class="specification">
-                      <button>
-                        <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
-                      </button>
-                      <input type="number" min="0" value="4" name="people" disabled>
-                      <button>
-                        <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
-                      </button>
-
->>>>>>> 4ab87c01849dd188afb43ddd9d5dbda1cdb9d0c9
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
-            <button type="submit">
-              <img src="images/default/search.svg" alt="pesquisa">
-            </button>
+              <button type="submit">
+                <img src="images/default/search.svg" alt="pesquisa">
+              </button>
           </form>
         </div>
       </div>
@@ -123,12 +97,12 @@
         <%
                 if(autenticado){
             %>
-        <%- include('../../partial/header/menu_autenticado.ejs'); %>
-        <%       
+                <%- include('../../partial/header/menu_autenticado.ejs'); %>
+            <%       
             }else{
             %>
-        <%- include('../../partial/header/menu.ejs'); %>
-        <%
+                 <%- include('../../partial/header/menu.ejs'); %>
+            <%
             } 
           %>
       </div>
@@ -164,7 +138,7 @@
               <img src="images/default/icon-google.png" alt="ícone do google">
               <img src="images/default/icon-facebok.svg" alt="ícone do facebbok">
               <img src="images/default/icon-apple.png" alt="ícone do facebbok">
-              <span>Ainda não possui conta? <div class="list popUp-login-signUp">Cadastre-se</div></span>
+              <span>Ainda não possui conta? <a href="#">Cadastre-se</a></span>
             </div>
           </div>
         </div>
@@ -264,13 +238,14 @@
               <div>
                 <input id="close" type="button" value="Fechar">
                 <button id="salve" type="submit">Guardar</button>
-              </div>
+            </div>
             </div>
           </form>
         </div>
       </div>
     </div>
   </header>
+
 
   <div id="bottom_bar-mobile">
     <%
