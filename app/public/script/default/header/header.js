@@ -346,6 +346,8 @@ const popUp_login_signUp = () => {
         containerPopUp.style.display = 'flex'
         if(this == optionsMenu[0] || this == optionsMenu[2]){
             AllPopUp[0].classList.add('popUpChecked')
+
+        console.log(AllPopUp)
         }
 
         if(this == optionsMenu[1] || this == optionsMenu[3]){
@@ -353,6 +355,7 @@ const popUp_login_signUp = () => {
         }
 
         closePopUP()
+
     }
 
     function closePopUP() {

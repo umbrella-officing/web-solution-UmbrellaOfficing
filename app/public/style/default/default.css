@@ -1053,9 +1053,10 @@ fieldset{
 
 #alternatives > div:last-child span{
     font-size: 13px;
+    display: flex;
 }
 
-#alternatives > div:last-child span a{
+#alternatives > div:last-child span div{
     color: var(--scale-10-blue);
     position: relative;
     left: 3px;
@@ -1294,7 +1295,7 @@ footer a {
     color: var(--scale-2-purple);
 }
 
-.icon-color.login i{
+#bottom_bar-mobile .icon-color.login i{
     color: var(--scale-2-purple);
 }
 

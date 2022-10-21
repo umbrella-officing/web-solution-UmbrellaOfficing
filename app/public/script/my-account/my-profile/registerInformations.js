@@ -1,7 +1,6 @@
 $(document).ready(function(){ 
     $("#edit_ad").click(function(){
-        var form = $("#myformProfile");
-        console.log(form)
+        var form = $("#myformProfile"); 
         form.validate({
             errorElement: 'span',
             errorClass: 'help-block',

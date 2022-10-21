@@ -11,14 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="style/default/default.css">
-  <link rel="stylesheet" href="style/become-advertiser.css">
-  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> 
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="script/become-advertiser.js"></script>
+  <link rel="stylesheet" href="style/default/default.css">
+  <link rel="stylesheet" href="style/become-advertiser.css">
 </head>
 
 <body>
@@ -58,7 +56,7 @@
               <img src="images/default/icon-google.png" alt="ícone do google">
               <img src="images/default/icon-facebok.svg" alt="ícone do facebbok">
               <img src="images/default/icon-apple.png" alt="ícone do facebbok">
-              <span>Ainda não possui conta? <a href="#">Cadastre-se</a></span>
+              <span>Ainda não possui conta? <div class="list popUp-login-signUp">Cadastre-se</div></span>
             </div>
           </div>
         </div>
@@ -114,56 +112,7 @@
           </form>
         </div>
       </div>
-    </div>
-    <div id="container_popUp_profilePicture">
-      <div class="popUp_profilePicture">
-        <h2>Adicionar imagem de perfil</h2>
-        <div>
-          <form action="/perfil2" method="post" enctype="multipart/form-data">
-            <div class="actionPicture">
-              <div>
-                <%
-                                if(autenticado){
-                            %>
-                <%if(autenticado.profile_picture != null){%>
-                <img class="image_profile" src="data:image/gif;base64,<%=autenticado.profile_picture%>" alt="Foto de perfil">
-                <%}%>
-    
-                                <%if(autenticado.profile_picture == null){%>
-                <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">
-                <%}%>
-                                
-                            <%       
-                            }else{
-                            %>
-                <img class="image_profile" src="images/default/perfil.png" alt="Foto de perfil">
-                <%
-                            } 
-                            %>
-              </div>
-            </div>
-
-            <div>
-              <div class="uploadPicture">
-                <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                <label for="ImagemPerfil">
-                  Carregar imagem
-                </label>
-                <input accept="image/" class="form-control" id="ImagemPerfil" name="ImagemPerfil" onchange="loadImg()" type="file" value="" />
-              </div>
-              <div class="deletePicture">
-                <i class="fa-solid fa-trash"></i>
-                <span>Remover imagem</span>
-              </div>
-              <div>
-                <input id="close" type="button" value="Fechar">
-                <button id="salve" type="submit">Guardar</button>
-            </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+    </div> 
   </header>
 
 
@@ -320,9 +269,7 @@
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="script/default/header/header.js"></script>
-  <script src="script/default/register/register.js"></script>
-  <script src="script/default/header/autocomplete_api.js"></script>
-  <script src="script/default/header/date-picker.js"></script>
+  <script src="script/default/register/register.js"></script> 
   <script src="script/become-advertiser.js"></script> 
 
 </body>
