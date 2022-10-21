@@ -295,3 +295,32 @@ module.exports.registerPersonalDates = (application, req, res) => {
 
   
 }
+
+// module.exports.renderFavoritos= (application, req, res) => {
+
+//   if (req.session.autenticado) {
+
+//     const connection = application.config.dbConnection;
+//     const userDao = new application.app.models.UsersDAO(connection);
+
+//     var id_user = Number(req.session.id_user)
+
+//     userDao.renderFavoritos(id_user, (error, result) => {
+//       if (error) throw error
+
+//       autenticado = { 
+//         name_date: result[0].nome_user,
+//         birth: result[0].dt_nasc_user,
+//       };
+
+//       console.log(autenticado)
+
+//       res.render("pages/my-account/favoritos", autenticado);
+
+//     }); 
+
+//   } else {
+//     autenticado = { autenticado: null };
+//     res.render('pages/my-account/favorites')
+//   }    
+// }

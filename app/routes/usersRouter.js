@@ -50,8 +50,9 @@ module.exports = (application) => {
     application.post("/dados-pessoais", (req, res) =>{
       application.app.controllers.usersController.registerPersonalDates(application, req, res);
     });
-    application.get("/minhas-reservas", (req, res) =>{
-      application.app.controllers.usersController.renderReservations(application, req, res);
+
+    application.get("/favoritos", (req, res) =>{
+      application.app.controllers.usersController.renderFavoritos(application, req, res);
     });
     
   }
