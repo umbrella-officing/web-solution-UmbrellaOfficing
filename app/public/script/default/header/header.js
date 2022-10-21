@@ -468,3 +468,31 @@ function closeMenuMobile(menuMobile) {
 }
 
 openMenuMobile()
+
+const openSearchMobile = () => {
+    const searchMobile = document.querySelectorAll(".searchMobile");
+    const searchContainerMobile = document.getElementById("#container_search-mobile");
+
+    console.log(searchMobile)
+
+    searchMobile.forEach(element=> {
+        element.addEventListener('click', () => {
+        searchContainerMobile.display = 'flex'
+    })
+    })
+
+
+    closeSearchMobile(searchContainerMobile)
+    
+}
+
+function closeSearchMobile(searchContainerMobile) {
+    searchContainerMobile.addEventListener('click', s => { 
+
+        if (s.target.classList == 'close_search' || s.target.classList == 'search_mobile') {
+            searchContainerMobile.style.display = 'none'
+        }
+    })
+}
+
+openSearchMobile()
