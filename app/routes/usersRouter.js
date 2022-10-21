@@ -13,6 +13,8 @@ const upload2 = multer({
     }
 } })
 
+const maxFotos = 3
+
 module.exports = (application) => {
 
   application.get('/', (req, res) => {
@@ -53,5 +55,13 @@ module.exports = (application) => {
     application.get("/minhas-reservas", (req, res) =>{
       application.app.controllers.usersController.renderReservations(application, req, res);
     });
+
+    application.get('/espacos',(req,res)=>{
+      application.app.controllers.usersController.renderSpaces(application,req,res)
+    })
+
+    application.post("/espacos",upload2.array('teste', 4),(req,res)=>{
+      application.app.controllers.usersController.uploadImageCadastro(application, req, res);
+    })
     
   }
