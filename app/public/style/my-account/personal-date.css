@@ -47,13 +47,16 @@
     font-weight: 500;
 }
 
-#personal-date_section1 form>div input {
+#personal-date_section1 form>div input,
+select {
     border: 1px solid var(--gray-border);
     border-radius: 5px;
     padding: 10px;
     resize: none;
     width: -webkit-fill-available;
     outline: none;
+    font-family: var(--font-primary);
+    font-size: 14px;
 }
 
 #personal-date_section1 form input:disabled {
@@ -63,96 +66,11 @@
     border-color: var(--gray-border);
 }
 
-#personal-date_section1 form>div input {
-    font-family: var(--font-primary);
-    font-size: 14px;
-}
-
 .personal-date-grid2{
     display: grid;
     grid-template-columns: 359.5px 359.5px;
     grid-column-gap: 25px;
     position: relative;
-}
-
-.select-box {
-    display: flex;
-    width: 359.5px;
-    flex-direction: column;
-    position: absolute;
-    right: 0;
-}
-
-.select-box .options-container {
-    max-height: 0;
-    width: 99.6%;
-    opacity: 0;
-    transition: all 0.4s;
-    border: 1px solid var(--gray-border);
-    border-radius: 5px;
-    order: 1;
-}
-
-.selected {
-    border: 1px solid var(--gray-border);
-    border-radius: 5px;
-    margin-bottom: 8px;
-    position: relative;
-    order: 0;
-}
-
-.selected img {
-    position: absolute;
-    height: 100%;
-    width: 12px;
-    right: 10px;
-    top: 0px;
-    transition: all 0.4s;
-}
-
-.select-box .options-container.active {
-    max-height: 100px;
-    opacity: 1;
-    background-color: white;
-}
-
-.option label {
-    margin: 10px;
-    height: 50px;
-}
-
-.select-box .options-container.active+.selected::after {
-    transform: rotateX(180deg);
-    top: -6px;
-}
-
-.select-box .options-container::-webkit-scrollbar {
-    width: 8px;
-    border-radius: 0 8px 8px 0;
-}
-
-.select-box .options-container::-webkit-scrollbar-thumb {
-    border-radius: 0 8px 8px 0;
-}
-
-.select-box .option,
-.selected {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.select-box .option:hover {
-    font-weight: 600;
-    background: #74a7e6;
-    transition: 5s;
-}
-
-.select-box label {
-    cursor: pointer;
-}
-
-.select-box .option .radio {
-    display: none;
 }
 
 #password {
@@ -191,6 +109,14 @@
     font-family: var(--font-primary);
     font-weight: 500;
     margin: 40px 0 0 0;
+}
+
+#personal-date_section1 form .help-block {
+    font-size: 12px;
+    color: red;
+    position: absolute;
+    margin-bottom: 10px;
+    transform: translateY(-0.5px);
 }
 
 @media(min-width: 320px) and (max-width: 480px){
