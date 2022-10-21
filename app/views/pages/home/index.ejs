@@ -41,50 +41,50 @@
           <form action="search-informations" method="post">
             <span id="search_txt">Pesquise locais para trabalhar</span>
             <div id='container_informations_find_coworking'>
-                <div class="gap_input_checked">
-                  <input id="search_input" class="booking_informations" type="text" placeholder="Localização:">
-                </div>
-                <div class="gap_input_checked" id="container_reservation">
-                  <div class="booking_informations booking_informations_user input_checked" id="reservation">
-                    <div>
-                      <input type="text" placeholder="Check-in" id="dateFrom" disabled value="">
-                      <hr>
-                      <input type="text" placeholder="Check-out" id="dateTo" disabled value="">
-                    </div>  
+              <div class="gap_input_checked">
+                <input id="search_input" class="booking_informations" type="text" placeholder="Localização:">
+              </div>
+              <div class="gap_input_checked" id="container_reservation">
+                <div class="booking_informations booking_informations_user input_checked" id="reservation">
+                  <div>
+                    <input type="text" placeholder="Check-in" id="dateFrom" disabled value="">
+                    <hr>
+                    <input type="text" placeholder="Check-out" id="dateTo" disabled value="">
                   </div>
-                  <div class="popUp_input teste5">
-                    <div>
-                      <div id="from" class="teste"></div>
-                      <div id="to" class="teste"></div>
+                </div>
+                <div class="popUp_input teste5">
+                  <div>
+                    <div id="from" class="teste"></div>
+                    <div id="to" class="teste"></div>
+                  </div>
+                  <span>
+                    Dias reservados:
+                    <input type="number" value="" name="reserved_days" id="reserved-days" disabled>
+                  </span>
+                </div>
+              </div>
+              <div class="gap_input_checked">
+                <span class="booking_informations booking_informations_user">N° de Pessoas</span>
+                <div id="container-guests" class="popUp_input">
+                  <div id="guests">
+                    <h5>N° de pessoas</h5>
+                    <div class="specification">
+                      <button>
+                        <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
+                      </button>
+                      <input type="number" min="0" value="4" name="people" disabled>
+                      <button>
+                        <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
+                      </button>
+
                     </div>
-                    <span>
-                      Dias reservados:
-                      <input type="number" value="" name="reserved_days" id="reserved-days" disabled>
-                    </span>
                   </div>
                 </div>
-                <div class="gap_input_checked">
-                  <span class="booking_informations booking_informations_user">N° de Pessoas</span>
-                  <div id="container-guests" class="popUp_input">
-                    <div id="guests">
-                      <h5>N° de pessoas</h5>
-                      <div class="specification">
-                        <button>
-                          <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
-                        </button>
-                        <input type="number" min="0" value="4" name="people" disabled>
-                        <button>
-                          <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
-                        </button>
-            
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              </div>
             </div>
-              <button type="submit">
-                <img src="images/default/search.svg" alt="pesquisa">
-              </button>
+            <button type="submit">
+              <img src="images/default/search.svg" alt="pesquisa">
+            </button>
           </form>
         </div>
       </div>
@@ -97,12 +97,12 @@
         <%
                 if(autenticado){
             %>
-                <%- include('../../partial/header/menu_autenticado.ejs'); %>
-            <%       
+        <%- include('../../partial/header/menu_autenticado.ejs'); %>
+        <%       
             }else{
             %>
-                 <%- include('../../partial/header/menu.ejs'); %>
-            <%
+        <%- include('../../partial/header/menu.ejs'); %>
+        <%
             } 
           %>
       </div>
@@ -238,26 +238,112 @@
               <div>
                 <input id="close" type="button" value="Fechar">
                 <button id="salve" type="submit">Guardar</button>
-            </div>
+              </div>
             </div>
           </form>
         </div>
       </div>
     </div>
   </header>
-    
+
   <div id="bottom_bar-mobile">
     <%
               if(autenticado){
             %>
-                <%- include('../../partial/header/bottom_bar-mobile_autenticado.ejs'); %>
-            <%       
+    <%- include('../../partial/header/bottom_bar-mobile_autenticado.ejs'); %>
+    <%       
             }else{
             %>
-                 <%- include('../../partial/header/bottom_bar-mobile.ejs'); %>
-            <%
+    <%- include('../../partial/header/bottom_bar-mobile.ejs'); %>
+    <%
             } 
           %>
+
+    <div id="container_search-mobile">
+
+      <img class="close_search" src="images/default/close_icon.svg" alt="close">
+
+      <ul id="type_office">
+        <li class="option_office checked">Espaço adaptado</li>
+        <li class="option_office">Espaço corporativo</li>
+      </ul>
+
+      <form action="search-informations" method="post">
+        <div id='container_adaptable'>
+          <div class="box">
+            <label name="search_input">Localização</label>
+            <input type="text">
+          </div>
+          <div class="box">
+            <label name="search_input">Selecione datas</label>
+
+            <div class="box_check">
+              <div>
+                <label name="box_check-in">Check in</label>
+                <input type="date" name="box_check-in">
+              </div>
+              <div>
+                <label name="box_check-out">Check-out</label>
+                <input type="date" name="box_check-out">
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <label name="search_input">Número de pessoas</label>
+            <div id="guests">
+              <div class="specification">
+                <button>
+                  <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
+                </button>
+                <input type="number" min="0" value="4" name="people" class="input_checked" disabled>
+                <button>
+                  <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button class="search_mobile">Pesquisar</button>
+        </div>
+
+        <div id='container_coworking'>
+          <div class="box">
+            <label name="search_input">Localização</label>
+            <input type="text">
+          </div>
+          <div class="box">
+            <label name="search_input">Selecione datas</label>
+
+            <div class="box_check">
+              <div>
+                <label name="search_input">Check in</label>
+                <input type="date">
+              </div>
+              <div>
+                <label name="search_input">Check-out</label>
+                <input type="date">
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <label name="search_input">Número de pessoas</label>
+            <div id="guests">
+              <div class="specification">
+                <button>
+                  <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
+                </button>
+                <input type="number" min="0" value="4" name="people" class="input_checked" disabled>
+                <button>
+                  <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button class="search_mobile">Pesquisar</button>
+        </div>
+      </form>
+    </div> 
   </div>
 
   <div id='box_black'></div>
@@ -292,7 +378,7 @@
         <ul>
           <li>
             <div>
-                <img id="geolocation" src="images/home/geolocation.svg" alt="Geolocalização">
+              <img id="geolocation" src="images/home/geolocation.svg" alt="Geolocalização">
             </div>
             <h4>Geolocalização</h4>
             <p>Trabalhe em várias localidades e pontos de referência. Em outras palavras... onde você
