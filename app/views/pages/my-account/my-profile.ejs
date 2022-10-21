@@ -304,13 +304,13 @@
             <div>
               <div>
                 <label for="about_me">Sobre mim</label>
-                <textarea class="outline-focus" id="about_me" name="about_me">
+                <textarea class="outline-focus" id="about_me" name="about_me" rows="8" cols="40">
                                     <%=autenticado.about_me%>
                                 </textarea>
               </div>
               <div>
                 <label for="profissional_perfil">Perfil profissional</label>
-                <textarea class="outline-focus" id="professional_profile" name="profession_profile">
+                <textarea class="outline-focus" id="professional_profile" name="profession_profile" rows="8" cols="40">
                                     <%=autenticado.profession_profile%>
                                 </textarea>
               </div>
@@ -321,21 +321,21 @@
                 <h4>Home Oficce</h4>
 
                 <ul class="rating">
-                  <li class="rating-bar teste8"><input name="preferencias_homeofficing" type="radio" value="<%=autenticado.preferencias_homeofficing%>"></li>
-                  <li class="rating-bar teste8"><input name="preferencias_homeofficing" type="radio" value="<%=autenticado.preferencias_homeofficing%>"></li>
-                  <li class="rating-bar teste8"><input name="preferencias_homeofficing" type="radio" value="<%=autenticado.preferencias_homeofficing%>"></li>
-                  <li class="rating-bar teste8"><input name="preferencias_homeofficing" type="radio" value="<%=autenticado.preferencias_homeofficing%>"></li>
-                  <li class="rating-bar teste8"><input name="preferencias_homeofficing" type="radio" value="<%=autenticado.preferencias_homeofficing%>"></li>
+                  <li class="rating-bar teste8"><input type="radio" name="home_officing" value="1"></li>
+                  <li class="rating-bar teste8"><input type="radio" name="home_officing" value="2"></li>
+                  <li class="rating-bar teste8"><input type="radio" name="home_officing" value="3"></li>
+                  <li class="rating-bar teste8"><input type="radio" name="home_officing" value="4"></li>
+                  <li class="rating-bar teste8"><input type="radio" name="home_officing" value="5"></li>
                 </ul>
 
                 <h4>Coworking</h4>
 
                 <ul class="rating">
-                  <li class="rating-bar teste7"><input name="preferencias_coworking" type="radio" value="<%=autenticado.preferencias_coworking%>"></li>
-                  <li class="rating-bar teste7"><input name="preferencias_coworking" type="radio" value="<%=autenticado.preferencias_coworking%>"></li>
-                  <li class="rating-bar teste7"><input name="preferencias_coworking" type="radio" value="<%=autenticado.preferencias_coworking%>"></li>
-                  <li class="rating-bar teste7"><input name="preferencias_coworking" type="radio" value="<%=autenticado.preferencias_coworking%>"></li>
-                  <li class="rating-bar teste7"><input name="preferencias_coworking" type="radio" value="<%=autenticado.preferencias_coworking%>"></li>
+                  <li class="rating-bar teste7"><input type="radio" name="coworking" value="1"></li>
+                  <li class="rating-bar teste7"><input type="radio" name="coworking" value="2"></li>
+                  <li class="rating-bar teste7"><input type="radio" name="coworking" value="3"></li>
+                  <li class="rating-bar teste7"><input type="radio" name="coworking" value="4"></li>
+                  <li class="rating-bar teste7"><input type="radio" name="coworking" value="5"></li>
                 </ul>
 
               </div>

@@ -203,8 +203,8 @@ module.exports.registerProfile = (application, req, res) => {
     link_whats_user: req.body.link_whats,
     link_facebook: req.body.link_face,
     link_linkedin: req.body.link_linkedin,
-    home_officing: req.body.preferencias_homeofficing,
-    coworking: req.body.preferencias_coworking,
+    preferencias_homeoffincing: req.body.home_officing,
+    preferencias_coworking: req.body.coworking,
     id_user: req.session.id_user
   };
 

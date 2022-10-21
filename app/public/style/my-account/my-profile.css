@@ -60,7 +60,7 @@
     resize: none;
     font-size: 14.5px;
     font-family: var(--font-primary); 
-    width: 96%; 
+    width: -webkit-fill-available; 
     height: 150px;
     overflow: hidden;
     color: var(--text-1-black);
