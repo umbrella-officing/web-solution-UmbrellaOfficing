@@ -458,8 +458,8 @@ const openMenuMobile = () => {
 function closeMenuMobile(menuMobile) {
     menuMobile.addEventListener('click', m => { 
 
-        if (m.target.id == 'close_pop' || m.target.classList == 'fa-solid fa-pen pictureProfile list' || m.target.classList == 'bars') {
-            menuMobile.style.display = 'none'
+        if(m.target.classList == 'bars') {
+            menuMobile.style.display = 'none';
         }
     })
 }

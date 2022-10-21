@@ -367,7 +367,7 @@ input[type="radio"]{
     font-weight: 500;
 }
 
-#buttons{
+.buttons{
     position: absolute;
     bottom: 0;
     width: 50%;
@@ -375,9 +375,11 @@ input[type="radio"]{
     display: flex;
     justify-content: space-around;
     padding-bottom: 40px;
+    background-color: #fff;
+    padding-top: 10px;
 }
 
-#return{
+.return{
     background-color: transparent;
     text-decoration: underline;
     font-weight: 600;
@@ -386,7 +388,7 @@ input[type="radio"]{
     border: none;
 }
 
-#advance{
+.advanceButton{
     width: 165px;
     height: 36px;
     background-color: var(--scale-2-purple);
