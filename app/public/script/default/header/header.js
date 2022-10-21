@@ -458,10 +458,38 @@ const openMenuMobile = () => {
 function closeMenuMobile(menuMobile) {
     menuMobile.addEventListener('click', m => { 
 
-        if (m.target.id == 'close_pop' || m.target.classList == 'fa-solid fa-pen pictureProfile list' || m.target.classList == 'bars') {
-            menuMobile.style.display = 'none'
+        if(m.target.classList == 'bars') {
+            menuMobile.style.display = 'none';
         }
     })
 }
 
 openMenuMobile()
+
+const openSearchMobile = () => {
+    const searchMobile = document.querySelectorAll(".p");
+    const searchContainerMobile = document.getElementById("#container_search-mobile");
+
+    console.log(searchMobile)
+
+    searchMobile.forEach(element=> {
+        element.addEventListener('click', () => {
+        searchContainerMobile.display = 'flex'
+    })
+    })
+
+
+    closeSearchMobile(searchContainerMobile)
+    
+}
+
+function closeSearchMobile(searchContainerMobile) {
+    searchContainerMobile.addEventListener('click', s => { 
+
+        if (s.target.classList == 'close_search' || s.target.classList == '') {
+            searchContainerMobile.style.display = 'none'
+        }
+    })
+}
+
+openSearchMobile()

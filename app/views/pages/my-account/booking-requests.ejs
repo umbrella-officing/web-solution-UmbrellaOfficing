@@ -261,6 +261,69 @@
     </div>
   </header>
 
+  <div id="bottom_bar-mobile">
+    <%
+              if(autenticado){
+            %>
+    <%- include('../../partial/header/bottom_bar-mobile_autenticado.ejs'); %>
+    <%       
+            }else{
+            %>
+    <%- include('../../partial/header/bottom_bar-mobile.ejs'); %>
+    <%
+            } 
+          %>
+
+    <div id="container_search-mobile">
+
+      <img class="close_search" src="images/default/close_icon.svg" alt="close">
+
+      <ul id="type_office_mobile">
+        <li class="option_office checked">Espaço adaptado</li>
+        <li class="option_office">Espaço corporativo</li>
+      </ul>
+
+      <form action="search-informations" method="post">
+        <div id='container_adaptable'>
+          <div class="box">
+            <label name="search_input">Localização</label>
+            <input type="text">
+          </div>
+          <div class="box">
+            <label name="search_input">Selecione datas</label>
+
+            <div class="box_check">
+              <div>
+                <label name="box_check-in">Check in</label>
+                <input type="date" name="box_check-in">
+              </div>
+              <div>
+                <label name="box_check-out">Check-out</label>
+                <input type="date" name="box_check-out">
+              </div>
+            </div>
+          </div>
+          <div class="box">
+            <label name="search_input">Número de pessoas</label>
+            <div id="guests">
+              <div class="specification">
+                <button>
+                  <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
+                </button>
+                <input type="number" min="0" value="4" name="people" class="input_checked" disabled>
+                <button>
+                  <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <button class="search_mobile">Pesquisar</button>
+        </div> 
+      </form>
+    </div> 
+  </div>
+
   <div id='box_black'></div>
 
   <main>

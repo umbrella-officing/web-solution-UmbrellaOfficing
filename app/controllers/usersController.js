@@ -236,7 +236,7 @@ module.exports.renderPersonalDates = (application, req, res) => {
       autenticado = { 
         name_date: result[0].nome_user,
         birth: result[0].dt_nasc_user,
-        // gender: result[0].genero_user,
+        gender_date: result[0].genero_user,
         profession_date: result[0].profissao,
         cpf_date: result[0].cpf_user,
         rg_date: result[0].rg_user,
@@ -270,12 +270,13 @@ module.exports.registerPersonalDates = (application, req, res) => {
   const userDao = new application.app.models.UsersDAO(connection);
 
   var dadosForm = {
-    // genero_user: req.body.gender,
     email_user: req.body.email_date,
+    genero_user: req.body.gender_date,
     profissao: req.body.profession_date,
     rg_user: req.body.rg_date,
-    orgao_exp: req.body.orgao_exp,
+    orgao_expedidor: req.body.orgao_exp,
     telefone_user: req.body.phone_date,
+    celular_user: req.body.cell_date,
     end_cep: req.body.cep_date,
     end_rua: req.body.road_date,
     end_rua_num: req.body.number_date,
