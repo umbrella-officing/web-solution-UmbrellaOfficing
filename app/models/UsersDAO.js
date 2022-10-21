@@ -40,6 +40,15 @@ UsersDAO.prototype.registerPersonalDates= function (user, callback) {
     [user.email_user, user.profissao, user.genero_user, user.rg_user, user.celular_user, user.telefone_user, user.end_cep, user.end_rua, user.end_rua_num, user.end_bairro, user.end_cidade, user.end_estado, user.id_user], callback)
 }
 
+UsersDAO.prototype.uploadImageCadastro = function(user, callBack){
+        this._connection.query('INSERT INTO espacos SET  ?',user,callBack)
+    }
+    
+    UsersDAO.prototype.renderSpaces = function(users, callBack){
+        this._connection.query(`select * from espacos where cidade = '${users.cidade}'`,callBack)
+    }
+    
+
 module.exports = function () {
     return UsersDAO;
 }
