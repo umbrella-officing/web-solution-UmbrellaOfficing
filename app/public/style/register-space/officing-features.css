@@ -89,7 +89,7 @@ nav a:first-child:hover{
     justify-content: space-between;
 }
 
-#second-step, #first-step, #third-step{
+#second-step, #third-step, #fourth-step{
     display: none
 }
 
@@ -201,6 +201,10 @@ nav a:first-child:hover{
     font-weight: 600;
     text-align: center;
     box-sizing: border-box
+}
+
+.subtract, .addition{
+    cursor: pointer;
 }
 
 .bathroom {

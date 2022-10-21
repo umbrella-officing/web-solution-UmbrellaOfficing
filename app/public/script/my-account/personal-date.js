@@ -150,7 +150,7 @@ $(document).ready(function(){
                     required: true,
                     
                 },
-                orgao_exp_date:{
+                orgao_exp:{
                     required: true
                 },
                 phone_date:{
@@ -178,7 +178,7 @@ $(document).ready(function(){
                 rg_date:{
                     required:"Preencha esse campo"
                 },
-                orgao_exp_date:{
+                orgao_exp:{
                     required:"Preencha esse campo"
                 },
                 phone_date: {

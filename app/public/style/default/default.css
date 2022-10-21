@@ -170,6 +170,10 @@ header > div {
     transform: translateY(47px);
  } 
 
+ input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
 #search_txt{
     width: inherit;
     background: inherit;
@@ -1053,9 +1057,10 @@ fieldset{
 
 #alternatives > div:last-child span{
     font-size: 13px;
+    display: flex;
 }
 
-#alternatives > div:last-child span a{
+#alternatives > div:last-child span div{
     color: var(--scale-10-blue);
     position: relative;
     left: 3px;
@@ -1191,7 +1196,7 @@ footer a {
 .popUp_profilePicture div > div i {
     font-size: 15px; 
     align-items: center;
-    color: var(--gray-border);
+    color: #000;
 }
 
 .popUp_profilePicture div > div p {
@@ -1199,14 +1204,7 @@ footer a {
     font-weight: 400;
     margin-left: 10px;
     max-width: 150px;
-}
-
-.uploadPicture,
-.deletePicture {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
+} 
 
 .actionPicture {
     display: flex;
@@ -1218,13 +1216,15 @@ footer a {
     width: 120px; 
 }
 
-.actionPicture button {
+#close,
+#salve {
     width: 100px;
     padding: 6px;
     border-radius: 15px;
     border: none;
     font-size: 14px;
     font-weight: 500;
+    margin-top: 35px;
 }
 
 #salve {
@@ -1294,7 +1294,7 @@ footer a {
     color: var(--scale-2-purple);
 }
 
-.icon-color.login i{
+#bottom_bar-mobile .icon-color.login i{
     color: var(--scale-2-purple);
 }
 
@@ -1392,10 +1392,102 @@ footer a {
     margin-left: 5px;
 }
 
+#container_search-mobile { 
+    position: fixed;
+    bottom: 0;
+    z-index: 200000;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    padding: 50px;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#container_search-mobile #type_office {
+    display: flex; 
+    justify-content: space-around;
+}
+
+#container_search-mobile form {
+    width: 420px;
+    margin-top: 35px; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#container_adaptable {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.box label {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left; 
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.box input {
+    width: 100%;
+    border: 1px solid var(--gray-border);
+    border-radius: 30px;
+    height: 40px;
+    margin-bottom: 25px;
+    padding: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.box:nth-child(3) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box:nth-child(3) #guests{
+    width: 22%;
+}
+
+.box:nth-child(3) label,
+.box:nth-child(3) #guests input {
+    margin: 0;
+}
+
+.search_mobile {
+    width: 200px;
+    align-self: flex-end;
+    margin-top: 50px;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    background: var(--scale-2-purple);
+    border-radius: 20px;
+}
+
 /*Mobile*/
 #bottom-bar_mobile {
     display: none;
 } 
+
+#container_search-mobile {
+    display: none;
+}
 
 @media(min-width: 320px) and (max-width: 481px) {
     h1 {
@@ -1433,6 +1525,31 @@ footer a {
         display: block;
     } 
 
+    #container_search-mobile {
+        display: flex;
+    }
+
+    #container_search-mobile form {
+        width: 280px; 
+    }
+
+    #type_office li { 
+        font-size: 16px; 
+        text-align: center;
+    }
+
+    .box label {
+        font-size: 16px; 
+    }
+
+    .box input {
+        height: 36px; 
+    }
+
+    .box:nth-child(3) #guests {
+        width: 28%;
+    }
+
     header > div { 
         padding: 20px 0 10px 0; 
     }
@@ -1450,6 +1567,30 @@ footer a {
     footer ul li,
     #scroll_up {
         display: none;
+    }
+
+    .popUp_profilePicture {
+        margin: 0 8px; 
+        padding: 30px 42px 52px 42px;
+    }
+
+    .popUp_profilePicture h2~div { 
+        margin: 0;
+    }
+
+    .popUp_profilePicture div > form { 
+        align-items: center;
+        flex-direction: column;
+        margin-top: 26px;
+    }
+
+    .popUp_profilePicture div > form { 
+        flex-direction: column;
+        margin-top: 26px;
+    }
+
+    .actionPicture > div:first-child { 
+        margin: 0 0 40px; 
     }
 }
 
@@ -1485,6 +1626,10 @@ footer a {
     #bottom_bar-mobile {
         display: block;
     } 
+
+    #container_search-mobile {
+        display: flex;
+    }
 
     header > div { 
         padding: 20px 0 10px 0; 

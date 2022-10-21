@@ -203,8 +203,8 @@ module.exports.registerProfile = (application, req, res) => {
     link_whats_user: req.body.link_whats,
     link_facebook: req.body.link_face,
     link_linkedin: req.body.link_linkedin,
-    home_officing: req.body.preferencias_homeoffincing,
-    coworking: req.body.preferencias_coworking,
+    preferencias_homeoffincing: req.body.home_officing,
+    preferencias_coworking: req.body.coworking,
     id_user: req.session.id_user
   };
 
@@ -234,7 +234,7 @@ module.exports.renderPersonalDates = (application, req, res) => {
       autenticado = { 
         name_date: result[0].nome_user,
         birth: result[0].dt_nasc_user,
-        // gender: result[0].genero_user,
+        gender_date: result[0].genero_user,
         profession_date: result[0].profissao,
         cpf_date: result[0].cpf_user,
         rg_date: result[0].rg_user,
@@ -268,11 +268,12 @@ module.exports.registerPersonalDates = (application, req, res) => {
   const userDao = new application.app.models.UsersDAO(connection);
 
   var dadosForm = {
-    // genero_user: req.body.gender,
     email_user: req.body.email_date,
     profissao: req.body.profession_date,
+    genero_user: req.body.gender_date,
     rg_user: req.body.rg_date,
     orgao_exp: req.body.orgao_exp,
+    celular_user: req.body.cell_date,
     telefone_user: req.body.phone_date,
     end_cep: req.body.cep_date,
     end_rua: req.body.road_date,
@@ -294,6 +295,7 @@ module.exports.registerPersonalDates = (application, req, res) => {
 
   
 }
+
 
 module.exports.searchInformation = (application, req, res)=>{
   const connection = application.config.dbConnection;
@@ -358,3 +360,33 @@ module.exports.uploadImageCadastro = (application,req,res)=>{
     })
   
 }
+
+// module.exports.renderFavoritos= (application, req, res) => {
+
+//   if (req.session.autenticado) {
+
+//     const connection = application.config.dbConnection;
+//     const userDao = new application.app.models.UsersDAO(connection);
+
+//     var id_user = Number(req.session.id_user)
+
+//     userDao.renderFavoritos(id_user, (error, result) => {
+//       if (error) throw error
+
+//       autenticado = { 
+//         name_date: result[0].nome_user,
+//         birth: result[0].dt_nasc_user,
+//       };
+
+//       console.log(autenticado)
+
+//       res.render("pages/my-account/favoritos", autenticado);
+
+//     }); 
+
+//   } else {
+//     autenticado = { autenticado: null };
+//     res.render('pages/my-account/favorites')
+//   }    
+// }
+

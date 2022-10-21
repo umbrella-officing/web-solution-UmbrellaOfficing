@@ -24,7 +24,7 @@ a{
 a:focus{
     font-weight: 900;
     color: var(--scale-3-purple);
-    outline: none
+    outline: none; 
 }
 
 nav ul li {
@@ -37,8 +37,7 @@ nav ul li {
     font-weight: 900;
     color: var(--scale-3-purple);
     outline: none;
-    border-bottom: 3px solid var(--scale-3-purple);
-    padding-bottom: 10px;
+    border-bottom: 3px solid var(--scale-3-purple); 
 }
 
 .notifications {
