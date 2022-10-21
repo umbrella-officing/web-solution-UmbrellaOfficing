@@ -294,3 +294,67 @@ module.exports.registerPersonalDates = (application, req, res) => {
 
   
 }
+
+module.exports.searchInformation = (application, req, res)=>{
+  const connection = application.config.dbConnection;
+  const userDao = new application.app.models.UsersDAO(connection);
+  
+  var dadosForm = {
+    localizacao:req.body.localizacao,
+    people: req.body.people,
+    checkIn: req.body.checkIn,
+    checkOut: req.body.checkOut
+  }
+
+  console.log(dadosForm)
+
+  userDao.searchInformations(dadosForm,(error, result) => {
+   console.log(result)
+  });
+
+}
+
+module.exports.cadastrarEspaco = (application,req,res)=>{
+  res.render('pages/cadastro')
+}
+
+module.exports.renderSpaces = (application,req,res)=>{
+  const connection = application.config.dbConnection;
+  const userDao = new application.app.models.UsersDAO(connection);
+
+  var dadosForm = {
+    cidade: 'Barra da Tijuca'
+  }
+
+  userDao.renderSpaces(dadosForm,(error, result) => {
+    console.log(result)
+    var teste20 = result
+    res.render('pages/teste5', teste20)
+   });
+
+}
+
+module.exports.uploadImageCadastro = (application,req,res)=>{
+
+    var fileInfo = req.files
+
+    var dadosForm = {
+      status_anun: req.body.status_anun,
+      tipo_ambiente_anun: req.body.tipo_ambiente_anun,
+      titulo_anun:req.body.titulo_anun,
+      descricao_anun: req.body.descricao_anun,
+      localizacao:req.body.localizacao,
+      data_cadastro_anun:req.body.data_cadastro_anun,
+      cidade: req.body.cidade,
+      fotos_anun: {fileInfo}
+    };
+
+    const connection = application.config.dbConnection;
+    const usersDao = new application.app.models.UsersDAO(connection);
+
+    usersDao.uploadImageCadastro(dadosForm, (error, results) => {
+      if (error) throw error;
+      res.redirect('/cadastrar-espaco')
+    })
+  
+}

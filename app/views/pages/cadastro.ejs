@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="style/default/default.css">
+    <style>
+        h1{
+            font-size: 16px;
+        }
+
+        section{
+            padding: 40px 0;
+        }
+
+        section > div{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button{
+            align-self: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section class="container_margin_default">
+        <div class="default_margin">
+            <h1>Cadastro</h1>
+            <form action="/espacos" method="post" enctype="multipart/form-data">
+                <span>Status</span>
+                <input type="text" name="status_anun" value="Ativo">
+                <span>Tipo ambiente</span>
+                <input type="text" name="tipo_ambiente_anun" value="adaptado">
+                <input type="text" placeholder="Título anunciado" name="titulo_anun" value="">
+                <input type="text" placeholder="Descrição" name="descricao_anun" value="">
+                <input name="teste" type="file" multiple/>
+                <input name="teste" type="file" multiple/>
+                <input type="text" placeholder="Localização" name="localizacao" value="">
+                <input type="date" placeholder="Data de cadastro" name="data_cadastro_anun" value="">
+                <input type="text" placeholder="cidade" name="cidade" value="">
+                <!-- <input type="radio" name="teste" value="adaptado">
+                <input type="radio" name="teste" value="corporativo"> -->
+                <button>Enviar</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

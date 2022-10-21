@@ -273,7 +273,6 @@ const operationsValues = () =>{
                 var i = amountInput.value
                 i++
                 amountInput.setAttribute('value', i)
-                console.log(`${i}`)
             }
         }
         
