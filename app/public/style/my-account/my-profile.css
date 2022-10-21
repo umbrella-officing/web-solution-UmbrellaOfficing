@@ -112,6 +112,12 @@
     border-radius: 10px;
 }
 
+.rating-bar input {
+    display: none;
+    margin: -1px 0 10px 8px;
+    position: absolute;
+}
+
 .social-medias {
     width: 50%;
 }
@@ -179,7 +185,7 @@
     justify-content: flex-end;
 }
 
-#edit_ad {
+#save {
     background-color: var(--scale-2-purple);
     border: none;
     width: 226px;
@@ -188,7 +194,7 @@
     border-radius: 30px;
 }
 
-#edit_ad {
+#save {
     font-size: 14px;
     font-family: var(--font-primary);
     font-weight: 600;
@@ -199,6 +205,7 @@
     font-size: 12px;
     color: red;
     position: absolute;
+    margin-bottom: 10px;
     transform: translateY(-0.5px);
 }
 

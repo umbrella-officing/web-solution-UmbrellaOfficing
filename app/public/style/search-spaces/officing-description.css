@@ -1616,7 +1616,7 @@ ul {
 
 @media(min-width: 841px) and (max-width: 1159px) {
     #officing_description_section1>div {
-        width: 95%;
+        width: 96%;
     }
 
     #grid-container {
@@ -1640,11 +1640,7 @@ ul {
 
     .officing-description ul {
         width: 95%;
-    }
-
-    #price {
-        width: 251px;
-    }
+    } 
 }
 
 @media(min-width: 320px) and (max-width: 780px) {
