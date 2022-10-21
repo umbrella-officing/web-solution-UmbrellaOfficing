@@ -1,115 +1,85 @@
-const operationsValues = () => {
-    const form = document.querySelector('[data-js="form"]')
+// const operationsValues = () =>{
+    
+//     const specifications = document.querySelectorAll(".specification")
+//     specifications.forEach((specification,index)=>{
+//         specification.addEventListener('click',(e)=>{
+//             if(e.target.classList == "subtract"){
+//                 subtractionInput(specification,index)
+//             }
+//             if(e.target.classList == "addition"){
+//                 additionInput(specification,index)
+//             }
+//         })
+//     })
+//         function subtractionInput(specification,index){
+//             if(index == index){
+//                 var amountInput = specification.children[1]
+//                 var i = amountInput.value
+//                 if (i > 0) {
+//                     i--
+//                     amountInput.setAttribute('value', i)
+//                 }
+//             }
+//         }
+//         function additionInput(specification,index){
+//             if(index == index){
+//                 var amountInput = specification.children[1]
+//                 var i = amountInput.value
+//                 i++
+//                 amountInput.setAttribute('value', i)
+//             }
+//         }
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault()
-    })
+//  console.log(specification);
+// }
 
-    const specifications = document.querySelectorAll(".specification")
+// operationsValues();
 
-    specifications.forEach((specification, index) => {
-        specification.addEventListener('click', (e) => {
-            if (e.target.classList == "fa-solid fa-minus subtract") {
-                subtractionInput(specification, index)
-            }
-
-            if (e.target.classList == "fa-solid fa-plus addition") {
-                additionInput(specification, index)
-            }
-        })
-    })
+const switchContent = () => {
+    const popUpCancel = document.querySelectorAll(".step");
 
 
-    function subtractionInput(specification, index) {
+    console.log(popUpCancel);
+        console.log(e.target);
 
-        if (index == index) {
-            var amountInput = specification.children[1]
-            var i = amountInput.value
-
-            if (i > 0) {
-                i--
-                amountInput.setAttribute('value', i)
-            }
-        }
+    popUpCancel.forEach((content, index, arr)=>{
+    content.addEventListener('click', (e) => {
+    if(e.target.classList == 'advanceButton'){
+        console.log(e.target);
+    nextContent(index, arr)
+   
     }
+    
 
-    function additionInput(specification, index) {
-
-        if (index == index) {
-            var amountInput = specification.children[1]
-            var i = amountInput.value
-            i++
-            amountInput.setAttribute('value', i)
-        }
-    }
-
-}
-
-operationsValues()
-
-const officingFeatures = () => {
-    const formSteps = document.querySelectorAll("form > div");
-
-    formSteps.forEach((content, index, arr)=>{
-        content.addEventListener('click', (e) => {
-            if(e.target.name == 'next'){
-                nextContent(index, arr)
-            }
-
-            if(e.target.className == 'fa-solid fa-circle-chevron-left arrow-left'){
-                previousContent(index, arr)
-            }
-
-        })
+    
+    // if(e.target.className == ''){
+    // previousContent(index, arr)
+    // }
     })
-
+    })
+    
+    
     function nextContent(index, arr){
-        var lengthArray = arr.length-=1
-
-                if(index == index && index < lengthArray){
-                        var i = index
-                        arr[i].style.display = 'none'
-                        arr[i+=1].style.display = 'block'
-                }
+    var lengthArray = arr.length-=1
+    
+    if(index == index && index < lengthArray){
+    console.log(arr)
+    const teste = index*-1
+    console.log(teste)
+    var i = index
+    arr[i].style.display = 'none'
+    arr[i+=1].style.display = 'flex'
     }
-
+    }
+    
     function previousContent(index, arr){
-                if(index == index){
-                        var i = index
-                        arr[i].style.display = 'none'
-                        arr[i-=1].style.display = 'block'
-                }
+    if(index == index){
+    var i = index
+    arr[i].style.display = 'none'
+    arr[i-=1].style.display = 'flex'
     }
-     
-}
-
-officingFeatures();
-
-// DO XAVIER
-
-$(document).ready(function(){
-    $("#add").click(function(){
-        $("#added").css({display: "flex"});
-        $(this).removeClass("beforeAdd");
-        $("#spanzito").css({display: "none"});
-        $("#quality2").css({display: "flex"});
-        $("#segundo").css({display: "flex"})
-    })
-})
-
-// $(document).ready(function(){
-//     $("#advance").click(function(){
-//         $("#first-step").css({display: "none"});
-//         $("#second-step").css({display: "flex"});
-//     })
-
-//     $("#advance").click(function(){
-//         $("#second-step").css({display: "none"});
-//         $("#third-step").css({display: "flex"});
-//     })
-
-//     $("#advance").click(function(){
-//         $("#third-step").css({display: "none"});
-//         $("#fourth-step").css({display: "flex"});
-//     })
-// })
+    }
+    
+    }
+    
+    switchContent()
