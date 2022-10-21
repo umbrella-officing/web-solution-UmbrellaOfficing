@@ -30,56 +30,49 @@
 //             }
 //         }
 
-//  console.log(specification);
+ 
 // }
 
 // operationsValues();
 
 const switchContent = () => {
-    const popUpCancel = document.querySelectorAll(".step");
+    const space = document.querySelectorAll(".step");
+    console.log({space});
 
+    space.forEach((content, index, arr)=>{
+        content.addEventListener('click', (e) => {
+            if(e.target.className == 'advanceButton'){
+                nextContent(index, arr)
+            }
 
-    console.log(popUpCancel);
-        console.log(e.target);
+            if(e.target.className == 'return'){
+                previousContent(index, arr)
+            }
 
-    popUpCancel.forEach((content, index, arr)=>{
-    content.addEventListener('click', (e) => {
-    if(e.target.classList == 'advanceButton'){
-        console.log(e.target);
-    nextContent(index, arr)
-   
-    }
-    
-
-    
-    // if(e.target.className == ''){
-    // previousContent(index, arr)
-    // }
+        })
     })
-    })
-    
-    
+
     function nextContent(index, arr){
-    var lengthArray = arr.length-=1
-    
-    if(index == index && index < lengthArray){
-    console.log(arr)
-    const teste = index*-1
-    console.log(teste)
-    var i = index
-    arr[i].style.display = 'none'
-    arr[i+=1].style.display = 'flex'
+        var lengthArray = arr.length-=1
+
+                if(index == index && index < lengthArray){
+                    console.log(arr)
+                    const teste = index*-1
+                    console.log(teste)
+                        var i = index
+                        arr[i].style.display = 'none'
+                        arr[i+=1].style.display = 'block'
+                }
     }
-    }
-    
+
     function previousContent(index, arr){
-    if(index == index){
-    var i = index
-    arr[i].style.display = 'none'
-    arr[i-=1].style.display = 'flex'
+                if(index == index){
+                        var i = index
+                        arr[i].style.display = 'none'
+                        arr[i-=1].style.display = 'block'
+                }
     }
-    }
-    
-    }
-    
-    switchContent()
+     
+}
+
+switchContent()
