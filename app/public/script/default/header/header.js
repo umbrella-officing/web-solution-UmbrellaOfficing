@@ -458,7 +458,7 @@ const openMenuMobile = () => {
 function closeMenuMobile(menuMobile) {
     menuMobile.addEventListener('click', m => { 
 
-        if(m.target.classList == 'bars') {
+        if(m.target.classList == 'bars' || m.target.classList == 'fa-solid fa-pen pictureProfile list') {
             menuMobile.style.display = 'none';
         }
     })

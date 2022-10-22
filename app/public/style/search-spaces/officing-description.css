@@ -1158,11 +1158,11 @@ ul {
     width: 8px;
     background: inherit;
     border-radius: 0 8px 8px 0;
-    background: #333;
+    background: var(--gray-border);
 }
 
 #popUp-seePictures::-webkit-scrollbar-thumb {
-    background: #333;
+    background: var(--gray-border);
     border-radius: 0 8px 8px 0;
 }
 
