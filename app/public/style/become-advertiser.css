@@ -296,6 +296,12 @@
     }
 } 
 
+a {
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+}
+
 #header{
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;

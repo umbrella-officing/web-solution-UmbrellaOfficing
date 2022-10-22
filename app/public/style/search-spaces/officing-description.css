@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -111,6 +115,14 @@ ul {
 #container-descrition {
     display: flex;
     justify-content: space-between;
+}
+
+.p {
+    margin: 20px 0 15px 0;
+}
+
+#container-descrition {
+    margin-top: 20px;
 }
 
 #description_officing {
@@ -306,7 +318,7 @@ ul {
     justify-content: space-between;
 }
 
-#announcer>div:last-child button {
+#announcer>div:last-child a button {
     border: 2px solid #5a0b77;
     padding: 5px 63px;
     font-weight: 600;

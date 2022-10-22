@@ -549,44 +549,6 @@
         </div>
         <div id="spaces-avaliable">
           <ul>
-            <%for(var informations of autenticado){%>
-              <li>
-                <a href="#">
-                  <div class="rooms-available-container">
-                    <div class="img-space">
-                      <img src="data:image/gif;base64,<%=informations.foto1_anun%>" alt="ilustração do local">
-                      <button id="share"><i class="fa-solid fa-share"></i></button>
-                    </div>
-                    <div class="officing-description">
-                      <span id="t">
-                          <%=informations.tipo_ambiente_anun%>
-                        <button id="favorite"><i class="fa-sharp fa-solid fa-heart"></i></i></button>
-                      </span>
-    
-                      <div id="description">
-                        <h4><%=informations.titulo_anun%></h4>
-                        <span><strong><%=informations.quant_sala%> salas disponíveis</strong> | 1 banheiro</span>
-                        <span id="d"><%=informations.descricao_anun%></span>
-                      </div>
-                      <div id="price-space">
-    
-                        <div class="align-price">
-                          <span>Melhor preço:</span>
-                          <strong>R$:15/hora</strong>
-                        </div>
-    
-                        <div>
-                          <span><img src="images/search-spaces/officing-description/background-star.png" alt="estrela">4.8
-                            | <img src="images/search-spaces/officing-description/baloes-de-fala.png" alt="chat">12
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <%}%>
-            <!-- <li>
               <div class="rooms-available-container">
                 <div class="img-space">
                   <img src="/images/search-spaces/search/image1-search.png" alt="ilustração do local">
@@ -724,7 +686,7 @@
                   </div>
                 </div>
               </div>
-            </li> -->
+            </li> 
           </ul>
         </div>
       </div>
