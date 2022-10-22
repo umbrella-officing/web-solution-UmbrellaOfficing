@@ -63,5 +63,9 @@ module.exports = (application) => {
     application.post("/espacos",upload2.array('teste', maxFotos),(req,res)=>{
       application.app.controllers.usersController.uploadImageCadastro(application, req, res);
     })
+
+    application.post("/encontrar-espacos",(req,res)=>{
+      application.app.controllers.usersController.searchSpaces(application, req, res);
+    })
     
   }

@@ -297,18 +297,17 @@ module.exports.registerPersonalDates = (application, req, res) => {
 }
 
 module.exports.renderSpaces = (application,req,res)=>{
-  const connection = application.config.dbConnection;
-  const userDao = new application.app.models.UsersDAO(connection);
+  // const connection = application.config.dbConnection;
+  // const userDao = new application.app.models.UsersDAO(connection);
 
-  var dadosForm = {
-    loc_cidade: 'Rio das Flores'
-  }
+  // var dadosForm = {
+  //   loc_cidade: 'Rio das Flores'
+  // }
 
-  userDao.renderSpaces(dadosForm,(error, result) => {
-    console.log(result)
+  // userDao.renderSpaces(dadosForm,(error, result) => {
+  //   console.log(result)
     res.render('pages/cadastro')
-   });
-
+  //  });
 }
 
 
@@ -316,10 +315,20 @@ module.exports.uploadImageCadastro = (application,req,res)=>{
 
   var fileInfo = req.files
 
-  var foto1 = fileInfo[0]
-  var foto2 = fileInfo[1]
-  var foto3 = fileInfo[2]
-  var foto4 = fileInfo[3]
+  let content = [null,null,null,null]
+
+  for(let i = 0; i<req.files.length;i++){
+    content[i] = req.files[i].buffer.toString('base64')
+  }
+
+  // var foto1 = fileInfo[0]
+  // var foto2 = fileInfo[1]
+  // var foto3 = fileInfo[2]
+  // var foto4 = fileInfo[3]
+
+  // foto4.buffer.toString('base64')
+
+  // console.log(foto4)
 
   var dadosForm = {
     status_anun: req.body.status_anun,
@@ -328,10 +337,10 @@ module.exports.uploadImageCadastro = (application,req,res)=>{
     titulo_anun:req.body.titulo_anun,
     // quant_sala:req.body.quant_sala,
     descricao_anun: req.body.descricao_anun,
-    foto1_anun:foto1,
-    foto2_anun:foto2,
-    foto3_anun:foto3,
-    foto4_anun:foto4,
+    foto1_anun:content[0],
+    foto2_anun:content[1],
+    foto3_anun:content[2],
+    foto4_anun:content[3],
     loc_cidade: req.body.loc_cidade,
     loc_estado: req.body.loc_estado,
     data_cadastro_anun: req.body.data_cadastro_anun,
@@ -342,6 +351,27 @@ module.exports.uploadImageCadastro = (application,req,res)=>{
 
   usersDao.uploadImageCadastro(dadosForm, (error, results) => {
     if (error) throw error;
-    res.redirect('/cadastrar-espaco')
+    res.redirect('/')
   })
+}
+
+module.exports.searchSpaces = (application,req,res)=>{
+  const connection = application.config.dbConnection;
+  const userDao = new application.app.models.UsersDAO(connection);
+
+  var dadosForms = {
+    loc_cidade: req.body.localizacao,
+    dateFrom: req.body.dateFrom,
+    dateTo: req.body.dateTo,
+    people: req.body.people
+  }
+
+  userDao.renderSpaces(dadosForms,(error, result) => {
+    
+      autenticado = result
+
+      res.render('pages/search-spaces/search',autenticado)
+        // req.session.tipo_ambiente = result[0].tipo_ambiente_anun
+        // req.session.profession = results[0].profissao
+   });
 }

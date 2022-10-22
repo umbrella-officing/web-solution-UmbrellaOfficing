@@ -356,7 +356,7 @@ header > div {
 #guests input{
     width: 29px;
     position: relative;
-    left: 6px;
+    left: 0px;
     background: none;
     text-align: center;
     display: flex;
@@ -364,14 +364,8 @@ header > div {
     border: none;
 }
 
-#guests button{
-    border: none;
-    background: none;
-    display: flex;
-    align-items: center;
-}
-
 #guests img{
+    cursor: pointer;
     width: 19px;
 }
 
