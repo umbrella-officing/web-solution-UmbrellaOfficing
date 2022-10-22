@@ -1223,13 +1223,15 @@ footer a {
     width: 120px; 
 }
 
-.actionPicture button {
+.deletePicture ~ div button,
+.deletePicture ~ div input  {
     width: 100px;
     padding: 6px;
     border-radius: 15px;
     border: none;
     font-size: 14px;
     font-weight: 500;
+    margin-top: 35px;
 }
 
 #salve {
@@ -1271,6 +1273,15 @@ footer a {
 .icon {
     font-size: 24px;
     color: #333;
+}
+
+.close {
+    font-size: 26px;
+    color: #333;
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 19px
 }
 
 .login {
@@ -1647,6 +1658,30 @@ footer a {
     footer ul li,
     #scroll_up {
         display: none;
+    }
+
+    .popUp_profilePicture div > form { 
+        flex-direction: column; 
+    }
+
+    .actionPicture > div:first-child { 
+        margin: 0 0 46px 0; 
+    }
+
+    .popUp_profilePicture { 
+        margin: 0 16px;
+    }
+
+    .uploadPicture ~ div {
+        display: flex;
+    }
+
+    .uploadPicture, .deletePicture { 
+        justify-content: center;
+    }
+
+    #salve { 
+        margin: 35px 0 0 20px;
     }
 }
 

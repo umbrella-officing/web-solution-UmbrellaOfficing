@@ -441,6 +441,7 @@ colorIcon.forEach((color, index, arr)=>{
 const openMenuMobile = () => {
     const bars = document.querySelectorAll(".bars");
     const menuMobile = document.getElementById("menu_mobile");
+    const close = document.querySelectorAll('.close')
 
     console.log({bars})
 
