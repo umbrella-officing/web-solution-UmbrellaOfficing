@@ -441,6 +441,7 @@ colorIcon.forEach((color, index, arr)=>{
 const openMenuMobile = () => {
     const bars = document.querySelectorAll(".bars");
     const menuMobile = document.getElementById("menu_mobile");
+    const close = document.querySelectorAll('.close')
 
     console.log({bars})
 
@@ -458,7 +459,7 @@ const openMenuMobile = () => {
 function closeMenuMobile(menuMobile) {
     menuMobile.addEventListener('click', m => { 
 
-        if(m.target.classList == 'bars') {
+        if(m.target.classList == 'bars' || m.target.classList == 'fa-solid fa-pen pictureProfile list') {
             menuMobile.style.display = 'none';
         }
     })
