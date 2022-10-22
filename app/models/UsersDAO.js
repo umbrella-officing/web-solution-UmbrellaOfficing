@@ -44,8 +44,8 @@ UsersDAO.prototype.uploadImageCadastro = function(user, callBack){
         this._connection.query('INSERT INTO espacos SET  ?',user,callBack)
     }
     
-    UsersDAO.prototype.renderSpaces = function(users, callBack){
-        this._connection.query(`select * from espacos where cidade = '${users.cidade}'`,callBack)
+UsersDAO.prototype.renderSpaces = function(users, callBack){
+        this._connection.query(`select * from espacos where loc_cidade = '${users.loc_cidade}'`,callBack)
     }
     
 
