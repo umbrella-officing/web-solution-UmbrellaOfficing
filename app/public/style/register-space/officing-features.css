@@ -3,10 +3,19 @@ body{
     background-repeat: repeat-y;
 }
 
+#advance1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .header-buttons{
     display: flex;
     justify-content: space-between;
     width: 210px;
+}
+
+#second-step ul li:first-child{
+    border: 2px solid var(--scale-2-purple);
 }
 
 .header-buttons > a  button:hover{
