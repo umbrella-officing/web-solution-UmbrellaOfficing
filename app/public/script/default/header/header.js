@@ -421,76 +421,76 @@ const changeImageProfile = ()=> {
 
 openPop_profilePicture()
 
-const colorIcon = document.querySelectorAll(".icon");
-console.log({colorIcon})
-colorIcon.forEach((color, index, arr)=>{
-    color.addEventListener('click',()=>{
-        if(arr[index].classList.contains('icon-color')){
-            return arr[index].classList.remove('icon-color')
-        }
+// const colorIcon = document.querySelectorAll(".icon");
+// console.log({colorIcon})
+// colorIcon.forEach((color, index, arr)=>{
+//     color.addEventListener('click',()=>{
+//         if(arr[index].classList.contains('icon-color')){
+//             return arr[index].classList.remove('icon-color')
+//         }
 
-        for(let i = 0; i < arr.length; i++){
-            arr[i].classList.remove('icon-color')
-        }
+//         for(let i = 0; i < arr.length; i++){
+//             arr[i].classList.remove('icon-color')
+//         }
 
-        arr[index].classList.add('icon-color')
-    })
-})
-
-
-const openMenuMobile = () => {
-    const bars = document.querySelectorAll(".bars");
-    const menuMobile = document.getElementById("menu_mobile");
-    const close = document.querySelectorAll('.close')
-
-    console.log({bars})
-
-    bars.forEach(element=> {
-        element.addEventListener('click', () => {
-        menuMobile.style.display = 'flex'
-    })
-    })
+//         arr[index].classList.add('icon-color')
+//     })
+// })
 
 
-    closeMenuMobile(menuMobile)
+// const openMenuMobile = () => {
+//     const bars = document.querySelectorAll(".bars");
+//     const menuMobile = document.getElementById("menu_mobile");
+//     const close = document.querySelectorAll('.close')
+
+//     console.log({bars})
+
+//     bars.forEach(element=> {
+//         element.addEventListener('click', () => {
+//         menuMobile.style.display = 'flex'
+//     })
+//     })
+
+
+//     closeMenuMobile(menuMobile)
     
-}
+// }
 
-function closeMenuMobile(menuMobile) {
-    menuMobile.addEventListener('click', m => { 
+// function closeMenuMobile(menuMobile) {
+//     menuMobile.addEventListener('click', m => { 
 
-        if(m.target.classList == 'bars' || m.target.classList == 'fa-solid fa-pen pictureProfile list') {
-            menuMobile.style.display = 'none';
-        }
-    })
-}
+//         if(m.target.classList == 'bars' || m.target.classList == 'fa-solid fa-pen pictureProfile list') {
+//             menuMobile.style.display = 'none';
+//         }
+//     })
+// }
 
-openMenuMobile()
+// openMenuMobile()
 
-const openSearchMobile = () => {
-    const searchMobile = document.querySelectorAll(".p");
-    const searchContainerMobile = document.getElementById("#container_search-mobile");
+// const openSearchMobile = () => {
+//     const searchMobile = document.querySelectorAll(".p");
+//     const searchContainerMobile = document.getElementById("#container_search-mobile");
 
-    console.log(searchMobile)
+//     console.log(searchMobile)
 
-    searchMobile.forEach(element=> {
-        element.addEventListener('click', () => {
-        searchContainerMobile.display = 'flex'
-    })
-    })
+//     searchMobile.forEach(element=> {
+//         element.addEventListener('click', () => {
+//         searchContainerMobile.display = 'flex'
+//     })
+//     })
 
 
-    closeSearchMobile(searchContainerMobile)
+//     closeSearchMobile(searchContainerMobile)
     
-}
+// }
 
-function closeSearchMobile(searchContainerMobile) {
-    searchContainerMobile.addEventListener('click', s => { 
+// function closeSearchMobile(searchContainerMobile) {
+//     searchContainerMobile.addEventListener('click', s => { 
 
-        if (s.target.classList == 'close_search' || s.target.classList == '') {
-            searchContainerMobile.style.display = 'none'
-        }
-    })
-}
+//         if (s.target.classList == 'close_search' || s.target.classList == '') {
+//             searchContainerMobile.style.display = 'none'
+//         }
+//     })
+// }
 
-openSearchMobile()
+// openSearchMobile()
