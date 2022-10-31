@@ -1,8 +1,9 @@
+$( function() {
 $from = $("#from");
 $to = $("#to");
 const fromData = document.querySelector('#dateFrom')
 const toData = document.querySelector('#dateTo')
-const reserved_days = document.querySelector('#reserved-days')
+// const reserved_days = document.querySelector('#reserved-days')
 
 var array_dates = [];
 var map_dates = [];
@@ -48,17 +49,17 @@ $to.datepicker( "option", "dayNamesMin", [ "Dom", "Seg", "Ter", "Qua", "Qui", "S
 //   var test7 = toData.setAttribute('value',dataTo[0].value)
 // }
 
-function setDate(element) {
-  var date;
-  try {
-    $(".teste").datepicker("option","dateFormat","dd-mm-yy")
-  } catch (error) {
-    date = null;
-  }
+// function setDate(element) {
+//   var date;
+//   try {
+//     $(".teste").datepicker("option","dateFormat","dd-mm-yy")
+//   } catch (error) {
+//     date = null;
+//   }
 
-  console.log('teste1')
-  return date;
-}
+//   console.log('teste1')
+//   return date;
+// }
 
 function getMaxDate(date, range) {
   var yyyy,
@@ -128,11 +129,4 @@ function getNextWeek() {
   return mm + "-" + dd + "-" + yyyy;
 }
 
-function setSelectedreserved_days() {
-  
-  var diff = new Date(new Date($to.val()) - new Date($from.val()));
-  // var test = diff / 1000 / 60 / 60 / 24
-  console.log(diff)
-  reserved_days.setAttribute('value',test)
-  console.log(test)
-}
+} );

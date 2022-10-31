@@ -309,12 +309,3 @@ a{
 .space-box{
     cursor: pointer;
 }
-
-.border-select{
-    border-color: #08bdff;
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgb(0, 123, 255, .25);
-    transition: 0.3s ease-in-out;
-    font-weight: 600;
-    color: var(--scale-6-blue)
-}

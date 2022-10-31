@@ -3,7 +3,7 @@
 
 <head>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-  <!-- <meta charset="UTF-8"> -->
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
@@ -37,18 +37,18 @@
           <li class="option_office">Espaço corporativo</li>
         </ul>
         <div class="container_search_input">
-          <form action="search-informations" method="post">
+          <form action="/encontrar-espacos" method="post">
             <span id="search_txt">Pesquise locais para trabalhar</span>
             <div id='container_informations_find_coworking'>
               <div class="gap_input_checked">
-                <input id="search_input" class="booking_informations" type="text" placeholder="Localização:">
+                <input id="search_input" class="booking_informations" type="text" name="localizacao" placeholder="Localização:">
               </div>
               <div class="gap_input_checked" id="container_reservation">
                 <div class="booking_informations booking_informations_user input_checked" id="reservation">
                   <div>
-                    <input type="text" placeholder="Check-in" id="dateFrom" disabled value="">
+                    <input type="text" placeholder="Check-in" id="dateFrom" name="dateFrom" autocomplete="off" value="">
                     <hr>
-                    <input type="text" placeholder="Check-out" id="dateTo" disabled value="">
+                    <input type="text" placeholder="Check-out" id="dateTo" name="dateTo" autocomplete="off" value="">
                   </div>
                 </div>
                 <div class="popUp_input teste5">
@@ -68,13 +68,9 @@
                   <div id="guests">
                     <h5>N° de pessoas</h5>
                     <div class="specification">
-                      <button>
                         <img class="subtract" src="images/search-spaces/search/subtract.png" alt="subtrair">
-                      </button>
-                      <input type="number" min="0" value="4" name="people" disabled>
-                      <button>
+                      <input type="number" min="0" value="4" name="people">
                         <img class="addition" src="images//search-spaces/search/button-add.png" name="addition" alt="adicionar">
-                      </button>
 
                     </div>
                   </div>
@@ -775,7 +771,7 @@
   </footer>
  
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script src="script/default/header/header.js"></script>
   <script src="script/default/register/register.js"></script> 
   <script src="script/default/header/autocomplete_api.js"></script>

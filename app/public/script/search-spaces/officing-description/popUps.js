@@ -18,7 +18,7 @@ const openPopUp_seePictures = () => {
 function closePopUp_seePictures(containerPopUp_seePictures) {
     containerPopUp_seePictures.addEventListener('click',  p => { 
 
-        if (p.target.id == 'seePictures-close' || c.target == containerPopUp_seePictures) {
+        if (p.target.id == 'seePictures-close' || p.target == containerPopUp_seePictures) {
             containerPopUp_seePictures.style.display = 'none'
         }
     })

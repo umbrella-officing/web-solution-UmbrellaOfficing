@@ -346,13 +346,15 @@ module.exports.uploadImageCadastro = (application,req,res)=>{
     data_cadastro_anun: req.body.data_cadastro_anun,
   };
 
-  const connection = application.config.dbConnection;
-  const usersDao = new application.app.models.UsersDAO(connection);
+  console.log(dadosForm)
 
-  usersDao.uploadImageCadastro(dadosForm, (error, results) => {
-    if (error) throw error;
-    res.redirect('/')
-  })
+  // const connection = application.config.dbConnection;
+  // const usersDao = new application.app.models.UsersDAO(connection);
+
+  // usersDao.uploadImageCadastro(dadosForm, (error, results) => {
+  //   if (error) throw error;
+  //   res.redirect('/')
+  // })
 }
 
 module.exports.searchSpaces = (application,req,res)=>{

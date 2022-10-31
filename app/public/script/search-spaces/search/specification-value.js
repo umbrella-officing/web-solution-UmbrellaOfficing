@@ -55,7 +55,7 @@ const additionalSpecifications = ()=>{
 }
 
 
-const operationsValues = () =>{
+const operationValues = () =>{
     const specifications = document.querySelectorAll(".specification")
 
     specifications.forEach((specification,index)=>{
@@ -98,4 +98,4 @@ const operationsValues = () =>{
 
 openPopUp()
 additionalSpecifications()
-operationsValues()
+operationValues()

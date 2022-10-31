@@ -233,53 +233,8 @@ const optionsBooking = () =>{
             popUp_input[1].style.display = 'flex'
         }
     }
-        operationsValues()
 
 }
-
-const operationsValues = () =>{
-    const specifications = document.querySelectorAll(".specification")
-
-    specifications.forEach((specification,index)=>{
-        specification.addEventListener('click',(e)=>{
-            if(e.target.classList == "subtract"){
-                subtractionInput(specification,index)
-            }
-
-            if(e.target.classList == "addition"){
-                additionInput(specification,index)
-            }
-        })
-    })
-
-
-        function subtractionInput(specification,index){
-
-            if(index == index){
-                var amountInput = specification.children[1]
-                var i = amountInput.value
-
-                if (i > 0) {
-                    i--
-                    amountInput.setAttribute('value', i)
-                }
-            }
-        }
-
-        function additionInput(specification,index){
-
-            if(index == index){
-                var amountInput = specification.children[1]
-                var i = amountInput.value
-                i++
-                amountInput.setAttribute('value', i)
-                console.log(`${i}`)
-            }
-        }
-        
-
-}
-
 
 const closeInputsearchCoworkingSpaces = (box_black,header,search,search_txt,container_informations_find_coworking)=> {
 
@@ -316,7 +271,6 @@ const menuHamburguer  = () =>{
             menu_open.classList.toggle('menu_open_checked')
 
             if(container_menu_open.style.overflow == 'unset'){
-                console.log('teste')
                 container_menu_open.style.overflow = 'hidden'
                 return
             }
@@ -357,7 +311,6 @@ const popUp_login_signUp = () => {
 
     function closePopUP() {
        containerPopUp.addEventListener('click',e=>{
-        console.log(e.target)
         if(e.target.classList == 'close_popup' || e.target == containerPopUp){
         containerPopUp.style.display = 'none'
         AllPopUp.forEach(popUp => popUp.classList.remove('popUpChecked'))
