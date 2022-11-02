@@ -14,7 +14,6 @@ $(document).ready(function(){
 
     $(".next").click(function(){
         var form = $("#myform");
-        console.log(form)
         form.validate({
             errorElement: 'span',
             errorClass: 'help-block',

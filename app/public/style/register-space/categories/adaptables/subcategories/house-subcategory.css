@@ -3,7 +3,7 @@
         flex-direction: column;
     }
 
-    main #adaptables-categories_section h1{
+    main #adaptables-categories_section2 h1{
         font-size: 25px;
         margin-bottom: 30px;
     }
@@ -13,25 +13,25 @@
         height: 87px;
     }
 
-    main .align-elements > ul{
+    main #adaptables-categories_section2 .align-elements > ul{
         flex-wrap: wrap;
         flex-direction: column;
     }
 
-    main .align-elements > ul > li{
+    main #adaptables-categories_section2 .align-elements > ul > li{
         flex-direction: row;
         margin: 0;
         width: 100%;
     }
 
-    main .align-elements > ul > li > div{
+    main #adaptables-categories_section2 .align-elements > ul > li > div{
         border-radius: 0 10px 10px 0;
         max-width: none;
         height: 55px;
         width: 100%;
     }
 
-    main .align-elements > ul > li:first-child{
+    main #adaptables-categories_section2 .align-elements > ul > li:first-child{
         margin-bottom: 20px;
     }
 
@@ -52,29 +52,29 @@
         width: 60%;
     }
 
-    main #advanceButton{
+    main .advanceButton{
         width: 100%;
     }
 }
 
 @media(min-width: 481px) and (max-width: 586px){
-    main #adaptables-categories_section h1{
+    main #adaptables-categories_section2 h1{
         max-width: none;
         text-align: center;
         font-size: 32px;
         margin-bottom: 20px;
     }
 
-    main .align-elements{
+    main #adaptables-categories_section2 .align-elements{
         flex-direction: column;
     }
 
-    main .align-elements > ul{
+    main #adaptables-categories_section2 .align-elements > ul{
         flex-wrap: wrap;
         flex-direction: column;
     }
 
-    main .align-elements > ul > li{
+    main #adaptables-categories_section2 .align-elements > ul > li{
         margin-top: 20px;
         flex-direction: row;
         width: 100%;
@@ -82,7 +82,7 @@
 
     }
 
-    main .align-elements > ul > li > div{
+    main #adaptables-categories_section2 .align-elements > ul > li > div{
         width: 100%;
         height: 65px;
         border-bottom-left-radius: 0;
@@ -94,7 +94,7 @@
         height: 97px;
     }
 
-    main .align-elements > ul > li:last-child{
+    main #adaptables-categories_section2 .align-elements > ul > li:last-child{
         margin-top: 20px;
     }
 
@@ -111,13 +111,13 @@
         height: 36px;
     }
 
-    main #advanceButton{
+    main .advanceButton{
         width: 100%;
     }
 }
 
 @media(min-width: 587px) and (max-width: 840px){
-    #adaptables-categories_section > div{
+    #adaptables-categories_section2 > div{
         height: calc(100vh - 89px)
     }
 
@@ -135,13 +135,13 @@
         margin-top: 30px;
     } */
 
-    main #adaptables-categories_section h1{
+    main #adaptables-categories_section2 h1{
         max-width: none;
         margin-bottom: 60px;
         font-size: 35px;
     }
 
-    main .align-elements > ul{
+    main #adaptables-categories_section2 .align-elements > ul{
         flex-wrap: wrap;
     }
 
@@ -251,11 +251,11 @@ a{
 }
 
 
-#adaptables-categories_section{
+#adaptables-categories_section2{
     height: 100vh;
 }
 
-#adaptables-categories_section > div{
+#adaptables-categories_section2 > div{
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
@@ -278,12 +278,12 @@ a{
 }
 
 
-#adaptables-categories_section > div > :first-child > img{
+#adaptables-categories_section2 > div > :first-child > img{
     width: 50px;
     height: 50px;
 }
 
-.align-elements > ul > li > div{
+#adaptables-categories_section2 .align-elements > ul > li > div{
     border: 1px solid var(--gray-border);
     padding: 20px 10px 10px 15px;
     border-bottom-left-radius: 10px;
@@ -292,15 +292,15 @@ a{
     max-width: 165px;
 }
 
-.align-elements > ul > li:nth-child(2) {
+#adaptables-categories_section2 .align-elements > ul > li:nth-child(2) {
     margin: 0 0 0 10px;  
 }
 
-.align-elements > ul > li > div img{
+#adaptables-categories_section2 .align-elements > ul > li > div img{
     width: 100%;
 }
 
-.align-elements > ul > li > div span{
+#adaptables-categories_section2 .align-elements > ul > li > div span{
     font-weight: 600;
 
 }
@@ -318,10 +318,11 @@ a{
     height: 172px;
 }
 
-.align-elements > ul > li{
+#adaptables-categories_section2 .align-elements > ul > li{
     display: flex;
     flex-direction: column;
     position: relative;
+    border: 2px solid transparent;
     margin: 0 10px;
     cursor: pointer;
     border-radius: 10px;
@@ -329,7 +330,7 @@ a{
 } 
 
 
-#advanceButton{
+.advanceButton{
     width: 186px;
     height: 36px;
     border: none;
@@ -341,7 +342,7 @@ a{
     padding: 0;
 }
 
-#adaptables-categories_section h1{
+#adaptables-categories_section2 h1{
     font-size: 40px;
     max-width: 280px;
     font-weight: bolder;

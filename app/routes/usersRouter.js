@@ -67,5 +67,9 @@ module.exports = (application) => {
     application.post("/encontrar-espacos",(req,res)=>{
       application.app.controllers.usersController.searchSpaces(application, req, res);
     })
+
+    application.get("/registrar-espaco",(req,res)=>{
+      application.app.controllers.usersController.registerSpace(application, req, res);
+    })
     
   }

@@ -1,0 +1,33 @@
+#register .fields{
+  display: none;
+}
+
+#register fieldset{
+  flex-direction: row;
+}
+
+text{
+  display: none;
+}
+
+#flex-direction > a{
+  border-radius: 33px;
+  background: var(--gray-border);
+}
+
+#flex-direction > a > input[type='button']{
+    width: 186px;
+    height: 36px;
+    border: none;
+    border-radius: 20px;
+    background-color: inherit;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 17.5px;
+    padding: 0;
+}
+
+#type-of-environment_section .advanceButton{
+  margin-top: 25px;
+  align-self: flex-end;
+}

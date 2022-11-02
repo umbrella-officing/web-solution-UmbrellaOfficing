@@ -377,3 +377,7 @@ module.exports.searchSpaces = (application,req,res)=>{
         // req.session.profession = results[0].profissao
    });
 }
+
+module.exports.registerSpace = (application,req,res)=>{
+  res.render('pages/register/register')
+}

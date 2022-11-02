@@ -40,20 +40,23 @@
 
 
 var corporate = document.getElementById("corporate");
-var button = document.getElementById("avancar");
-
+var button = document.querySelectorAll(".advanceButton");
+console.log({button})
 
 const selectTypeOF = () => {
     const optionsOffice = document.querySelectorAll('.space-box')
     optionsOffice.forEach((option, index, arr) => option.addEventListener('click',()=>{
 
-        if(index == 0){
-            button.setAttribute('href','/categorias-de-espacos-adaptaveis')
+
+        console.log(index)
+
+        if(index > 1){
+            button[2].setAttribute('name',index)
         }
 
-        if(index == 1){
-            button.setAttribute('href','/categorias-corporativo')
-        }
+        // if(index == 1){
+        //     button.setAttribute('href','/categorias-corporativo')
+        // }
 
 
         for(let i = 0; i < arr.length; i++){
@@ -61,7 +64,7 @@ const selectTypeOF = () => {
         }
 
         arr[index].classList.add('border-select')
-        button.firstElementChild.style.background = "var(--scale-2-purple)";
+        // button.style.background = "var(--scale-2-purple)";
      
     }))
 
