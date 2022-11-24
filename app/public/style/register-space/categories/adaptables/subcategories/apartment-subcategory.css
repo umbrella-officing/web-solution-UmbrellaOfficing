@@ -1,41 +1,41 @@
 @media (min-width: 320px) and (max-width: 480px){
-    main .align-elements{
+    main #adaptables-categories_section3 .align-elements{
         flex-direction: column;
     }
 
-    main #adaptables-categories_section h1{
+    main #adaptables-categories_section3 h1{
         font-size: 25px;
         margin-bottom: 30px;
     }
     
-    main .space-photo{
+    main #adaptables-categories_section3 .space-photo{
         width: 82px;
         height: 87px;
     }
 
-    main .align-elements > ul{
+    main #adaptables-categories_section3 .align-elements > ul{
         flex-wrap: wrap;
         flex-direction: column;
     }
 
-    main .align-elements > ul > li{
+    main #adaptables-categories_section3 .align-elements > ul > li{
         flex-direction: row;
         margin: 0;
         width: 100%;
     }
 
-    main .align-elements > ul > li > div{
+    main #adaptables-categories_section3 .align-elements > ul > li > div{
         border-radius: 0 10px 10px 0;
         max-width: none;
         height: 55px;
         width: 100%;
     }
 
-    main .align-elements > ul > li:first-child{
+    main #adaptables-categories_section3 .align-elements > ul > li:first-child{
         margin-bottom: 20px;
     }
 
-    main .align-elements > ul > li:last-child{
+    main #adaptables-categories_section3 .align-elements > ul > li:last-child{
         margin-top: 20px;
     }
 
@@ -58,23 +58,23 @@
 }
 
 @media(min-width: 481px) and (max-width: 586px){
-    main #adaptables-categories_section h1{
+    main #adaptables-categories_section3 h1{
         max-width: none;
         text-align: center;
         font-size: 32px;
         margin-bottom: 20px;
     }
 
-    main .align-elements{
+    main #adaptables-categories_section3 .align-elements{
         flex-direction: column;
     }
 
-    main .align-elements > ul{
+    main #adaptables-categories_section3 .align-elements > ul{
         flex-wrap: wrap;
         flex-direction: column;
     }
 
-    main .align-elements > ul > li{
+    main #adaptables-categories_section3 .align-elements > ul > li{
         margin-top: 20px;
         flex-direction: row;
         width: 100%;
@@ -82,19 +82,19 @@
 
     }
 
-    main .align-elements > ul > li > div{
+    main #adaptables-categories_section3 .align-elements > ul > li > div{
         width: 100%;
         height: 65px;
         border-bottom-left-radius: 0;
         border-top-right-radius: 10px;
     }
 
-    main .space-photo{
+    main #adaptables-categories_section3 .space-photo{
         width: 104px;
         height: 97px;
     }
 
-    main .align-elements > ul > li:last-child{
+    main #adaptables-categories_section3 .align-elements > ul > li:last-child{
         margin-top: 20px;
     }
 
@@ -111,37 +111,33 @@
         height: 36px;
     }
 
-    main #advanceButton{
+    main #adaptables-categories_section3 input[type="button"]{
         width: 100%;
     }
 }
 
 @media(min-width: 587px) and (max-width: 840px){
-    #adaptables-categories_section > div{
+    #adaptables-categories_section3 > div{
         height: calc(100vh - 89px)
     }
 
-    main .center{
+    main #adaptables-categories_section3 .center{
         flex-direction: column;
     }
 
-    main .center > ul{
+    main #adaptables-categories_section3 .center > ul{
         max-width: 692px;
         justify-content: center;
         flex-wrap: wrap;
     }
 
-    /* main .center > ul > li:last-child{
-        margin-top: 30px;
-    } */
-
-    main #adaptables-categories_section h1{
+    main #adaptables-categories_section3 h1{
         max-width: none;
         margin-bottom: 60px;
         font-size: 35px;
     }
 
-    main .align-elements > ul{
+    main #adaptables-categories_section3 .align-elements > ul{
         flex-wrap: wrap;
     }
 
@@ -156,74 +152,48 @@
     font-family: 'Montserrat';
 }
 
-ul{
+#adaptables-categories_section3 ul{
     list-style: none;
     display: flex;
 }
 
-nav{
+#adaptables-categories_section3 nav{
     align-self: flex-start;
 }
 
-a{
+#adaptables-categories_section3 a{
     text-decoration: none;
     font-size: 12px;
 }
 
-.header-buttons{
-    display: flex;
-    justify-content: space-between;
-    width: 210px;
-}
-
-.header-buttons > a  button:hover{
-    background-color: #bdbdbd;
-}
-
-
-.header-buttons button{
-    transition: .3s ease;
-    width: 95px;
-    height: 40px;
-    background-color: var(--scale-2-gray);
-    border: none;
-    border-radius: 20px;
-    color: var(--text-1-black);
-    font-weight: 600;
-}
-
-.breadcrumb{
+#adaptables-categories_section3 .breadcrumb{
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.breadcrumb > li{
+#adaptables-categories_section3 .breadcrumb > li{
     font-size: 12px;
     cursor: pointer;
     color:#6C757D;
     width: fit-content;
 }
 
-.hoverU:hover{
+#adaptables-categories_section3 .hoverU:hover{
     text-decoration: underline;
 }
 
-.breadcrumb li a:active{
+#adaptables-categories_section3 .breadcrumb li a:active{
     color:blue;
 }
 
-/* .breadcrumb > li:first-child{
-    text-decoration: none;
-} */
-
-.divisor{
+#adaptables-categories_section3 .divisor{
     margin: 0 8px;
     text-decoration: none;
     cursor: default;
 }
 
-.active{
+#adaptables-categories_section3 .active{
     border-bottom: none;
 }
 
@@ -246,11 +216,11 @@ a{
 }
 
 
-#adaptables-categories_section{
+#adaptables-categories_section3{
     height: 100vh;
 }
 
-#adaptables-categories_section > div{
+#adaptables-categories_section3 > div{
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
@@ -273,12 +243,12 @@ a{
 }
 
 
-#adaptables-categories_section > div > :first-child > img{
+#adaptables-categories_section3 > div > :first-child > img{
     width: 50px;
     height: 50px;
 }
 
-.align-elements > ul > li > div{
+#adaptables-categories_section3 .align-elements > ul > li > div{
     border: 1px solid var(--gray-border);
     padding: 20px 10px 10px 15px;
     border-bottom-left-radius: 10px;
@@ -287,29 +257,24 @@ a{
     max-width: 165px;
 }
 
-.align-elements > ul > li > div img{
+#adaptables-categories_section3 .align-elements > ul > li > div img{
     width: 100%;
 }
 
-.align-elements > ul > li > div span{
+#adaptables-categories_section3 .align-elements > ul > li > div span{
     font-weight: 600;
-
 }
 
-/* .align-elements > ul > li :last-child{
-    margin-right: 0;
-} */
-
-.center > ul{
+#adaptables-categories_section3 .center > ul{
     justify-content: center;
 }
 
-.space-photo{
+#adaptables-categories_section3 .space-photo{
     width: 165px;
     height: 172px;
 }
 
-.align-elements > ul > li{
+#adaptables-categories_section3 .align-elements > ul > li{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -319,11 +284,11 @@ a{
     width: 165px;
 } 
 
-.align-elements > ul > li:nth-child(3) {
+#adaptables-categories_section3 .align-elements > ul > li:nth-child(3) {
     margin: 0 0 0 10px;  
 }
 
-#advanceButton{
+#adaptables-categories_section3 input[type="button"]{
     width: 186px;
     height: 36px;
     border: none;
@@ -335,18 +300,18 @@ a{
     padding: 0;
 }
 
-#adaptables-categories_section h1{
+#adaptables-categories_section3 h1{
     font-size: 40px;
     max-width: 280px;
     font-weight: bolder;
     margin-right: 20px;
 }
 
-#align-buttons{
+#adaptables-categories_section3 #align-buttons{
     padding-top: 65px;
 }
 
-#align-buttons > :first-child{
+#adaptables-categories_section3 #align-buttons > :first-child{
     background-color: transparent;
     border: none;
     font-weight: 800;

@@ -1,33 +1,4 @@
 /* PERTENCENTE AO PARTIAL*/
-header > div > div{
-    display: flex;
-    width: 210px;
-    justify-content: space-between;
-}
-
-header > div > div > a > button{
-    width: 95px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: #e8e8e8;
-    color: #333333;
-    border: none;
-    font-weight: 600;
-    font-size: 14px;
-    margin: 0;
-}
-
-body{    
-    background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
-
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 #add-room_section{
     display: flex;
@@ -37,6 +8,8 @@ main{
     height: calc(100vh - 105px);
     flex-direction: column;
     max-height: 1050px;
+    background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
+    background-repeat: no-repeat;
 }
 
 a{
@@ -95,7 +68,6 @@ nav a:first-child:hover{
     max-width: 800px;
     display: flex;
     align-items: center; 
-    /* flex-direction: column; */
     justify-content: center;
     max-height: 575px;
     color: var(--text-1-black);
@@ -123,13 +95,12 @@ nav a:first-child:hover{
     display: block;
 }
 
-#add-room > button{
+#add-room > input[type='button']{
     color: white;
     font-weight: 700;
     background: var(--scale-2-purple);
     border: 1px solid;
     border-radius: 10px;
-    /* padding: 5px 20px; */
     width: 100%;
     padding: 5px 0;
 }
@@ -191,7 +162,7 @@ nav a:first-child:hover{
     justify-content: flex-end;
 }
 
-#advance > div > button{
+#advance > div > input[type='button']{
     width: 185px;
     height: 36px;
     background-color: var(--gray-border);

@@ -39,39 +39,45 @@
 //  })
 
 
-var corporate = document.getElementById("corporate");
-var button = document.querySelectorAll(".advanceButton");
-console.log({button})
+// var corporate = document.getElementById("corporate");
+// console.log({corporate})
 
-const selectTypeOF = () => {
-    const optionsOffice = document.querySelectorAll('.space-box')
-    optionsOffice.forEach((option, index, arr) => option.addEventListener('click',()=>{
+// console.log({button})
+
+// const selectTypeOF = () => {
+//     const button = document.querySelectorAll(".advanceButton");
+//     const optionsOffice = document.querySelectorAll('.space-box')
+//     console.log({optionsOffice})
+//     optionsOffice.forEach((option, index, arr) => option.addEventListener('click',()=>{
+
+//         // console.log(index)
+
+//         if(index > 1){
+//             button[2].setAttribute('name',index)
+//         }
+
+//         // if(index == 1){
+//         //     button.setAttribute('href','/categorias-corporativo')
+//         // }
 
 
-        console.log(index)
+//         for(let i = 0; i < arr.length; i++){
+//             arr[i].classList.remove('border-select')
+//         }
 
-        if(index > 1){
-            button[2].setAttribute('name',index)
-        }
-
-        // if(index == 1){
-        //     button.setAttribute('href','/categorias-corporativo')
-        // }
-
-
-        for(let i = 0; i < arr.length; i++){
-            arr[i].classList.remove('border-select')
-        }
-
-        arr[index].classList.add('border-select')
-        // button.style.background = "var(--scale-2-purple)";
+//         arr[index].classList.add('border-select')
+//         button[2].style.background = 'var(--scale-2-purple)'
+//         // button.style.background = "var(--scale-2-purple)";
      
-    }))
+//     }))
 
-    // function checked(){  
-    //     optionsOffice.forEach(option => option.classList.remove('border-select'));
-    //     this.classList.add('border-select');
-    // }
-}
+//     // function checked(){  
+//     //     optionsOffice.forEach(option => option.classList.remove('border-select'));
+//     //     this.classList.add('border-select');
+//     // }
+// }
 
-selectTypeOF();
+// selectTypeOF();
+
+      // arr[index].innerHTML = informationsFieldsetForm[0].teste
+      // console.log(e.target.getAttribute('name'))

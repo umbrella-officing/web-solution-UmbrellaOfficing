@@ -1,12 +1,4 @@
-// $(document).ready(function(){
-//     ("#search-localization").on('keypress', function(e){
-//         if(e.which == 13){
-//             $("#encompass-form").show('slow');
-//         }
-//     })
-// });
-
-$(document).ready(function(){
+$(document).ready(function () {
     $("#search-localization").click(function(){
         $("#location-data").show('slow')
     })
@@ -22,6 +14,7 @@ $(document).ready(function(){
             $("#first-step").css({display: 'none'});
             $("#second-step").css({display: 'flex'});
             $("#advance").css({background: "var(--scale-2-purple)"})
+            $("#advance").addClass( "next_default")
         })
 
           $("#addMore").click(function(){
@@ -34,5 +27,4 @@ $(document).ready(function(){
             $("#first-step").css({display: "flex", transition: ".3 ease-in"})
             .animate({left: "50px"});
           })
-})
-
+});

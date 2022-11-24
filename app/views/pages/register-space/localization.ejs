@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/default/default.css">
+    <link rel="stylesheet" href="style/register/default-register.css">
     <link rel="stylesheet" href="style/register-space/localization.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
@@ -48,11 +49,6 @@
                         <p id="hint">Obs: sua localização só será totalmente compartilhada após a confirmação da reserva</p>   
                 </div>
    
-                <!-- <div id="map">
-                    <form>
-                        <input id="autocomplete" placeholder="Enter a place" type="text"/>
-                    </form>   
-                </div> -->
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14779.987994078145!2d-43.59438856024356!3d-22.164186294150525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x98d913ebf99553%3A0xa4247e08942606a9!2sRio%20das%20Flores%2C%20RJ%2C%2027660-000!5e0!3m2!1spt-PT!2sbr!4v1663240586012!5m2!1spt-PT!2sbr" 
                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -72,9 +68,7 @@
                             <input type="text" name="street" id="street" class="outline-focus" placeholder="Rua">
 
                             <div class="half-inputs">
-                            <select name="state" id="state" class="outline-focus">
-                                <option value="al">AL</option>
-                            </select>
+                            <input type="text" name="estado" placeholder="Estado:">
                             <input type="text" name="city" id="city" class="outline-focus" placeholder="Cidade">
                         </div>
 
@@ -128,25 +122,13 @@
                     </form>
                 </div>
 
-                <a id="btn" href="/adicionar-sala"><button id="advance">Avançar</button></a>
+                <div id="btn">
+                    <input type="button" id="advance" value="Avançar">
+                </div>
             </div>
         </section>
     </main>
 
-    <script src="script/register-space/localization.js"></script>
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhKLlUUQqzuRKNPUjW4zp6q6R-ZsKnlB8&libraries=places&callback=initMap"></script>
-    <script src="script/default/header/header.js"></script>
-    <script>let autocomplete;
-        function initAutocomplete() {
-            autocomplete = new google.maps.places.Autocomplete(
-                document.getElementById('autocomplete'), 
-                {
-                    types: ['cities'],
-                    componentRestrictions: {'country': ['US']},
-                    fiels: ['place_id', 'geometry', 'name']
-                    
-                });
-        }</script>
+    <!-- <script src="script/register-space/localization.js"></script> -->
 </body>
 </html>

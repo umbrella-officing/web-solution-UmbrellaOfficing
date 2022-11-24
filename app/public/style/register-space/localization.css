@@ -1,12 +1,12 @@
-body{
-    background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
-    background-repeat: no-repeat;
-}
-
 main{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#localization_section{
+    background: linear-gradient(to left, var(--white) 50%, var(--scale-4-blue) 50%);
+    background-repeat: no-repeat;
 }
 
 .default_margin{
@@ -21,7 +21,7 @@ main{
     max-height: 1050px;
 }
 
-nav{
+#localization_section nav{
     position: absolute;
     left: 0;
     top: 30px;
@@ -29,27 +29,26 @@ nav{
     text-decoration: none;
 }
 
-nav a, nav li{
+#localization_section nav a, nav li{
     color: #FFF;
     text-decoration: none;
 }
 
-nav a:first-child:hover{
+#localization_section nav a:first-child:hover{
     text-decoration: underline;
 }
 
-.header-buttons{
+#localization_section .header-buttons{
     display: flex;
     justify-content: space-between;
     width: 210px;
 }
 
-.header-buttons > a  button:hover{
+#localization_section .header-buttons > a  button:hover{
     background-color: #bdbdbd;
 }
 
-
-.header-buttons button{
+#localization_section .header-buttons button{
     transition: .3s ease;
     width: 95px;
     height: 40px;
@@ -60,20 +59,20 @@ nav a:first-child:hover{
     font-weight: 600;
 }
 
-.breadcrumb{
+#localization_section .breadcrumb{
     display: flex;
     list-style: none;
     width: 105%;
     justify-content: space-between;
 }
 
-#hint-icon{
+#localization_section #hint-icon{
     width: 20px;
     height: 20px;
     margin-left: 10px;
 }
 
-#hint{
+#localization_section #hint{
     color: #fff;
     font-size: 14px;
     max-width: 370px;
@@ -81,7 +80,7 @@ nav a:first-child:hover{
     display: none;
 }
 
-h1{
+#localization_section h1{
     max-width: 350px;
     font-size: 40px;
     color: var(--white);
@@ -107,11 +106,12 @@ iframe{
 
 /*FORM, INPUTS E CIA*/
 
-#search-container{
+#localization_section #search-container{
     position: relative;
+    z-index: 99;
 }
 
-#search-container > div{
+#localization_section #search-container > div{
     background-color: var(--scale-2-purple);
     border-radius: 50%;
     width: 24px;
@@ -126,12 +126,12 @@ iframe{
     margin-right: 20px;
 }
 
-#search-container > div > img{
+#localization_section #search-container > div > img{
     width: 15px;
     height: 15px;
 }
 
-#encompass-form{
+#localization_section #encompass-form{
     width: 50%;
     display: flex;
     justify-content: center;
@@ -139,7 +139,7 @@ iframe{
     position: relative;
 }
 
-#encompass-bg{
+#localization_section #encompass-bg{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -147,7 +147,7 @@ iframe{
     cursor: pointer
 }
 
-#encompass-form > form{
+#localization_section #encompass-form > form{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -158,10 +158,11 @@ iframe{
     opacity: 1;
 }
 
-#first-step{
+#localization_section #first-step{
     display: flex;
     align-items: center;
     flex-direction: column;
+    z-index: 90;
 }
 
 #search-localization{
@@ -211,7 +212,7 @@ iframe{
     width: calc(100% - 18px);
 }
 
-.half-inputs{
+#localization_section .half-inputs{
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -276,6 +277,7 @@ iframe{
     flex-direction: column;
     align-items: center;
     display: none;
+    z-index: 90;
 }
 
 #second-step h2{
@@ -284,27 +286,27 @@ iframe{
     margin-bottom: 15px;
 }
 
-.inputDiv{
+#localization_section .inputDiv{
     width: 100%;
     position: relative;
 }
 
-.inputDiv:nth-child(2), .inputDiv:nth-child(3){
+#localization_section .inputDiv:nth-child(2), .inputDiv:nth-child(3){
     display: none;
 }
 
-.inputDiv:nth-child(2){
+#localization_section .inputDiv:nth-child(2){
     margin-top: 15px;
 }
 
-.inputDiv > input{
+#localization_section .inputDiv > input{
     width: calc(100% - 18px);
     border-radius: 10px;
     border: 1px solid var(--gray-border);
     padding: 9px 9px 9px 12px;
 }
 
-.inputDiv img{
+#localization_section .inputDiv img{
     position: absolute;
     top: 6px;
     right: 12px;
@@ -338,8 +340,9 @@ iframe{
 }
 
 #advance{
+    position: absolute !important;
     width: 186px;
-    height: 36px;
+    height: fit-content !important;
     border: none;
     border-radius: 20px;
     background-color: var(--gray-border);
@@ -349,6 +352,9 @@ iframe{
     margin-bottom: 25px;
     z-index: 3;
     box-shadow: 6px 6px 10px rgba(44, 44, 44, 0.37);
+    right: 2% !important;
+    left: unset !important;
+    padding: 7px 0 !important;
 }
 
 #btn{
